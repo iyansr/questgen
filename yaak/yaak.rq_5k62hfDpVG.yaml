@@ -1,0 +1,71 @@
+type: http_request
+model: http_request
+id: rq_5k62hfDpVG
+createdAt: 2026-06-04T06:18:43.355192
+updatedAt: 2026-06-06T05:06:11.637653
+workspaceId: wk_Eb9h3BLcNd
+folderId: null
+authentication:
+  token: ${[ AUTH ]}
+authenticationType: bearer
+body:
+  form:
+  - enabled: true
+    id: z75X7gwZ3m
+    name: topic
+    value: Ekosistem
+  - enabled: true
+    id: bijvXdVNy7
+    name: difficulty
+    value: hard
+  - enabled: true
+    id: ZfkxNVmtZy
+    name: questionTypeCounts
+    value: '[{"type":"multiple_choice","count":5},{"type":"true_false","count":3},{"type":"short_answer","count":2}]'
+  - enabled: false
+    id: SS9rA5MTgH
+    name: documentId
+    value: 145d7549-228a-4d34-aa4d-8715c81e336e
+  - enabled: true
+    file: /Users/iyansr/Downloads/X_Biologi_KD-3.10_Final.pdf
+    id: fpIqa9JbZn
+    name: file
+  - enabled: true
+    id: hXiTEhqWmu
+    name: ''
+    value: ''
+bodyType: multipart/form-data
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: multipart/form-data
+  id: J4Q7EFmK0Y
+method: POST
+name: New Session
+sortPriority: -1780549838718.999
+url: ${[ BASE_URL ]}/api/sessions
+urlParameters:
+- enabled: false
+  name: :id
+  value: ed8c3c14-32d9-45f6-9409-5bf1b302d204
+  id: ppggv4zcf0
+- enabled: true
+  name: ''
+  value: ''
+  id: Kiv5Hxnb9j
+settingSendCookies:
+  enabled: false
+  value: true
+settingStoreCookies:
+  enabled: false
+  value: true
+settingValidateCertificates:
+  enabled: false
+  value: true
+settingFollowRedirects:
+  enabled: false
+  value: true
+settingRequestTimeout:
+  enabled: false
+  value: 0

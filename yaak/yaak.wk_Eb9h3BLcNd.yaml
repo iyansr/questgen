@@ -1,0 +1,15 @@
+type: workspace
+model: workspace
+id: wk_Eb9h3BLcNd
+createdAt: 2026-06-04T05:10:31.303021
+updatedAt: 2026-06-04T05:10:31.303021
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: Questgen
+encryptionKeyChallenge: null
+settingValidateCertificates: true
+settingFollowRedirects: true
+settingRequestTimeout: 0
+settingDnsOverrides: []

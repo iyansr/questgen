@@ -1,0 +1,3 @@
+{
+	"extends": "@questgen/config/tsconfig.base.json"
+}

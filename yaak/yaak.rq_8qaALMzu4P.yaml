@@ -1,0 +1,42 @@
+type: http_request
+model: http_request
+id: rq_8qaALMzu4P
+createdAt: 2026-06-04T05:10:38.719770
+updatedAt: 2026-06-04T06:27:19.224204
+workspaceId: wk_Eb9h3BLcNd
+folderId: null
+authentication:
+  token: ${[ AUTH ]}
+authenticationType: bearer
+body: {}
+bodyType: null
+description: ''
+headers: []
+method: POST
+name: Stream ID
+sortPriority: -1780549838719.0
+url: ${[ BASE_URL ]}/api/sessions/:id/stream
+urlParameters:
+- enabled: true
+  name: :id
+  value: 64767883-542c-4451-86fd-57d7a1f26834
+  id: ppggv4zcf0
+- enabled: true
+  name: ''
+  value: ''
+  id: ERQguH8YhQ
+settingSendCookies:
+  enabled: false
+  value: true
+settingStoreCookies:
+  enabled: false
+  value: true
+settingValidateCertificates:
+  enabled: false
+  value: true
+settingFollowRedirects:
+  enabled: false
+  value: true
+settingRequestTimeout:
+  enabled: false
+  value: 0

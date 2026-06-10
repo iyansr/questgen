@@ -1,0 +1,33 @@
+type: http_request
+model: http_request
+id: rq_3azbWxheaV
+createdAt: 2026-06-04T05:46:19.535040
+updatedAt: 2026-06-04T06:06:38.586115
+workspaceId: wk_Eb9h3BLcNd
+folderId: null
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: ''
+headers: []
+method: POST
+name: Register
+sortPriority: -1780549838719.0
+url: ${[ BASE_URL ]}/api/auth/register
+urlParameters: []
+settingSendCookies:
+  enabled: false
+  value: true
+settingStoreCookies:
+  enabled: false
+  value: true
+settingValidateCertificates:
+  enabled: false
+  value: true
+settingFollowRedirects:
+  enabled: false
+  value: true
+settingRequestTimeout:
+  enabled: false
+  value: 0
