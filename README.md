@@ -1,5 +1,7 @@
 # QuestGen
 
+![QuestGen Screenshot](media/ss-questgen.png)
+
 AI-powered question generator for educators. Upload documents or search the web, configure parameters, and generate assessment questions with answer keys — ready to export as PDF, DOCX, or Google Forms.
 
 ## Features
