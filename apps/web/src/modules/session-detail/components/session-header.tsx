@@ -54,20 +54,20 @@ export function SessionHeader({ session }: SessionHeaderProps) {
 	const { title, status, config, createdAt } = session;
 
 	return (
-		<header className="space-y-6">
+		<header className="space-y-8">
 			<div>
 				<Link
 					to="/history"
-					className="inline-flex items-center gap-1.5 text-muted-foreground text-xs transition-colors hover:text-foreground"
+					className="inline-flex items-center gap-2 text-muted-foreground text-sm transition-colors hover:text-foreground focus-visible:underline focus-visible:outline-none"
 				>
-					<ArrowLeft className="size-3.5" weight="regular" />
+					<ArrowLeft className="size-4" weight="regular" aria-hidden />
 					Kembali ke Riwayat
 				</Link>
 			</div>
 
 			<div className="space-y-3">
-				<div className="flex flex-wrap items-center gap-2">
-					<p className="text-muted-foreground text-xs uppercase tracking-widest">
+				<div className="flex flex-wrap items-center gap-3">
+					<p className="text-muted-foreground text-sm uppercase tracking-widest">
 						Sesi Pembuatan
 					</p>
 					<StatusBadge status={status} label={statusLabel(status)} />
@@ -75,41 +75,47 @@ export function SessionHeader({ session }: SessionHeaderProps) {
 				<h1 className="font-serif text-3xl leading-tight tracking-tight md:text-4xl">
 					{title}
 				</h1>
-				<p className="text-muted-foreground text-sm">
+				<p className="text-base text-muted-foreground">
 					Dibuat {formatDateTime(createdAt)}
 				</p>
 			</div>
 
 			<dl className="grid grid-cols-1 divide-y divide-border border border-border sm:grid-cols-2 sm:divide-x sm:divide-y-0">
-				<div className="flex items-start gap-3 p-4 sm:p-5">
-					<div className="flex size-9 shrink-0 items-center justify-center bg-muted">
+				<div className="flex items-start gap-3 p-5 sm:p-6">
+					<div
+						className="flex size-10 shrink-0 items-center justify-center bg-muted"
+						aria-hidden
+					>
 						<Sparkle
-							className="size-4 text-muted-foreground"
+							className="size-5 text-muted-foreground"
 							weight="regular"
 						/>
 					</div>
 					<div className="min-w-0">
-						<dt className="text-muted-foreground text-xs uppercase tracking-wide">
+						<dt className="text-muted-foreground text-sm uppercase tracking-wide">
 							Topik
 						</dt>
-						<dd className="mt-1 truncate font-medium text-sm">
+						<dd className="mt-1 truncate font-medium text-base">
 							{config.topic || '—'}
 						</dd>
 					</div>
 				</div>
 
-				<div className="flex items-start gap-3 p-4 sm:p-5">
-					<div className="flex size-9 shrink-0 items-center justify-center bg-muted">
+				<div className="flex items-start gap-3 p-5 sm:p-6">
+					<div
+						className="flex size-10 shrink-0 items-center justify-center bg-muted"
+						aria-hidden
+					>
 						<FileText
-							className="size-4 text-muted-foreground"
+							className="size-5 text-muted-foreground"
 							weight="regular"
 						/>
 					</div>
 					<div className="min-w-0">
-						<dt className="text-muted-foreground text-xs uppercase tracking-wide">
+						<dt className="text-muted-foreground text-sm uppercase tracking-wide">
 							Komposisi Soal
 						</dt>
-						<dd className="mt-1 truncate font-medium text-sm">
+						<dd className="mt-1 font-medium text-base">
 							{formatTypeCounts(config.questionTypeCounts)}
 						</dd>
 					</div>
@@ -117,15 +123,20 @@ export function SessionHeader({ session }: SessionHeaderProps) {
 			</dl>
 
 			{status === 'failed' && session.errorMessage && (
-				<div className="flex flex-col gap-2 border border-destructive/40 bg-destructive/5 p-4">
-					<p className="font-medium text-destructive text-xs uppercase tracking-wide">
+				<div
+					role="alert"
+					className="flex flex-col gap-3 border border-destructive/40 bg-destructive/5 p-5"
+				>
+					<p className="font-semibold text-destructive text-sm uppercase tracking-wide">
 						Gagal
 					</p>
-					<p className="text-sm">{session.errorMessage}</p>
+					<p className="text-base leading-relaxed">{session.errorMessage}</p>
 					<div>
 						<Link
 							to="/new"
-							className={cn(buttonVariants({ variant: 'outline', size: 'sm' }))}
+							className={cn(
+								buttonVariants({ variant: 'outline', size: 'default' }),
+							)}
 						>
 							Coba Buat Sesi Baru
 						</Link>

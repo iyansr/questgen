@@ -25,12 +25,12 @@ export function StatusBadge({ status, label }: StatusBadgeProps) {
 	return (
 		<span
 			className={cn(
-				'inline-flex items-center gap-1.5 px-2 py-0.5 font-medium text-[10px] uppercase tracking-wide',
+				'inline-flex items-center gap-2 px-2.5 py-1 font-semibold text-xs uppercase tracking-wide',
 				STATUS_STYLES[status],
 			)}
 		>
 			<span
-				className={cn('size-1.5 rounded-full', STATUS_DOT[status])}
+				className={cn('size-2 rounded-full', STATUS_DOT[status])}
 				aria-hidden
 			/>
 			{label}

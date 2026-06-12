@@ -65,28 +65,28 @@ function StepDot({
 }) {
 	if (state === 'done') {
 		return (
-			<div className="flex size-6 items-center justify-center bg-foreground text-background">
-				<CheckCircle className="size-4" weight="fill" />
+			<div className="flex size-7 items-center justify-center bg-foreground text-background">
+				<CheckCircle className="size-5" weight="fill" aria-hidden />
 			</div>
 		);
 	}
 	if (state === 'failed') {
 		return (
-			<div className="flex size-6 items-center justify-center bg-destructive text-destructive-foreground">
-				<WarningCircle className="size-4" weight="fill" />
+			<div className="flex size-7 items-center justify-center bg-destructive text-destructive-foreground">
+				<WarningCircle className="size-5" weight="fill" aria-hidden />
 			</div>
 		);
 	}
 	if (state === 'active') {
 		return (
-			<div className="flex size-6 items-center justify-center border border-accent bg-accent/10 text-accent">
-				<Spinner className="size-3.5 animate-spin" weight="bold" />
+			<div className="flex size-7 items-center justify-center border border-accent bg-accent/10 text-accent">
+				<Spinner className="size-4 animate-spin" weight="bold" aria-hidden />
 			</div>
 		);
 	}
 	return (
-		<div className="flex size-6 items-center justify-center border border-border bg-background text-muted-foreground">
-			<Circle className="size-3.5" weight="regular" />
+		<div className="flex size-7 items-center justify-center border border-border bg-background text-muted-foreground">
+			<Circle className="size-4" weight="regular" aria-hidden />
 		</div>
 	);
 }
@@ -127,17 +127,23 @@ export function SessionProgress({
 					: 'Memulai…';
 
 	return (
-		<section className="border border-border bg-card">
-			<header className="flex flex-wrap items-baseline justify-between gap-2 border-border border-b px-5 py-4">
+		<section className="border border-border bg-card" aria-label="Progres sesi">
+			<header className="flex flex-wrap items-baseline justify-between gap-2 border-border border-b px-5 py-4 sm:px-6 sm:py-5">
 				<div className="space-y-1">
-					<p className="text-muted-foreground text-xs uppercase tracking-wide">
+					<p className="text-muted-foreground text-sm uppercase tracking-wide">
 						Status Sesi
 					</p>
-					<p className="font-medium text-sm">{activeLabel}</p>
+					<p className="font-medium text-base" aria-live="polite" aria-atomic>
+						{activeLabel}
+					</p>
 				</div>
 				{expectedCount !== null && (
-					<p className="text-muted-foreground text-xs tabular-nums">
-						<span className="font-medium text-foreground">
+					<p
+						className="text-muted-foreground text-sm tabular-nums"
+						aria-live="polite"
+						aria-atomic
+					>
+						<span className="font-semibold text-foreground">
 							{questionsCount}
 						</span>
 						<span className="mx-1">/</span>
@@ -147,30 +153,42 @@ export function SessionProgress({
 				)}
 			</header>
 
-			<ol className="flex flex-col gap-0 px-5 py-5">
+			<ol
+				className="flex flex-col gap-0 px-5 py-5 sm:px-6 sm:py-6"
+				aria-label="Langkah-langkah progres"
+			>
 				{STEP_ORDER.map((step, i) => {
 					const state = stepState(step.key, status, failed);
 					const isLast = i === STEP_ORDER.length - 1;
 					return (
-						<li key={step.key} className="flex items-stretch gap-3">
+						<li key={step.key} className="flex items-stretch gap-4">
 							<div className="flex flex-col items-center">
 								<StepDot state={state} />
 								{!isLast && <StepConnector state={state} />}
 							</div>
-							<div className="flex-1 pb-5">
+							<div className="flex-1 pb-6">
 								<p
 									className={cn(
-										'text-sm',
-										state === 'active' && 'font-medium text-foreground',
+										'text-base',
+										state === 'active' && 'font-semibold text-foreground',
 										state === 'upcoming' && 'text-muted-foreground',
 										state === 'done' && 'text-foreground',
-										state === 'failed' && 'text-destructive',
+										state === 'failed' && 'font-semibold text-destructive',
 									)}
 								>
 									{step.label}
+									<span className="sr-only">
+										{state === 'done'
+											? ' (selesai)'
+											: state === 'active'
+												? ' (sedang berjalan)'
+												: state === 'failed'
+													? ' (gagal)'
+													: ' (belum dimulai)'}
+									</span>
 								</p>
 								{state === 'active' && (
-									<p className="mt-0.5 text-muted-foreground text-xs">
+									<p className="mt-1 text-muted-foreground text-sm">
 										{step.hint}
 									</p>
 								)}

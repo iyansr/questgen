@@ -22,7 +22,7 @@ app.use(
 	'/*',
 	cors({
 		origin: env.CORS_ORIGIN,
-		allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+		allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
 	}),
 );
 

@@ -36,7 +36,7 @@ export async function retrieveMultiQuery(
 	);
 
 	const perQueryTrace: PerQueryTrace[] = subQueries.map((q, i) => {
-		const items = perQueryRaw[i]!.items;
+		const items = perQueryRaw[i]?.items;
 		return {
 			query: q.query,
 			chunkIds: items.map((it) => it.id),
@@ -72,7 +72,7 @@ export async function retrieveMultiQuery(
 		avgScore: chunks.length
 			? chunks.reduce((s, c) => s + c.score, 0) / chunks.length
 			: 1,
-		minScore: chunks.length ? chunks[0]!.score : 1,
+		minScore: chunks.length ? chunks[0]?.score : 1,
 	};
 
 	return {

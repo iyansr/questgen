@@ -1,16 +1,24 @@
-import { Check, Eye, EyeSlash } from '@phosphor-icons/react';
+import { Check, Eye, EyeSlash, PencilSimple } from '@phosphor-icons/react';
+import { Button } from '@questgen/ui/components/button';
 import { cn } from '@questgen/ui/lib/utils';
 import { useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import rehypeKatex from 'rehype-katex';
+import remarkMath from 'remark-math';
 
 import {
 	QUESTION_TYPE_LABELS,
 	type QuestionType,
 } from '@/modules/new-session/schema';
-import type { StreamedQuestion } from '@/types/session-message';
+import type { QuestionOption, StreamedQuestion } from '@/types/session-message';
+
+import type { StagedEdit } from '../hooks/use-question-edits';
 
 type QuestionCardProps = {
 	question: StreamedQuestion;
 	index: number;
+	isDirty: boolean;
+	onEdit: () => void;
 };
 
 function isMultipleChoice(type: QuestionType): boolean {
@@ -18,7 +26,7 @@ function isMultipleChoice(type: QuestionType): boolean {
 }
 
 function findCorrectOptionLabel(
-	options: StreamedQuestion['options'],
+	options: QuestionOption[] | null,
 	correctAnswer: string,
 ): string | null {
 	if (!options || options.length === 0) return null;
@@ -30,7 +38,12 @@ function findCorrectOptionLabel(
 	return match?.label ?? null;
 }
 
-export function QuestionCard({ question, index }: QuestionCardProps) {
+export function QuestionCard({
+	question,
+	index,
+	isDirty,
+	onEdit,
+}: QuestionCardProps) {
 	const [revealed, setRevealed] = useState(true);
 
 	const showOptions = isMultipleChoice(question.questionType);
@@ -39,37 +52,67 @@ export function QuestionCard({ question, index }: QuestionCardProps) {
 		: null;
 
 	return (
-		<article className="border border-border bg-card">
-			<header className="flex flex-wrap items-baseline justify-between gap-2 border-border border-b px-5 py-3">
-				<div className="flex items-baseline gap-3">
-					<span className="font-mono text-muted-foreground text-xs tabular-nums">
+		<article
+			className={cn(
+				'border bg-card transition-colors',
+				isDirty ? 'border-accent' : 'border-border',
+			)}
+			aria-label={`Soal nomor ${index + 1}`}
+		>
+			<header className="flex flex-wrap items-baseline justify-between gap-2 border-border border-b px-5 py-3 sm:px-6 sm:py-4">
+				<div className="flex flex-wrap items-baseline gap-3">
+					<span className="font-mono text-muted-foreground text-sm tabular-nums">
 						{String(index + 1).padStart(2, '0')}
 					</span>
-					<p className="text-muted-foreground text-xs uppercase tracking-wide">
+					<p className="text-muted-foreground text-sm uppercase tracking-wide">
 						{QUESTION_TYPE_LABELS[question.questionType] ??
 							question.questionType}
 					</p>
-				</div>
-				<button
-					type="button"
-					onClick={() => setRevealed((v) => !v)}
-					className="inline-flex items-center gap-1.5 text-muted-foreground text-xs transition-colors hover:text-foreground"
-				>
-					{revealed ? (
-						<>
-							<EyeSlash className="size-3.5" weight="regular" />
-							Sembunyikan jawaban
-						</>
-					) : (
-						<>
-							<Eye className="size-3.5" weight="regular" />
-							Lihat jawaban
-						</>
+					{isDirty && (
+						<span className="border border-accent bg-accent/10 px-2 py-0.5 font-medium text-accent text-xs uppercase tracking-wide">
+							Diubah
+						</span>
 					)}
-				</button>
+				</div>
+				<div className="flex items-center gap-1.5">
+					<Button
+						type="button"
+						variant="ghost"
+						size="sm"
+						onClick={onEdit}
+						className="gap-1.5"
+						aria-label={`Edit soal nomor ${index + 1}`}
+					>
+						<PencilSimple className="size-3.5" weight="bold" aria-hidden />
+						Edit
+					</Button>
+					<button
+						type="button"
+						onClick={() => setRevealed((v) => !v)}
+						aria-pressed={revealed}
+						aria-label={
+							revealed
+								? `Sembunyikan jawaban soal nomor ${index + 1}`
+								: `Lihat jawaban soal nomor ${index + 1}`
+						}
+						className="inline-flex items-center gap-2 text-muted-foreground text-sm transition-colors hover:text-foreground focus-visible:text-foreground focus-visible:underline focus-visible:outline-none"
+					>
+						{revealed ? (
+							<>
+								<EyeSlash className="size-4" weight="regular" aria-hidden />
+								Sembunyikan jawaban
+							</>
+						) : (
+							<>
+								<Eye className="size-4" weight="regular" aria-hidden />
+								Lihat jawaban
+							</>
+						)}
+					</button>
+				</div>
 			</header>
 
-			<div className="space-y-4 px-5 py-5">
+			<div className="space-y-5 px-5 py-5 sm:px-6 sm:py-6">
 				{question.imageUrl && (
 					<img
 						src={question.imageUrl}
@@ -79,39 +122,64 @@ export function QuestionCard({ question, index }: QuestionCardProps) {
 					/>
 				)}
 
-				<div className="prose prose-sm max-w-none font-serif text-base leading-relaxed">
-					<p className="whitespace-pre-wrap">{question.questionText}</p>
+				<div className="prose prose-sm max-w-none font-serif text-lg leading-relaxed">
+					<ReactMarkdown
+						remarkPlugins={[remarkMath]}
+						rehypePlugins={[rehypeKatex]}
+					>
+						{question.questionText}
+					</ReactMarkdown>
 				</div>
 
 				{showOptions && question.options && question.options.length > 0 && (
-					<ol className="space-y-2">
+					<ol className="space-y-2" aria-label="Pilihan jawaban">
 						{question.options.map((opt) => {
 							const isCorrect = correctOptionLabel === opt.label;
 							return (
 								<li
 									key={opt.label}
 									className={cn(
-										'flex items-start gap-3 border border-border px-3 py-2.5 text-sm transition-colors',
+										'flex items-start gap-3 border border-border px-4 py-3 text-base transition-colors',
 										revealed &&
 											isCorrect &&
 											'border-foreground bg-foreground/5',
 									)}
 								>
 									<span
+										aria-hidden={!revealed || !isCorrect}
 										className={cn(
-											'flex size-6 shrink-0 items-center justify-center border border-border font-mono text-xs',
+											'flex size-7 shrink-0 items-center justify-center border border-border font-mono text-sm',
 											revealed &&
 												isCorrect &&
 												'border-foreground bg-foreground text-background',
 										)}
 									>
 										{revealed && isCorrect ? (
-											<Check className="size-3.5" weight="bold" />
+											<Check className="size-4" weight="bold" />
 										) : (
 											opt.label
 										)}
 									</span>
-									<span className="flex-1 leading-relaxed">{opt.text}</span>
+									{revealed && isCorrect ? (
+										<div className="flex-1 font-medium leading-relaxed">
+											<ReactMarkdown
+												remarkPlugins={[remarkMath]}
+												rehypePlugins={[rehypeKatex]}
+											>
+												{opt.text}
+											</ReactMarkdown>
+											<span className="sr-only"> (jawaban benar)</span>
+										</div>
+									) : (
+										<div className="flex-1 leading-relaxed">
+											<ReactMarkdown
+												remarkPlugins={[remarkMath]}
+												rehypePlugins={[rehypeKatex]}
+											>
+												{opt.text}
+											</ReactMarkdown>
+										</div>
+									)}
 								</li>
 							);
 						})}
@@ -119,25 +187,35 @@ export function QuestionCard({ question, index }: QuestionCardProps) {
 				)}
 
 				{revealed && (
-					<div className="space-y-2 border-border border-t pt-4">
+					<div className="space-y-3 border-border border-t pt-4">
 						{!showOptions && (
 							<div className="space-y-1">
-								<p className="text-muted-foreground text-xs uppercase tracking-wide">
+								<p className="text-muted-foreground text-sm uppercase tracking-wide">
 									Jawaban
 								</p>
-								<p className="font-serif text-sm leading-relaxed">
-									{question.correctAnswer || '—'}
-								</p>
+								<div className="prose prose-sm max-w-none font-serif text-base leading-relaxed">
+									<ReactMarkdown
+										remarkPlugins={[remarkMath]}
+										rehypePlugins={[rehypeKatex]}
+									>
+										{question.correctAnswer || '—'}
+									</ReactMarkdown>
+								</div>
 							</div>
 						)}
 						{question.suggestedAnswer && (
 							<div className="space-y-1">
-								<p className="text-muted-foreground text-xs uppercase tracking-wide">
+								<p className="text-muted-foreground text-sm uppercase tracking-wide">
 									Penjelasan
 								</p>
-								<p className="text-muted-foreground text-sm leading-relaxed">
-									{question.suggestedAnswer}
-								</p>
+								<div className="prose prose-sm max-w-none text-base text-muted-foreground leading-relaxed">
+									<ReactMarkdown
+										remarkPlugins={[remarkMath]}
+										rehypePlugins={[rehypeKatex]}
+									>
+										{question.suggestedAnswer}
+									</ReactMarkdown>
+								</div>
 							</div>
 						)}
 					</div>
@@ -145,4 +223,20 @@ export function QuestionCard({ question, index }: QuestionCardProps) {
 			</div>
 		</article>
 	);
+}
+
+export function applyStagedEdit(
+	question: StreamedQuestion,
+	edit: StagedEdit | undefined,
+): StreamedQuestion {
+	if (!edit) return question;
+	return {
+		...question,
+		questionText: edit.patch.questionText,
+		options: edit.patch.options,
+		correctAnswer: edit.patch.correctAnswer,
+		suggestedAnswer: edit.patch.suggestedAnswer ?? '',
+		imageUrl:
+			edit.image?.previewUrl ?? (edit.removeImage ? null : question.imageUrl),
+	};
 }

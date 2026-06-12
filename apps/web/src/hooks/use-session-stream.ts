@@ -74,33 +74,36 @@ export function useSessionStream(sessionId: string): UseSessionStreamResult {
 	}, [isFetched, sendMessage]);
 
 	const streamedQuestions = useMemo<StreamedQuestion[]>(() => {
-		const collected: StreamedQuestion[] = [];
+		const byId = new Map<string, StreamedQuestion>();
 		for (const message of messages) {
 			for (const part of message.parts) {
 				if (part.type === 'data-question') {
-					collected.push(part.data);
+					byId.set(part.data.id, part.data);
 				}
 			}
 		}
-		return collected.sort((a, b) => a.order - b.order);
+		return Array.from(byId.values()).sort((a, b) => a.order - b.order);
 	}, [messages]);
 
-	const questions = useMemo<StreamedQuestion[]>(() => {
-		if (streamedQuestions.length > 0) return streamedQuestions;
-		if (!initial) return [];
-		return initial.questions.map((q) => ({
-			id: q.id,
-			questionText: q.questionText,
-			questionType: q.questionType,
-			imageUrl: q.imageUrl,
-			options: q.options,
-			correctAnswer: q.correctAnswer ?? '',
-			suggestedAnswer: q.suggestedAnswer ?? '',
-			order: q.order,
-		}));
-	}, [streamedQuestions, initial]);
-
 	const isStreaming = chatStatus === 'submitted' || chatStatus === 'streaming';
+
+	const questions = useMemo<StreamedQuestion[]>(() => {
+		if (isStreaming && streamedQuestions.length > 0) return streamedQuestions;
+		if (initial && initial.questions.length > 0) {
+			return initial.questions.map((q) => ({
+				id: q.id,
+				questionText: q.questionText,
+				questionType: q.questionType,
+				imageUrl: q.imageUrl,
+				options: q.options,
+				correctAnswer: q.correctAnswer ?? '',
+				suggestedAnswer: q.suggestedAnswer ?? '',
+				order: q.order,
+			}));
+		}
+		if (streamedQuestions.length > 0) return streamedQuestions;
+		return [];
+	}, [isStreaming, streamedQuestions, initial]);
 
 	return {
 		status,

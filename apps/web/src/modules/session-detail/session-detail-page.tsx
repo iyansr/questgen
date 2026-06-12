@@ -1,11 +1,21 @@
+import { useCallback, useState } from 'react';
+import { toast } from 'sonner';
+
 import { useSessionStream } from '@/hooks/use-session-stream';
 import { useSession } from '@/services/sessions/detail';
+import { useUpdateQuestions } from '@/services/sessions/update-questions';
+import type { StreamedQuestion } from '@/types/session-message';
 
 import { BackToTop } from './components/back-to-top';
+import {
+	EditQuestionDialog,
+	type EditQuestionSubmitPayload,
+} from './components/edit-question-dialog';
 import { QuestionList } from './components/question-list';
 import { SessionDetailSkeleton } from './components/session-detail-skeleton';
 import { SessionHeader } from './components/session-header';
 import { SessionProgress } from './components/session-progress';
+import { buildBatchUpdate, useQuestionEdits } from './hooks/use-question-edits';
 
 type SessionDetailPageProps = {
 	sessionId: string;
@@ -14,18 +24,63 @@ type SessionDetailPageProps = {
 export function SessionDetailPage({ sessionId }: SessionDetailPageProps) {
 	const { data, isLoading, isError, error } = useSession(sessionId);
 	const { status, questions, isStreaming } = useSessionStream(sessionId);
+	const { edits, setEdit, clearAll, dirtyCount } = useQuestionEdits();
+	const updateQuestions = useUpdateQuestions(sessionId);
+
+	const [editingQuestion, setEditingQuestion] =
+		useState<StreamedQuestion | null>(null);
+
+	const handleEdit = useCallback((question: StreamedQuestion) => {
+		setEditingQuestion(question);
+	}, []);
+
+	const handleDialogOpenChange = useCallback((open: boolean) => {
+		if (!open) setEditingQuestion(null);
+	}, []);
+
+	const handleDialogSubmit = useCallback(
+		({ patch, imageFile, removeImage }: EditQuestionSubmitPayload) => {
+			setEdit(patch.id, patch, imageFile, removeImage);
+		},
+		[setEdit],
+	);
+
+	const handleSave = useCallback(async () => {
+		if (dirtyCount === 0) return;
+		const batch = buildBatchUpdate({ edits });
+		try {
+			const result = await updateQuestions.mutateAsync({
+				sessionId,
+				patches: batch.patches,
+				images: batch.images,
+			});
+			toast.success(
+				result.updated === 1
+					? '1 soal berhasil diperbarui.'
+					: `${result.updated} soal berhasil diperbarui.`,
+			);
+			clearAll();
+		} catch (err) {
+			toast.error(
+				err instanceof Error ? err.message : 'Gagal menyimpan perubahan.',
+			);
+		}
+	}, [dirtyCount, edits, updateQuestions, sessionId, clearAll]);
 
 	if (isLoading) return <SessionDetailSkeleton />;
 
 	if (isError || !data) {
 		return (
-			<div className="space-y-4">
+			<div className="space-y-6">
 				<SessionHeaderFallback />
-				<div className="border border-destructive/40 bg-destructive/5 p-5 text-sm">
-					<p className="font-medium text-destructive">
+				<div
+					role="alert"
+					className="border border-destructive/40 bg-destructive/5 p-6"
+				>
+					<p className="font-semibold text-base text-destructive">
 						Tidak dapat memuat sesi
 					</p>
-					<p className="mt-1 text-muted-foreground">
+					<p className="mt-2 text-base text-muted-foreground leading-relaxed">
 						{error instanceof Error ? error.message : 'Sesi tidak ditemukan.'}
 					</p>
 				</div>
@@ -58,9 +113,21 @@ export function SessionDetailPage({ sessionId }: SessionDetailPageProps) {
 						status={status.status}
 						isStreaming={isStreaming}
 						expectedCount={expectedCount}
+						edits={edits}
+						isSaving={updateQuestions.isPending}
+						onEdit={handleEdit}
+						onSave={handleSave}
+						onDiscard={clearAll}
 					/>
 				</div>
 			</div>
+
+			<EditQuestionDialog
+				open={Boolean(editingQuestion)}
+				onOpenChange={handleDialogOpenChange}
+				question={editingQuestion}
+				onApply={handleDialogSubmit}
+			/>
 		</div>
 	);
 }

@@ -31,13 +31,20 @@ export function EmptyQuestions({ status }: EmptyQuestionsProps) {
 	})();
 
 	return (
-		<div className="flex flex-col items-center justify-center gap-3 border border-border border-dashed bg-muted/30 px-6 py-12 text-center">
-			<div className="flex size-10 items-center justify-center border border-border bg-background">
-				<Sparkle className="size-5 text-muted-foreground" weight="regular" />
+		<div
+			className="flex flex-col items-center justify-center gap-4 border border-border border-dashed bg-muted/30 px-6 py-14 text-center"
+			role="status"
+			aria-live="polite"
+		>
+			<div
+				className="flex size-12 items-center justify-center border border-border bg-background"
+				aria-hidden
+			>
+				<Sparkle className="size-6 text-muted-foreground" weight="regular" />
 			</div>
-			<div className="space-y-1">
-				<p className="font-medium text-sm">{message.title}</p>
-				<p className="text-muted-foreground text-xs leading-relaxed">
+			<div className="space-y-2">
+				<p className="font-semibold text-base">{message.title}</p>
+				<p className="text-base text-muted-foreground leading-relaxed">
 					{message.body}
 				</p>
 			</div>

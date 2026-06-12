@@ -2,14 +2,21 @@ import { Spinner } from '@phosphor-icons/react';
 
 import type { StreamedQuestion } from '@/types/session-message';
 
+import type { StagedEdit } from '../hooks/use-question-edits';
 import { EmptyQuestions } from './empty-questions';
-import { QuestionCard } from './question-card';
+import { applyStagedEdit, QuestionCard } from './question-card';
+import { SaveBar } from './save-bar';
 
 type QuestionListProps = {
 	questions: StreamedQuestion[];
 	status: 'pending' | 'generating' | 'completed' | 'failed';
 	isStreaming: boolean;
 	expectedCount: number | null;
+	edits: Record<string, StagedEdit>;
+	isSaving: boolean;
+	onEdit: (question: StreamedQuestion) => void;
+	onSave: () => void;
+	onDiscard: () => void;
 };
 
 export function QuestionList({
@@ -17,22 +24,32 @@ export function QuestionList({
 	status,
 	isStreaming,
 	expectedCount,
+	edits,
+	isSaving,
+	onEdit,
+	onSave,
+	onDiscard,
 }: QuestionListProps) {
 	const showStreamingFooter =
 		isStreaming && (status === 'pending' || status === 'generating');
+	const dirtyCount = Object.keys(edits).length;
 
 	return (
-		<section className="space-y-4">
+		<section className="space-y-5" aria-label="Daftar soal">
 			<header className="flex flex-wrap items-baseline justify-between gap-2">
 				<div>
 					<h2 className="font-serif text-2xl tracking-tight">Soal</h2>
-					<p className="text-muted-foreground text-sm">
+					<p className="text-base text-muted-foreground">
 						Setiap soal muncul di sini begitu AI selesai membuatnya.
 					</p>
 				</div>
 				{expectedCount !== null && (
-					<p className="text-muted-foreground text-xs tabular-nums">
-						<span className="font-medium text-foreground">
+					<p
+						className="text-muted-foreground text-sm tabular-nums"
+						aria-live="polite"
+						aria-atomic
+					>
+						<span className="font-semibold text-foreground">
 							{questions.length}
 						</span>
 						<span className="mx-1">/</span>
@@ -41,21 +58,42 @@ export function QuestionList({
 				)}
 			</header>
 
+			<SaveBar
+				dirtyCount={dirtyCount}
+				isSaving={isSaving}
+				pendingImages={Object.values(edits).filter((e) => e.image?.file).length}
+				onSave={onSave}
+				onDiscard={onDiscard}
+			/>
+
 			{questions.length === 0 ? (
 				<EmptyQuestions status={status} />
 			) : (
-				<ol className="space-y-4">
-					{questions.map((question, i) => (
-						<li key={question.id}>
-							<QuestionCard question={question} index={i} />
-						</li>
-					))}
+				<ol className="space-y-5">
+					{questions.map((question, i) => {
+						const edit = edits[question.id];
+						const rendered = applyStagedEdit(question, edit);
+						return (
+							<li key={question.id}>
+								<QuestionCard
+									question={rendered}
+									index={i}
+									isDirty={Boolean(edit)}
+									onEdit={() => onEdit(question)}
+								/>
+							</li>
+						);
+					})}
 				</ol>
 			)}
 
 			{showStreamingFooter && questions.length > 0 && (
-				<div className="flex items-center gap-2 border border-border border-dashed px-4 py-3 text-muted-foreground text-xs">
-					<Spinner className="size-3.5 animate-spin" weight="bold" />
+				<div
+					className="flex items-center gap-2 border border-border border-dashed px-4 py-3 text-muted-foreground text-sm"
+					role="status"
+					aria-live="polite"
+				>
+					<Spinner className="size-4 animate-spin" weight="bold" aria-hidden />
 					<span>Soal berikutnya sedang dibuat…</span>
 				</div>
 			)}

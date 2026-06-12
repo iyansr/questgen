@@ -36,7 +36,11 @@ function buildGeneratedQuestionSchema(allowedTypes: QuestionType[]) {
 			.describe(
 				`One of: ${allowedTypes.join(', ')}. Must match the type assigned in the prompt.`,
 			),
-		questionText: z.string().describe('Question text in markdown format. Never explicitly mention imageRef here, but it may be implicitly referenced (e.g. "What does the diagram illustrate?").'),
+		questionText: z
+			.string()
+			.describe(
+				'Question text in markdown format. Never explicitly mention imageRef here, but it may be implicitly referenced (e.g. "What does the diagram illustrate?").',
+			),
 		imageRef: z
 			.string()
 			.nullable()

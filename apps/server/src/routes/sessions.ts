@@ -1,13 +1,18 @@
 import { zValidator } from '@hono/zod-validator';
 import { questionSets, questions } from '@questgen/db/schema';
 import { createUIMessageStream, createUIMessageStreamResponse } from 'ai';
-import { and, eq, gte } from 'drizzle-orm';
+import { eq } from 'drizzle-orm';
 import { Hono } from 'hono';
 
+import { updateQuestionsSchema } from '../schemas/questions.schema';
 import {
 	createSessionSchema,
 	listSessionsQuerySchema,
 } from '../schemas/sessions.schema';
+import {
+	collectImageAssignments,
+	updateQuestions,
+} from '../services/questions.service';
 import {
 	createSession,
 	getSessionWithQuestions,
@@ -75,6 +80,36 @@ sessions.get('/:id', async (c) => {
 	}
 });
 
+sessions.patch(
+	'/:id/questions',
+	zValidator('form', updateQuestionsSchema),
+	async (c) => {
+		const db = c.get('db');
+		const userId = c.get('userId');
+		const id = c.req.param('id');
+		const input = c.req.valid('form');
+		const formData = await c.req.formData();
+		const images = await collectImageAssignments(formData, input.updates);
+
+		try {
+			const result = await updateQuestions(
+				db,
+				userId,
+				id,
+				input.updates,
+				images,
+			);
+			return c.json(result);
+		} catch (err) {
+			if (err instanceof SessionValidationError) {
+				return c.json({ error: err.message }, err.status);
+			}
+			console.error('Update questions error:', err);
+			return c.json({ error: 'Internal server error' }, 500);
+		}
+	},
+);
+
 sessions.post('/:id/stream', async (c) => {
 	const db = c.get('db');
 	const userId = c.get('userId');
@@ -94,7 +129,7 @@ sessions.post('/:id/stream', async (c) => {
 	const stream = createUIMessageStream({
 		execute: async ({ writer }) => {
 			const startedAt = Date.now();
-			let lastQuestionCount = 0;
+			const lastEmittedAt = new Map<string, number>();
 			let lastStatus: string | null = null;
 			let lastErrorMessage: string | null = null;
 
@@ -136,28 +171,28 @@ sessions.post('/:id/stream', async (c) => {
 					lastErrorMessage = currentSession.errorMessage;
 				}
 
-			const freshQuestions = await db
-				.select()
-				.from(questions)
-				.where(
-					and(
-						eq(questions.setId, id),
-						gte(questions.order, lastQuestionCount),
-					),
-				)
-				.orderBy(questions.order);
+				const allQuestions = await db
+					.select()
+					.from(questions)
+					.where(eq(questions.setId, id))
+					.orderBy(questions.order);
 
-			if (freshQuestions.length > 0) {
-				for (const q of freshQuestions) {
-					writer.write({ type: 'data-question', id: q.id, data: q });
+				let emittedAny = false;
+				for (const q of allQuestions) {
+					const updatedAtMs = new Date(q.updatedAt).getTime();
+					const previous = lastEmittedAt.get(q.id);
+					if (previous === undefined || updatedAtMs > previous) {
+						writer.write({ type: 'data-question', id: q.id, data: q });
+						lastEmittedAt.set(q.id, updatedAtMs);
+						emittedAny = true;
+					}
 				}
-				lastQuestionCount += freshQuestions.length;
-			}
 
-				if (
-					currentSession.status === 'completed' ||
-					currentSession.status === 'failed'
-				) {
+				if (currentSession.status === 'failed') {
+					break;
+				}
+
+				if (emittedAny && currentSession.status === 'completed') {
 					break;
 				}
 

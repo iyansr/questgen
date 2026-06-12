@@ -50,9 +50,10 @@ export async function chunkText(
 		const heading = extractHeadingPath(section);
 		const pieces = await splitter.splitText(section);
 		for (const piece of pieces) {
-			const text = heading && !piece.startsWith(heading)
-				? `${heading}\n\n${piece}`
-				: piece;
+			const text =
+				heading && !piece.startsWith(heading)
+					? `${heading}\n\n${piece}`
+					: piece;
 			chunks.push({
 				text,
 				index: index++,

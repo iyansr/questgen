@@ -24,8 +24,10 @@ export function BackToTop() {
 	return (
 		<Button
 			variant="outline"
-			size="icon"
+			size="icon-lg"
 			aria-label="Kembali ke atas"
+			aria-hidden={!visible}
+			tabIndex={visible ? 0 : -1}
 			onClick={scrollToTop}
 			className={cn(
 				'fixed right-4 bottom-4 z-50 rounded-full border-border bg-card shadow-sm transition-all duration-200 md:right-6 md:bottom-6',
@@ -34,7 +36,7 @@ export function BackToTop() {
 					: 'pointer-events-none translate-y-2 opacity-0',
 			)}
 		>
-			<ArrowUp className="size-4" weight="bold" />
+			<ArrowUp className="size-5" weight="bold" aria-hidden />
 		</Button>
 	);
 }
