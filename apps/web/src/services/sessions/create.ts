@@ -10,6 +10,9 @@ export type CreateSessionInput = {
 	file?: File;
 	documentId?: string;
 	webQuery?: string;
+	curriculum?: string;
+	grade?: string;
+	classGrade?: string;
 };
 
 export type CreateSessionResponse = {
@@ -23,6 +26,9 @@ function toFormData(input: CreateSessionInput): FormData {
 	if (input.file) formData.set('file', input.file);
 	if (input.documentId) formData.set('documentId', input.documentId);
 	if (input.webQuery) formData.set('webQuery', input.webQuery);
+	if (input.curriculum) formData.set('curriculum', input.curriculum);
+	if (input.grade) formData.set('grade', input.grade);
+	if (input.classGrade) formData.set('classGrade', input.classGrade);
 	return formData;
 }
 

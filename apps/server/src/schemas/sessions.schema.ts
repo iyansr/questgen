@@ -74,11 +74,26 @@ export const createSessionSchema = z
 			.min(MIN_WEB_QUERY_CHARS)
 			.max(MAX_WEB_QUERY_CHARS)
 			.optional(),
+		curriculum: z.string().trim().min(1).optional(),
+		grade: z.string().trim().min(1).optional(),
+		classGrade: z.string().trim().min(1).optional(),
 	})
 	.refine(
 		(d) => [d.file, d.documentId, d.webQuery].filter(Boolean).length === 1,
 		{ message: 'Provide exactly one of: file, documentId, webQuery' },
-	);
+	)
+	.refine((d) => !d.webQuery || d.curriculum, {
+		message: 'curriculum is required for web search',
+		path: ['curriculum'],
+	})
+	.refine((d) => !d.webQuery || d.grade, {
+		message: 'grade is required for web search',
+		path: ['grade'],
+	})
+	.refine((d) => !d.webQuery || d.classGrade, {
+		message: 'classGrade is required for web search',
+		path: ['classGrade'],
+	});
 
 export const SESSION_STATUSES = [
 	'pending',

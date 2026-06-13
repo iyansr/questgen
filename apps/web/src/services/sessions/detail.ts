@@ -21,6 +21,9 @@ export type SessionConfig = {
 	topic: string;
 	questionTypeCounts: Array<{ type: QuestionType; count: number }>;
 	count: number;
+	curriculum?: string;
+	grade?: string;
+	classGrade?: string;
 };
 
 export type SessionQuestion = {

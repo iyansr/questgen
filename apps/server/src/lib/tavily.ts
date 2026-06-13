@@ -45,6 +45,7 @@ export async function researchWeb(
 					topic: 'general',
 					includeImages: true,
 					includeImageDescriptions: true,
+					country: 'Indonesia',
 				});
 
 				span.setAttribute('tavily.raw_results', response.results.length);

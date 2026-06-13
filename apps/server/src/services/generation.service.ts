@@ -7,18 +7,21 @@ import type { ImageRef } from '../lib/chunker';
 import { openrouter } from '../lib/openrouter';
 import { SYSTEM_PROMPT, USER_PROMPT } from '../prompts/question-generation';
 import type { QuestionTypeCount } from '../schemas/sessions.schema';
-import { retrieveMultiQuery } from './rag/multi-query-retriever';
-import { expandQueries } from './rag/query-expander';
-import { buildTrace } from './rag/retrieval-trace';
+import { documentSearch } from './agent/document-search';
+import { webSearch } from './agent/web-search';
+import type { RetrievalTrace } from './rag/types';
 
 export type GenerationConfig = {
 	topic: string;
 	questionTypeCounts: QuestionTypeCount[];
 	source: 'document' | 'web';
+	curriculum?: string;
+	grade?: string;
+	classGrade?: string;
 };
 
 const QUESTION_TYPE_VALUES = questionTypeEnum.enumValues;
-const GENERATION_MODEL = 'google/gemini-3.1-flash-lite';
+const GENERATION_MODEL = 'deepseek/deepseek-v4-flash';
 type QuestionType = (typeof QUESTION_TYPE_VALUES)[number];
 
 const questionOptionSchema = z.object({
@@ -118,22 +121,42 @@ function interpolate(template: string, vars: Record<string, string>): string {
 }
 
 function buildDistributionPrompt(counts: QuestionTypeCount[]): string {
-	if (counts.length === 1) {
-		const [only] = counts as [QuestionTypeCount, ...QuestionTypeCount[]];
-		return `Generate exactly ${only.count} ${only.type} questions. Every question MUST be of type "${only.type}".`;
-	}
-
+	const total = counts.reduce((s, q) => s + q.count, 0);
 	const lines = counts
 		.map((q) => `- ${q.count} of type "${q.type}"`)
 		.join('\n');
 
+	if (counts.length === 1) {
+		const [only] = counts as [QuestionTypeCount, ...QuestionTypeCount[]];
+		return [
+			`Generate exactly ${total} questions.`,
+			`Every question MUST be of type "${only.type}".`,
+		].join('\n');
+	}
+
 	return [
-		`Generate exactly the following distribution of questions (total = ${counts.reduce((s, q) => s + q.count, 0)}):`,
+		`Generate exactly ${total} questions with the following distribution:`,
 		lines,
 		`Every question MUST be assigned one of the allowed types: ${counts.map((q) => q.type).join(', ')}.`,
-		'For multiple_choice and true_false populate `options` (4 options for MC, 2 for T/F) and set `correctAnswer` to the label of the correct option.',
-		'For short_answer and essay, leave `options` null and put a model answer in `correctAnswer`.',
 	].join('\n');
+}
+
+function buildWebTrace(
+	topic: string,
+	startedAt: Date,
+	imageRefs: ImageRef[] = [],
+): RetrievalTrace {
+	return {
+		topic,
+		source: 'web',
+		expandedQueries: [],
+		perQuery: [],
+		uniqueChunkIds: [],
+		imageRefIds: imageRefs.map((r) => r.id),
+		coverage: { uniqueChunkCount: 0, avgScore: 0, minScore: 0 },
+		startedAt: startedAt.toISOString(),
+		completedAt: new Date().toISOString(),
+	};
 }
 
 export async function generateQuestionsInBackground(
@@ -142,37 +165,70 @@ export async function generateQuestionsInBackground(
 	config: GenerationConfig,
 ): Promise<void> {
 	const db = createDb();
-	const total = config.questionTypeCounts.reduce((s, q) => s + q.count, 0);
 	const traceStartedAt = new Date();
 
-	const expanded = await expandQueries(
-		config.topic,
-		config.questionTypeCounts,
-		config.source,
-	);
+	let sourceMaterial: string;
+	let imageCatalog = new Map<string, ImageRef>();
+	let trace: RetrievalTrace;
 
-	const multiQuery = await retrieveMultiQuery(
-		expanded,
-		scopeId,
-		total,
-		config.source,
-	);
+	if (config.source === 'web') {
+		console.log('SEARCH WEB...');
+		const webResult = await webSearch({
+			topic: config.topic,
+			sessionId,
+			classGrade: config.classGrade ?? '',
+			grade: config.grade ?? '',
+			curriculum: config.curriculum ?? '',
+		});
 
-	const imageCatalog = new Map<string, ImageRef>();
-	for (const ref of multiQuery.imageRefs) {
-		imageCatalog.set(ref.id, ref);
+		for (const ref of webResult.imageRefs) {
+			imageCatalog.set(ref.id, ref);
+		}
+
+		sourceMaterial = webResult.sourceMaterial;
+		trace = buildWebTrace(config.topic, traceStartedAt, webResult.imageRefs);
+	} else {
+		console.log('SEARCH DOCS...');
+		const result = await documentSearch({
+			topic: config.topic,
+			scopeId,
+			sessionId,
+		});
+
+		imageCatalog = new Map<string, ImageRef>();
+		for (const ref of result.imageRefs) {
+			imageCatalog.set(ref.id, ref);
+		}
+
+		sourceMaterial = result.sourceMaterial;
+
+		trace = {
+			topic: config.topic,
+			source: config.source,
+			expandedQueries: result.trace.queries.map((q) => ({ query: q })),
+			perQuery: result.trace.queries.map((q) => ({
+				query: q,
+				chunkIds: result.trace.chunks.map((c) => c.id),
+				scores: result.trace.chunks.map((c) => c.score),
+			})),
+			uniqueChunkIds: result.trace.chunks.map((c) => c.id).slice(0, 50),
+			imageRefIds: result.imageRefs.map((r) => r.id),
+			coverage: result.trace.coverage,
+			startedAt: traceStartedAt.toISOString(),
+			completedAt: new Date().toISOString(),
+		};
 	}
 
-	const imageCatalogSection = multiQuery.imageRefs.length
-		? `\n\nAvailable images (reference by ID, or null if none fit):\n${multiQuery.imageRefs
+	const imageCatalogSection = imageCatalog.size
+		? `\n\nAvailable images (reference by ID, or null if none fit):\n${Array.from(
+				imageCatalog.values(),
+			)
 				.map(
 					(ref, i) =>
 						`${i + 1}. ${ref.id}: ${ref.caption || '(no description)'}`,
 				)
 				.join('\n')}\n`
-		: '';
-
-	const sourceMaterial = multiQuery.chunks.map((c) => c.text).join('\n\n');
+		: '\nNo images are available for this session. Do not reference any images.\n';
 
 	const systemPrompt = interpolate(SYSTEM_PROMPT, {
 		TOPIC: config.topic,
@@ -188,14 +244,7 @@ export async function generateQuestionsInBackground(
 		new Set(config.questionTypeCounts.map((q) => q.type)),
 	);
 
-	const trace = buildTrace({
-		topic: config.topic,
-		source: config.source,
-		expandedQueries: expanded,
-		multiQueryResult: multiQuery,
-		startedAt: traceStartedAt,
-	});
-
+	console.log('START STREAMING...');
 	const { elementStream } = streamText({
 		model: openrouter(GENERATION_MODEL),
 		output: Output.array({
@@ -209,7 +258,8 @@ export async function generateQuestionsInBackground(
 			metadata: {
 				sessionId,
 				topic: config.topic,
-				retrievalMode: 'multi-query',
+				retrievalMode:
+					config.source === 'web' ? 'web-search-tool' : 'document-search-tool',
 				source: config.source,
 				retrievalTrace: JSON.stringify(trace),
 			},

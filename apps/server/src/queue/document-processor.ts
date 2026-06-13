@@ -9,7 +9,6 @@ import { chunkText } from '../lib/chunker';
 import { embedTexts } from '../lib/embeddings';
 import { uploadImageToR2 } from '../lib/images';
 import { processDocument as ocrProcess } from '../lib/ocr';
-import { researchWeb } from '../lib/tavily';
 import {
 	MAX_CHUNKS,
 	MAX_OCR_IMAGES,
@@ -134,53 +133,9 @@ async function processGenerateQuestions(
 }
 
 async function processResearchWeb(job: ResearchWebJob): Promise<void> {
-	const { sessionId, query, config } = job;
+	const { sessionId, config } = job;
 
 	try {
-		const { sections, images } = await researchWeb(query, sessionId);
-
-		const totalChars = sections.reduce((sum, s) => sum + s.markdown.length, 0);
-		if (totalChars > MAX_OCR_MARKDOWN_CHARS) {
-			throw new Error(
-				`Web research content too large (${totalChars} chars, max ${MAX_OCR_MARKDOWN_CHARS}). Refine your keyword.`,
-			);
-		}
-
-		const chunkerImages = images.map((img) => ({
-			id: img.id,
-			r2Url: img.url,
-			caption: img.caption,
-			pageIndex: 0,
-		}));
-
-		const allChunks: Awaited<ReturnType<typeof chunkText>> = [];
-		let chunkIndex = 0;
-		for (const section of sections) {
-			const sectionChunks = await chunkText(section.markdown, chunkerImages);
-			for (const c of sectionChunks) {
-				allChunks.push({ ...c, index: chunkIndex++ });
-			}
-		}
-
-		if (allChunks.length > MAX_CHUNKS) {
-			throw new Error(
-				`Too many chunks (${allChunks.length}, max ${MAX_CHUNKS}).`,
-			);
-		}
-
-		const embeddings = await embedTexts(allChunks.map((c) => c.text));
-		const collection = await getOrCreateCollection();
-		await collection.upsert({
-			ids: allChunks.map((c) => `web-${sessionId}-${c.index}`),
-			embeddings,
-			documents: allChunks.map((c) => c.text),
-			metadatas: allChunks.map((c) => ({
-				scopeId: sessionId,
-				chunkIndex: c.index,
-				imageRefs: JSON.stringify(c.imageRefs),
-			})),
-		});
-
 		await generateForScope(sessionId, sessionId, {
 			...config,
 			source: 'web',

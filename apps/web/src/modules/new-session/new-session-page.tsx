@@ -34,6 +34,9 @@ export function NewSessionPage() {
 			file: undefined,
 			documentId: undefined,
 			webQuery: undefined,
+			curriculum: undefined,
+			grade: undefined,
+			classGrade: undefined,
 		},
 	});
 
@@ -47,6 +50,9 @@ export function NewSessionPage() {
 				file: values.file,
 				documentId: values.documentId,
 				webQuery: values.webQuery,
+				curriculum: values.curriculum,
+				grade: values.grade,
+				classGrade: values.classGrade,
 			});
 			toast.success('Sesi berhasil dibuat.');
 			navigate({ to: '/session/$id', params: { id } });
@@ -120,22 +126,43 @@ export function NewSessionPage() {
 												render={({
 													field: webQueryField,
 													fieldState: webQueryState,
-												}) => {
-													const sourceError =
-														// eslint-disable-next-line @typescript-eslint/no-explicit-any
-														(form.formState.errors as any).source ??
-														fileState.error ??
-														documentIdState.error ??
-														webQueryState.error;
-													return (
-														<SourceField
-															fileField={fileField}
-															documentIdField={documentIdField}
-															webQueryField={webQueryField}
-															error={sourceError}
-														/>
-													);
-												}}
+												}) => (
+													<Controller
+														control={form.control}
+														name="curriculum"
+														render={({ field: curriculumField }) => (
+															<Controller
+																control={form.control}
+																name="grade"
+																render={({ field: gradeField }) => (
+																	<Controller
+																		control={form.control}
+																		name="classGrade"
+																		render={({ field: classGradeField }) => {
+																			const sourceError =
+																				// eslint-disable-next-line @typescript-eslint/no-explicit-any
+																				(form.formState.errors as any).source ??
+																				fileState.error ??
+																				documentIdState.error ??
+																				webQueryState.error;
+																			return (
+																				<SourceField
+																					fileField={fileField}
+																					documentIdField={documentIdField}
+																					webQueryField={webQueryField}
+																					curriculumField={curriculumField}
+																					gradeField={gradeField}
+																					classGradeField={classGradeField}
+																					error={sourceError}
+																				/>
+																			);
+																		}}
+																	/>
+																)}
+															/>
+														)}
+													/>
+												)}
 											/>
 										)}
 									/>

@@ -11,6 +11,9 @@ import type {
 import { useReadyDocuments } from '@/services/documents/list';
 
 import {
+	CLASS_GRADE_OPTIONS,
+	CURRICULUM_OPTIONS,
+	GRADE_OPTIONS,
 	MAX_FILE_SIZE_BYTES,
 	MAX_FILE_SIZE_MB,
 	MAX_PDF_PAGES,
@@ -29,6 +32,9 @@ interface SourceFieldProps {
 	fileField: ControllerRenderProps<NewSessionFormValues, 'file'>;
 	documentIdField: ControllerRenderProps<NewSessionFormValues, 'documentId'>;
 	webQueryField: ControllerRenderProps<NewSessionFormValues, 'webQuery'>;
+	curriculumField: ControllerRenderProps<NewSessionFormValues, 'curriculum'>;
+	gradeField: ControllerRenderProps<NewSessionFormValues, 'grade'>;
+	classGradeField: ControllerRenderProps<NewSessionFormValues, 'classGrade'>;
 	error?: RHFFieldError;
 }
 
@@ -42,6 +48,9 @@ export function SourceField({
 	fileField,
 	documentIdField,
 	webQueryField,
+	curriculumField,
+	gradeField,
+	classGradeField,
 	error,
 }: SourceFieldProps) {
 	const inputRef = useRef<HTMLInputElement | null>(null);
@@ -70,6 +79,9 @@ export function SourceField({
 		fileField.onChange(undefined);
 		documentIdField.onChange(undefined);
 		webQueryField.onChange(undefined);
+		curriculumField.onChange(undefined);
+		gradeField.onChange(undefined);
+		classGradeField.onChange(undefined);
 		if (inputRef.current) inputRef.current.value = '';
 		setModeState(next);
 		if (next === 'document') setPickerOpen(true);
@@ -228,23 +240,108 @@ export function SourceField({
 			)}
 
 			{mode === 'web' && (
-				<div className="mt-1 space-y-1.5 border border-input p-3">
-					<input
-						type="text"
-						value={webQueryField.value ?? ''}
-						onChange={(e) => webQueryField.onChange(e.target.value)}
-						onBlur={webQueryField.onBlur}
-						placeholder="misal: fotosintesis pada tumbuhan tingkat tinggi"
-						maxLength={MAX_WEB_QUERY_CHARS}
-						className={cn(
-							'w-full bg-transparent text-xs outline-none placeholder:text-muted-foreground',
-							'h-9 px-0',
-						)}
-					/>
-					<p className="text-[10px] text-muted-foreground">
-						AI akan meneliti web menggunakan kata kunci ini · minimal{' '}
-						{MIN_WEB_QUERY_CHARS} karakter
-					</p>
+				<div className="space-y-3 border border-input border-t-0 p-3">
+					<div className="space-y-1.5">
+						<input
+							type="text"
+							value={webQueryField.value ?? ''}
+							onChange={(e) => webQueryField.onChange(e.target.value)}
+							onBlur={webQueryField.onBlur}
+							placeholder="misal: fotosintesis pada tumbuhan tingkat tinggi"
+							maxLength={MAX_WEB_QUERY_CHARS}
+							className={cn(
+								'w-full bg-transparent text-xs outline-none placeholder:text-muted-foreground',
+								'h-9 px-0',
+							)}
+						/>
+						<p className="text-[10px] text-muted-foreground">
+							AI akan meneliti web menggunakan kata kunci ini · minimal{' '}
+							{MIN_WEB_QUERY_CHARS} karakter
+						</p>
+					</div>
+
+					<div className="grid grid-cols-3 gap-2">
+						<div className="space-y-1">
+							<label className="font-medium text-[10px] text-muted-foreground uppercase tracking-wide">
+								Kurikulum
+							</label>
+							<select
+								value={curriculumField.value ?? ''}
+								onChange={(e) =>
+									curriculumField.onChange(e.target.value || undefined)
+								}
+								onBlur={curriculumField.onBlur}
+								className={cn(
+									'h-8 w-full appearance-none rounded-none border border-input bg-transparent px-2 text-xs outline-none transition-colors',
+									'focus-visible:border-ring focus-visible:ring-1 focus-visible:ring-ring/50',
+									!curriculumField.value && 'text-muted-foreground',
+								)}
+							>
+								<option value="">Pilih</option>
+								{CURRICULUM_OPTIONS.map((opt) => (
+									<option key={opt} value={opt}>
+										{opt}
+									</option>
+								))}
+							</select>
+						</div>
+
+						<div className="space-y-1">
+							<label className="font-medium text-[10px] text-muted-foreground uppercase tracking-wide">
+								Jenjang
+							</label>
+							<select
+								value={gradeField.value ?? ''}
+								onChange={(e) => {
+									gradeField.onChange(e.target.value || undefined);
+									classGradeField.onChange(undefined);
+								}}
+								onBlur={gradeField.onBlur}
+								className={cn(
+									'h-8 w-full appearance-none rounded-none border border-input bg-transparent px-2 text-xs outline-none transition-colors',
+									'focus-visible:border-ring focus-visible:ring-1 focus-visible:ring-ring/50',
+									!gradeField.value && 'text-muted-foreground',
+								)}
+							>
+								<option value="">Pilih</option>
+								{GRADE_OPTIONS.map((opt) => (
+									<option key={opt} value={opt}>
+										{opt}
+									</option>
+								))}
+							</select>
+						</div>
+
+						<div className="space-y-1">
+							<label className="font-medium text-[10px] text-muted-foreground uppercase tracking-wide">
+								Kelas
+							</label>
+							<select
+								value={classGradeField.value ?? ''}
+								onChange={(e) =>
+									classGradeField.onChange(e.target.value || undefined)
+								}
+								onBlur={classGradeField.onBlur}
+								disabled={!gradeField.value}
+								className={cn(
+									'h-8 w-full appearance-none rounded-none border border-input bg-transparent px-2 text-xs outline-none transition-colors',
+									'focus-visible:border-ring focus-visible:ring-1 focus-visible:ring-ring/50',
+									'disabled:pointer-events-none disabled:opacity-50',
+									!classGradeField.value && 'text-muted-foreground',
+								)}
+							>
+								<option value="">Pilih</option>
+								{(gradeField.value
+									? (CLASS_GRADE_OPTIONS[gradeField.value] ?? [])
+									: []
+								).map((opt) => (
+									<option key={opt} value={opt}>
+										{opt}
+									</option>
+								))}
+							</select>
+						</div>
+					</div>
 				</div>
 			)}
 

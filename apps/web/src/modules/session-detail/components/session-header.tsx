@@ -1,4 +1,9 @@
-import { ArrowLeft, FileText, Sparkle } from '@phosphor-icons/react';
+import {
+	ArrowLeft,
+	FileText,
+	GraduationCap,
+	Sparkle,
+} from '@phosphor-icons/react';
 import { buttonVariants } from '@questgen/ui/components/button';
 import { cn } from '@questgen/ui/lib/utils';
 import { Link } from '@tanstack/react-router';
@@ -120,6 +125,28 @@ export function SessionHeader({ session }: SessionHeaderProps) {
 						</dd>
 					</div>
 				</div>
+
+				{config.curriculum && config.grade && config.classGrade && (
+					<div className="flex items-start gap-3 p-5 sm:col-span-2 sm:border-border sm:border-t sm:p-6">
+						<div
+							className="flex size-10 shrink-0 items-center justify-center bg-muted"
+							aria-hidden
+						>
+							<GraduationCap
+								className="size-5 text-muted-foreground"
+								weight="regular"
+							/>
+						</div>
+						<div className="min-w-0">
+							<dt className="text-muted-foreground text-sm uppercase tracking-wide">
+								Detail Kelas
+							</dt>
+							<dd className="mt-1 font-medium text-base">
+								{config.curriculum} · {config.grade} · Kelas {config.classGrade}
+							</dd>
+						</div>
+					</div>
+				)}
 			</dl>
 
 			{status === 'failed' && session.errorMessage && (

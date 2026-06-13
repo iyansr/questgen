@@ -31,6 +31,14 @@ export const sourceModeSchema = z.enum(['file', 'document', 'web']);
 export const MAX_WEB_QUERY_CHARS = 200;
 export const MIN_WEB_QUERY_CHARS = 3;
 
+export const CURRICULUM_OPTIONS = ['K-13', 'Kurikulum Merdeka'] as const;
+export const GRADE_OPTIONS = ['SD', 'SMP', 'SMA'] as const;
+export const CLASS_GRADE_OPTIONS: Record<string, readonly string[]> = {
+	SD: ['I', 'II', 'III', 'IV', 'V', 'VI'],
+	SMP: ['VII', 'VIII', 'IX'],
+	SMA: ['X', 'XI', 'XII'],
+};
+
 export const questionTypeCountSchema = z.object({
 	type: z.enum(QUESTION_TYPES),
 	count: z.number().int().min(0).max(MAX_PER_TYPE),
@@ -87,6 +95,9 @@ export const newSessionFormSchema = z
 				`Kata kunci maksimal ${MAX_WEB_QUERY_CHARS} karakter`,
 			)
 			.optional(),
+		curriculum: z.enum(CURRICULUM_OPTIONS).optional(),
+		grade: z.enum(GRADE_OPTIONS).optional(),
+		classGrade: z.string().min(1).optional(),
 	})
 	.refine(
 		(d) => [d.file, d.documentId, d.webQuery].filter(Boolean).length === 1,
@@ -94,7 +105,19 @@ export const newSessionFormSchema = z
 			message: 'Pilih salah satu sumber: file, dokumen, atau riset web',
 			path: ['source'],
 		},
-	);
+	)
+	.refine((d) => !d.webQuery || d.curriculum, {
+		message: 'Kurikulum wajib diisi untuk riset web',
+		path: ['curriculum'],
+	})
+	.refine((d) => !d.webQuery || d.grade, {
+		message: 'Jenjang wajib diisi untuk riset web',
+		path: ['grade'],
+	})
+	.refine((d) => !d.webQuery || d.classGrade, {
+		message: 'Kelas wajib diisi untuk riset web',
+		path: ['classGrade'],
+	});
 
 export type NewSessionFormValues = z.infer<typeof newSessionFormSchema>;
 

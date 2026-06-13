@@ -38,6 +38,9 @@ export type CreateSessionInput = {
 	file?: File;
 	documentId?: string;
 	webQuery?: string;
+	curriculum?: string;
+	grade?: string;
+	classGrade?: string;
 };
 
 export type CreateSessionResult = {
@@ -49,7 +52,16 @@ export async function createSession(
 	userId: string,
 	input: CreateSessionInput,
 ): Promise<CreateSessionResult> {
-	const { topic, questionTypeCounts, file, documentId, webQuery } = input;
+	const {
+		topic,
+		questionTypeCounts,
+		file,
+		documentId,
+		webQuery,
+		curriculum,
+		grade,
+		classGrade,
+	} = input;
 	const count = totalCount(questionTypeCounts);
 
 	if (documentId) {
@@ -67,6 +79,9 @@ export async function createSession(
 			topic,
 			questionTypeCounts,
 			count,
+			curriculum,
+			grade,
+			classGrade,
 		});
 	}
 
@@ -164,6 +179,9 @@ type CreateSessionFromWebQueryInput = {
 	topic: string;
 	questionTypeCounts: QuestionTypeCount[];
 	count: number;
+	curriculum?: string;
+	grade?: string;
+	classGrade?: string;
 };
 
 async function createSessionFromWebQuery(
@@ -171,7 +189,15 @@ async function createSessionFromWebQuery(
 	userId: string,
 	input: CreateSessionFromWebQueryInput,
 ): Promise<CreateSessionResult> {
-	const { webQuery, topic, questionTypeCounts, count } = input;
+	const {
+		webQuery,
+		topic,
+		questionTypeCounts,
+		count,
+		curriculum,
+		grade,
+		classGrade,
+	} = input;
 
 	const trimmed = webQuery.trim();
 	if (
@@ -190,7 +216,15 @@ async function createSessionFromWebQuery(
 			documentId: null,
 			title: `${topic} — ${trimmed}`,
 			status: 'pending',
-			config: { topic, questionTypeCounts, count, webQuery: trimmed },
+			config: {
+				topic,
+				questionTypeCounts,
+				count,
+				webQuery: trimmed,
+				curriculum,
+				grade,
+				classGrade,
+			},
 		})
 		.returning({ id: questionSets.id });
 
@@ -201,7 +235,7 @@ async function createSessionFromWebQuery(
 		type: 'RESEARCH_WEB',
 		sessionId: session.id,
 		query: trimmed,
-		config: { topic, questionTypeCounts, count },
+		config: { topic, questionTypeCounts, count, curriculum, grade, classGrade },
 	});
 
 	return { id: session.id };
