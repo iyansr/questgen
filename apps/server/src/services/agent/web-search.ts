@@ -4,7 +4,6 @@ import z from 'zod';
 import { GENERATION_PARAMS, MODELS } from '@/config/models';
 import type { ImageRef } from '@/lib/chunker';
 import { openai } from '@/lib/openai';
-import { openrouter } from '@/lib/openrouter';
 import { withRetry } from '@/lib/retry';
 import { researchWeb } from '@/lib/tavily';
 

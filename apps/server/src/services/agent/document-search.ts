@@ -4,7 +4,6 @@ import z from 'zod';
 import { GENERATION_PARAMS, MODELS } from '@/config/models';
 import type { ImageRef } from '@/lib/chunker';
 import { openai } from '@/lib/openai';
-import { openrouter } from '@/lib/openrouter';
 import type { RetrievedChunkMeta } from '@/lib/rag';
 import { retrieveContextWithMeta } from '@/lib/rag';
 import { withRetry } from '@/lib/retry';

@@ -2,7 +2,6 @@ import { generateText, Output } from 'ai';
 import { z } from 'zod';
 
 import { GENERATION_PARAMS, MODELS } from '../config/models';
-import { openai } from './openai';
 import { openrouter } from './openrouter';
 
 function toDataUrl(input: string): string {
