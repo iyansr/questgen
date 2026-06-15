@@ -3,6 +3,7 @@ import { env } from '@questgen/env/server';
 import { tavily } from '@tavily/core';
 
 import type { ImageRef } from './chunker';
+import { withRetry } from './retry';
 import { MAX_WEB_IMAGES, MAX_WEB_RESULTS } from './upload-limits';
 
 export interface WebSection {
@@ -38,15 +39,17 @@ export async function researchWeb(
 			try {
 				const client = tavily({ apiKey: env.TAVILY_API_KEY });
 
-				const response = await client.search(query, {
-					searchDepth: 'advanced',
-					includeRawContent: 'markdown',
-					maxResults: MAX_WEB_RESULTS,
-					topic: 'general',
-					includeImages: true,
-					includeImageDescriptions: true,
-					country: 'Indonesia',
-				});
+				const response = await withRetry(() =>
+					client.search(query, {
+						searchDepth: 'advanced',
+						includeRawContent: 'markdown',
+						maxResults: MAX_WEB_RESULTS,
+						topic: 'general',
+						includeImages: true,
+						includeImageDescriptions: true,
+						country: 'Indonesia',
+					}),
+				);
 
 				span.setAttribute('tavily.raw_results', response.results.length);
 

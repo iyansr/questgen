@@ -13,6 +13,15 @@ interface QuestgenEnv {
 	CHROMA_DATABASE: string;
 	CHROMA_URL?: string;
 
+	// Optional model overrides
+	QUESTGEN_GENERATION_MODEL?: string;
+	QUESTGEN_RESEARCH_MODEL?: string;
+	QUESTGEN_RETRIEVAL_MODEL?: string;
+	QUESTGEN_CAPTIONING_MODEL?: string;
+	QUESTGEN_EMBEDDING_MODEL?: string;
+
+	OPENCODE_API_KEY?: string;
+
 	// Secrets (set via `wrangler secret put` for production, .env for local dev)
 	DATABASE_URL: string;
 	JWT_SECRET: string;

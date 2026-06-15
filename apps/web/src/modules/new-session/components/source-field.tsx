@@ -79,9 +79,6 @@ export function SourceField({
 		fileField.onChange(undefined);
 		documentIdField.onChange(undefined);
 		webQueryField.onChange(undefined);
-		curriculumField.onChange(undefined);
-		gradeField.onChange(undefined);
-		classGradeField.onChange(undefined);
 		if (inputRef.current) inputRef.current.value = '';
 		setModeState(next);
 		if (next === 'document') setPickerOpen(true);
@@ -259,91 +256,96 @@ export function SourceField({
 							{MIN_WEB_QUERY_CHARS} karakter
 						</p>
 					</div>
-
-					<div className="grid grid-cols-3 gap-2">
-						<div className="space-y-1">
-							<label className="font-medium text-[10px] text-muted-foreground uppercase tracking-wide">
-								Kurikulum
-							</label>
-							<select
-								value={curriculumField.value ?? ''}
-								onChange={(e) =>
-									curriculumField.onChange(e.target.value || undefined)
-								}
-								onBlur={curriculumField.onBlur}
-								className={cn(
-									'h-8 w-full appearance-none rounded-none border border-input bg-transparent px-2 text-xs outline-none transition-colors',
-									'focus-visible:border-ring focus-visible:ring-1 focus-visible:ring-ring/50',
-									!curriculumField.value && 'text-muted-foreground',
-								)}
-							>
-								<option value="">Pilih</option>
-								{CURRICULUM_OPTIONS.map((opt) => (
-									<option key={opt} value={opt}>
-										{opt}
-									</option>
-								))}
-							</select>
-						</div>
-
-						<div className="space-y-1">
-							<label className="font-medium text-[10px] text-muted-foreground uppercase tracking-wide">
-								Jenjang
-							</label>
-							<select
-								value={gradeField.value ?? ''}
-								onChange={(e) => {
-									gradeField.onChange(e.target.value || undefined);
-									classGradeField.onChange(undefined);
-								}}
-								onBlur={gradeField.onBlur}
-								className={cn(
-									'h-8 w-full appearance-none rounded-none border border-input bg-transparent px-2 text-xs outline-none transition-colors',
-									'focus-visible:border-ring focus-visible:ring-1 focus-visible:ring-ring/50',
-									!gradeField.value && 'text-muted-foreground',
-								)}
-							>
-								<option value="">Pilih</option>
-								{GRADE_OPTIONS.map((opt) => (
-									<option key={opt} value={opt}>
-										{opt}
-									</option>
-								))}
-							</select>
-						</div>
-
-						<div className="space-y-1">
-							<label className="font-medium text-[10px] text-muted-foreground uppercase tracking-wide">
-								Kelas
-							</label>
-							<select
-								value={classGradeField.value ?? ''}
-								onChange={(e) =>
-									classGradeField.onChange(e.target.value || undefined)
-								}
-								onBlur={classGradeField.onBlur}
-								disabled={!gradeField.value}
-								className={cn(
-									'h-8 w-full appearance-none rounded-none border border-input bg-transparent px-2 text-xs outline-none transition-colors',
-									'focus-visible:border-ring focus-visible:ring-1 focus-visible:ring-ring/50',
-									'disabled:pointer-events-none disabled:opacity-50',
-									!classGradeField.value && 'text-muted-foreground',
-								)}
-							>
-								<option value="">Pilih</option>
-								{(gradeField.value
-									? (CLASS_GRADE_OPTIONS[gradeField.value] ?? [])
-									: []
-								).map((opt) => (
-									<option key={opt} value={opt}>
-										{opt}
-									</option>
-								))}
-							</select>
-						</div>
-					</div>
 				</div>
 			)}
+
+			<div className="space-y-3 border border-input border-t-0 p-3">
+				<p className="font-medium text-[10px] text-muted-foreground uppercase tracking-wide">
+					Detail Kelas (wajib untuk riset web)
+				</p>
+				<div className="grid grid-cols-3 gap-2">
+					<div className="space-y-1">
+						<label className="font-medium text-[10px] text-muted-foreground uppercase tracking-wide">
+							Kurikulum
+						</label>
+						<select
+							value={curriculumField.value ?? ''}
+							onChange={(e) =>
+								curriculumField.onChange(e.target.value || undefined)
+							}
+							onBlur={curriculumField.onBlur}
+							className={cn(
+								'h-8 w-full appearance-none rounded-none border border-input bg-transparent px-2 text-xs outline-none transition-colors',
+								'focus-visible:border-ring focus-visible:ring-1 focus-visible:ring-ring/50',
+								!curriculumField.value && 'text-muted-foreground',
+							)}
+						>
+							<option value="">Pilih</option>
+							{CURRICULUM_OPTIONS.map((opt) => (
+								<option key={opt} value={opt}>
+									{opt}
+								</option>
+							))}
+						</select>
+					</div>
+
+					<div className="space-y-1">
+						<label className="font-medium text-[10px] text-muted-foreground uppercase tracking-wide">
+							Jenjang
+						</label>
+						<select
+							value={gradeField.value ?? ''}
+							onChange={(e) => {
+								gradeField.onChange(e.target.value || undefined);
+								classGradeField.onChange(undefined);
+							}}
+							onBlur={gradeField.onBlur}
+							className={cn(
+								'h-8 w-full appearance-none rounded-none border border-input bg-transparent px-2 text-xs outline-none transition-colors',
+								'focus-visible:border-ring focus-visible:ring-1 focus-visible:ring-ring/50',
+								!gradeField.value && 'text-muted-foreground',
+							)}
+						>
+							<option value="">Pilih</option>
+							{GRADE_OPTIONS.map((opt) => (
+								<option key={opt} value={opt}>
+									{opt}
+								</option>
+							))}
+						</select>
+					</div>
+
+					<div className="space-y-1">
+						<label className="font-medium text-[10px] text-muted-foreground uppercase tracking-wide">
+							Kelas
+						</label>
+						<select
+							value={classGradeField.value ?? ''}
+							onChange={(e) =>
+								classGradeField.onChange(e.target.value || undefined)
+							}
+							onBlur={classGradeField.onBlur}
+							disabled={!gradeField.value}
+							className={cn(
+								'h-8 w-full appearance-none rounded-none border border-input bg-transparent px-2 text-xs outline-none transition-colors',
+								'focus-visible:border-ring focus-visible:ring-1 focus-visible:ring-ring/50',
+								'disabled:pointer-events-none disabled:opacity-50',
+								!classGradeField.value && 'text-muted-foreground',
+							)}
+						>
+							<option value="">Pilih</option>
+							{(gradeField.value
+								? (CLASS_GRADE_OPTIONS[gradeField.value] ?? [])
+								: []
+							).map((opt) => (
+								<option key={opt} value={opt}>
+									{opt}
+								</option>
+							))}
+						</select>
+					</div>
+				</div>
+			</div>
 
 			<DocumentPickerDialog
 				open={pickerOpen}

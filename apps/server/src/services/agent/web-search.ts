@@ -1,11 +1,14 @@
 import { generateText, stepCountIs, tool } from 'ai';
 import z from 'zod';
 
+import { GENERATION_PARAMS, MODELS } from '@/config/models';
 import type { ImageRef } from '@/lib/chunker';
+import { openai } from '@/lib/openai';
 import { openrouter } from '@/lib/openrouter';
+import { withRetry } from '@/lib/retry';
 import { researchWeb } from '@/lib/tavily';
 
-const RESEARCH_MODEL = 'deepseek/deepseek-v4-flash';
+const MARKDOWN_LIMIT = 150_000;
 
 export type WebSearchResult = {
 	sourceMaterial: string;
@@ -27,12 +30,9 @@ export async function webSearch({
 }): Promise<WebSearchResult> {
 	const allImageRefs = new Map<string, ImageRef>();
 	const { text } = await generateText({
-		model: openrouter(RESEARCH_MODEL, {
-			reasoning: {
-				effort: 'high',
-				enabled: true,
-			},
-		}),
+		model: openai(MODELS.RESEARCH),
+		temperature: GENERATION_PARAMS.RESEARCH.temperature,
+		topP: GENERATION_PARAMS.RESEARCH.topP,
 		tools: {
 			searchWeb: tool({
 				description:
@@ -45,14 +45,24 @@ export async function webSearch({
 						),
 				}),
 				execute: async ({ query }) => {
-					const result = await researchWeb(query, sessionId);
+					const result = await withRetry(() => researchWeb(query, sessionId));
 
 					for (const ref of result.images) {
 						if (!allImageRefs.has(ref.id)) allImageRefs.set(ref.id, ref);
 					}
 
+					const truncated = result.markdown.length > MARKDOWN_LIMIT;
+					if (truncated) {
+						console.warn(
+							`Web research truncated: ${result.markdown.length} > ${MARKDOWN_LIMIT}`,
+						);
+					}
+					const markdown = truncated
+						? result.markdown.slice(0, MARKDOWN_LIMIT)
+						: result.markdown;
+
 					return {
-						markdown: result.markdown.slice(0, 50_000),
+						markdown,
 						sourceCount: result.sections.length,
 						images: result.images.map((ref) => ({
 							id: ref.id,
@@ -97,7 +107,17 @@ After gathering information, compile a comprehensive markdown document that:
 - Includes specific facts, numbers, dates, and terminology
 - Is well-organized for educational question writing
 - Preserves important details that could be tested
-- When search results include images, reference them inline using their ID (e.g. "see image [https://example.com/image.png]") so the image context is preserved
+
+CRITICAL — IMAGE PRESERVATION RULES:
+When the searchWeb tool returns images, you MUST include them inline in your document using this EXACT format on its own line:
+\`\`\`
+![IMAGE:caption](https://the-exact-image-url-from-search-results)
+\`\`\`
+- Use the EXACT URL from the searchWeb result images — never invent or modify the URL
+- NEVER write descriptive placeholder text like "[Gambar: ...]" or "[Image: ...]" instead of the actual image URL
+- NEVER invent image descriptions; always use the caption from the search result
+- If a search returns multiple images, include each one with its own ![]() line near the relevant content
+- If a search returns zero images, do not include any image references for that search
 </format>
 
 Output ONLY the compiled markdown research document. Do not include preamble.`,

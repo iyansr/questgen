@@ -1,6 +1,8 @@
 import { generateText, Output } from 'ai';
 import { z } from 'zod';
 
+import { GENERATION_PARAMS, MODELS } from '../config/models';
+import { openai } from './openai';
 import { openrouter } from './openrouter';
 
 function toDataUrl(input: string): string {
@@ -19,7 +21,8 @@ export async function captionImages(
 	if (validImages.length === 0) return new Map();
 
 	const { output } = await generateText({
-		model: openrouter('openai/gpt-5.4-nano'),
+		model: openrouter(MODELS.CAPTIONING),
+		temperature: GENERATION_PARAMS.RESEARCH.temperature,
 		output: Output.array({ element: z.string() }),
 		messages: [
 			{

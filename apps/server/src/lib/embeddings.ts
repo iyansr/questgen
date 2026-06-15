@@ -2,13 +2,13 @@ import { createOpenRouter } from '@openrouter/ai-sdk-provider';
 import { env } from '@questgen/env/server';
 import { embed, embedMany } from 'ai';
 
+import { MODELS } from '../config/models';
+
 const openrouter = createOpenRouter({
 	apiKey: env.OPENROUTER_API_KEY,
 });
 
-const embeddingModel = openrouter.textEmbeddingModel(
-	'openai/text-embedding-3-small',
-);
+const embeddingModel = openrouter.textEmbeddingModel(MODELS.EMBEDDING);
 
 export async function embedText(text: string): Promise<number[]> {
 	const { embedding } = await embed({

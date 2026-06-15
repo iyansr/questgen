@@ -70,6 +70,9 @@ export async function createSession(
 			topic,
 			questionTypeCounts,
 			count,
+			curriculum,
+			grade,
+			classGrade,
 		});
 	}
 
@@ -153,7 +156,14 @@ export async function createSession(
 			documentId: doc.id,
 			title: `${topic} — ${file.name}`,
 			status: 'pending',
-			config: { topic, questionTypeCounts, count },
+			config: {
+				topic,
+				questionTypeCounts,
+				count,
+				curriculum,
+				grade,
+				classGrade,
+			},
 		})
 		.returning({ id: questionSets.id });
 
@@ -168,7 +178,14 @@ export async function createSession(
 		fileKey,
 		fileType,
 		sessionId: session.id,
-		config: { topic, questionTypeCounts, count },
+		config: {
+			topic,
+			questionTypeCounts,
+			count,
+			curriculum,
+			grade,
+			classGrade,
+		},
 	});
 
 	return { id: session.id };
@@ -246,6 +263,9 @@ type CreateSessionFromDocumentInput = {
 	topic: string;
 	questionTypeCounts: QuestionTypeCount[];
 	count: number;
+	curriculum?: string;
+	grade?: string;
+	classGrade?: string;
 };
 
 async function createSessionFromDocument(
@@ -253,7 +273,15 @@ async function createSessionFromDocument(
 	userId: string,
 	input: CreateSessionFromDocumentInput,
 ): Promise<CreateSessionResult> {
-	const { documentId, topic, questionTypeCounts, count } = input;
+	const {
+		documentId,
+		topic,
+		questionTypeCounts,
+		count,
+		curriculum,
+		grade,
+		classGrade,
+	} = input;
 
 	const [doc] = await db
 		.select({ id: documents.id, filename: documents.filename })
@@ -278,7 +306,14 @@ async function createSessionFromDocument(
 			documentId: doc.id,
 			title: `${topic} — ${doc.filename}`,
 			status: 'pending',
-			config: { topic, questionTypeCounts, count },
+			config: {
+				topic,
+				questionTypeCounts,
+				count,
+				curriculum,
+				grade,
+				classGrade,
+			},
 		})
 		.returning({ id: questionSets.id });
 
@@ -290,7 +325,14 @@ async function createSessionFromDocument(
 		type: 'GENERATE_QUESTIONS',
 		sessionId: session.id,
 		documentId: doc.id,
-		config: { topic, questionTypeCounts, count },
+		config: {
+			topic,
+			questionTypeCounts,
+			count,
+			curriculum,
+			grade,
+			classGrade,
+		},
 	});
 
 	return { id: session.id };

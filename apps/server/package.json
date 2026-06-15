@@ -9,6 +9,8 @@
 		"check-types": "tsc --noEmit"
 	},
 	"dependencies": {
+		"@ai-sdk/openai": "^3.0.71",
+		"@ai-sdk/openai-compatible": "^2.0.50",
 		"@chroma-core/default-embed": "^0.1.9",
 		"@hono/zod-validator": "^0.8.0",
 		"@langchain/core": "^1.1.48",

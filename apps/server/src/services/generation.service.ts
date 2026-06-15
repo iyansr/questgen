@@ -3,6 +3,7 @@ import { questions, questionTypeEnum } from '@questgen/db/schema';
 import { Output, streamText } from 'ai';
 import { z } from 'zod';
 
+import { GENERATION_PARAMS, MODELS } from '../config/models';
 import type { ImageRef } from '../lib/chunker';
 import { openrouter } from '../lib/openrouter';
 import { SYSTEM_PROMPT, USER_PROMPT } from '../prompts/question-generation';
@@ -21,7 +22,6 @@ export type GenerationConfig = {
 };
 
 const QUESTION_TYPE_VALUES = questionTypeEnum.enumValues;
-const GENERATION_MODEL = 'deepseek/deepseek-v4-flash';
 type QuestionType = (typeof QUESTION_TYPE_VALUES)[number];
 
 const questionOptionSchema = z.object({
@@ -92,6 +92,8 @@ const TYPES_WITH_OPTIONS: ReadonlySet<QuestionType> = new Set([
 	'true_false',
 ]);
 
+const IMAGE_MARKDOWN_RE = /!\[.*?\]\(.*?\)\s*/g;
+
 function normalizeQuestion(
 	q: GeneratedQuestion,
 	imageCatalog: Map<string, ImageRef>,
@@ -106,9 +108,11 @@ function normalizeQuestion(
 		? (q.options ?? null)
 		: null;
 
+	const questionText = q.questionText.replace(IMAGE_MARKDOWN_RE, '').trim();
+
 	return {
 		questionType: q.questionType,
-		questionText: q.questionText,
+		questionText,
 		imageUrl,
 		options,
 		correctAnswer: q.correctAnswer,
@@ -186,6 +190,13 @@ export async function generateQuestionsInBackground(
 		}
 
 		sourceMaterial = webResult.sourceMaterial;
+
+		for (const ref of webResult.imageRefs) {
+			if (!sourceMaterial.includes(ref.id)) {
+				sourceMaterial += `\n\n![IMAGE:${ref.caption || 'Illustration'}](${ref.id})`;
+			}
+		}
+
 		trace = buildWebTrace(config.topic, traceStartedAt, webResult.imageRefs);
 	} else {
 		console.log('SEARCH DOCS...');
@@ -193,6 +204,9 @@ export async function generateQuestionsInBackground(
 			topic: config.topic,
 			scopeId,
 			sessionId,
+			curriculum: config.curriculum ?? '',
+			grade: config.grade ?? '',
+			classGrade: config.classGrade ?? '',
 		});
 
 		imageCatalog = new Map<string, ImageRef>();
@@ -201,6 +215,12 @@ export async function generateQuestionsInBackground(
 		}
 
 		sourceMaterial = result.sourceMaterial;
+
+		for (const ref of result.imageRefs) {
+			if (!sourceMaterial.includes(ref.id)) {
+				sourceMaterial += `\n\n![IMAGE:${ref.caption || 'Illustration'}](${ref.id})`;
+			}
+		}
 
 		trace = {
 			topic: config.topic,
@@ -232,6 +252,9 @@ export async function generateQuestionsInBackground(
 
 	const systemPrompt = interpolate(SYSTEM_PROMPT, {
 		TOPIC: config.topic,
+		GRADE: config.grade ?? 'general',
+		CLASS_GRADE: config.classGrade ?? 'general',
+		CURRICULUM: config.curriculum ?? 'general',
 		IMAGE_CATALOG: imageCatalogSection,
 		SOURCE_MATERIAL: sourceMaterial,
 	});
@@ -246,7 +269,9 @@ export async function generateQuestionsInBackground(
 
 	console.log('START STREAMING...');
 	const { elementStream } = streamText({
-		model: openrouter(GENERATION_MODEL),
+		model: openrouter(MODELS.GENERATION),
+		temperature: GENERATION_PARAMS.GENERATION.temperature,
+		topP: GENERATION_PARAMS.GENERATION.topP,
 		output: Output.array({
 			element: buildGeneratedQuestionSchema(allowedTypes),
 		}),

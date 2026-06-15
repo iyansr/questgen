@@ -1,12 +1,14 @@
 import { generateText, stepCountIs, tool } from 'ai';
 import z from 'zod';
 
+import { GENERATION_PARAMS, MODELS } from '@/config/models';
 import type { ImageRef } from '@/lib/chunker';
+import { openai } from '@/lib/openai';
 import { openrouter } from '@/lib/openrouter';
 import type { RetrievedChunkMeta } from '@/lib/rag';
 import { retrieveContextWithMeta } from '@/lib/rag';
+import { withRetry } from '@/lib/retry';
 
-const RETRIEVAL_MODEL = 'openai/gpt-oss-120b:nitro';
 const MAX_DISTANCE = 0.6;
 const DEFAULT_TOP_K = 12;
 
@@ -24,21 +26,34 @@ export async function documentSearch({
 	topic,
 	scopeId,
 	sessionId,
+	curriculum,
+	grade,
+	classGrade,
 }: {
 	topic: string;
 	scopeId: string;
 	sessionId: string;
+	curriculum: string;
+	grade: string;
+	classGrade: string;
 }): Promise<DocumentSearchResult> {
 	const allChunks = new Map<string, RetrievedChunkMeta>();
 	const queries: string[] = [];
 
+	const levelParts = [
+		curriculum && `curriculum "${curriculum}"`,
+		grade && `grade "${grade}"`,
+		classGrade && `class "${classGrade}"`,
+	].filter(Boolean);
+	const levelHint =
+		levelParts.length > 0
+			? `Adapt the research to ${levelParts.join(', ')}.`
+			: 'Adapt the research to the educational level implied by the document content.';
+
 	const { text } = await generateText({
-		model: openrouter(RETRIEVAL_MODEL, {
-			reasoning: {
-				effort: 'high',
-				enabled: true,
-			},
-		}),
+		model: openai(MODELS.RETRIEVAL),
+		temperature: GENERATION_PARAMS.RESEARCH.temperature,
+		topP: GENERATION_PARAMS.RESEARCH.topP,
 		tools: {
 			searchDocument: tool({
 				description:
@@ -58,10 +73,8 @@ export async function documentSearch({
 				}),
 				execute: async ({ query, topK }) => {
 					queries.push(query);
-					const result = await retrieveContextWithMeta(
-						query,
-						scopeId,
-						topK ?? DEFAULT_TOP_K,
+					const result = await withRetry(() =>
+						retrieveContextWithMeta(query, scopeId, topK ?? DEFAULT_TOP_K),
 					);
 
 					for (const item of result.items) {
@@ -95,6 +108,8 @@ You are a thorough document research assistant compiling detailed reference mate
 
 <instruction>
 Your task: Search the uploaded document for all information related to the topic "${topic}" as thoroughly as possible using the searchDocument tool.
+
+${levelHint}
 
 Ensure the research covers:
 - Core concepts and definitions from the document

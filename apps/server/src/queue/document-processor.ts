@@ -133,11 +133,12 @@ async function processGenerateQuestions(
 }
 
 async function processResearchWeb(job: ResearchWebJob): Promise<void> {
-	const { sessionId, config } = job;
+	const { sessionId, config, query } = job;
 
 	try {
 		await generateForScope(sessionId, sessionId, {
 			...config,
+			topic: query || config.topic,
 			source: 'web',
 		});
 	} catch (error) {
