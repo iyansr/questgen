@@ -1,4 +1,3 @@
-import { Checkbox } from '@questgen/ui/components/checkbox';
 import {
 	Field,
 	FieldDescription,
@@ -30,6 +29,38 @@ interface QuestionTypesFieldProps {
 	error?: RHFFieldError;
 }
 
+function ToggleSwitch({
+	on,
+	onToggle,
+}: {
+	on: boolean;
+	onToggle: () => void;
+}) {
+	return (
+		<button
+			type="button"
+			role="switch"
+			aria-checked={on}
+			onClick={(e) => {
+				e.stopPropagation();
+				onToggle();
+			}}
+			className={cn(
+				'relative h-5 w-9 shrink-0 rounded-full transition-colors',
+				'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+				on ? 'bg-primary' : 'bg-border',
+			)}
+		>
+			<div
+				className={cn(
+					'absolute top-0.5 h-4 w-4 rounded-full bg-white shadow-sm transition-all duration-200',
+					on ? 'left-4' : 'left-0.5',
+				)}
+			/>
+		</button>
+	);
+}
+
 export function QuestionTypesField({ field, error }: QuestionTypesFieldProps) {
 	const counts: QuestionTypeCount[] = field.value ?? [];
 
@@ -45,7 +76,6 @@ export function QuestionTypesField({ field, error }: QuestionTypesFieldProps) {
 	);
 
 	const total = totalCount(counts);
-
 	const remaining = MAX_TOTAL_QUESTIONS - total;
 
 	function toggleType(type: QuestionType, checked: boolean) {
@@ -73,66 +103,103 @@ export function QuestionTypesField({ field, error }: QuestionTypesFieldProps) {
 		);
 	}
 
+	const hasSelection = counts.length > 0;
+
 	return (
 		<Field
 			data-invalid={Boolean(error)}
 			aria-describedby={error ? 'qt-error' : undefined}
 		>
-			<div className="flex items-baseline justify-between">
-				<FieldLabel>Jenis Soal</FieldLabel>
+			<div className="mb-3 flex items-baseline justify-between">
+				<FieldLabel>Jumlah & Tipe Soal</FieldLabel>
 				<span
 					className={cn(
-						'font-medium text-sm tabular-nums',
-						total > MAX_TOTAL_QUESTIONS
-							? 'text-destructive'
-							: 'text-muted-foreground',
+						'rounded-full px-3 py-0.5 text-xs font-semibold tabular-nums transition-colors',
+						total > 0
+							? 'bg-primary/10 text-primary'
+							: 'bg-muted text-muted-foreground',
 					)}
 				>
-					{total} / {MAX_TOTAL_QUESTIONS}
+					{total > 0 ? `Total ${total} soal` : 'Belum dipilih'}
 				</span>
 			</div>
-			<div className="border border-input">
-				{QUESTION_TYPES.map((type, index) => {
+
+			<div className="flex flex-col gap-2.5">
+				{QUESTION_TYPES.map((type) => {
 					const isSelected = selectedTypes.has(type);
 					const count = countByType.get(type) ?? 0;
+
 					return (
 						<div
 							key={type}
+							onClick={() => toggleType(type, !isSelected)}
 							className={cn(
-								'flex items-center gap-3 px-4 py-3',
-								index > 0 && 'border-input border-t',
+								'flex cursor-pointer items-center gap-3.5 rounded-xl border px-4 py-3.5 transition-all select-none',
+								'focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-1',
+								isSelected
+									? 'border-primary bg-primary/5'
+									: 'border-input bg-background hover:border-primary/30',
 							)}
 						>
-							<Checkbox
-								id={`qt-${type}`}
-								checked={isSelected}
-								className="opacity-100!"
-								onCheckedChange={(checked) =>
-									toggleType(type, checked === true)
-								}
-								aria-label={`Pilih ${QUESTION_TYPE_LABELS[type]}`}
+							{/* Toggle switch */}
+							<ToggleSwitch
+								on={isSelected}
+								onToggle={() => toggleType(type, !isSelected)}
 							/>
-							<label
-								htmlFor={`qt-${type}`}
-								className={cn(
-									'flex-1 cursor-pointer text-sm',
-									!isSelected && 'text-muted-foreground',
-								)}
-							>
-								{QUESTION_TYPE_LABELS[type]}
-							</label>
-							<NumberStepper
-								value={count}
-								onChange={(v) => updateCount(type, v)}
-								min={0}
-								max={MAX_TOTAL_QUESTIONS}
-								disabled={!isSelected}
-								ariaLabel={`Jumlah ${QUESTION_TYPE_LABELS[type]}`}
-							/>
+
+							{/* Label */}
+							<div className="min-w-0 flex-1">
+								<p
+									className={cn(
+										'text-sm font-semibold transition-colors',
+										isSelected ? 'text-primary' : 'text-foreground',
+									)}
+								>
+									{QUESTION_TYPE_LABELS[type]}
+								</p>
+							</div>
+
+							{/* Count stepper — only visible when selected */}
+							{isSelected && (
+								<div
+									className="animate-in fade-in slide-in-from-right-2"
+									onClick={(e) => e.stopPropagation()}
+								>
+									<NumberStepper
+										value={count}
+										onChange={(v) => updateCount(type, v)}
+										min={1}
+										max={MAX_TOTAL_QUESTIONS}
+										disabled={!isSelected}
+										ariaLabel={`Jumlah ${QUESTION_TYPE_LABELS[type]}`}
+									/>
+								</div>
+							)}
 						</div>
 					);
 				})}
 			</div>
+
+			{!hasSelection && (
+				<p className="mt-3 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm font-medium text-amber-800 dark:border-amber-800 dark:bg-amber-950 dark:text-amber-200">
+					Pilih minimal satu tipe soal untuk melanjutkan
+				</p>
+			)}
+
+			{/* Mix breakdown */}
+			{total > 0 && (
+				<div className="mt-3 flex flex-wrap gap-3 rounded-lg bg-primary/5 px-3 py-2.5">
+					{QUESTION_TYPES.filter((q) => selectedTypes.has(q)).map((q) => (
+						<span
+							key={q}
+							className="text-sm font-semibold text-primary tabular-nums"
+						>
+							{countByType.get(q)}× {QUESTION_TYPE_LABELS[q]}
+						</span>
+					))}
+				</div>
+			)}
+
 			<FieldDescription className="text-sm">
 				Pilih satu atau lebih jenis soal. Total maksimal {MAX_TOTAL_QUESTIONS}{' '}
 				soal.

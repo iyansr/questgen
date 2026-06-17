@@ -11,9 +11,6 @@ import type {
 import { useReadyDocuments } from '@/services/documents/list';
 
 import {
-	CLASS_GRADE_OPTIONS,
-	CURRICULUM_OPTIONS,
-	GRADE_OPTIONS,
 	MAX_FILE_SIZE_BYTES,
 	MAX_FILE_SIZE_MB,
 	MAX_PDF_PAGES,
@@ -32,9 +29,6 @@ interface SourceFieldProps {
 	fileField: ControllerRenderProps<NewSessionFormValues, 'file'>;
 	documentIdField: ControllerRenderProps<NewSessionFormValues, 'documentId'>;
 	webQueryField: ControllerRenderProps<NewSessionFormValues, 'webQuery'>;
-	curriculumField: ControllerRenderProps<NewSessionFormValues, 'curriculum'>;
-	gradeField: ControllerRenderProps<NewSessionFormValues, 'grade'>;
-	classGradeField: ControllerRenderProps<NewSessionFormValues, 'classGrade'>;
 	error?: RHFFieldError;
 }
 
@@ -44,13 +38,34 @@ function formatFileSize(bytes: number) {
 	return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
 }
 
+const SOURCES = [
+	{
+		id: 'file' as const,
+		emoji: '📄',
+		title: 'Unggah Dokumen',
+		sub: 'PDF, DOCX, TXT',
+		icon: Upload,
+	},
+	{
+		id: 'document' as const,
+		emoji: '📚',
+		title: 'Dokumen Tersimpan',
+		sub: 'Pilih dari pustaka',
+		icon: FileText,
+	},
+	{
+		id: 'web' as const,
+		emoji: '🌐',
+		title: 'Pencarian Web',
+		sub: 'Referensi online',
+		icon: Globe,
+	},
+] as const;
+
 export function SourceField({
 	fileField,
 	documentIdField,
 	webQueryField,
-	curriculumField,
-	gradeField,
-	classGradeField,
 	error,
 }: SourceFieldProps) {
 	const inputRef = useRef<HTMLInputElement | null>(null);
@@ -65,7 +80,7 @@ export function SourceField({
 			? 'document'
 			: webQueryField.value
 				? 'web'
-					: null;
+				: null;
 	const [mode, setModeState] = useState<'file' | 'document' | 'web' | null>(
 		initialMode,
 	);
@@ -110,67 +125,58 @@ export function SourceField({
 		setModeState('document');
 	}
 
-	const tabs: { id: 'file' | 'document' | 'web'; label: string; icon: React.ReactNode }[] = [
-		{ id: 'file', label: 'Unggah File', icon: <Upload className="size-4" /> },
-		{ id: 'document', label: 'Dari Dokumen', icon: <FileText className="size-4" /> },
-		{ id: 'web', label: 'Riset Web', icon: <Globe className="size-4" /> },
-	];
-
 	return (
 		<Field
 			data-invalid={Boolean(error)}
 			aria-describedby={error ? 'source-error' : undefined}
 		>
-			<div
-				role="tablist"
-				aria-label="Sumber Materi"
-				className="grid grid-cols-3 gap-0 border border-input"
-			>
-				{tabs.map((tab, index) => {
-					const isActive = mode === tab.id;
+			{/* Source selection cards */}
+			<div className="mb-3 grid grid-cols-3 gap-2.5">
+				{SOURCES.map((src) => {
+					const isActive = mode === src.id;
 					return (
 						<button
-							key={tab.id}
+							key={src.id}
 							type="button"
-							role="tab"
-							aria-selected={isActive}
-							aria-controls={`source-panel-${tab.id}`}
-							onClick={() => setMode(tab.id)}
+							onClick={() => setMode(src.id)}
 							className={cn(
-								'flex h-11 items-center justify-center gap-2 px-4 text-sm transition-colors',
+								'flex flex-col items-center gap-1 rounded-xl border px-2 py-3.5 text-center transition-all',
 								'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1',
-								'border-input border-b-2',
-								index < tabs.length - 1 && 'border-r',
 								isActive
-									? 'bg-foreground font-semibold text-background hover:bg-foreground border-background'
-									: 'hover:bg-muted border-transparent',
+									? 'border-primary bg-primary/5'
+									: 'border-input bg-background hover:border-primary/40 hover:bg-primary/5',
 							)}
 						>
-							{isActive && <Check className="size-4" aria-hidden="true" />}
-							{!isActive && tab.icon}
-							{tab.label}
+							<span className="text-xl">{src.emoji}</span>
+							<span
+								className={cn(
+									'text-xs font-semibold transition-colors',
+									isActive ? 'text-primary' : 'text-foreground',
+								)}
+							>
+								{src.title}
+							</span>
+							<span className="text-[10px] text-muted-foreground">
+								{src.sub}
+							</span>
 						</button>
 					);
 				})}
 			</div>
 
+			{/* Upload zone */}
 			{mode === 'file' && (
-				<div
-					id="source-panel-file"
-					role="tabpanel"
-					aria-label="Unggah File"
-					className="border border-input border-t-0"
-				>
+				<div className="animate-in fade-in slide-in-from-top-1">
 					{fileField.value ? (
-						<div className="flex items-center gap-3 px-4 py-3">
-							<div className="flex size-10 shrink-0 items-center justify-center bg-muted">
-								<FileText className="size-5 text-muted-foreground" />
+						<div className="flex items-center gap-3 rounded-lg border border-green-200 bg-green-50 px-4 py-3 dark:border-green-800 dark:bg-green-950">
+							<div className="flex size-10 shrink-0 items-center justify-center rounded-md bg-green-100 dark:bg-green-900">
+								<FileText className="size-5 text-green-600 dark:text-green-400" />
 							</div>
 							<div className="min-w-0 flex-1">
-								<p className="truncate font-medium text-sm">
+								<p className="truncate text-sm font-semibold text-green-700 dark:text-green-300">
 									{fileField.value.name}
 								</p>
-								<p className="text-muted-foreground text-xs">
+								<p className="text-xs text-green-600/70 dark:text-green-400/70">
 									{formatFileSize(fileField.value.size)}
 								</p>
 							</div>
@@ -191,16 +197,17 @@ export function SourceField({
 							onClick={() => inputRef.current?.click()}
 							aria-describedby="source-file-help"
 							className={cn(
-								'flex h-24 w-full flex-col items-center justify-center gap-1.5 px-4 text-sm text-muted-foreground transition-colors',
-								'hover:bg-muted hover:text-foreground',
-								'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset',
+								'flex h-28 w-full flex-col items-center justify-center gap-1.5 rounded-lg border-2 border-dashed border-primary/30 bg-primary/5 px-4 text-sm transition-colors',
+								'hover:border-primary/50 hover:bg-primary/10',
+								'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1',
 							)}
 						>
-							<Upload className="size-5" />
-							<span>Pilih file (PDF, DOCX)</span>
-							<span id="source-file-help" className="text-xs">
-								Maksimal {MAX_FILE_SIZE_MB} MB · PDF maks. {MAX_PDF_PAGES}{' '}
-								halaman
+							<span className="text-2xl">☁️</span>
+							<span className="font-semibold text-primary">
+								Seret file ke sini, atau klik untuk pilih
+							</span>
+							<span id="source-file-help" className="text-xs text-muted-foreground">
+								PDF · DOCX · TXT &nbsp;·&nbsp; Maks. {MAX_FILE_SIZE_MB} MB · PDF maks. {MAX_PDF_PAGES} halaman
 							</span>
 						</button>
 					)}
@@ -215,156 +222,78 @@ export function SourceField({
 				</div>
 			)}
 
+			{/* Existing documents */}
 			{mode === 'document' && (
-				<button
-					id="source-panel-document"
-					role="tabpanel"
-					aria-label="Dari Dokumen"
-					type="button"
-					onClick={() => setPickerOpen(true)}
-					className={cn(
-						'flex h-11 w-full items-center justify-between border border-input border-t-0 bg-transparent px-4 text-sm transition-colors',
-						'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset',
-					)}
-				>
-					<span
+				<div className="animate-in fade-in slide-in-from-top-1">
+					<button
+						type="button"
+						onClick={() => setPickerOpen(true)}
 						className={cn(
-							'flex items-center gap-2 truncate',
-							!selectedDocument && 'text-muted-foreground',
+							'flex h-11 w-full items-center justify-between rounded-lg border border-input bg-background px-4 text-sm transition-colors',
+							'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1',
+							'hover:bg-muted/50',
 						)}
 					>
-						<FileText className="size-4 shrink-0" />
-						<span className="truncate">
-							{selectedDocument
-								? selectedDocument.filename
-								: documentsLoading
-									? 'Memuat dokumen…'
-									: 'Pilih dokumen'}
-						</span>
-					</span>
-					<ChevronDown className="size-4 shrink-0 text-muted-foreground" />
-				</button>
-			)}
-
-			{mode === 'web' && (
-				<div
-					id="source-panel-web"
-					role="tabpanel"
-					aria-label="Riset Web"
-					className="space-y-3 border border-input border-t-0 p-4"
-				>
-					<div className="space-y-1.5">
-						<input
-							type="text"
-							value={webQueryField.value ?? ''}
-							onChange={(e) => webQueryField.onChange(e.target.value)}
-							onBlur={webQueryField.onBlur}
-							placeholder="misal: fotosintesis pada tumbuhan tingkat tinggi"
-							maxLength={MAX_WEB_QUERY_CHARS}
-							aria-describedby="source-web-help"
+						<span
 							className={cn(
-								'w-full bg-transparent text-sm outline-none placeholder:text-muted-foreground',
-								'h-10 px-0',
-								'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset',
+								'flex items-center gap-2 truncate',
+								!selectedDocument && 'text-muted-foreground',
 							)}
-						/>
-						<p
-							id="source-web-help"
-							className="text-xs text-muted-foreground"
 						>
-							AI akan meneliti web menggunakan kata kunci ini · minimal{' '}
-							{MIN_WEB_QUERY_CHARS} karakter
-						</p>
-					</div>
+							<FileText className="size-4 shrink-0" />
+							<span className="truncate">
+								{selectedDocument
+									? selectedDocument.filename
+									: documentsLoading
+										? 'Memuat dokumen…'
+										: 'Pilih dokumen'}
+							</span>
+						</span>
+						{selectedDocument && (
+							<Check className="size-4 shrink-0 text-primary" />
+						)}
+						{!selectedDocument && (
+							<ChevronDown className="size-4 shrink-0 text-muted-foreground" />
+						)}
+					</button>
 				</div>
 			)}
 
+			{/* Web query */}
 			{mode === 'web' && (
-				<div className="space-y-3 border border-input border-t-0 p-4">
-					<p className="text-sm font-medium text-muted-foreground">
-						Detail Kelas
-					</p>
-					<div className="grid grid-cols-3 gap-2">
-						<div className="space-y-1">
-							<label className="text-sm font-medium text-muted-foreground">
-								Kurikulum
-							</label>
-							<select
-								value={curriculumField.value ?? ''}
-								onChange={(e) =>
-									curriculumField.onChange(e.target.value || undefined)
-								}
-								onBlur={curriculumField.onBlur}
+				<div className="animate-in fade-in slide-in-from-top-1 space-y-3">
+					<div>
+						<label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+							Kata Kunci Pencarian{' '}
+							<span className="text-destructive">*</span>
+						</label>
+						<div className="relative">
+							<Globe className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+							<input
+								type="text"
+								value={webQueryField.value ?? ''}
+								onChange={(e) => webQueryField.onChange(e.target.value)}
+								onBlur={webQueryField.onBlur}
+								placeholder="Masukkan kata kunci referensi dari internet…"
+								maxLength={MAX_WEB_QUERY_CHARS}
 								className={cn(
-									'h-10 w-full appearance-none rounded-none border border-input bg-transparent px-2 text-sm outline-none transition-colors',
-									'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset',
-									!curriculumField.value && 'text-muted-foreground',
+									'h-10 w-full rounded-lg border bg-background py-2 pr-3 pl-9 text-sm outline-none transition-colors',
+									'placeholder:text-muted-foreground',
+									'focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1',
+									webQueryField.value?.trim()
+										? 'border-primary bg-primary/5'
+										: 'border-input',
 								)}
-							>
-								<option value="">Pilih</option>
-								{CURRICULUM_OPTIONS.map((opt) => (
-									<option key={opt} value={opt}>
-										{opt}
-									</option>
-								))}
-							</select>
+							/>
 						</div>
-
-						<div className="space-y-1">
-							<label className="text-sm font-medium text-muted-foreground">
-								Jenjang
-							</label>
-							<select
-								value={gradeField.value ?? ''}
-								onChange={(e) => {
-									gradeField.onChange(e.target.value || undefined);
-									classGradeField.onChange(undefined);
-								}}
-								onBlur={gradeField.onBlur}
-								className={cn(
-									'h-10 w-full appearance-none rounded-none border border-input bg-transparent px-2 text-sm outline-none transition-colors',
-									'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset',
-									!gradeField.value && 'text-muted-foreground',
-								)}
-							>
-								<option value="">Pilih</option>
-								{GRADE_OPTIONS.map((opt) => (
-									<option key={opt} value={opt}>
-										{opt}
-									</option>
-								))}
-							</select>
-						</div>
-
-						<div className="space-y-1">
-							<label className="text-sm font-medium text-muted-foreground">
-								Kelas
-							</label>
-							<select
-								value={classGradeField.value ?? ''}
-								onChange={(e) =>
-									classGradeField.onChange(e.target.value || undefined)
-								}
-								onBlur={classGradeField.onBlur}
-								disabled={!gradeField.value}
-								className={cn(
-									'h-10 w-full appearance-none rounded-none border border-input bg-transparent px-2 text-sm outline-none transition-colors',
-									'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset',
-									'disabled:pointer-events-none disabled:opacity-50',
-									!classGradeField.value && 'text-muted-foreground',
-								)}
-							>
-								<option value="">Pilih</option>
-								{(gradeField.value
-									? (CLASS_GRADE_OPTIONS[gradeField.value] ?? [])
-									: []
-								).map((opt) => (
-									<option key={opt} value={opt}>
-										{opt}
-									</option>
-								))}
-							</select>
-						</div>
+						<p className="mt-2 flex items-start gap-1.5 rounded-md bg-primary/5 px-3 py-2 text-xs text-muted-foreground">
+							<span>💡</span>
+							<span>
+								Kata kunci ini <strong>berbeda dari topik soal</strong> —
+								digunakan khusus untuk mencari referensi dari internet sebagai
+								bahan pembuat soal. · minimal {MIN_WEB_QUERY_CHARS} karakter
+							</span>
+						</p>
 					</div>
 				</div>
 			)}
