@@ -1,8 +1,8 @@
 import { env } from '@questgen/env/server';
 import { createMiddleware } from 'hono/factory';
 
-import { verifyToken } from '../lib/auth';
-import type { AppEnv } from '../types';
+import { verifyToken } from '@/shared/lib/auth';
+import type { AppEnv } from '@/types';
 
 export const authMiddleware = createMiddleware<AppEnv>(async (c, next) => {
 	const header = c.req.header('Authorization');

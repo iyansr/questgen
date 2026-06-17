@@ -10,12 +10,13 @@ import {
 	MAX_PDF_PAGES,
 	MAX_WEB_QUERY_CHARS,
 	MIN_WEB_QUERY_CHARS,
-} from '../lib/upload-limits';
+} from '@/shared/lib/upload-limits';
+
 import {
 	type QuestionTypeCount,
 	type SessionStatus,
 	totalCount,
-} from '../schemas/sessions.schema';
+} from './sessions.schema';
 
 const ALLOWED_MIME_TYPES = [
 	'application/pdf',
@@ -426,25 +427,4 @@ export async function listSessions(
 		page,
 		limit,
 	};
-}
-
-export type DocumentListItem = {
-	id: string;
-	filename: string;
-	createdAt: Date;
-};
-
-export async function listReadyDocuments(
-	db: ReturnType<typeof createDb>,
-	userId: string,
-): Promise<DocumentListItem[]> {
-	return db
-		.select({
-			id: documents.id,
-			filename: documents.filename,
-			createdAt: documents.createdAt,
-		})
-		.from(documents)
-		.where(and(eq(documents.userId, userId), eq(documents.status, 'ready')))
-		.orderBy(desc(documents.createdAt));
 }

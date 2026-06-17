@@ -1,28 +1,15 @@
 import { env } from '@questgen/env/server';
 
+import { buildImagePublicUrl } from '@/shared/lib/images';
+
 interface UploadedImage {
 	id: string;
 	key: string;
 	publicUrl: string;
 }
 
-export function buildImageKey(documentId: string, imageId: string): string {
+function buildImageKey(documentId: string, imageId: string): string {
 	return `documents/${documentId}/images/${imageId}`;
-}
-
-export function buildImagePublicUrl(key: string): string {
-	const base = env.R2_PUBLIC_HOST ?? env.SERVER_URL;
-	if (!base) {
-		throw new Error(
-			'Missing R2_PUBLIC_HOST or SERVER_URL — cannot build image URL',
-		);
-	}
-
-	const trimmed = base.replace(/\/+$/, '');
-	if (env.R2_PUBLIC_HOST) {
-		return `${trimmed}/${key}`;
-	}
-	return `${trimmed}/files/${key}`;
 }
 
 export async function uploadImageToR2(

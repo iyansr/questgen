@@ -1,12 +1,12 @@
 import { generateText, stepCountIs, tool } from 'ai';
 import z from 'zod';
 
-import { GENERATION_PARAMS, MODELS } from '@/config/models';
-import type { ImageRef } from '@/lib/chunker';
-import { openai } from '@/lib/openai';
-import type { RetrievedChunkMeta } from '@/lib/rag';
-import { retrieveContextWithMeta } from '@/lib/rag';
-import { withRetry } from '@/lib/retry';
+import type { ImageRef } from '@/modules/processing/chunker';
+import type { RetrievedChunkMeta } from '@/modules/processing/rag';
+import { retrieveContextWithMeta } from '@/modules/processing/rag';
+import { openai } from '@/shared/ai/openai';
+import { GENERATION_PARAMS, MODELS } from '@/shared/config/models';
+import { withRetry } from '@/shared/lib/retry';
 
 const MAX_DISTANCE = 0.6;
 const DEFAULT_TOP_K = 12;

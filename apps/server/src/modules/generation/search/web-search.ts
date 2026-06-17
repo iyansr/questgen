@@ -1,11 +1,11 @@
 import { generateText, stepCountIs, tool } from 'ai';
 import z from 'zod';
 
-import { GENERATION_PARAMS, MODELS } from '@/config/models';
-import type { ImageRef } from '@/lib/chunker';
-import { openai } from '@/lib/openai';
-import { withRetry } from '@/lib/retry';
-import { researchWeb } from '@/lib/tavily';
+import type { ImageRef } from '@/modules/processing/chunker';
+import { openai } from '@/shared/ai/openai';
+import { researchWeb } from '@/shared/ai/tavily';
+import { GENERATION_PARAMS, MODELS } from '@/shared/config/models';
+import { withRetry } from '@/shared/lib/retry';
 
 const MARKDOWN_LIMIT = 150_000;
 

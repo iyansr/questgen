@@ -1,7 +1,7 @@
 import { Mistral } from '@mistralai/mistralai';
 import { env } from '@questgen/env/server';
 
-import { withRetry } from './retry';
+import { withRetry } from '@/shared/lib/retry';
 
 interface OcrResult {
 	markdown: string;

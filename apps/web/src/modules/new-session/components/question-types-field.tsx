@@ -74,12 +74,15 @@ export function QuestionTypesField({ field, error }: QuestionTypesFieldProps) {
 	}
 
 	return (
-		<Field data-invalid={Boolean(error)}>
+		<Field
+			data-invalid={Boolean(error)}
+			aria-describedby={error ? 'qt-error' : undefined}
+		>
 			<div className="flex items-baseline justify-between">
 				<FieldLabel>Jenis Soal</FieldLabel>
 				<span
 					className={cn(
-						'text-xs tabular-nums',
+						'font-medium text-sm tabular-nums',
 						total > MAX_TOTAL_QUESTIONS
 							? 'text-destructive'
 							: 'text-muted-foreground',
@@ -96,14 +99,14 @@ export function QuestionTypesField({ field, error }: QuestionTypesFieldProps) {
 						<div
 							key={type}
 							className={cn(
-								'flex items-center gap-3 px-3 py-2.5',
+								'flex items-center gap-3 px-4 py-3',
 								index > 0 && 'border-input border-t',
-								!isSelected && 'bg-muted/30',
 							)}
 						>
 							<Checkbox
 								id={`qt-${type}`}
 								checked={isSelected}
+								className="opacity-100!"
 								onCheckedChange={(checked) =>
 									toggleType(type, checked === true)
 								}
@@ -112,7 +115,7 @@ export function QuestionTypesField({ field, error }: QuestionTypesFieldProps) {
 							<label
 								htmlFor={`qt-${type}`}
 								className={cn(
-									'flex-1 cursor-pointer text-xs',
+									'flex-1 cursor-pointer text-sm',
 									!isSelected && 'text-muted-foreground',
 								)}
 							>
@@ -130,11 +133,11 @@ export function QuestionTypesField({ field, error }: QuestionTypesFieldProps) {
 					);
 				})}
 			</div>
-			<FieldDescription>
+			<FieldDescription className="text-sm">
 				Pilih satu atau lebih jenis soal. Total maksimal {MAX_TOTAL_QUESTIONS}{' '}
 				soal.
 			</FieldDescription>
-			{error && <FieldError errors={[error]} />}
+			{error && <FieldError id="qt-error" errors={[error]} />}
 		</Field>
 	);
 }

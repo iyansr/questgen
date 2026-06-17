@@ -3,8 +3,9 @@ import { questionSets, questions } from '@questgen/db/schema';
 import { env } from '@questgen/env/server';
 import { and, eq, inArray } from 'drizzle-orm';
 
-import { buildImagePublicUrl } from '../lib/images';
-import type { QuestionUpdateInput } from '../schemas/questions.schema';
+import { buildImagePublicUrl } from '@/shared/lib/images';
+
+import type { QuestionUpdateInput } from './questions.schema';
 import { SessionValidationError } from './sessions.service';
 
 const ALLOWED_IMAGE_MIME_TYPES = [

@@ -4,22 +4,20 @@ import { createUIMessageStream, createUIMessageStreamResponse } from 'ai';
 import { eq } from 'drizzle-orm';
 import { Hono } from 'hono';
 
-import { updateQuestionsSchema } from '../schemas/questions.schema';
+import type { AppEnv } from '@/types';
+
+import { updateQuestionsSchema } from './questions.schema';
+import { collectImageAssignments, updateQuestions } from './questions.service';
 import {
 	createSessionSchema,
 	listSessionsQuerySchema,
-} from '../schemas/sessions.schema';
-import {
-	collectImageAssignments,
-	updateQuestions,
-} from '../services/questions.service';
+} from './sessions.schema';
 import {
 	createSession,
 	getSessionWithQuestions,
 	listSessions,
 	SessionValidationError,
-} from '../services/sessions.service';
-import type { AppEnv } from '../types';
+} from './sessions.service';
 
 const MAX_STREAM_MS = 5 * 60 * 1000;
 const POLL_INTERVAL_MS = 1000;

@@ -2,7 +2,7 @@ import { createOpenRouter } from '@openrouter/ai-sdk-provider';
 import { env } from '@questgen/env/server';
 import { embed, embedMany } from 'ai';
 
-import { MODELS } from '../config/models';
+import { MODELS } from '@/shared/config/models';
 
 const openrouter = createOpenRouter({
 	apiKey: env.OPENROUTER_API_KEY,

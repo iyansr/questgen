@@ -3,14 +3,15 @@ import { questions, questionTypeEnum } from '@questgen/db/schema';
 import { Output, streamText } from 'ai';
 import { z } from 'zod';
 
-import { GENERATION_PARAMS, MODELS } from '../config/models';
-import type { ImageRef } from '../lib/chunker';
-import { openrouter } from '../lib/openrouter';
-import { SYSTEM_PROMPT, USER_PROMPT } from '../prompts/question-generation';
-import type { QuestionTypeCount } from '../schemas/sessions.schema';
-import { documentSearch } from './agent/document-search';
-import { webSearch } from './agent/web-search';
-import type { RetrievalTrace } from './rag/types';
+import type { ImageRef } from '@/modules/processing/chunker';
+import type { QuestionTypeCount } from '@/modules/sessions/sessions.schema';
+import { openrouter } from '@/shared/ai/openrouter';
+import { GENERATION_PARAMS, MODELS } from '@/shared/config/models';
+
+import { SYSTEM_PROMPT, USER_PROMPT } from './prompts/question-generation';
+import { documentSearch } from './search/document-search';
+import type { RetrievalTrace } from './search/types';
+import { webSearch } from './search/web-search';
 
 export type GenerationConfig = {
 	topic: string;

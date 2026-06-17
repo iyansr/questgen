@@ -48,16 +48,16 @@ export function NumberStepper({
 			<Button
 				type="button"
 				variant="ghost"
-				size="icon-sm"
+				size="icon"
 				onClick={decrement}
 				disabled={disabled || atMin}
 				aria-label="Kurangi"
-				className="rounded-none border-input border-transparent border-r"
+				className="h-9 w-9 rounded-none border-input border-transparent border-r"
 			>
-				<Minus className="size-3.5" />
+				<Minus className="size-4" />
 			</Button>
 			<div
-				className="flex h-7 w-10 items-center justify-center font-medium text-xs tabular-nums"
+				className="flex h-9 w-12 items-center justify-center font-medium text-sm tabular-nums"
 				aria-live="polite"
 			>
 				{value}
@@ -65,13 +65,13 @@ export function NumberStepper({
 			<Button
 				type="button"
 				variant="ghost"
-				size="icon-sm"
+				size="icon"
 				onClick={increment}
 				disabled={disabled || atMax}
 				aria-label="Tambah"
-				className="rounded-none border-input border-transparent border-l"
+				className="h-9 w-9 rounded-none border-input border-transparent border-l"
 			>
-				<Plus className="size-3.5" />
+				<Plus className="size-4" />
 			</Button>
 		</div>
 	);

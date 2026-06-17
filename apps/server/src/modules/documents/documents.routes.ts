@@ -3,11 +3,10 @@ import { env } from '@questgen/env/server';
 import { and, eq } from 'drizzle-orm';
 import { Hono } from 'hono';
 
-import {
-	listReadyDocuments,
-	SessionValidationError,
-} from '../services/sessions.service';
-import type { AppEnv } from '../types';
+import { SessionValidationError } from '@/modules/sessions/sessions.service';
+import type { AppEnv } from '@/types';
+
+import { listReadyDocuments } from './documents.service';
 
 const MIME_BY_TYPE: Record<'pdf' | 'docx', string> = {
 	pdf: 'application/pdf',

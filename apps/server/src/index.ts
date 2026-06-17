@@ -3,16 +3,19 @@ import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import { logger } from 'hono/logger';
 
-import { flushTracing, initTracing } from './lib/tracing';
-import { authMiddleware } from './middleware/auth';
-import { dbMiddleware } from './middleware/db';
-import { tracingMiddleware } from './middleware/tracing';
-import { type DocumentJob, processDocument } from './queue/document-processor';
-import { auth } from './routes/auth';
-import { documents } from './routes/documents';
-import { files } from './routes/files';
-import { sessions } from './routes/sessions';
-import type { AppEnv } from './types';
+import { auth } from '@/modules/auth/auth.routes';
+import { documents } from '@/modules/documents/documents.routes';
+import { files } from '@/modules/files/files.routes';
+import {
+	type DocumentJob,
+	processDocument,
+} from '@/modules/processing/document-processor.queue';
+import { sessions } from '@/modules/sessions/sessions.routes';
+import { flushTracing, initTracing } from '@/shared/lib/tracing';
+import { authMiddleware } from '@/shared/middleware/auth';
+import { dbMiddleware } from '@/shared/middleware/db';
+import { tracingMiddleware } from '@/shared/middleware/tracing';
+import type { AppEnv } from '@/types';
 
 const app = new Hono<AppEnv>();
 

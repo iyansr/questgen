@@ -11,7 +11,12 @@ import {
 } from '@questgen/ui/components/card';
 import { FieldGroup } from '@questgen/ui/components/field';
 import { useNavigate } from '@tanstack/react-router';
-import { Controller, useForm } from 'react-hook-form';
+import {
+	Controller,
+	type FieldError,
+	useController,
+	useForm,
+} from 'react-hook-form';
 import { toast } from 'sonner';
 
 import { useCreateSession } from '@/services/sessions/create';
@@ -27,7 +32,7 @@ export function NewSessionPage() {
 
 	const form = useForm<NewSessionFormValues>({
 		resolver: zodResolver(newSessionFormSchema),
-		mode: 'onBlur',
+		mode: 'onChange',
 		defaultValues: {
 			topic: '',
 			questionTypeCounts: [],
@@ -41,6 +46,40 @@ export function NewSessionPage() {
 	});
 
 	const submitting = createSession.isPending;
+
+	const { field: fileField, fieldState: fileState } = useController({
+		control: form.control,
+		name: 'file',
+	});
+	const { field: documentIdField, fieldState: documentIdState } = useController(
+		{
+			control: form.control,
+			name: 'documentId',
+		},
+	);
+	const { field: webQueryField, fieldState: webQueryState } = useController({
+		control: form.control,
+		name: 'webQuery',
+	});
+	const { field: curriculumField } = useController({
+		control: form.control,
+		name: 'curriculum',
+	});
+	const { field: gradeField } = useController({
+		control: form.control,
+		name: 'grade',
+	});
+	const { field: classGradeField } = useController({
+		control: form.control,
+		name: 'classGrade',
+	});
+
+	const sourceError: FieldError | undefined =
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		(form.formState.errors as any).source ??
+		fileState.error ??
+		documentIdState.error ??
+		webQueryState.error;
 
 	async function onSubmit(values: NewSessionFormValues) {
 		try {
@@ -66,13 +105,13 @@ export function NewSessionPage() {
 	return (
 		<div className="mx-auto max-w-2xl space-y-8">
 			<header className="space-y-2">
-				<p className="text-muted-foreground text-xs uppercase tracking-widest">
+				<p className="text-muted-foreground text-sm uppercase tracking-widest">
 					Sesi Baru
 				</p>
 				<h1 className="font-serif text-3xl tracking-tight md:text-4xl">
 					Buat set soal baru
 				</h1>
-				<p className="max-w-prose text-muted-foreground text-sm leading-relaxed">
+				<p className="max-w-prose text-base text-muted-foreground leading-relaxed">
 					Tentukan topik dan jenis soal yang ingin dihasilkan. AI akan membuat
 					soal berdasarkan materi yang Anda berikan.
 				</p>
@@ -92,14 +131,6 @@ export function NewSessionPage() {
 						)}
 					/>
 
-					<Controller
-						control={form.control}
-						name="questionTypeCounts"
-						render={({ field, fieldState }) => (
-							<QuestionTypesField field={field} error={fieldState.error} />
-						)}
-					/>
-
 					<Card size="sm">
 						<CardHeader>
 							<CardTitle>Materi Sumber</CardTitle>
@@ -109,73 +140,33 @@ export function NewSessionPage() {
 							</CardDescription>
 						</CardHeader>
 						<CardContent>
-							<Controller
-								control={form.control}
-								name="file"
-								render={({ field: fileField, fieldState: fileState }) => (
-									<Controller
-										control={form.control}
-										name="documentId"
-										render={({
-											field: documentIdField,
-											fieldState: documentIdState,
-										}) => (
-											<Controller
-												control={form.control}
-												name="webQuery"
-												render={({
-													field: webQueryField,
-													fieldState: webQueryState,
-												}) => (
-													<Controller
-														control={form.control}
-														name="curriculum"
-														render={({ field: curriculumField }) => (
-															<Controller
-																control={form.control}
-																name="grade"
-																render={({ field: gradeField }) => (
-																	<Controller
-																		control={form.control}
-																		name="classGrade"
-																		render={({ field: classGradeField }) => {
-																			const sourceError =
-																				// eslint-disable-next-line @typescript-eslint/no-explicit-any
-																				(form.formState.errors as any).source ??
-																				fileState.error ??
-																				documentIdState.error ??
-																				webQueryState.error;
-																			return (
-																				<SourceField
-																					fileField={fileField}
-																					documentIdField={documentIdField}
-																					webQueryField={webQueryField}
-																					curriculumField={curriculumField}
-																					gradeField={gradeField}
-																					classGradeField={classGradeField}
-																					error={sourceError}
-																				/>
-																			);
-																		}}
-																	/>
-																)}
-															/>
-														)}
-													/>
-												)}
-											/>
-										)}
-									/>
-								)}
+							<SourceField
+								fileField={fileField}
+								documentIdField={documentIdField}
+								webQueryField={webQueryField}
+								curriculumField={curriculumField}
+								gradeField={gradeField}
+								classGradeField={classGradeField}
+								error={sourceError}
 							/>
 						</CardContent>
 					</Card>
+
+					<Controller
+						control={form.control}
+						name="questionTypeCounts"
+						render={({ field, fieldState }) => (
+							<QuestionTypesField field={field} error={fieldState.error} />
+						)}
+					/>
 				</FieldGroup>
 
-				<CardFooter className="justify-end gap-2 border-border border-t bg-transparent p-0 pt-2">
+				<CardFooter className="flex-col gap-3 border-border border-t bg-transparent p-0 pt-4 sm:flex-row sm:justify-end">
 					<Button
 						type="button"
-						variant="ghost"
+						variant="outline"
+						size="lg"
+						className="h-11 w-full sm:w-auto"
 						onClick={() => form.reset()}
 						disabled={submitting}
 					>
@@ -184,12 +175,12 @@ export function NewSessionPage() {
 					<Button
 						type="submit"
 						size="lg"
-						className="gap-2"
+						className="h-11 w-full gap-2 px-5 text-sm sm:w-auto"
 						disabled={submitting}
 					>
-						<Sparkle className="size-4" weight="fill" />
+						<Sparkle className="size-5" weight="fill" />
 						{submitting ? 'Menyiapkan…' : 'Buat Soal'}
-						{!submitting && <ArrowRight className="size-4" />}
+						{!submitting && <ArrowRight className="size-5" />}
 					</Button>
 				</CardFooter>
 			</form>

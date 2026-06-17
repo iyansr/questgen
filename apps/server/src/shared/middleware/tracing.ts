@@ -1,7 +1,7 @@
 import { createMiddleware } from 'hono/factory';
 
-import { flushTracing, initTracing } from '../lib/tracing';
-import type { AppEnv } from '../types';
+import { flushTracing, initTracing } from '@/shared/lib/tracing';
+import type { AppEnv } from '@/types';
 
 export const tracingMiddleware = createMiddleware<AppEnv>(async (c, next) => {
 	initTracing();

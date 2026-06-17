@@ -3,7 +3,7 @@ import { users } from '@questgen/db/schema';
 import { env } from '@questgen/env/server';
 import { eq } from 'drizzle-orm';
 
-import { hashPassword, signToken, verifyPassword } from '../lib/auth';
+import { hashPassword, signToken, verifyPassword } from '@/shared/lib/auth';
 
 type Db = ReturnType<typeof createDb>;
 

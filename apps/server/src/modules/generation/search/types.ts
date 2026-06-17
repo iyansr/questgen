@@ -1,4 +1,4 @@
-import type { ImageRef } from '../../lib/chunker';
+import type { ImageRef } from '@/modules/processing/chunker';
 
 export type SubQuery = { query: string; rationale?: string };
 

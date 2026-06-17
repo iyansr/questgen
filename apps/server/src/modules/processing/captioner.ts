@@ -1,8 +1,8 @@
 import { generateText, Output } from 'ai';
 import { z } from 'zod';
 
-import { GENERATION_PARAMS, MODELS } from '../config/models';
-import { openrouter } from './openrouter';
+import { openrouter } from '@/shared/ai/openrouter';
+import { GENERATION_PARAMS, MODELS } from '@/shared/config/models';
 
 function toDataUrl(input: string): string {
 	if (input.startsWith('data:')) return input;

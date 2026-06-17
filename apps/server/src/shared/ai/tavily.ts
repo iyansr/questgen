@@ -2,9 +2,9 @@ import { trace } from '@opentelemetry/api';
 import { env } from '@questgen/env/server';
 import { tavily } from '@tavily/core';
 
-import type { ImageRef } from './chunker';
-import { withRetry } from './retry';
-import { MAX_WEB_IMAGES, MAX_WEB_RESULTS } from './upload-limits';
+import type { ImageRef } from '@/modules/processing/chunker';
+import { withRetry } from '@/shared/lib/retry';
+import { MAX_WEB_IMAGES, MAX_WEB_RESULTS } from '@/shared/lib/upload-limits';
 
 export interface WebSection {
 	markdown: string;

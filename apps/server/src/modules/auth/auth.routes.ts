@@ -1,10 +1,11 @@
 import { zValidator } from '@hono/zod-validator';
 import { Hono } from 'hono';
 
-import { authMiddleware } from '../middleware/auth';
-import { loginSchema, registerSchema } from '../schemas/auth.schema';
-import { getUserById, loginUser, registerUser } from '../services/auth.service';
-import type { AppEnv } from '../types';
+import { authMiddleware } from '@/shared/middleware/auth';
+import type { AppEnv } from '@/types';
+
+import { loginSchema, registerSchema } from './auth.schema';
+import { getUserById, loginUser, registerUser } from './auth.service';
 
 const auth = new Hono<AppEnv>();
 

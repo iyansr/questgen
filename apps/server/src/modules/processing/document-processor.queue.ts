@@ -3,21 +3,22 @@ import { documents, questionSets } from '@questgen/db/schema';
 import { env } from '@questgen/env/server';
 import { eq } from 'drizzle-orm';
 
-import { captionImages } from '../lib/captioner';
-import { getOrCreateCollection } from '../lib/chroma';
-import { chunkText } from '../lib/chunker';
-import { embedTexts } from '../lib/embeddings';
-import { uploadImageToR2 } from '../lib/images';
-import { processDocument as ocrProcess } from '../lib/ocr';
+import {
+	type GenerationConfig,
+	generateQuestionsInBackground,
+} from '@/modules/generation/generation.service';
 import {
 	MAX_CHUNKS,
 	MAX_OCR_IMAGES,
 	MAX_OCR_MARKDOWN_CHARS,
-} from '../lib/upload-limits';
-import {
-	type GenerationConfig,
-	generateQuestionsInBackground,
-} from '../services/generation.service';
+} from '@/shared/lib/upload-limits';
+
+import { captionImages } from './captioner';
+import { getOrCreateCollection } from './chroma';
+import { chunkText } from './chunker';
+import { embedTexts } from './embeddings';
+import { uploadImageToR2 } from './images';
+import { processDocument as ocrProcess } from './ocr';
 
 type ProcessDocumentJob = {
 	type: 'PROCESS_DOCUMENT';
