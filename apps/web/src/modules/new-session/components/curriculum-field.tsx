@@ -1,3 +1,4 @@
+import { Button } from '@questgen/ui/components/button';
 import { Field, FieldError, FieldLabel } from '@questgen/ui/components/field';
 import { cn } from '@questgen/ui/lib/utils';
 import type {
@@ -29,21 +30,21 @@ export function CurriculumField({ field, error }: CurriculumFieldProps) {
 					const isActive = field.value === opt;
 					const badge = CURRICULUM_BADGES[opt] ?? opt;
 					return (
-						<button
+						<Button
 							key={opt}
 							type="button"
+							variant="outline"
 							onClick={() => field.onChange(opt)}
 							className={cn(
-								'flex items-center gap-3 rounded-xl border p-3 text-left transition-all',
-								'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1',
+								'flex h-auto gap-3 rounded-xl p-3 text-left',
 								isActive
-									? 'border-primary bg-primary/5'
-									: 'border-input bg-background hover:border-primary/40',
+									? 'border-primary bg-primary/5 hover:bg-primary/5'
+									: 'border-input bg-background hover:border-primary/40 hover:bg-background',
 							)}
 						>
 							<div
 								className={cn(
-									'flex h-9 w-9 shrink-0 items-center justify-center rounded-md text-[10px] font-extrabold transition-colors',
+									'flex h-9 w-9 shrink-0 items-center justify-center rounded-md font-extrabold text-[10px] transition-colors',
 									isActive
 										? 'bg-primary text-primary-foreground'
 										: 'bg-muted text-muted-foreground',
@@ -53,13 +54,13 @@ export function CurriculumField({ field, error }: CurriculumFieldProps) {
 							</div>
 							<span
 								className={cn(
-									'text-sm font-semibold transition-colors',
+									'font-semibold text-sm transition-colors',
 									isActive ? 'text-primary' : 'text-foreground',
 								)}
 							>
 								{opt}
 							</span>
-						</button>
+						</Button>
 					);
 				})}
 			</div>

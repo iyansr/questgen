@@ -7,6 +7,7 @@ import { retrieveContextWithMeta } from '@/modules/processing/rag';
 import { openai } from '@/shared/ai/openai';
 import { GENERATION_PARAMS, MODELS } from '@/shared/config/models';
 import { withRetry } from '@/shared/lib/retry';
+import { openrouter } from '@/shared/ai/openrouter';
 
 const MAX_DISTANCE = 0.6;
 const DEFAULT_TOP_K = 12;
@@ -50,7 +51,7 @@ export async function documentSearch({
 			: 'Adapt the research to the educational level implied by the document content.';
 
 	const { text } = await generateText({
-		model: openai(MODELS.RETRIEVAL),
+		model: openrouter(MODELS.RETRIEVAL),
 		temperature: GENERATION_PARAMS.RESEARCH.temperature,
 		topP: GENERATION_PARAMS.RESEARCH.topP,
 		tools: {

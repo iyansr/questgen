@@ -1,3 +1,4 @@
+import { Button } from '@questgen/ui/components/button';
 import {
 	Field,
 	FieldDescription,
@@ -29,16 +30,11 @@ interface QuestionTypesFieldProps {
 	error?: RHFFieldError;
 }
 
-function ToggleSwitch({
-	on,
-	onToggle,
-}: {
-	on: boolean;
-	onToggle: () => void;
-}) {
+function ToggleSwitch({ on, onToggle }: { on: boolean; onToggle: () => void }) {
 	return (
-		<button
+		<Button
 			type="button"
+			variant="ghost"
 			role="switch"
 			aria-checked={on}
 			onClick={(e) => {
@@ -46,9 +42,9 @@ function ToggleSwitch({
 				onToggle();
 			}}
 			className={cn(
-				'relative h-5 w-9 shrink-0 rounded-full transition-colors',
-				'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
-				on ? 'bg-primary' : 'bg-border',
+				'relative h-5 w-9 shrink-0 rounded-full border-none p-0',
+				'focus-visible:ring-offset-2',
+				on ? 'bg-primary hover:bg-primary' : 'bg-border hover:bg-border',
 			)}
 		>
 			<div
@@ -57,7 +53,7 @@ function ToggleSwitch({
 					on ? 'left-4' : 'left-0.5',
 				)}
 			/>
-		</button>
+		</Button>
 	);
 }
 
@@ -114,7 +110,7 @@ export function QuestionTypesField({ field, error }: QuestionTypesFieldProps) {
 				<FieldLabel>Jumlah & Tipe Soal</FieldLabel>
 				<span
 					className={cn(
-						'rounded-full px-3 py-0.5 text-xs font-semibold tabular-nums transition-colors',
+						'rounded-full px-3 py-0.5 font-semibold text-xs tabular-nums transition-colors',
 						total > 0
 							? 'bg-primary/10 text-primary'
 							: 'bg-muted text-muted-foreground',
@@ -134,7 +130,7 @@ export function QuestionTypesField({ field, error }: QuestionTypesFieldProps) {
 							key={type}
 							onClick={() => toggleType(type, !isSelected)}
 							className={cn(
-								'flex cursor-pointer items-center gap-3.5 rounded-xl border px-4 py-3.5 transition-all select-none',
+								'flex cursor-pointer select-none items-center gap-3.5 rounded-xl border px-4 py-3.5 transition-all',
 								'focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-1',
 								isSelected
 									? 'border-primary bg-primary/5'
@@ -151,7 +147,7 @@ export function QuestionTypesField({ field, error }: QuestionTypesFieldProps) {
 							<div className="min-w-0 flex-1">
 								<p
 									className={cn(
-										'text-sm font-semibold transition-colors',
+										'font-semibold text-sm transition-colors',
 										isSelected ? 'text-primary' : 'text-foreground',
 									)}
 								>
@@ -162,7 +158,7 @@ export function QuestionTypesField({ field, error }: QuestionTypesFieldProps) {
 							{/* Count stepper — only visible when selected */}
 							{isSelected && (
 								<div
-									className="animate-in fade-in slide-in-from-right-2"
+									className="fade-in slide-in-from-right-2 animate-in"
 									onClick={(e) => e.stopPropagation()}
 								>
 									<NumberStepper
@@ -181,7 +177,7 @@ export function QuestionTypesField({ field, error }: QuestionTypesFieldProps) {
 			</div>
 
 			{!hasSelection && (
-				<p className="mt-3 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm font-medium text-amber-800 dark:border-amber-800 dark:bg-amber-950 dark:text-amber-200">
+				<p className="mt-3 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 font-medium text-amber-800 text-sm dark:border-amber-800 dark:bg-amber-950 dark:text-amber-200">
 					Pilih minimal satu tipe soal untuk melanjutkan
 				</p>
 			)}
@@ -192,7 +188,7 @@ export function QuestionTypesField({ field, error }: QuestionTypesFieldProps) {
 					{QUESTION_TYPES.filter((q) => selectedTypes.has(q)).map((q) => (
 						<span
 							key={q}
-							className="text-sm font-semibold text-primary tabular-nums"
+							className="font-semibold text-primary text-sm tabular-nums"
 						>
 							{countByType.get(q)}× {QUESTION_TYPE_LABELS[q]}
 						</span>

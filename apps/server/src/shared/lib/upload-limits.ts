@@ -1,11 +1,7 @@
 export const MAX_FILE_SIZE_BYTES = 20 * 1024 * 1024;
 export const MAX_FILE_SIZE_MB = 20;
 
-export const MAX_PDF_PAGES = 60;
-
-export const MAX_OCR_MARKDOWN_CHARS = 500_000;
-export const MAX_OCR_IMAGES = 100;
-export const MAX_CHUNKS = 500;
+export const MAX_PDF_PAGES = 400;
 
 export const MAX_WEB_QUERY_CHARS = 200;
 export const MIN_WEB_QUERY_CHARS = 3;

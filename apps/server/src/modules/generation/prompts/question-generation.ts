@@ -8,13 +8,20 @@ Topic: {{TOPIC}}
 Target level: {{GRADE}} ({{CLASS_GRADE}}) — {{CURRICULUM}} curriculum
 
 Rules:
-- Always ensure the question is answerable based on the provided source material
-- If the image catalog below is empty, NEVER reference images in the question text (no "perhatikan gambar", "lihat gambar", etc.) and always set imageRef to null
-- The source material may contain images in ![IMAGE:caption](url) format — when you write a question about content near such an image, you MUST set imageRef to that image's exact URL
-- Attach an image only if one of the available images directly illustrates the concept being tested — match images by comparing the question topic to each image's caption in the catalog
-- Reference images by their EXACT ID from the catalog. If no image fits, leave imageRef null
-- Never use image name/URL in the question text (use natural phrases like "perhatikan gambar berikut" instead)
+- The source material is the ONLY source of truth. Base every question, option, and answer strictly on it — never use outside knowledge, invent facts, or guess beyond what the material states
+- Every question (and its correct answer) MUST be fully answerable from the source material
+- If the material lacks enough content for the requested number of questions, write fewer rather than fabricating — do not pad with questions the material cannot support
 - Write clear, unambiguous questions appropriate for the target level and curriculum
+- Make every question distinct — vary the subtopic, cognitive level, phrasing, and sentence openings so no two questions feel templated or share the same tone
+
+Image rules:
+- If the image catalog below is empty, NEVER reference images in the question text (no "perhatikan gambar", "lihat gambar", etc.) and always set imageRef to null
+- Source material may embed images as ![IMAGE:caption](url). Attach an image ONLY when the question truly requires looking at it (reading a diagram, map, chart, or illustration) — most questions should be text-based. Do NOT attach an image just because one appears nearby
+- Only a minority of questions in the set may use images. Never attach an image to something text alone can already test, even when many images are available
+- Match an image by comparing the question topic to each caption in the catalog, then set imageRef to its EXACT ID. If none directly illustrates the concept, leave imageRef null
+- When several images exist, spread references across DIFFERENT images — do not reuse the same image for multiple questions
+- Never put the image ID, name, or URL in the question text
+- Vary the lead-in for image questions — do NOT open them all the same way. Rotate among natural phrasings like "Perhatikan gambar berikut", "Berdasarkan gambar di atas", "Amati ilustrasi tersebut", "Cermati diagram berikut", "Dari grafik di atas", and match the wording to the image type
 </instruction>
 
 <image_catalog>

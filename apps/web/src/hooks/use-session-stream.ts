@@ -1,7 +1,9 @@
 import { useChat } from '@ai-sdk/react';
+import { useQueryClient } from '@tanstack/react-query';
 import { DefaultChatTransport } from 'ai';
 import { useEffect, useMemo, useState } from 'react';
 
+import { QUERY_KEYS } from '@/services/api/query-keys';
 import { useSession } from '@/services/sessions/detail';
 import { useAuthStore } from '@/store/auth';
 import type {
@@ -31,6 +33,8 @@ export type UseSessionStreamResult = {
 };
 
 export function useSessionStream(sessionId: string): UseSessionStreamResult {
+	const qc = useQueryClient();
+
 	const { data: initial, isFetched } = useSession(sessionId);
 
 	const [status, setStatus] = useState<SessionStreamStatus>(DEFAULT_STATUS);
@@ -56,6 +60,10 @@ export function useSessionStream(sessionId: string): UseSessionStreamResult {
 					status: part.data.status as SessionStatus,
 					errorMessage: part.data.errorMessage,
 				});
+
+				if (part.data.status === 'completed') {
+					qc.invalidateQueries({ queryKey: [QUERY_KEYS.SESSIONS.DETAIL] });
+				}
 			}
 		},
 	});

@@ -6,6 +6,7 @@ import { openai } from '@/shared/ai/openai';
 import { researchWeb } from '@/shared/ai/tavily';
 import { GENERATION_PARAMS, MODELS } from '@/shared/config/models';
 import { withRetry } from '@/shared/lib/retry';
+import { openrouter } from '@/shared/ai/openrouter';
 
 const MARKDOWN_LIMIT = 150_000;
 
@@ -29,7 +30,7 @@ export async function webSearch({
 }): Promise<WebSearchResult> {
 	const allImageRefs = new Map<string, ImageRef>();
 	const { text } = await generateText({
-		model: openai(MODELS.RESEARCH),
+		model: openrouter(MODELS.RESEARCH),
 		temperature: GENERATION_PARAMS.RESEARCH.temperature,
 		topP: GENERATION_PARAMS.RESEARCH.topP,
 		tools: {

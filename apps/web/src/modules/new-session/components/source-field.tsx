@@ -135,22 +135,23 @@ export function SourceField({
 				{SOURCES.map((src) => {
 					const isActive = mode === src.id;
 					return (
-						<button
+						<Button
 							key={src.id}
 							type="button"
+							variant="outline"
 							onClick={() => setMode(src.id)}
 							className={cn(
-								'flex flex-col items-center gap-1 rounded-xl border px-2 py-3.5 text-center transition-all',
-								'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1',
+								'flex h-auto flex-col items-center gap-1 rounded-xl px-2 py-3.5 text-center',
+								'whitespace-normal',
 								isActive
-									? 'border-primary bg-primary/5'
+									? 'border-primary bg-primary/5 hover:bg-primary/5'
 									: 'border-input bg-background hover:border-primary/40 hover:bg-primary/5',
 							)}
 						>
 							<span className="text-xl">{src.emoji}</span>
 							<span
 								className={cn(
-									'text-xs font-semibold transition-colors',
+									'font-semibold text-xs transition-colors',
 									isActive ? 'text-primary' : 'text-foreground',
 								)}
 							>
@@ -159,24 +160,24 @@ export function SourceField({
 							<span className="text-[10px] text-muted-foreground">
 								{src.sub}
 							</span>
-						</button>
+						</Button>
 					);
 				})}
 			</div>
 
 			{/* Upload zone */}
 			{mode === 'file' && (
-				<div className="animate-in fade-in slide-in-from-top-1">
+				<div className="fade-in slide-in-from-top-1 animate-in">
 					{fileField.value ? (
 						<div className="flex items-center gap-3 rounded-lg border border-green-200 bg-green-50 px-4 py-3 dark:border-green-800 dark:bg-green-950">
 							<div className="flex size-10 shrink-0 items-center justify-center rounded-md bg-green-100 dark:bg-green-900">
 								<FileText className="size-5 text-green-600 dark:text-green-400" />
 							</div>
 							<div className="min-w-0 flex-1">
-								<p className="truncate text-sm font-semibold text-green-700 dark:text-green-300">
+								<p className="truncate font-semibold text-green-700 text-sm dark:text-green-300">
 									{fileField.value.name}
 								</p>
-								<p className="text-xs text-green-600/70 dark:text-green-400/70">
+								<p className="text-green-600/70 text-xs dark:text-green-400/70">
 									{formatFileSize(fileField.value.size)}
 								</p>
 							</div>
@@ -192,24 +193,28 @@ export function SourceField({
 							</Button>
 						</div>
 					) : (
-						<button
+						<Button
 							type="button"
+							variant="outline"
 							onClick={() => inputRef.current?.click()}
 							aria-describedby="source-file-help"
 							className={cn(
-								'flex h-28 w-full flex-col items-center justify-center gap-1.5 rounded-lg border-2 border-dashed border-primary/30 bg-primary/5 px-4 text-sm transition-colors',
-								'hover:border-primary/50 hover:bg-primary/10',
-								'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1',
+								'flex h-28 w-full flex-col items-center justify-center gap-1.5 rounded-lg border-2 border-primary/30 border-dashed bg-primary/5 px-4 text-sm',
+								'hover:border-primary/50 hover:bg-primary/10 hover:text-inherit',
 							)}
 						>
 							<span className="text-2xl">☁️</span>
 							<span className="font-semibold text-primary">
 								Seret file ke sini, atau klik untuk pilih
 							</span>
-							<span id="source-file-help" className="text-xs text-muted-foreground">
-								PDF · DOCX · TXT &nbsp;·&nbsp; Maks. {MAX_FILE_SIZE_MB} MB · PDF maks. {MAX_PDF_PAGES} halaman
+							<span
+								id="source-file-help"
+								className="text-muted-foreground text-xs"
+							>
+								PDF · DOCX · TXT &nbsp;·&nbsp; Maks. {MAX_FILE_SIZE_MB} MB · PDF
+								maks. {MAX_PDF_PAGES} halaman
 							</span>
-						</button>
+						</Button>
 					)}
 					<input
 						ref={inputRef}
@@ -224,13 +229,13 @@ export function SourceField({
 
 			{/* Existing documents */}
 			{mode === 'document' && (
-				<div className="animate-in fade-in slide-in-from-top-1">
-					<button
+				<div className="fade-in slide-in-from-top-1 animate-in">
+					<Button
 						type="button"
+						variant="outline"
 						onClick={() => setPickerOpen(true)}
 						className={cn(
-							'flex h-11 w-full items-center justify-between rounded-lg border border-input bg-background px-4 text-sm transition-colors',
-							'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1',
+							'flex h-11 w-full justify-between rounded-lg px-4 text-sm',
 							'hover:bg-muted/50',
 						)}
 					>
@@ -255,20 +260,19 @@ export function SourceField({
 						{!selectedDocument && (
 							<ChevronDown className="size-4 shrink-0 text-muted-foreground" />
 						)}
-					</button>
+					</Button>
 				</div>
 			)}
 
 			{/* Web query */}
 			{mode === 'web' && (
-				<div className="animate-in fade-in slide-in-from-top-1 space-y-3">
+				<div className="fade-in slide-in-from-top-1 animate-in space-y-3">
 					<div>
-						<label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-							Kata Kunci Pencarian{' '}
-							<span className="text-destructive">*</span>
+						<label className="mb-1.5 block font-semibold text-muted-foreground text-xs uppercase tracking-wider">
+							Kata Kunci Pencarian <span className="text-destructive">*</span>
 						</label>
 						<div className="relative">
-							<Globe className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+							<Globe className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" />
 							<input
 								type="text"
 								value={webQueryField.value ?? ''}
@@ -286,7 +290,7 @@ export function SourceField({
 								)}
 							/>
 						</div>
-						<p className="mt-2 flex items-start gap-1.5 rounded-md bg-primary/5 px-3 py-2 text-xs text-muted-foreground">
+						<p className="mt-2 flex items-start gap-1.5 rounded-md bg-primary/5 px-3 py-2 text-muted-foreground text-xs">
 							<span>💡</span>
 							<span>
 								Kata kunci ini <strong>berbeda dari topik soal</strong> —

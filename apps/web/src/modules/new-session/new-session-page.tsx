@@ -27,7 +27,11 @@ import { GradeClassField } from './components/grade-class-field';
 import { QuestionTypesField } from './components/question-types-field';
 import { SourceField } from './components/source-field';
 import { TopicField } from './components/topic-field';
-import { type NewSessionFormValues, newSessionFormSchema, totalCount } from './schema';
+import {
+	type NewSessionFormValues,
+	newSessionFormSchema,
+	totalCount,
+} from './schema';
 
 export function NewSessionPage() {
 	const navigate = useNavigate();
@@ -67,26 +71,30 @@ export function NewSessionPage() {
 		control: form.control,
 		name: 'webQuery',
 	});
-	const { field: curriculumField, fieldState: curriculumState } =
-		useController({
+	const { field: curriculumField, fieldState: curriculumState } = useController(
+		{
 			control: form.control,
 			name: 'curriculum',
-		});
+		},
+	);
 	const { field: gradeField, fieldState: gradeState } = useController({
 		control: form.control,
 		name: 'grade',
 	});
-	const { field: classGradeField, fieldState: classGradeState } =
-		useController({
+	const { field: classGradeField, fieldState: classGradeState } = useController(
+		{
 			control: form.control,
 			name: 'classGrade',
-		});
+		},
+	);
 
-	const source =
-		fileField.value ? 'file'
-		: documentIdField.value ? 'document'
-		: webQueryField.value ? 'web'
-		: null;
+	const source = fileField.value
+		? 'file'
+		: documentIdField.value
+			? 'document'
+			: webQueryField.value
+				? 'web'
+				: null;
 
 	const sourceError: FieldError | undefined =
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -143,7 +151,7 @@ export function NewSessionPage() {
 		<div className="mx-auto max-w-2xl space-y-8">
 			{/* Header */}
 			<header className="space-y-4">
-				<span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-primary">
+				<span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 font-bold text-[11px] text-primary uppercase tracking-widest">
 					✦ AI · Generator Soal
 				</span>
 				<h1 className="font-serif text-3xl leading-tight tracking-tight md:text-4xl">
@@ -263,16 +271,16 @@ export function NewSessionPage() {
 						type="submit"
 						size="lg"
 						className={cn(
-							'h-11 w-full gap-2 px-5 text-sm sm:w-auto transition-all',
+							'h-11 w-full gap-2 px-5 text-sm transition-all sm:w-auto',
 							canGenerate &&
-								'bg-gradient-to-br from-primary to-violet-600 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35 hover:-translate-y-0.5',
+								'bg-gradient-to-br from-primary to-violet-600 shadow-lg shadow-primary/25 hover:-translate-y-0.5 hover:shadow-primary/35 hover:shadow-xl',
 						)}
 						disabled={submitting || !canGenerate}
 					>
 						<Sparkle className="size-5" weight="fill" />
 						{submitting ? 'Menyiapkan…' : 'Buat Soal'}
 						{totalQuestions > 0 && !submitting && (
-							<span className="ml-1 rounded-full bg-white/20 px-2 py-0.5 text-xs font-medium">
+							<span className="ml-1 rounded-full bg-white/20 px-2 py-0.5 font-medium text-xs">
 								{totalQuestions} soal
 							</span>
 						)}
@@ -281,7 +289,7 @@ export function NewSessionPage() {
 				</CardFooter>
 
 				{!canGenerate && (
-					<p className="text-center text-xs text-muted-foreground transition-opacity">
+					<p className="text-center text-muted-foreground text-xs transition-opacity">
 						Lengkapi semua bagian di atas untuk mengaktifkan tombol
 					</p>
 				)}

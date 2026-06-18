@@ -1,3 +1,4 @@
+import { Button } from '@questgen/ui/components/button';
 import { Field, FieldError, FieldLabel } from '@questgen/ui/components/field';
 import { cn } from '@questgen/ui/lib/utils';
 import type {
@@ -38,51 +39,51 @@ export function GradeClassField({
 				{GRADE_OPTIONS.map((lvl) => {
 					const isActive = gradeField.value === lvl;
 					return (
-						<button
+						<Button
 							key={lvl}
 							type="button"
+							variant={isActive ? 'default' : 'outline'}
 							onClick={() => {
 								gradeField.onChange(lvl);
 								classGradeField.onChange(undefined);
 							}}
 							className={cn(
-								'rounded-full border px-5 py-2 text-sm font-semibold transition-all',
-								'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1',
-								isActive
-									? 'border-primary bg-primary text-primary-foreground'
-									: 'border-input bg-background text-muted-foreground hover:border-primary/40 hover:text-primary',
+								'h-auto px-5 py-2 text-sm',
+								isActive && 'hover:bg-primary/80',
+								!isActive &&
+									'border-input bg-background text-muted-foreground hover:border-primary/40 hover:bg-background hover:text-primary',
 							)}
 						>
 							{lvl}
-						</button>
+						</Button>
 					);
 				})}
 			</div>
 
 			{/* Class grade chips */}
 			{gradeField.value && (
-				<div className="animate-in fade-in slide-in-from-top-1 space-y-2">
-					<p className="text-muted-foreground text-xs font-semibold uppercase tracking-wider">
+				<div className="fade-in slide-in-from-top-1 animate-in space-y-2">
+					<p className="font-semibold text-muted-foreground text-xs uppercase tracking-wider">
 						Pilih Kelas
 					</p>
 					<div className="flex flex-wrap gap-2">
 						{grades.map((g) => {
 							const isActive = classGradeField.value === g;
 							return (
-								<button
+								<Button
 									key={g}
 									type="button"
+									variant={isActive ? 'default' : 'outline'}
 									onClick={() => classGradeField.onChange(g)}
 									className={cn(
-										'flex h-11 w-11 items-center justify-center rounded-lg border text-sm font-extrabold transition-all',
-										'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1',
-										isActive
-											? 'border-primary bg-primary text-primary-foreground'
-											: 'border-input bg-background text-muted-foreground hover:border-primary/40 hover:text-primary',
+										'h-11 w-11 p-0 font-extrabold text-sm',
+										isActive && 'hover:bg-primary/80',
+										!isActive &&
+											'border-input bg-background text-muted-foreground hover:border-primary/40 hover:bg-background hover:text-primary',
 									)}
 								>
 									{g}
-								</button>
+								</Button>
 							);
 						})}
 					</div>

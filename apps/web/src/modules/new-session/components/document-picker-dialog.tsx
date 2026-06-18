@@ -95,11 +95,13 @@ export function DocumentPickerDialog({
 								const isSelected = doc.id === pendingId;
 								return (
 									<li key={doc.id}>
-										<button
+										<Button
 											type="button"
+											variant="ghost"
 											onClick={() => setPendingId(doc.id)}
 											className={cn(
-												'flex w-full items-start gap-3 px-3 py-3 text-left transition-colors hover:bg-muted/60',
+												'flex h-auto w-full items-start gap-3 rounded-none px-3 py-3 text-left',
+												'hover:bg-muted/60',
 												isSelected && 'bg-muted',
 											)}
 										>
@@ -117,7 +119,7 @@ export function DocumentPickerDialog({
 											{isSelected && (
 												<Check className="size-4 shrink-0 text-foreground" />
 											)}
-										</button>
+										</Button>
 									</li>
 								);
 							})}

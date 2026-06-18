@@ -115,12 +115,6 @@ export async function createSession(
 	let fileBuffer: ArrayBuffer | null = null;
 	if (fileType === 'pdf') {
 		fileBuffer = await file.arrayBuffer();
-		const pageCount = countPdfPages(fileBuffer);
-		if (pageCount > MAX_PDF_PAGES) {
-			throw new SessionValidationError(
-				`PDF has too many pages. Maximum is ${MAX_PDF_PAGES}, got ${pageCount}.`,
-			);
-		}
 	}
 
 	const fileKey = `${userId}/${Date.now()}-${file.name}`;

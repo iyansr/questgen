@@ -7,11 +7,6 @@ import {
 	type GenerationConfig,
 	generateQuestionsInBackground,
 } from '@/modules/generation/generation.service';
-import {
-	MAX_CHUNKS,
-	MAX_OCR_IMAGES,
-	MAX_OCR_MARKDOWN_CHARS,
-} from '@/shared/lib/upload-limits';
 
 import { captionImages } from './captioner';
 import { getOrCreateCollection } from './chroma';
@@ -164,18 +159,6 @@ async function processProcessDocument(job: ProcessDocumentJob): Promise<void> {
 
 		const ocrResult = await ocrProcess(fileBytes, filename);
 
-		if (ocrResult.markdown.length > MAX_OCR_MARKDOWN_CHARS) {
-			throw new Error(
-				`Document content is too large after OCR (${ocrResult.markdown.length} chars, max ${MAX_OCR_MARKDOWN_CHARS}). Please upload a shorter document.`,
-			);
-		}
-
-		if (ocrResult.images.length > MAX_OCR_IMAGES) {
-			throw new Error(
-				`Document has too many images (${ocrResult.images.length}, max ${MAX_OCR_IMAGES}). Please upload a document with fewer figures.`,
-			);
-		}
-
 		const uploadedImages = await Promise.all(
 			ocrResult.images.map((img) =>
 				uploadImageToR2(documentId, img.id, img.base64),
@@ -193,12 +176,6 @@ async function processProcessDocument(job: ProcessDocumentJob): Promise<void> {
 			pageIndex: ocrResult.images[i]?.pageIndex ?? 0,
 		}));
 		const chunks = await chunkText(ocrResult.markdown, chunkerImages);
-
-		if (chunks.length > MAX_CHUNKS) {
-			throw new Error(
-				`Document produced too many chunks (${chunks.length}, max ${MAX_CHUNKS}). Please upload a shorter document.`,
-			);
-		}
 
 		const embeddings = await embedTexts(chunks.map((c) => c.text));
 
