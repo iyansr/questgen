@@ -43,6 +43,7 @@ export async function researchWeb(
 					client.search(query, {
 						searchDepth: 'advanced',
 						includeRawContent: 'markdown',
+						chunksPerSource: 3,
 						maxResults: MAX_WEB_RESULTS,
 						topic: 'general',
 						includeImages: true,

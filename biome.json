@@ -61,7 +61,9 @@
 			"a11y": {
 				"noLabelWithoutControl": "off",
 				"useSemanticElements": "off",
-				"noAriaHiddenOnFocusable": "off"
+				"noAriaHiddenOnFocusable": "off",
+				"noStaticElementInteractions": "off",
+				"useKeyWithClickEvents": "off"
 			},
 			"suspicious": {
 				"noAssignInExpressions": "warn"

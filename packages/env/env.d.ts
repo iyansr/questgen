@@ -3,7 +3,7 @@
 interface QuestgenEnv {
 	// Bindings (declared in wrangler.jsonc)
 	DOCUMENTS_BUCKET: R2Bucket;
-	DOC_QUEUE: Queue;
+	GENERATION_WORKFLOW: Workflow;
 
 	// Plain vars (set in Cloudflare dashboard for production, .env for local dev)
 	CORS_ORIGIN: string;

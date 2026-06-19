@@ -6,16 +6,13 @@ import { logger } from 'hono/logger';
 import { auth } from '@/modules/auth/auth.routes';
 import { documents } from '@/modules/documents/documents.routes';
 import { files } from '@/modules/files/files.routes';
-import {
-	type DocumentJob,
-	processDocument,
-} from '@/modules/processing/document-processor.queue';
 import { sessions } from '@/modules/sessions/sessions.routes';
-import { flushTracing, initTracing } from '@/shared/lib/tracing';
 import { authMiddleware } from '@/shared/middleware/auth';
 import { dbMiddleware } from '@/shared/middleware/db';
 import { tracingMiddleware } from '@/shared/middleware/tracing';
 import type { AppEnv } from '@/types';
+
+export { GenerationWorkflow } from '@/modules/processing/generation.workflow';
 
 const app = new Hono<AppEnv>();
 
@@ -44,14 +41,4 @@ app.route('/api/documents', documents);
 
 export default {
 	fetch: app.fetch,
-	async queue(batch: MessageBatch<DocumentJob>) {
-		initTracing();
-		try {
-			for (const message of batch.messages) {
-				await processDocument(message);
-			}
-		} finally {
-			await flushTracing();
-		}
-	},
 };

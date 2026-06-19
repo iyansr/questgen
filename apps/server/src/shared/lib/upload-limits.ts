@@ -5,7 +5,7 @@ export const MAX_PDF_PAGES = 400;
 
 export const MAX_WEB_QUERY_CHARS = 200;
 export const MIN_WEB_QUERY_CHARS = 3;
-export const MAX_WEB_RESULTS = 8;
+export const MAX_WEB_RESULTS = 3;
 export const MAX_WEB_IMAGES = 12;
 
 export function countPdfPages(bytes: ArrayBuffer): number {

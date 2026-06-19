@@ -7,6 +7,7 @@ import {
 	type GenerationConfig,
 	generateQuestionsInBackground,
 } from '@/modules/generation/generation.service';
+import { flushTracing, initTracing } from '@/shared/lib/tracing';
 
 import { captionImages } from './captioner';
 import { getOrCreateCollection } from './chroma';
@@ -14,6 +15,14 @@ import { chunkText } from './chunker';
 import { embedTexts } from './embeddings';
 import { uploadImageToR2 } from './images';
 import { processDocument as ocrProcess } from './ocr';
+import { NonRetryableError } from 'cloudflare:workflows';
+
+/**
+ * Config as carried in the workflow payload: everything except `source`, which
+ * each job type injects at generation time. `count` is a denormalized total
+ * persisted alongside the session config.
+ */
+type JobConfig = Omit<GenerationConfig, 'source'> & { count?: number };
 
 type ProcessDocumentJob = {
 	type: 'PROCESS_DOCUMENT';
@@ -21,21 +30,21 @@ type ProcessDocumentJob = {
 	fileKey: string;
 	fileType: 'pdf' | 'docx';
 	sessionId: string;
-	config: GenerationConfig;
+	config: JobConfig;
 };
 
 type GenerateQuestionsJob = {
 	type: 'GENERATE_QUESTIONS';
 	sessionId: string;
 	documentId: string;
-	config: GenerationConfig;
+	config: JobConfig;
 };
 
 type ResearchWebJob = {
 	type: 'RESEARCH_WEB';
 	sessionId: string;
 	query: string;
-	config: GenerationConfig;
+	config: JobConfig;
 };
 
 export type DocumentJob =
@@ -43,7 +52,7 @@ export type DocumentJob =
 	| GenerateQuestionsJob
 	| ResearchWebJob;
 
-async function markSessionStatus(
+export async function markSessionStatus(
 	sessionId: string,
 	status: 'generating' | 'completed' | 'failed',
 	errorMessage?: string,
@@ -51,11 +60,11 @@ async function markSessionStatus(
 	const db = createDb();
 	await db
 		.update(questionSets)
-		.set({ status, errorMessage })
+		.set({ status, errorMessage, updatedAt: new Date() })
 		.where(eq(questionSets.id, sessionId));
 }
 
-async function markDocumentStatus(
+export async function markDocumentStatus(
 	documentId: string,
 	status: 'ready' | 'failed',
 	errorMessage?: string,
@@ -67,87 +76,41 @@ async function markDocumentStatus(
 		.where(eq(documents.id, documentId));
 }
 
-async function generateForScope(
-	sessionId: string,
-	scopeId: string,
-	config: GenerationConfig,
-): Promise<void> {
-	await markSessionStatus(sessionId, 'generating');
-	await generateQuestionsInBackground(sessionId, scopeId, config);
-	await markSessionStatus(sessionId, 'completed');
-}
-
-export async function processDocument(
-	message: Message<DocumentJob>,
-): Promise<void> {
-	const job = message.body;
-
-	if (job.type === 'GENERATE_QUESTIONS') {
-		await processGenerateQuestions(job);
-		return;
-	}
-
-	if (job.type === 'RESEARCH_WEB') {
-		await processResearchWeb(job);
-		return;
-	}
-
-	await processProcessDocument(job);
-}
-
-async function processGenerateQuestions(
-	job: GenerateQuestionsJob,
-): Promise<void> {
-	const { sessionId, documentId, config } = job;
+/**
+ * Asserts a document has finished OCR/embedding and is ready to generate from.
+ * Throws a NonRetryableError because a missing or non-ready document is a
+ * permanent condition — retrying the step would never succeed.
+ */
+export async function assertDocumentReady(documentId: string): Promise<void> {
 	const db = createDb();
+	const [doc] = await db
+		.select({ id: documents.id, status: documents.status })
+		.from(documents)
+		.where(eq(documents.id, documentId))
+		.limit(1);
 
-	try {
-		const [doc] = await db
-			.select({ id: documents.id, status: documents.status })
-			.from(documents)
-			.where(eq(documents.id, documentId))
-			.limit(1);
-
-		if (!doc) {
-			throw new Error(`Document not found: ${documentId}`);
-		}
-
-		if (doc.status !== 'ready') {
-			throw new Error(`Document is not ready: ${documentId} (${doc.status})`);
-		}
-
-		await generateForScope(sessionId, documentId, {
-			...config,
-			source: 'document',
-		});
-	} catch (error) {
-		const errorMessage =
-			error instanceof Error ? error.message : 'Unknown error';
-		await markSessionStatus(sessionId, 'failed', errorMessage);
-		throw error;
+	if (!doc) {
+		throw new NonRetryableError(`Document not found: ${documentId}`);
+	}
+	if (doc.status !== 'ready') {
+		throw new NonRetryableError(
+			`Document is not ready: ${documentId} (${doc.status})`,
+		);
 	}
 }
 
-async function processResearchWeb(job: ResearchWebJob): Promise<void> {
-	const { sessionId, config, query } = job;
+/**
+ * OCR → image upload → captioning → chunk → embed → vector upsert.
+ * Side effects only (R2, Chroma, documents table); returns nothing so it stays
+ * well under the 1 MiB Workflow step-return limit. Marks the document `ready`
+ * on success. Generation runs as a separate step afterwards.
+ */
+export async function runDocumentPipeline(
+	job: ProcessDocumentJob,
+): Promise<void> {
+	const { documentId, fileKey } = job;
 
-	try {
-		await generateForScope(sessionId, sessionId, {
-			...config,
-			topic: query || config.topic,
-			source: 'web',
-		});
-	} catch (error) {
-		const errorMessage =
-			error instanceof Error ? error.message : 'Unknown error';
-		await markSessionStatus(sessionId, 'failed', errorMessage);
-		throw error;
-	}
-}
-
-async function processProcessDocument(job: ProcessDocumentJob): Promise<void> {
-	const { documentId, fileKey, sessionId, config } = job;
-
+	initTracing();
 	try {
 		const file = await env.DOCUMENTS_BUCKET.get(fileKey);
 		if (!file) {
@@ -192,15 +155,33 @@ async function processProcessDocument(job: ProcessDocumentJob): Promise<void> {
 		});
 
 		await markDocumentStatus(documentId, 'ready');
-		await generateForScope(sessionId, documentId, {
-			...config,
-			source: 'document',
-		});
-	} catch (error) {
-		const errorMessage =
-			error instanceof Error ? error.message : 'Unknown error';
-		await markDocumentStatus(documentId, 'failed', errorMessage);
-		await markSessionStatus(sessionId, 'failed', errorMessage);
-		throw error;
+	} finally {
+		await flushTracing();
+	}
+}
+
+/**
+ * The atomic generation step: retrieval (document/web) + streamed LLM
+ * generation + batched insert into the questions table. Cannot be resumed
+ * mid-stream, so it re-runs in full on retry — the insert is idempotent via
+ * onConflictDoNothing on [setId, order].
+ */
+export async function runGeneration(job: DocumentJob): Promise<void> {
+	initTracing();
+	try {
+		if (job.type === 'RESEARCH_WEB') {
+			await generateQuestionsInBackground(job.sessionId, job.sessionId, {
+				...job.config,
+				topic: job.query || job.config.topic,
+				source: 'web',
+			});
+		} else {
+			await generateQuestionsInBackground(job.sessionId, job.documentId, {
+				...job.config,
+				source: 'document',
+			});
+		}
+	} finally {
+		await flushTracing();
 	}
 }

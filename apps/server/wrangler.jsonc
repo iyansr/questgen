@@ -14,21 +14,13 @@
       "bucket_name": "questgen",
     },
   ],
-  "queues": {
-    "producers": [
-      {
-        "binding": "DOC_QUEUE",
-        "queue": "document-processing",
-      },
-    ],
-    "consumers": [
-      {
-        "queue": "document-processing",
-        "max_batch_size": 1,
-        "max_batch_timeout": 5,
-      },
-    ],
-  },
+  "workflows": [
+    {
+      "binding": "GENERATION_WORKFLOW",
+      "name": "questgen-generation",
+      "class_name": "GenerationWorkflow",
+    },
+  ],
   "dev": {
     "port": 3000,
   },

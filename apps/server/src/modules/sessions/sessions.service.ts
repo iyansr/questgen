@@ -4,10 +4,8 @@ import { env } from '@questgen/env/server';
 import { and, count, desc, eq, ilike, type SQL } from 'drizzle-orm';
 
 import {
-	countPdfPages,
 	MAX_FILE_SIZE_BYTES,
 	MAX_FILE_SIZE_MB,
-	MAX_PDF_PAGES,
 	MAX_WEB_QUERY_CHARS,
 	MIN_WEB_QUERY_CHARS,
 } from '@/shared/lib/upload-limits';
@@ -167,19 +165,22 @@ export async function createSession(
 		throw new SessionValidationError('Failed to create session', 500);
 	}
 
-	await env.DOC_QUEUE.send({
-		type: 'PROCESS_DOCUMENT',
-		documentId: doc.id,
-		fileKey,
-		fileType,
-		sessionId: session.id,
-		config: {
-			topic,
-			questionTypeCounts,
-			count,
-			curriculum,
-			grade,
-			classGrade,
+	await env.GENERATION_WORKFLOW.create({
+		id: session.id,
+		params: {
+			type: 'PROCESS_DOCUMENT',
+			documentId: doc.id,
+			fileKey,
+			fileType,
+			sessionId: session.id,
+			config: {
+				topic,
+				questionTypeCounts,
+				count,
+				curriculum,
+				grade,
+				classGrade,
+			},
 		},
 	});
 
@@ -243,11 +244,21 @@ async function createSessionFromWebQuery(
 	if (!session)
 		throw new SessionValidationError('Failed to create session', 500);
 
-	await env.DOC_QUEUE.send({
-		type: 'RESEARCH_WEB',
-		sessionId: session.id,
-		query: trimmed,
-		config: { topic, questionTypeCounts, count, curriculum, grade, classGrade },
+	await env.GENERATION_WORKFLOW.create({
+		id: session.id,
+		params: {
+			type: 'RESEARCH_WEB',
+			sessionId: session.id,
+			query: trimmed,
+			config: {
+				topic,
+				questionTypeCounts,
+				count,
+				curriculum,
+				grade,
+				classGrade,
+			},
+		},
 	});
 
 	return { id: session.id };
@@ -316,17 +327,20 @@ async function createSessionFromDocument(
 		throw new SessionValidationError('Failed to create session', 500);
 	}
 
-	await env.DOC_QUEUE.send({
-		type: 'GENERATE_QUESTIONS',
-		sessionId: session.id,
-		documentId: doc.id,
-		config: {
-			topic,
-			questionTypeCounts,
-			count,
-			curriculum,
-			grade,
-			classGrade,
+	await env.GENERATION_WORKFLOW.create({
+		id: session.id,
+		params: {
+			type: 'GENERATE_QUESTIONS',
+			sessionId: session.id,
+			documentId: doc.id,
+			config: {
+				topic,
+				questionTypeCounts,
+				count,
+				curriculum,
+				grade,
+				classGrade,
+			},
 		},
 	});
 

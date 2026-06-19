@@ -4,10 +4,9 @@ import z from 'zod';
 import type { ImageRef } from '@/modules/processing/chunker';
 import type { RetrievedChunkMeta } from '@/modules/processing/rag';
 import { retrieveContextWithMeta } from '@/modules/processing/rag';
-import { openai } from '@/shared/ai/openai';
+import { openrouter } from '@/shared/ai/openrouter';
 import { GENERATION_PARAMS, MODELS } from '@/shared/config/models';
 import { withRetry } from '@/shared/lib/retry';
-import { openrouter } from '@/shared/ai/openrouter';
 
 const MAX_DISTANCE = 0.6;
 const DEFAULT_TOP_K = 12;

@@ -2,11 +2,10 @@ import { generateText, stepCountIs, tool } from 'ai';
 import z from 'zod';
 
 import type { ImageRef } from '@/modules/processing/chunker';
-import { openai } from '@/shared/ai/openai';
+import { openrouter } from '@/shared/ai/openrouter';
 import { researchWeb } from '@/shared/ai/tavily';
 import { GENERATION_PARAMS, MODELS } from '@/shared/config/models';
 import { withRetry } from '@/shared/lib/retry';
-import { openrouter } from '@/shared/ai/openrouter';
 
 const MARKDOWN_LIMIT = 150_000;
 
