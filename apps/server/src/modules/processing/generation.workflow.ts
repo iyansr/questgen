@@ -5,6 +5,7 @@ import {
 	markSessionStatus,
 	runDocumentPipeline,
 	runGeneration,
+	runTitleGeneration,
 } from './document-processor';
 import {
 	WorkflowEntrypoint,
@@ -20,6 +21,11 @@ const PIPELINE_RETRIES = {
 const GENERATION_RETRIES = {
 	retries: { limit: 2, delay: '15 seconds', backoff: 'exponential' },
 	timeout: '15 minutes',
+} as const;
+
+const TITLE_RETRIES = {
+	retries: { limit: 1, delay: '5 seconds', backoff: 'exponential' },
+	timeout: '2 minutes',
 } as const;
 
 /**
@@ -48,6 +54,15 @@ export class GenerationWorkflow extends WorkflowEntrypoint<Env, DocumentJob> {
 
 			await step.do('generate-questions', GENERATION_RETRIES, () =>
 				runGeneration(job),
+			);
+
+			// Best-effort: derive a short title from the generated questions. A
+			// failure here must not fail the session — the temporary topic-based
+			// title stays in place — so swallow errors after retries.
+			await step.do('generate-title', TITLE_RETRIES, () =>
+				runTitleGeneration(job).catch((error) => {
+					console.error('Title generation failed:', error);
+				}),
 			);
 
 			await step.do('mark-completed', () =>

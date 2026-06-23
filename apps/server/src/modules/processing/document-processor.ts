@@ -7,6 +7,7 @@ import {
 	type GenerationConfig,
 	generateQuestionsInBackground,
 } from '@/modules/generation/generation.service';
+import { generateSessionTitle } from '@/modules/generation/title.service';
 import { flushTracing, initTracing } from '@/shared/lib/tracing';
 
 import { captionImages } from './captioner';
@@ -181,6 +182,29 @@ export async function runGeneration(job: DocumentJob): Promise<void> {
 				source: 'document',
 			});
 		}
+	} finally {
+		await flushTracing();
+	}
+}
+
+/**
+ * Generates a short title from the produced questions and persists it. Runs
+ * after generation completes, replacing the temporary topic-based title.
+ */
+export async function runTitleGeneration(job: DocumentJob): Promise<void> {
+	const topic =
+		job.type === 'RESEARCH_WEB'
+			? job.query || job.config.topic
+			: job.config.topic;
+
+	initTracing();
+	try {
+		await generateSessionTitle(job.sessionId, {
+			topic,
+			curriculum: job.config.curriculum,
+			grade: job.config.grade,
+			classGrade: job.config.classGrade,
+		});
 	} finally {
 		await flushTracing();
 	}

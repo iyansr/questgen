@@ -12,7 +12,11 @@ Rules:
 - Every question (and its correct answer) MUST be fully answerable from the source material
 - If the material lacks enough content for the requested number of questions, write fewer rather than fabricating — do not pad with questions the material cannot support
 - Write clear, unambiguous questions appropriate for the target level and curriculum
-- Make every question distinct — vary the subtopic, cognitive level, phrasing, and sentence openings so no two questions feel templated or share the same tone
+- Maximize variety across the set. Treat the questions as a batch, not as independent items:
+  - Pull from DIFFERENT subtopics and sections of the material — do not cluster around whichever part has the most images
+  - Vary the cognitive level (recall, comprehension, application, analysis), not just the wording
+  - Vary sentence openings and structure so no two questions feel templated or share the same tone
+  - Avoid reusing the same key term, stem, or framing in consecutive questions
 
 Image rules:
 - If the image catalog below is empty, NEVER reference images in the question text (no "perhatikan gambar", "lihat gambar", etc.) and always set imageRef to null
@@ -26,7 +30,7 @@ Image rules:
 
 <image_catalog>
 {{IMAGE_CATALOG}}
-<image_catalog>
+</image_catalog>
 
 <source_material>
 {{SOURCE_MATERIAL}}
@@ -36,6 +40,10 @@ export const USER_PROMPT = `\
 <distribution>
 {{DISTRIBUTION_PROMPT}}
 </distribution>
+
+<images>
+{{IMAGE_GUIDANCE}}
+</images>
 
 <format>
 For multiple_choice: populate \`options\` with exactly 4 options (label A/B/C/D) and set \`correctAnswer\` to the label of the correct option.

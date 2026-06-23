@@ -49,7 +49,7 @@ function buildGeneratedQuestionSchema(allowedTypes: QuestionType[]) {
 			.string()
 			.nullable()
 			.describe(
-				'ID of an available image that illustrates the question, or null',
+				'Usually null. Only set to an image ID when the question CANNOT be answered without examining that image. Most questions must be text-based, so the default is null.',
 			),
 		options: z
 			.array(questionOptionSchema)
@@ -144,6 +144,37 @@ function buildDistributionPrompt(counts: QuestionTypeCount[]): string {
 		lines,
 		`Every question MUST be assigned one of the allowed types: ${counts.map((q) => q.type).join(', ')}.`,
 	].join('\n');
+}
+
+/**
+ * Caps how many questions in the set may attach an image. Most questions
+ * should be text-based even when the material is image-dense, so the budget
+ * is a small fraction of the total, bounded by the images actually available.
+ */
+function buildImageGuidance(
+	counts: QuestionTypeCount[],
+	availableImages: number,
+): string {
+	const total = counts.reduce((s, q) => s + q.count, 0);
+
+	if (availableImages === 0) {
+		return 'No images are available. Set imageRef to null for EVERY question and never reference images in the question text.';
+	}
+
+	const maxImageQuestions = Math.min(
+		availableImages,
+		Math.max(1, Math.round(total * 0.3)),
+	);
+
+	return [
+		`Image budget: AT MOST ${maxImageQuestions} of the ${total} questions may attach an image (set imageRef). The remaining ${total - maxImageQuestions} or more MUST set imageRef to null.`,
+		'Default to imageRef = null. Only spend an image on a question that genuinely cannot be answered without looking at the diagram/chart/map — not on questions that text alone can test.',
+		availableImages > 1
+			? 'When you do use images, spread them across DIFFERENT images and vary the lead-in phrasing.'
+			: '',
+	]
+		.filter(Boolean)
+		.join('\n');
 }
 
 function buildWebTrace(
@@ -262,6 +293,10 @@ export async function generateQuestionsInBackground(
 
 	const content = interpolate(USER_PROMPT, {
 		DISTRIBUTION_PROMPT: buildDistributionPrompt(config.questionTypeCounts),
+		IMAGE_GUIDANCE: buildImageGuidance(
+			config.questionTypeCounts,
+			imageCatalog.size,
+		),
 	});
 
 	const allowedTypes = Array.from(

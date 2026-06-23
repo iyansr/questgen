@@ -147,7 +147,7 @@ export async function createSession(
 		.values({
 			userId,
 			documentId: doc.id,
-			title: `${topic} — ${file.name}`,
+			title: topic,
 			status: 'pending',
 			config: {
 				topic,
@@ -227,7 +227,7 @@ async function createSessionFromWebQuery(
 		.values({
 			userId,
 			documentId: null,
-			title: `${topic} — ${trimmed}`,
+			title: topic,
 			status: 'pending',
 			config: {
 				topic,
@@ -310,7 +310,7 @@ async function createSessionFromDocument(
 		.values({
 			userId,
 			documentId: doc.id,
-			title: `${topic} — ${doc.filename}`,
+			title: topic,
 			status: 'pending',
 			config: {
 				topic,
