@@ -8,95 +8,95 @@ import { applyStagedEdit, QuestionCard } from './question-card';
 import { SaveBar } from './save-bar';
 
 type QuestionListProps = {
-	questions: StreamedQuestion[];
-	status: 'pending' | 'generating' | 'completed' | 'failed';
-	isStreaming: boolean;
-	expectedCount: number | null;
-	edits: Record<string, StagedEdit>;
-	isSaving: boolean;
-	onEdit: (question: StreamedQuestion) => void;
-	onSave: () => void;
-	onDiscard: () => void;
+  questions: StreamedQuestion[];
+  status: 'pending' | 'generating' | 'completed' | 'failed';
+  isStreaming: boolean;
+  expectedCount: number | null;
+  edits: Record<string, StagedEdit>;
+  isSaving: boolean;
+  onEdit: (question: StreamedQuestion) => void;
+  onSave: () => void;
+  onDiscard: () => void;
 };
 
 export function QuestionList({
-	questions,
-	status,
-	isStreaming,
-	expectedCount,
-	edits,
-	isSaving,
-	onEdit,
-	onSave,
-	onDiscard,
+  questions,
+  status,
+  isStreaming,
+  expectedCount,
+  edits,
+  isSaving,
+  onEdit,
+  onSave,
+  onDiscard,
 }: QuestionListProps) {
-	const showStreamingFooter =
-		isStreaming && (status === 'pending' || status === 'generating');
-	const dirtyCount = Object.keys(edits).length;
+  const showStreamingFooter =
+    isStreaming && (status === 'pending' || status === 'generating');
+  const dirtyCount = Object.keys(edits).length;
 
-	return (
-		<section className="space-y-5" aria-label="Daftar soal">
-			<header className="flex flex-wrap items-baseline justify-between gap-2">
-				<div>
-					<h2 className="font-serif text-2xl tracking-tight">Soal</h2>
-					<p className="text-base text-muted-foreground">
-						Setiap soal muncul di sini begitu AI selesai membuatnya.
-					</p>
-				</div>
-				{expectedCount !== null && (
-					<p
-						className="text-muted-foreground text-sm tabular-nums"
-						aria-live="polite"
-						aria-atomic
-					>
-						<span className="font-semibold text-foreground">
-							{questions.length}
-						</span>
-						<span className="mx-1">/</span>
-						<span>{expectedCount}</span>
-					</p>
-				)}
-			</header>
+  return (
+    <section className="space-y-5" aria-label="Daftar soal">
+      <header className="flex flex-wrap items-baseline justify-between gap-2">
+        <div>
+          <h2 className="font-serif text-2xl tracking-tight">Soal</h2>
+          <p className="text-base text-muted-foreground">
+            Setiap soal muncul di sini begitu AI selesai membuatnya.
+          </p>
+        </div>
+        {expectedCount !== null && (
+          <p
+            className="text-muted-foreground text-sm tabular-nums"
+            aria-live="polite"
+            aria-atomic
+          >
+            <span className="font-semibold text-foreground">
+              {questions.length}
+            </span>
+            <span className="mx-1">/</span>
+            <span>{expectedCount}</span>
+          </p>
+        )}
+      </header>
 
-			<SaveBar
-				dirtyCount={dirtyCount}
-				isSaving={isSaving}
-				pendingImages={Object.values(edits).filter((e) => e.image?.file).length}
-				onSave={onSave}
-				onDiscard={onDiscard}
-			/>
+      <SaveBar
+        dirtyCount={dirtyCount}
+        isSaving={isSaving}
+        pendingImages={Object.values(edits).filter((e) => e.image?.file).length}
+        onSave={onSave}
+        onDiscard={onDiscard}
+      />
 
-			{questions.length === 0 ? (
-				<EmptyQuestions status={status} />
-			) : (
-				<ol className="space-y-5">
-					{questions.map((question, i) => {
-						const edit = edits[question.id];
-						const rendered = applyStagedEdit(question, edit);
-						return (
-							<li key={question.id}>
-								<QuestionCard
-									question={rendered}
-									index={i}
-									isDirty={Boolean(edit)}
-									onEdit={() => onEdit(question)}
-								/>
-							</li>
-						);
-					})}
-				</ol>
-			)}
+      {questions.length === 0 ? (
+        <EmptyQuestions status={status} />
+      ) : (
+        <ol className="space-y-5">
+          {questions.map((question, i) => {
+            const edit = edits[question.id];
+            const rendered = applyStagedEdit(question, edit);
+            return (
+              <li key={question.id}>
+                <QuestionCard
+                  question={rendered}
+                  index={i}
+                  isDirty={Boolean(edit)}
+                  onEdit={() => onEdit(question)}
+                />
+              </li>
+            );
+          })}
+        </ol>
+      )}
 
-			{showStreamingFooter && questions.length > 0 && (
-				<div
-					className="flex items-center gap-2 border border-border border-dashed px-4 py-3 text-muted-foreground text-sm"
-					role="status"
-					aria-live="polite"
-				>
-					<Spinner className="size-4 animate-spin" weight="bold" aria-hidden />
-					<span>Soal berikutnya sedang dibuat…</span>
-				</div>
-			)}
-		</section>
-	);
+      {showStreamingFooter && questions.length > 0 && (
+        <div
+          className="flex items-center gap-2 border border-border border-dashed px-4 py-3 text-muted-foreground text-sm"
+          role="status"
+          aria-live="polite"
+        >
+          <Spinner className="size-4 animate-spin" weight="bold" aria-hidden />
+          <span>Soal berikutnya sedang dibuat…</span>
+        </div>
+      )}
+    </section>
+  );
 }

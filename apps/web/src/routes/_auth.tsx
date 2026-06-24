@@ -4,19 +4,19 @@ import { DashboardLayout } from '@/modules/dashboard/dashboard-layout';
 import { useAuthStore } from '@/store/auth';
 
 export const Route = createFileRoute('/_auth')({
-	beforeLoad: () => {
-		const isAuthenticated = useAuthStore.getState().isAuthenticated;
-		if (!isAuthenticated) {
-			throw redirect({ to: '/login' });
-		}
-	},
-	component: AuthLayoutComponent,
+  beforeLoad: () => {
+    const isAuthenticated = useAuthStore.getState().isAuthenticated;
+    if (!isAuthenticated) {
+      throw redirect({ to: '/login' });
+    }
+  },
+  component: AuthLayoutComponent,
 });
 
 function AuthLayoutComponent() {
-	return (
-		<DashboardLayout>
-			<Outlet />
-		</DashboardLayout>
-	);
+  return (
+    <DashboardLayout>
+      <Outlet />
+    </DashboardLayout>
+  );
 }

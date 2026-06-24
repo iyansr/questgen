@@ -19,15 +19,15 @@ const app = new Hono<AppEnv>();
 app.use(tracingMiddleware);
 app.use(logger());
 app.use(
-	'/*',
-	cors({
-		origin: env.CORS_ORIGIN,
-		allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
-	}),
+  '/*',
+  cors({
+    origin: env.CORS_ORIGIN,
+    allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+  }),
 );
 
 app.get('/', (c) => {
-	return c.text('OK');
+  return c.text('OK');
 });
 
 app.route('/files', files);
@@ -40,5 +40,5 @@ app.route('/api/sessions', sessions);
 app.route('/api/documents', documents);
 
 export default {
-	fetch: app.fetch,
+  fetch: app.fetch,
 };

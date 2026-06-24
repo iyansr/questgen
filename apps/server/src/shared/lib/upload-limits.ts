@@ -9,7 +9,7 @@ export const MAX_WEB_RESULTS = 3;
 export const MAX_WEB_IMAGES = 12;
 
 export function countPdfPages(bytes: ArrayBuffer): number {
-	const text = new TextDecoder('latin1').decode(bytes);
-	const matches = text.match(/\/Type\s*\/Page(?![a-zA-Z])/g);
-	return matches ? matches.length : 0;
+  const text = new TextDecoder('latin1').decode(bytes);
+  const matches = text.match(/\/Type\s*\/Page(?![a-zA-Z])/g);
+  return matches ? matches.length : 0;
 }

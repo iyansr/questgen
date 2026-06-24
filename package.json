@@ -1,49 +1,49 @@
 {
-	"name": "questgen",
-	"private": true,
-	"workspaces": {
-		"packages": [
-			"apps/*",
-			"packages/*"
-		],
-		"catalog": {
-			"dotenv": "^17.2.2",
-			"zod": "^4.1.13",
-			"typescript": "^6",
-			"@types/node": "^22.13.14",
-			"@cloudflare/workers-types": "^4.20251213.0",
-			"next-themes": "^0.4.6",
-			"react": "^19.2.6",
-			"react-dom": "^19.2.6",
-			"@types/react": "^19.2.15",
-			"@types/react-dom": "^19.2.3"
-		}
-	},
-	"type": "module",
-	"scripts": {
-		"dev": "pnpm --filter server --filter web --parallel dev",
-		"build": "pnpm -r build",
-		"check-types": "pnpm -r check-types",
-		"dev:web": "pnpm --filter web dev",
-		"dev:server": "pnpm --filter server dev",
-		"db:push": "pnpm --filter @questgen/db db:push",
-		"db:studio": "pnpm --filter @questgen/db db:studio",
-		"db:generate": "pnpm --filter @questgen/db db:generate",
-		"db:migrate": "pnpm --filter @questgen/db db:migrate",
-		"deploy": "pnpm --filter server deploy",
-		"check": "biome check --write ."
-	},
-	"dependencies": {
-		"@questgen/env": "workspace:*",
-		"dotenv": "catalog:",
-		"zod": "catalog:"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^2.2.0",
-		"@cloudflare/workers-types": "catalog:",
-		"@questgen/config": "workspace:*",
-		"@types/node": "catalog:",
-		"typescript": "catalog:"
-	},
-	"packageManager": "pnpm@10.24.0"
+  "name": "questgen",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "catalog": {
+      "dotenv": "^17.2.2",
+      "zod": "^4.1.13",
+      "typescript": "^6",
+      "@types/node": "^22.13.14",
+      "@cloudflare/workers-types": "^4.20251213.0",
+      "next-themes": "^0.4.6",
+      "react": "^19.2.6",
+      "react-dom": "^19.2.6",
+      "@types/react": "^19.2.15",
+      "@types/react-dom": "^19.2.3"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter server --filter web --parallel dev",
+    "build": "pnpm -r build",
+    "check-types": "pnpm -r check-types",
+    "dev:web": "pnpm --filter web dev",
+    "dev:server": "pnpm --filter server dev",
+    "db:push": "pnpm --filter @questgen/db db:push",
+    "db:studio": "pnpm --filter @questgen/db db:studio",
+    "db:generate": "pnpm --filter @questgen/db db:generate",
+    "db:migrate": "pnpm --filter @questgen/db db:migrate",
+    "deploy": "pnpm --filter server deploy",
+    "check": "biome check --write ."
+  },
+  "dependencies": {
+    "@questgen/env": "workspace:*",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.0",
+    "@cloudflare/workers-types": "catalog:",
+    "@questgen/config": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
+  },
+  "packageManager": "pnpm@10.24.0"
 }

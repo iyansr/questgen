@@ -10,69 +10,69 @@ import { withRetry } from '@/shared/lib/retry';
 const MARKDOWN_LIMIT = 150_000;
 
 export type WebSearchResult = {
-	sourceMaterial: string;
-	imageRefs: ImageRef[];
+  sourceMaterial: string;
+  imageRefs: ImageRef[];
 };
 
 export async function webSearch({
-	topic,
-	sessionId,
-	grade,
-	classGrade,
-	curriculum,
+  topic,
+  sessionId,
+  grade,
+  classGrade,
+  curriculum,
 }: {
-	topic: string;
-	sessionId: string;
-	curriculum: string;
-	grade: string;
-	classGrade: string;
+  topic: string;
+  sessionId: string;
+  curriculum: string;
+  grade: string;
+  classGrade: string;
 }): Promise<WebSearchResult> {
-	const allImageRefs = new Map<string, ImageRef>();
-	const { text } = await generateText({
-		model: openrouter(MODELS.RESEARCH),
-		temperature: GENERATION_PARAMS.RESEARCH.temperature,
-		topP: GENERATION_PARAMS.RESEARCH.topP,
-		tools: {
-			searchWeb: tool({
-				description:
-					'Search the web for detailed information about a specific aspect of a topic. Returns comprehensive markdown content from multiple sources.',
-				inputSchema: z.object({
-					query: z
-						.string()
-						.describe(
-							'A focused search query targeting a specific aspect of the topic',
-						),
-				}),
-				execute: async ({ query }) => {
-					const result = await withRetry(() => researchWeb(query, sessionId));
+  const allImageRefs = new Map<string, ImageRef>();
+  const { text } = await generateText({
+    model: openrouter(MODELS.RESEARCH),
+    temperature: GENERATION_PARAMS.RESEARCH.temperature,
+    topP: GENERATION_PARAMS.RESEARCH.topP,
+    tools: {
+      searchWeb: tool({
+        description:
+          'Search the web for detailed information about a specific aspect of a topic. Returns comprehensive markdown content from multiple sources.',
+        inputSchema: z.object({
+          query: z
+            .string()
+            .describe(
+              'A focused search query targeting a specific aspect of the topic',
+            ),
+        }),
+        execute: async ({ query }) => {
+          const result = await withRetry(() => researchWeb(query, sessionId));
 
-					for (const ref of result.images) {
-						if (!allImageRefs.has(ref.id)) allImageRefs.set(ref.id, ref);
-					}
+          for (const ref of result.images) {
+            if (!allImageRefs.has(ref.id)) allImageRefs.set(ref.id, ref);
+          }
 
-					const truncated = result.markdown.length > MARKDOWN_LIMIT;
-					if (truncated) {
-						console.warn(
-							`Web research truncated: ${result.markdown.length} > ${MARKDOWN_LIMIT}`,
-						);
-					}
-					const markdown = truncated
-						? result.markdown.slice(0, MARKDOWN_LIMIT)
-						: result.markdown;
+          const truncated = result.markdown.length > MARKDOWN_LIMIT;
+          if (truncated) {
+            console.warn(
+              `Web research truncated: ${result.markdown.length} > ${MARKDOWN_LIMIT}`,
+            );
+          }
+          const markdown = truncated
+            ? result.markdown.slice(0, MARKDOWN_LIMIT)
+            : result.markdown;
 
-					return {
-						markdown,
-						sourceCount: result.sections.length,
-						images: result.images.map((ref) => ({
-							id: ref.id,
-							caption: ref.caption,
-						})),
-					};
-				},
-			}),
-		},
-		stopWhen: stepCountIs(3),
-		system: `\
+          return {
+            markdown,
+            sourceCount: result.sections.length,
+            images: result.images.map((ref) => ({
+              id: ref.id,
+              caption: ref.caption,
+            })),
+          };
+        },
+      }),
+    },
+    stopWhen: stepCountIs(3),
+    system: `\
 You are a thorough research assistant compiling detailed reference material for question generation.
 
 <instruction>
@@ -120,16 +120,16 @@ When the searchWeb tool returns images, you MUST include them inline in your doc
 </format>
 
 Output ONLY the compiled markdown research document. Do not include preamble.`,
-		prompt: `Research the topic "${topic}" in detail. Search multiple aspects thoroughly, then compile all findings into a single comprehensive markdown document.`,
-		experimental_telemetry: {
-			isEnabled: true,
-			functionId: 'web-research',
-			metadata: { sessionId, topic },
-		},
-	});
+    prompt: `Research the topic "${topic}" in detail. Search multiple aspects thoroughly, then compile all findings into a single comprehensive markdown document.`,
+    experimental_telemetry: {
+      isEnabled: true,
+      functionId: 'web-research',
+      metadata: { sessionId, topic },
+    },
+  });
 
-	return {
-		sourceMaterial: text,
-		imageRefs: Array.from(allImageRefs.values()),
-	};
+  return {
+    sourceMaterial: text,
+    imageRefs: Array.from(allImageRefs.values()),
+  };
 }

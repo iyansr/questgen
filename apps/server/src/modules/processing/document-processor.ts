@@ -4,8 +4,8 @@ import { env } from '@questgen/env/server';
 import { eq } from 'drizzle-orm';
 
 import {
-	type GenerationConfig,
-	generateQuestionsInBackground,
+  type GenerationConfig,
+  generateQuestionsInBackground,
 } from '@/modules/generation/generation.service';
 import { generateSessionTitle } from '@/modules/generation/title.service';
 import { flushTracing, initTracing } from '@/shared/lib/tracing';
@@ -26,55 +26,55 @@ import { NonRetryableError } from 'cloudflare:workflows';
 type JobConfig = Omit<GenerationConfig, 'source'> & { count?: number };
 
 type ProcessDocumentJob = {
-	type: 'PROCESS_DOCUMENT';
-	documentId: string;
-	fileKey: string;
-	fileType: 'pdf' | 'docx';
-	sessionId: string;
-	config: JobConfig;
+  type: 'PROCESS_DOCUMENT';
+  documentId: string;
+  fileKey: string;
+  fileType: 'pdf' | 'docx';
+  sessionId: string;
+  config: JobConfig;
 };
 
 type GenerateQuestionsJob = {
-	type: 'GENERATE_QUESTIONS';
-	sessionId: string;
-	documentId: string;
-	config: JobConfig;
+  type: 'GENERATE_QUESTIONS';
+  sessionId: string;
+  documentId: string;
+  config: JobConfig;
 };
 
 type ResearchWebJob = {
-	type: 'RESEARCH_WEB';
-	sessionId: string;
-	query: string;
-	config: JobConfig;
+  type: 'RESEARCH_WEB';
+  sessionId: string;
+  query: string;
+  config: JobConfig;
 };
 
 export type DocumentJob =
-	| ProcessDocumentJob
-	| GenerateQuestionsJob
-	| ResearchWebJob;
+  | ProcessDocumentJob
+  | GenerateQuestionsJob
+  | ResearchWebJob;
 
 export async function markSessionStatus(
-	sessionId: string,
-	status: 'generating' | 'completed' | 'failed',
-	errorMessage?: string,
+  sessionId: string,
+  status: 'generating' | 'completed' | 'failed',
+  errorMessage?: string,
 ): Promise<void> {
-	const db = createDb();
-	await db
-		.update(questionSets)
-		.set({ status, errorMessage, updatedAt: new Date() })
-		.where(eq(questionSets.id, sessionId));
+  const db = createDb();
+  await db
+    .update(questionSets)
+    .set({ status, errorMessage, updatedAt: new Date() })
+    .where(eq(questionSets.id, sessionId));
 }
 
 export async function markDocumentStatus(
-	documentId: string,
-	status: 'ready' | 'failed',
-	errorMessage?: string,
+  documentId: string,
+  status: 'ready' | 'failed',
+  errorMessage?: string,
 ): Promise<void> {
-	const db = createDb();
-	await db
-		.update(documents)
-		.set({ status, errorMessage, updatedAt: new Date() })
-		.where(eq(documents.id, documentId));
+  const db = createDb();
+  await db
+    .update(documents)
+    .set({ status, errorMessage, updatedAt: new Date() })
+    .where(eq(documents.id, documentId));
 }
 
 /**
@@ -83,21 +83,21 @@ export async function markDocumentStatus(
  * permanent condition — retrying the step would never succeed.
  */
 export async function assertDocumentReady(documentId: string): Promise<void> {
-	const db = createDb();
-	const [doc] = await db
-		.select({ id: documents.id, status: documents.status })
-		.from(documents)
-		.where(eq(documents.id, documentId))
-		.limit(1);
+  const db = createDb();
+  const [doc] = await db
+    .select({ id: documents.id, status: documents.status })
+    .from(documents)
+    .where(eq(documents.id, documentId))
+    .limit(1);
 
-	if (!doc) {
-		throw new NonRetryableError(`Document not found: ${documentId}`);
-	}
-	if (doc.status !== 'ready') {
-		throw new NonRetryableError(
-			`Document is not ready: ${documentId} (${doc.status})`,
-		);
-	}
+  if (!doc) {
+    throw new NonRetryableError(`Document not found: ${documentId}`);
+  }
+  if (doc.status !== 'ready') {
+    throw new NonRetryableError(
+      `Document is not ready: ${documentId} (${doc.status})`,
+    );
+  }
 }
 
 /**
@@ -107,58 +107,58 @@ export async function assertDocumentReady(documentId: string): Promise<void> {
  * on success. Generation runs as a separate step afterwards.
  */
 export async function runDocumentPipeline(
-	job: ProcessDocumentJob,
+  job: ProcessDocumentJob,
 ): Promise<void> {
-	const { documentId, fileKey } = job;
+  const { documentId, fileKey } = job;
 
-	initTracing();
-	try {
-		const file = await env.DOCUMENTS_BUCKET.get(fileKey);
-		if (!file) {
-			throw new Error(`File not found in R2: ${fileKey}`);
-		}
+  initTracing();
+  try {
+    const file = await env.DOCUMENTS_BUCKET.get(fileKey);
+    if (!file) {
+      throw new Error(`File not found in R2: ${fileKey}`);
+    }
 
-		const fileBytes = await file.arrayBuffer();
-		const filename = fileKey.split('/').pop() ?? fileKey;
+    const fileBytes = await file.arrayBuffer();
+    const filename = fileKey.split('/').pop() ?? fileKey;
 
-		const ocrResult = await ocrProcess(fileBytes, filename);
+    const ocrResult = await ocrProcess(fileBytes, filename);
 
-		const uploadedImages = await Promise.all(
-			ocrResult.images.map((img) =>
-				uploadImageToR2(documentId, img.id, img.base64),
-			),
-		);
+    const uploadedImages = await Promise.all(
+      ocrResult.images.map((img) =>
+        uploadImageToR2(documentId, img.id, img.base64),
+      ),
+    );
 
-		const captions = await captionImages(
-			ocrResult.images.map((img) => ({ id: img.id, base64: img.base64 })),
-		);
+    const captions = await captionImages(
+      ocrResult.images.map((img) => ({ id: img.id, base64: img.base64 })),
+    );
 
-		const chunkerImages = uploadedImages.map((img, i) => ({
-			id: img.id,
-			r2Url: img.publicUrl,
-			caption: captions.get(img.id) ?? '',
-			pageIndex: ocrResult.images[i]?.pageIndex ?? 0,
-		}));
-		const chunks = await chunkText(ocrResult.markdown, chunkerImages);
+    const chunkerImages = uploadedImages.map((img, i) => ({
+      id: img.id,
+      r2Url: img.publicUrl,
+      caption: captions.get(img.id) ?? '',
+      pageIndex: ocrResult.images[i]?.pageIndex ?? 0,
+    }));
+    const chunks = await chunkText(ocrResult.markdown, chunkerImages);
 
-		const embeddings = await embedTexts(chunks.map((c) => c.text));
+    const embeddings = await embedTexts(chunks.map((c) => c.text));
 
-		const collection = await getOrCreateCollection();
-		await collection.upsert({
-			ids: chunks.map((c) => `${documentId}-${c.index}`),
-			embeddings,
-			documents: chunks.map((c) => c.text),
-			metadatas: chunks.map((c) => ({
-				scopeId: documentId,
-				chunkIndex: c.index,
-				imageRefs: JSON.stringify(c.imageRefs),
-			})),
-		});
+    const collection = await getOrCreateCollection();
+    await collection.upsert({
+      ids: chunks.map((c) => `${documentId}-${c.index}`),
+      embeddings,
+      documents: chunks.map((c) => c.text),
+      metadatas: chunks.map((c) => ({
+        scopeId: documentId,
+        chunkIndex: c.index,
+        imageRefs: JSON.stringify(c.imageRefs),
+      })),
+    });
 
-		await markDocumentStatus(documentId, 'ready');
-	} finally {
-		await flushTracing();
-	}
+    await markDocumentStatus(documentId, 'ready');
+  } finally {
+    await flushTracing();
+  }
 }
 
 /**
@@ -168,23 +168,23 @@ export async function runDocumentPipeline(
  * onConflictDoNothing on [setId, order].
  */
 export async function runGeneration(job: DocumentJob): Promise<void> {
-	initTracing();
-	try {
-		if (job.type === 'RESEARCH_WEB') {
-			await generateQuestionsInBackground(job.sessionId, job.sessionId, {
-				...job.config,
-				topic: job.query || job.config.topic,
-				source: 'web',
-			});
-		} else {
-			await generateQuestionsInBackground(job.sessionId, job.documentId, {
-				...job.config,
-				source: 'document',
-			});
-		}
-	} finally {
-		await flushTracing();
-	}
+  initTracing();
+  try {
+    if (job.type === 'RESEARCH_WEB') {
+      await generateQuestionsInBackground(job.sessionId, job.sessionId, {
+        ...job.config,
+        topic: job.query || job.config.topic,
+        source: 'web',
+      });
+    } else {
+      await generateQuestionsInBackground(job.sessionId, job.documentId, {
+        ...job.config,
+        source: 'document',
+      });
+    }
+  } finally {
+    await flushTracing();
+  }
 }
 
 /**
@@ -192,20 +192,20 @@ export async function runGeneration(job: DocumentJob): Promise<void> {
  * after generation completes, replacing the temporary topic-based title.
  */
 export async function runTitleGeneration(job: DocumentJob): Promise<void> {
-	const topic =
-		job.type === 'RESEARCH_WEB'
-			? job.query || job.config.topic
-			: job.config.topic;
+  const topic =
+    job.type === 'RESEARCH_WEB'
+      ? job.query || job.config.topic
+      : job.config.topic;
 
-	initTracing();
-	try {
-		await generateSessionTitle(job.sessionId, {
-			topic,
-			curriculum: job.config.curriculum,
-			grade: job.config.grade,
-			classGrade: job.config.classGrade,
-		});
-	} finally {
-		await flushTracing();
-	}
+  initTracing();
+  try {
+    await generateSessionTitle(job.sessionId, {
+      topic,
+      curriculum: job.config.curriculum,
+      grade: job.config.grade,
+      classGrade: job.config.classGrade,
+    });
+  } finally {
+    await flushTracing();
+  }
 }

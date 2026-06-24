@@ -1,43 +1,43 @@
 {
-	"name": "server",
-	"type": "module",
-	"main": "src/index.ts",
-	"scripts": {
-		"dev": "wrangler dev",
-		"deploy": "wrangler deploy",
-		"cf-typegen": "wrangler types",
-		"check-types": "tsc --noEmit"
-	},
-	"dependencies": {
-		"@ai-sdk/openai": "^3.0.71",
-		"@ai-sdk/openai-compatible": "^2.0.50",
-		"@chroma-core/default-embed": "^0.1.9",
-		"@hono/zod-validator": "^0.8.0",
-		"@langchain/core": "^1.1.48",
-		"@langchain/textsplitters": "^1.0.1",
-		"@langfuse/otel": "^5.4.1",
-		"@mistralai/mistralai": "^2.2.5",
-		"@openrouter/ai-sdk-provider": "^2.9.0",
-		"@opentelemetry/api": "^1.9.1",
-		"@opentelemetry/sdk-node": "^0.218.0",
-		"@opentelemetry/sdk-trace-base": "^2.7.1",
-		"@questgen/db": "workspace:*",
-		"@questgen/env": "workspace:*",
-		"@tavily/core": "^0.7.5",
-		"ai": "^6.0.195",
-		"bcryptjs": "^3.0.3",
-		"chromadb": "^3.4.3",
-		"dotenv": "catalog:",
-		"drizzle-orm": "^0.45.2",
-		"hono": "^4.8.2",
-		"zod": "catalog:"
-	},
-	"devDependencies": {
-		"@cloudflare/workers-types": "catalog:",
-		"@questgen/config": "workspace:*",
-		"@types/bcryptjs": "^3.0.0",
-		"@types/node": "catalog:",
-		"typescript": "catalog:",
-		"wrangler": "^4.77.0"
-	}
+  "name": "server",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "cf-typegen": "wrangler types",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^3.0.71",
+    "@ai-sdk/openai-compatible": "^2.0.50",
+    "@chroma-core/default-embed": "^0.1.9",
+    "@hono/zod-validator": "^0.8.0",
+    "@langchain/core": "^1.1.48",
+    "@langchain/textsplitters": "^1.0.1",
+    "@langfuse/otel": "^5.4.1",
+    "@mistralai/mistralai": "^2.2.5",
+    "@openrouter/ai-sdk-provider": "^2.9.0",
+    "@opentelemetry/api": "^1.9.1",
+    "@opentelemetry/sdk-node": "^0.218.0",
+    "@opentelemetry/sdk-trace-base": "^2.7.1",
+    "@questgen/db": "workspace:*",
+    "@questgen/env": "workspace:*",
+    "@tavily/core": "^0.7.5",
+    "ai": "^6.0.195",
+    "bcryptjs": "^3.0.3",
+    "chromadb": "^3.4.3",
+    "dotenv": "catalog:",
+    "drizzle-orm": "^0.45.2",
+    "hono": "^4.8.2",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "catalog:",
+    "@questgen/config": "workspace:*",
+    "@types/bcryptjs": "^3.0.0",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "wrangler": "^4.77.0"
+  }
 }
