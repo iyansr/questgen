@@ -5,7 +5,7 @@
 - Repository root: `/Users/iyansr/IyanSR/Project/Skripsi/questgen`
 - Standard startup path: `./init.sh`
 - Standard verification path: `pnpm --filter web check-types`
-- Current highest-priority unfinished feature: none (WYSIWYG editor for edit-question dialog complete)
+- Current highest-priority unfinished feature: none (PDF export for session questions complete)
 - Current blocker: none
 
 ## Session Log
@@ -78,3 +78,31 @@
 - Files or artifacts updated: `package.json`, `rich-text-editor-field.tsx`, `rich-text-editor-inner.tsx`, `rich-text-editor.css`, `insert-math-button.tsx`, `edit-question-dialog.tsx`, `progress.md`.
 - Known risk or unresolved issue: math shows as `$...$` text in editor (card renders KaTeX); manual browser smoke not run.
 - Next best step: smoke test bold/lists/math button + staged re-edit in browser.
+
+### Session 005
+
+- Date: 2026-06-24
+- Goal: Export questions to PDF (Indonesia lembar soal siswa) on Cloudflare Worker with preview-before-download.
+- Completed:
+  - Server export module: `POST /api/sessions/:id/export/pdf` with Zod-validated metadata (sekolah, mata pelajaran, kelas, kurikulum, tahun pelajaran, waktu, tanggal, petunjuk).
+  - PDF built on Worker via `pdf-lib` + `remark`/`katex` (A4 Times Roman, header/petunjuk/soal bernomor, opsi A–D, nomor halaman; tanpa kunci jawaban).
+  - Question images embedded from R2 when available.
+  - Web: `ExportPdfButton` on session header (completed sessions only), `ExportPdfDialog` with form → Pratinjau (iframe blob) → Unduh.
+  - Warns when unsaved staged edits exist.
+- Verification run: `pnpm --filter server check-types` → pass; `pnpm --filter web check-types` → vite build + tsc pass.
+- Evidence captured: both typecheck commands exit 0.
+- Commits: none yet.
+- Files or artifacts updated: `apps/server/src/modules/export/*`, `apps/server/src/index.ts`, `apps/server/package.json`, `export-pdf-button.tsx`, `export-pdf-schema.ts`, `export-pdf.ts`, `session-header.tsx`, `session-detail-page.tsx`, `progress.md`.
+- Known risk or unresolved issue: manual browser smoke (preview iframe + download) not run; complex LaTeX in PDF renders as ASCII plain-text math (not full KaTeX typesetting).
+- Next best step: open completed session → Ekspor PDF → pratinjau + unduh in browser against `wrangler dev`.
+
+### Session 005b
+
+- Date: 2026-06-24
+- Goal: PDF export UX + layout feedback.
+- Completed:
+  - Preview moved to separate `ExportPdfPreviewDialog`.
+  - **Unduh PDF** works directly from form (no preview required); only disabled while generating.
+  - Simplified lembar soal layout: ULANGAN HARIAN, subtitle (mapel · kelas · semester), dotted Nama/Kelas/Tanggal fields, soal inline, opsi a–d lowercase, footer `A4 | n dari total | Kop Sekolah`.
+  - Export form trimmed to: nama sekolah, mata pelajaran, kelas, semester.
+- Verification run: `pnpm --filter server check-types` + `pnpm --filter web check-types` → pass.

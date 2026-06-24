@@ -4,7 +4,6 @@ import { cn } from '@questgen/ui/lib/utils';
 import { useState } from 'react';
 
 import { QuestionMarkdown } from '@/components/question-markdown';
-
 import {
   QUESTION_TYPE_LABELS,
   type QuestionType,
@@ -121,7 +120,9 @@ export function QuestionCard({
           />
         )}
 
-        <QuestionMarkdown className="text-lg">{question.questionText}</QuestionMarkdown>
+        <QuestionMarkdown className="text-lg">
+          {question.questionText}
+        </QuestionMarkdown>
 
         {showOptions && question.options && question.options.length > 0 && (
           <ol className="space-y-2" aria-label="Pilihan jawaban">

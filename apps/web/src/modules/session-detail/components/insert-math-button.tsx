@@ -1,7 +1,4 @@
-import {
-  ButtonWithTooltip,
-  type MDXEditorMethods,
-} from '@mdxeditor/editor';
+import { ButtonWithTooltip, type MDXEditorMethods } from '@mdxeditor/editor';
 import { Button } from '@questgen/ui/components/button';
 import { Input } from '@questgen/ui/components/input';
 import { type RefObject, useEffect, useRef, useState } from 'react';

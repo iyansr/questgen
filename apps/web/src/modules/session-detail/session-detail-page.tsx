@@ -93,7 +93,11 @@ export function SessionDetailPage({ sessionId }: SessionDetailPageProps) {
 
   return (
     <div className="space-y-10">
-      <SessionHeader session={data} />
+      <SessionHeader
+        session={data}
+        questionsCount={questions.length}
+        dirtyCount={dirtyCount}
+      />
       <BackToTop />
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">

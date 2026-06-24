@@ -14,10 +14,13 @@ import {
 } from '@/modules/new-session/schema';
 import type { SessionDetail, SessionStatus } from '@/services/sessions/detail';
 
+import { ExportPdfButton } from './export-pdf-button';
 import { StatusBadge } from './status-badge';
 
 type SessionHeaderProps = {
   session: SessionDetail;
+  questionsCount?: number;
+  dirtyCount?: number;
 };
 
 function formatDateTime(value: string) {
@@ -55,7 +58,11 @@ function statusLabel(status: SessionStatus): string {
   }
 }
 
-export function SessionHeader({ session }: SessionHeaderProps) {
+export function SessionHeader({
+  session,
+  questionsCount = 0,
+  dirtyCount = 0,
+}: SessionHeaderProps) {
   const { title, status, config, createdAt } = session;
 
   return (
@@ -80,9 +87,16 @@ export function SessionHeader({ session }: SessionHeaderProps) {
         <h1 className="font-serif text-3xl leading-tight tracking-tight md:text-4xl">
           {title}
         </h1>
-        <p className="text-base text-muted-foreground">
-          Dibuat {formatDateTime(createdAt)}
-        </p>
+        <div className="flex flex-wrap items-center gap-3">
+          <p className="text-base text-muted-foreground">
+            Dibuat {formatDateTime(createdAt)}
+          </p>
+          <ExportPdfButton
+            session={session}
+            questionsCount={questionsCount}
+            dirtyCount={dirtyCount}
+          />
+        </div>
       </div>
 
       <dl className="grid grid-cols-1 divide-y divide-border border border-border sm:grid-cols-2 sm:divide-x sm:divide-y-0">

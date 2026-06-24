@@ -5,6 +5,7 @@ import { logger } from 'hono/logger';
 
 import { auth } from '@/modules/auth/auth.routes';
 import { documents } from '@/modules/documents/documents.routes';
+import { exportRoutes } from '@/modules/export/export.routes';
 import { files } from '@/modules/files/files.routes';
 import { sessions } from '@/modules/sessions/sessions.routes';
 import { authMiddleware } from '@/shared/middleware/auth';
@@ -37,6 +38,7 @@ app.route('/api/auth', auth);
 
 app.use('/api/*', authMiddleware);
 app.route('/api/sessions', sessions);
+app.route('/api/sessions', exportRoutes);
 app.route('/api/documents', documents);
 
 export default {

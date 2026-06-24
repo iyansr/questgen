@@ -19,7 +19,10 @@ type QuestionMarkdownProps = {
   className?: string;
 };
 
-export function QuestionMarkdown({ children, className }: QuestionMarkdownProps) {
+export function QuestionMarkdown({
+  children,
+  className,
+}: QuestionMarkdownProps) {
   return (
     <div
       className={cn(
@@ -28,7 +31,10 @@ export function QuestionMarkdown({ children, className }: QuestionMarkdownProps)
         className,
       )}
     >
-      <ReactMarkdown remarkPlugins={remarkPlugins} rehypePlugins={rehypePlugins}>
+      <ReactMarkdown
+        remarkPlugins={remarkPlugins}
+        rehypePlugins={rehypePlugins}
+      >
         {children}
       </ReactMarkdown>
     </div>
