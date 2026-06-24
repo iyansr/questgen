@@ -15,7 +15,7 @@ export function TestimonialSection() {
           <div className="border border-border bg-background p-8 md:grid md:grid-cols-[auto_1fr] md:gap-10 md:p-10">
             <div className="hidden md:block">
               <img
-                src={`https://picsum.photos/seed/${testimonial.seed}/120/120`}
+                src={testimonial.image}
                 alt={testimonial.name}
                 className="h-24 w-24 object-cover grayscale"
               />

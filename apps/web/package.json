@@ -14,6 +14,7 @@
     "@ai-sdk/react": "^3.0.197",
     "@fontsource/stix-two-text": "^5.2.8",
     "@hookform/resolvers": "^5.2.2",
+    "@mdxeditor/editor": "^4.0.4",
     "@phosphor-icons/react": "^2.1.10",
     "@questgen/env": "workspace:*",
     "@questgen/ui": "workspace:*",

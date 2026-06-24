@@ -2,9 +2,8 @@ import { Check, Eye, EyeSlash, PencilSimple } from '@phosphor-icons/react';
 import { Button } from '@questgen/ui/components/button';
 import { cn } from '@questgen/ui/lib/utils';
 import { useState } from 'react';
-import ReactMarkdown from 'react-markdown';
-import rehypeKatex from 'rehype-katex';
-import remarkMath from 'remark-math';
+
+import { QuestionMarkdown } from '@/components/question-markdown';
 
 import {
   QUESTION_TYPE_LABELS,
@@ -122,14 +121,7 @@ export function QuestionCard({
           />
         )}
 
-        <div className="prose prose-sm max-w-none font-serif text-lg leading-relaxed">
-          <ReactMarkdown
-            remarkPlugins={[remarkMath]}
-            rehypePlugins={[rehypeKatex]}
-          >
-            {question.questionText}
-          </ReactMarkdown>
-        </div>
+        <QuestionMarkdown className="text-lg">{question.questionText}</QuestionMarkdown>
 
         {showOptions && question.options && question.options.length > 0 && (
           <ol className="space-y-2" aria-label="Pilihan jawaban">
@@ -162,22 +154,12 @@ export function QuestionCard({
                   </span>
                   {revealed && isCorrect ? (
                     <div className="flex-1 font-medium leading-relaxed">
-                      <ReactMarkdown
-                        remarkPlugins={[remarkMath]}
-                        rehypePlugins={[rehypeKatex]}
-                      >
-                        {opt.text}
-                      </ReactMarkdown>
+                      <QuestionMarkdown>{opt.text}</QuestionMarkdown>
                       <span className="sr-only"> (jawaban benar)</span>
                     </div>
                   ) : (
                     <div className="flex-1 leading-relaxed">
-                      <ReactMarkdown
-                        remarkPlugins={[remarkMath]}
-                        rehypePlugins={[rehypeKatex]}
-                      >
-                        {opt.text}
-                      </ReactMarkdown>
+                      <QuestionMarkdown>{opt.text}</QuestionMarkdown>
                     </div>
                   )}
                 </li>
@@ -193,14 +175,9 @@ export function QuestionCard({
                 <p className="text-muted-foreground text-sm uppercase tracking-wide">
                   Jawaban
                 </p>
-                <div className="prose prose-sm max-w-none font-serif text-base leading-relaxed">
-                  <ReactMarkdown
-                    remarkPlugins={[remarkMath]}
-                    rehypePlugins={[rehypeKatex]}
-                  >
-                    {question.correctAnswer || '—'}
-                  </ReactMarkdown>
-                </div>
+                <QuestionMarkdown className="text-base">
+                  {question.correctAnswer || '—'}
+                </QuestionMarkdown>
               </div>
             )}
             {question.suggestedAnswer && (
@@ -208,14 +185,9 @@ export function QuestionCard({
                 <p className="text-muted-foreground text-sm uppercase tracking-wide">
                   Penjelasan
                 </p>
-                <div className="prose prose-sm max-w-none text-base text-muted-foreground leading-relaxed">
-                  <ReactMarkdown
-                    remarkPlugins={[remarkMath]}
-                    rehypePlugins={[rehypeKatex]}
-                  >
-                    {question.suggestedAnswer}
-                  </ReactMarkdown>
-                </div>
+                <QuestionMarkdown className="text-base text-muted-foreground">
+                  {question.suggestedAnswer}
+                </QuestionMarkdown>
               </div>
             )}
           </div>

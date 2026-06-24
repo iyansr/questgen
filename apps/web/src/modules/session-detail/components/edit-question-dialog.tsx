@@ -19,7 +19,6 @@ import {
 } from '@questgen/ui/components/dialog';
 import { Field, FieldError, FieldLabel } from '@questgen/ui/components/field';
 import { Input } from '@questgen/ui/components/input';
-import { Textarea } from '@questgen/ui/components/textarea';
 import { cn } from '@questgen/ui/lib/utils';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
@@ -28,6 +27,8 @@ import { z } from 'zod';
 import { QUESTION_TYPE_LABELS } from '@/modules/new-session/schema';
 import type { QuestionPatch } from '@/services/sessions/update-questions';
 import type { QuestionOption, StreamedQuestion } from '@/types/session-message';
+
+import { RichTextEditorField } from './rich-text-editor-field';
 
 const MAX_IMAGE_BYTES = 10 * 1024 * 1024;
 const ALLOWED_IMAGE_TYPES = [
@@ -267,12 +268,13 @@ export function EditQuestionDialog({
             render={({ field, fieldState }) => (
               <Field data-invalid={Boolean(fieldState.error)}>
                 <FieldLabel htmlFor="edit-question-text">Teks Soal</FieldLabel>
-                <Textarea
+                <RichTextEditorField
                   id="edit-question-text"
-                  {...field}
+                  value={field.value}
+                  onChange={field.onChange}
+                  onBlur={field.onBlur}
                   aria-invalid={Boolean(fieldState.error)}
-                  rows={4}
-                  className="font-serif text-base leading-relaxed"
+                  minHeight={160}
                 />
                 {fieldState.error && <FieldError errors={[fieldState.error]} />}
               </Field>
@@ -474,12 +476,13 @@ export function EditQuestionDialog({
               render={({ field, fieldState }) => (
                 <Field data-invalid={Boolean(fieldState.error)}>
                   <FieldLabel htmlFor="edit-correct-answer">Jawaban</FieldLabel>
-                  <Textarea
+                  <RichTextEditorField
                     id="edit-correct-answer"
-                    {...field}
+                    value={field.value}
+                    onChange={field.onChange}
+                    onBlur={field.onBlur}
                     aria-invalid={Boolean(fieldState.error)}
-                    rows={3}
-                    className="text-base"
+                    minHeight={120}
                   />
                   {fieldState.error && (
                     <FieldError errors={[fieldState.error]} />
@@ -497,13 +500,13 @@ export function EditQuestionDialog({
                 <FieldLabel htmlFor="edit-suggested-answer">
                   Penjelasan (opsional)
                 </FieldLabel>
-                <Textarea
+                <RichTextEditorField
                   id="edit-suggested-answer"
-                  {...field}
                   value={field.value ?? ''}
+                  onChange={field.onChange}
+                  onBlur={field.onBlur}
                   aria-invalid={Boolean(fieldState.error)}
-                  rows={3}
-                  className="text-base"
+                  minHeight={120}
                 />
                 {fieldState.error && <FieldError errors={[fieldState.error]} />}
               </Field>

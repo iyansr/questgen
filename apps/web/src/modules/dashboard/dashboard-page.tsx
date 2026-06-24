@@ -35,16 +35,14 @@ function StatItem({
   value: number;
 }) {
   return (
-    <div className="flex items-center gap-4 py-6">
-      <div className="flex size-10 items-center justify-center border border-border bg-muted">
-        <Icon className="size-5 text-muted-foreground" weight="regular" />
+    <div className="border border-border bg-card p-4 sm:p-5">
+      <div className="flex items-center gap-1.5 text-muted-foreground text-xs">
+        <Icon className="size-3.5" weight="regular" />
+        <span>{label}</span>
       </div>
-      <div>
-        <p className="font-serif text-2xl tabular-nums tracking-tight">
-          {value}
-        </p>
-        <p className="text-muted-foreground text-sm">{label}</p>
-      </div>
+      <p className="mt-2 font-serif text-3xl tabular-nums tracking-tight">
+        {value}
+      </p>
     </div>
   );
 }
@@ -122,7 +120,7 @@ export function DashboardPage() {
       </section>
 
       <section>
-        <div className="grid grid-cols-1 divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
           <StatItem icon={ListChecks} label="Total soal dibuat" value={0} />
           <StatItem icon={BookOpen} label="Set tersimpan" value={0} />
           <StatItem icon={FileText} label="Dokumen diunggah" value={0} />

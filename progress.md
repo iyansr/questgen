@@ -2,11 +2,11 @@
 
 ## Current Verified State
 
-- Repository root:
-- Standard startup path:
-- Standard verification path:
-- Current highest-priority unfinished feature:
-- Current blocker:
+- Repository root: `/Users/iyansr/IyanSR/Project/Skripsi/questgen`
+- Standard startup path: `./init.sh`
+- Standard verification path: `pnpm --filter web check-types`
+- Current highest-priority unfinished feature: none (WYSIWYG editor for edit-question dialog complete)
+- Current blocker: none
 
 ## Session Log
 
@@ -44,3 +44,37 @@
 - Files or artifacts updated: `apps/web/src/routes/index.tsx`.
 - Known risk or unresolved issue: picsum.photos placeholder images give random photos (hero shows a dog). Replace with real product screenshots when available.
 - Next best step: Replace picsum placeholders with real QuestGen screenshots, then wire actual navigation links in the footer/header.
+
+### Session 003
+
+- Date: 2026-06-24
+- Goal: Add markdown toolbar editor with larger text to the edit-question dialog.
+- Completed:
+  - Added `@uiw/react-md-editor` (nohighlight import) to `apps/web`.
+  - New `MarkdownEditorField` + lazy-loaded `markdown-editor-inner` with edit-only toolbar (bold, italic, lists, quote, code, link).
+  - Scoped `markdown-editor.css` overrides: 0rem radius, `text-lg` / STIX serif, theme via `data-color-mode`.
+  - Replaced plain `Textarea` for `questionText`, `correctAnswer`, and `suggestedAnswer` in `edit-question-dialog.tsx`.
+- Verification run: `pnpm --filter web check-types` → build + tsc pass; editor code-split to `markdown-editor-inner` chunk (~97 KB gzip).
+- Evidence captured: vite build exit 0; separate lazy chunk `markdown-editor-inner-DEq7jgor.js`.
+- Commits: none yet.
+- Files or artifacts updated: `apps/web/package.json`, `markdown-editor-field.tsx` (new), `markdown-editor-inner.tsx` (new), `markdown-editor.css` (new), `edit-question-dialog.tsx`, `progress.md`.
+- Known risk or unresolved issue: manual browser smoke (toolbar insert, math on card after save, dark mode) not run in this session.
+- Next best step: open session detail → Edit soal in browser and confirm toolbar + larger text UX.
+
+### Session 004
+
+- Date: 2026-06-24
+- Goal: Replace markdown-syntax editor with WYSIWYG for non-technical teachers; keep markdown storage.
+- Completed:
+  - Swapped `@uiw/react-md-editor` for `@mdxeditor/editor` (MIT).
+  - New `RichTextEditorField` + lazy `rich-text-editor-inner` (MDXEditor WYSIWYG, still emits markdown).
+  - Toolbar: undo/redo, bold/italic/underline, lists, link, `fx` math insert popover.
+  - Removed markdown helper text from edit dialog.
+  - QuestGen-themed `rich-text-editor.css`; `text-lg` STIX serif in editor.
+  - Deleted old `markdown-editor-*` files.
+- Verification run: `pnpm --filter web check-types` → pass; lazy chunk `rich-text-editor-inner` ~163 KB gzip.
+- Evidence captured: vite build exit 0.
+- Commits: none yet.
+- Files or artifacts updated: `package.json`, `rich-text-editor-field.tsx`, `rich-text-editor-inner.tsx`, `rich-text-editor.css`, `insert-math-button.tsx`, `edit-question-dialog.tsx`, `progress.md`.
+- Known risk or unresolved issue: math shows as `$...$` text in editor (card renders KaTeX); manual browser smoke not run.
+- Next best step: smoke test bold/lists/math button + staged re-edit in browser.

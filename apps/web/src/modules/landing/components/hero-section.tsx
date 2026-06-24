@@ -1,5 +1,6 @@
 import { Link } from '@tanstack/react-router';
 
+import { landingImages } from '../constants';
 import { FadeIn } from './fade-in';
 
 export function HeroSection() {
@@ -39,7 +40,7 @@ export function HeroSection() {
       <FadeIn delay={0.3}>
         <div className="mt-12 overflow-hidden border border-border">
           <img
-            src="https://picsum.photos/seed/questgen-hero-dashboard/1200/600"
+            src={landingImages.hero}
             alt="QuestGen - dashboard pembuatan soal"
             className="w-full object-cover"
           />

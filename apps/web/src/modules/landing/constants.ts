@@ -3,21 +3,32 @@ export const stripeStyle: React.CSSProperties = {
     'repeating-linear-gradient(-45deg, transparent 0px, transparent 10px, rgb(0 0 0 / 0.025) 10px, rgb(0 0 0 / 0.025) 11px)',
 };
 
+/** Unsplash CDN URLs sized per section. */
+export const landingImages = {
+  hero: 'https://images.unsplash.com/photo-1758612214917-81d7956c09de?w=1200&h=600&fit=crop&auto=format',
+  featureUpload:
+    'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=480&fit=crop&auto=format',
+  featureAnalysis:
+    'https://images.unsplash.com/photo-1759984782199-a4f6d1b6054e?w=800&h=480&fit=crop&auto=format',
+  featureExport:
+    'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=480&fit=crop&auto=format',
+} as const;
+
 export const platformFeatures = [
   {
     title: 'Buat soal dari sumber apa pun',
     desc: 'Unggah PDF, tempel URL, atau ketik teks - AI kami memahami semua jenis sumber dan menghasilkan soal berkualitas.',
-    image: 'https://picsum.photos/seed/questgen-feature-upload/800/480',
+    image: landingImages.featureUpload,
   },
   {
     title: 'Analisis materi secara mendalam',
     desc: 'Ubah teks biasa menjadi soal bermakna. Pilih jenis soal, jumlah, dan tingkat kesulitan dengan presisi.',
-    image: 'https://picsum.photos/seed/questgen-feature-analysis/800/480',
+    image: landingImages.featureAnalysis,
   },
   {
     title: 'Ekspor dan bagikan seketika',
     desc: 'Unduh dalam format siap pakai, atau bagikan langsung dengan rekan pengajar.',
-    image: 'https://picsum.photos/seed/questgen-feature-export/800/480',
+    image: landingImages.featureExport,
   },
 ];
 
@@ -28,7 +39,8 @@ export const testimonials = [
     name: 'Ahmad Ridwan',
     role: 'Dosen Pendidikan',
     company: 'Universitas Gadjah Mada',
-    seed: 'questgen-t1',
+    image:
+      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&auto=format',
   },
   {
     quote:
@@ -36,7 +48,8 @@ export const testimonials = [
     name: 'Dewi Anggraini',
     role: 'Guru Biologi',
     company: 'SMA Negeri 1 Bandung',
-    seed: 'questgen-t2',
+    image:
+      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&h=120&fit=crop&auto=format',
   },
 ];
 

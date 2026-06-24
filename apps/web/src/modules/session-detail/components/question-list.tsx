@@ -79,7 +79,7 @@ export function QuestionList({
                   question={rendered}
                   index={i}
                   isDirty={Boolean(edit)}
-                  onEdit={() => onEdit(question)}
+                  onEdit={() => onEdit(rendered)}
                 />
               </li>
             );
