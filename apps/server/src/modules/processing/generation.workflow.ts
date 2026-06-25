@@ -61,7 +61,9 @@ export class GenerationWorkflow extends WorkflowEntrypoint<Env, DocumentJob> {
       // title stays in place — so swallow errors after retries.
       await step.do('generate-title', TITLE_RETRIES, () =>
         runTitleGeneration(job).catch((error) => {
-          console.error(`Title generation failed: ${job.sessionId}, ${error}`);
+          console.error(
+            `Title generation failed for session ${job.sessionId}: ${error}`,
+          );
         }),
       );
 
