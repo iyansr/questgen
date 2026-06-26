@@ -75,12 +75,8 @@
           "name": "documents_user_id_users_id_fk",
           "tableFrom": "documents",
           "tableTo": "users",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -161,12 +157,8 @@
           "name": "question_sets_user_id_users_id_fk",
           "tableFrom": "question_sets",
           "tableTo": "users",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -174,12 +166,8 @@
           "name": "question_sets_document_id_documents_id_fk",
           "tableFrom": "question_sets",
           "tableTo": "documents",
-          "columnsFrom": [
-            "document_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["document_id"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "no action"
         }
@@ -294,12 +282,8 @@
           "name": "questions_set_id_question_sets_id_fk",
           "tableFrom": "questions",
           "tableTo": "question_sets",
-          "columnsFrom": [
-            "set_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["set_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -361,9 +345,7 @@
         "users_email_unique": {
           "name": "users_email_unique",
           "nullsNotDistinct": false,
-          "columns": [
-            "email"
-          ]
+          "columns": ["email"]
         }
       },
       "policies": {},
@@ -375,41 +357,22 @@
     "public.document_status": {
       "name": "document_status",
       "schema": "public",
-      "values": [
-        "processing",
-        "ready",
-        "failed"
-      ]
+      "values": ["processing", "ready", "failed"]
     },
     "public.file_type": {
       "name": "file_type",
       "schema": "public",
-      "values": [
-        "pdf",
-        "docx",
-        "ppt",
-        "pptx"
-      ]
+      "values": ["pdf", "docx", "ppt", "pptx"]
     },
     "public.question_set_status": {
       "name": "question_set_status",
       "schema": "public",
-      "values": [
-        "pending",
-        "generating",
-        "completed",
-        "failed"
-      ]
+      "values": ["pending", "generating", "completed", "failed"]
     },
     "public.question_type": {
       "name": "question_type",
       "schema": "public",
-      "values": [
-        "multiple_choice",
-        "true_false",
-        "short_answer",
-        "essay"
-      ]
+      "values": ["multiple_choice", "true_false", "short_answer", "essay"]
     }
   },
   "schemas": {},

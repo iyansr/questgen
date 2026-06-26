@@ -1,3 +1,10 @@
+import { ACCEPTED_DOCUMENT_MIME_TYPES } from '@questgen/db/document-types';
+import {
+  countPdfPages,
+  MAX_FILE_SIZE_BYTES,
+  MAX_FILE_SIZE_MB,
+  MAX_PDF_PAGES,
+} from '@questgen/db/upload-limits';
 import { Button } from '@questgen/ui/components/button';
 import { Field, FieldError } from '@questgen/ui/components/field';
 import { cn } from '@questgen/ui/lib/utils';
@@ -7,14 +14,6 @@ import type {
   ControllerRenderProps,
   FieldError as RHFFieldError,
 } from 'react-hook-form';
-
-import { ACCEPTED_DOCUMENT_MIME_TYPES } from '@questgen/db/document-types';
-import {
-  countPdfPages,
-  MAX_FILE_SIZE_BYTES,
-  MAX_FILE_SIZE_MB,
-  MAX_PDF_PAGES,
-} from '@questgen/db/upload-limits';
 
 import { useReadyDocuments } from '@/services/documents/list';
 
@@ -103,26 +102,20 @@ export function SourceField({
     if (next === 'document') setPickerOpen(true);
   }
 
-  async function handleFileChange(
-    event: React.ChangeEvent<HTMLInputElement>,
-  ) {
+  async function handleFileChange(event: React.ChangeEvent<HTMLInputElement>) {
     const file = event.target.files?.[0];
     event.target.value = '';
     if (!file) return;
 
     if (file.size > MAX_FILE_SIZE_BYTES) {
-      onFileValidationError?.(
-        `Ukuran file maksimal ${MAX_FILE_SIZE_MB} MB`,
-      );
+      onFileValidationError?.(`Ukuran file maksimal ${MAX_FILE_SIZE_MB} MB`);
       return;
     }
 
     if (file.type === 'application/pdf') {
       const pageCount = countPdfPages(await file.arrayBuffer());
       if (pageCount > MAX_PDF_PAGES) {
-        onFileValidationError?.(
-          `PDF maksimal ${MAX_PDF_PAGES} halaman`,
-        );
+        onFileValidationError?.(`PDF maksimal ${MAX_PDF_PAGES} halaman`);
         return;
       }
     }

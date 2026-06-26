@@ -1,5 +1,6 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Button } from '@questgen/ui/components/button';
+import { Card } from '@questgen/ui/components/card';
 import { Checkbox } from '@questgen/ui/components/checkbox';
 import {
   Field,
@@ -39,140 +40,128 @@ export function LoginPage() {
   }
 
   return (
-    <div className="grid min-h-screen lg:grid-cols-2">
-      <div className="relative hidden flex-col justify-between border-border/50 border-r bg-muted/30 p-12 lg:flex lg:p-16">
-        <div>
-          <Link to="/" className="font-serif text-2xl tracking-tight">
+    <div className="flex min-h-screen items-center justify-center px-6 py-12">
+      <Card className="w-full max-w-lg rounded-xl px-6 py-8">
+        <div className="mb-8 text-center">
+          <Link
+            to="/"
+            className="mb-6 inline-block font-serif text-2xl tracking-tight"
+          >
             QuestGen
           </Link>
-        </div>
-        <div>
-          <h2 className="text-4xl leading-tight xl:text-5xl">
-            Soal,
-            <br />
-            dibuat oleh <em>AI</em>
-          </h2>
-          <div className="mt-6 h-px w-16 bg-foreground/20" />
-          <p className="mt-6 max-w-sm text-muted-foreground leading-relaxed">
-            Buat soal penilaian dari topik, dokumen, atau sumber web apa pun.
-            Disesuaikan dengan tingkat kesulitan dan format Anda.
+          <h1 className="text-3xl md:text-4xl">Masuk</h1>
+          <p className="mt-2 text-muted-foreground text-sm">
+            Masukkan kredensial Anda untuk mengakses akun.
           </p>
         </div>
-        <p className="text-muted-foreground/60 text-xs">
-          Penilaian berbasis AI untuk pendidik modern.
-        </p>
-      </div>
 
-      <div className="flex items-center justify-center px-6 py-12 md:px-12">
-        <div className="w-full max-w-sm">
-          <div className="mb-8">
-            <h1 className="text-3xl md:text-4xl">Masuk</h1>
-            <p className="mt-2 text-muted-foreground text-sm">
-              Masukkan kredensial Anda untuk mengakses akun.
-            </p>
-          </div>
+        <form onSubmit={form.handleSubmit(onSubmit)}>
+          <FieldGroup>
+            <Controller
+              name="email"
+              control={form.control}
+              render={({ field, fieldState }) => (
+                <Field data-invalid={fieldState.invalid}>
+                  <FieldLabel htmlFor={field.name} className="text-sm">
+                    Email
+                  </FieldLabel>
+                  <Input
+                    {...field}
+                    id={field.name}
+                    type="email"
+                    placeholder="nama@contoh.com"
+                    className="h-11 px-4 text-base"
+                    aria-invalid={fieldState.invalid}
+                  />
+                  {fieldState.invalid && (
+                    <FieldError errors={[fieldState.error]} />
+                  )}
+                </Field>
+              )}
+            />
 
-          <form onSubmit={form.handleSubmit(onSubmit)}>
-            <FieldGroup>
-              <Controller
-                name="email"
-                control={form.control}
-                render={({ field, fieldState }) => (
-                  <Field data-invalid={fieldState.invalid}>
-                    <FieldLabel htmlFor={field.name}>Email</FieldLabel>
-                    <Input
-                      {...field}
-                      id={field.name}
-                      type="email"
-                      placeholder="nama@contoh.com"
-                      aria-invalid={fieldState.invalid}
-                    />
-                    {fieldState.invalid && (
-                      <FieldError errors={[fieldState.error]} />
-                    )}
-                  </Field>
-                )}
+            <Controller
+              name="password"
+              control={form.control}
+              render={({ field, fieldState }) => (
+                <Field data-invalid={fieldState.invalid}>
+                  <div className="flex items-center justify-between">
+                    <FieldLabel htmlFor={field.name} className="text-sm">
+                      Kata sandi
+                    </FieldLabel>
+                    <button
+                      type="button"
+                      className="text-muted-foreground text-sm transition-colors hover:text-foreground"
+                    >
+                      Lupa kata sandi?
+                    </button>
+                  </div>
+                  <Input
+                    {...field}
+                    id={field.name}
+                    type="password"
+                    placeholder="Masukkan kata sandi Anda"
+                    className="h-11 px-4 text-base"
+                    aria-invalid={fieldState.invalid}
+                  />
+                  {fieldState.invalid && (
+                    <FieldError errors={[fieldState.error]} />
+                  )}
+                </Field>
+              )}
+            />
+
+            <Field orientation="horizontal">
+              <Checkbox
+                id="remember"
+                checked={remember}
+                onCheckedChange={(checked) => setRemember(checked === true)}
+                className="size-5"
               />
-
-              <Controller
-                name="password"
-                control={form.control}
-                render={({ field, fieldState }) => (
-                  <Field data-invalid={fieldState.invalid}>
-                    <div className="flex items-center justify-between">
-                      <FieldLabel htmlFor={field.name}>Kata sandi</FieldLabel>
-                      <button
-                        type="button"
-                        className="text-muted-foreground text-xs transition-colors hover:text-foreground"
-                      >
-                        Lupa kata sandi?
-                      </button>
-                    </div>
-                    <Input
-                      {...field}
-                      id={field.name}
-                      type="password"
-                      placeholder="Masukkan kata sandi Anda"
-                      aria-invalid={fieldState.invalid}
-                    />
-                    {fieldState.invalid && (
-                      <FieldError errors={[fieldState.error]} />
-                    )}
-                  </Field>
-                )}
-              />
-
-              <Field orientation="horizontal">
-                <Checkbox
-                  id="remember"
-                  checked={remember}
-                  onCheckedChange={(checked) => setRemember(checked === true)}
-                />
-                <FieldLabel
-                  htmlFor="remember"
-                  className="text-muted-foreground"
-                >
-                  Ingat saya
-                </FieldLabel>
-              </Field>
-
-              <Button
-                type="submit"
-                size="lg"
-                className="w-full gap-2"
-                disabled={login.isPending}
+              <FieldLabel
+                htmlFor="remember"
+                className="text-muted-foreground text-sm"
               >
-                {login.isPending ? (
-                  <Loader2 className="size-4 animate-spin" />
-                ) : (
-                  <>
-                    Masuk
-                    <ArrowRight className="size-4" />
-                  </>
-                )}
-              </Button>
-            </FieldGroup>
-          </form>
+                Ingat saya
+              </FieldLabel>
+            </Field>
 
-          <div className="mt-8 flex items-center gap-3">
-            <div className="h-px flex-1 bg-border" />
-            <span className="text-muted-foreground text-xs">atau</span>
-            <div className="h-px flex-1 bg-border" />
-          </div>
+            <Button
+              type="submit"
+              size="lg"
+              className="h-12 w-full gap-2 text-base"
+              disabled={login.isPending}
+            >
+              {login.isPending ? (
+                <Loader2 className="size-5 animate-spin" />
+              ) : (
+                <>
+                  Masuk
+                  <ArrowRight className="size-5" />
+                </>
+              )}
+            </Button>
+          </FieldGroup>
+        </form>
 
-          <div className="mt-8 text-center">
-            <p className="text-muted-foreground text-sm">
-              Belum punya akun?{' '}
-              <Link
-                to="/register"
-                className="font-medium text-foreground underline-offset-4 transition-colors hover:underline"
-              >
-                Buat akun
-              </Link>
-            </p>
-          </div>
+        <div className="mt-8 flex items-center gap-3">
+          <div className="h-px flex-1 bg-border" />
+          <span className="text-muted-foreground text-xs">atau</span>
+          <div className="h-px flex-1 bg-border" />
         </div>
-      </div>
+
+        <div className="mt-8 text-center">
+          <p className="text-muted-foreground text-sm">
+            Belum punya akun?{' '}
+            <Link
+              to="/register"
+              className="font-medium text-foreground underline-offset-4 transition-colors hover:underline"
+            >
+              Buat akun
+            </Link>
+          </p>
+        </div>
+      </Card>
     </div>
   );
 }

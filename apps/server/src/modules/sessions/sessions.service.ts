@@ -1,7 +1,5 @@
 import type { createDb } from '@questgen/db';
-import {
-  mimeToDocumentFileType,
-} from '@questgen/db/document-types';
+import { mimeToDocumentFileType } from '@questgen/db/document-types';
 import { documents, questionSets, questions } from '@questgen/db/schema';
 import { env } from '@questgen/env/server';
 import { and, count, desc, eq, ilike, type SQL } from 'drizzle-orm';

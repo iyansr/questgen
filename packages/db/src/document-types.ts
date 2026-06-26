@@ -1,9 +1,4 @@
-export const DOCUMENT_FILE_TYPES = [
-  'pdf',
-  'docx',
-  'ppt',
-  'pptx',
-] as const;
+export const DOCUMENT_FILE_TYPES = ['pdf', 'docx', 'ppt', 'pptx'] as const;
 
 export type DocumentFileType = (typeof DOCUMENT_FILE_TYPES)[number];
 
@@ -14,9 +9,7 @@ export const MIME_BY_FILE_TYPE: Record<DocumentFileType, string> = {
   pptx: 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
 };
 
-export const ALLOWED_DOCUMENT_MIME_TYPES = Object.values(
-  MIME_BY_FILE_TYPE,
-) as [
+export const ALLOWED_DOCUMENT_MIME_TYPES = Object.values(MIME_BY_FILE_TYPE) as [
   (typeof MIME_BY_FILE_TYPE)['pdf'],
   (typeof MIME_BY_FILE_TYPE)['docx'],
   (typeof MIME_BY_FILE_TYPE)['ppt'],
@@ -24,10 +17,7 @@ export const ALLOWED_DOCUMENT_MIME_TYPES = Object.values(
 ];
 
 const MIME_TO_FILE_TYPE = Object.fromEntries(
-  Object.entries(MIME_BY_FILE_TYPE).map(([fileType, mime]) => [
-    mime,
-    fileType,
-  ]),
+  Object.entries(MIME_BY_FILE_TYPE).map(([fileType, mime]) => [mime, fileType]),
 ) as Record<string, DocumentFileType>;
 
 export function mimeToDocumentFileType(
@@ -36,6 +26,5 @@ export function mimeToDocumentFileType(
   return MIME_TO_FILE_TYPE[mime];
 }
 
-export const ACCEPTED_DOCUMENT_MIME_TYPES = ALLOWED_DOCUMENT_MIME_TYPES.join(
-  ',',
-);
+export const ACCEPTED_DOCUMENT_MIME_TYPES =
+  ALLOWED_DOCUMENT_MIME_TYPES.join(',');
