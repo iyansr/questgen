@@ -8,6 +8,9 @@
     "./schema": {
       "default": "./src/schema/index.ts"
     },
+    "./document-types": {
+      "default": "./src/document-types.ts"
+    },
     "./*": {
       "default": "./src/*.ts"
     }

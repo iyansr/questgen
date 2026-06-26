@@ -8,28 +8,30 @@ import type {
   FieldError as RHFFieldError,
 } from 'react-hook-form';
 
-import { useReadyDocuments } from '@/services/documents/list';
-
+import { ACCEPTED_DOCUMENT_MIME_TYPES } from '@questgen/db/document-types';
 import {
+  countPdfPages,
   MAX_FILE_SIZE_BYTES,
   MAX_FILE_SIZE_MB,
   MAX_PDF_PAGES,
+} from '@questgen/db/upload-limits';
+
+import { useReadyDocuments } from '@/services/documents/list';
+
+import {
   MAX_WEB_QUERY_CHARS,
   MIN_WEB_QUERY_CHARS,
   type NewSessionFormValues,
 } from '../schema';
 import { DocumentPickerDialog } from './document-picker-dialog';
 
-const ACCEPTED_FILE_TYPES = [
-  'application/pdf',
-  'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-].join(',');
-
 interface SourceFieldProps {
   fileField: ControllerRenderProps<NewSessionFormValues, 'file'>;
   documentIdField: ControllerRenderProps<NewSessionFormValues, 'documentId'>;
   webQueryField: ControllerRenderProps<NewSessionFormValues, 'webQuery'>;
   error?: RHFFieldError;
+  onFileValidationError?: (message: string) => void;
+  onFileValidationClear?: () => void;
 }
 
 function formatFileSize(bytes: number) {
@@ -43,7 +45,7 @@ const SOURCES = [
     id: 'file' as const,
     emoji: '📄',
     title: 'Unggah Dokumen',
-    sub: 'PDF, DOCX, TXT',
+    sub: 'PDF, DOCX, PPT, PPTX',
     icon: Upload,
   },
   {
@@ -67,6 +69,8 @@ export function SourceField({
   documentIdField,
   webQueryField,
   error,
+  onFileValidationError,
+  onFileValidationClear,
 }: SourceFieldProps) {
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [pickerOpen, setPickerOpen] = useState(false);
@@ -99,13 +103,31 @@ export function SourceField({
     if (next === 'document') setPickerOpen(true);
   }
 
-  function handleFileChange(event: React.ChangeEvent<HTMLInputElement>) {
+  async function handleFileChange(
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) {
     const file = event.target.files?.[0];
+    event.target.value = '';
     if (!file) return;
+
     if (file.size > MAX_FILE_SIZE_BYTES) {
-      event.target.value = '';
+      onFileValidationError?.(
+        `Ukuran file maksimal ${MAX_FILE_SIZE_MB} MB`,
+      );
       return;
     }
+
+    if (file.type === 'application/pdf') {
+      const pageCount = countPdfPages(await file.arrayBuffer());
+      if (pageCount > MAX_PDF_PAGES) {
+        onFileValidationError?.(
+          `PDF maksimal ${MAX_PDF_PAGES} halaman`,
+        );
+        return;
+      }
+    }
+
+    onFileValidationClear?.();
     documentIdField.onChange(undefined);
     webQueryField.onChange(undefined);
     fileField.onChange(file);
@@ -114,6 +136,7 @@ export function SourceField({
 
   function clearFile() {
     fileField.onChange(undefined);
+    onFileValidationClear?.();
     if (inputRef.current) inputRef.current.value = '';
   }
 
@@ -211,15 +234,15 @@ export function SourceField({
                 id="source-file-help"
                 className="text-muted-foreground text-xs"
               >
-                PDF · DOCX · TXT &nbsp;·&nbsp; Maks. {MAX_FILE_SIZE_MB} MB · PDF
-                maks. {MAX_PDF_PAGES} halaman
+                PDF · DOCX · PPT · PPTX &nbsp;·&nbsp; Maks. {MAX_FILE_SIZE_MB}{' '}
+                MB · PDF maks. {MAX_PDF_PAGES} halaman
               </span>
             </Button>
           )}
           <input
             ref={inputRef}
             type="file"
-            accept={ACCEPTED_FILE_TYPES}
+            accept={ACCEPTED_DOCUMENT_MIME_TYPES}
             onChange={handleFileChange}
             className="sr-only"
             aria-hidden="true"

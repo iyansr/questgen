@@ -5,8 +5,8 @@
 - Repository root: `/Users/iyansr/IyanSR/Project/Skripsi/questgen`
 - Standard startup path: `./init.sh`
 - Standard verification path: `pnpm --filter web check-types`
-- Current highest-priority unfinished feature: none (PDF export for session questions complete)
-- Current blocker: none
+- Current highest-priority unfinished feature: PPT/PPTX upload support (code complete; migration + E2E smoke pending)
+- Current blocker: `0003_rapid_the_fallen.sql` not applied — run `pnpm db:migrate`
 
 ## Session Log
 
@@ -106,3 +106,42 @@
   - Simplified lembar soal layout: ULANGAN HARIAN, subtitle (mapel · kelas · semester), dotted Nama/Kelas/Tanggal fields, soal inline, opsi a–d lowercase, footer `A4 | n dari total | Kop Sekolah`.
   - Export form trimmed to: nama sekolah, mata pelajaran, kelas, semester.
 - Verification run: `pnpm --filter server check-types` + `pnpm --filter web check-types` → pass.
+
+### Session 006
+
+- Date: 2026-06-25
+- Goal: Accept PPT and PPTX uploads alongside PDF and DOCX.
+- Completed:
+  - Added shared `@questgen/db/document-types` (`DOCUMENT_FILE_TYPES`, MIME map, `mimeToDocumentFileType`).
+  - Extended `file_type` enum in schema; drizzle migration `0003_rapid_the_fallen.sql` (`ppt`, `pptx`).
+  - Server: upload validation in `sessions.service.ts`, preview MIME in `documents.routes.ts`, workflow `fileType` in `document-processor.ts`.
+  - Web: `source-field.tsx` accept list + copy; `@questgen/db` dependency for shared MIME constants.
+  - OCR path unchanged (`ocr.ts` already format-agnostic via Mistral).
+- Verification run: `pnpm --filter server check-types` + `pnpm --filter web check-types` → pass.
+- Evidence captured: both typecheck commands exit 0; migration generated via `pnpm db:generate` (no manual migration).
+- Commits: none yet.
+- Files or artifacts updated: `packages/db/src/document-types.ts` (new), `packages/db/src/schema/documents.ts`, `packages/db/src/migrations/0003_rapid_the_fallen.sql` (new), `packages/db/src/migrations/meta/0003_snapshot.json` (new), `packages/db/package.json`, `sessions.service.ts`, `documents.routes.ts`, `document-processor.ts`, `source-field.tsx`, `apps/web/package.json`, `pnpm-lock.yaml`, `progress.md`.
+- Known risk or unresolved issue: migration not applied; no live PPT/PPTX upload through Mistral OCR tested; landing/README copy still PDF/DOCX-only.
+- Next best step: `pnpm db:migrate`, then upload a `.pptx` session and confirm OCR → generation completes.
+
+### Session 007
+
+- Date: 2026-06-25
+- Goal: Production OCR via R2 presigned URL — stop re-uploading source docs to Mistral Files API.
+- Completed:
+  - `r2-presigned-url.ts`: `createR2PresignedGetUrl` via `aws4fetch` (5 min GET expiry).
+  - `ocr-mode.ts`: `isLocalOcrMode()` (localhost `SERVER_URL`), `canUseR2PresignedOcr()`.
+  - `ocr.ts`: split `bytes` (dev — Mistral Files upload) vs `url` (prod — direct `document_url`).
+  - `document-processor.ts`: prod path uses `head` + presigned URL (no `arrayBuffer`); dev unchanged.
+  - `packages/env/env.d.ts`: `R2_ACCOUNT_ID`, `R2_BUCKET_NAME`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`.
+- Verification run: `pnpm --filter server check-types` → pass.
+- Evidence captured: tsc exit 0.
+- Commits: none yet.
+- Production setup (manual):
+  - R2 dashboard → Manage R2 API Tokens → Object Read on `questgen` bucket.
+  - `wrangler secret put R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`.
+  - Set `R2_ACCOUNT_ID` + optional `R2_BUCKET_NAME` (default `questgen`) as Worker vars.
+  - Missing creds or localhost `SERVER_URL` → auto-fallback to Mistral Files upload (dev behavior).
+- Known risk or unresolved issue: live prod OCR with presigned URL not tested; local upload smoke not run this session.
+- Next best step: set prod R2 presign secrets, deploy, upload PDF — confirm workflow completes without Mistral Files upload.
+

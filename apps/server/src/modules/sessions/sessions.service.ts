@@ -1,11 +1,16 @@
 import type { createDb } from '@questgen/db';
+import {
+  mimeToDocumentFileType,
+} from '@questgen/db/document-types';
 import { documents, questionSets, questions } from '@questgen/db/schema';
 import { env } from '@questgen/env/server';
 import { and, count, desc, eq, ilike, type SQL } from 'drizzle-orm';
 
 import {
+  countPdfPages,
   MAX_FILE_SIZE_BYTES,
   MAX_FILE_SIZE_MB,
+  MAX_PDF_PAGES,
   MAX_WEB_QUERY_CHARS,
   MIN_WEB_QUERY_CHARS,
 } from '@/shared/lib/upload-limits';
@@ -15,11 +20,6 @@ import {
   type SessionStatus,
   totalCount,
 } from './sessions.schema';
-
-const ALLOWED_MIME_TYPES = [
-  'application/pdf',
-  'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-] as const;
 
 export class SessionValidationError extends Error {
   constructor(
@@ -91,13 +91,10 @@ export async function createSession(
     throw new SessionValidationError('Provide a file, documentId, or webQuery');
   }
 
-  if (
-    !ALLOWED_MIME_TYPES.includes(
-      file.type as (typeof ALLOWED_MIME_TYPES)[number],
-    )
-  ) {
+  const fileType = mimeToDocumentFileType(file.type);
+  if (!fileType) {
     throw new SessionValidationError(
-      'Invalid file type. Only PDF and DOCX are supported.',
+      'Invalid file type. Only PDF, DOCX, PPT, and PPTX are supported.',
     );
   }
 
@@ -107,12 +104,15 @@ export async function createSession(
     );
   }
 
-  const fileType: 'pdf' | 'docx' =
-    file.type === 'application/pdf' ? 'pdf' : 'docx';
-
   let fileBuffer: ArrayBuffer | null = null;
   if (fileType === 'pdf') {
     fileBuffer = await file.arrayBuffer();
+    const pageCount = countPdfPages(fileBuffer);
+    if (pageCount > MAX_PDF_PAGES) {
+      throw new SessionValidationError(
+        `PDF too long. Maximum is ${MAX_PDF_PAGES} pages.`,
+      );
+    }
   }
 
   const fileKey = `${userId}/${Date.now()}-${file.name}`;

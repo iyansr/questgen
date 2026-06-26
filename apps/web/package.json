@@ -16,6 +16,7 @@
     "@hookform/resolvers": "^5.2.2",
     "@mdxeditor/editor": "^4.0.4",
     "@phosphor-icons/react": "^2.1.10",
+    "@questgen/db": "workspace:*",
     "@questgen/env": "workspace:*",
     "@questgen/ui": "workspace:*",
     "@tailwindcss/vite": "^4.2.2",

@@ -1,10 +1,11 @@
 import { relations } from 'drizzle-orm';
 import { pgEnum, pgTable, text, timestamp, uuid } from 'drizzle-orm/pg-core';
 
+import { DOCUMENT_FILE_TYPES } from '../document-types';
 import { questionSets } from './question-sets';
 import { users } from './users';
 
-export const fileTypeEnum = pgEnum('file_type', ['pdf', 'docx']);
+export const fileTypeEnum = pgEnum('file_type', DOCUMENT_FILE_TYPES);
 
 export const documentStatusEnum = pgEnum('document_status', [
   'processing',

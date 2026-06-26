@@ -1,4 +1,5 @@
 import { createDb } from '@questgen/db';
+import type { DocumentFileType } from '@questgen/db/document-types';
 import { documents, questionSets } from '@questgen/db/schema';
 import { env } from '@questgen/env/server';
 import { eq } from 'drizzle-orm';
@@ -8,6 +9,7 @@ import {
   generateQuestionsInBackground,
 } from '@/modules/generation/generation.service';
 import { generateSessionTitle } from '@/modules/generation/title.service';
+import { canUseR2PresignedOcr, isLocalOcrMode } from '@/shared/lib/ocr-mode';
 import { flushTracing, initTracing } from '@/shared/lib/tracing';
 
 import { captionImages } from './captioner';
@@ -16,6 +18,7 @@ import { chunkText } from './chunker';
 import { embedTexts } from './embeddings';
 import { uploadImageToR2 } from './images';
 import { processDocument as ocrProcess } from './ocr';
+import { createR2PresignedGetUrl } from './r2-presigned-url';
 import { NonRetryableError } from 'cloudflare:workflows';
 
 /**
@@ -29,7 +32,7 @@ type ProcessDocumentJob = {
   type: 'PROCESS_DOCUMENT';
   documentId: string;
   fileKey: string;
-  fileType: 'pdf' | 'docx';
+  fileType: DocumentFileType;
   sessionId: string;
   config: JobConfig;
 };
@@ -113,15 +116,28 @@ export async function runDocumentPipeline(
 
   initTracing();
   try {
-    const file = await env.DOCUMENTS_BUCKET.get(fileKey);
-    if (!file) {
-      throw new Error(`File not found in R2: ${fileKey}`);
-    }
-
-    const fileBytes = await file.arrayBuffer();
+    const useR2PresignedOcr = !isLocalOcrMode() && canUseR2PresignedOcr();
     const filename = fileKey.split('/').pop() ?? fileKey;
 
-    const ocrResult = await ocrProcess(fileBytes, filename);
+    let ocrResult: Awaited<ReturnType<typeof ocrProcess>>;
+
+    if (useR2PresignedOcr) {
+      const head = await env.DOCUMENTS_BUCKET.head(fileKey);
+      if (!head) {
+        throw new Error(`File not found in R2: ${fileKey}`);
+      }
+
+      const documentUrl = await createR2PresignedGetUrl(fileKey);
+      ocrResult = await ocrProcess({ mode: 'url', documentUrl });
+    } else {
+      const file = await env.DOCUMENTS_BUCKET.get(fileKey);
+      if (!file) {
+        throw new Error(`File not found in R2: ${fileKey}`);
+      }
+
+      const fileBytes = await file.arrayBuffer();
+      ocrResult = await ocrProcess({ mode: 'bytes', fileBytes, filename });
+    }
 
     const uploadedImages = await Promise.all(
       ocrResult.images.map((img) =>

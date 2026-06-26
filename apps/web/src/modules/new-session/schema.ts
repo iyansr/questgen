@@ -1,3 +1,7 @@
+import {
+  MAX_FILE_SIZE_BYTES,
+  MAX_FILE_SIZE_MB,
+} from '@questgen/db/upload-limits';
 import z from 'zod';
 
 export const QUESTION_TYPES = [
@@ -22,9 +26,11 @@ export type QuestionType = (typeof QUESTION_TYPES)[number];
 const MAX_TOTAL_QUESTIONS = 50;
 const MAX_PER_TYPE = MAX_TOTAL_QUESTIONS;
 
-export const MAX_FILE_SIZE_BYTES = 20 * 1024 * 1024;
-export const MAX_FILE_SIZE_MB = 20;
-export const MAX_PDF_PAGES = 60;
+export {
+  MAX_FILE_SIZE_BYTES,
+  MAX_FILE_SIZE_MB,
+  MAX_PDF_PAGES,
+} from '@questgen/db/upload-limits';
 
 export const sourceModeSchema = z.enum(['file', 'document', 'web']);
 

@@ -1,3 +1,4 @@
+import { MIME_BY_FILE_TYPE } from '@questgen/db/document-types';
 import { documents as documentsTable } from '@questgen/db/schema';
 import { env } from '@questgen/env/server';
 import { and, eq } from 'drizzle-orm';
@@ -7,11 +8,6 @@ import { SessionValidationError } from '@/modules/sessions/sessions.service';
 import type { AppEnv } from '@/types';
 
 import { listReadyDocuments } from './documents.service';
-
-const MIME_BY_TYPE: Record<'pdf' | 'docx', string> = {
-  pdf: 'application/pdf',
-  docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-};
 
 const documents = new Hono<AppEnv>();
 
@@ -56,7 +52,7 @@ documents.get('/:id/preview', async (c) => {
   }
 
   const contentType =
-    object.httpMetadata?.contentType ?? MIME_BY_TYPE[doc.fileType];
+    object.httpMetadata?.contentType ?? MIME_BY_FILE_TYPE[doc.fileType];
 
   return new Response(object.body, {
     headers: {

@@ -9,6 +9,8 @@ interface QuestgenEnv {
   CORS_ORIGIN: string;
   SERVER_URL?: string;
   R2_PUBLIC_HOST?: string;
+  R2_ACCOUNT_ID?: string;
+  R2_BUCKET_NAME?: string;
   CHROMA_TENANT: string;
   CHROMA_DATABASE: string;
   CHROMA_URL?: string;
@@ -29,6 +31,8 @@ interface QuestgenEnv {
   CHROMA_API_KEY?: string;
   OPENROUTER_API_KEY: string;
   MISTRAL_API_KEY: string;
+  R2_ACCESS_KEY_ID?: string;
+  R2_SECRET_ACCESS_KEY?: string;
   TAVILY_API_KEY: string;
   LANGFUSE_PUBLIC_KEY: string;
   LANGFUSE_SECRET_KEY: string;

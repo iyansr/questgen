@@ -208,6 +208,10 @@ export function NewSessionPage() {
                 documentIdField={documentIdField}
                 webQueryField={webQueryField}
                 error={sourceError}
+                onFileValidationError={(message) =>
+                  form.setError('file', { message })
+                }
+                onFileValidationClear={() => form.clearErrors('file')}
               />
             </CardContent>
           </Card>
