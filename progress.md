@@ -160,3 +160,33 @@
 - Known risk or unresolved issue: manual browser download smoke not run; DOCX uses Times New Roman vs PDF Noto Serif; Word auto-pagination may differ slightly from PDF cursor layout.
 - Next best step: open completed session → Ekspor DOCX → unduh and open in Word against `wrangler dev`.
 
+### Session 009
+
+- Date: 2026-06-30
+- Goal: Prepare beta release — create `dev` branch, restrict `main` to closed registration and request-access landing.
+- Completed:
+  - Created and pushed `dev` branch from current `main` (full features preserved for ongoing development).
+  - Feature branch `cursor/beta-release-prep-7846` with beta restrictions for PR review:
+    - `POST /api/auth/register` returns 403 during beta.
+    - `/register` route redirects to `/`.
+    - Login page links to request-access form instead of registration.
+    - Landing page hides testimonial and pricing sections.
+    - Hero and CTA buttons changed to "Minta Akses" linking to `REQUEST_ACCESS_FORM_URL` placeholder (`https://forms.gle/placeholder`).
+- Verification run: `pnpm --filter web check-types` + `pnpm --filter server check-types` → pass.
+- Evidence captured: both typecheck commands exit 0.
+- Commits: pending PR merge.
+- Known risk or unresolved issue: replace `REQUEST_ACCESS_FORM_URL` in `apps/web/src/modules/landing/constants.ts` when the real Google Form link is ready.
+- Next best step: review and merge PR; update Google Form URL before deploy.
+
+### Session 010
+
+- Date: 2026-06-30
+- Goal: Sync `dev` with `main` while keeping beta restrictions only on `main`.
+- Completed:
+  - Merged `origin/main` into `dev` (fast-forward to `f41568c`).
+  - Restored full-feature behavior on `dev`: registration API/page, login register link, landing pricing + testimonials, original CTAs.
+  - Kept shared docs from `main`: `AGENTS.md` branch strategy and `progress.md` session 009.
+- Verification run: `pnpm --filter web check-types` + `pnpm --filter server check-types` → pass.
+- Evidence captured: vite build includes `register` chunk again; both typecheck commands exit 0.
+- Next best step: merge PR into `dev`; continue feature work on `dev` branches.
+
