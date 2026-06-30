@@ -4,13 +4,25 @@ import { Hono } from 'hono';
 import { authMiddleware } from '@/shared/middleware/auth';
 import type { AppEnv } from '@/types';
 
-import { loginSchema } from './auth.schema';
-import { getUserById, loginUser } from './auth.service';
+import { loginSchema, registerSchema } from './auth.schema';
+import { getUserById, loginUser, registerUser } from './auth.service';
 
 const auth = new Hono<AppEnv>();
 
-auth.post('/register', async (c) => {
-  return c.json({ error: 'Registration is closed during beta' }, 403);
+auth.post('/register', zValidator('json', registerSchema), async (c) => {
+  const { email, password, name } = c.req.valid('json');
+  const db = c.get('db');
+
+  try {
+    const result = await registerUser(db, email, password, name);
+    return c.json(result, 201);
+  } catch (err) {
+    if (err instanceof Error && err.message === 'Email already registered') {
+      return c.json({ error: err.message }, 409);
+    }
+    console.error('Register error:', err);
+    return c.json({ error: 'Internal server error' }, 500);
+  }
 });
 
 auth.post('/login', zValidator('json', loginSchema), async (c) => {

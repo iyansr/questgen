@@ -16,7 +16,6 @@ import { Controller, useForm } from 'react-hook-form';
 
 import { useLogin } from '@/services/auth/login';
 
-import { REQUEST_ACCESS_FORM_URL } from '@/modules/landing/constants';
 import { type LoginFormValues, loginSchema } from './schema';
 
 export function LoginPage() {
@@ -145,17 +144,21 @@ export function LoginPage() {
           </FieldGroup>
         </form>
 
+        <div className="mt-8 flex items-center gap-3">
+          <div className="h-px flex-1 bg-border" />
+          <span className="text-muted-foreground text-xs">atau</span>
+          <div className="h-px flex-1 bg-border" />
+        </div>
+
         <div className="mt-8 text-center">
           <p className="text-muted-foreground text-sm">
             Belum punya akun?{' '}
-            <a
-              href={REQUEST_ACCESS_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/register"
               className="font-medium text-foreground underline-offset-4 transition-colors hover:underline"
             >
-              Minta akses beta
-            </a>
+              Buat akun
+            </Link>
           </p>
         </div>
       </Card>

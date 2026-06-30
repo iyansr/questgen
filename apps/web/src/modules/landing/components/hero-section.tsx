@@ -1,4 +1,6 @@
-import { landingImages, REQUEST_ACCESS_FORM_URL } from '../constants';
+import { Link } from '@tanstack/react-router';
+
+import { landingImages } from '../constants';
 import { FadeIn } from './fade-in';
 
 export function HeroSection() {
@@ -21,14 +23,12 @@ export function HeroSection() {
       </FadeIn>
       <FadeIn delay={0.2}>
         <div className="mt-7 flex items-center justify-center gap-3">
-          <a
-            href={REQUEST_ACCESS_FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/login"
             className="bg-foreground px-6 py-2.5 font-medium text-background text-sm transition-opacity hover:opacity-80"
           >
-            Minta Akses
-          </a>
+            Mulai Gratis
+          </Link>
           <a
             href="#fitur"
             className="border border-border px-6 py-2.5 font-medium text-sm transition-colors hover:bg-muted"

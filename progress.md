@@ -178,3 +178,15 @@
 - Known risk or unresolved issue: replace `REQUEST_ACCESS_FORM_URL` in `apps/web/src/modules/landing/constants.ts` when the real Google Form link is ready.
 - Next best step: review and merge PR; update Google Form URL before deploy.
 
+### Session 010
+
+- Date: 2026-06-30
+- Goal: Sync `dev` with `main` while keeping beta restrictions only on `main`.
+- Completed:
+  - Merged `origin/main` into `dev` (fast-forward to `f41568c`).
+  - Restored full-feature behavior on `dev`: registration API/page, login register link, landing pricing + testimonials, original CTAs.
+  - Kept shared docs from `main`: `AGENTS.md` branch strategy and `progress.md` session 009.
+- Verification run: `pnpm --filter web check-types` + `pnpm --filter server check-types` → pass.
+- Evidence captured: vite build includes `register` chunk again; both typecheck commands exit 0.
+- Next best step: merge PR into `dev`; continue feature work on `dev` branches.
+
