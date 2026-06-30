@@ -49,4 +49,48 @@ Before ending a session:
 2. Record any unresolved risk or blocker.
 3. Commit with a descriptive message once the work is in a safe state.
 4. Leave the repo clean enough for the next session to run `./init.sh`
-   immediately.
+ immediately.
+
+## Cursor Cloud specific instructions
+
+Monorepo (pnpm). Standard run/test/lint commands live in `README.md` and root
+`package.json` scripts (`dev`, `dev:web`, `dev:server`, `check`, `check-types`,
+`db:push`). Notes below are only the non-obvious cloud caveats.
+
+### Services
+
+| Service | Port | Start command | Required for |
+|---------|------|---------------|--------------|
+| PostgreSQL 16 | 5432 | `sudo pg_ctlcluster 16 main start` | everything (auth, sessions, CRUD) |
+| Server (Hono on `wrangler dev`) | 3000 | `pnpm dev:server` | API |
+| Web (Vite) | 3001 | `pnpm dev:web` | UI |
+| ChromaDB | 8000 | `docker compose up -d chroma` (Docker not preinstalled) | only AI generation / RAG |
+
+`pnpm dev` runs web + server together.
+
+### Non-obvious caveats
+
+- PostgreSQL is installed locally (not via the `docker-compose.yml`, since Docker
+  is not preinstalled) and does NOT auto-start. Run
+  `sudo pg_ctlcluster 16 main start` at the start of each session before the
+  server. Credentials match `docker-compose.yml`: `postgres:postgres@localhost:5432/postgres`.
+- Env files are git-ignored and already created: `apps/server/.env`,
+  `apps/server/.dev.vars` (wrangler reads `.dev.vars`, drizzle reads `.env` — keep
+  them in sync), and `apps/web/.env` (`VITE_SERVER_URL=http://localhost:3000`).
+  If missing, recreate from the `README.md` env tables.
+- IMPORTANT: `wrangler dev` loads server vars/secrets from `apps/server/.dev.vars`,
+  NOT from the process environment. Cloud Agent secrets (`OPENROUTER_API_KEY`,
+  `MISTRAL_API_KEY`, `TAVILY_API_KEY`) are injected as shell env vars, so they must
+  be written into `.dev.vars` (and `.env`) for the server to see them, e.g.
+  `OPENROUTER_API_KEY=${OPENROUTER_API_KEY}`. Restart `pnpm dev:server` after editing.
+- Without those keys, auth/dashboard/history/CRUD still work. AI question generation
+  needs the keys: the web-search path (new session → "Pencarian Web") uses only
+  OpenRouter + Tavily and does NOT need ChromaDB; the document-upload path
+  additionally needs Mistral OCR + a running ChromaDB. Generation runs through a
+  Cloudflare Workflow (works under local `wrangler dev`) and takes ~1–2 minutes.
+- After a schema change run `pnpm db:push` (idempotent) to sync Postgres.
+- `pnpm check` (Biome) runs `--write` and will reformat files. The repo currently
+  has pre-existing Biome lint/format diagnostics, so a clean run is not the
+  baseline — review the diff before committing.
+- `pnpm --filter web check-types` runs a full `vite build` then `tsc`, so it is
+  the heaviest verification step.
