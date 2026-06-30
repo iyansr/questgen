@@ -1,6 +1,4 @@
-import { Link } from '@tanstack/react-router';
-
-import { stripeStyle } from '../constants';
+import { REQUEST_ACCESS_FORM_URL, stripeStyle } from '../constants';
 import { FadeIn } from './fade-in';
 
 export function CtaSection() {
@@ -16,15 +14,17 @@ export function CtaSection() {
           Anda membuat soal?
         </h2>
         <p className="mx-auto mt-4 max-w-sm text-muted-foreground text-sm">
-          Bergabunglah dengan ribuan pendidik yang lebih produktif bersama
-          QuestGen.
+          QuestGen sedang dalam tahap beta. Ajukan permintaan akses untuk
+          bergabung.
         </p>
-        <Link
-          to="/login"
+        <a
+          href={REQUEST_ACCESS_FORM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="mt-8 inline-block bg-foreground px-8 py-3 font-medium text-background text-sm transition-opacity hover:opacity-80"
         >
-          Mulai Gratis
-        </Link>
+          Minta Akses
+        </a>
       </FadeIn>
     </section>
   );
