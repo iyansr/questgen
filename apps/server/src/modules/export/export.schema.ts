@@ -12,6 +12,9 @@ export const exportPdfSchema = z.object({
 
 export type ExportPdfInput = z.infer<typeof exportPdfSchema>;
 
+export const exportDocxSchema = exportPdfSchema;
+export type ExportDocxInput = ExportPdfInput;
+
 export function defaultSemester(date = new Date()): string {
   const month = date.getMonth();
   return month >= 6 || month <= 0 ? 'Semester Ganjil' : 'Semester Genap';

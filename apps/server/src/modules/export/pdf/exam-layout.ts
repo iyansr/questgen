@@ -6,7 +6,7 @@ import {
   rgb,
 } from 'pdf-lib';
 
-import type { TextStyle } from './markdown-blocks';
+import type { TextStyle } from '../shared/markdown-blocks';
 import { sanitizePdfText } from './pdf-text-sanitize';
 
 export const PAGE_WIDTH = 595.28;

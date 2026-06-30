@@ -4,7 +4,7 @@ import remarkParse from 'remark-parse';
 import { unified } from 'unified';
 import { visit } from 'unist-util-visit';
 
-import { latexToUnicode } from './pdf-text-sanitize';
+import { latexToUnicode } from './latex-unicode';
 
 export type TextStyle = 'normal' | 'bold' | 'italic' | 'boldItalic';
 

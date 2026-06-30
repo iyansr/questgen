@@ -1,6 +1,6 @@
 import {
   ClockCounterClockwise,
-  FileText,
+  // FileText,
   House,
   Plus,
   SignOut,
@@ -16,7 +16,7 @@ const navItems = [
   { label: 'Beranda', to: '/dashboard', icon: House },
   { label: 'Buat Soal', to: '/new', icon: Plus },
   { label: 'Riwayat', to: '/history', icon: ClockCounterClockwise },
-  { label: 'Dokumen', to: '/documents', icon: FileText },
+  // { label: 'Dokumen', to: '/documents', icon: FileText },
 ] as const;
 
 export function DashboardLayout({ children }: { children: React.ReactNode }) {

@@ -1,12 +1,14 @@
 export const DEFAULT_DOCUMENT_TITLE = 'ULANGAN HARIAN';
 
-export type ExportPdfInput = {
+export type ExportExamInput = {
   documentTitle: string;
   schoolName?: string;
   subject: string;
   classLabel?: string;
   semester?: string;
 };
+
+export type ExportPdfInput = ExportExamInput;
 
 export function defaultSemester(date = new Date()): string {
   const month = date.getMonth();

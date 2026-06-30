@@ -17,20 +17,21 @@ import {
   buildClassLabel,
   DEFAULT_DOCUMENT_TITLE,
   defaultSemester,
-  type ExportPdfInput,
-} from '../export-pdf-schema';
+  type ExportExamInput,
+} from '../export-exam-schema';
 
-type ExportPdfDialogProps = {
+type ExportExamDialogProps = {
+  variant: 'pdf' | 'docx';
   open: boolean;
   onOpenChange: (open: boolean) => void;
   session: SessionDetail;
   dirtyCount: number;
   isGenerating: boolean;
-  onPreview: (input: ExportPdfInput) => void;
-  onDownload: (input: ExportPdfInput) => void;
+  onDownload: (input: ExportExamInput) => void;
+  onPreview?: (input: ExportExamInput) => void;
 };
 
-function buildDefaultForm(session: SessionDetail): ExportPdfInput {
+function buildDefaultForm(session: SessionDetail): ExportExamInput {
   const { config, title } = session;
   return {
     documentTitle: DEFAULT_DOCUMENT_TITLE,
@@ -41,7 +42,7 @@ function buildDefaultForm(session: SessionDetail): ExportPdfInput {
   };
 }
 
-function normalizeInput(form: ExportPdfInput): ExportPdfInput {
+function normalizeInput(form: ExportExamInput): ExportExamInput {
   return {
     ...form,
     documentTitle: form.documentTitle.trim(),
@@ -51,19 +52,36 @@ function normalizeInput(form: ExportPdfInput): ExportPdfInput {
   };
 }
 
-export function ExportPdfDialog({
+const COPY = {
+  pdf: {
+    title: 'Ekspor PDF',
+    description:
+      'Atur judul lembar soal dan identitas sekolah. Pratinjau atau unduh langsung.',
+    download: 'Unduh PDF',
+  },
+  docx: {
+    title: 'Ekspor DOCX',
+    description:
+      'Atur judul lembar soal dan identitas sekolah, lalu unduh dokumen Word.',
+    download: 'Unduh DOCX',
+  },
+} as const;
+
+export function ExportExamDialog({
+  variant,
   open,
   onOpenChange,
   session,
   dirtyCount,
   isGenerating,
-  onPreview,
   onDownload,
-}: ExportPdfDialogProps) {
+  onPreview,
+}: ExportExamDialogProps) {
   const formId = useId();
-  const [form, setForm] = useState<ExportPdfInput>(() =>
+  const [form, setForm] = useState<ExportExamInput>(() =>
     buildDefaultForm(session),
   );
+  const copy = COPY[variant];
 
   useEffect(() => {
     if (open) {
@@ -71,9 +89,9 @@ export function ExportPdfDialog({
     }
   }, [open, session]);
 
-  const updateField = <K extends keyof ExportPdfInput>(
+  const updateField = <K extends keyof ExportExamInput>(
     key: K,
-    value: ExportPdfInput[K],
+    value: ExportExamInput[K],
   ) => {
     setForm((prev) => ({ ...prev, [key]: value }));
   };
@@ -81,7 +99,7 @@ export function ExportPdfDialog({
   const handleSubmit = (action: 'preview' | 'download') => {
     const input = normalizeInput(form);
     if (action === 'preview') {
-      onPreview(input);
+      onPreview?.(input);
       return;
     }
     onDownload(input);
@@ -91,11 +109,8 @@ export function ExportPdfDialog({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="flex h-[min(85vh,720px)] w-[min(96vw,40rem)] max-w-none flex-col gap-0 overflow-hidden p-0 sm:max-w-none">
         <DialogHeader className="shrink-0 border-border border-b px-6 py-5">
-          <DialogTitle>Ekspor PDF</DialogTitle>
-          <DialogDescription>
-            Atur judul lembar soal dan identitas sekolah. Pratinjau atau unduh
-            langsung.
-          </DialogDescription>
+          <DialogTitle>{copy.title}</DialogTitle>
+          <DialogDescription>{copy.description}</DialogDescription>
         </DialogHeader>
 
         <div className="flex min-h-0 flex-1 flex-col gap-6 overflow-y-auto px-6 py-5">
@@ -113,7 +128,11 @@ export function ExportPdfDialog({
             className="space-y-4"
             onSubmit={(e) => {
               e.preventDefault();
-              handleSubmit('preview');
+              if (variant === 'pdf') {
+                handleSubmit('preview');
+                return;
+              }
+              handleSubmit('download');
             }}
           >
             <Field>
@@ -177,20 +196,27 @@ export function ExportPdfDialog({
           >
             Batal
           </Button>
+          {variant === 'pdf' && onPreview && (
+            <Button
+              type="submit"
+              form={formId}
+              variant="outline"
+              disabled={isGenerating}
+            >
+              {isGenerating ? 'Memproses…' : 'Pratinjau'}
+            </Button>
+          )}
           <Button
-            type="submit"
-            form={formId}
-            variant="outline"
+            type={variant === 'docx' ? 'submit' : 'button'}
+            form={variant === 'docx' ? formId : undefined}
             disabled={isGenerating}
+            onClick={
+              variant === 'pdf'
+                ? () => handleSubmit('download')
+                : undefined
+            }
           >
-            {isGenerating ? 'Memproses…' : 'Pratinjau'}
-          </Button>
-          <Button
-            type="button"
-            disabled={isGenerating}
-            onClick={() => handleSubmit('download')}
-          >
-            {isGenerating ? 'Memproses…' : 'Unduh PDF'}
+            {isGenerating ? 'Memproses…' : copy.download}
           </Button>
         </DialogFooter>
       </DialogContent>

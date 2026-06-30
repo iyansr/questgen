@@ -14,6 +14,7 @@ import {
 } from '@/modules/new-session/schema';
 import type { SessionDetail, SessionStatus } from '@/services/sessions/detail';
 
+import { ExportDocxButton } from './export-docx-button';
 import { ExportPdfButton } from './export-pdf-button';
 import { StatusBadge } from './status-badge';
 
@@ -92,6 +93,11 @@ export function SessionHeader({
             Dibuat {formatDateTime(createdAt)}
           </p>
           <ExportPdfButton
+            session={session}
+            questionsCount={questionsCount}
+            dirtyCount={dirtyCount}
+          />
+          <ExportDocxButton
             session={session}
             questionsCount={questionsCount}
             dirtyCount={dirtyCount}

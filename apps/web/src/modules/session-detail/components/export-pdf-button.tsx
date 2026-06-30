@@ -6,8 +6,8 @@ import { toast } from 'sonner';
 import type { SessionDetail } from '@/services/sessions/detail';
 import { exportSessionPdfService } from '@/services/sessions/export-pdf';
 
-import type { ExportPdfInput } from '../export-pdf-schema';
-import { ExportPdfDialog } from './export-pdf-dialog';
+import type { ExportExamInput } from '../export-exam-schema';
+import { ExportExamDialog } from './export-exam-dialog';
 import { ExportPdfPreviewDialog } from './export-pdf-preview-dialog';
 
 function downloadBlob(blob: Blob, title: string) {
@@ -55,7 +55,7 @@ export function ExportPdfButton({
   }, [revokePreview]);
 
   const generatePdf = useCallback(
-    async (input: ExportPdfInput) => {
+    async (input: ExportExamInput) => {
       setIsGenerating(true);
       try {
         const blob = await exportSessionPdfService(session.id, input);
@@ -72,7 +72,7 @@ export function ExportPdfButton({
   );
 
   const handlePreview = useCallback(
-    async (input: ExportPdfInput) => {
+    async (input: ExportExamInput) => {
       revokePreview();
       const blob = await generatePdf(input);
       if (!blob) return;
@@ -85,7 +85,7 @@ export function ExportPdfButton({
   );
 
   const handleDownload = useCallback(
-    async (input: ExportPdfInput) => {
+    async (input: ExportExamInput) => {
       const blob = pdfBlobRef.current ?? (await generatePdf(input));
       if (!blob) return;
       downloadBlob(blob, session.title);
@@ -115,7 +115,8 @@ export function ExportPdfButton({
         Ekspor PDF
       </Button>
 
-      <ExportPdfDialog
+      <ExportExamDialog
+        variant="pdf"
         open={formOpen}
         onOpenChange={setFormOpen}
         session={session}

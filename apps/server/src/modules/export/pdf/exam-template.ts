@@ -11,19 +11,15 @@ import {
   QUESTION_IMAGE_MAX_HEIGHT_PT,
   QUESTION_IMAGE_MAX_WIDTH_PT,
 } from './exam-layout';
-import { loadQuestionImage } from './image-loader';
-import { type ContentBlock, markdownToBlocks } from './markdown-blocks';
+import {
+  buildSubtitle,
+  isMultipleChoice,
+  type QuestionOption,
+} from '../shared/exam-helpers';
+import { loadQuestionImage } from '../shared/image-loader';
+import { type ContentBlock, markdownToBlocks } from '../shared/markdown-blocks';
 
 type QuestionRow = typeof questions.$inferSelect;
-
-type QuestionOption = {
-  label: string;
-  text: string;
-};
-
-function isMultipleChoice(type: string): boolean {
-  return type === 'multiple_choice' || type === 'true_false';
-}
 
 function drawBlocks(
   layout: ExamLayout,
@@ -44,12 +40,6 @@ function drawBlocks(
       });
     }
   }
-}
-
-function buildSubtitle(options: ExportPdfInput): string {
-  return [options.subject, options.classLabel, options.semester]
-    .filter((part) => part && part.trim().length > 0)
-    .join(' · ');
 }
 
 export function drawExamHeader(

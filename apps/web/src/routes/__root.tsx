@@ -4,7 +4,7 @@ import {
   HeadContent,
   Outlet,
 } from '@tanstack/react-router';
-import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
+// import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 import 'katex/dist/katex.min.css';
 
 import { ThemeProvider } from '@/components/theme-provider';
@@ -47,7 +47,7 @@ function RootComponent() {
         <Outlet />
         <Toaster richColors position="top-center" />
       </ThemeProvider>
-      <TanStackRouterDevtools position="bottom-left" />
+      {/* <TanStackRouterDevtools position="bottom-left" /> */}
     </>
   );
 }

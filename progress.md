@@ -5,7 +5,7 @@
 - Repository root: `/Users/iyansr/IyanSR/Project/Skripsi/questgen`
 - Standard startup path: `./init.sh`
 - Standard verification path: `pnpm --filter web check-types`
-- Current highest-priority unfinished feature: PPT/PPTX upload support (code complete; migration + E2E smoke pending)
+- Current highest-priority unfinished feature: DOCX export (code complete; manual browser smoke pending)
 - Current blocker: `0003_rapid_the_fallen.sql` not applied — run `pnpm db:migrate`
 
 ## Session Log
@@ -144,4 +144,19 @@
   - Missing creds or localhost `SERVER_URL` → auto-fallback to Mistral Files upload (dev behavior).
 - Known risk or unresolved issue: live prod OCR with presigned URL not tested; local upload smoke not run this session.
 - Next best step: set prod R2 presign secrets, deploy, upload PDF — confirm workflow completes without Mistral Files upload.
+
+### Session 008
+
+- Date: 2026-06-26
+- Goal: DOCX export matching PDF lembar-soal layout on Cloudflare Worker; FE download-only (no preview).
+- Completed:
+  - Shared export utilities: `export/shared/markdown-blocks.ts`, `image-loader.ts`, `exam-helpers.ts`, `latex-unicode.ts`.
+  - Server DOCX module via `docx` v9 (`Packer.toBlob`): `POST /api/sessions/:id/export/docx`, same metadata schema as PDF.
+  - Layout mirrors PDF: header, dotted Nama/Kelas/Tanggal, numbered soal, lowercase options, R2 images, footer `A4 | n dari total | Kop Sekolah`.
+  - Web: shared `ExportExamDialog` (`pdf` | `docx` variant), `ExportDocxButton` download-only, `export-docx.ts` service.
+- Verification run: `pnpm --filter server check-types` → pass; `pnpm --filter web check-types` → pass; `Packer.toBlob` smoke → 8490 bytes.
+- Evidence captured: both typecheck commands exit 0.
+- Commits: none yet.
+- Known risk or unresolved issue: manual browser download smoke not run; DOCX uses Times New Roman vs PDF Noto Serif; Word auto-pagination may differ slightly from PDF cursor layout.
+- Next best step: open completed session → Ekspor DOCX → unduh and open in Word against `wrangler dev`.
 

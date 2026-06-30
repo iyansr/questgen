@@ -29,6 +29,7 @@
     "aws4fetch": "^1.0.20",
     "bcryptjs": "^3.0.3",
     "chromadb": "^3.4.3",
+    "docx": "^9.5.0",
     "dotenv": "catalog:",
     "drizzle-orm": "^0.45.2",
     "hono": "^4.8.2",
