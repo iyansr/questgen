@@ -51,6 +51,77 @@ Before ending a session:
 4. Leave the repo clean enough for the next session to run `./init.sh`
  immediately.
 
+## Branch Strategy (Beta)
+
+During beta, `main` and `dev` serve different purposes. Do not treat them as
+interchangeable.
+
+| Branch | Purpose |
+|--------|---------|
+| `main` | Beta / public — closed registration, request-access landing |
+| `dev` | Active development — full features (registration, pricing, testimonials) |
+| `cursor/<name>-7846` | Short-lived feature branches off `dev` |
+
+### Daily development
+
+1. Branch from `dev`, not `main`.
+2. Open PRs into `dev`, not `main`.
+3. Keep `main` stable for beta users unless you are deliberately promoting work.
+
+```bash
+git checkout dev
+git pull origin dev
+git checkout -b cursor/my-feature-7846
+
+# work, commit, push
+git push -u origin cursor/my-feature-7846
+# PR: cursor/my-feature-7846 → dev
+```
+
+### Promoting work to beta (`main`)
+
+`main` contains beta-only behavior (disabled register API, hidden pricing/testimonials,
+request-access CTAs). `dev` does not. The branches will diverge.
+
+Choose one approach when shipping to beta:
+
+**Cherry-pick (preferred for small releases)**
+
+```bash
+git checkout main
+git pull origin main
+git cherry-pick <commit-sha>
+git push origin main
+```
+
+**Merge batch (when releasing multiple features)**
+
+```bash
+git checkout main
+git merge dev
+# resolve conflicts — keep beta restrictions on main
+git push origin main
+```
+
+After any promotion to `main`, confirm beta behavior is still intact:
+
+- `POST /api/auth/register` returns 403
+- `/register` redirects to `/`
+- landing hides pricing and testimonials
+- CTAs use `REQUEST_ACCESS_FORM_URL` in `apps/web/src/modules/landing/constants.ts`
+
+### Long-term option: feature flags
+
+If merge conflicts between beta gating and new features become frequent, move beta
+behavior behind env flags (e.g. `VITE_BETA_MODE`, `REGISTRATION_ENABLED`) so `dev`
+and `main` can share the same code with different deploy config.
+
+```
+feature branch ──PR──► dev
+                           ├── cherry-pick ──► main   (one feature to beta)
+                           └── merge ─────────► main   (release batch)
+```
+
 ## Cursor Cloud specific instructions
 
 Monorepo (pnpm). Standard run/test/lint commands live in `README.md` and root
