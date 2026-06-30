@@ -78,10 +78,16 @@ Monorepo (pnpm). Standard run/test/lint commands live in `README.md` and root
   `apps/server/.dev.vars` (wrangler reads `.dev.vars`, drizzle reads `.env` — keep
   them in sync), and `apps/web/.env` (`VITE_SERVER_URL=http://localhost:3000`).
   If missing, recreate from the `README.md` env tables.
-- `OPENROUTER_API_KEY`, `MISTRAL_API_KEY`, `TAVILY_API_KEY` are placeholders.
-  Auth, dashboard, history, and question-set CRUD work without them. AI question
-  generation, document OCR, and web search require real keys plus a running
-  ChromaDB; they will fail with placeholders.
+- IMPORTANT: `wrangler dev` loads server vars/secrets from `apps/server/.dev.vars`,
+  NOT from the process environment. Cloud Agent secrets (`OPENROUTER_API_KEY`,
+  `MISTRAL_API_KEY`, `TAVILY_API_KEY`) are injected as shell env vars, so they must
+  be written into `.dev.vars` (and `.env`) for the server to see them, e.g.
+  `OPENROUTER_API_KEY=${OPENROUTER_API_KEY}`. Restart `pnpm dev:server` after editing.
+- Without those keys, auth/dashboard/history/CRUD still work. AI question generation
+  needs the keys: the web-search path (new session → "Pencarian Web") uses only
+  OpenRouter + Tavily and does NOT need ChromaDB; the document-upload path
+  additionally needs Mistral OCR + a running ChromaDB. Generation runs through a
+  Cloudflare Workflow (works under local `wrangler dev`) and takes ~1–2 minutes.
 - After a schema change run `pnpm db:push` (idempotent) to sync Postgres.
 - `pnpm check` (Biome) runs `--write` and will reformat files. The repo currently
   has pre-existing Biome lint/format diagnostics, so a clean run is not the
