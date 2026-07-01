@@ -43,13 +43,13 @@ function buildGeneratedQuestionSchema(allowedTypes: QuestionType[]) {
     questionText: z
       .string()
       .describe(
-        'Question text in markdown format. Never explicitly mention imageRef here, but it may be implicitly referenced (e.g. "What does the diagram illustrate?").',
+        'Question text in markdown format. Do not use image lead-in phrases (e.g. "Perhatikan gambar berikut") unless imageRef is set to a valid catalog ID.',
       ),
     imageRef: z
       .string()
       .nullable()
       .describe(
-        'Usually null. Only set to an image ID when the question CANNOT be answered without examining that image. Most questions must be text-based, so the default is null.',
+        'Usually null. When null, questionText must not refer to an image. When set, must be an exact catalog ID for a question that cannot be answered without that image.',
       ),
     options: z
       .array(questionOptionSchema)
@@ -95,6 +95,56 @@ const TYPES_WITH_OPTIONS: ReadonlySet<QuestionType> = new Set([
 
 const IMAGE_MARKDOWN_RE = /!\[.*?\]\(.*?\)\s*/g;
 
+/** Lead-in phrases that imply a rendered image — strip when imageUrl is null. */
+const IMAGE_REFERENCE_LEAD_INS = [
+  'perhatikan gambar berikut',
+  'perhatikan gambar di atas',
+  'perhatikan gambar di bawah',
+  'perhatikan ilustrasi berikut',
+  'perhatikan diagram berikut',
+  'perhatikan grafik berikut',
+  'berdasarkan gambar di atas',
+  'berdasarkan gambar di bawah',
+  'berdasarkan gambar berikut',
+  'berdasarkan ilustrasi berikut',
+  'berdasarkan diagram berikut',
+  'amati ilustrasi tersebut',
+  'amati gambar tersebut',
+  'cermati diagram berikut',
+  'cermati gambar berikut',
+  'dari grafik di atas',
+  'dari gambar di atas',
+  'lihat gambar berikut',
+  'lihat gambar',
+  'pada gambar berikut',
+  'menurut gambar di atas',
+] as const;
+
+const LEAD_IN_TRAILING_PUNCT_RE = /^[,.\s:;–—-]+/;
+
+function stripOrphanedImageReferences(text: string): string {
+  const original = text.trim();
+  let result = original;
+  let changed = true;
+
+  while (changed) {
+    changed = false;
+    const lower = result.toLowerCase();
+    for (const phrase of IMAGE_REFERENCE_LEAD_INS) {
+      if (lower.startsWith(phrase)) {
+        result = result
+          .slice(phrase.length)
+          .replace(LEAD_IN_TRAILING_PUNCT_RE, '')
+          .trim();
+        changed = true;
+        break;
+      }
+    }
+  }
+
+  return result.length > 0 ? result : original;
+}
+
 function normalizeQuestion(
   q: GeneratedQuestion,
   imageCatalog: Map<string, ImageRef>,
@@ -109,7 +159,10 @@ function normalizeQuestion(
     ? (q.options ?? null)
     : null;
 
-  const questionText = q.questionText.replace(IMAGE_MARKDOWN_RE, '').trim();
+  let questionText = q.questionText.replace(IMAGE_MARKDOWN_RE, '').trim();
+  if (!imageUrl) {
+    questionText = stripOrphanedImageReferences(questionText);
+  }
 
   return {
     questionType: q.questionType,
@@ -169,6 +222,7 @@ function buildImageGuidance(
   return [
     `Image budget: AT MOST ${maxImageQuestions} of the ${total} questions may attach an image (set imageRef). The remaining ${total - maxImageQuestions} or more MUST set imageRef to null.`,
     'Default to imageRef = null. Only spend an image on a question that genuinely cannot be answered without looking at the diagram/chart/map — not on questions that text alone can test.',
+    'Never use image lead-in phrasing (e.g. "Perhatikan gambar berikut") unless imageRef is set for that question.',
     availableImages > 1
       ? 'When you do use images, spread them across DIFFERENT images and vary the lead-in phrasing.'
       : '',
