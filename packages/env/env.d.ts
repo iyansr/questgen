@@ -7,6 +7,7 @@ interface QuestgenEnv {
 
   // Plain vars (set in Cloudflare dashboard for production, .env for local dev)
   CORS_ORIGIN: string;
+  BETA_MODE?: string;
   SERVER_URL?: string;
   R2_PUBLIC_HOST?: string;
   R2_ACCOUNT_ID?: string;

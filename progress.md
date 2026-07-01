@@ -190,3 +190,16 @@
 - Evidence captured: vite build includes `register` chunk again; both typecheck commands exit 0.
 - Next best step: merge PR into `dev`; continue feature work on `dev` branches.
 
+### Session 011
+
+- Date: 2026-06-30
+- Goal: Replace branch-based beta/dev split with env feature flags.
+- Completed:
+  - Added `VITE_BETA_MODE`, `VITE_REQUEST_ACCESS_FORM_URL` (web) and `BETA_MODE` (server).
+  - New helpers: `apps/web/src/lib/feature-flags.ts`, `apps/server/src/shared/lib/beta-mode.ts`.
+  - Gated registration API, `/register` route, login link, landing sections, and CTAs behind flags.
+  - Updated `AGENTS.md` and `README.md` for env-based beta workflow.
+- Verification run: `pnpm --filter web check-types` + `pnpm --filter server check-types` → pass.
+- Evidence captured: both typecheck commands exit 0.
+- Next best step: merge PR; set beta env vars on `main` deploy; remove hardcoded beta code from `main` after merge.
+

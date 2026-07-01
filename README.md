@@ -41,6 +41,8 @@ questgen/
 | Variable | Description |
 |----------|-------------|
 | `VITE_SERVER_URL` | URL of the backend API server (e.g., `http://localhost:3000`) |
+| `VITE_BETA_MODE` | Enable beta landing and closed registration (`true` / `false`, default `false`) |
+| `VITE_REQUEST_ACCESS_FORM_URL` | Google Form URL for beta access requests (required when `VITE_BETA_MODE=true`) |
 
 ### Server (`apps/server/.env`)
 
@@ -51,6 +53,7 @@ questgen/
 | `DATABASE_URL` | PostgreSQL connection string |
 | `JWT_SECRET` | Secret key for signing JWT tokens |
 | `CORS_ORIGIN` | Allowed CORS origin for the web app (e.g., `http://localhost:3001`) |
+| `BETA_MODE` | Close registration API when `true` (beta deploys) |
 | `SERVER_URL` | Public URL of the server (e.g., `http://localhost:3000`) |
 | `OPENROUTER_API_KEY` | API key for OpenRouter (LLM provider) |
 | `MISTRAL_API_KEY` | API key for Mistral AI (embedding model) |

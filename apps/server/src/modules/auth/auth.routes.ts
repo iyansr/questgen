@@ -2,6 +2,7 @@ import { zValidator } from '@hono/zod-validator';
 import { Hono } from 'hono';
 
 import { authMiddleware } from '@/shared/middleware/auth';
+import { isBetaMode } from '@/shared/lib/beta-mode';
 import type { AppEnv } from '@/types';
 
 import { loginSchema, registerSchema } from './auth.schema';
@@ -10,6 +11,10 @@ import { getUserById, loginUser, registerUser } from './auth.service';
 const auth = new Hono<AppEnv>();
 
 auth.post('/register', zValidator('json', registerSchema), async (c) => {
+  if (isBetaMode()) {
+    return c.json({ error: 'Registration is closed during beta' }, 403);
+  }
+
   const { email, password, name } = c.req.valid('json');
   const db = c.get('db');
 

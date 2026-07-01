@@ -1,5 +1,7 @@
 import Header from '@/components/header';
 
+import { isBetaMode } from '@/lib/feature-flags';
+
 import { BentoGridSection } from './components/bento-grid-section';
 import { CtaSection } from './components/cta-section';
 import { FaqSection } from './components/faq-section';
@@ -22,8 +24,8 @@ export function LandingPage() {
         <SocialProofSection />
         <BentoGridSection />
         <PlatformFeaturesSection />
-        <TestimonialSection />
-        <PricingSection />
+        {!isBetaMode && <TestimonialSection />}
+        {!isBetaMode && <PricingSection />}
         <FaqSection />
         <CtaSection />
         <FooterSection />
