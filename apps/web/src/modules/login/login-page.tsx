@@ -16,6 +16,7 @@ import { Controller, useForm } from 'react-hook-form';
 
 import { useLogin } from '@/services/auth/login';
 
+import { isBetaMode, requestAccessFormUrl } from '@/lib/feature-flags';
 import { type LoginFormValues, loginSchema } from './schema';
 
 export function LoginPage() {
@@ -144,23 +145,41 @@ export function LoginPage() {
           </FieldGroup>
         </form>
 
-        <div className="mt-8 flex items-center gap-3">
-          <div className="h-px flex-1 bg-border" />
-          <span className="text-muted-foreground text-xs">atau</span>
-          <div className="h-px flex-1 bg-border" />
-        </div>
+        {isBetaMode ? (
+          <div className="mt-8 text-center">
+            <p className="text-muted-foreground text-sm">
+              Belum punya akun?{' '}
+              <a
+                href={requestAccessFormUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-foreground underline-offset-4 transition-colors hover:underline"
+              >
+                Minta akses beta
+              </a>
+            </p>
+          </div>
+        ) : (
+          <>
+            <div className="mt-8 flex items-center gap-3">
+              <div className="h-px flex-1 bg-border" />
+              <span className="text-muted-foreground text-xs">atau</span>
+              <div className="h-px flex-1 bg-border" />
+            </div>
 
-        <div className="mt-8 text-center">
-          <p className="text-muted-foreground text-sm">
-            Belum punya akun?{' '}
-            <Link
-              to="/register"
-              className="font-medium text-foreground underline-offset-4 transition-colors hover:underline"
-            >
-              Buat akun
-            </Link>
-          </p>
-        </div>
+            <div className="mt-8 text-center">
+              <p className="text-muted-foreground text-sm">
+                Belum punya akun?{' '}
+                <Link
+                  to="/register"
+                  className="font-medium text-foreground underline-offset-4 transition-colors hover:underline"
+                >
+                  Buat akun
+                </Link>
+              </p>
+            </div>
+          </>
+        )}
       </Card>
     </div>
   );
