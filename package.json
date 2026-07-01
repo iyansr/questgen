@@ -31,6 +31,7 @@
     "db:generate": "pnpm --filter @questgen/db db:generate",
     "db:migrate": "pnpm --filter @questgen/db db:migrate",
     "deploy": "pnpm --filter server deploy",
+    "deploy:server:dev": "pnpm --filter server deploy:dev",
     "check": "biome check --write ."
   },
   "dependencies": {

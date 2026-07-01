@@ -15,6 +15,7 @@
   "observability": {
     "enabled": true,
   },
+  // Used by `wrangler dev` (local). Deploy with `--env production` or `--env dev`.
   "r2_buckets": [
     {
       "binding": "DOCUMENTS_BUCKET",
@@ -30,5 +31,45 @@
   ],
   "dev": {
     "port": 3000,
+  },
+  "env": {
+    "production": {
+      "name": "questgen-server",
+      "vars": {
+        "BETA_MODE": "true",
+      },
+      "r2_buckets": [
+        {
+          "binding": "DOCUMENTS_BUCKET",
+          "bucket_name": "questgen",
+        },
+      ],
+      "workflows": [
+        {
+          "binding": "GENERATION_WORKFLOW",
+          "name": "questgen-generation",
+          "class_name": "GenerationWorkflow",
+        },
+      ],
+    },
+    "dev": {
+      "name": "questgen-server-dev",
+      "vars": {
+        "BETA_MODE": "false",
+      },
+      "r2_buckets": [
+        {
+          "binding": "DOCUMENTS_BUCKET",
+          "bucket_name": "questgen-dev",
+        },
+      ],
+      "workflows": [
+        {
+          "binding": "GENERATION_WORKFLOW",
+          "name": "questgen-generation-dev",
+          "class_name": "GenerationWorkflow",
+        },
+      ],
+    },
   },
 }
