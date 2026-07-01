@@ -214,3 +214,15 @@
 - Evidence captured: both typecheck commands exit 0.
 - Next best step: push resolved `dev`, merge PR #6; set `VITE_BETA_MODE=true` and `BETA_MODE=true` on main deploy.
 
+### Session 013
+
+- Date: 2026-07-01
+- Goal: Fix production crash opening edit-question dialog (`Can't find variable: Prism`).
+- Completed:
+  - Added `prismjs-global-fix` Vite plugin in `apps/web/vite.config.ts` to inject `import Prism from 'prismjs'` into Prism language component modules.
+  - Root cause: `@mdxeditor/editor` → `@lexical/code` → `prismjs/components/*` reference bare global `Prism`, which Vite 8/Rolldown production bundles do not provide (Safari error format).
+- Verification run: `pnpm --filter web check-types` → pass; production bundle now uses imported Prism (`$.default.languages.clike`) instead of bare global.
+- Evidence captured: vite build exit 0; bundle grep shows no bare `Prism.languages` global access.
+- Known risk or unresolved issue: manual browser smoke on production preview not run in this session.
+- Next best step: deploy and confirm edit-question dialog opens in production/Safari.
+
