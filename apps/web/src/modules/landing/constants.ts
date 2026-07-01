@@ -1,6 +1,3 @@
-/** Google Form for beta access requests — replace when the real link is ready. */
-export const REQUEST_ACCESS_FORM_URL = 'https://forms.gle/placeholder';
-
 export const stripeStyle: React.CSSProperties = {
   backgroundImage:
     'repeating-linear-gradient(-45deg, transparent 0px, transparent 10px, rgb(0 0 0 / 0.025) 10px, rgb(0 0 0 / 0.025) 11px)',

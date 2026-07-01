@@ -178,3 +178,39 @@
 - Known risk or unresolved issue: replace `REQUEST_ACCESS_FORM_URL` in `apps/web/src/modules/landing/constants.ts` when the real Google Form link is ready.
 - Next best step: review and merge PR; update Google Form URL before deploy.
 
+### Session 010
+
+- Date: 2026-06-30
+- Goal: Sync `dev` with `main` while keeping beta restrictions only on `main`.
+- Completed:
+  - Merged `origin/main` into `dev` (fast-forward to `f41568c`).
+  - Restored full-feature behavior on `dev`: registration API/page, login register link, landing pricing + testimonials, original CTAs.
+  - Kept shared docs from `main`: `AGENTS.md` branch strategy and `progress.md` session 009.
+- Verification run: `pnpm --filter web check-types` + `pnpm --filter server check-types` → pass.
+- Evidence captured: vite build includes `register` chunk again; both typecheck commands exit 0.
+- Next best step: merge PR into `dev`; continue feature work on `dev` branches.
+
+### Session 011
+
+- Date: 2026-06-30
+- Goal: Replace branch-based beta/dev split with env feature flags.
+- Completed:
+  - Added `VITE_BETA_MODE`, `VITE_REQUEST_ACCESS_FORM_URL` (web) and `BETA_MODE` (server).
+  - New helpers: `apps/web/src/lib/feature-flags.ts`, `apps/server/src/shared/lib/beta-mode.ts`.
+  - Gated registration API, `/register` route, login link, landing sections, and CTAs behind flags.
+  - Updated `AGENTS.md` and `README.md` for env-based beta workflow.
+- Verification run: `pnpm --filter web check-types` + `pnpm --filter server check-types` → pass.
+- Evidence captured: both typecheck commands exit 0.
+- Next best step: merge PR; set beta env vars on `main` deploy.
+
+### Session 012
+
+- Date: 2026-06-30
+- Goal: Resolve `dev` → `main` merge conflicts (PR #6) after feature-flag refactor.
+- Completed:
+  - Merged `origin/main` into `dev`; kept feature-flag implementation over hardcoded beta code from `main`.
+  - Removed duplicate `REQUEST_ACCESS_FORM_URL` from landing constants (now env-driven).
+- Verification run: `pnpm --filter web check-types` + `pnpm --filter server check-types` → pass.
+- Evidence captured: both typecheck commands exit 0.
+- Next best step: push resolved `dev`, merge PR #6; set `VITE_BETA_MODE=true` and `BETA_MODE=true` on main deploy.
+

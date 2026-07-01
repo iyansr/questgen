@@ -51,75 +51,42 @@ Before ending a session:
 4. Leave the repo clean enough for the next session to run `./init.sh`
  immediately.
 
-## Branch Strategy (Beta)
+## Beta Mode (Feature Flags)
 
-During beta, `main` and `dev` serve different purposes. Do not treat them as
-interchangeable.
+Beta vs full development is controlled by **environment variables**, not separate
+code paths on different branches. `main` and `dev` can share the same codebase.
 
-| Branch | Purpose |
-|--------|---------|
-| `main` | Beta / public — closed registration, request-access landing |
-| `dev` | Active development — full features (registration, pricing, testimonials) |
-| `cursor/<name>-7846` | Short-lived feature branches off `dev` |
+| Variable | App | Default | Beta value |
+|----------|-----|---------|------------|
+| `VITE_BETA_MODE` | web | `false` | `true` |
+| `VITE_REQUEST_ACCESS_FORM_URL` | web | — | Google Form URL (required when beta) |
+| `BETA_MODE` | server | unset / `false` | `true` |
 
-### Daily development
+Set these in deploy config per environment:
 
-1. Branch from `dev`, not `main`.
-2. Open PRs into `dev`, not `main`.
-3. Keep `main` stable for beta users unless you are deliberately promoting work.
+- **Local dev** (`apps/web/.env`, `apps/server/.dev.vars`): leave beta flags off
+- **Beta / production** (`main` deploy): set all three; replace the form URL when ready
+
+When `BETA_MODE` / `VITE_BETA_MODE` is enabled:
+
+- `POST /api/auth/register` returns 403
+- `/register` redirects to `/`
+- login links to the request-access form
+- landing hides pricing and testimonials
+- hero and CTA show **Minta Akses**
+
+### Branch workflow
+
+Use `dev` for integration and feature PRs. Merge `dev` → `main` freely — no need to
+restore or cherry-pick beta-specific code. Configure beta behavior via env on the
+`main` deployment only.
 
 ```bash
 git checkout dev
 git pull origin dev
 git checkout -b cursor/my-feature-7846
-
-# work, commit, push
-git push -u origin cursor/my-feature-7846
 # PR: cursor/my-feature-7846 → dev
-```
-
-### Promoting work to beta (`main`)
-
-`main` contains beta-only behavior (disabled register API, hidden pricing/testimonials,
-request-access CTAs). `dev` does not. The branches will diverge.
-
-Choose one approach when shipping to beta:
-
-**Cherry-pick (preferred for small releases)**
-
-```bash
-git checkout main
-git pull origin main
-git cherry-pick <commit-sha>
-git push origin main
-```
-
-**Merge batch (when releasing multiple features)**
-
-```bash
-git checkout main
-git merge dev
-# resolve conflicts — keep beta restrictions on main
-git push origin main
-```
-
-After any promotion to `main`, confirm beta behavior is still intact:
-
-- `POST /api/auth/register` returns 403
-- `/register` redirects to `/`
-- landing hides pricing and testimonials
-- CTAs use `REQUEST_ACCESS_FORM_URL` in `apps/web/src/modules/landing/constants.ts`
-
-### Long-term option: feature flags
-
-If merge conflicts between beta gating and new features become frequent, move beta
-behavior behind env flags (e.g. `VITE_BETA_MODE`, `REGISTRATION_ENABLED`) so `dev`
-and `main` can share the same code with different deploy config.
-
-```
-feature branch ──PR──► dev
-                           ├── cherry-pick ──► main   (one feature to beta)
-                           └── merge ─────────► main   (release batch)
+# when ready: merge dev → main, deploy main with beta env vars
 ```
 
 ## Cursor Cloud specific instructions
@@ -149,6 +116,9 @@ Monorepo (pnpm). Standard run/test/lint commands live in `README.md` and root
   `apps/server/.dev.vars` (wrangler reads `.dev.vars`, drizzle reads `.env` — keep
   them in sync), and `apps/web/.env` (`VITE_SERVER_URL=http://localhost:3000`).
   If missing, recreate from the `README.md` env tables.
+- Beta mode is off locally by default. To test beta UI locally, set
+  `VITE_BETA_MODE=true` in `apps/web/.env` and `BETA_MODE=true` in
+  `apps/server/.dev.vars`, then restart dev servers.
 - IMPORTANT: `wrangler dev` loads server vars/secrets from `apps/server/.dev.vars`,
   NOT from the process environment. Cloud Agent secrets (`OPENROUTER_API_KEY`,
   `MISTRAL_API_KEY`, `TAVILY_API_KEY`) are injected as shell env vars, so they must

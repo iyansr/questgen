@@ -1,4 +1,8 @@
-import { REQUEST_ACCESS_FORM_URL, stripeStyle } from '../constants';
+import { Link } from '@tanstack/react-router';
+
+import { isBetaMode, requestAccessFormUrl } from '@/lib/feature-flags';
+
+import { stripeStyle } from '../constants';
 import { FadeIn } from './fade-in';
 
 export function CtaSection() {
@@ -14,17 +18,27 @@ export function CtaSection() {
           Anda membuat soal?
         </h2>
         <p className="mx-auto mt-4 max-w-sm text-muted-foreground text-sm">
-          QuestGen sedang dalam tahap beta. Ajukan permintaan akses untuk
-          bergabung.
+          {isBetaMode
+            ? 'QuestGen sedang dalam tahap beta. Ajukan permintaan akses untuk bergabung.'
+            : 'Bergabunglah dengan ribuan pendidik yang lebih produktif bersama QuestGen.'}
         </p>
-        <a
-          href={REQUEST_ACCESS_FORM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-8 inline-block bg-foreground px-8 py-3 font-medium text-background text-sm transition-opacity hover:opacity-80"
-        >
-          Minta Akses
-        </a>
+        {isBetaMode ? (
+          <a
+            href={requestAccessFormUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-block bg-foreground px-8 py-3 font-medium text-background text-sm transition-opacity hover:opacity-80"
+          >
+            Minta Akses
+          </a>
+        ) : (
+          <Link
+            to="/login"
+            className="mt-8 inline-block bg-foreground px-8 py-3 font-medium text-background text-sm transition-opacity hover:opacity-80"
+          >
+            Mulai Gratis
+          </Link>
+        )}
       </FadeIn>
     </section>
   );
