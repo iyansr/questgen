@@ -1,6 +1,7 @@
 import { Link } from '@tanstack/react-router';
 
 import { isBetaMode, requestAccessFormUrl } from '@/lib/feature-flags';
+
 import { stripeStyle } from '../constants';
 import { FadeIn } from './fade-in';
 

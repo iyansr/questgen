@@ -1,8 +1,8 @@
 import { zValidator } from '@hono/zod-validator';
 import { Hono } from 'hono';
 
-import { authMiddleware } from '@/shared/middleware/auth';
 import { isBetaMode } from '@/shared/lib/beta-mode';
+import { authMiddleware } from '@/shared/middleware/auth';
 import type { AppEnv } from '@/types';
 
 import { loginSchema, registerSchema } from './auth.schema';

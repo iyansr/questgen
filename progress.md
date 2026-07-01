@@ -201,5 +201,16 @@
   - Updated `AGENTS.md` and `README.md` for env-based beta workflow.
 - Verification run: `pnpm --filter web check-types` + `pnpm --filter server check-types` → pass.
 - Evidence captured: both typecheck commands exit 0.
-- Next best step: merge PR; set beta env vars on `main` deploy; remove hardcoded beta code from `main` after merge.
+- Next best step: merge PR; set beta env vars on `main` deploy.
+
+### Session 012
+
+- Date: 2026-06-30
+- Goal: Resolve `dev` → `main` merge conflicts (PR #6) after feature-flag refactor.
+- Completed:
+  - Merged `origin/main` into `dev`; kept feature-flag implementation over hardcoded beta code from `main`.
+  - Removed duplicate `REQUEST_ACCESS_FORM_URL` from landing constants (now env-driven).
+- Verification run: `pnpm --filter web check-types` + `pnpm --filter server check-types` → pass.
+- Evidence captured: both typecheck commands exit 0.
+- Next best step: push resolved `dev`, merge PR #6; set `VITE_BETA_MODE=true` and `BETA_MODE=true` on main deploy.
 
