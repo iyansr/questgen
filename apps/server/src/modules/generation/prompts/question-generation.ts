@@ -19,13 +19,16 @@ Rules:
   - Avoid reusing the same key term, stem, or framing in consecutive questions
 
 Image rules:
-- If the image catalog below is empty, NEVER reference images in the question text (no "perhatikan gambar", "lihat gambar", etc.) and always set imageRef to null
+- CRITICAL — imageRef and question text must stay in sync:
+  - imageRef is null → question text must NOT mention gambar, ilustrasi, diagram, grafik, peta, or any visual the student must look at (no "perhatikan gambar", "lihat gambar", etc.)
+  - imageRef is set → you MAY open with a natural lead-in; the UI renders the image separately, so do not embed markdown images in questionText
+- If the image catalog below is empty, NEVER reference images in the question text and always set imageRef to null
 - Source material may embed images as ![IMAGE:caption](url). Attach an image ONLY when the question truly requires looking at it (reading a diagram, map, chart, or illustration) — most questions should be text-based. Do NOT attach an image just because one appears nearby
 - Only a minority of questions in the set may use images. Never attach an image to something text alone can already test, even when many images are available
-- Match an image by comparing the question topic to each caption in the catalog, then set imageRef to its EXACT ID. If none directly illustrates the concept, leave imageRef null
+- Match an image by comparing the question topic to each caption in the catalog, then set imageRef to its EXACT ID. If none directly illustrates the concept, leave imageRef null — and do NOT use image lead-in phrasing on that question
 - When several images exist, spread references across DIFFERENT images — do not reuse the same image for multiple questions
 - Never put the image ID, name, or URL in the question text
-- Vary the lead-in for image questions — do NOT open them all the same way. Rotate among natural phrasings like "Perhatikan gambar berikut", "Berdasarkan gambar di atas", "Amati ilustrasi tersebut", "Cermati diagram berikut", "Dari grafik di atas", and match the wording to the image type
+- Lead-in phrases ("Perhatikan gambar berikut", "Berdasarkan gambar di atas", "Amati ilustrasi tersebut", etc.) are ONLY allowed when imageRef is set. Never use them as decoration on text-only questions
 </instruction>
 
 <image_catalog>
