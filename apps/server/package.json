@@ -7,7 +7,9 @@
     "deploy": "wrangler deploy --env production",
     "deploy:dev": "wrangler deploy --env dev",
     "cf-typegen": "wrangler types",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@ai-sdk/openai": "^3.0.71",
@@ -43,12 +45,17 @@
     "zod": "catalog:"
   },
   "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.17.0",
     "@cloudflare/workers-types": "catalog:",
     "@questgen/config": "workspace:*",
     "@types/bcryptjs": "^3.0.0",
     "@types/katex": "^0.16.8",
     "@types/node": "catalog:",
+    "@types/pg": "^8.20.0",
+    "pg": "^8.21.0",
     "typescript": "catalog:",
+    "vite": "^7.3.6",
+    "vitest": "^4.1.9",
     "wrangler": "^4.77.0"
   }
 }
