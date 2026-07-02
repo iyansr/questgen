@@ -2,9 +2,10 @@
 
 ## Current Verified State
 
-- Repository root: `/Users/iyansr/IyanSR/Project/Skripsi/questgen`
+- Repository root: `/workspace`
 - Standard startup path: `./init.sh`
 - Standard verification path: `pnpm --filter web check-types`
+- Server blackbox tests: `pnpm test:server` (requires PostgreSQL + `questgen_test` DB)
 - Current highest-priority unfinished feature: DOCX export (code complete; manual browser smoke pending)
 - Current blocker: `0003_rapid_the_fallen.sql` not applied — run `pnpm db:migrate`
 
@@ -238,4 +239,20 @@
 - Evidence captured: vite build exit 0; tsc exit 0.
 - Commits: pending.
 - Next best step: uncomment pricing when ready to ship pricing tiers.
+
+### Session 015
+
+- Date: 2026-07-02
+- Goal: Scaffold backend blackbox API tests (Tier 1) with mocked generation strategy documented.
+- Completed:
+  - Extracted Hono app to `apps/server/src/app.ts`; Worker entry remains `index.ts`.
+  - Added Vitest + `@cloudflare/vitest-pool-workers` with `wrangler.test.jsonc` (`BETA_MODE=false`).
+  - HTTP-only test helpers (`test/helpers/http.ts`, `auth.ts`) using `exports.default.fetch`.
+  - Tier 1 suites: health, auth (register/login/me), validation (401/404/400).
+  - Root script `pnpm test:server`; DB reset via Node `global-setup.ts` against `questgen_test`.
+  - Pinned `vite@^7` in server devDeps (workaround for `pg` + vitest-pool-workers on Vite 8).
+- Verification run: `pnpm --filter server test` → 18 passed; `pnpm --filter server check-types` → pass.
+- Evidence captured: vitest exit 0, 3 files / 18 tests green.
+- Known risk or unresolved issue: `pg` in Workers test runtime needs Vite 7 pin; Tier 2+ (fixtures, export, R2, mock workflow) not yet implemented; no CI job yet.
+- Next best step: add Tier 2 fixture seeding + export tests; wire `test:server` into CI with Postgres service.
 
