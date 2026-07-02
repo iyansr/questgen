@@ -1,5 +1,4 @@
 import Header from '@/components/header';
-
 import { isBetaMode } from '@/lib/feature-flags';
 
 import { BentoGridSection } from './components/bento-grid-section';
@@ -9,7 +8,7 @@ import { FeatureHighlightsSection } from './components/feature-highlights-sectio
 import { FooterSection } from './components/footer-section';
 import { HeroSection } from './components/hero-section';
 import { PlatformFeaturesSection } from './components/platform-features-section';
-import { PricingSection } from './components/pricing-section';
+// import { PricingSection } from './components/pricing-section';
 import { SocialProofSection } from './components/social-proof-section';
 import { TestimonialSection } from './components/testimonial-section';
 
@@ -25,7 +24,7 @@ export function LandingPage() {
         <BentoGridSection />
         <PlatformFeaturesSection />
         {!isBetaMode && <TestimonialSection />}
-        {!isBetaMode && <PricingSection />}
+        {/* {!isBetaMode && <PricingSection />} */}
         <FaqSection />
         <CtaSection />
         <FooterSection />

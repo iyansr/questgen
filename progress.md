@@ -226,3 +226,16 @@
 - Known risk or unresolved issue: manual browser smoke on production preview not run in this session.
 - Next best step: deploy and confirm edit-question dialog opens in production/Safari.
 
+### Session 014
+
+- Date: 2026-07-02
+- Goal: Hide landing pricing section (commented for later reuse); add dashboard header dark-mode toggle; default theme light.
+- Completed:
+  - Commented out `PricingSection` import and render in `landing-page.tsx` (hidden in all modes, not only beta).
+  - Added `ModeToggle` to `dashboard-layout.tsx` header (same control as landing).
+  - Changed `ThemeProvider` `defaultTheme` from `dark` to `light` in `__root.tsx`.
+- Verification run: `pnpm --filter web check-types` → pass.
+- Evidence captured: vite build exit 0; tsc exit 0.
+- Commits: pending.
+- Next best step: uncomment pricing when ready to ship pricing tiers.
+
