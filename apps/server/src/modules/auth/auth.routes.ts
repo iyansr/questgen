@@ -22,8 +22,8 @@ auth.post('/register', zValidator('json', registerSchema), async (c) => {
     const result = await registerUser(db, email, password, name);
     return c.json(result, 201);
   } catch (err) {
-    if (err instanceof Error && err.message === 'Email already registered') {
-      return c.json({ error: err.message }, 409);
+    if (err instanceof Error && err.message === 'Registration failed') {
+      return c.json({ error: err.message }, 400);
     }
     console.error('Register error:', err);
     return c.json({ error: 'Internal server error' }, 500);
