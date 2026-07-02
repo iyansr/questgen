@@ -5,7 +5,7 @@
 - Repository root: `/workspace`
 - Standard startup path: `./init.sh`
 - Standard verification path: `pnpm --filter web check-types`
-- Server blackbox tests: `pnpm test:server` (requires PostgreSQL + `questgen_test` DB)
+- Server blackbox tests: `pnpm test:server` (requires PostgreSQL + `questgen_test` DB; 54 tests, Tiers 1–4)
 - Current highest-priority unfinished feature: DOCX export (code complete; manual browser smoke pending)
 - Current blocker: `0003_rapid_the_fallen.sql` not applied — run `pnpm db:migrate`
 
@@ -255,6 +255,23 @@
 - Evidence captured: vitest exit 0, 3 files / 18 tests green.
 - Known risk or unresolved issue: `pg` in Workers test runtime needs Vite 7 pin; Tier 2+ (fixtures, export, R2, mock workflow) not yet implemented; no CI job yet.
 - Next best step: add Tier 2 fixture seeding + export tests; wire `test:server` into CI with Postgres service.
+
+### Session 015b
+
+- Date: 2026-07-02
+- Goal: Complete blackbox backend tests Tiers 2–4 in the same PR as Tier 1.
+- Completed:
+  - `MockGenerationWorkflow` no-op for session create (no LLM/workflow execution).
+  - Fixture helpers: completed sessions, documents, R2 image puts.
+  - Tier 2: `sessions.test.ts`, `questions.test.ts`, `export.test.ts` (PDF + DOCX).
+  - Tier 3: `documents.test.ts`, `files.test.ts` (Miniflare R2).
+  - Tier 4: `sessions-create.test.ts` (form validation + mock workflow 201), `stream.test.ts`.
+  - Per-test DB reset via `test/setup.ts`; sequential test files (`fileParallelism: false`).
+  - `wrangler.test.jsonc` TTF rules for PDF font embedding in Workers tests.
+- Verification run: `pnpm --filter server test` → 54 passed; `check-types` → pass.
+- Evidence captured: 10 test files, vitest exit 0.
+- Known risk or unresolved issue: no CI job yet; suite ~2 min sequential; Tier 5 live LLM smoke not implemented.
+- Next best step: GitHub Actions job with Postgres service + `pnpm test:server`.
 
 ### Session 016
 

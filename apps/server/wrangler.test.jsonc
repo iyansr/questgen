@@ -4,6 +4,13 @@
   "main": "src/index.ts",
   "compatibility_date": "2026-06-01",
   "compatibility_flags": ["nodejs_compat"],
+  "rules": [
+    {
+      "type": "Data",
+      "globs": ["**/*.ttf"],
+      "fallthrough": true
+    }
+  ],
   "vars": {
     "BETA_MODE": "false",
     "CORS_ORIGIN": "http://localhost:3001",
@@ -28,7 +35,7 @@
     {
       "binding": "GENERATION_WORKFLOW",
       "name": "questgen-generation-test",
-      "class_name": "GenerationWorkflow"
+      "class_name": "MockGenerationWorkflow"
     }
   ]
 }

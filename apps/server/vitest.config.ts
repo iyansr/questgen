@@ -19,8 +19,11 @@ export default defineConfig({
   },
   test: {
     globalSetup: ['./test/global-setup.ts'],
+    setupFiles: ['./test/setup.ts'],
     include: ['test/**/*.test.ts'],
     testTimeout: 30_000,
+    fileParallelism: false,
+    maxWorkers: 1,
     deps: {
       optimizer: {
         ssr: {
