@@ -20,12 +20,12 @@ describe('POST /api/auth/register', () => {
     expect(body.user.id).toEqual(expect.any(String));
   });
 
-  it('returns 409 for duplicate email', async () => {
+  it('returns 400 for duplicate email without revealing enumeration', async () => {
     await registerUser('dup@example.com');
     const { res, body } = await registerUser('dup@example.com');
 
-    expect(res.status).toBe(409);
-    expect(body).toMatchObject({ error: 'Email already registered' });
+    expect(res.status).toBe(400);
+    expect(body).toMatchObject({ error: 'Registration failed' });
   });
 
   it('returns 400 for invalid email', async () => {

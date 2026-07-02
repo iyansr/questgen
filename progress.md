@@ -256,3 +256,17 @@
 - Known risk or unresolved issue: `pg` in Workers test runtime needs Vite 7 pin; Tier 2+ (fixtures, export, R2, mock workflow) not yet implemented; no CI job yet.
 - Next best step: add Tier 2 fixture seeding + export tests; wire `test:server` into CI with Postgres service.
 
+### Session 016
+
+- Date: 2026-07-02
+- Goal: Fix authentication timing leaks (login + registration).
+- Completed:
+  - Login always runs bcrypt via `DUMMY_PASSWORD_HASH` when email is unknown.
+  - Registration always hashes password first; uses `onConflictDoNothing` on email.
+  - Duplicate registration returns generic `400 Registration failed` (no email enumeration via 409).
+  - Updated blackbox auth test for duplicate-register response shape.
+- Verification run: `pnpm --filter server check-types` → pass; `pnpm --filter server test` → pass.
+- Evidence captured: tsc exit 0.
+- Commits: pending.
+- Next best step: merge PR; optional live timing smoke against `/api/auth/login`.
+

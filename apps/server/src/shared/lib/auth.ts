@@ -4,6 +4,10 @@ import { sign, verify } from 'hono/jwt';
 const SALT_ROUNDS = 10;
 const JWT_EXPIRY_SECONDS = 60 * 60 * 24 * 30;
 
+/** Precomputed bcrypt hash used when no user exists so login timing stays constant. */
+export const DUMMY_PASSWORD_HASH =
+  '$2b$10$uOMkq9oIW/CQS112ksA2OuKyDUNyV7esDEGqdtFzve5jd2Ro2d.42';
+
 export type JwtPayload = {
   userId: string;
   email: string;
