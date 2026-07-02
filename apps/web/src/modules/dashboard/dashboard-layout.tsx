@@ -7,6 +7,7 @@ import {
 } from '@phosphor-icons/react';
 import { Button } from '@questgen/ui/components/button';
 import { cn } from '@questgen/ui/lib/utils';
+import { useQueryClient } from '@tanstack/react-query';
 import { Link, useNavigate } from '@tanstack/react-router';
 
 import { ModeToggle } from '@/components/mode-toggle';
@@ -23,10 +24,12 @@ const navItems = [
 export function DashboardLayout({ children }: { children: React.ReactNode }) {
   const navigate = useNavigate();
   const clearAuth = useAuthStore((s) => s.clearAuth);
+  const qs = useQueryClient();
   const { data, isLoading } = useMe();
 
   function handleLogout() {
     clearAuth();
+    qs.clear();
     navigate({ to: '/login' });
   }
 

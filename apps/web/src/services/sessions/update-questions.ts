@@ -57,6 +57,9 @@ export function useUpdateQuestions(sessionId: string) {
       queryClient.invalidateQueries({
         queryKey: [QUERY_KEYS.SESSIONS.DETAIL, sessionId],
       });
+      queryClient.invalidateQueries({
+        queryKey: [QUERY_KEYS.DASHBOARD.STATS],
+      });
     },
   });
 }

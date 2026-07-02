@@ -187,6 +187,9 @@ importers:
       pg:
         specifier: ^8.21.0
         version: 8.21.0
+      tsx:
+        specifier: ^4.22.3
+        version: 4.22.3
       typescript:
         specifier: 'catalog:'
         version: 6.0.3

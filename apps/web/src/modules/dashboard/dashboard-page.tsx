@@ -12,6 +12,7 @@ import { useState } from 'react';
 
 import { DataTable } from '@/components/data-table';
 import { useMe } from '@/services/auth/me';
+import { useDashboardStats } from '@/services/dashboard/stats';
 import { useSessions } from '@/services/sessions/list';
 
 import { sessionsColumns } from './components/sessions-columns';
@@ -29,10 +30,12 @@ function StatItem({
   icon: Icon,
   label,
   value,
+  isLoading,
 }: {
   icon: Icon;
   label: string;
   value: number;
+  isLoading?: boolean;
 }) {
   return (
     <div className="border border-border bg-card p-4 sm:p-5">
@@ -40,9 +43,13 @@ function StatItem({
         <Icon className="size-3.5" weight="regular" />
         <span>{label}</span>
       </div>
-      <p className="mt-2 font-serif text-3xl tabular-nums tracking-tight">
-        {value}
-      </p>
+      {isLoading ? (
+        <Skeleton className="mt-2 h-9 w-12" />
+      ) : (
+        <p className="mt-2 font-serif text-3xl tabular-nums tracking-tight">
+          {value}
+        </p>
+      )}
     </div>
   );
 }
@@ -62,6 +69,7 @@ function SessionsSkeleton() {
 export function DashboardPage() {
   const navigate = useNavigate();
   const { data, isLoading } = useMe();
+  const { data: stats, isLoading: isStatsLoading } = useDashboardStats();
   const [page, setPage] = useState(0);
   const [pageSize, setPageSize] = useState(10);
   const { data: sessions, isLoading: isSessionsLoading } = useSessions({
@@ -121,9 +129,24 @@ export function DashboardPage() {
 
       <section>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
-          <StatItem icon={ListChecks} label="Total soal dibuat" value={0} />
-          <StatItem icon={BookOpen} label="Set tersimpan" value={0} />
-          <StatItem icon={FileText} label="Dokumen diunggah" value={0} />
+          <StatItem
+            icon={ListChecks}
+            label="Total soal dibuat"
+            value={stats?.totalQuestions ?? 0}
+            isLoading={isStatsLoading}
+          />
+          <StatItem
+            icon={BookOpen}
+            label="Set tersimpan"
+            value={stats?.savedSets ?? 0}
+            isLoading={isStatsLoading}
+          />
+          <StatItem
+            icon={FileText}
+            label="Dokumen diunggah"
+            value={stats?.uploadedDocuments ?? 0}
+            isLoading={isStatsLoading}
+          />
         </div>
       </section>
 

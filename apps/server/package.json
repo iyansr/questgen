@@ -9,7 +9,8 @@
     "cf-typegen": "wrangler types",
     "check-types": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "register-user": "tsx scripts/register-user.ts"
   },
   "dependencies": {
     "@ai-sdk/openai": "^3.0.71",
@@ -53,6 +54,7 @@
     "@types/node": "catalog:",
     "@types/pg": "^8.20.0",
     "pg": "^8.21.0",
+    "tsx": "^4.22.3",
     "typescript": "catalog:",
     "vite": "^7.3.6",
     "vitest": "^4.1.9",

@@ -3,6 +3,9 @@ export const QUERY_KEYS = {
   AUTH: {
     ME: 'auth/me',
   },
+  DASHBOARD: {
+    STATS: 'dashboard/stats',
+  },
   SESSIONS: {
     LIST: 'sessions',
     DETAIL: 'sessions/detail',

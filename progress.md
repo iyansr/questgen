@@ -8,6 +8,7 @@
 - Server blackbox tests: `pnpm test:server` (requires PostgreSQL + `questgen_test` DB; 54 tests, Tiers 1–4)
 - Current highest-priority unfinished feature: DOCX export (code complete; manual browser smoke pending)
 - Current blocker: `0003_rapid_the_fallen.sql` not applied — run `pnpm db:migrate`
+- Dashboard stats: `GET /api/dashboard/stats` wired to dashboard stat cards (completed/ready scope)
 
 ## Session Log
 
@@ -286,4 +287,20 @@
 - Evidence captured: tsc exit 0.
 - Commits: pending.
 - Next best step: merge PR; optional live timing smoke against `/api/auth/login`.
+
+### Session 017
+
+- Date: 2026-07-02
+- Goal: Integrate dashboard stat cards (total questions, saved sets, uploaded documents).
+- Completed:
+  - Added `GET /api/dashboard/stats` with parallel count queries scoped to completed sets / ready documents.
+  - New server module: `apps/server/src/modules/dashboard/` (`dashboard.service.ts`, `dashboard.routes.ts`).
+  - Web hook `useDashboardStats()` in `apps/web/src/services/dashboard/stats.ts`.
+  - Wired `dashboard-page.tsx` stat cards with skeleton loading.
+  - Cache invalidation on session create, stream complete, question update.
+  - Dashboard route registered in `app.ts` (post app extraction refactor).
+- Verification run: `pnpm --filter server exec tsc --noEmit` + `pnpm --filter web check-types` + biome on changed files → pass.
+- Evidence captured: both typecheck commands exit 0; biome clean after format fix.
+- Known risk or unresolved issue: live API/browser smoke not run (Postgres/dev server unavailable in agent env).
+- Next best step: start dev stack, confirm stat cards show real counts for a user with completed sessions.
 

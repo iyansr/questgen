@@ -63,6 +63,7 @@ export function useSessionStream(sessionId: string): UseSessionStreamResult {
 
         if (part.data.status === 'completed') {
           qc.invalidateQueries({ queryKey: [QUERY_KEYS.SESSIONS.DETAIL] });
+          qc.invalidateQueries({ queryKey: [QUERY_KEYS.DASHBOARD.STATS] });
         }
       }
     },

@@ -48,6 +48,9 @@ export function useCreateSession() {
       queryClient.invalidateQueries({
         queryKey: [QUERY_KEYS.SESSIONS.LIST],
       });
+      queryClient.invalidateQueries({
+        queryKey: [QUERY_KEYS.DASHBOARD.STATS],
+      });
     },
   });
 }
