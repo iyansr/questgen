@@ -9,6 +9,7 @@ import { Button } from '@questgen/ui/components/button';
 import { cn } from '@questgen/ui/lib/utils';
 import { Link, useNavigate } from '@tanstack/react-router';
 
+import { ModeToggle } from '@/components/mode-toggle';
 import { useMe } from '@/services/auth/me';
 import { useAuthStore } from '@/store/auth';
 
@@ -37,6 +38,7 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
             QuestGen
           </Link>
           <div className="flex items-center gap-3">
+            <ModeToggle />
             {isLoading ? (
               <div className="h-4 w-24 animate-pulse bg-muted" />
             ) : (
