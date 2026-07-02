@@ -5,7 +5,7 @@
 - Repository root: `/workspace`
 - Standard startup path: `./init.sh`
 - Standard verification path: `pnpm --filter web check-types`
-- Server blackbox tests: `pnpm test:server` (requires PostgreSQL + `questgen_test` DB)
+- Server blackbox tests: `pnpm test:server` (requires PostgreSQL + `questgen_test` DB; 54 tests, Tiers 1–4)
 - Current highest-priority unfinished feature: DOCX export (code complete; manual browser smoke pending)
 - Current blocker: `0003_rapid_the_fallen.sql` not applied — run `pnpm db:migrate`
 
