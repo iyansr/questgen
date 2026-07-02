@@ -2,16 +2,13 @@ import { describe, expect, it } from 'vitest';
 
 import { registerAndGetToken } from './helpers/auth';
 import { uniqueEmail } from './helpers/email';
+import { seedProcessingDocument, seedReadyDocument } from './helpers/fixtures';
+import { api, readJson } from './helpers/http';
 import {
   documentSessionForm,
   fileSessionForm,
   webSessionForm,
 } from './helpers/sessions-form';
-import {
-  seedProcessingDocument,
-  seedReadyDocument,
-} from './helpers/fixtures';
-import { api, readJson } from './helpers/http';
 
 describe('POST /api/sessions', () => {
   it('returns 201 for valid web search form', async () => {
@@ -47,7 +44,9 @@ describe('POST /api/sessions', () => {
   });
 
   it('returns 400 when web search is missing curriculum', async () => {
-    const token = await registerAndGetToken(uniqueEmail('create-no-curriculum'));
+    const token = await registerAndGetToken(
+      uniqueEmail('create-no-curriculum'),
+    );
     const fd = webSessionForm({ curriculum: undefined });
 
     const res = await api('/api/sessions', { method: 'POST', token, body: fd });

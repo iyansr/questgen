@@ -83,10 +83,7 @@ function blocksToParagraphs(
           new Paragraph({
             indent: indent ? { left: indent + 240 } : { left: 240 },
             spacing: { after: 80 },
-            children: [
-              textToDocx(prefix),
-              ...runsToDocx(item, size),
-            ],
+            children: [textToDocx(prefix), ...runsToDocx(item, size)],
           }),
         );
       });
@@ -247,7 +244,9 @@ export async function buildQuestionChildren(
       }),
     );
 
-    paragraphs.push(...blocksToParagraphs(stemBlocks, { indent: QUESTION_INDENT }));
+    paragraphs.push(
+      ...blocksToParagraphs(stemBlocks, { indent: QUESTION_INDENT }),
+    );
   } else {
     const firstParagraph = stemBlocks.find((b) => b.type === 'paragraph');
     const restBlocks = stemBlocks.filter((b) => b !== firstParagraph);
@@ -289,10 +288,7 @@ export async function buildQuestionChildren(
           new Paragraph({
             indent: { left: OPTION_INDENT },
             spacing: { after: 80 },
-            children: [
-              textToDocx(`${label}. `),
-              ...runsToDocx(firstOpt.runs),
-            ],
+            children: [textToDocx(`${label}. `), ...runsToDocx(firstOpt.runs)],
           }),
         );
       } else {

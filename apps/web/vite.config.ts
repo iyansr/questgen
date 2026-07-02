@@ -17,6 +17,17 @@ const prismjsGlobalFix = {
   },
 };
 
+/** Cloudflare Rocket Loader breaks Vite ES module + dynamic import(). */
+const cloudflareRocketLoaderFix = {
+  name: 'cloudflare-rocket-loader-fix',
+  transformIndexHtml(html: string) {
+    return html.replace(
+      /<script(?![^>]*data-cfasync)/g,
+      '<script data-cfasync="false"',
+    );
+  },
+};
+
 export default defineConfig({
   server: {
     port: 3001,
@@ -32,5 +43,6 @@ export default defineConfig({
     }),
     react(),
     prismjsGlobalFix,
+    cloudflareRocketLoaderFix,
   ],
 });

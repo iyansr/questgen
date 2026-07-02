@@ -16,10 +16,7 @@ function styleFlags(style: TextStyle): { bold?: boolean; italics?: boolean } {
   }
 }
 
-export function runsToDocx(
-  runs: TextRun[],
-  size = BODY_SIZE,
-): DocxTextRun[] {
+export function runsToDocx(runs: TextRun[], size = BODY_SIZE): DocxTextRun[] {
   return runs.map(
     (run) =>
       new DocxTextRun({

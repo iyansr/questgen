@@ -47,9 +47,7 @@ export function ExportDocxButton({
         toast.success('DOCX berhasil diunduh.');
         setFormOpen(false);
       } catch (err) {
-        toast.error(
-          err instanceof Error ? err.message : 'Gagal membuat DOCX.',
-        );
+        toast.error(err instanceof Error ? err.message : 'Gagal membuat DOCX.');
       } finally {
         setIsGenerating(false);
       }

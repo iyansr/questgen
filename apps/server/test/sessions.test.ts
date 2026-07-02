@@ -44,9 +44,10 @@ describe('GET /api/sessions', () => {
     });
 
     const res = await api('/api/sessions?search=Trigonometri', { token });
-    const body = await readJson<{ items: Array<{ title: string }>; total: number }>(
-      res,
-    );
+    const body = await readJson<{
+      items: Array<{ title: string }>;
+      total: number;
+    }>(res);
 
     expect(res.status).toBe(200);
     expect(body.total).toBe(1);

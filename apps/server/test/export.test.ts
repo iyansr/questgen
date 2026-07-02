@@ -1,7 +1,10 @@
 import { describe, expect, it } from 'vitest';
 
 import { uniqueEmail } from './helpers/email';
-import { seedCompletedSession, seedEmptyCompletedSession } from './helpers/fixtures';
+import {
+  seedCompletedSession,
+  seedEmptyCompletedSession,
+} from './helpers/fixtures';
 import { api, readJson } from './helpers/http';
 
 const exportPayload = {

@@ -211,9 +211,7 @@ export function ExportExamDialog({
             form={variant === 'docx' ? formId : undefined}
             disabled={isGenerating}
             onClick={
-              variant === 'pdf'
-                ? () => handleSubmit('download')
-                : undefined
+              variant === 'pdf' ? () => handleSubmit('download') : undefined
             }
           >
             {isGenerating ? 'Memproses…' : copy.download}

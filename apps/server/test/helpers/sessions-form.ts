@@ -1,6 +1,4 @@
-const DEFAULT_COUNTS = JSON.stringify([
-  { type: 'multiple_choice', count: 2 },
-]);
+const DEFAULT_COUNTS = JSON.stringify([{ type: 'multiple_choice', count: 2 }]);
 
 export function webSessionForm(
   overrides: Record<string, string | undefined> = {},
@@ -17,9 +15,14 @@ export function webSessionForm(
     if (value === undefined) {
       fd.delete(key);
     } else if (
-      !['topic', 'questionTypeCounts', 'webQuery', 'curriculum', 'grade', 'classGrade'].includes(
-        key,
-      )
+      ![
+        'topic',
+        'questionTypeCounts',
+        'webQuery',
+        'curriculum',
+        'grade',
+        'classGrade',
+      ].includes(key)
     ) {
       fd.set(key, value);
     }

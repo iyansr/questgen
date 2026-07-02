@@ -3,6 +3,13 @@ import type { PDFImage } from 'pdf-lib';
 
 import type { ExportPdfInput } from '../export.schema';
 import {
+  buildSubtitle,
+  isMultipleChoice,
+  type QuestionOption,
+} from '../shared/exam-helpers';
+import { loadQuestionImage } from '../shared/image-loader';
+import { type ContentBlock, markdownToBlocks } from '../shared/markdown-blocks';
+import {
   drawPageFooter,
   type ExamLayout,
   type FontSet,
@@ -11,13 +18,6 @@ import {
   QUESTION_IMAGE_MAX_HEIGHT_PT,
   QUESTION_IMAGE_MAX_WIDTH_PT,
 } from './exam-layout';
-import {
-  buildSubtitle,
-  isMultipleChoice,
-  type QuestionOption,
-} from '../shared/exam-helpers';
-import { loadQuestionImage } from '../shared/image-loader';
-import { type ContentBlock, markdownToBlocks } from '../shared/markdown-blocks';
 
 type QuestionRow = typeof questions.$inferSelect;
 

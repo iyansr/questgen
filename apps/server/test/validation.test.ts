@@ -15,13 +15,16 @@ describe('protected route authorization', () => {
   });
 
   it('returns 401 for POST /api/sessions/:id/export/pdf without token', async () => {
-    const res = await api('/api/sessions/00000000-0000-4000-8000-000000000001/export/pdf', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        subject: 'Matematika',
-      }),
-    });
+    const res = await api(
+      '/api/sessions/00000000-0000-4000-8000-000000000001/export/pdf',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          subject: 'Matematika',
+        }),
+      },
+    );
 
     expect(res.status).toBe(401);
   });

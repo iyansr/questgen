@@ -1,4 +1,4 @@
-import { Document, Packer, Paragraph, Table } from 'docx';
+import { Document, Packer, type Paragraph, type Table } from 'docx';
 
 import type { SessionWithQuestions } from '@/modules/sessions/sessions.service';
 

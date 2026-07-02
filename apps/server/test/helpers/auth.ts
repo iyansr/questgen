@@ -25,10 +25,7 @@ export async function registerUser(
   return { res, body: await readJson<AuthBody>(res) };
 }
 
-export async function loginUser(
-  email: string,
-  password = 'password123',
-) {
+export async function loginUser(email: string, password = 'password123') {
   const res = await api('/api/auth/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

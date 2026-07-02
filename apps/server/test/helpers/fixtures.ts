@@ -1,9 +1,9 @@
 import { createDb } from '@questgen/db';
 import { documents, questionSets, questions } from '@questgen/db/schema';
-import { env } from 'cloudflare:workers';
 
 import { registerUser } from './auth';
 import { readJson } from './http';
+import { env } from 'cloudflare:workers';
 
 const DEFAULT_CONFIG = {
   topic: 'Aljabar Linear',
@@ -185,7 +185,10 @@ export async function seedDocumentMissingR2(email: string) {
   return { token: body.token, documentId: doc.id };
 }
 
-export async function putR2Image(key: string, bytes = new Uint8Array([137, 80, 78, 71])) {
+export async function putR2Image(
+  key: string,
+  bytes = new Uint8Array([137, 80, 78, 71]),
+) {
   await env.DOCUMENTS_BUCKET.put(key, bytes, {
     httpMetadata: { contentType: 'image/png' },
   });

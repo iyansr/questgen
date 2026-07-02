@@ -1,10 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import {
-  loginUser,
-  registerAndGetToken,
-  registerUser,
-} from './helpers/auth';
+import { loginUser, registerAndGetToken, registerUser } from './helpers/auth';
 import { api, readJson } from './helpers/http';
 
 describe('POST /api/auth/register', () => {
@@ -69,7 +65,10 @@ describe('POST /api/auth/login', () => {
 
   it('returns 401 for wrong password', async () => {
     await registerUser('wrong-pass@example.com');
-    const { res, body } = await loginUser('wrong-pass@example.com', 'bad-password');
+    const { res, body } = await loginUser(
+      'wrong-pass@example.com',
+      'bad-password',
+    );
 
     expect(res.status).toBe(401);
     expect(body).toMatchObject({ error: 'Invalid email or password' });

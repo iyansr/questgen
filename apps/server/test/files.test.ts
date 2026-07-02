@@ -1,10 +1,10 @@
-import { env } from 'cloudflare:workers';
 import { describe, expect, it } from 'vitest';
 
 import { registerAndGetToken } from './helpers/auth';
 import { uniqueEmail } from './helpers/email';
 import { getUserId, putR2Image } from './helpers/fixtures';
 import { api } from './helpers/http';
+import { env } from 'cloudflare:workers';
 
 describe('GET /files/*', () => {
   it('returns image bytes for a valid documents/.../images/ key', async () => {

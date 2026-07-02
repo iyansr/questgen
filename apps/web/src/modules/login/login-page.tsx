@@ -14,9 +14,9 @@ import { ArrowRight, Loader2 } from 'lucide-react';
 import { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 
+import { isBetaMode, requestAccessFormUrl } from '@/lib/feature-flags';
 import { useLogin } from '@/services/auth/login';
 
-import { isBetaMode, requestAccessFormUrl } from '@/lib/feature-flags';
 import { type LoginFormValues, loginSchema } from './schema';
 
 export function LoginPage() {
