@@ -239,3 +239,16 @@
 - Commits: pending.
 - Next best step: uncomment pricing when ready to ship pricing tiers.
 
+### Session 015
+
+- Date: 2026-07-02
+- Goal: Fix authentication timing leaks (login + registration).
+- Completed:
+  - Login always runs bcrypt via `DUMMY_PASSWORD_HASH` when email is unknown.
+  - Registration always hashes password first; uses `onConflictDoNothing` on email.
+  - Duplicate registration returns generic `400 Registration failed` (no email enumeration via 409).
+- Verification run: `pnpm --filter server check-types` → pass.
+- Evidence captured: tsc exit 0.
+- Commits: pending.
+- Next best step: merge PR; optional live timing smoke against `/api/auth/login`.
+
