@@ -3,7 +3,12 @@ import { users } from '@questgen/db/schema';
 import { env } from '@questgen/env/server';
 import { eq } from 'drizzle-orm';
 
-import { hashPassword, signToken, verifyPassword } from '@/shared/lib/auth';
+import {
+  DUMMY_PASSWORD_HASH,
+  hashPassword,
+  signToken,
+  verifyPassword,
+} from '@/shared/lib/auth';
 
 type Db = ReturnType<typeof createDb>;
 
@@ -13,25 +18,16 @@ export async function registerUser(
   password: string,
   name: string,
 ) {
-  const existing = await db
-    .select({ id: users.id })
-    .from(users)
-    .where(eq(users.email, email))
-    .limit(1);
-
-  if (existing.length > 0) {
-    throw new Error('Email already registered');
-  }
-
   const passwordHash = await hashPassword(password);
 
   const [user] = await db
     .insert(users)
     .values({ email, passwordHash, name })
+    .onConflictDoNothing({ target: users.email })
     .returning({ id: users.id, email: users.email, name: users.name });
 
   if (!user) {
-    throw new Error('Failed to create user');
+    throw new Error('Registration failed');
   }
 
   const token = await signToken(
@@ -49,13 +45,12 @@ export async function loginUser(db: Db, email: string, password: string) {
     .where(eq(users.email, email))
     .limit(1);
 
-  if (!user) {
-    throw new Error('Invalid email or password');
-  }
+  const valid = await verifyPassword(
+    password,
+    user?.passwordHash ?? DUMMY_PASSWORD_HASH,
+  );
 
-  const valid = await verifyPassword(password, user.passwordHash);
-
-  if (!valid) {
+  if (!user || !valid) {
     throw new Error('Invalid email or password');
   }
 
