@@ -1,10 +1,10 @@
-import katex from 'katex';
 import remarkMath from 'remark-math';
 import remarkParse from 'remark-parse';
 import { unified } from 'unified';
 import { visit } from 'unist-util-visit';
 
 import { latexToUnicode } from './latex-unicode';
+import { plainMathToLatex } from './plain-math-to-latex';
 
 export type TextStyle = 'normal' | 'bold' | 'italic' | 'boldItalic';
 
@@ -24,31 +24,8 @@ type MdastNode = {
   ordered?: boolean;
 };
 
-function stripHtml(html: string): string {
-  return html
-    .replace(/<[^>]+>/g, '')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .trim();
-}
-
-function renderMath(latex: string, displayMode: boolean): string {
-  try {
-    const html = katex.renderToString(latex, {
-      throwOnError: false,
-      displayMode,
-      output: 'html',
-    });
-    const text = stripHtml(html);
-    if (text) return text;
-  } catch {
-    // fall through to LaTeX unicode mapping
-  }
-
+function renderMath(latex: string): string {
+  // ponytail: KaTeX HTML → strip tags mangles fractions (3/5 → 53) and powers (x^2 → x2).
   return latexToUnicode(latex);
 }
 
@@ -87,7 +64,7 @@ function inlineNodesToRuns(
         inlineNodesToRuns(node.children, style, runs);
         break;
       case 'inlineMath':
-        pushRun(runs, renderMath(node.value ?? '', false), style);
+        pushRun(runs, renderMath(node.value ?? ''), style);
         break;
       case 'break':
         pushRun(runs, '\n', style);
@@ -113,7 +90,7 @@ function parseMarkdown(markdown: string): MdastNode {
 }
 
 export function markdownToBlocks(markdown: string): ContentBlock[] {
-  const trimmed = markdown.trim();
+  const trimmed = plainMathToLatex(markdown.trim());
   if (!trimmed) return [];
 
   const tree = parseMarkdown(trimmed);
@@ -145,7 +122,7 @@ export function markdownToBlocks(markdown: string): ContentBlock[] {
       case 'math': {
         blocks.push({
           type: 'paragraph',
-          runs: [{ text: renderMath(node.value ?? '', true), style: 'normal' }],
+          runs: [{ text: renderMath(node.value ?? ''), style: 'normal' }],
         });
         break;
       }
