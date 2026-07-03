@@ -42,7 +42,8 @@ Quantitative topic rules (${level}):
 - ${target} of questions MUST require a calculation, numeric answer, formula application, or solving with concrete values (lengths, angles, areas, ratios, etc.). Students should need to compute or substitute numbers — not only pick a verbal description.
 - Prefer stems that give givens and ask for a result: "Diketahui …", "Jika … berapakah …", "Hitung …", "Panjang … adalah … cm. Tentukan …". Include units (cm, cm², °) and realistic values for ${level}.
 - When a formula applies (e.g. Pythagoras, luas, keliling lingkaran), present numeric givens and test application — do not only ask what the formula means or when it holds.
-- For multiple_choice with numeric answers, make all four options numbers (or short expressions like "13 cm", "1 : 1 : √2") with plausible distractors from common mistakes (wrong operation, forgotten √, π slip, unit mix-up).
+- For multiple_choice with numeric answers, make all four options numbers (or short expressions like "13 cm", "$1 : 1 : \\sqrt{2}$") with plausible distractors from common mistakes (wrong operation, forgotten √, π slip, unit mix-up).
+- Format all symbolic math in LaTeX $...$: stems like "Himpunan penyelesaian dari $\\sqrt{x^2 - 16} = \\sqrt{x + 4}$ adalah ...", options like "$\\{-4, 5\\}$", explanations like "Prasyarat: $x^2 - 16 \\geq 0$ dan $x + 4 \\geq 0$".
 - Cap pure definition / vocabulary / "which statement is true" questions at roughly 20% of the set. Avoid stems like "Apa nama …", "Apa sifat …", "Apa perbedaan …", "Manakah pernyataan yang merupakan …", or research about student misconceptions unless the material has no numeric content at all.
 - Still vary subtopics and difficulty within ${level}; use different givens, shapes, and operations across questions.`;
 }

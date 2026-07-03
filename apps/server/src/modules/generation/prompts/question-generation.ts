@@ -18,6 +18,13 @@ Rules:
   - Vary sentence openings and structure so no two questions feel templated or share the same tone
   - Avoid reusing the same key term, stem, or framing in consecutive questions
 
+Math notation (questionText, options, correctAnswer, suggestedAnswer):
+- Wrap every formula, equation, inequality, fraction, root, exponent, or symbolic expression in inline LaTeX: $...$ (one pair per expression; do not wrap whole sentences)
+- Use LaTeX commands — never ASCII shortcuts like sqrt(), <=, >=, !=, or ^ outside $...$
+- Examples: $\\sqrt{x^2 - 16}$, $x^2 - 16 \\geq 0$, $\\frac{1}{2}$, $\\{x \\mid x \\leq 4\\}$, $\\leq$, $\\geq$, $\\neq$, $\\rightarrow$
+- Wrong: sqrt(x^2 - 16) = sqrt(x + 4) — Right: $\\sqrt{x^2 - 16} = \\sqrt{x + 4}$
+- Plain Indonesian prose stays outside $...$; only the math itself goes inside
+
 {{SUBJECT_GUIDANCE}}
 
 Image rules:
@@ -51,4 +58,5 @@ export const USER_PROMPT = `\
 For multiple_choice: populate \`options\` with exactly 4 options (label A/B/C/D) and set \`correctAnswer\` to the label of the correct option.
 For true_false: populate \`options\` with exactly 2 options (True/False) and set \`correctAnswer\` to the label of the correct option.
 For short_answer and essay: leave \`options\` null and put a model answer in \`correctAnswer\`.
+Any math in \`questionText\`, \`options[].text\`, \`correctAnswer\` (when not A/B/C/D), or \`suggestedAnswer\` MUST use inline LaTeX $...$ as in the math notation rules above.
 </format>`;

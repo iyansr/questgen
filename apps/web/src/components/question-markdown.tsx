@@ -3,6 +3,8 @@ import ReactMarkdown from 'react-markdown';
 import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
 
+import { plainMathToLatex } from '@/lib/plain-math-to-latex';
+
 const remarkPlugins = [remarkMath];
 const rehypePlugins = [rehypeKatex];
 
@@ -35,7 +37,7 @@ export function QuestionMarkdown({
         remarkPlugins={remarkPlugins}
         rehypePlugins={rehypePlugins}
       >
-        {children}
+        {plainMathToLatex(children)}
       </ReactMarkdown>
     </div>
   );
