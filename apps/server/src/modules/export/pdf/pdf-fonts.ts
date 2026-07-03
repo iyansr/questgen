@@ -1,5 +1,5 @@
 import fontkit from '@pdf-lib/fontkit';
-import type { PDFDocument } from 'pdf-lib';
+import { type PDFDocument, StandardFonts } from 'pdf-lib';
 
 import type { FontSet } from './exam-layout';
 import boldBytes from './fonts/NotoSerif-Bold.ttf';
@@ -14,12 +14,15 @@ function toUint8Array(buffer: ArrayBuffer): Uint8Array {
 export async function embedExamFonts(doc: PDFDocument): Promise<FontSet> {
   doc.registerFontkit(fontkit);
 
-  const [regular, bold, italic, boldItalic] = await Promise.all([
+  // NotoSerif has no math glyphs (√, ≠, ≤, ≥, ∑, ∫, …); the built-in
+  // Symbol standard font covers that exact repertoire as a fallback.
+  const [regular, bold, italic, boldItalic, math] = await Promise.all([
     doc.embedFont(toUint8Array(regularBytes)),
     doc.embedFont(toUint8Array(boldBytes)),
     doc.embedFont(toUint8Array(italicBytes)),
     doc.embedFont(toUint8Array(boldItalicBytes)),
+    doc.embedFont(StandardFonts.Symbol),
   ]);
 
-  return { regular, bold, italic, boldItalic };
+  return { regular, bold, italic, boldItalic, math };
 }

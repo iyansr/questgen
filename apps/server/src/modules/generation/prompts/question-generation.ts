@@ -14,9 +14,11 @@ Rules:
 - Write clear, unambiguous questions appropriate for the target level and curriculum
 - Maximize variety across the set. Treat the questions as a batch, not as independent items:
   - Pull from DIFFERENT subtopics and sections of the material — do not cluster around whichever part has the most images
-  - Vary the cognitive level (recall, comprehension, application, analysis), not just the wording
+  - Vary cognitive demand (recall, comprehension, application, analysis) — for quantitative topics, lean toward application and problem-solving (see subject rules below)
   - Vary sentence openings and structure so no two questions feel templated or share the same tone
   - Avoid reusing the same key term, stem, or framing in consecutive questions
+
+{{SUBJECT_GUIDANCE}}
 
 Image rules:
 - If the image catalog below is empty, NEVER reference images in the question text (no "perhatikan gambar", "lihat gambar", etc.) and always set imageRef to null

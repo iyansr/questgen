@@ -9,6 +9,7 @@ import { openrouter } from '@/shared/ai/openrouter';
 import { GENERATION_PARAMS, MODELS } from '@/shared/config/models';
 
 import { SYSTEM_PROMPT, USER_PROMPT } from './prompts/question-generation';
+import { buildSubjectGuidance } from './prompts/subject-guidance';
 import { documentSearch } from './search/document-search';
 import type { RetrievalTrace } from './search/types';
 import { webSearch } from './search/web-search';
@@ -282,11 +283,18 @@ export async function generateQuestionsInBackground(
         .join('\n')}\n`
     : '\nNo images are available for this session. Do not reference any images.\n';
 
+  const subjectGuidance = buildSubjectGuidance(
+    config.topic,
+    config.grade,
+    config.classGrade,
+  );
+
   const systemPrompt = interpolate(SYSTEM_PROMPT, {
     TOPIC: config.topic,
     GRADE: config.grade ?? 'general',
     CLASS_GRADE: config.classGrade ?? 'general',
     CURRICULUM: config.curriculum ?? 'general',
+    SUBJECT_GUIDANCE: subjectGuidance,
     IMAGE_CATALOG: imageCatalogSection,
     SOURCE_MATERIAL: sourceMaterial,
   });

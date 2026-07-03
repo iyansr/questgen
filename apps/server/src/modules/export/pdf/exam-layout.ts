@@ -7,7 +7,11 @@ import {
 } from 'pdf-lib';
 
 import type { TextStyle } from '../shared/markdown-blocks';
-import { sanitizePdfText } from './pdf-text-sanitize';
+import {
+  resolveTextSegments,
+  sanitizePdfText,
+  type TextSegment,
+} from './pdf-text-sanitize';
 
 export const PAGE_WIDTH = 595.28;
 export const PAGE_HEIGHT = 841.89;
@@ -22,6 +26,8 @@ export type FontSet = {
   bold: PDFFont;
   italic: PDFFont;
   boldItalic: PDFFont;
+  /** Fallback font for math/Greek symbols the body font can't encode. */
+  math: PDFFont;
 };
 
 export function fontForStyle(fonts: FontSet, style: TextStyle): PDFFont {
@@ -107,26 +113,39 @@ export class ExamLayout {
     const maxWidth = options.maxWidth ?? this.contentWidth - indent;
     const lineHeight = size * LINE_HEIGHT;
 
-    const safeText = sanitizePdfText(text, font, size);
-    const lines = wrapText(safeText, font, size, maxWidth);
+    const segments = resolveTextSegments(text, font, this.fonts.math, size);
+    const lines = wrapSegments(segments, size, maxWidth);
     for (const line of lines) {
       this.ensureSpace(lineHeight);
+      const width = lineWidth(line, size);
       let x = MARGIN + indent;
-      const width = font.widthOfTextAtSize(line, size);
       if (options.align === 'center') {
         x = MARGIN + (this.contentWidth - width) / 2;
       } else if (options.align === 'right') {
         x = MARGIN + this.contentWidth - width;
       }
-      this.page.drawText(line, {
+      x = this.drawSegments(line, x, size);
+      this.y -= lineHeight;
+    }
+  }
+
+  private drawSegments(
+    segments: TextSegment[],
+    startX: number,
+    size: number,
+  ): number {
+    let x = startX;
+    for (const segment of segments) {
+      this.page.drawText(segment.text, {
         x,
         y: this.y,
         size,
-        font,
+        font: segment.font,
         color: rgb(0, 0, 0),
       });
-      this.y -= lineHeight;
+      x += segment.font.widthOfTextAtSize(segment.text, size);
     }
+    return x;
   }
 
   drawRuns(
@@ -141,30 +160,20 @@ export class ExamLayout {
     const indent = options.indent ?? 0;
     const maxWidth = options.maxWidth ?? this.contentWidth - indent;
     const lineHeight = size * LINE_HEIGHT;
-    const safeRuns = runs.map((run) => ({
-      ...run,
-      text: sanitizePdfText(
+
+    const segments = runs.flatMap((run) =>
+      resolveTextSegments(
         run.text,
         fontForStyle(this.fonts, run.style),
+        this.fonts.math,
         size,
       ),
-    }));
-    const lines = wrapRuns(safeRuns, this.fonts, size, maxWidth);
+    );
+    const lines = wrapSegments(segments, size, maxWidth);
 
     for (const line of lines) {
       this.ensureSpace(lineHeight);
-      let x = MARGIN + indent;
-      for (const segment of line) {
-        const font = fontForStyle(this.fonts, segment.style);
-        this.page.drawText(segment.text, {
-          x,
-          y: this.y,
-          size,
-          font,
-          color: rgb(0, 0, 0),
-        });
-        x += font.widthOfTextAtSize(segment.text, size);
-      }
+      this.drawSegments(line, MARGIN + indent, size);
       this.y -= lineHeight;
     }
   }
@@ -274,72 +283,51 @@ export class ExamLayout {
   }
 }
 
-type LineSegment = { text: string; style: TextStyle };
-
-function wrapText(
-  text: string,
-  font: PDFFont,
-  size: number,
-  maxWidth: number,
-): string[] {
-  const words = text.split(/\s+/).filter(Boolean);
-  if (words.length === 0) return [''];
-
-  const lines: string[] = [];
-  let current = words[0] ?? '';
-
-  for (let i = 1; i < words.length; i++) {
-    const word = words[i] ?? '';
-    const candidate = `${current} ${word}`;
-    if (font.widthOfTextAtSize(candidate, size) <= maxWidth) {
-      current = candidate;
-    } else {
-      lines.push(current);
-      current = word;
-    }
-  }
-  lines.push(current);
-  return lines;
+function lineWidth(line: TextSegment[], size: number): number {
+  return line.reduce(
+    (sum, segment) => sum + segment.font.widthOfTextAtSize(segment.text, size),
+    0,
+  );
 }
 
-function wrapRuns(
-  runs: { text: string; style: TextStyle }[],
-  fonts: FontSet,
+/**
+ * Word-wraps font-tagged segments (as produced by `resolveTextSegments`)
+ * into lines, merging adjacent same-font pieces so a symbol mid-word
+ * (e.g. the √ in "a√2") doesn't force an extra draw call per character.
+ */
+function wrapSegments(
+  segments: TextSegment[],
   size: number,
   maxWidth: number,
-): LineSegment[][] {
-  const lines: LineSegment[][] = [[]];
+): TextSegment[][] {
+  const lines: TextSegment[][] = [[]];
   let currentWidth = 0;
 
-  const pushSegment = (text: string, style: TextStyle) => {
+  const pushPart = (text: string, font: PDFFont) => {
     if (!text) return;
-    const font = fontForStyle(fonts, style);
-    const words = text.split(/(\s+)/);
-
-    for (const part of words) {
-      if (!part) continue;
-      const partWidth = font.widthOfTextAtSize(part, size);
-      if (
-        currentWidth + partWidth > maxWidth &&
-        currentWidth > 0 &&
-        !/^\s+$/.test(part)
-      ) {
-        lines.push([]);
-        currentWidth = 0;
-      }
-      const activeLine = lines[lines.length - 1] ?? [];
-      const last = activeLine[activeLine.length - 1];
-      if (last && last.style === style) {
-        last.text += part;
-      } else {
-        activeLine.push({ text: part, style });
-      }
-      currentWidth += partWidth;
+    const partWidth = font.widthOfTextAtSize(text, size);
+    if (
+      currentWidth + partWidth > maxWidth &&
+      currentWidth > 0 &&
+      !/^\s+$/.test(text)
+    ) {
+      lines.push([]);
+      currentWidth = 0;
     }
+    const activeLine = lines[lines.length - 1] ?? [];
+    const last = activeLine[activeLine.length - 1];
+    if (last && last.font === font) {
+      last.text += text;
+    } else {
+      activeLine.push({ text, font });
+    }
+    currentWidth += partWidth;
   };
 
-  for (const run of runs) {
-    pushSegment(run.text, run.style);
+  for (const segment of segments) {
+    for (const part of segment.text.split(/(\s+)/)) {
+      pushPart(part, segment.font);
+    }
   }
 
   return lines.filter((line) => line.length > 0);

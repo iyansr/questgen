@@ -8,6 +8,8 @@ import { openrouter } from '@/shared/ai/openrouter';
 import { GENERATION_PARAMS, MODELS } from '@/shared/config/models';
 import { withRetry } from '@/shared/lib/retry';
 
+import { buildQuantitativeResearchAddon } from '../prompts/subject-guidance';
+
 const MAX_DISTANCE = 0.6;
 const DEFAULT_TOP_K = 12;
 
@@ -48,6 +50,8 @@ export async function documentSearch({
     levelParts.length > 0
       ? `Adapt the research to ${levelParts.join(', ')}.`
       : 'Adapt the research to the educational level implied by the document content.';
+
+  const quantitativeResearch = buildQuantitativeResearchAddon(topic);
 
   const { text } = await generateText({
     model: openrouter(MODELS.RETRIEVAL),
@@ -122,6 +126,7 @@ Ensure the research covers:
 2. Search each aspect with specific, targeted queries phrased as a student would ask
 3. Search for: definitions, key concepts, examples, applications, important facts
 4. Use different phrasings and synonyms to maximize coverage
+${quantitativeResearch}
 </strategy>
 
 <format>

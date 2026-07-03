@@ -7,6 +7,8 @@ import { researchWeb } from '@/shared/ai/tavily';
 import { GENERATION_PARAMS, MODELS } from '@/shared/config/models';
 import { withRetry } from '@/shared/lib/retry';
 
+import { buildQuantitativeResearchAddon } from '../prompts/subject-guidance';
+
 const MARKDOWN_LIMIT = 150_000;
 
 export type WebSearchResult = {
@@ -28,6 +30,8 @@ export async function webSearch({
   classGrade: string;
 }): Promise<WebSearchResult> {
   const allImageRefs = new Map<string, ImageRef>();
+  const quantitativeResearch = buildQuantitativeResearchAddon(topic);
+
   const { text } = await generateText({
     model: openrouter(MODELS.RESEARCH),
     temperature: GENERATION_PARAMS.RESEARCH.temperature,
@@ -98,6 +102,7 @@ Ensure the research covers:
 1. Break the topic into 3-5 key aspects or sub-topics
 2. Search each aspect with specific, targeted queries
 3. Search for: definitions, key concepts, examples, applications, common misconceptions, and important facts
+${quantitativeResearch}
 </strategy>
 
 <format>
