@@ -1,5 +1,14 @@
-import { Check, Eye, EyeSlash, PencilSimple } from '@phosphor-icons/react';
+import { Check, Eye, EyeSlash, PencilSimple, Spinner, Trash } from '@phosphor-icons/react';
 import { Button } from '@questgen/ui/components/button';
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '@questgen/ui/components/dialog';
 import { cn } from '@questgen/ui/lib/utils';
 import { useState } from 'react';
 
@@ -17,6 +26,9 @@ type QuestionCardProps = {
   index: number;
   isDirty: boolean;
   onEdit: () => void;
+  onDelete: () => Promise<void>;
+  isDeleting?: boolean;
+  deleteDisabled?: boolean;
 };
 
 function isMultipleChoice(type: QuestionType): boolean {
@@ -41,16 +53,30 @@ export function QuestionCard({
   index,
   isDirty,
   onEdit,
+  onDelete,
+  isDeleting = false,
+  deleteDisabled = false,
 }: QuestionCardProps) {
   const [revealed, setRevealed] = useState(true);
+  const [confirmOpen, setConfirmOpen] = useState(false);
 
   const showOptions = isMultipleChoice(question.questionType);
   const correctOptionLabel = showOptions
     ? findCorrectOptionLabel(question.options, question.correctAnswer)
     : null;
 
+  async function handleConfirmDelete() {
+    try {
+      await onDelete();
+      setConfirmOpen(false);
+    } catch {
+      // parent shows toast; keep dialog open
+    }
+  }
+
   return (
-    <article
+    <>
+      <article
       className={cn(
         'border bg-card transition-colors',
         isDirty ? 'border-accent' : 'border-border',
@@ -83,6 +109,18 @@ export function QuestionCard({
           >
             <PencilSimple className="size-3.5" weight="bold" aria-hidden />
             Edit
+          </Button>
+          <Button
+            type="button"
+            variant="ghost"
+            size="sm"
+            onClick={() => setConfirmOpen(true)}
+            disabled={deleteDisabled || isDeleting}
+            className="gap-1.5 text-destructive hover:text-destructive"
+            aria-label={`Hapus soal nomor ${index + 1}`}
+          >
+            <Trash className="size-3.5" weight="bold" aria-hidden />
+            Hapus
           </Button>
           <button
             type="button"
@@ -195,6 +233,41 @@ export function QuestionCard({
         )}
       </div>
     </article>
+
+      <Dialog open={confirmOpen} onOpenChange={setConfirmOpen}>
+        <DialogContent className="sm:max-w-sm">
+          <DialogHeader>
+            <DialogTitle className="font-serif text-base">Hapus soal?</DialogTitle>
+            <DialogDescription>
+              Soal nomor {index + 1} akan dihapus permanen dari set ini. Tindakan
+              ini tidak dapat dibatalkan.
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <DialogClose
+              render={
+                <Button type="button" variant="ghost" disabled={isDeleting} />
+              }
+            >
+              Batal
+            </DialogClose>
+            <Button
+              type="button"
+              variant="destructive"
+              disabled={isDeleting}
+              onClick={handleConfirmDelete}
+            >
+              {isDeleting ? (
+                <Spinner className="size-4 animate-spin" weight="bold" aria-hidden />
+              ) : (
+                <Trash weight="bold" aria-hidden />
+              )}
+              Hapus
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 }
 

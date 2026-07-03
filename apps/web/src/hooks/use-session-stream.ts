@@ -97,9 +97,8 @@ export function useSessionStream(sessionId: string): UseSessionStreamResult {
   const isStreaming = chatStatus === 'submitted' || chatStatus === 'streaming';
 
   const questions = useMemo<StreamedQuestion[]>(() => {
-    if (isStreaming && streamedQuestions.length > 0) return streamedQuestions;
-    if (initial && initial.questions.length > 0) {
-      return initial.questions.map((q) => ({
+    const fromInitial = () =>
+      (initial?.questions ?? []).map((q) => ({
         id: q.id,
         questionText: q.questionText,
         questionType: q.questionType,
@@ -109,10 +108,13 @@ export function useSessionStream(sessionId: string): UseSessionStreamResult {
         suggestedAnswer: q.suggestedAnswer ?? '',
         order: q.order,
       }));
-    }
+
+    if (isStreaming && streamedQuestions.length > 0) return streamedQuestions;
+    if (isFetched && initial && !isStreaming) return fromInitial();
+    if (initial && initial.questions.length > 0) return fromInitial();
     if (streamedQuestions.length > 0) return streamedQuestions;
     return [];
-  }, [isStreaming, streamedQuestions, initial]);
+  }, [isStreaming, isFetched, streamedQuestions, initial]);
 
   return {
     status,

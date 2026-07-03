@@ -15,6 +15,9 @@ type QuestionListProps = {
   edits: Record<string, StagedEdit>;
   isSaving: boolean;
   onEdit: (question: StreamedQuestion) => void;
+  onDelete: (questionId: string) => Promise<void>;
+  deletingQuestionId: string | null;
+  deleteDisabled: boolean;
   onSave: () => void;
   onDiscard: () => void;
 };
@@ -27,6 +30,9 @@ export function QuestionList({
   edits,
   isSaving,
   onEdit,
+  onDelete,
+  deletingQuestionId,
+  deleteDisabled,
   onSave,
   onDiscard,
 }: QuestionListProps) {
@@ -80,6 +86,9 @@ export function QuestionList({
                   index={i}
                   isDirty={Boolean(edit)}
                   onEdit={() => onEdit(rendered)}
+                  onDelete={() => onDelete(question.id)}
+                  isDeleting={deletingQuestionId === question.id}
+                  deleteDisabled={deleteDisabled}
                 />
               </li>
             );

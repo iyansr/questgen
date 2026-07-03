@@ -1,7 +1,7 @@
 import type { createDb } from '@questgen/db';
 import { questionSets, questions } from '@questgen/db/schema';
 import { env } from '@questgen/env/server';
-import { and, eq, inArray } from 'drizzle-orm';
+import { and, eq, gt, inArray, sql } from 'drizzle-orm';
 
 import { buildImagePublicUrl } from '@/shared/lib/images';
 
@@ -45,6 +45,10 @@ export type UpdateQuestionsResult = {
   updated: number;
   imagesUploaded: number;
   imagesRemoved: number;
+};
+
+export type DeleteQuestionResult = {
+  deleted: number;
 };
 
 export async function updateQuestions(
@@ -196,6 +200,49 @@ export async function updateQuestions(
     imagesUploaded: uploaded.length,
     imagesRemoved: keysToRemove.length,
   };
+}
+
+export async function deleteQuestion(
+  db: ReturnType<typeof createDb>,
+  userId: string,
+  sessionId: string,
+  questionId: string,
+): Promise<DeleteQuestionResult> {
+  const [session] = await db
+    .select({ id: questionSets.id })
+    .from(questionSets)
+    .where(and(eq(questionSets.id, sessionId), eq(questionSets.userId, userId)))
+    .limit(1);
+
+  if (!session) {
+    throw new SessionValidationError('Session not found', 404);
+  }
+
+  const [target] = await db
+    .select({
+      id: questions.id,
+      setId: questions.setId,
+      order: questions.order,
+    })
+    .from(questions)
+    .where(eq(questions.id, questionId))
+    .limit(1);
+
+  if (!target || target.setId !== sessionId) {
+    throw new SessionValidationError('Question not found', 404);
+  }
+
+  await db.transaction(async (tx) => {
+    await tx.delete(questions).where(eq(questions.id, questionId));
+    await tx
+      .update(questions)
+      .set({ order: sql`${questions.order} - 1` })
+      .where(
+        and(eq(questions.setId, sessionId), gt(questions.order, target.order)),
+      );
+  });
+
+  return { deleted: 1 };
 }
 
 async function rollbackUploads(uploaded: UploadedImageRef[]) {

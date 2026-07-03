@@ -2,6 +2,7 @@ import { useCallback, useState } from 'react';
 import { toast } from 'sonner';
 
 import { useSessionStream } from '@/hooks/use-session-stream';
+import { useDeleteQuestion } from '@/services/sessions/delete-question';
 import { useSession } from '@/services/sessions/detail';
 import { useUpdateQuestions } from '@/services/sessions/update-questions';
 import type { StreamedQuestion } from '@/types/session-message';
@@ -24,11 +25,15 @@ type SessionDetailPageProps = {
 export function SessionDetailPage({ sessionId }: SessionDetailPageProps) {
   const { data, isLoading, isError, error } = useSession(sessionId);
   const { status, questions, isStreaming } = useSessionStream(sessionId);
-  const { edits, setEdit, clearAll, dirtyCount } = useQuestionEdits();
+  const { edits, setEdit, clearAll, removeEdit, dirtyCount } = useQuestionEdits();
   const updateQuestions = useUpdateQuestions(sessionId);
+  const deleteQuestion = useDeleteQuestion(sessionId);
 
   const [editingQuestion, setEditingQuestion] =
     useState<StreamedQuestion | null>(null);
+  const [deletingQuestionId, setDeletingQuestionId] = useState<string | null>(
+    null,
+  );
 
   const handleEdit = useCallback((question: StreamedQuestion) => {
     setEditingQuestion(question);
@@ -66,6 +71,25 @@ export function SessionDetailPage({ sessionId }: SessionDetailPageProps) {
       );
     }
   }, [dirtyCount, edits, updateQuestions, sessionId, clearAll]);
+
+  const handleDelete = useCallback(
+    async (questionId: string) => {
+      setDeletingQuestionId(questionId);
+      try {
+        await deleteQuestion.mutateAsync({ sessionId, questionId });
+        removeEdit(questionId);
+        toast.success('Soal berhasil dihapus.');
+      } catch (err) {
+        toast.error(
+          err instanceof Error ? err.message : 'Gagal menghapus soal.',
+        );
+        throw err;
+      } finally {
+        setDeletingQuestionId(null);
+      }
+    },
+    [deleteQuestion, sessionId, removeEdit],
+  );
 
   if (isLoading) return <SessionDetailSkeleton />;
 
@@ -120,6 +144,13 @@ export function SessionDetailPage({ sessionId }: SessionDetailPageProps) {
             edits={edits}
             isSaving={updateQuestions.isPending}
             onEdit={handleEdit}
+            onDelete={handleDelete}
+            deletingQuestionId={deletingQuestionId}
+            deleteDisabled={
+              isStreaming ||
+              status.status === 'generating' ||
+              updateQuestions.isPending
+            }
             onSave={handleSave}
             onDiscard={clearAll}
           />

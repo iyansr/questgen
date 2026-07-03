@@ -288,7 +288,19 @@
 - Commits: pending.
 - Next best step: merge PR; optional live timing smoke against `/api/auth/login`.
 
-### Session 017
+### Session 018
+
+- Date: 2026-07-03
+- Goal: Delete individual question from session detail (button → confirm → API).
+- Completed:
+  - `DELETE /api/sessions/:id/questions/:questionId` in `questions.service.ts` + `sessions.routes.ts` — deletes row, compacts `order`; **no R2 image cleanup** (per product decision).
+  - Server tests in `questions.test.ts`: happy path + order compaction, 404 unknown question, 404 other user.
+  - Web: `delete-question.ts` hook, Hapus button + confirm dialog on `QuestionCard`, wired through `QuestionList` / `SessionDetailPage`.
+  - `useSessionStream` prefers refetched `initial.questions` when not streaming (fixes stale list after delete).
+- Verification run: `pnpm --filter web check-types` → pass (vite build + tsc exit 0). `pnpm test:server` not run — PostgreSQL not available (`ECONNREFUSED 127.0.0.1:5432`).
+- Evidence captured: web build exit 0.
+- Known risk or unresolved issue: server delete tests unverified in this session; manual browser smoke pending.
+- Next best step: start Postgres, run `pnpm test:server test/questions.test.ts`, smoke delete on a completed session in browser.
 
 - Date: 2026-07-02
 - Goal: Integrate dashboard stat cards (total questions, saved sets, uploaded documents).

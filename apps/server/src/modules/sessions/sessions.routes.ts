@@ -7,7 +7,11 @@ import { Hono } from 'hono';
 import type { AppEnv } from '@/types';
 
 import { updateQuestionsSchema } from './questions.schema';
-import { collectImageAssignments, updateQuestions } from './questions.service';
+import {
+  collectImageAssignments,
+  deleteQuestion,
+  updateQuestions,
+} from './questions.service';
 import {
   createSessionSchema,
   listSessionsQuerySchema,
@@ -107,6 +111,24 @@ sessions.patch(
     }
   },
 );
+
+sessions.delete('/:id/questions/:questionId', async (c) => {
+  const db = c.get('db');
+  const userId = c.get('userId');
+  const id = c.req.param('id');
+  const questionId = c.req.param('questionId');
+
+  try {
+    const result = await deleteQuestion(db, userId, id, questionId);
+    return c.json(result);
+  } catch (err) {
+    if (err instanceof SessionValidationError) {
+      return c.json({ error: err.message }, err.status);
+    }
+    console.error('Delete question error:', err);
+    return c.json({ error: 'Internal server error' }, 500);
+  }
+});
 
 sessions.post('/:id/stream', async (c) => {
   const db = c.get('db');
