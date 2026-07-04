@@ -1,5 +1,7 @@
 import { Sparkle } from '@phosphor-icons/react';
 
+import { GENERATION_BACKGROUND_MESSAGE } from './generation-background-notice';
+
 type EmptyQuestionsProps = {
   status: 'pending' | 'generating' | 'completed' | 'failed';
 };
@@ -11,21 +13,25 @@ export function EmptyQuestions({ status }: EmptyQuestionsProps) {
         return {
           title: 'Belum ada soal',
           body: 'Dokumen sedang disiapkan. Soal pertama akan muncul sebentar lagi.',
+          showBackgroundHint: true,
         };
       case 'generating':
         return {
           title: 'AI sedang berpikir',
           body: 'Soal pertama akan muncul di sini begitu siap.',
+          showBackgroundHint: true,
         };
       case 'failed':
         return {
           title: 'Tidak ada soal',
           body: 'Proses dihentikan sebelum soal pertama dihasilkan.',
+          showBackgroundHint: false,
         };
       default:
         return {
           title: 'Tidak ada soal',
           body: 'Sesi ini belum menghasilkan soal apa pun.',
+          showBackgroundHint: false,
         };
     }
   })();
@@ -47,6 +53,11 @@ export function EmptyQuestions({ status }: EmptyQuestionsProps) {
         <p className="text-base text-muted-foreground leading-relaxed">
           {message.body}
         </p>
+        {message.showBackgroundHint && (
+          <p className="text-muted-foreground text-sm leading-relaxed">
+            {GENERATION_BACKGROUND_MESSAGE}
+          </p>
+        )}
       </div>
     </div>
   );

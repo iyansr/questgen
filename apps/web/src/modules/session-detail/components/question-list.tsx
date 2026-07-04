@@ -3,6 +3,7 @@ import { Spinner } from '@phosphor-icons/react';
 import type { StreamedQuestion } from '@/types/session-message';
 
 import type { StagedEdit } from '../hooks/use-question-edits';
+import { GENERATION_BACKGROUND_MESSAGE } from './generation-background-notice';
 import { EmptyQuestions } from './empty-questions';
 import { applyStagedEdit, QuestionCard } from './question-card';
 import { SaveBar } from './save-bar';
@@ -98,12 +99,15 @@ export function QuestionList({
 
       {showStreamingFooter && questions.length > 0 && (
         <div
-          className="flex items-center gap-2 border border-border border-dashed px-4 py-3 text-muted-foreground text-sm"
+          className="space-y-2 border border-border border-dashed px-4 py-3 text-muted-foreground text-sm"
           role="status"
           aria-live="polite"
         >
-          <Spinner className="size-4 animate-spin" weight="bold" aria-hidden />
-          <span>Soal berikutnya sedang dibuat…</span>
+          <div className="flex items-center gap-2">
+            <Spinner className="size-4 animate-spin" weight="bold" aria-hidden />
+            <span>Soal berikutnya sedang dibuat…</span>
+          </div>
+          <p className="text-xs leading-relaxed">{GENERATION_BACKGROUND_MESSAGE}</p>
         </div>
       )}
     </section>

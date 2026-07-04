@@ -8,6 +8,7 @@ import { useUpdateQuestions } from '@/services/sessions/update-questions';
 import type { StreamedQuestion } from '@/types/session-message';
 
 import { BackToTop } from './components/back-to-top';
+import { GenerationBackgroundNotice } from './components/generation-background-notice';
 import {
   EditQuestionDialog,
   type EditQuestionSubmitPayload,
@@ -114,6 +115,8 @@ export function SessionDetailPage({ sessionId }: SessionDetailPageProps) {
 
   const expectedCount =
     typeof data.config?.count === 'number' ? data.config.count : null;
+  const isGeneratingSession =
+    status.status === 'pending' || status.status === 'generating';
 
   return (
     <div className="space-y-10">
@@ -122,6 +125,7 @@ export function SessionDetailPage({ sessionId }: SessionDetailPageProps) {
         questionsCount={questions.length}
         dirtyCount={dirtyCount}
       />
+      {isGeneratingSession && <GenerationBackgroundNotice />}
       <BackToTop />
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
