@@ -302,6 +302,18 @@
 - Known risk or unresolved issue: server delete tests unverified in this session; manual browser smoke pending.
 - Next best step: start Postgres, run `pnpm test:server test/questions.test.ts`, smoke delete on a completed session in browser.
 
+### Session 019
+
+- Date: 2026-07-04
+- Goal: Tell users they can safely close the tab while questions are being generated.
+- Completed:
+  - New `GenerationBackgroundNotice` on session detail when status is `pending` or `generating`.
+  - Shared `GENERATION_BACKGROUND_MESSAGE` reused in `EmptyQuestions` (waiting for first question) and `QuestionList` streaming footer.
+- Verification run: `pnpm --filter web check-types` → pass (vite build + tsc exit 0).
+- Evidence captured: vite build exit 0.
+- Commits: pending.
+- Next best step: manual browser smoke on an in-progress session (notice visible, disappears when completed).
+
 - Date: 2026-07-02
 - Goal: Integrate dashboard stat cards (total questions, saved sets, uploaded documents).
 - Completed:
