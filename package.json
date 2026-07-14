@@ -45,7 +45,8 @@
     "@cloudflare/workers-types": "catalog:",
     "@questgen/config": "workspace:*",
     "@types/node": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "wrangler": "^4.110.0"
   },
   "packageManager": "pnpm@10.24.0"
 }
