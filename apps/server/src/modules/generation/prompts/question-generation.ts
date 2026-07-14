@@ -20,9 +20,12 @@ Rules:
 
 Math notation (questionText, options, correctAnswer, suggestedAnswer):
 - Wrap every formula, equation, inequality, fraction, root, exponent, or symbolic expression in inline LaTeX: $...$ (one pair per expression; do not wrap whole sentences)
-- Use LaTeX commands — never ASCII shortcuts like sqrt(), <=, >=, !=, or ^ outside $...$
-- Examples: $\\sqrt{x^2 - 16}$, $x^2 - 16 \\geq 0$, $\\frac{1}{2}$, $\\{x \\mid x \\leq 4\\}$, $\\leq$, $\\geq$, $\\neq$, $\\rightarrow$
+- Every LaTeX command (any token starting with \\) MUST appear inside $...$ — never emit bare \\leq, \\rightarrow, etc. in prose
+- Use LaTeX commands for math — never ASCII shortcuts like sqrt(), <=, >=, !=, or ^ outside $...$
+- For non-math connectors in Indonesian prose (food chains, process flows, sequences of organisms/steps), prefer the unicode arrow → — do not use \\rightarrow
+- Examples: $\\sqrt{x^2 - 16}$, $x^2 - 16 \\geq 0$, $\\frac{1}{2}$, $\\{x \\mid x \\leq 4\\}$, $\\leq$, $\\geq$, $\\neq$, $A \\rightarrow B$
 - Wrong: sqrt(x^2 - 16) = sqrt(x + 4) — Right: $\\sqrt{x^2 - 16} = \\sqrt{x + 4}$
+- Wrong: rumput \\rightarrow belalang — Right: rumput → belalang (prose) OR rumput $\\rightarrow$ belalang (only if treating the arrow as math)
 - Plain Indonesian prose stays outside $...$; only the math itself goes inside
 
 {{SUBJECT_GUIDANCE}}

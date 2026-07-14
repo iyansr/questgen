@@ -126,10 +126,22 @@ function wrapMathSpans(text: string): string {
     .join('');
 }
 
+/** Bare \\rightarrow outside $...$ is not KaTeX — wrap leftovers after span heuristics. */
+function wrapBareArrows(text: string): string {
+  return splitByExistingMath(text)
+    .map((part) =>
+      part.math
+        ? part.value
+        : part.value.replace(/\\rightarrow/g, '$\\rightarrow$'),
+    )
+    .join('');
+}
+
 function normalizePlainSegment(text: string): string {
   let segment = replaceSqrtCalls(text);
   segment = replaceOperators(segment);
   segment = wrapMathSpans(segment);
+  segment = wrapBareArrows(segment);
   return segment;
 }
 
