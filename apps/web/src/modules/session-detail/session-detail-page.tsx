@@ -8,11 +8,11 @@ import { useUpdateQuestions } from '@/services/sessions/update-questions';
 import type { StreamedQuestion } from '@/types/session-message';
 
 import { BackToTop } from './components/back-to-top';
-import { GenerationBackgroundNotice } from './components/generation-background-notice';
 import {
   EditQuestionDialog,
   type EditQuestionSubmitPayload,
 } from './components/edit-question-dialog';
+import { GenerationBackgroundNotice } from './components/generation-background-notice';
 import { QuestionList } from './components/question-list';
 import { SessionDetailSkeleton } from './components/session-detail-skeleton';
 import { SessionHeader } from './components/session-header';
@@ -26,7 +26,8 @@ type SessionDetailPageProps = {
 export function SessionDetailPage({ sessionId }: SessionDetailPageProps) {
   const { data, isLoading, isError, error } = useSession(sessionId);
   const { status, questions, isStreaming } = useSessionStream(sessionId);
-  const { edits, setEdit, clearAll, removeEdit, dirtyCount } = useQuestionEdits();
+  const { edits, setEdit, clearAll, removeEdit, dirtyCount } =
+    useQuestionEdits();
   const updateQuestions = useUpdateQuestions(sessionId);
   const deleteQuestion = useDeleteQuestion(sessionId);
 

@@ -15,7 +15,11 @@ describe('PDF math symbol fallback', () => {
     const fonts = await embedExamFonts(doc);
 
     for (const symbol of MATH_SYMBOLS) {
-      const segments = resolveTextSegments(`a${symbol}2`, fonts.regular, fonts.math);
+      const segments = resolveTextSegments(
+        `a${symbol}2`,
+        fonts.regular,
+        fonts.math,
+      );
       const symbolSegment = segments.find((s) => s.text.includes(symbol));
 
       expect(symbolSegment, `no segment produced for ${symbol}`).toBeDefined();

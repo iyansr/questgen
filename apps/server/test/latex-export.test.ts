@@ -1,7 +1,10 @@
 import { describe, expect, it } from 'vitest';
 
 import { latexToUnicode } from '@/modules/export/shared/latex-unicode';
-import { markdownToBlocks, plainTextFromMarkdown } from '@/modules/export/shared/markdown-blocks';
+import {
+  markdownToBlocks,
+  plainTextFromMarkdown,
+} from '@/modules/export/shared/markdown-blocks';
 
 describe('latexToUnicode', () => {
   it('renders fractions as (num)/(den) instead of concatenating digits', () => {
@@ -16,24 +19,18 @@ describe('latexToUnicode', () => {
   it('renders roots and set notation without mangling braces', () => {
     expect(latexToUnicode('\\sqrt{3-5x}')).toBe('√(3-5x)');
     expect(
-      latexToUnicode(
-        '\\{x \\mid x \\ge -\\frac{3}{5}, x \\in \\mathbb{R}\\}',
-      ),
+      latexToUnicode('\\{x \\mid x \\ge -\\frac{3}{5}, x \\in \\mathbb{R}\\}'),
     ).toBe('{x ∣ x ≥ -(3)/(5), x ∈ ℝ}');
   });
 });
 
 describe('markdownToBlocks export math', () => {
   it('preserves math from inline LaTeX spans', () => {
-    const text =
-      'Domain dari $f(x)=\\sqrt{3-5x}$ adalah ...';
+    const text = 'Domain dari $f(x)=\\sqrt{3-5x}$ adalah ...';
     expect(plainTextFromMarkdown(text)).toContain('√(3-5x)');
 
-    const option =
-      '$\\{x \\mid x \\ge -\\frac{3}{5}, x \\in \\mathbb{R}\\}$';
-    expect(plainTextFromMarkdown(option)).toBe(
-      '{x ∣ x ≥ -(3)/(5), x ∈ ℝ}',
-    );
+    const option = '$\\{x \\mid x \\ge -\\frac{3}{5}, x \\in \\mathbb{R}\\}$';
+    expect(plainTextFromMarkdown(option)).toBe('{x ∣ x ≥ -(3)/(5), x ∈ ℝ}');
   });
 
   it('returns structured runs for mixed prose and math', () => {

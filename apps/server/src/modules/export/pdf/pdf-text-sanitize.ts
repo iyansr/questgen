@@ -42,7 +42,9 @@ function isFontEncodable(font: PDFFont, char: string, size: number): boolean {
   const fontkitFont = getFontkitFont(font);
   if (fontkitFont?.hasGlyphForCodePoint) {
     const codePoint = char.codePointAt(0);
-    return codePoint !== undefined && fontkitFont.hasGlyphForCodePoint(codePoint);
+    return (
+      codePoint !== undefined && fontkitFont.hasGlyphForCodePoint(codePoint)
+    );
   }
 
   try {
