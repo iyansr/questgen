@@ -18,6 +18,7 @@ import {
 } from './sessions.schema';
 import {
   createSession,
+  deleteSession,
   getSessionWithQuestions,
   listSessions,
   SessionValidationError,
@@ -111,6 +112,23 @@ sessions.patch(
     }
   },
 );
+
+sessions.delete('/:id', async (c) => {
+  const db = c.get('db');
+  const userId = c.get('userId');
+  const id = c.req.param('id');
+
+  try {
+    const result = await deleteSession(db, userId, id);
+    return c.json(result);
+  } catch (err) {
+    if (err instanceof SessionValidationError) {
+      return c.json({ error: err.message }, err.status);
+    }
+    console.error('Delete session error:', err);
+    return c.json({ error: 'Internal server error' }, 500);
+  }
+});
 
 sessions.delete('/:id/questions/:questionId', async (c) => {
   const db = c.get('db');

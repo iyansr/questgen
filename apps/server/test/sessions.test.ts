@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
+import { registerAndGetToken } from './helpers/auth';
 import { uniqueEmail } from './helpers/email';
 import { seedCompletedSession } from './helpers/fixtures';
 import { api, readJson } from './helpers/http';
@@ -82,6 +83,52 @@ describe('GET /api/sessions/:id', () => {
       '/api/sessions/00000000-0000-4000-8000-000000000099',
       { token },
     );
+
+    expect(res.status).toBe(404);
+  });
+});
+
+describe('DELETE /api/sessions/:id', () => {
+  it('deletes a session and its questions', async () => {
+    const { token, sessionId } = await seedCompletedSession(
+      uniqueEmail('delete-session-ok'),
+    );
+
+    const deleteRes = await api(`/api/sessions/${sessionId}`, {
+      method: 'DELETE',
+      token,
+    });
+    expect(deleteRes.status).toBe(200);
+    const deleteBody = await readJson<{ deleted: number }>(deleteRes);
+    expect(deleteBody.deleted).toBe(1);
+
+    const getRes = await api(`/api/sessions/${sessionId}`, { token });
+    expect(getRes.status).toBe(404);
+
+    const listRes = await api('/api/sessions', { token });
+    const listBody = await readJson<{ total: number }>(listRes);
+    expect(listBody.total).toBe(0);
+  });
+
+  it('returns 404 for unknown session id', async () => {
+    const { token } = await seedCompletedSession(uniqueEmail('delete-unknown'));
+
+    const res = await api(
+      '/api/sessions/00000000-0000-4000-8000-000000000099',
+      { method: 'DELETE', token },
+    );
+
+    expect(res.status).toBe(404);
+  });
+
+  it('returns 404 for another user session', async () => {
+    const owner = await seedCompletedSession(uniqueEmail('delete-owner'));
+    const tokenB = await registerAndGetToken(uniqueEmail('delete-other'));
+
+    const res = await api(`/api/sessions/${owner.sessionId}`, {
+      method: 'DELETE',
+      token: tokenB,
+    });
 
     expect(res.status).toBe(404);
   });

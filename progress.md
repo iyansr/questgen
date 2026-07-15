@@ -355,5 +355,18 @@
 - Known risk or unresolved issue: no live browser upload of 51-page PDF in this session.
 - Next best step: smoke `/new` — hint shows “PDF maks. 50 halaman”; reject oversized PDF; DOCX/PPT over 50 pages fail post-OCR.
 
+### Session 023
+
+- Date: 2026-07-15
+- Goal: Delete question set from history/dashboard (Hapus → confirm → API).
+- Completed:
+  - `DELETE /api/sessions/:id` in `sessions.service.ts` + `sessions.routes.ts` — DB-only delete; questions cascade; **no R2 image or document cleanup** (confirmed product decision).
+  - Server tests in `sessions.test.ts`: happy path, 404 unknown id, 404 other user.
+  - Web: `delete-session.ts` hook; confirm dialog + Hapus wired in shared `sessions-columns.tsx` (history + dashboard).
+  - Pagination rollback `useEffect` on empty page after delete in `history-page.tsx` and `dashboard-page.tsx`.
+- Verification run: `./init.sh` → pass; `pnpm --filter web check-types` → pass (vite build + tsc exit 0). `pnpm test:server test/sessions.test.ts` not run — PostgreSQL not available (`ECONNREFUSED 127.0.0.1:5432`).
+- Evidence captured: web build exit 0; init exit 0.
+- Known risk or unresolved issue: server delete-session tests unverified in this session; manual browser smoke pending.
+- Next best step: start Postgres, run `pnpm test:server test/sessions.test.ts`, smoke Hapus on history and dashboard tables.
 
 

@@ -8,7 +8,7 @@ import {
 } from '@phosphor-icons/react';
 import { Skeleton } from '@questgen/ui/components/skeleton';
 import { useNavigate } from '@tanstack/react-router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { DataTable } from '@/components/data-table';
 import { useMe } from '@/services/auth/me';
@@ -80,6 +80,17 @@ export function DashboardPage() {
 
   const total = sessions?.total ?? 0;
   const pageCount = Math.max(1, Math.ceil(total / pageSize));
+
+  useEffect(() => {
+    if (
+      !isSessionsLoading &&
+      sessions &&
+      sessions.items.length === 0 &&
+      page > 0
+    ) {
+      setPage((p) => Math.max(0, p - 1));
+    }
+  }, [isSessionsLoading, sessions, page]);
 
   function goToNew() {
     navigate({ to: '/new' as never });

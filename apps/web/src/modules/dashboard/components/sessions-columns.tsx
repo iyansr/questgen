@@ -1,5 +1,14 @@
-import { DotsThree, Eye, Trash } from '@phosphor-icons/react';
+import { DotsThree, Eye, Spinner, Trash } from '@phosphor-icons/react';
 import { Button } from '@questgen/ui/components/button';
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '@questgen/ui/components/dialog';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,7 +18,10 @@ import {
 import { cn } from '@questgen/ui/lib/utils';
 import { Link, useNavigate } from '@tanstack/react-router';
 import type { ColumnDef } from '@tanstack/react-table';
+import { useState } from 'react';
+import { toast } from 'sonner';
 
+import { useDeleteSession } from '@/services/sessions/delete-session';
 import type { SessionListItem } from '@/services/sessions/list';
 
 const STATUS_STYLES: Record<string, string> = {
@@ -32,39 +44,98 @@ function formatDateTime(value: string) {
 
 function SessionActionsCell({ session }: { session: SessionListItem }) {
   const navigate = useNavigate();
+  const deleteSession = useDeleteSession();
+  const [confirmOpen, setConfirmOpen] = useState(false);
 
   function openSession() {
     navigate({ to: '/session/$id', params: { id: session.id } });
   }
 
-  function deleteSession() {
-    // TODO: wire to DELETE /api/sessions/:id once available.
+  async function handleConfirmDelete() {
+    try {
+      await deleteSession.mutateAsync({ sessionId: session.id });
+      toast.success('Set soal berhasil dihapus.');
+      setConfirmOpen(false);
+    } catch (err) {
+      toast.error(
+        err instanceof Error ? err.message : 'Gagal menghapus set soal.',
+      );
+    }
   }
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger
-        render={
-          <Button
-            variant="ghost"
-            size="icon-sm"
-            aria-label={`Aksi untuk ${session.title}`}
+    <>
+      <DropdownMenu>
+        <DropdownMenuTrigger
+          render={
+            <Button
+              variant="ghost"
+              size="icon-sm"
+              aria-label={`Aksi untuk ${session.title}`}
+            >
+              <DotsThree className="size-4" weight="bold" />
+            </Button>
+          }
+        />
+        <DropdownMenuContent align="end">
+          <DropdownMenuItem onClick={openSession}>
+            <Eye className="size-4" weight="regular" />
+            Lihat
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            variant="destructive"
+            onClick={() => setConfirmOpen(true)}
           >
-            <DotsThree className="size-4" weight="bold" />
-          </Button>
-        }
-      />
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={openSession}>
-          <Eye className="size-4" weight="regular" />
-          Lihat
-        </DropdownMenuItem>
-        <DropdownMenuItem variant="destructive" onClick={deleteSession}>
-          <Trash className="size-4" weight="regular" />
-          Hapus
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+            <Trash className="size-4" weight="regular" />
+            Hapus
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+
+      <Dialog open={confirmOpen} onOpenChange={setConfirmOpen}>
+        <DialogContent className="sm:max-w-sm">
+          <DialogHeader>
+            <DialogTitle className="font-serif text-base">
+              Hapus set soal?
+            </DialogTitle>
+            <DialogDescription>
+              {session.title} akan dihapus permanen beserta semua soalnya.
+              Tindakan ini tidak dapat dibatalkan.
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <DialogClose
+              render={
+                <Button
+                  type="button"
+                  variant="ghost"
+                  disabled={deleteSession.isPending}
+                />
+              }
+            >
+              Batal
+            </DialogClose>
+            <Button
+              type="button"
+              variant="destructive"
+              disabled={deleteSession.isPending}
+              onClick={handleConfirmDelete}
+            >
+              {deleteSession.isPending ? (
+                <Spinner
+                  className="size-4 animate-spin"
+                  weight="bold"
+                  aria-hidden
+                />
+              ) : (
+                <Trash weight="bold" aria-hidden />
+              )}
+              Hapus
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 }
 

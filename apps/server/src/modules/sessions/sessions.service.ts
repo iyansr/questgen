@@ -434,3 +434,26 @@ export async function listSessions(
     limit,
   };
 }
+
+export type DeleteSessionResult = {
+  deleted: number;
+};
+
+export async function deleteSession(
+  db: ReturnType<typeof createDb>,
+  userId: string,
+  id: string,
+): Promise<DeleteSessionResult> {
+  const [session] = await db
+    .select({ id: questionSets.id })
+    .from(questionSets)
+    .where(and(eq(questionSets.id, id), eq(questionSets.userId, userId)))
+    .limit(1);
+
+  if (!session) {
+    throw new SessionValidationError('Session not found', 404);
+  }
+
+  await db.delete(questionSets).where(eq(questionSets.id, id));
+  return { deleted: 1 };
+}

@@ -1,7 +1,7 @@
 import { MagnifyingGlass, X } from '@phosphor-icons/react';
 import { Input } from '@questgen/ui/components/input';
 import { Skeleton } from '@questgen/ui/components/skeleton';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { DataTable } from '@/components/data-table';
 import { type SessionStatus, useSessions } from '@/services/sessions/list';
@@ -44,6 +44,12 @@ export function HistoryPage() {
 
   const total = sessions?.total ?? 0;
   const pageCount = Math.max(1, Math.ceil(total / pageSize));
+
+  useEffect(() => {
+    if (!isLoading && sessions && sessions.items.length === 0 && page > 0) {
+      setPage((p) => Math.max(0, p - 1));
+    }
+  }, [isLoading, sessions, page]);
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
