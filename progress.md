@@ -396,4 +396,14 @@
 - Known risk or unresolved issue: none for this fix; prod data already lost earlier cannot be restored by this change.
 - Next best step: commit + push this safety fix; restore Supabase from backup/PITR if available.
 
+### Session 026
+
+- Date: 2026-07-15
+- Goal: Fix PDF exam header dotted fields overflowing past page/column margins.
+- Completed:
+  - `drawDottedField` in `exam-layout.ts`: `dotEnd` now `x + fieldWidth` (total slot width) instead of `dotStart + width` (which double-counted label width).
+- Verification run: `pnpm test:server` → 12 files / 71 tests passed (includes `export.test.ts` PDF smoke).
+- Evidence captured: vitest exit 0; export PDF endpoint still returns `application/pdf`.
+- Known risk or unresolved issue: manual visual PDF header check not run in browser.
+- Next best step: export a session PDF and confirm Nama/Kelas/Hari-Tanggal dots stop at margins.
 

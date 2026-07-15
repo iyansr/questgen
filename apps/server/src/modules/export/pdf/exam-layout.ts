@@ -227,7 +227,7 @@ export class ExamLayout {
 
   drawDottedField(
     label: string,
-    width: number,
+    fieldWidth: number,
     options: { size?: number; x?: number; advanceY?: boolean } = {},
   ): void {
     const size = options.size ?? 11;
@@ -248,7 +248,8 @@ export class ExamLayout {
 
     const labelWidth = font.widthOfTextAtSize(safeLabel, size);
     const dotStart = x + labelWidth + 4;
-    const dotEnd = dotStart + width;
+    // fieldWidth = total slot from x (label + dots), not dot-only width
+    const dotEnd = x + fieldWidth;
     const dotY = this.y - size * 0.15;
 
     this.page.drawLine({
