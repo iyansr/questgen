@@ -1,9 +1,9 @@
 import pg from 'pg';
 
-const TEST_DATABASE_URL =
-  'postgresql://postgres:postgres@127.0.0.1:5432/questgen_test';
+import { assertSafeTestDatabaseUrl, TEST_DATABASE_URL } from './safe-database';
 
 export default async function globalSetup() {
+  assertSafeTestDatabaseUrl(TEST_DATABASE_URL);
   const client = new pg.Client({ connectionString: TEST_DATABASE_URL });
   await client.connect();
   await client.query(

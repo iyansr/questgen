@@ -382,4 +382,18 @@
 - Known risk or unresolved issue: manual browser smoke (add MC/essay + optional image) not run.
 - Next best step: open completed session → Tambah soal → confirm new card appears at end after save.
 
+### Session 025
+
+- Date: 2026-07-15
+- Goal: Stop `pnpm test:server` from loading `apps/server/.env` (prod DATABASE_URL overrode test vars → TRUNCATE wiped Supabase).
+- Completed:
+  - Vitest uses wrangler `environment: 'test'` → loads committed `.dev.vars.test` (log: `Using secrets defined in .dev.vars.test`, not `.env`).
+  - `miniflare.bindings.DATABASE_URL` forced to local `questgen_test`.
+  - `assertSafeTestDatabaseUrl` aborts before any `TRUNCATE` if URL ≠ exact local test URL.
+  - `package.json` test scripts: `env -u DATABASE_URL vitest …`.
+- Verification run: `pnpm --filter server test` → 71 passed; output shows `.dev.vars.test` only.
+- Evidence captured: test log lines `Using secrets defined in .dev.vars.test`; 12 files / 71 tests pass.
+- Known risk or unresolved issue: none for this fix; prod data already lost earlier cannot be restored by this change.
+- Next best step: commit + push this safety fix; restore Supabase from backup/PITR if available.
+
 

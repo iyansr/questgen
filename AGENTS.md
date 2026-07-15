@@ -130,6 +130,10 @@ Monorepo (pnpm). Standard run/test/lint commands live in `README.md` and root
   additionally needs Mistral OCR + a running ChromaDB. Generation runs through a
   Cloudflare Workflow (works under local `wrangler dev`) and takes ~1–2 minutes.
 - After a schema change run `pnpm db:push` (idempotent) to sync Postgres.
+- `pnpm test:server` must never load `apps/server/.env` (prod). It uses
+  `wrangler.test.jsonc` + environment `test` + committed `.dev.vars.test`, forces
+  `DATABASE_URL` via miniflare bindings, and aborts `TRUNCATE` unless the URL is
+  exactly local `questgen_test`. Do not put a Supabase/prod URL in `.dev.vars.test`.
 - `pnpm check` (Biome) runs `--write` and will reformat files. The repo currently
   has pre-existing Biome lint/format diagnostics, so a clean run is not the
   baseline — review the diff before committing.

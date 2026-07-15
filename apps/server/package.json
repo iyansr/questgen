@@ -8,8 +8,8 @@
     "deploy:dev": "wrangler deploy --env dev",
     "cf-typegen": "wrangler types",
     "check-types": "tsc --noEmit",
-    "test": "vitest run",
-    "test:watch": "vitest",
+    "test": "env -u DATABASE_URL vitest run",
+    "test:watch": "env -u DATABASE_URL vitest",
     "register-user": "tsx scripts/register-user.ts"
   },
   "dependencies": {

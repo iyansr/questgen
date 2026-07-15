@@ -1,0 +1,10 @@
+# Committed test-only secrets for `pnpm test` (wrangler environment: test).
+# Intentionally NOT apps/server/.env — that file may point at prod.
+DATABASE_URL=postgresql://postgres:postgres@127.0.0.1:5432/questgen_test
+JWT_SECRET=test-jwt-secret-blackbox
+OPENROUTER_API_KEY=test-openrouter-key
+MISTRAL_API_KEY=test-mistral-key
+TAVILY_API_KEY=test-tavily-key
+LANGFUSE_PUBLIC_KEY=test-langfuse-public
+LANGFUSE_SECRET_KEY=test-langfuse-secret
+CHROMA_API_KEY=test-chroma-key
