@@ -12,6 +12,7 @@ import {
 import { FieldGroup } from '@questgen/ui/components/field';
 import { cn } from '@questgen/ui/lib/utils';
 import { useNavigate } from '@tanstack/react-router';
+import { useState } from 'react';
 import {
   Controller,
   type FieldError,
@@ -20,8 +21,12 @@ import {
 } from 'react-hook-form';
 import { toast } from 'sonner';
 
-import { useCreateSession } from '@/services/sessions/create';
+import {
+  type CreateSessionProgress,
+  useCreateSession,
+} from '@/services/sessions/create';
 
+import { CreateSessionProgressDialog } from './components/create-session-progress-dialog';
 import { CurriculumField } from './components/curriculum-field';
 import { GradeClassField } from './components/grade-class-field';
 import { QuestionTypesField } from './components/question-types-field';
@@ -36,6 +41,7 @@ import {
 export function NewSessionPage() {
   const navigate = useNavigate();
   const createSession = useCreateSession();
+  const [progress, setProgress] = useState<CreateSessionProgress | null>(null);
 
   const form = useForm<NewSessionFormValues>({
     resolver: zodResolver(newSessionFormSchema),
@@ -127,6 +133,11 @@ export function NewSessionPage() {
   ];
 
   async function onSubmit(values: NewSessionFormValues) {
+    const isFileUpload = Boolean(values.file);
+    if (isFileUpload) {
+      setProgress({ phase: 'uploading', uploadPercent: 0 });
+    }
+
     try {
       const { id } = await createSession.mutateAsync({
         topic: values.topic,
@@ -137,13 +148,22 @@ export function NewSessionPage() {
         curriculum: values.curriculum,
         grade: values.grade,
         classGrade: values.classGrade,
+        onProgress: isFileUpload ? setProgress : undefined,
       });
+
+      if (isFileUpload) {
+        setProgress({ phase: 'redirecting' });
+        await new Promise((resolve) => setTimeout(resolve, 300));
+      }
+
       toast.success('Sesi berhasil dibuat.');
       navigate({ to: '/session/$id', params: { id } });
     } catch (err) {
       toast.error(
         err instanceof Error ? err.message : 'Gagal membuat sesi baru',
       );
+    } finally {
+      setProgress(null);
     }
   }
 
@@ -298,6 +318,15 @@ export function NewSessionPage() {
           </p>
         )}
       </form>
+
+      {progress && (
+        <CreateSessionProgressDialog
+          open
+          phase={progress.phase}
+          uploadPercent={progress.uploadPercent}
+          filename={fileField.value?.name}
+        />
+      )}
     </div>
   );
 }

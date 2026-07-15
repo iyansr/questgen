@@ -5,6 +5,7 @@ import { withRetry } from '@/shared/lib/retry';
 
 export interface OcrResult {
   markdown: string;
+  pageCount: number;
   images: Array<{
     id: string;
     base64: string;
@@ -34,7 +35,7 @@ function parseOcrResponse(
     }
   }
 
-  return { markdown, images };
+  return { markdown, pageCount: response.pages.length, images };
 }
 
 async function runOcr(documentUrl: string): Promise<OcrResult> {

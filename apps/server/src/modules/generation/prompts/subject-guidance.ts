@@ -13,6 +13,7 @@ function computationTarget(grade?: string): string {
     case 'SMP':
       return 'at least 70%';
     case 'SMA':
+    case 'SMK':
       return 'at least 75%';
     default:
       return 'at least two thirds';

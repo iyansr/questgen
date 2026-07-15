@@ -13,6 +13,7 @@ import { Link, useNavigate } from '@tanstack/react-router';
 import { ArrowRight, Loader2 } from 'lucide-react';
 import { Controller, useForm } from 'react-hook-form';
 
+import { PasswordInput } from '@/components/password-input';
 import { useRegister } from '@/services/auth/register';
 
 import { type RegisterFormValues, registerSchema } from './schema';
@@ -115,10 +116,9 @@ export function RegisterPage() {
                   <FieldLabel htmlFor={field.name} className="text-sm">
                     Kata sandi
                   </FieldLabel>
-                  <Input
+                  <PasswordInput
                     {...field}
                     id={field.name}
-                    type="password"
                     placeholder="Minimal 8 karakter"
                     className="h-11 px-4 text-base"
                     aria-invalid={fieldState.invalid}
@@ -138,10 +138,9 @@ export function RegisterPage() {
                   <FieldLabel htmlFor={field.name} className="text-sm">
                     Konfirmasi kata sandi
                   </FieldLabel>
-                  <Input
+                  <PasswordInput
                     {...field}
                     id={field.name}
-                    type="password"
                     placeholder="Masukkan ulang kata sandi Anda"
                     className="h-11 px-4 text-base"
                     aria-invalid={fieldState.invalid}

@@ -328,3 +328,32 @@
 - Known risk or unresolved issue: live API/browser smoke not run (Postgres/dev server unavailable in agent env).
 - Next best step: start dev stack, confirm stat cards show real counts for a user with completed sessions.
 
+### Session 020
+
+- Date: 2026-07-15
+- Goal: Add SMK jenjang support with free-text kelas input.
+- Completed:
+  - Added `SMK` to `GRADE_OPTIONS` in `apps/web/src/modules/new-session/schema.ts`.
+  - Added `isFreeTextClassGrade()` helper; SMK class validation min 2 / max 50 chars.
+  - `GradeClassField` shows text input for SMK (`cth. X TKJ 1`); SD/SMP/SMA keep chip picker.
+  - `subject-guidance.ts`: SMK uses same quantitative target as SMA (75%).
+- Verification run: `pnpm --filter web check-types` → pass (vite build + tsc exit 0).
+- Evidence captured: web build exit 0; no linter errors on changed files.
+- Known risk or unresolved issue: manual browser smoke not run; free-text kelas may vary in format.
+- Next best step: smoke `/new` — select SMK, enter kelas, confirm session header shows `SMK · Kelas …`.
+
+### Session 022
+
+- Date: 2026-07-15
+- Goal: Cap document upload pages for Chroma Cloud write limits.
+- Completed:
+  - `MAX_PDF_PAGES` lowered 1000 → 50 in `packages/db/src/upload-limits.ts` (product/Chroma cap; client + server PDF checks reuse constant).
+  - OCR `OcrResult.pageCount` from `response.pages.length`.
+  - `runDocumentPipeline` throws `NonRetryableError` when pageCount > 50 (covers DOCX/PPT after OCR; workflow marks doc/session failed).
+- Verification run: `pnpm --filter server exec tsc --noEmit` → exit 0.
+- Evidence captured: typecheck clean; UI copy uses `{MAX_PDF_PAGES}` so shows 50.
+- Known risk or unresolved issue: no live browser upload of 51-page PDF in this session.
+- Next best step: smoke `/new` — hint shows “PDF maks. 50 halaman”; reject oversized PDF; DOCX/PPT over 50 pages fail post-OCR.
+
+
+

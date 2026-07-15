@@ -11,6 +11,7 @@ import {
 import { generateSessionTitle } from '@/modules/generation/title.service';
 import { canUseR2PresignedOcr, isLocalOcrMode } from '@/shared/lib/ocr-mode';
 import { flushTracing, initTracing } from '@/shared/lib/tracing';
+import { MAX_PDF_PAGES } from '@/shared/lib/upload-limits';
 
 import { captionImages } from './captioner';
 import { getOrCreateCollection } from './chroma';
@@ -137,6 +138,12 @@ export async function runDocumentPipeline(
 
       const fileBytes = await file.arrayBuffer();
       ocrResult = await ocrProcess({ mode: 'bytes', fileBytes, filename });
+    }
+
+    if (ocrResult.pageCount > MAX_PDF_PAGES) {
+      throw new NonRetryableError(
+        `Document too long. Maximum is ${MAX_PDF_PAGES} pages.`,
+      );
     }
 
     const uploadedImages = await Promise.all(

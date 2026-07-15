@@ -38,12 +38,18 @@ export const MAX_WEB_QUERY_CHARS = 200;
 export const MIN_WEB_QUERY_CHARS = 3;
 
 export const CURRICULUM_OPTIONS = ['K-13', 'Kurikulum Merdeka'] as const;
-export const GRADE_OPTIONS = ['SD', 'SMP', 'SMA'] as const;
+export const GRADE_OPTIONS = ['SD', 'SMP', 'SMA', 'SMK'] as const;
 export const CLASS_GRADE_OPTIONS: Record<string, readonly string[]> = {
   SD: ['I', 'II', 'III', 'IV', 'V', 'VI'],
   SMP: ['VII', 'VIII', 'IX'],
   SMA: ['X', 'XI', 'XII'],
 };
+
+const MAX_CLASS_GRADE_CHARS = 50;
+
+export function isFreeTextClassGrade(grade?: string): boolean {
+  return grade === 'SMK';
+}
 
 export const questionTypeCountSchema = z.object({
   type: z.enum(QUESTION_TYPES),
@@ -123,7 +129,24 @@ export const newSessionFormSchema = z
   .refine((d) => !d.webQuery || d.classGrade, {
     message: 'Kelas wajib diisi untuk riset web',
     path: ['classGrade'],
-  });
+  })
+  .refine(
+    (d) =>
+      !isFreeTextClassGrade(d.grade) || (d.classGrade?.trim().length ?? 0) >= 2,
+    {
+      message: 'Kelas wajib diisi (contoh: X TKJ 1)',
+      path: ['classGrade'],
+    },
+  )
+  .refine(
+    (d) =>
+      !isFreeTextClassGrade(d.grade) ||
+      (d.classGrade?.trim().length ?? 0) <= MAX_CLASS_GRADE_CHARS,
+    {
+      message: `Kelas maksimal ${MAX_CLASS_GRADE_CHARS} karakter`,
+      path: ['classGrade'],
+    },
+  );
 
 export type NewSessionFormValues = z.infer<typeof newSessionFormSchema>;
 

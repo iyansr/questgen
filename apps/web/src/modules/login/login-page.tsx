@@ -1,7 +1,6 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Button } from '@questgen/ui/components/button';
 import { Card } from '@questgen/ui/components/card';
-import { Checkbox } from '@questgen/ui/components/checkbox';
 import {
   Field,
   FieldError,
@@ -11,16 +10,15 @@ import {
 import { Input } from '@questgen/ui/components/input';
 import { Link, useNavigate } from '@tanstack/react-router';
 import { ArrowRight, Loader2 } from 'lucide-react';
-import { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 
+import { PasswordInput } from '@/components/password-input';
 import { isBetaMode, requestAccessFormUrl } from '@/lib/feature-flags';
 import { useLogin } from '@/services/auth/login';
 
 import { type LoginFormValues, loginSchema } from './schema';
 
 export function LoginPage() {
-  const [remember, setRemember] = useState(false);
   const navigate = useNavigate();
   const login = useLogin();
 
@@ -86,21 +84,12 @@ export function LoginPage() {
               control={form.control}
               render={({ field, fieldState }) => (
                 <Field data-invalid={fieldState.invalid}>
-                  <div className="flex items-center justify-between">
-                    <FieldLabel htmlFor={field.name} className="text-sm">
-                      Kata sandi
-                    </FieldLabel>
-                    <button
-                      type="button"
-                      className="text-muted-foreground text-sm transition-colors hover:text-foreground"
-                    >
-                      Lupa kata sandi?
-                    </button>
-                  </div>
-                  <Input
+                  <FieldLabel htmlFor={field.name} className="text-sm">
+                    Kata sandi
+                  </FieldLabel>
+                  <PasswordInput
                     {...field}
                     id={field.name}
-                    type="password"
                     placeholder="Masukkan kata sandi Anda"
                     className="h-11 px-4 text-base"
                     aria-invalid={fieldState.invalid}
@@ -111,21 +100,6 @@ export function LoginPage() {
                 </Field>
               )}
             />
-
-            <Field orientation="horizontal">
-              <Checkbox
-                id="remember"
-                checked={remember}
-                onCheckedChange={(checked) => setRemember(checked === true)}
-                className="size-5"
-              />
-              <FieldLabel
-                htmlFor="remember"
-                className="text-muted-foreground text-sm"
-              >
-                Ingat saya
-              </FieldLabel>
-            </Field>
 
             <Button
               type="submit"
