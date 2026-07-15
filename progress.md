@@ -2,12 +2,12 @@
 
 ## Current Verified State
 
-- Repository root: `/workspace`
+- Repository root: `/Users/iyansr/IyanSR/Project/Skripsi/questgen`
 - Standard startup path: `./init.sh`
 - Standard verification path: `pnpm --filter web check-types`
-- Server blackbox tests: `pnpm test:server` (requires PostgreSQL + `questgen_test` DB; 54 tests, Tiers 1–4)
+- Server blackbox tests: `pnpm test:server` (requires PostgreSQL + `questgen_test` DB)
+- Latest feature: add question to question set (`POST /api/sessions/:id/questions` + session-detail UI)
 - Current highest-priority unfinished feature: DOCX export (code complete; manual browser smoke pending)
-- Current blocker: `0003_rapid_the_fallen.sql` not applied — run `pnpm db:migrate`
 - Dashboard stats: `GET /api/dashboard/stats` wired to dashboard stat cards (completed/ready scope)
 
 ## Session Log
@@ -368,5 +368,18 @@
 - Evidence captured: web build exit 0; init exit 0.
 - Known risk or unresolved issue: server delete-session tests unverified in this session; manual browser smoke pending.
 - Next best step: start Postgres, run `pnpm test:server test/sessions.test.ts`, smoke Hapus on history and dashboard tables.
+
+### Session 024
+
+- Date: 2026-07-15
+- Goal: Allow teachers to add a question to an existing question set from session detail.
+- Completed:
+  - Server: `createQuestionSchema`, `createQuestion()` (append `max(order)+1`, optional image), `POST /api/sessions/:id/questions`.
+  - Tests: create OK + order append, 400 bad options, 404 other user (`questions.test.ts` — 10 passed).
+  - Web: `create-question.ts` hook; `EditQuestionDialog` create mode with type picker; **Tambah soal** in list header + empty state; wired in `session-detail-page.tsx` (immediate persist; enabled for `completed`/`failed` only).
+- Verification run: `./init.sh` → pass; `pnpm --filter server exec vitest run test/questions.test.ts` → 10 passed; `pnpm --filter web check-types` → pass.
+- Evidence captured: vitest 10/10; vite build + tsc exit 0.
+- Known risk or unresolved issue: manual browser smoke (add MC/essay + optional image) not run.
+- Next best step: open completed session → Tambah soal → confirm new card appears at end after save.
 
 

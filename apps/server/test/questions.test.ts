@@ -14,6 +14,88 @@ const DEFAULT_OPTIONS = [
   { label: 'D', text: '6' },
 ];
 
+describe('POST /api/sessions/:id/questions', () => {
+  it('creates a question and appends at the end', async () => {
+    const { token, sessionId, questionId } = await seedCompletedSession(
+      uniqueEmail('create-ok'),
+    );
+
+    const fd = new FormData();
+    fd.set('questionType', 'short_answer');
+    fd.set('questionText', 'Sebutkan ibu kota Indonesia.');
+    fd.set('options', 'null');
+    fd.set('correctAnswer', 'Jakarta');
+    fd.set('suggestedAnswer', 'Ibu kota negara.');
+
+    const createRes = await api(`/api/sessions/${sessionId}/questions`, {
+      method: 'POST',
+      token,
+      body: fd,
+    });
+
+    expect(createRes.status).toBe(201);
+    const created = await readJson<{
+      id: string;
+      questionText: string;
+      order: number;
+      questionType: string;
+    }>(createRes);
+    expect(created.questionText).toBe('Sebutkan ibu kota Indonesia.');
+    expect(created.questionType).toBe('short_answer');
+    expect(created.order).toBe(1);
+    expect(created.id).not.toBe(questionId);
+
+    const getRes = await api(`/api/sessions/${sessionId}`, { token });
+    const session = await readJson<{
+      questions: Array<{ id: string; order: number }>;
+    }>(getRes);
+    expect(session.questions).toHaveLength(2);
+    expect(session.questions[1]?.id).toBe(created.id);
+    expect(session.questions[1]?.order).toBe(1);
+  });
+
+  it('returns 400 when multiple_choice has null options', async () => {
+    const { token, sessionId } = await seedCompletedSession(
+      uniqueEmail('create-bad-opts'),
+    );
+
+    const fd = new FormData();
+    fd.set('questionType', 'multiple_choice');
+    fd.set('questionText', 'Soal pilihan ganda');
+    fd.set('options', 'null');
+    fd.set('correctAnswer', 'A');
+    fd.set('suggestedAnswer', '');
+
+    const res = await api(`/api/sessions/${sessionId}/questions`, {
+      method: 'POST',
+      token,
+      body: fd,
+    });
+
+    expect(res.status).toBe(400);
+  });
+
+  it('returns 404 for another user session', async () => {
+    const owner = await seedCompletedSession(uniqueEmail('create-owner'));
+    const tokenB = await registerAndGetToken(uniqueEmail('create-other'));
+
+    const fd = new FormData();
+    fd.set('questionType', 'essay');
+    fd.set('questionText', 'Jelaskan fotosintesis.');
+    fd.set('options', 'null');
+    fd.set('correctAnswer', 'Proses tumbuhan membuat makanan.');
+    fd.set('suggestedAnswer', '');
+
+    const res = await api(`/api/sessions/${owner.sessionId}/questions`, {
+      method: 'POST',
+      token: tokenB,
+      body: fd,
+    });
+
+    expect(res.status).toBe(404);
+  });
+});
+
 describe('DELETE /api/sessions/:id/questions/:questionId', () => {
   it('deletes a question and compacts order', async () => {
     const { token, sessionId, questionId } = await seedCompletedSession(

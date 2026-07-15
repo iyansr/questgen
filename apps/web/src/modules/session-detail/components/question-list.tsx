@@ -1,4 +1,5 @@
-import { Spinner } from '@phosphor-icons/react';
+import { Plus, Spinner } from '@phosphor-icons/react';
+import { Button } from '@questgen/ui/components/button';
 
 import type { StreamedQuestion } from '@/types/session-message';
 
@@ -19,6 +20,8 @@ type QuestionListProps = {
   onDelete: (questionId: string) => Promise<void>;
   deletingQuestionId: string | null;
   deleteDisabled: boolean;
+  canAdd: boolean;
+  onAdd: () => void;
   onSave: () => void;
   onDiscard: () => void;
 };
@@ -34,6 +37,8 @@ export function QuestionList({
   onDelete,
   deletingQuestionId,
   deleteDisabled,
+  canAdd,
+  onAdd,
   onSave,
   onDiscard,
 }: QuestionListProps) {
@@ -43,26 +48,34 @@ export function QuestionList({
 
   return (
     <section className="space-y-5" aria-label="Daftar soal">
-      <header className="flex flex-wrap items-baseline justify-between gap-2">
+      <header className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <h2 className="font-serif text-2xl tracking-tight">Soal</h2>
           <p className="text-base text-muted-foreground">
             Setiap soal muncul di sini begitu AI selesai membuatnya.
           </p>
         </div>
-        {expectedCount !== null && (
-          <p
-            className="text-muted-foreground text-sm tabular-nums"
-            aria-live="polite"
-            aria-atomic
-          >
-            <span className="font-semibold text-foreground">
-              {questions.length}
-            </span>
-            <span className="mx-1">/</span>
-            <span>{expectedCount}</span>
-          </p>
-        )}
+        <div className="flex flex-wrap items-center gap-3">
+          {expectedCount !== null && (
+            <p
+              className="text-muted-foreground text-sm tabular-nums"
+              aria-live="polite"
+              aria-atomic
+            >
+              <span className="font-semibold text-foreground">
+                {questions.length}
+              </span>
+              <span className="mx-1">/</span>
+              <span>{expectedCount}</span>
+            </p>
+          )}
+          {canAdd ? (
+            <Button type="button" variant="outline" size="sm" onClick={onAdd}>
+              <Plus weight="bold" aria-hidden />
+              Tambah soal
+            </Button>
+          ) : null}
+        </div>
       </header>
 
       <SaveBar
@@ -74,7 +87,7 @@ export function QuestionList({
       />
 
       {questions.length === 0 ? (
-        <EmptyQuestions status={status} />
+        <EmptyQuestions status={status} canAdd={canAdd} onAdd={onAdd} />
       ) : (
         <ol className="space-y-5">
           {questions.map((question, i) => {

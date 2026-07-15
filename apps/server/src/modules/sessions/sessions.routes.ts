@@ -6,9 +6,13 @@ import { Hono } from 'hono';
 
 import type { AppEnv } from '@/types';
 
-import { updateQuestionsSchema } from './questions.schema';
+import {
+  createQuestionSchema,
+  updateQuestionsSchema,
+} from './questions.schema';
 import {
   collectImageAssignments,
+  createQuestion,
   deleteQuestion,
   updateQuestions,
 } from './questions.service';
@@ -82,6 +86,28 @@ sessions.get('/:id', async (c) => {
     return c.json({ error: 'Internal server error' }, 500);
   }
 });
+
+sessions.post(
+  '/:id/questions',
+  zValidator('form', createQuestionSchema),
+  async (c) => {
+    const db = c.get('db');
+    const userId = c.get('userId');
+    const id = c.req.param('id');
+    const input = c.req.valid('form');
+
+    try {
+      const result = await createQuestion(db, userId, id, input);
+      return c.json(result, 201);
+    } catch (err) {
+      if (err instanceof SessionValidationError) {
+        return c.json({ error: err.message }, err.status);
+      }
+      console.error('Create question error:', err);
+      return c.json({ error: 'Internal server error' }, 500);
+    }
+  },
+);
 
 sessions.patch(
   '/:id/questions',

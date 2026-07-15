@@ -68,8 +68,80 @@ export const updateQuestionsSchema = z.object({
   updates: parsedUpdates,
 });
 
+const parsedCreateOptions = z
+  .string()
+  .transform((val, ctx) => {
+    try {
+      return JSON.parse(val);
+    } catch {
+      ctx.addIssue({
+        code: 'custom',
+        message: 'options must be valid JSON',
+      });
+      return z.NEVER;
+    }
+  })
+  .pipe(z.array(optionSchema).max(MAX_OPTIONS).nullable());
+
+const parsedSuggestedAnswer = z
+  .string()
+  .transform((val) => {
+    const trimmed = val.trim();
+    if (trimmed === '' || trimmed === 'null') return null;
+    return trimmed;
+  })
+  .pipe(z.string().max(MAX_ANSWER_CHARS).nullable());
+
+export const createQuestionSchema = z
+  .object({
+    questionType: z.enum(QUESTION_TYPES),
+    questionText: z.string().trim().min(1).max(MAX_QUESTION_TEXT_CHARS),
+    options: parsedCreateOptions,
+    correctAnswer: z.string().trim().min(1).max(MAX_ANSWER_CHARS),
+    suggestedAnswer: parsedSuggestedAnswer,
+    image: z.instanceof(File).optional(),
+  })
+  .refine(
+    (q) => {
+      const needsOptions =
+        q.questionType === 'multiple_choice' || q.questionType === 'true_false';
+      if (needsOptions) {
+        return Array.isArray(q.options) && q.options.length >= 2;
+      }
+      return q.options === null;
+    },
+    {
+      message:
+        'multiple_choice/true_false require options; short_answer/essay must have null options',
+      path: ['options'],
+    },
+  )
+  .refine(
+    (q) => {
+      if (!q.options) return true;
+      const labels = q.options.map((o) => o.label.toUpperCase());
+      return labels.includes(q.correctAnswer.trim().toUpperCase());
+    },
+    {
+      message: 'correctAnswer must match one of the option labels',
+      path: ['correctAnswer'],
+    },
+  )
+  .refine(
+    (q) => {
+      if (!q.options) return true;
+      const labels = q.options.map((o) => o.label.toUpperCase());
+      return new Set(labels).size === labels.length;
+    },
+    {
+      message: 'Option labels must be unique',
+      path: ['options'],
+    },
+  );
+
 export type QuestionOptionInput = z.infer<typeof optionSchema>;
 export type QuestionUpdateInput = z.infer<typeof questionUpdateSchema>;
 export type UpdateQuestionsInput = z.infer<typeof updateQuestionsSchema>;
+export type CreateQuestionInput = z.infer<typeof createQuestionSchema>;
 
 export const QUESTION_TYPE_VALUES = QUESTION_TYPES;

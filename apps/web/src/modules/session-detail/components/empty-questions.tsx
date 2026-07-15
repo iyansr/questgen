@@ -1,12 +1,19 @@
-import { Sparkle } from '@phosphor-icons/react';
+import { Plus, Sparkle } from '@phosphor-icons/react';
+import { Button } from '@questgen/ui/components/button';
 
 import { GENERATION_BACKGROUND_MESSAGE } from './generation-background-notice';
 
 type EmptyQuestionsProps = {
   status: 'pending' | 'generating' | 'completed' | 'failed';
+  canAdd?: boolean;
+  onAdd?: () => void;
 };
 
-export function EmptyQuestions({ status }: EmptyQuestionsProps) {
+export function EmptyQuestions({
+  status,
+  canAdd = false,
+  onAdd,
+}: EmptyQuestionsProps) {
   const message = (() => {
     switch (status) {
       case 'pending':
@@ -59,6 +66,12 @@ export function EmptyQuestions({ status }: EmptyQuestionsProps) {
           </p>
         )}
       </div>
+      {canAdd && onAdd ? (
+        <Button type="button" variant="outline" size="default" onClick={onAdd}>
+          <Plus weight="bold" aria-hidden />
+          Tambah soal
+        </Button>
+      ) : null}
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { useCallback, useState } from 'react';
 import { toast } from 'sonner';
 
 import { useSessionStream } from '@/hooks/use-session-stream';
+import { useCreateQuestion } from '@/services/sessions/create-question';
 import { useDeleteQuestion } from '@/services/sessions/delete-question';
 import { useSession } from '@/services/sessions/detail';
 import { useUpdateQuestions } from '@/services/sessions/update-questions';
@@ -9,6 +10,7 @@ import type { StreamedQuestion } from '@/types/session-message';
 
 import { BackToTop } from './components/back-to-top';
 import {
+  type CreateQuestionSubmitPayload,
   EditQuestionDialog,
   type EditQuestionSubmitPayload,
 } from './components/edit-question-dialog';
@@ -30,19 +32,31 @@ export function SessionDetailPage({ sessionId }: SessionDetailPageProps) {
     useQuestionEdits();
   const updateQuestions = useUpdateQuestions(sessionId);
   const deleteQuestion = useDeleteQuestion(sessionId);
+  const createQuestion = useCreateQuestion(sessionId);
 
   const [editingQuestion, setEditingQuestion] =
     useState<StreamedQuestion | null>(null);
+  const [isCreatingOpen, setIsCreatingOpen] = useState(false);
   const [deletingQuestionId, setDeletingQuestionId] = useState<string | null>(
     null,
   );
 
   const handleEdit = useCallback((question: StreamedQuestion) => {
+    setIsCreatingOpen(false);
     setEditingQuestion(question);
   }, []);
 
-  const handleDialogOpenChange = useCallback((open: boolean) => {
+  const handleAdd = useCallback(() => {
+    setEditingQuestion(null);
+    setIsCreatingOpen(true);
+  }, []);
+
+  const handleEditDialogOpenChange = useCallback((open: boolean) => {
     if (!open) setEditingQuestion(null);
+  }, []);
+
+  const handleCreateDialogOpenChange = useCallback((open: boolean) => {
+    if (!open) setIsCreatingOpen(false);
   }, []);
 
   const handleDialogSubmit = useCallback(
@@ -50,6 +64,29 @@ export function SessionDetailPage({ sessionId }: SessionDetailPageProps) {
       setEdit(patch.id, patch, imageFile, removeImage);
     },
     [setEdit],
+  );
+
+  const handleCreateSubmit = useCallback(
+    async (payload: CreateQuestionSubmitPayload) => {
+      try {
+        await createQuestion.mutateAsync({
+          sessionId,
+          questionType: payload.questionType,
+          questionText: payload.questionText,
+          options: payload.options,
+          correctAnswer: payload.correctAnswer,
+          suggestedAnswer: payload.suggestedAnswer,
+          imageFile: payload.imageFile,
+        });
+        toast.success('Soal berhasil ditambahkan.');
+        setIsCreatingOpen(false);
+      } catch (err) {
+        toast.error(
+          err instanceof Error ? err.message : 'Gagal menambahkan soal.',
+        );
+      }
+    },
+    [createQuestion, sessionId],
   );
 
   const handleSave = useCallback(async () => {
@@ -118,6 +155,10 @@ export function SessionDetailPage({ sessionId }: SessionDetailPageProps) {
     typeof data.config?.count === 'number' ? data.config.count : null;
   const isGeneratingSession =
     status.status === 'pending' || status.status === 'generating';
+  const canAdd =
+    (status.status === 'completed' || status.status === 'failed') &&
+    !isStreaming &&
+    !createQuestion.isPending;
 
   return (
     <div className="space-y-10">
@@ -156,6 +197,8 @@ export function SessionDetailPage({ sessionId }: SessionDetailPageProps) {
               status.status === 'generating' ||
               updateQuestions.isPending
             }
+            canAdd={canAdd}
+            onAdd={handleAdd}
             onSave={handleSave}
             onDiscard={clearAll}
           />
@@ -163,10 +206,20 @@ export function SessionDetailPage({ sessionId }: SessionDetailPageProps) {
       </div>
 
       <EditQuestionDialog
+        mode="edit"
         open={Boolean(editingQuestion)}
-        onOpenChange={handleDialogOpenChange}
+        onOpenChange={handleEditDialogOpenChange}
         question={editingQuestion}
         onApply={handleDialogSubmit}
+      />
+
+      <EditQuestionDialog
+        mode="create"
+        open={isCreatingOpen}
+        onOpenChange={handleCreateDialogOpenChange}
+        question={null}
+        onCreate={handleCreateSubmit}
+        isCreating={createQuestion.isPending}
       />
     </div>
   );

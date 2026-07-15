@@ -3,6 +3,7 @@ import {
   FloppyDisk,
   Image as ImageIcon,
   PencilSimple,
+  Plus,
   Trash,
   UploadSimple,
   X,
@@ -20,13 +21,20 @@ import {
 import { Field, FieldError, FieldLabel } from '@questgen/ui/components/field';
 import { Input } from '@questgen/ui/components/input';
 import { cn } from '@questgen/ui/lib/utils';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import { QUESTION_TYPE_LABELS } from '@/modules/new-session/schema';
+import {
+  QUESTION_TYPE_LABELS,
+  QUESTION_TYPES,
+} from '@/modules/new-session/schema';
 import type { QuestionPatch } from '@/services/sessions/update-questions';
-import type { QuestionOption, StreamedQuestion } from '@/types/session-message';
+import type {
+  QuestionOption,
+  QuestionType,
+  StreamedQuestion,
+} from '@/types/session-message';
 
 import { RichTextEditorField } from './rich-text-editor-field';
 
@@ -43,8 +51,9 @@ const optionSchema = z.object({
   text: z.string().trim().min(1, 'Teks opsi wajib diisi'),
 });
 
-const editSchema = z
+const questionFormSchema = z
   .object({
+    questionType: z.enum(QUESTION_TYPES),
     questionText: z.string().trim().min(1, 'Teks soal wajib diisi'),
     options: z.array(optionSchema).nullable(),
     correctAnswer: z.string().trim().min(1, 'Jawaban wajib diisi'),
@@ -67,7 +76,7 @@ const editSchema = z
     { message: 'Label opsi tidak boleh duplikat', path: ['options'] },
   );
 
-type EditFormValues = z.infer<typeof editSchema>;
+type QuestionFormValues = z.infer<typeof questionFormSchema>;
 
 export type EditQuestionSubmitPayload = {
   patch: QuestionPatch;
@@ -75,11 +84,23 @@ export type EditQuestionSubmitPayload = {
   removeImage: boolean;
 };
 
+export type CreateQuestionSubmitPayload = {
+  questionType: QuestionType;
+  questionText: string;
+  options: QuestionOption[] | null;
+  correctAnswer: string;
+  suggestedAnswer: string | null;
+  imageFile: File | null;
+};
+
 type EditQuestionDialogProps = {
   open: boolean;
   onOpenChange: (open: boolean) => void;
+  mode?: 'edit' | 'create';
   question: StreamedQuestion | null;
-  onApply: (payload: EditQuestionSubmitPayload) => void;
+  onApply?: (payload: EditQuestionSubmitPayload) => void;
+  onCreate?: (payload: CreateQuestionSubmitPayload) => Promise<void> | void;
+  isCreating?: boolean;
 };
 
 const TRUE_FALSE_OPTIONS: QuestionOption[] = [
@@ -87,12 +108,14 @@ const TRUE_FALSE_OPTIONS: QuestionOption[] = [
   { label: 'B', text: 'Salah' },
 ];
 
-function isMultipleChoice(type: StreamedQuestion['questionType']): boolean {
+const DEFAULT_CREATE_TYPE: QuestionType = 'multiple_choice';
+
+function isMultipleChoice(type: QuestionType): boolean {
   return type === 'multiple_choice' || type === 'true_false';
 }
 
 function defaultOptionsFor(
-  type: StreamedQuestion['questionType'],
+  type: QuestionType,
   existing: QuestionOption[] | null,
 ): QuestionOption[] {
   if (type === 'true_false') return TRUE_FALSE_OPTIONS;
@@ -105,6 +128,17 @@ function defaultOptionsFor(
   ];
 }
 
+function emptyFormValues(type: QuestionType): QuestionFormValues {
+  const mc = isMultipleChoice(type);
+  return {
+    questionType: type,
+    questionText: '',
+    options: mc ? defaultOptionsFor(type, null) : null,
+    correctAnswer: '',
+    suggestedAnswer: '',
+  };
+}
+
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
   if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
@@ -114,27 +148,17 @@ function formatBytes(bytes: number): string {
 export function EditQuestionDialog({
   open,
   onOpenChange,
+  mode = 'edit',
   question,
   onApply,
+  onCreate,
+  isCreating = false,
 }: EditQuestionDialogProps) {
-  const isMc = question ? isMultipleChoice(question.questionType) : false;
-  const defaultOptions = useMemo(
-    () =>
-      question
-        ? defaultOptionsFor(question.questionType, question.options)
-        : [],
-    [question],
-  );
-
-  const form = useForm<EditFormValues>({
-    resolver: zodResolver(editSchema),
+  const isCreate = mode === 'create';
+  const form = useForm<QuestionFormValues>({
+    resolver: zodResolver(questionFormSchema),
     mode: 'onBlur',
-    defaultValues: {
-      questionText: question?.questionText ?? '',
-      options: isMc ? defaultOptions : null,
-      correctAnswer: question?.correctAnswer ?? '',
-      suggestedAnswer: question?.suggestedAnswer ?? '',
-    },
+    defaultValues: emptyFormValues(DEFAULT_CREATE_TYPE),
   });
 
   const [imageFile, setImageFile] = useState<File | null>(null);
@@ -143,9 +167,26 @@ export function EditQuestionDialog({
   const [imageError, setImageError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
+  const watchedType = form.watch('questionType');
+  const isMc = isMultipleChoice(watchedType);
+  const isTf = watchedType === 'true_false';
+
   useEffect(() => {
-    if (!open || !question) return;
+    if (!open) return;
+
+    if (isCreate) {
+      form.reset(emptyFormValues(DEFAULT_CREATE_TYPE));
+      setImageFile(null);
+      setImagePreview(null);
+      setRemoveImage(false);
+      setImageError(null);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+
+    if (!question) return;
     form.reset({
+      questionType: question.questionType,
       questionText: question.questionText,
       options: isMultipleChoice(question.questionType)
         ? defaultOptionsFor(question.questionType, question.options)
@@ -161,6 +202,7 @@ export function EditQuestionDialog({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     open,
+    isCreate,
     question?.id,
     question?.options,
     question?.suggestedAnswer,
@@ -179,6 +221,19 @@ export function EditQuestionDialog({
       }
     };
   }, [imagePreview]);
+
+  function handleTypeChange(nextType: QuestionType) {
+    const prevType = form.getValues('questionType');
+    if (prevType === nextType) return;
+    form.setValue('questionType', nextType);
+    if (isMultipleChoice(nextType)) {
+      form.setValue('options', defaultOptionsFor(nextType, null));
+      form.setValue('correctAnswer', '');
+    } else {
+      form.setValue('options', null);
+      form.setValue('correctAnswer', '');
+    }
+  }
 
   function handleImageChange(event: React.ChangeEvent<HTMLInputElement>) {
     const file = event.target.files?.[0];
@@ -213,14 +268,34 @@ export function EditQuestionDialog({
     if (fileInputRef.current) fileInputRef.current.value = '';
   }
 
-  function handleSubmit(values: EditFormValues) {
-    if (!question) return;
+  async function handleSubmit(values: QuestionFormValues) {
+    const options = isMultipleChoice(values.questionType)
+      ? values.options
+      : null;
+    const suggestedAnswer = values.suggestedAnswer
+      ? values.suggestedAnswer
+      : null;
+
+    if (isCreate) {
+      if (!onCreate) return;
+      await onCreate({
+        questionType: values.questionType,
+        questionText: values.questionText,
+        options,
+        correctAnswer: values.correctAnswer,
+        suggestedAnswer,
+        imageFile,
+      });
+      return;
+    }
+
+    if (!question || !onApply) return;
     const patch: QuestionPatch = {
       id: question.id,
       questionText: values.questionText,
-      options: isMc ? values.options : null,
+      options,
       correctAnswer: values.correctAnswer,
-      suggestedAnswer: values.suggestedAnswer ? values.suggestedAnswer : null,
+      suggestedAnswer,
       removeImage: !imageFile && removeImage ? true : undefined,
     };
     onApply({
@@ -231,45 +306,92 @@ export function EditQuestionDialog({
     onOpenChange(false);
   }
 
-  if (!question) return null;
-  const typeLabel =
-    QUESTION_TYPE_LABELS[question.questionType] ?? question.questionType;
-  const isTf = question.questionType === 'true_false';
+  if (!isCreate && !question) return null;
+
+  const formId = isCreate
+    ? 'create-question-form'
+    : `edit-question-${question?.id ?? 'unknown'}`;
+  const typeLabel = QUESTION_TYPE_LABELS[watchedType] ?? watchedType;
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-2xl">
         <DialogHeader>
           <div className="flex items-center gap-2">
-            <PencilSimple
-              className="size-4 text-muted-foreground"
-              weight="regular"
-              aria-hidden
-            />
+            {isCreate ? (
+              <Plus
+                className="size-4 text-muted-foreground"
+                weight="regular"
+                aria-hidden
+              />
+            ) : (
+              <PencilSimple
+                className="size-4 text-muted-foreground"
+                weight="regular"
+                aria-hidden
+              />
+            )}
             <p className="text-muted-foreground text-sm uppercase tracking-wide">
-              Edit Soal
+              {isCreate ? 'Tambah Soal' : 'Edit Soal'}
             </p>
           </div>
-          <DialogTitle className="font-serif text-lg">{typeLabel}</DialogTitle>
+          <DialogTitle className="font-serif text-lg">
+            {isCreate ? 'Soal baru' : typeLabel}
+          </DialogTitle>
           <DialogDescription className="text-base">
-            Perubahan disimpan saat Anda menekan tombol simpan di daftar soal.
+            {isCreate
+              ? 'Soal langsung disimpan ke set setelah Anda menekan tombol simpan.'
+              : 'Perubahan disimpan saat Anda menekan tombol simpan di daftar soal.'}
           </DialogDescription>
         </DialogHeader>
 
         <form
-          id={`edit-question-${question.id}`}
+          id={formId}
           onSubmit={form.handleSubmit(handleSubmit)}
           className="flex flex-col gap-6"
           noValidate
         >
+          {isCreate ? (
+            <Field>
+              <FieldLabel>Tipe Soal</FieldLabel>
+              <div
+                className="grid grid-cols-2 gap-2"
+                role="radiogroup"
+                aria-label="Pilih tipe soal"
+              >
+                {QUESTION_TYPES.map((type) => {
+                  const selected = watchedType === type;
+                  return (
+                    <button
+                      key={type}
+                      type="button"
+                      role="radio"
+                      aria-checked={selected}
+                      onClick={() => handleTypeChange(type)}
+                      className={cn(
+                        'border border-input px-3 py-3 text-left text-sm transition-colors hover:bg-muted focus-visible:border-foreground focus-visible:outline-none',
+                        selected &&
+                          'border-foreground bg-foreground font-semibold text-background hover:bg-foreground',
+                      )}
+                    >
+                      {QUESTION_TYPE_LABELS[type]}
+                    </button>
+                  );
+                })}
+              </div>
+            </Field>
+          ) : null}
+
           <Controller
             control={form.control}
             name="questionText"
             render={({ field, fieldState }) => (
               <Field data-invalid={Boolean(fieldState.error)}>
-                <FieldLabel htmlFor="edit-question-text">Teks Soal</FieldLabel>
+                <FieldLabel htmlFor={`${formId}-question-text`}>
+                  Teks Soal
+                </FieldLabel>
                 <RichTextEditorField
-                  id="edit-question-text"
+                  id={`${formId}-question-text`}
                   value={field.value}
                   onChange={field.onChange}
                   onBlur={field.onBlur}
@@ -334,7 +456,7 @@ export function EditQuestionDialog({
             <input
               ref={fileInputRef}
               type="file"
-              id={`edit-image-${question.id}`}
+              id={`${formId}-image`}
               accept={ALLOWED_IMAGE_TYPES.join(',')}
               onChange={handleImageChange}
               className="sr-only"
@@ -386,7 +508,7 @@ export function EditQuestionDialog({
                           {opt.label}
                         </span>
                         <Input
-                          id={`edit-option-${question.id}-${opt.label}`}
+                          id={`${formId}-option-${opt.label}`}
                           value={opt.text}
                           onChange={(e) => {
                             const next = [...(field.value ?? [])];
@@ -475,9 +597,11 @@ export function EditQuestionDialog({
               name="correctAnswer"
               render={({ field, fieldState }) => (
                 <Field data-invalid={Boolean(fieldState.error)}>
-                  <FieldLabel htmlFor="edit-correct-answer">Jawaban</FieldLabel>
+                  <FieldLabel htmlFor={`${formId}-correct-answer`}>
+                    Jawaban
+                  </FieldLabel>
                   <RichTextEditorField
-                    id="edit-correct-answer"
+                    id={`${formId}-correct-answer`}
                     value={field.value}
                     onChange={field.onChange}
                     onBlur={field.onBlur}
@@ -497,11 +621,11 @@ export function EditQuestionDialog({
             name="suggestedAnswer"
             render={({ field, fieldState }) => (
               <Field data-invalid={Boolean(fieldState.error)}>
-                <FieldLabel htmlFor="edit-suggested-answer">
+                <FieldLabel htmlFor={`${formId}-suggested-answer`}>
                   Penjelasan (opsional)
                 </FieldLabel>
                 <RichTextEditorField
-                  id="edit-suggested-answer"
+                  id={`${formId}-suggested-answer`}
                   value={field.value ?? ''}
                   onChange={field.onChange}
                   onBlur={field.onBlur}
@@ -523,11 +647,11 @@ export function EditQuestionDialog({
           <Button
             type="submit"
             size="default"
-            form={`edit-question-${question.id}`}
-            disabled={form.formState.isSubmitting}
+            form={formId}
+            disabled={form.formState.isSubmitting || isCreating}
           >
             <FloppyDisk weight="bold" aria-hidden />
-            Simpan ke Daftar
+            {isCreate ? 'Simpan Soal' : 'Simpan ke Daftar'}
           </Button>
         </DialogFooter>
       </DialogContent>

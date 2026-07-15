@@ -1,11 +1,14 @@
 import type { createDb } from '@questgen/db';
 import { questionSets, questions } from '@questgen/db/schema';
 import { env } from '@questgen/env/server';
-import { and, eq, gt, inArray, sql } from 'drizzle-orm';
+import { and, desc, eq, gt, inArray, sql } from 'drizzle-orm';
 
 import { buildImagePublicUrl } from '@/shared/lib/images';
 
-import type { QuestionUpdateInput } from './questions.schema';
+import type {
+  CreateQuestionInput,
+  QuestionUpdateInput,
+} from './questions.schema';
 import { SessionValidationError } from './sessions.service';
 
 const ALLOWED_IMAGE_MIME_TYPES = [
@@ -50,6 +53,102 @@ export type UpdateQuestionsResult = {
 export type DeleteQuestionResult = {
   deleted: number;
 };
+
+export type CreateQuestionResult = typeof questions.$inferSelect;
+
+async function uploadQuestionImage(
+  sessionId: string,
+  file: File,
+): Promise<{ key: string; publicUrl: string }> {
+  const mime = file.type as (typeof ALLOWED_IMAGE_MIME_TYPES)[number];
+  if (!ALLOWED_IMAGE_MIME_TYPES.includes(mime)) {
+    throw new SessionValidationError(
+      `Invalid image type: ${file.type}. Allowed: png, jpeg, webp, gif`,
+      400,
+    );
+  }
+  if (file.size > MAX_QUESTION_IMAGE_BYTES) {
+    throw new SessionValidationError(
+      `Image too large. Maximum is ${MAX_QUESTION_IMAGE_BYTES / 1024 / 1024}MB.`,
+      400,
+    );
+  }
+  const ext = IMAGE_EXTENSIONS[mime] ?? 'bin';
+  const imageId = `${randomImageId()}.${ext}`;
+  const key = `documents/${sessionId}/images/${imageId}`;
+  const body = await file.arrayBuffer();
+  try {
+    await env.DOCUMENTS_BUCKET.put(key, body, {
+      httpMetadata: { contentType: mime },
+    });
+  } catch (err) {
+    console.error('Failed to upload question image to R2:', err);
+    throw new SessionValidationError('Failed to upload image', 500);
+  }
+  return { key, publicUrl: buildImagePublicUrl(key) };
+}
+
+export async function createQuestion(
+  db: ReturnType<typeof createDb>,
+  userId: string,
+  sessionId: string,
+  input: CreateQuestionInput,
+): Promise<CreateQuestionResult> {
+  const [session] = await db
+    .select({ id: questionSets.id })
+    .from(questionSets)
+    .where(and(eq(questionSets.id, sessionId), eq(questionSets.userId, userId)))
+    .limit(1);
+
+  if (!session) {
+    throw new SessionValidationError('Session not found', 404);
+  }
+
+  const [last] = await db
+    .select({ order: questions.order })
+    .from(questions)
+    .where(eq(questions.setId, sessionId))
+    .orderBy(desc(questions.order))
+    .limit(1);
+
+  const nextOrder = last ? last.order + 1 : 0;
+
+  let uploaded: { key: string; publicUrl: string } | null = null;
+  if (input.image) {
+    uploaded = await uploadQuestionImage(sessionId, input.image);
+  }
+
+  try {
+    const [created] = await db
+      .insert(questions)
+      .values({
+        setId: sessionId,
+        order: nextOrder,
+        questionText: input.questionText,
+        questionType: input.questionType,
+        options: input.options,
+        correctAnswer: input.correctAnswer,
+        suggestedAnswer: input.suggestedAnswer,
+        imageUrl: uploaded?.publicUrl ?? null,
+      })
+      .returning();
+
+    if (!created) {
+      throw new SessionValidationError('Failed to create question', 500);
+    }
+
+    return created;
+  } catch (err) {
+    if (uploaded) {
+      try {
+        await env.DOCUMENTS_BUCKET.delete(uploaded.key);
+      } catch {}
+    }
+    if (err instanceof SessionValidationError) throw err;
+    console.error('Failed to create question:', err);
+    throw new SessionValidationError('Failed to create question', 500);
+  }
+}
 
 export async function updateQuestions(
   db: ReturnType<typeof createDb>,
