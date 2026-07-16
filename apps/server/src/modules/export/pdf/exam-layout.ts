@@ -400,7 +400,9 @@ export class ExamLayout {
       this.y = bottomY;
     }
 
-    this.drawSpacer(6);
+    // Baseline of following text sits at this.y; need size + gap so glyphs
+    // clear the bottom border (6pt alone overlaps).
+    this.drawSpacer(size + 10);
   }
 }
 

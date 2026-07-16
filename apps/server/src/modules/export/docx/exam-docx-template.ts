@@ -148,7 +148,7 @@ function blocksToParagraphs(
       });
     } else if (block.type === 'table') {
       out.push(markdownTableToDocx(block.header, block.rows, size));
-      out.push(spacer(120));
+      out.push(spacer(240));
     }
   }
 
