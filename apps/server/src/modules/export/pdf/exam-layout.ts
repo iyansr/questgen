@@ -6,7 +6,7 @@ import {
   rgb,
 } from 'pdf-lib';
 
-import type { TextStyle } from '../shared/markdown-blocks';
+import type { TextRun, TextStyle } from '../shared/markdown-blocks';
 import {
   resolveTextSegments,
   sanitizePdfText,
@@ -281,6 +281,126 @@ export class ExamLayout {
       x: MARGIN + fieldWidth + gap,
       advanceY: true,
     });
+  }
+
+  /**
+   * Equal-column bordered table. Header cells drawn bold.
+   * ponytail: no colspan / row-span; tall tables may page-break mid-grid.
+   */
+  drawTable(
+    header: TextRun[][],
+    rows: TextRun[][][],
+    options: { size?: number; indent?: number } = {},
+  ): void {
+    const size = options.size ?? 10;
+    const indent = options.indent ?? 0;
+    const padX = 4;
+    const padY = 3;
+    const lineHeight = size * LINE_HEIGHT;
+    const tableWidth = this.contentWidth - indent;
+    const colCount = Math.max(
+      header.length,
+      ...rows.map((r) => r.length),
+      1,
+    );
+    const colWidth = tableWidth / colCount;
+    const cellTextWidth = Math.max(colWidth - padX * 2, 8);
+
+    type PreparedCell = { lines: TextSegment[][] };
+    type PreparedRow = { cells: PreparedCell[]; height: number };
+
+    const prepareRow = (
+      cells: TextRun[][],
+      isHeader: boolean,
+    ): PreparedRow => {
+      const prepared: PreparedCell[] = [];
+      let maxLines = 1;
+      for (let c = 0; c < colCount; c++) {
+        const runs = cells[c] ?? [];
+        const segments = runs.flatMap((run) => {
+          const style: TextStyle =
+            isHeader && run.style === 'normal' ? 'bold' : run.style;
+          return resolveTextSegments(
+            run.text,
+            fontForStyle(this.fonts, style),
+            this.fonts.math,
+            size,
+          );
+        });
+        const lines =
+          segments.length > 0
+            ? wrapSegments(segments, size, cellTextWidth)
+            : [[]];
+        maxLines = Math.max(maxLines, lines.length);
+        prepared.push({ lines });
+      }
+      return {
+        cells: prepared,
+        height: maxLines * lineHeight + padY * 2,
+      };
+    };
+
+    const preparedRows: PreparedRow[] = [
+      prepareRow(header, true),
+      ...rows.map((r) => prepareRow(r, false)),
+    ];
+
+    const x0 = MARGIN + indent;
+    const border = rgb(0.25, 0.25, 0.25);
+
+    for (const row of preparedRows) {
+      this.ensureSpace(row.height);
+
+      const topY = this.y;
+      const bottomY = this.y - row.height;
+
+      // outer + column verticals
+      this.page.drawLine({
+        start: { x: x0, y: topY },
+        end: { x: x0 + tableWidth, y: topY },
+        thickness: 0.5,
+        color: border,
+      });
+      this.page.drawLine({
+        start: { x: x0, y: bottomY },
+        end: { x: x0 + tableWidth, y: bottomY },
+        thickness: 0.5,
+        color: border,
+      });
+      for (let c = 0; c <= colCount; c++) {
+        const x = x0 + c * colWidth;
+        this.page.drawLine({
+          start: { x, y: topY },
+          end: { x, y: bottomY },
+          thickness: 0.5,
+          color: border,
+        });
+      }
+
+      for (let c = 0; c < colCount; c++) {
+        const cell = row.cells[c]!;
+        const textX = x0 + c * colWidth + padX;
+        let textY = topY - padY - size * 0.85;
+        for (const line of cell.lines) {
+          let x = textX;
+          for (const segment of line) {
+            this.page.drawText(segment.text, {
+              x,
+              y: textY,
+              size,
+              font: segment.font,
+              color: rgb(0, 0, 0),
+            });
+            x += segment.font.widthOfTextAtSize(segment.text, size);
+          }
+          textY -= lineHeight;
+        }
+      }
+
+      this.y = bottomY;
+    }
+
+    this.drawSpacer(6);
   }
 }
 

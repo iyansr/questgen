@@ -1,3 +1,4 @@
+import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import remarkParse from 'remark-parse';
 import { unified } from 'unified';
@@ -15,7 +16,8 @@ export type TextRun = {
 
 export type ContentBlock =
   | { type: 'paragraph'; runs: TextRun[] }
-  | { type: 'list'; ordered: boolean; items: TextRun[][] };
+  | { type: 'list'; ordered: boolean; items: TextRun[][] }
+  | { type: 'table'; header: TextRun[][]; rows: TextRun[][][] };
 
 type MdastNode = {
   type: string;
@@ -84,8 +86,24 @@ function paragraphToRuns(node: MdastNode): TextRun[] {
   return runs.filter((r) => r.text.length > 0);
 }
 
+function cellToRuns(cell: MdastNode): TextRun[] {
+  const runs: TextRun[] = [];
+  for (const child of cell.children ?? []) {
+    if (child.type === 'paragraph') {
+      inlineNodesToRuns(child.children, 'normal', runs);
+    } else {
+      inlineNodesToRuns([child], 'normal', runs);
+    }
+  }
+  return runs.filter((r) => r.text.length > 0);
+}
+
+function tableRowToCells(row: MdastNode): TextRun[][] {
+  return (row.children ?? []).map(cellToRuns);
+}
+
 function parseMarkdown(markdown: string): MdastNode {
-  const processor = unified().use(remarkParse).use(remarkMath);
+  const processor = unified().use(remarkParse).use(remarkGfm).use(remarkMath);
   return processor.parse(markdown) as MdastNode;
 }
 
@@ -119,6 +137,17 @@ export function markdownToBlocks(markdown: string): ContentBlock[] {
         blocks.push({ type: 'list', ordered: node.ordered ?? false, items });
         break;
       }
+      case 'table': {
+        const rows = node.children ?? [];
+        if (rows.length === 0) break;
+        const [headerRow, ...bodyRows] = rows;
+        blocks.push({
+          type: 'table',
+          header: tableRowToCells(headerRow!),
+          rows: bodyRows.map(tableRowToCells),
+        });
+        break;
+      }
       case 'math': {
         blocks.push({
           type: 'paragraph',
@@ -148,6 +177,12 @@ export function plainTextFromMarkdown(markdown: string): string {
     .flatMap((block) => {
       if (block.type === 'paragraph') {
         return block.runs.map((r) => r.text).join('');
+      }
+      if (block.type === 'table') {
+        const rows = [block.header, ...block.rows];
+        return rows.map((row) =>
+          row.map((cell) => cell.map((r) => r.text).join('')).join('\t'),
+        );
       }
       return block.items.map((item) => item.map((r) => r.text).join(''));
     })

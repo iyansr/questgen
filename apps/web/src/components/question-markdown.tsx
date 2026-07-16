@@ -1,11 +1,12 @@
 import { cn } from '@questgen/ui/lib/utils';
 import ReactMarkdown from 'react-markdown';
 import rehypeKatex from 'rehype-katex';
+import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 
 import { plainMathToLatex } from '@/lib/plain-math-to-latex';
 
-const remarkPlugins = [remarkMath];
+const remarkPlugins = [remarkGfm, remarkMath];
 const rehypePlugins = [rehypeKatex];
 
 const markdownListStyles = [
@@ -14,6 +15,9 @@ const markdownListStyles = [
   '[&_li]:my-1',
   '[&_p]:my-2 [&_p:first-child]:mt-0 [&_p:last-child]:mb-0',
   '[&_strong]:font-semibold',
+  '[&_table]:my-3 [&_table]:w-full [&_table]:border-collapse [&_table]:text-base',
+  '[&_th]:border [&_th]:border-border [&_th]:bg-muted/40 [&_th]:px-3 [&_th]:py-2 [&_th]:text-left [&_th]:font-semibold',
+  '[&_td]:border [&_td]:border-border [&_td]:px-3 [&_td]:py-2',
 ] as const;
 
 type QuestionMarkdownProps = {

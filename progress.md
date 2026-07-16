@@ -6,11 +6,27 @@
 - Standard startup path: `./init.sh`
 - Standard verification path: `pnpm --filter web check-types`
 - Server blackbox tests: `pnpm test:server` (requires PostgreSQL + `questgen_test` DB)
-- Latest feature: add question to question set (`POST /api/sessions/:id/questions` + session-detail UI)
-- Current highest-priority unfinished feature: DOCX export (code complete; manual browser smoke pending)
+- Latest feature: GFM markdown tables in question UI + PDF/DOCX export
+- Current highest-priority unfinished feature: manual browser smoke of table render + export
 - Dashboard stats: `GET /api/dashboard/stats` wired to dashboard stat cards (completed/ready scope)
 
 ## Session Log
+
+### Session 027
+
+- Date: 2026-07-16
+- Goal: Fix markdown tables not rendering in question cards or PDF/DOCX export.
+- Completed:
+  - Added `remark-gfm` to web + server.
+  - `QuestionMarkdown` now parses GFM tables with bordered table styles.
+  - Export `markdownToBlocks` emits `table` ContentBlocks; PDF `drawTable` + DOCX native `Table`.
+  - Unit tests in `test/markdown-tables.test.ts`.
+- Verification run: `vitest run test/markdown-tables.test.ts test/latex-export.test.ts` → 9 passed; `pnpm --filter server check-types` → pass; `pnpm --filter web check-types` → pass.
+- Evidence captured: vitest 9/9; tsc clean; vite build exit 0.
+- Commits: none yet.
+- Files or artifacts updated: `question-markdown.tsx`, `markdown-blocks.ts`, `exam-layout.ts`, `exam-template.ts`, `exam-docx-template.ts`, `markdown-tables.test.ts`, package.json (web/server).
+- Known risk or unresolved issue: manual browser smoke of a real table question + export not run this session.
+- Next best step: open session detail with a table question; confirm HTML table; export PDF + DOCX.
 
 ### Session 001
 

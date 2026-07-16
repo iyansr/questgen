@@ -38,6 +38,8 @@ function drawBlocks(
           indent: indent + 12,
         });
       });
+    } else if (block.type === 'table') {
+      layout.drawTable(block.header, block.rows, { size: size - 1, indent });
     }
   }
 }

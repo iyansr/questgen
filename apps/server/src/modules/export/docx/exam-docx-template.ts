@@ -22,7 +22,11 @@ import {
   type QuestionOption,
 } from '../shared/exam-helpers';
 import { loadQuestionImage } from '../shared/image-loader';
-import { type ContentBlock, markdownToBlocks } from '../shared/markdown-blocks';
+import {
+  type ContentBlock,
+  markdownToBlocks,
+  type TextRun as MdTextRun,
+} from '../shared/markdown-blocks';
 import {
   BODY_SIZE,
   FONT_FAMILY,
@@ -59,17 +63,72 @@ function dottedFieldParagraph(label: string): Paragraph {
   });
 }
 
+const TABLE_BORDER = {
+  style: BorderStyle.SINGLE,
+  size: 4,
+  color: '000000',
+} as const;
+
+function markdownTableToDocx(
+  header: MdTextRun[][],
+  rows: MdTextRun[][][],
+  size: number,
+): Table {
+  const colCount = Math.max(header.length, ...rows.map((r) => r.length), 1);
+  const colPct = Math.floor(100 / colCount);
+
+  const cellBorders = {
+    top: TABLE_BORDER,
+    bottom: TABLE_BORDER,
+    left: TABLE_BORDER,
+    right: TABLE_BORDER,
+  };
+
+  const makeCell = (runs: MdTextRun[], bold: boolean) =>
+    new TableCell({
+      width: { size: colPct, type: WidthType.PERCENTAGE },
+      borders: cellBorders,
+      children: [
+        new Paragraph({
+          children:
+            runs.length > 0
+              ? runsToDocx(
+                  bold
+                    ? runs.map((r) =>
+                        r.style === 'normal' ? { ...r, style: 'bold' } : r,
+                      )
+                    : runs,
+                  size,
+                )
+              : [textToDocx('', { size })],
+        }),
+      ],
+    });
+
+  const makeRow = (cells: MdTextRun[][], isHeader: boolean) =>
+    new TableRow({
+      children: Array.from({ length: colCount }, (_, i) =>
+        makeCell(cells[i] ?? [], isHeader),
+      ),
+    });
+
+  return new Table({
+    width: { size: 100, type: WidthType.PERCENTAGE },
+    rows: [makeRow(header, true), ...rows.map((r) => makeRow(r, false))],
+  });
+}
+
 function blocksToParagraphs(
   blocks: ContentBlock[],
   options: { indent?: number; size?: number } = {},
-): Paragraph[] {
-  const paragraphs: Paragraph[] = [];
+): (Paragraph | Table)[] {
+  const out: (Paragraph | Table)[] = [];
   const indent = options.indent;
   const size = options.size ?? BODY_SIZE;
 
   for (const block of blocks) {
     if (block.type === 'paragraph') {
-      paragraphs.push(
+      out.push(
         new Paragraph({
           indent: indent ? { left: indent } : undefined,
           spacing: { after: 80 },
@@ -79,7 +138,7 @@ function blocksToParagraphs(
     } else if (block.type === 'list') {
       block.items.forEach((item, index) => {
         const prefix = block.ordered ? `${index + 1}. ` : '• ';
-        paragraphs.push(
+        out.push(
           new Paragraph({
             indent: indent ? { left: indent + 240 } : { left: 240 },
             spacing: { after: 80 },
@@ -87,10 +146,13 @@ function blocksToParagraphs(
           }),
         );
       });
+    } else if (block.type === 'table') {
+      out.push(markdownTableToDocx(block.header, block.rows, size));
+      out.push(spacer(120));
     }
   }
 
-  return paragraphs;
+  return out;
 }
 
 export function buildExamHeaderChildren(
@@ -208,8 +270,8 @@ function readImageDimensions(
 export async function buildQuestionChildren(
   question: QuestionRow,
   index: number,
-): Promise<Paragraph[]> {
-  const paragraphs: Paragraph[] = [];
+): Promise<(Paragraph | Table)[]> {
+  const paragraphs: (Paragraph | Table)[] = [];
   const stemBlocks = markdownToBlocks(question.questionText);
 
   let loadedImage: Awaited<ReturnType<typeof loadQuestionImage>> = null;
