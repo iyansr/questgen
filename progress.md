@@ -6,11 +6,27 @@
 - Standard startup path: `./init.sh`
 - Standard verification path: `pnpm --filter web check-types`
 - Server blackbox tests: `pnpm test:server` (requires PostgreSQL + `questgen_test` DB)
-- Latest feature: GFM markdown tables in question UI + PDF/DOCX export
-- Current highest-priority unfinished feature: manual browser smoke of table render + export
+- Latest feature: include-images toggle on new-session (generation hard-skip + lead-in scrub)
+- Current highest-priority unfinished feature: manual browser smoke of include-images toggle off/on
 - Dashboard stats: `GET /api/dashboard/stats` wired to dashboard stat cards (completed/ready scope)
 
 ## Session Log
+
+### Session 028
+
+- Date: 2026-07-17
+- Goal: Add "Sertakan Gambar Pada Soal" toggle; when off, never attach images or keep image lead-ins; OCR still extracts.
+- Completed:
+  - Web: `includeImages` in form schema (default true), `IncludeImagesField` switch, wired into create session FormData.
+  - Server: parse `includeImages` from multipart; persist in `question_sets.config` + workflow params for file/document/web.
+  - Generation: empty image catalog when false; force `imageUrl: null`; scrub Indonesian image lead-ins via `scrub-image-lead-ins.ts`.
+  - OCR/Mistral pipeline unchanged.
+- Verification run: `pnpm --filter server check-types` → pass; `pnpm --filter web check-types` → pass (vite build + tsc). Vitest skipped per user request.
+- Evidence captured: tsc clean; vite build exit 0.
+- Commits: none yet.
+- Files or artifacts updated: new-session schema/page/field, create service, sessions schema/service, generation.service, scrub-image-lead-ins.ts, scrub-image-lead-ins.test.ts, progress.md.
+- Known risk or unresolved issue: scrub phrase list is finite; end-to-end generation with toggle off not smoke-tested.
+- Next best step: create session with toggle off; confirm no `imageUrl` and no "Perhatikan gambar…" in results.
 
 ### Session 027
 

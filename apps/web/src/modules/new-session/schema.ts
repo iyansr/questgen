@@ -110,6 +110,7 @@ export const newSessionFormSchema = z
     curriculum: z.enum(CURRICULUM_OPTIONS).optional(),
     grade: z.enum(GRADE_OPTIONS).optional(),
     classGrade: z.string().min(1).optional(),
+    includeImages: z.boolean(),
   })
   .refine(
     (d) => [d.file, d.documentId, d.webQuery].filter(Boolean).length === 1,

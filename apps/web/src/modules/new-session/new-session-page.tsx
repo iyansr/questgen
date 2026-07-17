@@ -29,6 +29,7 @@ import {
 import { CreateSessionProgressDialog } from './components/create-session-progress-dialog';
 import { CurriculumField } from './components/curriculum-field';
 import { GradeClassField } from './components/grade-class-field';
+import { IncludeImagesField } from './components/include-images-field';
 import { QuestionTypesField } from './components/question-types-field';
 import { SourceField } from './components/source-field';
 import { TopicField } from './components/topic-field';
@@ -55,6 +56,7 @@ export function NewSessionPage() {
       curriculum: undefined,
       grade: undefined,
       classGrade: undefined,
+      includeImages: true,
     },
   });
 
@@ -148,6 +150,7 @@ export function NewSessionPage() {
         curriculum: values.curriculum,
         grade: values.grade,
         classGrade: values.classGrade,
+        includeImages: values.includeImages,
         onProgress: isFileUpload ? setProgress : undefined,
       });
 
@@ -277,6 +280,17 @@ export function NewSessionPage() {
               <QuestionTypesField field={field} error={fieldState.error} />
             )}
           />
+
+          {/* 6. Include images */}
+          <Card size="sm">
+            <CardContent className="pt-4">
+              <Controller
+                control={form.control}
+                name="includeImages"
+                render={({ field }) => <IncludeImagesField field={field} />}
+              />
+            </CardContent>
+          </Card>
         </FieldGroup>
 
         {/* Generate button */}

@@ -23,6 +23,7 @@ export type CreateSessionInput = {
   curriculum?: string;
   grade?: string;
   classGrade?: string;
+  includeImages?: boolean;
   onProgress?: (progress: CreateSessionProgress) => void;
 };
 
@@ -40,6 +41,7 @@ function toFormData(input: CreateSessionInput): FormData {
   if (input.curriculum) formData.set('curriculum', input.curriculum);
   if (input.grade) formData.set('grade', input.grade);
   if (input.classGrade) formData.set('classGrade', input.classGrade);
+  formData.set('includeImages', String(input.includeImages ?? true));
   return formData;
 }
 

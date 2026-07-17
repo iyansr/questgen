@@ -298,21 +298,14 @@ export class ExamLayout {
     const padY = 3;
     const lineHeight = size * LINE_HEIGHT;
     const tableWidth = this.contentWidth - indent;
-    const colCount = Math.max(
-      header.length,
-      ...rows.map((r) => r.length),
-      1,
-    );
+    const colCount = Math.max(header.length, ...rows.map((r) => r.length), 1);
     const colWidth = tableWidth / colCount;
     const cellTextWidth = Math.max(colWidth - padX * 2, 8);
 
     type PreparedCell = { lines: TextSegment[][] };
     type PreparedRow = { cells: PreparedCell[]; height: number };
 
-    const prepareRow = (
-      cells: TextRun[][],
-      isHeader: boolean,
-    ): PreparedRow => {
+    const prepareRow = (cells: TextRun[][], isHeader: boolean): PreparedRow => {
       const prepared: PreparedCell[] = [];
       let maxLines = 1;
       for (let c = 0; c < colCount; c++) {

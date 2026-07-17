@@ -24,8 +24,8 @@ import {
 import { loadQuestionImage } from '../shared/image-loader';
 import {
   type ContentBlock,
-  markdownToBlocks,
   type TextRun as MdTextRun,
+  markdownToBlocks,
 } from '../shared/markdown-blocks';
 import {
   BODY_SIZE,

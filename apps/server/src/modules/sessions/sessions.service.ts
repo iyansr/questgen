@@ -38,6 +38,7 @@ export type CreateSessionInput = {
   curriculum?: string;
   grade?: string;
   classGrade?: string;
+  includeImages?: boolean;
 };
 
 export type CreateSessionResult = {
@@ -58,6 +59,7 @@ export async function createSession(
     curriculum,
     grade,
     classGrade,
+    includeImages = true,
   } = input;
   const count = totalCount(questionTypeCounts);
 
@@ -70,6 +72,7 @@ export async function createSession(
       curriculum,
       grade,
       classGrade,
+      includeImages,
     });
   }
 
@@ -82,6 +85,7 @@ export async function createSession(
       curriculum,
       grade,
       classGrade,
+      includeImages,
     });
   }
 
@@ -154,6 +158,7 @@ export async function createSession(
         curriculum,
         grade,
         classGrade,
+        includeImages,
       },
     })
     .returning({ id: questionSets.id });
@@ -178,6 +183,7 @@ export async function createSession(
         curriculum,
         grade,
         classGrade,
+        includeImages,
       },
     },
   });
@@ -193,6 +199,7 @@ type CreateSessionFromWebQueryInput = {
   curriculum?: string;
   grade?: string;
   classGrade?: string;
+  includeImages: boolean;
 };
 
 async function createSessionFromWebQuery(
@@ -208,6 +215,7 @@ async function createSessionFromWebQuery(
     curriculum,
     grade,
     classGrade,
+    includeImages,
   } = input;
 
   const trimmed = webQuery.trim();
@@ -235,6 +243,7 @@ async function createSessionFromWebQuery(
         curriculum,
         grade,
         classGrade,
+        includeImages,
       },
     })
     .returning({ id: questionSets.id });
@@ -255,6 +264,7 @@ async function createSessionFromWebQuery(
         curriculum,
         grade,
         classGrade,
+        includeImages,
       },
     },
   });
@@ -270,6 +280,7 @@ type CreateSessionFromDocumentInput = {
   curriculum?: string;
   grade?: string;
   classGrade?: string;
+  includeImages: boolean;
 };
 
 async function createSessionFromDocument(
@@ -285,6 +296,7 @@ async function createSessionFromDocument(
     curriculum,
     grade,
     classGrade,
+    includeImages,
   } = input;
 
   const [doc] = await db
@@ -317,6 +329,7 @@ async function createSessionFromDocument(
         curriculum,
         grade,
         classGrade,
+        includeImages,
       },
     })
     .returning({ id: questionSets.id });
@@ -338,6 +351,7 @@ async function createSessionFromDocument(
         curriculum,
         grade,
         classGrade,
+        includeImages,
       },
     },
   });

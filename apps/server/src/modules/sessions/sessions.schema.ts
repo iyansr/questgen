@@ -77,6 +77,11 @@ export const createSessionSchema = z
     curriculum: z.string().trim().min(1).optional(),
     grade: z.string().trim().min(1).optional(),
     classGrade: z.string().trim().min(1).optional(),
+    includeImages: z
+      .enum(['true', 'false'])
+      .optional()
+      .default('true')
+      .transform((v) => v === 'true'),
   })
   .refine(
     (d) => [d.file, d.documentId, d.webQuery].filter(Boolean).length === 1,

@@ -17,15 +17,17 @@ describe('markdownToBlocks tables', () => {
     expect(blocks[0]?.type).toBe('table');
     if (blocks[0]?.type !== 'table') return;
 
-    expect(blocks[0].header.map((c) => c.map((r) => r.text).join(''))).toEqual(
-      ['Subject', 'Object', 'Possessive'],
-    );
+    expect(blocks[0].header.map((c) => c.map((r) => r.text).join(''))).toEqual([
+      'Subject',
+      'Object',
+      'Possessive',
+    ]);
     expect(blocks[0].rows).toHaveLength(2);
     expect(
-      blocks[0].rows[0]!.map((c) => c.map((r) => r.text).join('')),
+      blocks[0].rows[0]?.map((c) => c.map((r) => r.text).join('')),
     ).toEqual(['I', 'me', 'my']);
     expect(
-      blocks[0].rows[1]!.map((c) => c.map((r) => r.text).join('')),
+      blocks[0].rows[1]?.map((c) => c.map((r) => r.text).join('')),
     ).toEqual(['He', 'him', 'his']);
   });
 
@@ -46,7 +48,7 @@ describe('markdownToBlocks tables', () => {
     const blocks = markdownToBlocks(md);
     expect(blocks[0]?.type).toBe('table');
     if (blocks[0]?.type !== 'table') return;
-    expect(blocks[0].rows[0]![0]!.map((r) => r.text).join('')).toBe('x²');
+    expect(blocks[0].rows[0]?.[0]?.map((r) => r.text).join('')).toBe('x²');
   });
 
   it('flattens tables in plainTextFromMarkdown', () => {

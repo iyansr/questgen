@@ -10,6 +10,7 @@ import { GENERATION_PARAMS, MODELS } from '@/shared/config/models';
 
 import { SYSTEM_PROMPT, USER_PROMPT } from './prompts/question-generation';
 import { buildSubjectGuidance } from './prompts/subject-guidance';
+import { scrubImageLeadIns } from './scrub-image-lead-ins';
 import { documentSearch } from './search/document-search';
 import type { RetrievalTrace } from './search/types';
 import { webSearch } from './search/web-search';
@@ -21,6 +22,8 @@ export type GenerationConfig = {
   curriculum?: string;
   grade?: string;
   classGrade?: string;
+  /** When false, never attach images or keep image lead-in phrases. Default true. */
+  includeImages?: boolean;
 };
 
 const QUESTION_TYPE_VALUES = questionTypeEnum.enumValues;
@@ -99,18 +102,29 @@ const IMAGE_MARKDOWN_RE = /!\[.*?\]\(.*?\)\s*/g;
 function normalizeQuestion(
   q: GeneratedQuestion,
   imageCatalog: Map<string, ImageRef>,
+  includeImages: boolean,
 ): NormalizedQuestion {
   let imageUrl: string | null = null;
-  if (q.imageRef) {
+  if (includeImages && q.imageRef) {
     const ref = imageCatalog.get(q.imageRef);
     if (ref) imageUrl = ref.url;
   }
 
-  const options = TYPES_WITH_OPTIONS.has(q.questionType)
+  let questionText = q.questionText.replace(IMAGE_MARKDOWN_RE, '').trim();
+  if (!includeImages) {
+    questionText = scrubImageLeadIns(questionText);
+  }
+
+  let options = TYPES_WITH_OPTIONS.has(q.questionType)
     ? (q.options ?? null)
     : null;
 
-  const questionText = q.questionText.replace(IMAGE_MARKDOWN_RE, '').trim();
+  if (!includeImages && options) {
+    options = options.map((o) => ({
+      ...o,
+      text: scrubImageLeadIns(o.text),
+    }));
+  }
 
   return {
     questionType: q.questionType,
@@ -159,7 +173,11 @@ function buildImageGuidance(
   const total = counts.reduce((s, q) => s + q.count, 0);
 
   if (availableImages === 0) {
-    return 'No images are available. Set imageRef to null for EVERY question and never reference images in the question text.';
+    return [
+      'No images are available. Set imageRef to null for EVERY question.',
+      'NEVER reference images in the question text — ban phrases such as "Perhatikan gambar", "Berdasarkan gambar", "Amati ilustrasi", "Cermati diagram", "Dari grafik", and "lihat gambar".',
+      'Write every question as fully self-contained text with no image lead-ins.',
+    ].join('\n');
   }
 
   const maxImageQuestions = Math.min(
@@ -203,6 +221,7 @@ export async function generateQuestionsInBackground(
 ): Promise<void> {
   const db = createDb();
   const traceStartedAt = new Date();
+  const includeImages = config.includeImages !== false;
 
   let sourceMaterial: string;
   let imageCatalog = new Map<string, ImageRef>();
@@ -218,15 +237,16 @@ export async function generateQuestionsInBackground(
       curriculum: config.curriculum ?? '',
     });
 
-    for (const ref of webResult.imageRefs) {
-      imageCatalog.set(ref.id, ref);
-    }
-
     sourceMaterial = webResult.sourceMaterial;
 
-    for (const ref of webResult.imageRefs) {
-      if (!sourceMaterial.includes(ref.id)) {
-        sourceMaterial += `\n\n![IMAGE:${ref.caption || 'Illustration'}](${ref.id})`;
+    if (includeImages) {
+      for (const ref of webResult.imageRefs) {
+        imageCatalog.set(ref.id, ref);
+      }
+      for (const ref of webResult.imageRefs) {
+        if (!sourceMaterial.includes(ref.id)) {
+          sourceMaterial += `\n\n![IMAGE:${ref.caption || 'Illustration'}](${ref.id})`;
+        }
       }
     }
 
@@ -242,16 +262,17 @@ export async function generateQuestionsInBackground(
       classGrade: config.classGrade ?? '',
     });
 
-    imageCatalog = new Map<string, ImageRef>();
-    for (const ref of result.imageRefs) {
-      imageCatalog.set(ref.id, ref);
-    }
-
     sourceMaterial = result.sourceMaterial;
 
-    for (const ref of result.imageRefs) {
-      if (!sourceMaterial.includes(ref.id)) {
-        sourceMaterial += `\n\n![IMAGE:${ref.caption || 'Illustration'}](${ref.id})`;
+    if (includeImages) {
+      imageCatalog = new Map<string, ImageRef>();
+      for (const ref of result.imageRefs) {
+        imageCatalog.set(ref.id, ref);
+      }
+      for (const ref of result.imageRefs) {
+        if (!sourceMaterial.includes(ref.id)) {
+          sourceMaterial += `\n\n![IMAGE:${ref.caption || 'Illustration'}](${ref.id})`;
+        }
       }
     }
 
@@ -349,7 +370,7 @@ export async function generateQuestionsInBackground(
 
   let index = 0;
   for await (const question of elementStream) {
-    const normalized = normalizeQuestion(question, imageCatalog);
+    const normalized = normalizeQuestion(question, imageCatalog, includeImages);
     buffer.push({
       setId: sessionId,
       order: index,
