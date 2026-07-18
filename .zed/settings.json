@@ -7,7 +7,9 @@
     "biome",
     "vtsls",
     "!tsgo",
-    "!typescript-language-server",
+    "!oxfmt",
+    "!oxlint",
+    "!typescript-ls",
     "...",
   ],
   "languages": {
