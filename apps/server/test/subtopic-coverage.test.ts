@@ -36,7 +36,10 @@ describe('extractHeadingLeaves', () => {
 ## Organ Reproduksi pada Laki-Laki
 ## Oogenesis
 `;
-    const leaves = extractHeadingLeaves([text], 'Sistem Reproduksi pada Manusia');
+    const leaves = extractHeadingLeaves(
+      [text],
+      'Sistem Reproduksi pada Manusia',
+    );
     expect(leaves).toContain('Pembelahan Mitosis');
     expect(leaves).toContain('Oogenesis');
     expect(leaves).not.toContain('Bab 1 Sistem Reproduksi pada Manusia');
@@ -44,7 +47,9 @@ describe('extractHeadingLeaves', () => {
 
   it('returns empty for flat text without headings', () => {
     expect(
-      extractHeadingLeaves(['Mitosis is cell division. Meiosis produces gametes.']),
+      extractHeadingLeaves([
+        'Mitosis is cell division. Meiosis produces gametes.',
+      ]),
     ).toEqual([]);
   });
 

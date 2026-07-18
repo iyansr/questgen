@@ -174,6 +174,7 @@ export async function runDocumentPipeline(
       metadatas: chunks.map((c) => ({
         scopeId: documentId,
         chunkIndex: c.index,
+        headingPath: c.headingPath,
         imageRefs: JSON.stringify(c.imageRefs),
       })),
     });

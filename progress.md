@@ -6,11 +6,27 @@
 - Standard startup path: `./init.sh`
 - Standard verification path: `pnpm --filter web check-types`
 - Server blackbox tests: `pnpm test:server` (requires PostgreSQL + `questgen_test` DB)
-- Latest feature: document research doc-first subtopic coverage + gap-fill (no invent-3–5 tool loop)
-- Current highest-priority unfinished feature: manual Langfuse smoke of doc session (expect `document-research-expand` / `document-research-gap-fill` / `document-research-compile`)
+- Latest feature: per-chunk heading path on ingest (always H1/H2 pre-split + `headingPath` metadata)
+- Current highest-priority unfinished feature: **re-ingest existing docs** then smoke Chroma/Langfuse prefixes; optional e2e doc generation after Session 030 coverage
 - Dashboard stats: `GET /api/dashboard/stats` wired to dashboard stat cards (completed/ready scope)
 
 ## Session Log
+
+### Session 031
+
+- Date: 2026-07-18
+- Goal: Fix chunker stamping first H1/H2 onto every Chroma chunk.
+- Completed:
+  - Always structural-split on `#` then `##`; inherit parent H1 for later H2 parts.
+  - Per-section `headingPath` (H1 › H2 › optional H3) prepended to pieces; stored on `Chunk` + Chroma metadata.
+  - Unit tests in `test/chunker.test.ts`.
+  - Narrow tsc guard in `packGapExcerpts` (`body` possibly undefined).
+- Verification run: `pnpm --filter server check-types` → pass; `vitest run test/chunker.test.ts` → 3 passed.
+- Evidence captured: tsc clean; vitest exit 0.
+- Commits: none yet.
+- Files: `chunker.ts`, `document-processor.ts`, `chunker.test.ts`, `expand-subtopic-queries.ts` (tsc), `progress.md`, `session-handoff.md`.
+- Known risk: old Chroma rows stay wrong until re-upload / re-trigger `PROCESS_DOCUMENT` (no silent migrate).
+- Next best step: re-process affected `scopeId`s; confirm varied prefixes in Chroma; optional Langfuse expand smoke.
 
 ### Session 030
 
@@ -26,7 +42,8 @@
 - Commits: none yet.
 - Files: `stratified-sample.ts`, `rag.ts`, `expand-subtopic-queries.ts`, `document-search.ts`, `subtopic-coverage.test.ts`, `progress.md`.
 - Known risk: expand + gap-fill add up to 2 LLM round-trips before compile; large docs may still miss thin sections if sample sparse.
-- Next best step: run one document generation on a broad chapter topic; confirm `trace.queries` covers many leaves and Langfuse spans.
+- Known defect: chunker heading prepend — **fixed in Session 031** (re-ingest still required for old vectors).
+- Next best step: re-ingest docs (see Session 031).
 
 ### Session 029
 

@@ -15,10 +15,16 @@ export interface ImageRef {
   caption: string;
 }
 
-interface Chunk {
+export interface Chunk {
   text: string;
   index: number;
+  headingPath: string;
   imageRefs: ImageRef[];
+}
+
+interface Section {
+  text: string;
+  headingPath: string;
 }
 
 interface ChunkOptions {
@@ -47,18 +53,19 @@ export async function chunkText(
   let index = 0;
 
   for (const section of preSplitBySections(text, MAX_SECTION_CHARS)) {
-    const heading = extractHeadingPath(section);
-    const pieces = await splitter.splitText(section);
+    const { headingPath } = section;
+    const pieces = await splitter.splitText(section.text);
     for (const piece of pieces) {
-      const text =
-        heading && !piece.startsWith(heading)
-          ? `${heading}\n\n${piece}`
+      const chunkText =
+        headingPath && !piece.startsWith(headingPath)
+          ? `${headingPath}\n\n${piece}`
           : piece;
       chunks.push({
-        text,
+        text: chunkText,
         index: index++,
+        headingPath,
         imageRefs: images
-          .filter((img) => text.includes(img.id))
+          .filter((img) => chunkText.includes(img.id))
           .map((img) => ({
             id: img.id,
             url: img.r2Url,
@@ -71,38 +78,60 @@ export async function chunkText(
   return chunks;
 }
 
-function extractHeadingPath(section: string): string {
-  const lines = section.split('\n');
-  let h1: string | null = null;
+/** First `#` / `##` / `###` lines in section, with optional inherited H1. */
+function buildHeadingPath(
+  section: string,
+  inheritedH1: string | null,
+): string {
+  let h1 = inheritedH1;
   let h2: string | null = null;
-  for (const line of lines) {
-    if (!h1 && /^#\s+\S/.test(line)) h1 = line.trim();
-    else if (!h2 && /^##\s+\S/.test(line)) h2 = line.trim();
-    if (h1 && h2) break;
+  let h3: string | null = null;
+
+  for (const line of section.split('\n')) {
+    const trimmed = line.trim();
+    if (!h3 && /^###\s+\S/.test(trimmed)) h3 = trimmed;
+    else if (!h2 && /^##\s+\S/.test(trimmed)) h2 = trimmed;
+    else if (!h1 && /^#\s+\S/.test(trimmed)) h1 = trimmed;
+    if (h1 && h2 && h3) break;
   }
-  return [h1, h2].filter(Boolean).join(' › ');
+
+  return [h1, h2, h3].filter(Boolean).join(' › ');
 }
 
-function preSplitBySections(text: string, maxChars: number): string[] {
-  if (text.length <= maxChars) return [text];
+function firstH1Line(text: string): string | null {
+  for (const line of text.split('\n')) {
+    const trimmed = line.trim();
+    if (/^#\s+\S/.test(trimmed) && !/^##/.test(trimmed)) return trimmed;
+  }
+  return null;
+}
 
-  const out: string[] = [];
+/**
+ * Always split on `#` then `##` so each section gets its own heading path.
+ * Oversized single H2 blocks are sliced by maxChars (path reused).
+ */
+function preSplitBySections(text: string, maxChars: number): Section[] {
+  const out: Section[] = [];
   const h1Parts = text.split(/(?=^#\s+\S)/m).filter(Boolean);
-  for (const h1 of h1Parts) {
-    if (h1.length <= maxChars) {
-      out.push(h1);
-      continue;
-    }
-    const h2Parts = h1.split(/(?=^##\s+\S)/m).filter(Boolean);
-    for (const h2 of h2Parts) {
-      if (h2.length <= maxChars) {
-        out.push(h2);
-      } else {
-        for (let i = 0; i < h2.length; i += maxChars) {
-          out.push(h2.slice(i, i + maxChars));
-        }
+
+  for (const h1Part of h1Parts) {
+    const inheritedH1 = firstH1Line(h1Part);
+    const h2Parts = h1Part.split(/(?=^##\s+\S)/m).filter(Boolean);
+
+    for (const h2Part of h2Parts) {
+      const headingPath = buildHeadingPath(h2Part, inheritedH1);
+      if (h2Part.length <= maxChars) {
+        out.push({ text: h2Part, headingPath });
+        continue;
+      }
+      for (let i = 0; i < h2Part.length; i += maxChars) {
+        out.push({
+          text: h2Part.slice(i, i + maxChars),
+          headingPath,
+        });
       }
     }
   }
+
   return out;
 }

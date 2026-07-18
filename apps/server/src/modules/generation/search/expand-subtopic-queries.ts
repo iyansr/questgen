@@ -45,9 +45,7 @@ export function extractHeadingLeaves(
   const isTopicParent = (title: string) => {
     if (!topicNorm) return false;
     const n = normalizeKey(title);
-    return (
-      n === topicNorm || n.includes(topicNorm) || topicNorm.includes(n)
-    );
+    return n === topicNorm || n.includes(topicNorm) || topicNorm.includes(n);
   };
 
   const leaves = dedupeQueries(h2, MAX_QUERIES * 2);
@@ -105,9 +103,7 @@ function levelHint(
 
 function formatSamples(samples: string[]): string {
   if (samples.length === 0) return '(no document samples available)';
-  return samples
-    .map((s, i) => `### Sample ${i + 1}\n${s}`)
-    .join('\n\n');
+  return samples.map((s, i) => `### Sample ${i + 1}\n${s}`).join('\n\n');
 }
 
 async function llmExpandQueries({
@@ -203,7 +199,10 @@ Return JSON with a "queries" array of selected/normalized search queries.`,
     },
   });
 
-  return dedupeQueries(output?.queries ?? leaves.slice(0, MAX_QUERIES), MAX_QUERIES);
+  return dedupeQueries(
+    output?.queries ?? leaves.slice(0, MAX_QUERIES),
+    MAX_QUERIES,
+  );
 }
 
 /**
@@ -258,7 +257,8 @@ function packGapExcerpts(texts: string[]): string {
   const parts: string[] = [];
   let used = 0;
   for (let i = 0; i < texts.length; i++) {
-    const body = texts[i]!.slice(0, GAP_EXCERPT_LIMIT);
+    const body = texts[i]?.slice(0, GAP_EXCERPT_LIMIT);
+    if (!body) continue;
     if (used + body.length > GAP_EXCERPT_BUDGET) break;
     parts.push(`### Retrieved ${i + 1}\n${body}`);
     used += body.length;
