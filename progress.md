@@ -6,11 +6,27 @@
 - Standard startup path: `./init.sh`
 - Standard verification path: `pnpm --filter web check-types`
 - Server blackbox tests: `pnpm test:server` (requires PostgreSQL + `questgen_test` DB)
-- Latest feature: forced compile for document + web research (`sourceMaterial` no longer empty after tool-only steps)
-- Current highest-priority unfinished feature: manual Langfuse smoke of doc/web session (expect `*-search` + `*-compile` spans, non-empty prose in QG)
+- Latest feature: document research doc-first subtopic coverage + gap-fill (no invent-3–5 tool loop)
+- Current highest-priority unfinished feature: manual Langfuse smoke of doc session (expect `document-research-expand` / `document-research-gap-fill` / `document-research-compile`)
 - Dashboard stats: `GET /api/dashboard/stats` wired to dashboard stat cards (completed/ready scope)
 
 ## Session Log
+
+### Session 030
+
+- Date: 2026-07-18
+- Goal: Broad document topics miss subtopics; many docs lack TOC/headings.
+- Completed:
+  - Stratified Chroma sample by `chunkIndex` (`sampleStratifiedChunks` / `pickStratifiedIndices`).
+  - Doc-first queries: heading leaves when ≥3 `##`, else LLM expand from samples + light curriculum fill.
+  - Deterministic multi-query retrieve; one gap-fill LLM round; keep compile Phase B.
+  - Unit tests in `test/subtopic-coverage.test.ts`.
+- Verification run: `pnpm --filter server check-types` → pass; `vitest run test/subtopic-coverage.test.ts test/research-compile.test.ts` → 14 passed.
+- Evidence captured: tsc clean; vitest exit 0.
+- Commits: none yet.
+- Files: `stratified-sample.ts`, `rag.ts`, `expand-subtopic-queries.ts`, `document-search.ts`, `subtopic-coverage.test.ts`, `progress.md`.
+- Known risk: expand + gap-fill add up to 2 LLM round-trips before compile; large docs may still miss thin sections if sample sparse.
+- Next best step: run one document generation on a broad chapter topic; confirm `trace.queries` covers many leaves and Langfuse spans.
 
 ### Session 029
 

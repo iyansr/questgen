@@ -3,4 +3,7 @@ import { env } from '@questgen/env/server';
 
 export const openrouter = createOpenRouter({
   apiKey: env.OPENROUTER_API_KEY,
+  headers: {
+    'X-Title': 'QuestGen',
+  },
 });

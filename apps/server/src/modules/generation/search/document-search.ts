@@ -1,17 +1,22 @@
-import { generateText, stepCountIs, tool } from 'ai';
-import z from 'zod';
+import { generateText } from 'ai';
 
 import type { ImageRef } from '@/modules/processing/chunker';
 import type { RetrievedChunkMeta } from '@/modules/processing/rag';
-import { retrieveContextWithMeta } from '@/modules/processing/rag';
+import {
+  retrieveContextWithMeta,
+  sampleStratifiedChunks,
+} from '@/modules/processing/rag';
 import { openrouter } from '@/shared/ai/openrouter';
 import { GENERATION_PARAMS, MODELS } from '@/shared/config/models';
 import { withRetry } from '@/shared/lib/retry';
 
-import { buildQuantitativeResearchAddon } from '../prompts/subject-guidance';
+import {
+  buildSubtopicQueries,
+  gapFillSubtopicQueries,
+  mergeQueries,
+} from './expand-subtopic-queries';
 import { resolveSourceMaterial } from './resolve-source-material';
 
-const MAX_DISTANCE = 0.6;
 const DEFAULT_TOP_K = 12;
 const CHUNK_TEXT_LIMIT = 3000;
 const COMPILE_BUDGET = 100_000;
@@ -44,6 +49,24 @@ function buildChunkExcerpts(chunks: RetrievedChunkMeta[]): string[] {
   return excerpts;
 }
 
+async function retrieveAndMerge(
+  queries: string[],
+  scopeId: string,
+  allChunks: Map<string, RetrievedChunkMeta>,
+): Promise<void> {
+  for (const query of queries) {
+    const result = await withRetry(() =>
+      retrieveContextWithMeta(query, scopeId, DEFAULT_TOP_K),
+    );
+    for (const item of result.items) {
+      const existing = allChunks.get(item.id);
+      if (!existing || item.score < existing.score) {
+        allChunks.set(item.id, item);
+      }
+    }
+  }
+}
+
 export async function documentSearch({
   topic,
   scopeId,
@@ -60,7 +83,6 @@ export async function documentSearch({
   classGrade: string;
 }): Promise<DocumentSearchResult> {
   const allChunks = new Map<string, RetrievedChunkMeta>();
-  const queries: string[] = [];
 
   const levelParts = [
     curriculum && `curriculum "${curriculum}"`,
@@ -72,94 +94,51 @@ export async function documentSearch({
       ? `Adapt the research to ${levelParts.join(', ')}.`
       : 'Adapt the research to the educational level implied by the document content.';
 
-  const quantitativeResearch = buildQuantitativeResearchAddon(topic);
-
-  // Phase A: search only — do not rely on final text (often empty after tool-calls).
-  await generateText({
-    model: openrouter(MODELS.RETRIEVAL),
-    temperature: GENERATION_PARAMS.RESEARCH.temperature,
-    topP: GENERATION_PARAMS.RESEARCH.topP,
-    tools: {
-      searchDocument: tool({
-        description:
-          'Search the uploaded document for relevant chunks about a specific aspect of the topic. Returns document excerpts with relevance scores.',
-        inputSchema: z.object({
-          query: z
-            .string()
-            .describe(
-              'A focused search query targeting a specific aspect of the topic, phrased as a student would ask',
-            ),
-          topK: z
-            .number()
-            .min(3)
-            .max(20)
-            .default(DEFAULT_TOP_K)
-            .describe('Number of chunks to retrieve'),
-        }),
-        execute: async ({ query, topK }) => {
-          queries.push(query);
-          const result = await withRetry(() =>
-            retrieveContextWithMeta(query, scopeId, topK ?? DEFAULT_TOP_K),
-          );
-
-          for (const item of result.items) {
-            const existing = allChunks.get(item.id);
-            if (!existing || item.score < existing.score) {
-              allChunks.set(item.id, item);
-            }
-          }
-
-          const relevant = result.items.filter((i) => i.score <= MAX_DISTANCE);
-          const chunks =
-            relevant.length >= 3 ? relevant : result.items.slice(0, 3);
-
-          return {
-            chunks: chunks.map((c) => ({
-              text: c.text.slice(0, CHUNK_TEXT_LIMIT),
-              score: c.score,
-              imageRefs: c.imageRefs.map((ref) => ({
-                id: ref.id,
-                caption: ref.caption,
-              })),
-            })),
-            chunkCount: chunks.length,
-          };
-        },
-      }),
-    },
-    stopWhen: stepCountIs(3),
-    system: `\
-You are a thorough document research assistant gathering material from an uploaded document for question generation.
-
-<instruction>
-Your task: Search the uploaded document for all information related to the topic "${topic}" as thoroughly as possible using the searchDocument tool.
-
-${levelHint}
-
-Cover via searches:
-- Core concepts and definitions from the document
-- Key examples and applications mentioned in the document
-- Important facts, terminology, and principles that could be tested
-- Specific details, numbers, and definitions from the document
-</instruction>
-
-<strategy>
-1. Break the topic into 3-5 key aspects or sub-topics
-2. Search each aspect with specific, targeted queries phrased as a student would ask
-3. Search for: definitions, key concepts, examples, applications, important facts
-4. Use different phrasings and synonyms to maximize coverage
-5. Call searchDocument in parallel when exploring multiple aspects
-${quantitativeResearch}
-</strategy>
-
-Do NOT write a final research document. Only use the searchDocument tool.`,
-    prompt: `Search the document for information about "${topic}". Search multiple aspects thoroughly using searchDocument. Do not write a summary.`,
-    experimental_telemetry: {
-      isEnabled: true,
-      functionId: 'document-research-search',
-      metadata: { sessionId, topic, scopeId },
-    },
+  // Phase A: doc-first expand → retrieve → gap-fill → retrieve
+  const samples = await sampleStratifiedChunks(scopeId);
+  const round1Queries = await buildSubtopicQueries({
+    topic,
+    curriculum,
+    grade,
+    classGrade,
+    samples,
+    sessionId,
+    scopeId,
   });
+
+  await retrieveAndMerge(round1Queries, scopeId, allChunks);
+
+  let queries = [...round1Queries];
+
+  if (allChunks.size > 0) {
+    const retrievedTexts = Array.from(allChunks.values())
+      .sort((a, b) => a.score - b.score)
+      .map((c) => c.text);
+    const gapQueries = await gapFillSubtopicQueries({
+      topic,
+      curriculum,
+      grade,
+      classGrade,
+      existingQueries: queries,
+      sampleTexts: samples,
+      retrievedTexts,
+      sessionId,
+      scopeId,
+    });
+    const newGaps = gapQueries.filter(
+      (q) =>
+        !queries.some(
+          (e) =>
+            e.toLowerCase() === q.toLowerCase() ||
+            e.toLowerCase().includes(q.toLowerCase()) ||
+            q.toLowerCase().includes(e.toLowerCase()),
+        ),
+    );
+    if (newGaps.length > 0) {
+      await retrieveAndMerge(newGaps, scopeId, allChunks);
+      queries = mergeQueries(queries, newGaps);
+    }
+  }
 
   const chunks = Array.from(allChunks.values()).sort(
     (a, b) => a.score - b.score,
@@ -200,9 +179,9 @@ Compile a comprehensive markdown document from the excerpts below. Use ONLY info
 </instruction>
 
 <format>
-- Use clear headings (##) for each major aspect
+- Use clear headings (##) for each major aspect / subtopic
 - Include specific facts, numbers, dates, and terminology from the excerpts
-- Organize for educational question writing
+- Organize for educational question writing so different subtopics are easy to pull into separate questions
 - Preserve important details that could be tested
 - When excerpts mention Images with IDs, reference them inline using their ID (e.g. "see image [img_abc123]")
 </format>
