@@ -6,11 +6,28 @@
 - Standard startup path: `./init.sh`
 - Standard verification path: `pnpm --filter web check-types`
 - Server blackbox tests: `pnpm test:server` (requires PostgreSQL + `questgen_test` DB)
-- Latest feature: include-images toggle on new-session (generation hard-skip + lead-in scrub)
-- Current highest-priority unfinished feature: manual browser smoke of include-images toggle off/on
+- Latest feature: forced compile for document + web research (`sourceMaterial` no longer empty after tool-only steps)
+- Current highest-priority unfinished feature: manual Langfuse smoke of doc/web session (expect `*-search` + `*-compile` spans, non-empty prose in QG)
 - Dashboard stats: `GET /api/dashboard/stats` wired to dashboard stat cards (completed/ready scope)
 
 ## Session Log
+
+### Session 029
+
+- Date: 2026-07-18
+- Goal: Fix empty document/web research summary when `stepCountIs(3)` ends on `finishReason: tool-calls`.
+- Root cause: single `generateText` tool loop returned empty `text`; `sourceMaterial` used that text.
+- Completed:
+  - Shared `resolveSourceMaterial` (prefer compile ≥80 chars, else stitch excerpts).
+  - Document: Phase A `document-research-search` (tools, stepCountIs 3) + Phase B `document-research-compile` (no tools).
+  - Web: Phase A `web-research-search` (stash section markdown) + Phase B `web-research-compile` (image URL rules).
+  - Unit tests in `test/research-compile.test.ts`.
+- Verification run: `pnpm --filter server check-types` → pass; `pnpm --filter server test` → 15 files / 81 tests pass (Postgres via docker compose).
+- Evidence captured: tsc clean; vitest exit 0.
+- Commits: none yet.
+- Files: `resolve-source-material.ts`, `document-search.ts`, `web-search.ts`, `research-compile.test.ts`, `progress.md`.
+- Known risk: compile adds one LLM round-trip per research; stitch fallback is lower quality than compile.
+- Next best step: run one doc + one web generation; confirm Langfuse `*-compile` output and non-empty `<source_material>`.
 
 ### Session 028
 

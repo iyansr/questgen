@@ -9,9 +9,12 @@ import { GENERATION_PARAMS, MODELS } from '@/shared/config/models';
 import { withRetry } from '@/shared/lib/retry';
 
 import { buildQuantitativeResearchAddon } from '../prompts/subject-guidance';
+import { resolveSourceMaterial } from './resolve-source-material';
 
 const MAX_DISTANCE = 0.6;
 const DEFAULT_TOP_K = 12;
+const CHUNK_TEXT_LIMIT = 3000;
+const COMPILE_BUDGET = 100_000;
 
 export type DocumentSearchResult = {
   sourceMaterial: string;
@@ -22,6 +25,24 @@ export type DocumentSearchResult = {
     coverage: { uniqueChunkCount: number; avgScore: number; minScore: number };
   };
 };
+
+function buildChunkExcerpts(chunks: RetrievedChunkMeta[]): string[] {
+  const excerpts: string[] = [];
+  let used = 0;
+
+  for (const chunk of chunks) {
+    const imageNote = chunk.imageRefs.length
+      ? `\nImages: ${chunk.imageRefs.map((r) => `[${r.id}] ${r.caption || ''}`.trim()).join('; ')}`
+      : '';
+    const body = chunk.text.slice(0, CHUNK_TEXT_LIMIT);
+    const excerpt = `${body}${imageNote}`;
+    if (used + excerpt.length > COMPILE_BUDGET) break;
+    excerpts.push(excerpt);
+    used += excerpt.length;
+  }
+
+  return excerpts;
+}
 
 export async function documentSearch({
   topic,
@@ -53,7 +74,8 @@ export async function documentSearch({
 
   const quantitativeResearch = buildQuantitativeResearchAddon(topic);
 
-  const { text } = await generateText({
+  // Phase A: search only — do not rely on final text (often empty after tool-calls).
+  await generateText({
     model: openrouter(MODELS.RETRIEVAL),
     temperature: GENERATION_PARAMS.RESEARCH.temperature,
     topP: GENERATION_PARAMS.RESEARCH.topP,
@@ -93,7 +115,7 @@ export async function documentSearch({
 
           return {
             chunks: chunks.map((c) => ({
-              text: c.text.slice(0, 3000),
+              text: c.text.slice(0, CHUNK_TEXT_LIMIT),
               score: c.score,
               imageRefs: c.imageRefs.map((ref) => ({
                 id: ref.id,
@@ -107,14 +129,14 @@ export async function documentSearch({
     },
     stopWhen: stepCountIs(3),
     system: `\
-You are a thorough document research assistant compiling detailed reference material from an uploaded document for question generation.
+You are a thorough document research assistant gathering material from an uploaded document for question generation.
 
 <instruction>
 Your task: Search the uploaded document for all information related to the topic "${topic}" as thoroughly as possible using the searchDocument tool.
 
 ${levelHint}
 
-Ensure the research covers:
+Cover via searches:
 - Core concepts and definitions from the document
 - Key examples and applications mentioned in the document
 - Important facts, terminology, and principles that could be tested
@@ -126,23 +148,15 @@ Ensure the research covers:
 2. Search each aspect with specific, targeted queries phrased as a student would ask
 3. Search for: definitions, key concepts, examples, applications, important facts
 4. Use different phrasings and synonyms to maximize coverage
+5. Call searchDocument in parallel when exploring multiple aspects
 ${quantitativeResearch}
 </strategy>
 
-<format>
-After gathering information, compile a comprehensive markdown document that:
-- Uses clear headings (##) for each major aspect
-- Includes specific facts, numbers, dates, and terminology from the document
-- Is well-organized for educational question writing
-- Preserves important details that could be tested
-- When chunks include imageRefs, reference them inline using their ID (e.g. "see image [img_abc123]") so the image context is preserved
-</format>
-
-Output ONLY the compiled markdown research document. Do not include preamble.`,
-    prompt: `Search the document for information about "${topic}". Search multiple aspects thoroughly, then compile all findings into a single comprehensive markdown document.`,
+Do NOT write a final research document. Only use the searchDocument tool.`,
+    prompt: `Search the document for information about "${topic}". Search multiple aspects thoroughly using searchDocument. Do not write a summary.`,
     experimental_telemetry: {
       isEnabled: true,
-      functionId: 'document-research',
+      functionId: 'document-research-search',
       metadata: { sessionId, topic, scopeId },
     },
   });
@@ -166,8 +180,46 @@ Output ONLY the compiled markdown research document. Do not include preamble.`,
     minScore: chunks.length ? (chunks[0]?.score ?? 1) : 1,
   };
 
+  const excerpts = buildChunkExcerpts(chunks);
+  let compiled = '';
+
+  // Phase B: forced compile from stashed chunks (no tools).
+  if (excerpts.length > 0) {
+    const { text } = await generateText({
+      model: openrouter(MODELS.RETRIEVAL),
+      temperature: GENERATION_PARAMS.RESEARCH.temperature,
+      topP: GENERATION_PARAMS.RESEARCH.topP,
+      system: `\
+You are a thorough document research assistant compiling detailed reference material from retrieved document excerpts for question generation.
+
+<instruction>
+Topic: "${topic}"
+${levelHint}
+
+Compile a comprehensive markdown document from the excerpts below. Use ONLY information present in the excerpts — never invent facts.
+</instruction>
+
+<format>
+- Use clear headings (##) for each major aspect
+- Include specific facts, numbers, dates, and terminology from the excerpts
+- Organize for educational question writing
+- Preserve important details that could be tested
+- When excerpts mention Images with IDs, reference them inline using their ID (e.g. "see image [img_abc123]")
+</format>
+
+Output ONLY the compiled markdown research document. Do not include preamble.`,
+      prompt: `Compile research material about "${topic}" from these excerpts:\n\n${excerpts.map((e, i) => `### Excerpt ${i + 1}\n${e}`).join('\n\n')}`,
+      experimental_telemetry: {
+        isEnabled: true,
+        functionId: 'document-research-compile',
+        metadata: { sessionId, topic, scopeId },
+      },
+    });
+    compiled = text;
+  }
+
   return {
-    sourceMaterial: text,
+    sourceMaterial: resolveSourceMaterial(compiled, excerpts),
     imageRefs: Array.from(imageRefsMap.values()),
     trace: { queries, chunks, coverage },
   };
