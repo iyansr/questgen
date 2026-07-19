@@ -1,0 +1,30 @@
+{
+  "source_slug": "Matematika-Kelas-VIII-Semester-1",
+  "source_title": "Matematika Kelas VIII Semester 1",
+  "source_path": "source/Matematika-Kelas-VIII-Semester-1.pdf",
+  "bab": 1,
+  "printed": {
+    "materials": [
+      5,
+      33
+    ],
+    "exercise": [
+      34,
+      45
+    ]
+  },
+  "file_pages": {
+    "materials": [
+      11,
+      39
+    ],
+    "exercise": [
+      40,
+      51
+    ]
+  },
+  "page_counts": {
+    "materials": 29,
+    "exercise": 12
+  }
+}
