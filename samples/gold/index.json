@@ -1,0 +1,17 @@
+[
+  {
+    "sampleId": "sample-1",
+    "mcq": 10,
+    "open": 0
+  },
+  {
+    "sampleId": "sample-2",
+    "mcq": 7,
+    "open": 0
+  },
+  {
+    "sampleId": "sample-3",
+    "mcq": 10,
+    "open": 5
+  }
+]

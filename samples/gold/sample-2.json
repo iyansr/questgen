@@ -1,0 +1,191 @@
+{
+  "sampleId": "sample-2",
+  "topic": "Sistem Perkembangbiakan Tumbuhan dan Hewan",
+  "grade": "SMP",
+  "classGrade": "IX",
+  "curriculum": "Kurikulum Merdeka",
+  "questionTypeCounts": [
+    {
+      "type": "multiple_choice",
+      "count": 7
+    }
+  ],
+  "source": "samples/sample-2/exercise.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Reproduksi yang memungkinkan tumbuhan mewarisi semua karakteristik atau sifat hanya dari satu induk adalah perkembang ­ biakan secara ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "alami"
+        },
+        {
+          "label": "B",
+          "text": "seksual"
+        },
+        {
+          "label": "C",
+          "text": "generatif"
+        },
+        {
+          "label": "D",
+          "text": "vegetatif"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Perkembangbiakan vegetatif buatan dapat dilakukan dengan ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "merunduk, setek, dan cangkok"
+        },
+        {
+          "label": "B",
+          "text": "merunduk, enten, dan umbi lapis"
+        },
+        {
+          "label": "C",
+          "text": "okulasi, stolon, dan tunas adventif"
+        },
+        {
+          "label": "D",
+          "text": "rhizoma, enten, dan tunas adventif"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut menunjukkan seekor kupu­kupu hinggap pada tanaman bunga A lalu membawa serbuk sari dari tanaman bunga A ke tanaman bunga B. Hasil yang akan terjadi dari peristiwa tersebut adalah .... A B",
+      "options": [
+        {
+          "label": "A",
+          "text": "keturunan dari tanaman bunga A akan terlihat seperti tanaman bunga B"
+        },
+        {
+          "label": "B",
+          "text": "keturunan dari tanaman bunga B akan terlihat seperti tanaman bunga A"
+        },
+        {
+          "label": "C",
+          "text": "keturunan dari tanaman bunga B akan terlihat seperti tanaman bunga A dan tanaman bunga B"
+        },
+        {
+          "label": "D",
+          "text": "tidak akan terbentuk keturunan karena serbuk sari berasal dari jenis tanaman yang berbeda"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Gambar berikut menunjukkan tanaman buncis pada tahap pertumbuhan yang berbeda. Urutan tahapan pertumbuhan yang benar adalah …. 1 2 3 4",
+      "options": [
+        {
+          "label": "A",
+          "text": "2, 1, 3, 4"
+        },
+        {
+          "label": "B",
+          "text": "2, 1, 4, 3"
+        },
+        {
+          "label": "C",
+          "text": "3, 2, 1, 4"
+        },
+        {
+          "label": "D",
+          "text": "4, 2, 3, 1"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Dayu meletakkan beberapa biji kacang di piring yang diberi kapas basah. Siti juga menaruh beberapa biji kacang di piring dekat piring Dayu dan merendamnya dalam air. Setelah dua hari biji kacang milik Dayu tumbuh berkecambah sedangkan biji kacang milik Siti tidak tumbuh. Penyebab tidak tum buhnya biji kacang milik Siti adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "biji kacang milik Siti memerlukan lebih banyak udara"
+        },
+        {
+          "label": "B",
+          "text": "biji kacang milik Siti memerlukan lebih banyak cahaya"
+        },
+        {
+          "label": "C",
+          "text": "Siti tidak menaruh piring di tempat yang cukup hangat"
+        },
+        {
+          "label": "D",
+          "text": "Siti seharusnya menggunakan jenis biji kacang yang berbeda"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Peristiwa yang terjadi selama fertilisasi pada hewan adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "pembelahan sel telur"
+        },
+        {
+          "label": "B",
+          "text": "perkembangan embrio"
+        },
+        {
+          "label": "C",
+          "text": "produksi sel sperma dan sel telur"
+        },
+        {
+          "label": "D",
+          "text": "penyatuan inti sel sperma dan inti sel telur"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Perlakuan khusus pada serangga jantan agar tidak mem produksi sperma adalah untuk ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "menghasilkan spesies baru serangga"
+        },
+        {
+          "label": "B",
+          "text": "meningkatkan jumlah serangga betina"
+        },
+        {
+          "label": "C",
+          "text": "mengurangi jumlah populasi serangga"
+        },
+        {
+          "label": "D",
+          "text": "mencegah serangga melakukan fertilisasi"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    }
+  ]
+}

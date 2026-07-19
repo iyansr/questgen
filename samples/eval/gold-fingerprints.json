@@ -1,0 +1,415 @@
+[
+  {
+    "sampleId": "sample-1",
+    "topic": "Sistem Reproduksi pada Manusia",
+    "n": 10,
+    "fingerprint": {
+      "n": 10,
+      "templateHist": {
+        "disebut": 2,
+        "pernyataan_benar": 3,
+        "pasangan": 1,
+        "ciri_ciri": 1,
+        "skenario": 0,
+        "urutan": 1,
+        "hitung_kromosom": 1,
+        "proses": 2,
+        "tujuan": 0,
+        "image_leadin": 1,
+        "other": 2
+      },
+      "cognitiveHist": {
+        "recall": 3,
+        "comprehend": 5,
+        "apply": 2
+      },
+      "stemEllipsisRate": 1,
+      "fourOptionRate": 1,
+      "optionShapeHist": {
+        "short_terms": 7,
+        "long_statements": 1,
+        "mixed": 2,
+        "none": 0
+      },
+      "numberedListRate": 0.1,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 2.7
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "disebut"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "pernyataan_benar",
+          "pasangan"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "pernyataan_benar",
+          "hitung_kromosom"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "pernyataan_benar"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 6,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 7,
+        "tags": [
+          "urutan"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 8,
+        "tags": [
+          "proses"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 9,
+        "tags": [
+          "disebut",
+          "proses"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 10,
+        "tags": [
+          "ciri_ciri",
+          "image_leadin"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      }
+    ]
+  },
+  {
+    "sampleId": "sample-2",
+    "topic": "Sistem Perkembangbiakan Tumbuhan dan Hewan",
+    "n": 7,
+    "fingerprint": {
+      "n": 7,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 1,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 1,
+        "urutan": 1,
+        "hitung_kromosom": 0,
+        "proses": 1,
+        "tujuan": 1,
+        "image_leadin": 2,
+        "other": 2
+      },
+      "cognitiveHist": {
+        "recall": 4,
+        "comprehend": 1,
+        "apply": 2
+      },
+      "stemEllipsisRate": 0.7142857142857143,
+      "fourOptionRate": 1,
+      "optionShapeHist": {
+        "short_terms": 3,
+        "long_statements": 2,
+        "mixed": 2,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0.2857142857142857,
+      "avgIndonesianMarkers": 2
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "image_leadin"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "pernyataan_benar",
+          "urutan",
+          "image_leadin"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "skenario"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 6,
+        "tags": [
+          "proses"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 7,
+        "tags": [
+          "tujuan"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      }
+    ]
+  },
+  {
+    "sampleId": "sample-3",
+    "topic": "Pewarisan Sifat pada Makhluk Hidup",
+    "n": 15,
+    "fingerprint": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 4,
+        "pasangan": 0,
+        "ciri_ciri": 1,
+        "skenario": 1,
+        "urutan": 0,
+        "hitung_kromosom": 6,
+        "proses": 0,
+        "tujuan": 1,
+        "image_leadin": 0,
+        "other": 4
+      },
+      "cognitiveHist": {
+        "recall": 5,
+        "comprehend": 4,
+        "apply": 6
+      },
+      "stemEllipsisRate": 0.5333333333333333,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 7,
+        "long_statements": 2,
+        "mixed": 1,
+        "none": 5
+      },
+      "numberedListRate": 0.06666666666666667,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 1.8
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "pernyataan_benar"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "skenario",
+          "hitung_kromosom"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "pernyataan_benar"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "hitung_kromosom"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "pernyataan_benar",
+          "hitung_kromosom"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 6,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 7,
+        "tags": [
+          "ciri_ciri"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 8,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 9,
+        "tags": [
+          "pernyataan_benar"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 10,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 1,
+        "tags": [
+          "hitung_kromosom"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "hitung_kromosom"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "hitung_kromosom"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "tujuan"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      }
+    ]
+  }
+]

@@ -1,0 +1,266 @@
+{
+  "sampleId": "sample-1",
+  "topic": "Sistem Reproduksi pada Manusia",
+  "grade": "SMP",
+  "classGrade": "IX",
+  "curriculum": "Kurikulum Merdeka",
+  "questionTypeCounts": [
+    {
+      "type": "multiple_choice",
+      "count": 10
+    }
+  ],
+  "source": "samples/sample-1/exercise.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Bagian testis yang berperan dalam produksi sperma dan hormon testosteron disebut ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "epididimis"
+        },
+        {
+          "label": "B",
+          "text": "vas deferens"
+        },
+        {
+          "label": "C",
+          "text": "vesikula seminalis"
+        },
+        {
+          "label": "D",
+          "text": "tubulus seminiferus"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Pasangan antara bagian alat reproduksi laki-laki dan fungsinya berikut ini yang benar adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "skrotum berfungsi sebagai pembungkus testis"
+        },
+        {
+          "label": "B",
+          "text": "tubulus seminiferus berfungsi sebagai saluran tempat keluarnya sperma"
+        },
+        {
+          "label": "C",
+          "text": "uretra berfungsi sebagai tempat pematangan sperma"
+        },
+        {
+          "label": "D",
+          "text": "vas deferens berfungsi sebagai tempat produksi sperma"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Pernyataan yang benar terkait dengan jumlah kromosom spermatogonium dan spermatozoa adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "spermatogonium bersifat diploid, spermatozoa bersifat haploid"
+        },
+        {
+          "label": "B",
+          "text": "spermatogonium bersifat haploid, spermatozoa bersifat diploid"
+        },
+        {
+          "label": "C",
+          "text": "spermatogonium bersifat diploid, spermatozoa bersifat diploid"
+        },
+        {
+          "label": "D",
+          "text": "spermatogonium bersifat haploid, spermatozoa bersifat haploid"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Ovarium adalah tempat terjadinya ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "fertilisasi"
+        },
+        {
+          "label": "B",
+          "text": "implantasi"
+        },
+        {
+          "label": "C",
+          "text": "pematangan ovum"
+        },
+        {
+          "label": "D",
+          "text": "perkembangan bayi"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Pernyataan yang benar mengenai oogenesis adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "oogenesis dimulai sejak bayi dilahirkan"
+        },
+        {
+          "label": "B",
+          "text": "hasil akhir oogenesis adalah satu ovum dan tiga badan polar"
+        },
+        {
+          "label": "C",
+          "text": "badan polar merupakan hasil pembelahan oosit sekunder se cara meiosis"
+        },
+        {
+          "label": "D",
+          "text": "ketika bayi perempuan lahir proses pembentukan sel telur sampai pada fase pembentukan oosit primer"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Tahap oogenesis pada bayi perempuan yang baru lahir telah sampai pada fase ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "ootid"
+        },
+        {
+          "label": "B",
+          "text": "oogonium"
+        },
+        {
+          "label": "C",
+          "text": "oosit primer"
+        },
+        {
+          "label": "D",
+          "text": "oosit sekunder"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Hormon yang memicu berkembangnya folikel dan penebalan dinding rahim secara berturut-turut adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "LH dan FSH"
+        },
+        {
+          "label": "B",
+          "text": "LH dan estrogen"
+        },
+        {
+          "label": "C",
+          "text": "FSH dan progesteron"
+        },
+        {
+          "label": "D",
+          "text": "estrogen dan progesteron"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut ini yang langsung terbentuk setelah proses fertilisasi adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "janin"
+        },
+        {
+          "label": "B",
+          "text": "zigot"
+        },
+        {
+          "label": "C",
+          "text": "embrio"
+        },
+        {
+          "label": "D",
+          "text": "plasenta"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Proses meluruhnya sel-sel epitel yang menyusun dinding rahim disebut ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "ovulasi"
+        },
+        {
+          "label": "B",
+          "text": "fertilisasi"
+        },
+        {
+          "label": "C",
+          "text": "implantasi"
+        },
+        {
+          "label": "D",
+          "text": "menstruasi"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 10,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan ciri penyakit berikut ini! 1. Disebabkan oleh Treponema pallidum 2. Biasanya menyerang daerah sekitar kelamin 3. Gejala awal berupa borok pada tempat masuknya bakteri Ciri-ciri penyakit di atas dimiliki oleh orang yang menderita penyakit ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "sifilis"
+        },
+        {
+          "label": "B",
+          "text": "gonore"
+        },
+        {
+          "label": "C",
+          "text": "HIV/AIDS"
+        },
+        {
+          "label": "D",
+          "text": "herpes simplex genitalis"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    }
+  ]
+}
