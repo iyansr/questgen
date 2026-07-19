@@ -1,0 +1,328 @@
+{
+  "variant": "v1-ipa-stems",
+  "sampleId": "sample-4",
+  "topic": "Tekanan Zat dan Penerapannya dalam Kehidupan Sehari-hari",
+  "sessionId": "c273bcca-7890-4b57-a9ac-f03ec7f60caa",
+  "documentId": "0846d0b8-1aa1-4b35-9184-ba9a77fdcc73",
+  "latencyMs": 325888,
+  "questions": [
+    {
+      "number": 0,
+      "questionType": "multiple_choice",
+      "questionText": "Besarnya gaya per satuan luas permukaan tempat gaya bekerja disebut ....",
+      "options": [
+        {
+          "text": "Tekanan",
+          "label": "A"
+        },
+        {
+          "text": "Gaya",
+          "label": "B"
+        },
+        {
+          "text": "Usaha",
+          "label": "C"
+        },
+        {
+          "text": "Energi",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Seseorang akan lebih mudah berjalan di lumpur jika menggunakan sepatu boot daripada sepatu hak tinggi karena ....",
+      "options": [
+        {
+          "text": "tekanan yang dihasilkan sepatu boot lebih besar",
+          "label": "A"
+        },
+        {
+          "text": "tekanan yang dihasilkan sepatu boot lebih kecil",
+          "label": "B"
+        },
+        {
+          "text": "gaya yang diberikan sepatu boot lebih besar",
+          "label": "C"
+        },
+        {
+          "text": "luas bidang tekan sepatu hak tinggi lebih besar",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Seorang penyelam menyelam pada kedalaman 15 m di air laut dengan massa jenis 1.000 kg/m^3. Jika percepatan gravitasi 10 m/s^2, tekanan hidrostatis yang dialami penyelam sebesar ....",
+      "options": [
+        {
+          "text": "15.000 Pa",
+          "label": "A"
+        },
+        {
+          "text": "150.000 Pa",
+          "label": "B"
+        },
+        {
+          "text": "1.500.000 Pa",
+          "label": "C"
+        },
+        {
+          "text": "15.000.000 Pa",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan pernyataan berikut!\n(1) Gaya apung lebih besar dari berat benda.\n(2) Gaya apung lebih kecil dari berat benda.\n(3) Massa jenis benda lebih kecil dari massa jenis zat cair.\n(4) Massa jenis benda sama dengan massa jenis zat cair.\nBenda yang dicelupkan ke dalam zat cair akan terapung jika memenuhi pernyataan nomor ....",
+      "options": [
+        {
+          "text": "(1) dan (3)",
+          "label": "A"
+        },
+        {
+          "text": "(1) dan (4)",
+          "label": "B"
+        },
+        {
+          "text": "(2) dan (3)",
+          "label": "C"
+        },
+        {
+          "text": "(2) dan (4)",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Sebuah dongkrak hidrolik memiliki luas penampang kecil 5 cm^2 dan luas penampang besar 250 cm^2. Jika pada penampang kecil diberikan gaya 50 N, besar gaya angkat pada penampang besar adalah ....",
+      "options": [
+        {
+          "text": "250 N",
+          "label": "A"
+        },
+        {
+          "text": "500 N",
+          "label": "B"
+        },
+        {
+          "text": "2.500 N",
+          "label": "C"
+        },
+        {
+          "text": "5.000 N",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Air yang diserap oleh rambut akar dapat masuk ke jaringan xilem setelah melewati lapisan ....",
+      "options": [
+        {
+          "text": "epidermis, korteks, endodermis",
+          "label": "A"
+        },
+        {
+          "text": "epidermis, endodermis, korteks",
+          "label": "B"
+        },
+        {
+          "text": "korteks, epidermis, endodermis",
+          "label": "C"
+        },
+        {
+          "text": "endodermis, epidermis, korteks",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Tekanan darah pada pembuluh nadi di lengan atas sama dengan tekanan darah di aorta. Hal ini sesuai dengan prinsip ....",
+      "options": [
+        {
+          "text": "Hukum Archimedes",
+          "label": "A"
+        },
+        {
+          "text": "Hukum Pascal",
+          "label": "B"
+        },
+        {
+          "text": "Hukum Boyle",
+          "label": "C"
+        },
+        {
+          "text": "Hukum Hidrostatis",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Pada sebuah percobaan, gelas diisi air penuh lalu ditutup dengan selembar kertas dan dibalik. Ternyata air tidak tumpah karena ....",
+      "options": [
+        {
+          "text": "tekanan udara di dalam gelas lebih besar dari tekanan udara luar",
+          "label": "A"
+        },
+        {
+          "text": "tekanan udara luar lebih besar dari tekanan air dalam gelas",
+          "label": "B"
+        },
+        {
+          "text": "terjadi gaya kohesi antara molekul air dan kertas",
+          "label": "C"
+        },
+        {
+          "text": "terjadi gaya adhesi antara molekul air dan gelas",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Balon udara dapat naik ke atas karena ....",
+      "options": [
+        {
+          "text": "massa jenis udara panas lebih kecil sehingga gaya ke atas lebih besar dari berat balon",
+          "label": "A"
+        },
+        {
+          "text": "massa jenis udara panas lebih besar sehingga gaya apung meningkat",
+          "label": "B"
+        },
+        {
+          "text": "tekanan udara panas dalam balon lebih tinggi sehingga balon mengembang",
+          "label": "C"
+        },
+        {
+          "text": "suhu udara panas menyebabkan volume balon mengecil",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Proses difusi oksigen dari alveolus ke dalam darah terjadi karena ....",
+      "options": [
+        {
+          "text": "tekanan parsial oksigen di alveolus lebih tinggi daripada di darah",
+          "label": "A"
+        },
+        {
+          "text": "tekanan parsial oksigen di darah lebih tinggi daripada di alveolus",
+          "label": "B"
+        },
+        {
+          "text": "tekanan parsial karbon dioksida di alveolus lebih rendah daripada di darah",
+          "label": "C"
+        },
+        {
+          "text": "konsentrasi oksigen di alveolus dan darah sama",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    }
+  ],
+  "structural": {
+    "score": 65.6,
+    "templateSim": 70,
+    "cognitiveSim": 90,
+    "stemEllipsisSim": 0,
+    "fourOptionSim": 100,
+    "optionShapeSim": 80,
+    "indoSim": 91.7,
+    "gold": {
+      "n": 10,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 2,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 1,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 1,
+        "other": 6
+      },
+      "cognitiveHist": {
+        "recall": 7,
+        "comprehend": 2,
+        "apply": 1
+      },
+      "stemEllipsisRate": 0,
+      "fourOptionRate": 1,
+      "optionShapeHist": {
+        "short_terms": 5,
+        "long_statements": 2,
+        "mixed": 3,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0.1,
+      "avgIndonesianMarkers": 1.5
+    },
+    "generated": {
+      "n": 10,
+      "templateHist": {
+        "disebut": 1,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 1,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 1,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 7
+      },
+      "cognitiveHist": {
+        "recall": 8,
+        "comprehend": 1,
+        "apply": 1
+      },
+      "stemEllipsisRate": 1,
+      "fourOptionRate": 1,
+      "optionShapeHist": {
+        "short_terms": 6,
+        "long_statements": 3,
+        "mixed": 1,
+        "none": 0
+      },
+      "numberedListRate": 0.3,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 2
+    }
+  },
+  "judgeScore": 85,
+  "judgeRationale": "Both sets use formal Indonesian, 4-option MCQ style, similar stem templates including definitions, calculations, principles, and application scenarios, though SET B includes some items with explicit statement lists and lacks images.",
+  "sanityRate": 100,
+  "sanityNotes": "All questions relate to pressure in fluids and buoyancy, typical topics in SMP textbooks.",
+  "patternScore": 74.3
+}

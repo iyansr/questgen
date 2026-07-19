@@ -1,0 +1,304 @@
+{
+  "variant": "v1-ipa-stems",
+  "sampleId": "sample-23",
+  "topic": "Usaha dan Pesawat Sederhana",
+  "sessionId": "70eff8bf-f01e-489a-b036-47b4708918fc",
+  "documentId": "ab9c0860-05da-4ab5-a5ef-177a8c689ddb",
+  "latencyMs": 123684,
+  "questions": [
+    {
+      "number": 0,
+      "questionType": "multiple_choice",
+      "questionText": "Besarnya energi yang digunakan gaya untuk memindahkan suatu benda disebut ....",
+      "options": [
+        {
+          "text": "Usaha",
+          "label": "A"
+        },
+        {
+          "text": "Daya",
+          "label": "B"
+        },
+        {
+          "text": "Gaya",
+          "label": "C"
+        },
+        {
+          "text": "Energi",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Beny mendorong kereta belanja dengan gaya $250\\ \\text{N}$ sejauh $50\\ \\text{m}$. Besar usaha yang dilakukan Beny adalah ....",
+      "options": [
+        {
+          "text": "$125\\ \\text{J}$",
+          "label": "A"
+        },
+        {
+          "text": "$500\\ \\text{J}$",
+          "label": "B"
+        },
+        {
+          "text": "$12.500\\ \\text{J}$",
+          "label": "C"
+        },
+        {
+          "text": "$125.000\\ \\text{J}$",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Jika Beny melakukan usaha sebesar $12.500\\ \\text{J}$ dalam waktu $50\\ \\text{sekon}$, daya yang dikeluarkan Beny adalah ....",
+      "options": [
+        {
+          "text": "$25\\ \\text{watt}$",
+          "label": "A"
+        },
+        {
+          "text": "$250\\ \\text{watt}$",
+          "label": "B"
+        },
+        {
+          "text": "$625\\ \\text{watt}$",
+          "label": "C"
+        },
+        {
+          "text": "$1.250\\ \\text{watt}$",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar berikut! Berdasarkan gambar, keuntungan mekanis sistem katrol tersebut adalah ....",
+      "options": [
+        {
+          "text": "1",
+          "label": "A"
+        },
+        {
+          "text": "2",
+          "label": "B"
+        },
+        {
+          "text": "4",
+          "label": "C"
+        },
+        {
+          "text": "8",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Sebuah bidang miring memiliki panjang $5\\ \\text{m}$ dan tinggi $2\\ \\text{m}$. Keuntungan mekanis bidang miring tersebut adalah ....",
+      "options": [
+        {
+          "text": "$0,4$",
+          "label": "A"
+        },
+        {
+          "text": "$2,5$",
+          "label": "B"
+        },
+        {
+          "text": "$10$",
+          "label": "C"
+        },
+        {
+          "text": "$7$",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Pasangan alat berikut yang termasuk pengungkit jenis pertama adalah ....",
+      "options": [
+        {
+          "text": "gunting dan linggis",
+          "label": "A"
+        },
+        {
+          "text": "sekop dan koper",
+          "label": "B"
+        },
+        {
+          "text": "pembuka botol dan pemecah biji kenari",
+          "label": "C"
+        },
+        {
+          "text": "pinset dan sekop",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut ini yang merupakan contoh penerapan roda berporos adalah ....",
+      "options": [
+        {
+          "text": "tangga",
+          "label": "A"
+        },
+        {
+          "text": "sekrup",
+          "label": "B"
+        },
+        {
+          "text": "roda sepeda",
+          "label": "C"
+        },
+        {
+          "text": "jungkat-jungkit",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar berikut! Gambar tersebut menunjukkan sistem kerja otot leher saat menengadahkan kepala. Jenis pengungkit yang bekerja sesuai gambar adalah ....",
+      "options": [
+        {
+          "text": "pengungkit jenis I",
+          "label": "A"
+        },
+        {
+          "text": "pengungkit jenis II",
+          "label": "B"
+        },
+        {
+          "text": "pengungkit jenis III",
+          "label": "C"
+        },
+        {
+          "text": "bukan pengungkit",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Pesawat sederhana digunakan dalam kehidupan sehari-hari dengan tujuan utama ....",
+      "options": [
+        {
+          "text": "memperbesar gaya",
+          "label": "A"
+        },
+        {
+          "text": "mempermudah pekerjaan",
+          "label": "B"
+        },
+        {
+          "text": "mempercepat waktu",
+          "label": "C"
+        },
+        {
+          "text": "menambah energi",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    }
+  ],
+  "structural": {
+    "score": 80.4,
+    "templateSim": 77.8,
+    "cognitiveSim": 100,
+    "stemEllipsisSim": 44.4,
+    "fourOptionSim": 100,
+    "optionShapeSim": 100,
+    "indoSim": 85.2,
+    "gold": {
+      "n": 9,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 1,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 1,
+        "other": 7
+      },
+      "cognitiveHist": {
+        "recall": 8,
+        "comprehend": 0,
+        "apply": 1
+      },
+      "stemEllipsisRate": 0.4444444444444444,
+      "fourOptionRate": 1,
+      "optionShapeHist": {
+        "short_terms": 9,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0.2222222222222222,
+      "imageLeadinRate": 0.1111111111111111,
+      "avgIndonesianMarkers": 1.7777777777777777
+    },
+    "generated": {
+      "n": 9,
+      "templateHist": {
+        "disebut": 1,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 1,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 2,
+        "other": 5
+      },
+      "cognitiveHist": {
+        "recall": 8,
+        "comprehend": 0,
+        "apply": 1
+      },
+      "stemEllipsisRate": 1,
+      "fourOptionRate": 1,
+      "optionShapeHist": {
+        "short_terms": 9,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0.2222222222222222,
+      "avgIndonesianMarkers": 2.6666666666666665
+    }
+  },
+  "judgeScore": 85,
+  "judgeRationale": "Both sets use formal Indonesian, 4-option MCQ style, similar stem templates including definitions, calculations, principles, and classification of simple machines, with a comparable cognitive mix and near-miss distractors.",
+  "sanityRate": 100,
+  "sanityNotes": "All questions are typical problems on work and simple machines covered in SMP textbooks.",
+  "patternScore": 82.5
+}

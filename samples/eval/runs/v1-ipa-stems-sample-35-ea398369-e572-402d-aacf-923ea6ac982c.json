@@ -1,0 +1,363 @@
+{
+  "variant": "v1-ipa-stems",
+  "sampleId": "sample-35",
+  "topic": "Statistika",
+  "sessionId": "ea398369-e572-402d-aacf-923ea6ac982c",
+  "documentId": "583c7702-d90d-49f0-b308-8bdddd851589",
+  "latencyMs": 165831,
+  "questions": [
+    {
+      "number": 0,
+      "questionType": "multiple_choice",
+      "questionText": "Diketahui data nomor sepatu: 40, 37, 39, 40, 42, 38, 38, 37, 28, 40. Rata-rata dari data tersebut adalah ....",
+      "options": [
+        {
+          "text": "37,9",
+          "label": "A"
+        },
+        {
+          "text": "38,5",
+          "label": "B"
+        },
+        {
+          "text": "39,0",
+          "label": "C"
+        },
+        {
+          "text": "37,0",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Diketahui skor lomba menyanyi: 90, 105, 120, 125, 135, 145, 160, 160, 175, 205. Median dari data tersebut adalah ....",
+      "options": [
+        {
+          "text": "135",
+          "label": "A"
+        },
+        {
+          "text": "140",
+          "label": "B"
+        },
+        {
+          "text": "145",
+          "label": "C"
+        },
+        {
+          "text": "160",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Berdasarkan data skor lomba menyanyi pada soal sebelumnya, modus dari data tersebut adalah ....",
+      "options": [
+        {
+          "text": "135",
+          "label": "A"
+        },
+        {
+          "text": "140",
+          "label": "B"
+        },
+        {
+          "text": "145",
+          "label": "C"
+        },
+        {
+          "text": "160",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Panjang ular sanca (dalam kaki) tercatat: 5; 6,25; 8; 10; 11; 12,5; 14; 15,5; 16,25; 18,5. Jangkauan dari data tersebut adalah ....",
+      "options": [
+        {
+          "text": "13,5",
+          "label": "A"
+        },
+        {
+          "text": "12,5",
+          "label": "B"
+        },
+        {
+          "text": "11,5",
+          "label": "C"
+        },
+        {
+          "text": "14,5",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Dari data kecepatan mobil balap diketahui kuartil bawah (Q1) = 235 km/jam dan kuartil atas (Q3) = 255 km/jam. Jangkauan interkuartil data tersebut adalah ....",
+      "options": [
+        {
+          "text": "15",
+          "label": "A"
+        },
+        {
+          "text": "20",
+          "label": "B"
+        },
+        {
+          "text": "25",
+          "label": "C"
+        },
+        {
+          "text": "10",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan diagram batang pada gambar. Hasil perikanan tertinggi terjadi pada tahun ....",
+      "options": [
+        {
+          "text": "2004",
+          "label": "A"
+        },
+        {
+          "text": "2006",
+          "label": "B"
+        },
+        {
+          "text": "2007",
+          "label": "C"
+        },
+        {
+          "text": "2008",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Amati diagram garis pada gambar. Banyak kelahiran pada tahun 2008 adalah ....",
+      "options": [
+        {
+          "text": "20",
+          "label": "A"
+        },
+        {
+          "text": "25",
+          "label": "B"
+        },
+        {
+          "text": "30",
+          "label": "C"
+        },
+        {
+          "text": "35",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Rata-rata nilai ulangan 39 orang siswa adalah 45. Setelah ditambah satu siswa susulan, rata-rata menjadi 46. Nilai siswa susulan tersebut adalah ....",
+      "options": [
+        {
+          "text": "80",
+          "label": "A"
+        },
+        {
+          "text": "85",
+          "label": "B"
+        },
+        {
+          "text": "90",
+          "label": "C"
+        },
+        {
+          "text": "75",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Data harga sepatu (dalam rupiah): 200.000, 200.000, 310.000, 370.000, 450.000, 480.000, 650.000, 1.220.000. Median dari data tersebut adalah ....",
+      "options": [
+        {
+          "text": "Rp370.000,00",
+          "label": "A"
+        },
+        {
+          "text": "Rp410.000,00",
+          "label": "B"
+        },
+        {
+          "text": "Rp450.000,00",
+          "label": "C"
+        },
+        {
+          "text": "Rp480.000,00",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Rata-rata nilai suatu kelas adalah 72. Rata-rata nilai siswa laki-laki 69 dan rata-rata nilai siswa perempuan 74. Jika banyak siswa seluruhnya 40, maka banyak siswa laki-laki adalah ....",
+      "options": [
+        {
+          "text": "16",
+          "label": "A"
+        },
+        {
+          "text": "20",
+          "label": "B"
+        },
+        {
+          "text": "24",
+          "label": "C"
+        },
+        {
+          "text": "18",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 10,
+      "questionType": "short_answer",
+      "questionText": "Diketahui nilai Q1 = 23 dan Q3 = 32. Berapakah jangkauan interkuartil dari data tersebut?",
+      "options": null,
+      "correctAnswer": "9"
+    },
+    {
+      "number": 11,
+      "questionType": "short_answer",
+      "questionText": "Berdasarkan data hasil perikanan, berapa ton kenaikan hasil perikanan dari tahun 2006 ke 2007?",
+      "options": null,
+      "correctAnswer": "2.500 ton"
+    },
+    {
+      "number": 12,
+      "questionType": "short_answer",
+      "questionText": "Mean dari 12 data adalah 6,5. Tentukan jumlah seluruh data tersebut.",
+      "options": null,
+      "correctAnswer": "78"
+    },
+    {
+      "number": 13,
+      "questionType": "essay",
+      "questionText": "Berikut data harga sepatu (dalam rupiah): 200.000, 200.000, 310.000, 370.000, 450.000, 480.000, 650.000, 1.220.000.\na) Hitung mean, median, dan modus dari data tersebut.\nb) Menurutmu, ukuran manakah yang paling baik untuk mewakili data harga sepatu tersebut? Jelaskan alasanmu.",
+      "options": null,
+      "correctAnswer": "a) Mean = Rp485.000,00; Median = Rp410.000,00; Modus = Rp200.000,00.\nb) Ukuran yang paling baik adalah median. Mean dipengaruhi oleh harga yang sangat tinggi (Rp1.220.000,00) sehingga tidak mewakili sebagian besar data. Modus hanya Rp200.000,00, lebih rendah dari hampir semua data. Median berada di tengah dan lebih mencerminkan pusat kumpulan data."
+    },
+    {
+      "number": 14,
+      "questionType": "essay",
+      "questionText": "Dua kumpulan data sebagai berikut.\nData X: 4, 5, 5, 6, 7, 7, 8, 8, 8, 9, 9, 10, 10, 12\nData Y: 4, 5, 5, 6, 7, 7, 8, 8, 8, 9, 9, 10, 10, 16\na) Tentukan mean, median, dan modus dari masing-masing data.\nb) Bandingkan hasilnya. Mengapa mean data Y lebih besar? Mengapa median kedua data sama?",
+      "options": null,
+      "correctAnswer": "a) Data X: mean = 108/14 ~ 7,71; median = 8; modus = 8. Data Y: mean = 112/14 = 8; median = 8; modus = 8.\nb) Mean data Y lebih besar karena nilai terbesarnya (16) lebih besar daripada nilai terbesar data X (12). Median kedua data sama karena posisi median terletak di antara data ke-7 dan ke-8 yang sama-sama bernilai 8."
+    }
+  ],
+  "structural": {
+    "score": 86.6,
+    "templateSim": 93.3,
+    "cognitiveSim": 93.3,
+    "stemEllipsisSim": 66.7,
+    "fourOptionSim": 100,
+    "optionShapeSim": 66.7,
+    "indoSim": 98.9,
+    "gold": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 1,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 1,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 1,
+        "other": 12
+      },
+      "cognitiveHist": {
+        "recall": 11,
+        "comprehend": 1,
+        "apply": 3
+      },
+      "stemEllipsisRate": 0.3333333333333333,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 5,
+        "long_statements": 0,
+        "mixed": 5,
+        "none": 5
+      },
+      "numberedListRate": 0.13333333333333333,
+      "imageLeadinRate": 0.06666666666666667,
+      "avgIndonesianMarkers": 1.5333333333333334
+    },
+    "generated": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 1,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 1,
+        "other": 13
+      },
+      "cognitiveHist": {
+        "recall": 11,
+        "comprehend": 0,
+        "apply": 4
+      },
+      "stemEllipsisRate": 0.6666666666666666,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 10,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 5
+      },
+      "numberedListRate": 0.13333333333333333,
+      "imageLeadinRate": 0.06666666666666667,
+      "avgIndonesianMarkers": 1.6
+    }
+  },
+  "judgeScore": 75,
+  "judgeRationale": "Both sets use formal Indonesian, 4-option MCQ style with statistical data interpretation, but SET B has fewer multi-part and scenario-based questions compared to SET A.",
+  "sanityRate": 100,
+  "sanityNotes": "All questions involve basic statistical concepts (mean, median, mode, interquartile range) typically covered in SMP statistics material.",
+  "patternScore": 81.4
+}

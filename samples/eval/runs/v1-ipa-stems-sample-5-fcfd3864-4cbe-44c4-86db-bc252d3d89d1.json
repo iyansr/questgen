@@ -1,0 +1,363 @@
+{
+  "variant": "v1-ipa-stems",
+  "sampleId": "sample-5",
+  "topic": "Sistem Pernapasan",
+  "sessionId": "fcfd3864-4cbe-44c4-86db-bc252d3d89d1",
+  "documentId": "2ddb1804-6bf0-4501-ae31-4593225f1459",
+  "latencyMs": 193068,
+  "questions": [
+    {
+      "number": 0,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan ciri-ciri berikut!\\n1. Menyaring partikel debu atau kotoran.\\n2. Menghangatkan udara yang masuk ke paru-paru.\\n3. Sebagai tempat pertukaran gas O₂ dan CO₂.\\n\\nCiri-ciri yang merupakan fungsi dari hidung ditunjukkan oleh nomor ....",
+      "options": [
+        {
+          "text": "1 dan 2",
+          "label": "A"
+        },
+        {
+          "text": "1 dan 3",
+          "label": "B"
+        },
+        {
+          "text": "2 dan 3",
+          "label": "C"
+        },
+        {
+          "text": "1, 2, dan 3",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Pasangan antara organ pernapasan dan fungsinya yang benar adalah ....",
+      "options": [
+        {
+          "text": "faring – tempat pertukaran gas O₂ dan CO₂",
+          "label": "A"
+        },
+        {
+          "text": "laring – menyaring benda asing dari udara",
+          "label": "B"
+        },
+        {
+          "text": "trakea – menyalurkan udara ke bronkus",
+          "label": "C"
+        },
+        {
+          "text": "alveolus – menghasilkan gelombang suara",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Pernyataan yang benar mengenai mekanisme inspirasi pada pernapasan dada adalah ....",
+      "options": [
+        {
+          "text": "otot dada berkontraksi, volume rongga dada mengecil, udara keluar",
+          "label": "A"
+        },
+        {
+          "text": "otot dada berelaksasi, volume rongga dada membesar, udara masuk",
+          "label": "B"
+        },
+        {
+          "text": "otot dada berkontraksi, volume rongga dada membesar, udara masuk",
+          "label": "C"
+        },
+        {
+          "text": "otot dada berelaksasi, volume rongga dada mengecil, udara masuk",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Seorang siswa melakukan pengukuran volume udara pernapasan. Ia mendapatkan hasil sebagai berikut:\\n- Volume tidal = 500 mL\\n- Volume cadangan inspirasi = 1.500 mL\\n- Volume cadangan ekspirasi = 1.500 mL\\n- Volume residu = 1.000 mL\\n\\nBerdasarkan data tersebut, kapasitas vital paru-paru siswa tersebut adalah ....",
+      "options": [
+        {
+          "text": "$2.000\\ \\text{mL}$",
+          "label": "A"
+        },
+        {
+          "text": "$3.000\\ \\text{mL}$",
+          "label": "B"
+        },
+        {
+          "text": "$3.500\\ \\text{mL}$",
+          "label": "C"
+        },
+        {
+          "text": "$4.500\\ \\text{mL}$",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar berikut!\\n\\nAmati ilustrasi tersebut. Proses yang terjadi pada bagian yang ditunjuk oleh huruf X adalah ....",
+      "options": [
+        {
+          "text": "diafragma berkontraksi, rongga dada membesar, udara masuk",
+          "label": "A"
+        },
+        {
+          "text": "diafragma berelaksasi, rongga dada mengecil, udara keluar",
+          "label": "B"
+        },
+        {
+          "text": "otot dada berkontraksi, rongga dada mengecil, udara masuk",
+          "label": "C"
+        },
+        {
+          "text": "otot dada berelaksasi, rongga dada membesar, udara keluar",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut ini adalah faktor-faktor yang memengaruhi frekuensi pernapasan manusia, kecuali ....",
+      "options": [
+        {
+          "text": "umur",
+          "label": "A"
+        },
+        {
+          "text": "jenis kelamin",
+          "label": "B"
+        },
+        {
+          "text": "warna rambut",
+          "label": "C"
+        },
+        {
+          "text": "suhu tubuh",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Penyakit pada sistem pernapasan yang disebabkan oleh infeksi bakteri *Mycobacterium tuberculosis* dan dapat menyerang organ lain selain paru-paru adalah ....",
+      "options": [
+        {
+          "text": "pneumonia",
+          "label": "A"
+        },
+        {
+          "text": "tuberkulosis (TBC)",
+          "label": "B"
+        },
+        {
+          "text": "asma",
+          "label": "C"
+        },
+        {
+          "text": "influenza",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar berikut!\\n\\nBerdasarkan gambar di atas, kondisi yang terjadi pada paru-paru penderita pneumonia adalah ....",
+      "options": [
+        {
+          "text": "alveolus menyempit karena otot polos berkontraksi",
+          "label": "A"
+        },
+        {
+          "text": "alveolus terisi cairan sehingga mengganggu pertukaran gas",
+          "label": "B"
+        },
+        {
+          "text": "terbentuk rongga-rongga besar akibat kerusakan jaringan",
+          "label": "C"
+        },
+        {
+          "text": "pita suara mengalami peradangan dan membengkak",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Zat kimia yang dihasilkan tubuh saat masuknya alergen pada penderita asma dan menyebabkan penyempitan saluran pernapasan adalah ....",
+      "options": [
+        {
+          "text": "prostaglandin dan histamin",
+          "label": "A"
+        },
+        {
+          "text": "adrenalin dan insulin",
+          "label": "B"
+        },
+        {
+          "text": "enzim amilase dan lipase",
+          "label": "C"
+        },
+        {
+          "text": "antibodi dan antigen",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Perokok pasif memiliki risiko terkena kanker paru-paru ....",
+      "options": [
+        {
+          "text": "sama dengan perokok aktif",
+          "label": "A"
+        },
+        {
+          "text": "dua kali lipat lebih tinggi daripada perokok aktif",
+          "label": "B"
+        },
+        {
+          "text": "tiga sampai lima kali lipat lebih tinggi daripada perokok aktif",
+          "label": "C"
+        },
+        {
+          "text": "lebih rendah daripada perokok aktif",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 10,
+      "questionType": "short_answer",
+      "questionText": "Sebutkan tiga proses dasar dalam respirasi manusia!",
+      "options": null,
+      "correctAnswer": "Bernapas (ventilasi paru-paru), respirasi eksternal, dan respirasi internal."
+    },
+    {
+      "number": 11,
+      "questionType": "short_answer",
+      "questionText": "Jelaskan perbedaan antara zona penghubung dan zona respirasi pada sistem pernapasan manusia!",
+      "options": null,
+      "correctAnswer": "Zona penghubung terdiri dari hidung, faring, laring, trakea, bronkus, dan bronkiolus yang berfungsi menyaring, menghangatkan, melembapkan, dan menyalurkan udara. Zona respirasi adalah alveolus yang berperan dalam pertukaran gas O₂ dan CO₂."
+    },
+    {
+      "number": 12,
+      "questionType": "short_answer",
+      "questionText": "Mengapa menghirup udara melalui hidung lebih baik daripada melalui mulut?",
+      "options": null,
+      "correctAnswer": "Karena hidung memiliki rambut-rambut hidung, selaput lendir, dan konka yang berfungsi menyaring, menghangatkan, dan melembapkan udara sebelum masuk ke paru-paru."
+    },
+    {
+      "number": 13,
+      "questionType": "essay",
+      "questionText": "Jelaskan mekanisme pernapasan perut saat inspirasi dan ekspirasi! Sertakan peran diafragma dan perubahan volume rongga perut!",
+      "options": null,
+      "correctAnswer": "Inspirasi perut: diafragma berkontraksi sehingga volume rongga perut membesar, paru-paru mengembang, dan udara masuk. Ekspirasi perut: diafragma berelaksasi sehingga volume rongga perut kembali normal, paru-paru mengempis, dan udara keluar."
+    },
+    {
+      "number": 14,
+      "questionType": "essay",
+      "questionText": "Bandingkan penyakit pneumonia dan tuberkulosis (TBC) berdasarkan penyebab, organ yang diserang, dan gejala utamanya!",
+      "options": null,
+      "correctAnswer": "Pneumonia disebabkan oleh virus, bakteri, jamur, atau parasit (umumnya *Streptococcus pneumoniae*), menyerang bronkiolus dan alveolus, gejalanya demam, batuk berdahak, sakit dada, kesulitan bernapas. TBC disebabkan bakteri *Mycobacterium tuberculosis*, menyerang paru-paru dan dapat menyebar ke organ lain, gejalanya mudah lelah, berat badan turun, demam, berkeringat malam, batuk berdarah."
+    }
+  ],
+  "structural": {
+    "score": 72.3,
+    "templateSim": 50,
+    "cognitiveSim": 66.7,
+    "stemEllipsisSim": 86.7,
+    "fourOptionSim": 100,
+    "optionShapeSim": 80,
+    "indoSim": 90,
+    "gold": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 1,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 14
+      },
+      "cognitiveHist": {
+        "recall": 14,
+        "comprehend": 1,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0.5333333333333333,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 7,
+        "long_statements": 2,
+        "mixed": 1,
+        "none": 5
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 1.5333333333333334
+    },
+    "generated": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 2,
+        "pasangan": 1,
+        "ciri_ciri": 1,
+        "skenario": 1,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 2,
+        "tujuan": 0,
+        "image_leadin": 3,
+        "other": 8
+      },
+      "cognitiveHist": {
+        "recall": 9,
+        "comprehend": 5,
+        "apply": 1
+      },
+      "stemEllipsisRate": 0.6666666666666666,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 5,
+        "long_statements": 1,
+        "mixed": 4,
+        "none": 5
+      },
+      "numberedListRate": 0.06666666666666667,
+      "imageLeadinRate": 0.13333333333333333,
+      "avgIndonesianMarkers": 2.1333333333333333
+    }
+  },
+  "judgeScore": 75,
+  "judgeRationale": "Both sets use formal Indonesian with 4-option MCQ style and cover similar respiratory topics, but SET B includes more data interpretation and image-based questions, showing moderate variation in question templates and cognitive demands.",
+  "sanityRate": 100,
+  "sanityNotes": "All questions relate to respiratory system topics typically covered in SMP textbooks.",
+  "patternScore": 73.5
+}

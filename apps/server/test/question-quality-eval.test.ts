@@ -4,7 +4,7 @@ import {
   fingerprintSet,
   structuralSimilarity,
   tagQuestion,
-} from '../../scripts/eval/fingerprint';
+} from '../src/modules/generation/eval/fingerprint';
 import {
   buildSubjectGuidance,
   isConceptualScienceTopic,
@@ -99,6 +99,10 @@ describe('subject guidance routing', () => {
   it('keeps math topics quantitative', () => {
     expect(isQuantitativeTopic('Teorema Pythagoras')).toBe(true);
     expect(isConceptualScienceTopic('Teorema Pythagoras')).toBe(false);
+    expect(isQuantitativeTopic('Pola Bilangan')).toBe(true);
+    expect(isConceptualScienceTopic('Kemagnetan dan Pemanfaatannya')).toBe(
+      true,
+    );
     const g = buildSubjectGuidance('Persamaan Kuadrat', 'SMA', 'X');
     expect(g).toMatch(/Quantitative topic rules/);
   });

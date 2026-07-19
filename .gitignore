@@ -55,3 +55,7 @@ temp
 .lexa
 
 docs
+
+# Eval harness runtime
+samples/eval/state.json
+samples/eval/*.log
