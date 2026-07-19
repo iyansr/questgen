@@ -1,0 +1,401 @@
+ 12. Perhatikan gambar berikut ini.
+R
+k
+g
+Q
+P
+1
+1
+2
+2
+3
+3
+ Pada gambar di atas diketahui garis g // k, ∠P2 = P3 dan ∠R1 = R2. Jika 
+∠P1 = 128°, tentukan besar sudut yang lain.
+13. Pada gambar di bawah garis PQ // AB
+A B
+QP
+C
+a. Tentukan sudut-sudut yang sehadap.
+b. Jika ∠C = 30° dan ∠QPC = 67°, 
+ maka tentukan besar ∠CAB, ∠CQP, ∠CBA, ∠PQB, dan ∠APQ. Melukis Sudut Istimewa
+egiatanK 7.5
+Kegiatan 7.5 ini kalian akan mempelajari tentang melukis sudut-sudut istimewa 
+(90°, 60°, 45°, dan 30°). Agar kalian dapat melukis sudut-sudut istimewa 
+tersebut, coba sekarang sediakan suatu alat berupa jangka dan penggaris.
+Ayo
+Kita Amati
+a. Melukis Sudut 90°
+Untuk melukis sudut 90°, ikutilah langkah-langkah pada tabel berikut ini 
+berikut ini: 
+Tabel 7.5 Melukis Sudut 90°
+No. Langkah-langkah 
+Kegiatan Keterangan
+1. Buatlah sebarang ruas garis 
+AB A B
+2. Dengan titik B sebagai titik 
+pusat dan jari-jari BA (atau 
+kurang dari BA), Buatlah 
+busur lingkaran melalui 
+titik A dan memotong 
+perpanjangan AB di titik B’
+B B'A
+3. Dengan titik A dan B’ 
+sebagai pusat dan jari-
+jarinya lebih besar dari BA, 
+buatlah busur lingkaran 
+sehingga berpotongan di 
+titik C
+B B'A
+C No. Langkah-langkah 
+Kegiatan Keterangan
+4. Hubungkan titik B dan C. 
+Maka besar sudut ABC 
+adalah 90°.
+B B'A
+C
+90°
+b. Melukis Sudut 60°
+Untuk melukis sudut 60°, ikutilah langkah-langkah pada tabel berikut ini 
+berikut ini: 
+Tabel 7.6 Melukis Sudut 60°
+No. Langkah-langkah 
+Kegiatan Keterangan
+1. Buatlah sebarang ruas garis 
+AB A B
+2. Buatlah busur lingkaran 
+dengan pusat A dan jari-
+jari AB
+BA
+3. Dengan pusat B dan jari-
+jarinya AB, kemudian 
+buatlah busur lingkaran 
+sehingga busur tadi 
+berpotongan di titik C
+BA
+C No. Langkah-langkah 
+Kegiatan Keterangan
+4. Hubungkan titik A dan C. 
+Maka m∠BAC = 60°
+BA
+C
+60°
+Ayo Kita
+Menanya??
+Setelah kalian melakukan kegiatan pada Tabel 7.5 dan Tabel 7.6 di atas, coba 
+buatlah pertanyaan yang memuat kata-kata berikut:
+a. “melukis” dan “sudut”
+b. “besar” dan “sudut”
+c. “membagi” dan “sudut”
+Tulislah pertanyaan kalian di lembar kerja/buku tulis!
+Sedikit
+Informasi
+c. Membagi Sudut Menjadi Dua Sama Besar
+Misalkan kita akan membagi ∠PQR seperti pada Gambar 7.32 berikut menjadi 
+dua sama besar.
+PQ
+R
+Ikutilah langkah-langkah pada tabel berikut ini : Tabel 7.7 Membagi sudut menjadi dua sama besar
+No. Langkah-langkah 
+Kegiatan Keterangan
+1. Buatlah busur lingkaran 
+dengan pusat titik Q 
+sehingga memotong sinar 
+garis QP di titik A dan 
+memotong sinar garis QR 
+di titik B.
+PA
+B
+Q
+R
+2. Dengan jari-jari yang 
+sama, masing-masing 
+buatlah busur lingkaran 
+dengan pusat titik A dan 
+B, sehingga kedua busur 
+berpotongan di titik C.
+PQ
+R
+A
+B C
+3. Hubungkan titik Q dan 
+C. Sehingga terbentuk 
+∠PQC dan ∠RQC. 
+∠PQC dan ∠RQC 
+membagi ∠PQR menjadi 
+dua sama besar. 
+Dengan demikian mPQC 
+= m∠RQC
+PQ
+R
+A
+B C
+Coba ukurlah dengan busur derajat besar m∠PQC dan m∠RQC. Apakah 
+kedua sudut itu sama besar? Ayo Kita
+Mencoba
+1. Lukislah sudut yang ukurannya sebagai berikut.
+a. 45°
+b. 75°
+c. 80°
+d. 105°
+e. 135°
+f. 150°
+2. Lukislah sudut-sudut berikut ini. Kemudian, bagilah menjadi dua sama 
+besar.
+a. 120° 
+b. 200° 
+c. 300°
+d. 330°
+Ayo Kita
+Menalar
+Setelah kalian melakukan kegiatan pengamatan dan memahami sedikit 
+informasi tentang membagi sudut menjadi dua sama ukuran pada Tabel 7.7 
+di atas, sekarang diskusikan dengan kelompok kalian terhadap permasalahan 
+berikut.
+Bagaimana cara kalian melukis sudut 30°?
+a. dengan terlebih dulu melukis 60°
+b. dengan terlebih dulu melukis 90°
+ 
+Ayo Kita
+Berbagi
+Tuliskan hasil diskusi di buku tulis kalian, kemudian tukarkan dengan teman 
+kalian yang lain. Paparkan hasil diskusi kalian di depan kelas dan beri komentar 
+secara santun. Ayo Kita
+!?!?
+Berlatih 7.5
+1. Lukislah sudut yang besarnya sama seperti pada gambar berikut.
+ 
+a. b. c.
+ 
+2. Bagilah setiap sudut pada soal nomor 1 menjadi dua sama besar.
+3. Lukislah sudut PQR yang besarnya 100°. Kemudian, dengan langkah-
+langkah membagi sudut menjadi dua sama besar, lukislah sudut yang 
+besarnya 50°.
+4. Lukislah sebarang ∠A yang merupakan sudut lancip dan kemudian 
+lukislah ∠Y yang sama ukuran dengan ∠A tersebut dengan 
+menggunakan jangka dan penggaris!
+(Lukislah setiap langkahnya)
+5. Lukislah sudut-sudut berikut ini. Kemudian, bagilah menjadi dua 
+sama besar.
+a. 130° 
+b. 180° 
+c. 220°
+d. 270° Amati benda-benda di sekitar kalian yang mengandung unsur-unsur garis 
+sejajar, garis tegak lurus, sudut sehadap, sudut berseberangan, dan lain-lain 
+konsep yang dijelaskan pada bab ini. Ambil foto atau gambar sketsa benda-
+benda tersebut, dan tunjukkan letak dari konsep-konsep yang telah kalian 
+pelajari di atas. Buat laporannya dan paparkan di kelas!
+Ayo Kita
+Mengerjakan
+Tugas Projek
+ 7
+Pengalaman belajar tentang garis dan sudut telah kalian lalui. Sekarang, 
+cobalah tuliskan hal-hal penting yang menurut kalian sangat berharga dan 
+kira-kira akan bermanfaat bagi kalian untuk belajar lebih jauh dengan 
+menjawab pertanyaan berikut:
+1. Apa yang kalian ketahui tentang garis dan ruas garis. Jelaskan.
+2. Apa yang dimaksud dengan titik, garis, dan bidang?
+3. Sebutkan ada berapa bayak kedudukan dua garis. Jelaskan.
+4. Apa yang di maksud dengan dua garis yang saling sejajar, berpotongan, 
+tegak lurus, dan berimpit?
+5. Jelaskan hubungan dua garis yang saling sejajar, berpotongan, tegak 
+lurus, dan berimpit.
+6. Membagi ruas garis menjadi beberapa bagian sama panjang
+7. Apa yang kalian ketahui tentang membagi segmen garis
+8. Apa yang dimaksud dengan sudut?
+9. Apa juga yang dimaksud dengan besar sudut?
+10. Sebutkan jenis-jenis sudut yang telah kalian pelajari. Jelaskan.
+11. Sebutkan beberapa sifat garis yang telah kalian pelajari.
+12. Sebutkan beberapa sifat sudut yang telah kalian pelajari.
+13. Sebutkan ada berapa banyak hubungan antar sudut dan hubungan 
+sudut-sudut pada dua garis sejajar beserta syarat berlakunya.
+14. Bagaimana langkah-langkah melukis sudut istimewa?
+Ayo Kita
+Merangkum
+ 7 Uji
+Kompetensi
++=+?? 7
+A. Soal Pilihan Ganda
+1. Perhatikan gambar berikut.
+A B C D E
+ Banyak sinar garis dan ruas garis yang dapat dibuat dari gambar di 
+atas berturut-turut adalah ....
+a. 6 dan 7 c. 7 dan 9
+b. 6 dan 8 d. 8 dan 10 
+2. Perhatikan gambar berikut. 
+a b
+k
+m
+n
+ Pernyataan pasangan garis yang benar berdasarkan kondisi gambar di 
+atas adalah .....
+a. Garis-garis yang sejajar adalah garis a dengn b dan garis k dengan n
+ Garis yang berpotongan adalah garis a dengan k, m dan n
+b. Garis-garis yang sejajar adalah garis a dengn b dan garis m dengan n
+ Garis yang berpotongan adalah garis a dengan b, m dan n
+c. Garis-garis yang sejajar adalah garis a dengn k dan garis m dengan n
+ Garis yang berpotongan adalah garis a dengan k dan n
+d. Garis-garis yang sejajar adalah garis a dengn m dan garis b dengan n
+ Garis yang berpotongan adalah garis a dengan b, m dan n 3. Perhatikan gambar berikut.
+A B
+P
+Q
+M
+x cm 3,9 cm
+3 cm
+2 cm
+Nilai x pada gambar di atas adalah .....
+a. 2,4 cm c. 2,6 cm
+b. 2,5 cm d. 2,7 cm
+4. Besar sudut terkecil yang dibentuk jarum jam pada pukul 04.00 sama 
+dengan…
+a. 1
+8
+ sudut satu putaran penuh 
+b. 1
+4 
+sudut satu putaran penuh 
+c. 1
+3 
+sudut satu putaran penuh 
+d. 1
+2
+ sudut satu putaran penuh
+5. Banyak sudut siku-siku yang dijalani jarum panjang sebuah jam yang 
+bergerak dari pukul 08.30 sampai pukul 10.15 adalah.....
+a. 4 c. 6
+b. 5 d. 7
+6. Dari gambar berikiut, diketahui perbandingan x : y adalah 2 : 7. Besar 
+sudut x adalah ... a. 40° 
+b. 80° 
+c. 100°
+d. 140°
+7. Nilai x pada gambar di samping adalah…
+a. 123°
+b. 118°
+c. 69°
+d. 59°
+8. Sebuah sudut sama dengan 2
+7
+ sudut pelurusnya. Besar sudut itu 
+adalah.....
+a. 720 c. 450
+b. 40° d. 140°
+9. Perhatikan gambar di samping 
+Pasangan sudut yang jumlahnya 
+1800 adalah ….
+a. ∠P2 dan ∠Q4 
+b. ∠P1 dan ∠Q3
+c. ∠P3 dan ∠Q2
+d. ∠P4 dan ∠Q2
+10. Nilai a + b pada gambar berikut 
+adalah…..
+a. 20° 
+b. 25°
+c. 40° 
+d. 75°
+x y
+P
+Q
+1
+1
+2
+2
+3
+3
+4
+4
+A B
+B
+D
+57°(2x+5 °)
+3b°
+3a°105° 11. Perhatikan gambar berikut.
+Besar sudut x adalah …
+a. 30° c. 50° 
+b. 40° d. 60°
+12. Berdasarkan gambar berikut nilai x, y, dan z berturut-turut adalah…..
+a. 97o, 65o, 75o 
+b. 97o, 115o, 75o 
+c. 97 o, 115 o, 105 o 
+d. 115 o, 83 o, 75 o
+13. Besar ∠CDE adalah …
+ A
+B D
+C
+B
+60° 112°
+a. 52° c. 60°
+b. 56° d. 68°
+14. Perhatikan gambar berikut.
+ 50°
+30°
+a°
+Besar nilai a pada gambar di atas adalah …
+a. 60° c. 80° 
+b. 70° d. 90° 
+120°
+x°
+x y
+z
+83° 115°
+75° 15. Perhatikan gambar di bawah ini
+A B C D
+FE
+Jika m∠EFB = 65° dan m∠FCD = 120°, maka besar ∠BFC adalah...
+a. 0° c. 60°
+b. 55° d. 65°
+16. Perhatikan gambar berikut.
+1
+2 34
+5
+6 7
+8
+9
+Hasil penjumlahan sudut :
+∠1 + ∠2 + ∠3 + ∠4 + ∠5 + ∠6 + ∠7 + ∠8 + ∠9 adalah.....
+a. 328° c. 468°
+b. 386° d. 656°
+17. Perhatikan Gambar. Nilai dari a° + b° + c° + d° + e° + f ° + g° + h° 
++ i° adalah … 0a 0b
+0c
+0d
+0e
+0f
+0g
+0h
+0i
+a. 630° c. 1.130°
+b. 860° d. 1.260°
+18. Perhatikan Gambar berikut ini: 
+ Besar ∠A + ∠B + ∠C + ∠D 
++ ∠E adalah ....
+a. 90°
+b. 140°
+c. 180°
+d. 360°
+19. Perhatikan segitiga ABD berikut. 
+Dalam ∆ABD, C terletak pada AB 
+sedemikian sehingga CA = CB = 
+CD dan ∠BCD = zo. Besar ∠ADB 
+adalah ....
+a. 90° 
+b. 140° 
+c. 180°
+d. 360°
+x°
+x°
+y°
+y°
+z°
+B
+C
+A
+D
+ A
+B
+CD
+E K L
+M
+N
+O

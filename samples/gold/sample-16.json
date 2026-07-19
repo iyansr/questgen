@@ -1,0 +1,15 @@
+{
+  "sampleId": "sample-16",
+  "topic": "Pendidikan Pancasila Dan Kewarganegaraan Kelas IX",
+  "grade": "SMP",
+  "classGrade": "IX",
+  "curriculum": "Kurikulum Merdeka",
+  "questionTypeCounts": [
+    {
+      "type": "multiple_choice",
+      "count": 5
+    }
+  ],
+  "source": "samples/sample-16/exercise.pdf",
+  "questions": []
+}

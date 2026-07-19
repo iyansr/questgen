@@ -1,13 +1,8 @@
-/** Topics that benefit from computation-heavy question sets (math & numeric science). */
-const QUANTITATIVE_TOPIC_RE =
-  /\b(matematika|aljabar|geometri|trigonometri|kalkulus|statistik|peluang|probabilitas|bangun\s+datar|bangun\s+ruang|segitiga|lingkaran|persegi|jajar\s+genjang|belah\s+ketupat|layang|trapesium|pecahan|desimal|persen|bilangan|operasi|persamaan|pertidaksamaan|fungsi|grafik|luas|keliling|volume|sudut|pythagoras|teorema|fisika|kimia|stoikiometri|hitung|rumus)\b/i;
-
-/**
- * Conceptual IPA / life-science topics (biology, ecology, genetics without
- * heavy calculation focus). Checked before quantitative when both could match.
- */
 const CONCEPTUAL_SCIENCE_TOPIC_RE =
-  /\b(reproduksi|perkembangbiakan|pewarisan|genetik|genotipe|fenotipe|mendel|kromosom|dna|sel|organ|sistem\s+(pencernaan|pernapasan|peredaran|gerak|saraf|reproduksi|ekskresi)|fotosintesis|ekosistem|biologi|makhluk\s+hidup|tumbuhan|hewan|hormon|fertilisasi|oogenesis|spermatogenesis|vegetatif|generatif|mutasi|heredit[ae]s|ipa\b(?!.*\b(hitung|rumus|matematika)\b))\b/i;
+  /\b(reproduksi|perkembangbiakan|pewarisan|genetik|genotipe|fenotipe|mendel|kromosom|dna|sel|organ|sistem\s+(pencernaan|pernapasan|peredaran|gerak|saraf|reproduksi|ekskresi)|fotosintesis|ekosistem|biologi|bioteknologi|makhluk\s+hidup|tumbuhan|hewan|hormon|fertilisasi|oogenesis|spermatogenesis|vegetatif|generatif|mutasi|heredit[ae]s|tekanan\s+zat|kemagnetan|magnet|partikel\s+penyusun|gerak\s+benda|usaha\s+dan\s+pesawat|pesawat\s+sederhana|struktur\s+dan\s+fungsi|ipa\b(?!.*\b(hitung|rumus|matematika)\b))\b/i;
+
+const QUANTITATIVE_TOPIC_RE =
+  /\b(matematika|aljabar|geometri|trigonometri|kalkulus|statistik|statistika|peluang|probabilitas|bangun\s+datar|bangun\s+ruang|segitiga|lingkaran|persegi|jajar\s+genjang|belah\s+ketupat|layang|trapesium|pecahan|desimal|persen|bilangan|pola\s+bilangan|koordinat|kartesius|relasi|operasi|persamaan|pertidaksamaan|fungsi|grafik|luas|keliling|volume|sudut|pythagoras|teorema|fisika|kimia|stoikiometri|hitung|rumus)\b/i;
 
 export function isQuantitativeTopic(topic: string): boolean {
   if (isConceptualScienceTopic(topic)) return false;

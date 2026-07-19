@@ -133,6 +133,1133 @@
     ]
   },
   {
+    "sampleId": "sample-10",
+    "topic": "Sistem Reproduksi pada Manusia",
+    "n": 15,
+    "fingerprint": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 2,
+        "pernyataan_benar": 3,
+        "pasangan": 1,
+        "ciri_ciri": 1,
+        "skenario": 0,
+        "urutan": 1,
+        "hitung_kromosom": 1,
+        "proses": 4,
+        "tujuan": 0,
+        "image_leadin": 1,
+        "other": 5
+      },
+      "cognitiveHist": {
+        "recall": 6,
+        "comprehend": 7,
+        "apply": 2
+      },
+      "stemEllipsisRate": 0.6666666666666666,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 7,
+        "long_statements": 1,
+        "mixed": 2,
+        "none": 5
+      },
+      "numberedListRate": 0.13333333333333333,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 2.066666666666667
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "disebut"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "pernyataan_benar",
+          "pasangan"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "pernyataan_benar",
+          "hitung_kromosom"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "pernyataan_benar"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 6,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 7,
+        "tags": [
+          "urutan"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 8,
+        "tags": [
+          "proses"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 9,
+        "tags": [
+          "disebut",
+          "proses"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 10,
+        "tags": [
+          "ciri_ciri",
+          "image_leadin"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 1,
+        "tags": [
+          "proses"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "proses"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      }
+    ]
+  },
+  {
+    "sampleId": "sample-11",
+    "topic": "Sistem Perkembangbiakan Tumbuhan dan Hewan",
+    "n": 14,
+    "fingerprint": {
+      "n": 14,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 1,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 1,
+        "urutan": 1,
+        "hitung_kromosom": 0,
+        "proses": 2,
+        "tujuan": 2,
+        "image_leadin": 3,
+        "other": 7
+      },
+      "cognitiveHist": {
+        "recall": 10,
+        "comprehend": 2,
+        "apply": 2
+      },
+      "stemEllipsisRate": 0.5,
+      "fourOptionRate": 0.6428571428571429,
+      "optionShapeHist": {
+        "short_terms": 3,
+        "long_statements": 2,
+        "mixed": 4,
+        "none": 5
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0.21428571428571427,
+      "avgIndonesianMarkers": 1.2857142857142858
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "image_leadin"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "pernyataan_benar",
+          "urutan",
+          "image_leadin"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "skenario"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 6,
+        "tags": [
+          "proses"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 7,
+        "tags": [
+          "tujuan"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 8,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 9,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 1,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "proses"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "tujuan",
+          "image_leadin"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      }
+    ]
+  },
+  {
+    "sampleId": "sample-12",
+    "topic": "Pewarisan Sifat pada Makhluk Hidup",
+    "n": 15,
+    "fingerprint": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 4,
+        "pasangan": 0,
+        "ciri_ciri": 1,
+        "skenario": 1,
+        "urutan": 0,
+        "hitung_kromosom": 6,
+        "proses": 0,
+        "tujuan": 1,
+        "image_leadin": 0,
+        "other": 4
+      },
+      "cognitiveHist": {
+        "recall": 5,
+        "comprehend": 4,
+        "apply": 6
+      },
+      "stemEllipsisRate": 0.5333333333333333,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 7,
+        "long_statements": 2,
+        "mixed": 1,
+        "none": 5
+      },
+      "numberedListRate": 0.06666666666666667,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 1.8
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "pernyataan_benar"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "skenario",
+          "hitung_kromosom"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "pernyataan_benar"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "hitung_kromosom"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "pernyataan_benar",
+          "hitung_kromosom"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 6,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 7,
+        "tags": [
+          "ciri_ciri"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 8,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 9,
+        "tags": [
+          "pernyataan_benar"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 10,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 1,
+        "tags": [
+          "hitung_kromosom"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "hitung_kromosom"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "hitung_kromosom"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "tujuan"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      }
+    ]
+  },
+  {
+    "sampleId": "sample-13",
+    "topic": "Kemagnetan dan Pemanfaatannya",
+    "n": 10,
+    "fingerprint": {
+      "n": 10,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 1,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 3,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 4,
+        "other": 5
+      },
+      "cognitiveHist": {
+        "recall": 7,
+        "comprehend": 0,
+        "apply": 3
+      },
+      "stemEllipsisRate": 0.2,
+      "fourOptionRate": 1,
+      "optionShapeHist": {
+        "short_terms": 8,
+        "long_statements": 0,
+        "mixed": 2,
+        "none": 0
+      },
+      "numberedListRate": 0.1,
+      "imageLeadinRate": 0.4,
+      "avgIndonesianMarkers": 2.5
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "image_leadin"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "skenario",
+          "image_leadin"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 6,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 7,
+        "tags": [
+          "skenario",
+          "image_leadin"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 8,
+        "tags": [
+          "pernyataan_benar",
+          "skenario"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 9,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 10,
+        "tags": [
+          "image_leadin"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      }
+    ]
+  },
+  {
+    "sampleId": "sample-14",
+    "topic": "Bioteknologi",
+    "n": 15,
+    "fingerprint": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 2,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 1,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 12
+      },
+      "cognitiveHist": {
+        "recall": 14,
+        "comprehend": 1,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0.6666666666666666,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 5,
+        "long_statements": 2,
+        "mixed": 3,
+        "none": 5
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 1.6666666666666667
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 6,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 7,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 8,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 9,
+        "tags": [
+          "disebut"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 10,
+        "tags": [
+          "disebut"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 1,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "proses"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      }
+    ]
+  },
+  {
+    "sampleId": "sample-15",
+    "topic": "Partikel Penyusun Benda dan Makhluk Hidup",
+    "n": 12,
+    "fingerprint": {
+      "n": 12,
+      "templateHist": {
+        "disebut": 3,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 9
+      },
+      "cognitiveHist": {
+        "recall": 12,
+        "comprehend": 0,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0.16666666666666666,
+      "fourOptionRate": 0.5833333333333334,
+      "optionShapeHist": {
+        "short_terms": 5,
+        "long_statements": 1,
+        "mixed": 1,
+        "none": 5
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 1.3333333333333333
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "disebut"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "disebut"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "disebut"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 6,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 8,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 1,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      }
+    ]
+  },
+  {
+    "sampleId": "sample-16",
+    "topic": "Pendidikan Pancasila Dan Kewarganegaraan Kelas IX",
+    "n": 0,
+    "fingerprint": {
+      "n": 0,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 0
+      },
+      "cognitiveHist": {
+        "recall": 0,
+        "comprehend": 0,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0,
+      "fourOptionRate": 0,
+      "optionShapeHist": {
+        "short_terms": 0,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 0
+    },
+    "perQuestion": []
+  },
+  {
+    "sampleId": "sample-17",
+    "topic": "Pendidikan Pancasila Dan Kewarganegaraan Kelas IX",
+    "n": 0,
+    "fingerprint": {
+      "n": 0,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 0
+      },
+      "cognitiveHist": {
+        "recall": 0,
+        "comprehend": 0,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0,
+      "fourOptionRate": 0,
+      "optionShapeHist": {
+        "short_terms": 0,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 0
+    },
+    "perQuestion": []
+  },
+  {
+    "sampleId": "sample-18",
+    "topic": "Pendidikan Pancasila Dan Kewarganegaraan Kelas IX",
+    "n": 0,
+    "fingerprint": {
+      "n": 0,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 0
+      },
+      "cognitiveHist": {
+        "recall": 0,
+        "comprehend": 0,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0,
+      "fourOptionRate": 0,
+      "optionShapeHist": {
+        "short_terms": 0,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 0
+    },
+    "perQuestion": []
+  },
+  {
+    "sampleId": "sample-19",
+    "topic": "Pendidikan Pancasila dan Kewarganegaraan Kelas VII ",
+    "n": 0,
+    "fingerprint": {
+      "n": 0,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 0
+      },
+      "cognitiveHist": {
+        "recall": 0,
+        "comprehend": 0,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0,
+      "fourOptionRate": 0,
+      "optionShapeHist": {
+        "short_terms": 0,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 0
+    },
+    "perQuestion": []
+  },
+  {
     "sampleId": "sample-2",
     "topic": "Sistem Perkembangbiakan Tumbuhan dan Hewan",
     "n": 7,
@@ -235,6 +1362,744 @@
         "optionShape": "short_terms"
       }
     ]
+  },
+  {
+    "sampleId": "sample-20",
+    "topic": "Pendidikan Pancasila dan Kewarganegaraan Kelas VII ",
+    "n": 0,
+    "fingerprint": {
+      "n": 0,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 0
+      },
+      "cognitiveHist": {
+        "recall": 0,
+        "comprehend": 0,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0,
+      "fourOptionRate": 0,
+      "optionShapeHist": {
+        "short_terms": 0,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 0
+    },
+    "perQuestion": []
+  },
+  {
+    "sampleId": "sample-21",
+    "topic": "Pendidikan Pancasila dan Kewarganegaraan Kelas VII ",
+    "n": 0,
+    "fingerprint": {
+      "n": 0,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 0
+      },
+      "cognitiveHist": {
+        "recall": 0,
+        "comprehend": 0,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0,
+      "fourOptionRate": 0,
+      "optionShapeHist": {
+        "short_terms": 0,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 0
+    },
+    "perQuestion": []
+  },
+  {
+    "sampleId": "sample-22",
+    "topic": "Gerak Benda dan Makhluk Hidup",
+    "n": 15,
+    "fingerprint": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 1,
+        "pernyataan_benar": 2,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 2,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 4,
+        "other": 7
+      },
+      "cognitiveHist": {
+        "recall": 11,
+        "comprehend": 2,
+        "apply": 2
+      },
+      "stemEllipsisRate": 0.26666666666666666,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 5,
+        "long_statements": 2,
+        "mixed": 3,
+        "none": 5
+      },
+      "numberedListRate": 0.2,
+      "imageLeadinRate": 0.26666666666666666,
+      "avgIndonesianMarkers": 1.9333333333333333
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "urutan"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "urutan"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "disebut"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 6,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 7,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 8,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 9,
+        "tags": [
+          "pernyataan_benar",
+          "image_leadin"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": false,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 10,
+        "tags": [
+          "pernyataan_benar"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 1,
+        "tags": [
+          "image_leadin"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "image_leadin"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "image_leadin"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      }
+    ]
+  },
+  {
+    "sampleId": "sample-23",
+    "topic": "Usaha dan Pesawat Sederhana",
+    "n": 9,
+    "fingerprint": {
+      "n": 9,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 1,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 1,
+        "other": 7
+      },
+      "cognitiveHist": {
+        "recall": 8,
+        "comprehend": 0,
+        "apply": 1
+      },
+      "stemEllipsisRate": 0.4444444444444444,
+      "fourOptionRate": 1,
+      "optionShapeHist": {
+        "short_terms": 9,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0.2222222222222222,
+      "imageLeadinRate": 0.1111111111111111,
+      "avgIndonesianMarkers": 1.7777777777777777
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "skenario"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 6,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 7,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 8,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 9,
+        "tags": [
+          "image_leadin"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      }
+    ]
+  },
+  {
+    "sampleId": "sample-24",
+    "topic": "Struktur dan Fungsi Tumbuhan",
+    "n": 15,
+    "fingerprint": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 2,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 1,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 4,
+        "tujuan": 2,
+        "image_leadin": 3,
+        "other": 6
+      },
+      "cognitiveHist": {
+        "recall": 10,
+        "comprehend": 5,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0.6666666666666666,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 5,
+        "long_statements": 1,
+        "mixed": 4,
+        "none": 5
+      },
+      "numberedListRate": 0.06666666666666667,
+      "imageLeadinRate": 0.2,
+      "avgIndonesianMarkers": 2.2666666666666666
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "disebut"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "disebut",
+          "tujuan"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "image_leadin"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 6,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 7,
+        "tags": [
+          "proses",
+          "tujuan"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 8,
+        "tags": [
+          "image_leadin"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 9,
+        "tags": [
+          "proses"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 10,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 1,
+        "tags": [
+          "ciri_ciri",
+          "image_leadin"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "proses"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "proses"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      }
+    ]
+  },
+  {
+    "sampleId": "sample-25",
+    "topic": "Matematika Kelas VII Semester 1",
+    "n": 0,
+    "fingerprint": {
+      "n": 0,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 0
+      },
+      "cognitiveHist": {
+        "recall": 0,
+        "comprehend": 0,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0,
+      "fourOptionRate": 0,
+      "optionShapeHist": {
+        "short_terms": 0,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 0
+    },
+    "perQuestion": []
+  },
+  {
+    "sampleId": "sample-26",
+    "topic": "Matematika Kelas VII Semester 1",
+    "n": 0,
+    "fingerprint": {
+      "n": 0,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 0
+      },
+      "cognitiveHist": {
+        "recall": 0,
+        "comprehend": 0,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0,
+      "fourOptionRate": 0,
+      "optionShapeHist": {
+        "short_terms": 0,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 0
+    },
+    "perQuestion": []
+  },
+  {
+    "sampleId": "sample-27",
+    "topic": "Matematika Kelas VII Semester 1",
+    "n": 0,
+    "fingerprint": {
+      "n": 0,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 0
+      },
+      "cognitiveHist": {
+        "recall": 0,
+        "comprehend": 0,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0,
+      "fourOptionRate": 0,
+      "optionShapeHist": {
+        "short_terms": 0,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 0
+    },
+    "perQuestion": []
+  },
+  {
+    "sampleId": "sample-28",
+    "topic": "Matematika Kelas VII Semester 2",
+    "n": 0,
+    "fingerprint": {
+      "n": 0,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 0
+      },
+      "cognitiveHist": {
+        "recall": 0,
+        "comprehend": 0,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0,
+      "fourOptionRate": 0,
+      "optionShapeHist": {
+        "short_terms": 0,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 0
+    },
+    "perQuestion": []
+  },
+  {
+    "sampleId": "sample-29",
+    "topic": "Matematika Kelas VII Semester 2",
+    "n": 0,
+    "fingerprint": {
+      "n": 0,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 0
+      },
+      "cognitiveHist": {
+        "recall": 0,
+        "comprehend": 0,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0,
+      "fourOptionRate": 0,
+      "optionShapeHist": {
+        "short_terms": 0,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 0
+    },
+    "perQuestion": []
   },
   {
     "sampleId": "sample-3",
@@ -411,5 +2276,1514 @@
         "optionShape": "none"
       }
     ]
+  },
+  {
+    "sampleId": "sample-30",
+    "topic": "Matematika Kelas VII Semester 2",
+    "n": 0,
+    "fingerprint": {
+      "n": 0,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 0
+      },
+      "cognitiveHist": {
+        "recall": 0,
+        "comprehend": 0,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0,
+      "fourOptionRate": 0,
+      "optionShapeHist": {
+        "short_terms": 0,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 0
+    },
+    "perQuestion": []
+  },
+  {
+    "sampleId": "sample-31",
+    "topic": "Pola Bilangan",
+    "n": 15,
+    "fingerprint": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 2,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 3,
+        "other": 11
+      },
+      "cognitiveHist": {
+        "recall": 10,
+        "comprehend": 0,
+        "apply": 5
+      },
+      "stemEllipsisRate": 0.5333333333333333,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 8,
+        "long_statements": 0,
+        "mixed": 2,
+        "none": 5
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0.2,
+      "avgIndonesianMarkers": 1.4
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "skenario",
+          "image_leadin"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 6,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 7,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 8,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 9,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 10,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 1,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "skenario"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "image_leadin"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 50,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "image_leadin"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      }
+    ]
+  },
+  {
+    "sampleId": "sample-32",
+    "topic": "Koordinat Kartesius",
+    "n": 15,
+    "fingerprint": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 1,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 14
+      },
+      "cognitiveHist": {
+        "recall": 12,
+        "comprehend": 0,
+        "apply": 3
+      },
+      "stemEllipsisRate": 0.6,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 10,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 5
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 1.3333333333333333
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "skenario"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 6,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 7,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 8,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 9,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 10,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 1,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      }
+    ]
+  },
+  {
+    "sampleId": "sample-33",
+    "topic": "Relasi dan Fungsi",
+    "n": 15,
+    "fingerprint": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 1,
+        "pasangan": 4,
+        "ciri_ciri": 0,
+        "skenario": 6,
+        "urutan": 8,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 3
+      },
+      "cognitiveHist": {
+        "recall": 3,
+        "comprehend": 1,
+        "apply": 11
+      },
+      "stemEllipsisRate": 0.6,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 2,
+        "long_statements": 1,
+        "mixed": 7,
+        "none": 5
+      },
+      "numberedListRate": 0.06666666666666667,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 2.533333333333333
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "skenario",
+          "urutan"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "pasangan",
+          "urutan"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 7,
+        "tags": [
+          "skenario"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 9,
+        "tags": [
+          "skenario"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 11,
+        "tags": [
+          "skenario",
+          "urutan"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 13,
+        "tags": [
+          "pasangan",
+          "skenario",
+          "urutan"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 15,
+        "tags": [
+          "skenario"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 17,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 19,
+        "tags": [
+          "pernyataan_benar"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": false,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 1,
+        "tags": [
+          "urutan"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "urutan"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "pasangan",
+          "urutan"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "pasangan",
+          "urutan"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      }
+    ]
+  },
+  {
+    "sampleId": "sample-34",
+    "topic": "Matematika Kelas VIII Semester 2",
+    "n": 15,
+    "fingerprint": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 5,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 1,
+        "other": 10
+      },
+      "cognitiveHist": {
+        "recall": 6,
+        "comprehend": 0,
+        "apply": 9
+      },
+      "stemEllipsisRate": 0.4,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 1,
+        "long_statements": 0,
+        "mixed": 9,
+        "none": 5
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0.06666666666666667,
+      "avgIndonesianMarkers": 1.6666666666666667
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "skenario"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 7,
+        "tags": [
+          "skenario"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 9,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 11,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 13,
+        "tags": [
+          "skenario"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 15,
+        "tags": [
+          "skenario"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 17,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 19,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 21,
+        "tags": [
+          "skenario",
+          "image_leadin"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 22,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 23,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 24,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      }
+    ]
+  },
+  {
+    "sampleId": "sample-35",
+    "topic": "Statistika",
+    "n": 15,
+    "fingerprint": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 1,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 1,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 1,
+        "other": 12
+      },
+      "cognitiveHist": {
+        "recall": 11,
+        "comprehend": 1,
+        "apply": 3
+      },
+      "stemEllipsisRate": 0.3333333333333333,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 5,
+        "long_statements": 0,
+        "mixed": 5,
+        "none": 5
+      },
+      "numberedListRate": 0.13333333333333333,
+      "imageLeadinRate": 0.06666666666666667,
+      "avgIndonesianMarkers": 1.5333333333333334
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "image_leadin"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 7,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 9,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 11,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 13,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 15,
+        "tags": [
+          "pernyataan_benar"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 17,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 19,
+        "tags": [
+          "skenario"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 1,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      }
+    ]
+  },
+  {
+    "sampleId": "sample-4",
+    "topic": "Tekanan Zat dan Penerapannya dalam Kehidupan Sehari-hari",
+    "n": 10,
+    "fingerprint": {
+      "n": 10,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 2,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 1,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 1,
+        "other": 6
+      },
+      "cognitiveHist": {
+        "recall": 7,
+        "comprehend": 2,
+        "apply": 1
+      },
+      "stemEllipsisRate": 0,
+      "fourOptionRate": 1,
+      "optionShapeHist": {
+        "short_terms": 5,
+        "long_statements": 2,
+        "mixed": 3,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0.1,
+      "avgIndonesianMarkers": 1.5
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "skenario"
+        ],
+        "cognitive": "apply",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 6,
+        "tags": [
+          "pernyataan_benar"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": false,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 7,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 8,
+        "tags": [
+          "image_leadin"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 9,
+        "tags": [
+          "pernyataan_benar"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": false,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 10,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      }
+    ]
+  },
+  {
+    "sampleId": "sample-5",
+    "topic": "Sistem Pernapasan",
+    "n": 15,
+    "fingerprint": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 1,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 14
+      },
+      "cognitiveHist": {
+        "recall": 14,
+        "comprehend": 1,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0.5333333333333333,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 7,
+        "long_statements": 2,
+        "mixed": 1,
+        "none": 5
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 1.5333333333333334
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "proses"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "long_statements"
+      },
+      {
+        "number": 6,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 7,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 8,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 9,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 10,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "mixed"
+      },
+      {
+        "number": 1,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      }
+    ]
+  },
+  {
+    "sampleId": "sample-6",
+    "topic": "Sistem Ekskresi Manusia",
+    "n": 15,
+    "fingerprint": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 3,
+        "tujuan": 0,
+        "image_leadin": 2,
+        "other": 11
+      },
+      "cognitiveHist": {
+        "recall": 12,
+        "comprehend": 3,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0.6666666666666666,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 10,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 5
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0.13333333333333333,
+      "avgIndonesianMarkers": 1.7333333333333334
+    },
+    "perQuestion": [
+      {
+        "number": 1,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "image_leadin"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "proses",
+          "image_leadin"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "proses"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 6,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 7,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 8,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 9,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 10,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": true,
+        "optionShape": "short_terms"
+      },
+      {
+        "number": 1,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 2,
+        "tags": [
+          "proses"
+        ],
+        "cognitive": "comprehend",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 3,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 4,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      },
+      {
+        "number": 5,
+        "tags": [
+          "other"
+        ],
+        "cognitive": "recall",
+        "stemEndsEllipsis": false,
+        "optionShape": "none"
+      }
+    ]
+  },
+  {
+    "sampleId": "sample-7",
+    "topic": "Ilmu Pengetahuan Sosial Kelas VIII",
+    "n": 0,
+    "fingerprint": {
+      "n": 0,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 0
+      },
+      "cognitiveHist": {
+        "recall": 0,
+        "comprehend": 0,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0,
+      "fourOptionRate": 0,
+      "optionShapeHist": {
+        "short_terms": 0,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 0
+    },
+    "perQuestion": []
+  },
+  {
+    "sampleId": "sample-8",
+    "topic": "Ilmu Pengetahuan Sosial Kelas VIII",
+    "n": 0,
+    "fingerprint": {
+      "n": 0,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 0
+      },
+      "cognitiveHist": {
+        "recall": 0,
+        "comprehend": 0,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0,
+      "fourOptionRate": 0,
+      "optionShapeHist": {
+        "short_terms": 0,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 0
+    },
+    "perQuestion": []
+  },
+  {
+    "sampleId": "sample-9",
+    "topic": "Ilmu Pengetahuan Sosial Kelas VIII",
+    "n": 0,
+    "fingerprint": {
+      "n": 0,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 0
+      },
+      "cognitiveHist": {
+        "recall": 0,
+        "comprehend": 0,
+        "apply": 0
+      },
+      "stemEllipsisRate": 0,
+      "fourOptionRate": 0,
+      "optionShapeHist": {
+        "short_terms": 0,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 0
+    },
+    "perQuestion": []
   }
 ]

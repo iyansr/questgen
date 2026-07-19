@@ -1,0 +1,30 @@
+{
+  "source_slug": "Ilmu-Pengetahuan-alam-Kelas-IX-Semester-1",
+  "source_title": "Ilmu Pengetahuan alam Kelas IX Semester 1",
+  "source_path": "source/Ilmu-Pengetahuan-alam-Kelas-IX-Semester-1.pdf",
+  "bab": 2,
+  "printed": {
+    "materials": [
+      51,
+      111
+    ],
+    "exercise": [
+      112,
+      118
+    ]
+  },
+  "file_pages": {
+    "materials": [
+      69,
+      129
+    ],
+    "exercise": [
+      130,
+      136
+    ]
+  },
+  "page_counts": {
+    "materials": 61,
+    "exercise": 7
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source_slug": "Ilmu-Pengetahuan-alam-Kelas-VIII-Semester-2",
+  "source_title": "Ilmu Pengetahuan alam Kelas VIII Semester 2",
+  "source_path": "source/Ilmu-Pengetahuan-alam-Kelas-VIII-Semester-2.pdf",
+  "bab": 8,
+  "printed": {
+    "materials": [
+      45,
+      75
+    ],
+    "exercise": [
+      76,
+      78
+    ]
+  },
+  "file_pages": {
+    "materials": [
+      63,
+      93
+    ],
+    "exercise": [
+      94,
+      96
+    ]
+  },
+  "page_counts": {
+    "materials": 31,
+    "exercise": 3
+  }
+}

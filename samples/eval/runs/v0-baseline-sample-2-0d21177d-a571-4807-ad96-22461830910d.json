@@ -1,0 +1,256 @@
+{
+  "variant": "v0-baseline",
+  "sampleId": "sample-2",
+  "topic": "Sistem Perkembangbiakan Tumbuhan dan Hewan",
+  "sessionId": "0d21177d-a571-4807-ad96-22461830910d",
+  "documentId": "940ce5ae-06ff-4aa7-9809-ebd08ff57003",
+  "latencyMs": 108578,
+  "questions": [
+    {
+      "number": 0,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut ini yang merupakan ciri-ciri bunga yang penyerbukannya dibantu oleh angin (anemogami) adalah ....",
+      "options": [
+        {
+          "text": "Bunga berukuran besar, warna mencolok, menghasilkan nektar.",
+          "label": "A"
+        },
+        {
+          "text": "Bunga berukuran kecil, jumlah banyak, ringan, tangkai mudah bergoyang.",
+          "label": "B"
+        },
+        {
+          "text": "Bunga berbau harum, mekar pada malam hari, menghasilkan nektar.",
+          "label": "C"
+        },
+        {
+          "text": "Bunga berwarna merah cerah, mahkota berbentuk terompet, tidak berbau.",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Pada peristiwa pembuahan ganda tumbuhan Angiospermae, inti sel sperma yang pertama membuahi inti sel telur, sedangkan inti sel sperma yang kedua membuahi ....",
+      "options": [
+        {
+          "text": "Inti kandung lembaga sekunder membentuk endosperma.",
+          "label": "A"
+        },
+        {
+          "text": "Inti vegetatif membentuk buluh serbuk sari.",
+          "label": "B"
+        },
+        {
+          "text": "Inti generatif membentuk zigot.",
+          "label": "C"
+        },
+        {
+          "text": "Inti sel telur lain membentuk embrio.",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Buah kelapa mampu menyebar di perairan laut karena memiliki struktur yang memungkinkannya mengapung. Struktur tersebut adalah ....",
+      "options": [
+        {
+          "text": "Biji yang sangat kecil dan ringan.",
+          "label": "A"
+        },
+        {
+          "text": "Sayap pada biji yang membantu terbang.",
+          "label": "B"
+        },
+        {
+          "text": "Sabut yang memiliki rongga udara.",
+          "label": "C"
+        },
+        {
+          "text": "Duri pada kulit buah yang menempel pada hewan.",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Perkembangbiakan aseksual pada hewan yang terjadi dari ovum yang tidak dibuahi tumbuh menjadi individu baru disebut partenogenesis. Berikut ini yang merupakan contoh hewan yang berkembang biak dengan partenogenesis adalah ....",
+      "options": [
+        {
+          "text": "Planaria.",
+          "label": "A"
+        },
+        {
+          "text": "Hydra.",
+          "label": "B"
+        },
+        {
+          "text": "Lebah.",
+          "label": "C"
+        },
+        {
+          "text": "Katak.",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Perbedaan mendasar antara metamorfosis sempurna dan tidak sempurna terletak pada ....",
+      "options": [
+        {
+          "text": "Ada atau tidaknya tahap pupa.",
+          "label": "A"
+        },
+        {
+          "text": "Jumlah telur yang dihasilkan.",
+          "label": "B"
+        },
+        {
+          "text": "Kecepatan pertumbuhan menuju dewasa.",
+          "label": "C"
+        },
+        {
+          "text": "Perbedaan ukuran antara hewan muda dan dewasa.",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Amati gambar berikut. Jenis perkembangbiakan vegetatif alami yang ditunjukkan oleh gambar adalah ....",
+      "options": [
+        {
+          "text": "Rhizoma.",
+          "label": "A"
+        },
+        {
+          "text": "Stolon.",
+          "label": "B"
+        },
+        {
+          "text": "Umbi batang.",
+          "label": "C"
+        },
+        {
+          "text": "Kuncup adventif daun.",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan diagram daur hidup tumbuhan paku berikut. Bagian yang disebut protalium merupakan fase gametofit yang menghasilkan ....",
+      "options": [
+        {
+          "text": "Spora.",
+          "label": "A"
+        },
+        {
+          "text": "Tumbuhan paku dewasa.",
+          "label": "B"
+        },
+        {
+          "text": "Anteridium dan arkegonium.",
+          "label": "C"
+        },
+        {
+          "text": "Rhizoma.",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    }
+  ],
+  "structural": {
+    "score": 63.1,
+    "templateSim": 28.6,
+    "cognitiveSim": 71.4,
+    "stemEllipsisSim": 71.4,
+    "fourOptionSim": 100,
+    "optionShapeSim": 85.7,
+    "indoSim": 90.5,
+    "gold": {
+      "n": 7,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 1,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 1,
+        "urutan": 1,
+        "hitung_kromosom": 0,
+        "proses": 1,
+        "tujuan": 1,
+        "image_leadin": 2,
+        "other": 2
+      },
+      "cognitiveHist": {
+        "recall": 4,
+        "comprehend": 1,
+        "apply": 2
+      },
+      "stemEllipsisRate": 0.7142857142857143,
+      "fourOptionRate": 1,
+      "optionShapeHist": {
+        "short_terms": 3,
+        "long_statements": 2,
+        "mixed": 2,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0.2857142857142857,
+      "avgIndonesianMarkers": 2
+    },
+    "generated": {
+      "n": 7,
+      "templateHist": {
+        "disebut": 2,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 1,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 1,
+        "other": 3
+      },
+      "cognitiveHist": {
+        "recall": 6,
+        "comprehend": 1,
+        "apply": 0
+      },
+      "stemEllipsisRate": 1,
+      "fourOptionRate": 1,
+      "optionShapeHist": {
+        "short_terms": 3,
+        "long_statements": 1,
+        "mixed": 3,
+        "none": 0
+      },
+      "numberedListRate": 0.14285714285714285,
+      "imageLeadinRate": 0.14285714285714285,
+      "avgIndonesianMarkers": 2.5714285714285716
+    }
+  },
+  "judgeScore": 75,
+  "judgeRationale": "Both sets use formal Indonesian, 4-option MCQs, and cover reproductive biology with similar question stems like 'berikut ini', 'peristiwa', and 'amati gambar', but SET B includes more specific biological terms and fewer scenario-based or cause-effect questions than SET A.",
+  "sanityRate": 100,
+  "sanityNotes": "All questions are typical content in plant and animal reproduction systems in SMP textbooks.",
+  "patternScore": 68.5
+}

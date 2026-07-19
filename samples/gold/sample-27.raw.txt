@@ -1,0 +1,521 @@
+ Tabel 3.11 Mengoperasikan kemudian Menyederhanaan Bentuk Aljabar
+No. Bentuk Aljabar dioperasikan 
+dengan Bentuk Aljabar Bentuk Sederhana
+1. 10 8
+33xx+ 6
+x
+2. 24
+12aa +−+ ( )( )
+6
+32
+a
+aa−+
+3. 44
+32
+a
+xx− ( )46
+3
+a
+x
+−
+4. 226
+3 12
+ax
+xa
+−× ( ) 3
+9
+x
+x
+−
+5. xy x
+z yz÷ y2
+Ayo Kita
+Menanya??
+Berdasarkan hasil pengamatan kalian, tuliskan pertanyaan tentang hal yang 
+masih belum kalian pahami dari kegiatan pengamatan.
+Pertanyaan kalian sebaiknya memuat kata “menyederhanakan” dan “bentuk 
+aljabar”.
+Sedikit
+Informasi
+Untuk mengetahui cara menyederhanakan pecahan bentuk aljabar perhatikan 
+dan pahami uraian berikut.
+Contoh
+ 3.15
+Sederhanakan pembagian bentuk aljabar dari 18a2 : 6a PenyelesaianAlternatif
+Cara untuk membagi bentuk aljabar dari 18a2 : 6a adalah sebagai berikut
+18a2 : 6a = 
+218
+6
+a
+a
+ = 
+218
+6
+a
+a
+  
+ = (3)(a)
+ = 3a
+Jadi, sederhana dari bentuk aljabar dari 18a2 : 6a adalah 3a.
+Contoh
+ 3.16
+Sederhanakan pembagian bentuk aljabar dari 48x5y4z : 12x3y 
+PenyelesaianAlternatif
+Cara untuk membagi bentuk aljabar dari 48x5y4z : 12x3y adalah sebagai berikut
+48x5y4z : 12x3y = 
+54
+3
+48
+12
+xyz
+xy
+ = 
+54
+3
+48
+12 1
+xyz
+xy
+            
+ = (4)(x2)(y3)(z)
+ = 4x2y3z
+Jadi, sederhana dari bentuk aljabar dari 48x5y4z : 12x3y adalah 4x2y3z.
+Contoh
+ 3.17
+Sederhanakan pembagian bentuk aljabar dari (4x2 + 6x) : 2x PenyelesaianAlternatif
+Contoh 3.17 ini sama seperti Contoh 3.12. Untuk soal model seperti ini masih 
+ada alternatif lain cara menentukan bentuk sederhananya. Kenapa? Coba 
+pikirkan?
+Cara untuk membagi bentuk aljabar dari (4x
+2 + 6x) : 2x adalah sebagai berikut
+(4x2 + 6x) : 2x = 
+246
+2
+xx
+x
++
+ = 
+246
+22
+xx
+xx+
+ = 
+246
+22
+xx
+xx
+   +    
+ = (2)(x) + (3)(1)
+ = 2x + 3
+Jadi, bentuk aljabar sederhana dari (4x2 + 6x) : 2x adalah 2x + 3
+Cara menyelesaikan operasi pecahan bentuk aljabar sama halnya dengan 
+menyelesaikan operasi bentuk bilangan bulat, yaitu sebagai berikut.
+Tabel 3.12 Sifat-sifat Operasi Pecahan Bentuk Aljabar
+Penjumlahan Pecahan Bentuk Aljabar
+(i)
+ 
+ atau , dengan 0, 0a c ad bc a c ad bc bdb d bd b d bd
++−+= −= ≠ ≠
+ 
+(ii)
+ 
+ atau , dengan 0, 0a c ad bc a c ad bc bdb d bd b d bd
++−+= −= ≠ ≠
+Contoh 3.18 Contoh 3.19
+13
+22xx+ 13
+2x
++
+4
+2
+2
+x
+x
+=
+=
+52
+34xx− ( )
+( )
+( )
+( )
+54 23
+34 43xx −
+20 6
+12 12
+20 6
+12
+14
+12
+7
+6
+xx
+x
+x
+x
+= −
+−=
+=
+= Pengurangan Pecahan Bentuk Aljabar
+( )(i) ii , dengan 0, 0, 0a c ac a c a d bdcb d bd b d b c
+××= ÷=× ≠ ≠ ≠×
+Contoh 3.20 Contoh 3.21
+24 14
+76
+m
+m× 24 14
+76
+m
+m×
+42
+11
+8
+1
+8
+×= ×
+=
+=
+3
+3
+4aa
+bb ÷
+334ab
+ba ×
+22
+2
+4
+11
+4
+ab
+a
+×= ×
+== 4a2b2
+Ayo Kita
+Mencoba
+Berdasarkan pada pengamatan di atas dan hasil informasi yang kalian dapatkan, 
+sederhanakan dari bentuk aljabar berikut.
+1. 53
+22xx+
+2. ( ) ( )
+32
+23xx ++−
+3. 45
+31xx −+−
+Ayo Kita
+Menalar
+1. Jelaskan bagaimana langkah-langkah menyederhanakan pecahan bentuk 
+aljabar!
+2. Apakah terdapat perbedaan cara menyederhanakan operasi pecahan 
+bilangan bulat dengan operasi pecahan bentuk aljabar ada perbedaannya? 
+Jelaskan.
+3.
+ Buatlah kesimpulan tentang bagaimana suatu pecahan bentuk aljabar 
+dikatakan paling sederhana!
+4.
+ 226
+3 12
+a x xy
+xa
+−×
+5. ( )( )
+12 3
+33 3xx x ÷−+ +
+6.
+ 
+12
+34
+xy xy
+xy xy
+−+−
++−+ Ayo Kita
+Berbagi
+Sajikan jawaban kalian semenarik dan sejelas mungkin. Bandingkan dengan 
+jawaban teman kalian. Lalu presentasikan di depan kelas.
+Ayo Kita
+!?!?
+Berlatih 3.5
+Sederhanakan bentuk-bentuk aljabar berikut.
+1.
+ 
+3
+3
+b bx
+cx c
+−
+−
+2.
+ 
+3
+3
+b bx
+cx c
+−
+−
+3.
+ 
+33
+11xx ++−
+4.
+ 
+xy
+xy xy ++−
+5.
+ 
+44
+32
+a
+xx−
+6.
+ ( ) ( )
+23
+32xx −+−
+7.
+ 
+34
+26
+xx
+xx
+−×
+8.
+ 
+2ab b
+c ac÷
+9.
+ 
+23 18
+36
+x y xy
+z ÷
+10.
+ 
+22xy
+xy
+xy
+yx
++
++
++ Pada pertemuan ini guru kalian akan memberi permainan tebakan tanggal 
+lahir. Guru meminta kalian untuk mengikuti instruksi berikut.
+1. Mengalikan tangga lahir dengan 5
+2. Menambahkan hasilnya dengan 9
+3. Mengalikan hasilnya dengan 4
+4. Menambahkan hasilnya dengan 8
+5. Mengalikan hasilnya dengan 5
+6. Menambahkan dengan bulan lahir
+Projek 
+a.
+ Cari tahu bagaimana cara guru kalian menebak tanggal lahir kalian 
+dengan tepat.
+b. Buatlah tebakan lain dengan aturan berbeda itu misal tentang tanggal 
+lahir, nomor hp, sebarang bilangan, atau yang lain.
+c.
+ Terapkan tebakan yang kalian buat untuk menguji kebenaran aturan 
+tebakan yang kalian buat.
+Ayo Kita
+Mengerjakan
+Tugas Projek
+ 3
+Tuliskan hal-hal penting yang telah kalian dapatkan pada Bab 3 Bentuk 
+Aljabar.
+Minimal rangkuman kalian adalah jawaban dari pertanyaan berikut:
+1.
+ Apa yang dimaksud dengan variabel, koefisien, dan konstanta? Buatlah 
+contoh untuk menjelaskan jawaban kalian.
+2. Bagaimana cara menjumlahkan, mengurangkan, mengalikan, membagi 
+bentuk aljabar? Jelaskan.
+3.
+ Apa yang kalian ketahui tentang operasi hitung bentuk aljabar? 
+Jelaskan.
+4.
+ Bagaimana cara menyederhanakan bentuk aljabar? Jelaskan.
+5. Bagaimana cara menyederhanakan pecahan bentuk aljabar? Jelaskan.
+Ayo Kita
+Merangkum
+ 3 Uji
+Kompetensi
++=+?? 3
+A. Soal Pilihan Ganda
+1. Suku-suku yang sejenis dari bentuk aljabar 6x2 + 6xy – 4y2 – 7x2 + 2xy 
++ 2y2 adalah ....
+a.. 6x2 dan 6xy c. –4y2 dan 2xy
+b. 6xy dan 2xy d. 6x2 dan –4y2 
+2. Bentuk sederhana dari 9y2 – 4xy + 5y + 7y2 + 3xy adalah ...
+a. 16y2 + xy + 5y c. 16y2 – 7xy + 5y
+b. 5y2 + 4xy + 8y d. 9y2 – 7xy + 5y 
+3. Bentuk sederhana dari –2(2x2 + 3x – 4) adalah ...
+a. –2x2 + 6x – 8 c. –4x2 + 6x – 8
+b. – 4x2 – 6x + 8 d. – 4x2 – 6x – 8
+4. Jumlah 6x − 5y − 2z dan −8x + 6y + 9z adalah ...
+a. 2x – y – 8z c. –2x + y + 7z
+b. 2x – 11y – 11z d. –2x + y + 7z
+5. Kurangkan 5x – 3y +7 dari 5y – 3x – 4, maka hasilnya adalah ...
+a.
+ –6y + 11 c. –8x + 8y – 11
+b. 8x + 8y – 11 d. 8x – 8y + 11
+6. Bentuk sederhana dari perkalian suku (2x – 3)(x + 5) adalah ...
+a. 2x2 – 13x – 15 c. 2x2 + 13x + 15 
+b. 2x2 – 7x + 15 d. 2x2 + 7x – 15 
+7. Hasil pemangkatan dari (2x + y)3 adalah ...
+a. 2x3 + 12x2y + 6xy2 + y3 c. 8x3 + 6x2y + 6xy2 + y3
+b. 6x3 + 12x2y + 6xy2 + y3 d. 8x3 + 12x2y + 6xy2 + y3
+8. Bentuk sederhana dari (3y3 × 4y4) : 6y5 adalah ...
+a. 2y7 c. y2
+b. 2y2 d. 2y12 9. Hasil bagi 4x2 + 16x + 15 oleh (2x + 5) adalah ...
+a. 2x + 3 c. 2x + 7
+b. 2x + 5 d. 2x + 15
+10. Bentuk sederhana dari 26
+12
+xy− adalah ...
+a. 2
+2
+xy−
+ 
+ c. 6
+6
+xy−
+b. 3
+2
+xy−
+ 
+ d. 3
+6
+xy−
+11. Bentuk sederhana dari 3
+23
+yx
+y
+−+
+ 
+adalah ...
+a. 
+23 26
+6
+yx
+y
++− c. 
+2 3
+2
+yx
+y
++−
+b. 
+231
+2
+yx
+y
++− d. 
+233
+6
+yx
+y
++−
+12. Bentuk sederhana dari 23
+23xx −++ 
+adalah ...
+a. ( )( )
+5 12
+23
+x
+xx
++
+++ c. ( )( )
+12
+23
+x
+xx
+−+
+++
+b. 
+2
+5 12
+23
+x
+xx
++
+++
+ d. 2 56
+x
+xx
+−
+++
+13. Bentuk sederhana dari 
+239
+24
+ab b
+c ac÷ adalah ...
+a. 
+22
+3
+a
+b 
+ c. 
+3
+2
+27
+8
+b
+c
+b. 2
+3
+ac
+b
+ d. 
+23
+4
+a
+b 14. Bentuk sederhana dari bentuk aljabar ( ) ( )
+14
+3 26xx +++ adalah ...
+a. ( )
+1
+3x + 
+ c. ( )
+3
+3x +
+b. ( )
+2
+3x + 
+ d. ( )
+5
+26x +
+15. Bentuk sederhana dari bentuk aljabar 22
+xy
+yx
+yx
+xy
+−
+−
+ adalah ...
+a. 1
+2
+ c. 1
+4
+b. − 1
+2 d. − 1
+4
+ 
+16. Diketahui bahwa 111111113456
+    −−−−        
+ ...
+ 
+11 2015 2016
+tt  −−    
+ 
+= n − 2013
+2016
+ Nilai n adalah ....
+a. 1
+2
+ c. 2013
+2016
+b. 1 d. 2015
+2016
+17. Jumlah dua buah bilangan yang berbeda adalah 6 dan hasil kali kedua 
+bilangan tersebut adalah 4. Kuadrat jumlah kedua bilangan itu adalah
+a.
+ 24 c. 26
+b. 25 d. 28
+18. Bu Marhawi membeli 14 kg tepung, 17 kg wortel, dan 4 kg tomat. 
+Karena terlalu lama disimpan, 4 kg tepung, 3 kg wortel, dan 3 kg tomat 
+ternyata rusak/busuk. Jika harga tepung, wortel, dan tomat secara 
+berurutan adalah x rupiah, y rupiah, dan z rupiah, maka harga barang 
+Bu Marhami yang tersisa tersebut dalam bentuk aljabar adalah ..... 

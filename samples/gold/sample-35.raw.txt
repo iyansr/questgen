@@ -1,0 +1,444 @@
+263
+Kurikulum 2 A. Pilihan Ganda
+1. Diagram berikut menunjukkan data penjualan di suatu perusahaan 
+motor.
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+2006 2007 2008 2009 2010 2011
+Banyak motor yang terjual
+Banyak Motor Terjual
+(dalam ribuan)
+Tahun Penjualan
+Pada tahun berapakah terjadi kenaikan penjualan motor sebesar 20%?
+A. 2007 C. 2010
+B. 2009 D. 2011
+2. Diberikan data yang sudah terurut sebagai berikut.
+14, 16, 18, x – 3, 20, 22, x + 2
+Median dari data tersebut adalah 19. Berapakah nilai x?
+A.
+ 19 C. 21 
+B. 20 D. 22
+Uji
+Kompetensi
++=+?? 9
+264
+Kelas VIII SMP/MTs Semester II
+3. Berikut ini diagram nilai ulangan matematika sisw a kelas VIII A.
+2
+6
+4
+8
+10
+4 5 6 7 8 9 10
+Banyak Siswa
+Nilai
+Median dari nilai ulangan matematika siswa kelas VIII A adalah ....
+A. 6,5 
+ C. 7,5
+B. 7 
+ D. 8
+4. Data berat badan (dalam kg) sekelompok 
+balita di Posyandu Kasih 
+Bunda sebagai berikut.
+16
+ 
+ 19 20 21 19 16 21 16
+17 
+ 20 16 20 17 16 21 17
+18 
+ 18 18 16 16 19 19 20
+20 
+ 21 17 18 18 20 16 19
+Modus data di atas adalah ....
+A.
+ 16 
+ C. 19
+B. 18 
+ D. 20
+5. Perhatikan tabel beriku
+t.
+Nilai 4 5 6 7 8 9 10
+Banyak Siswa 2 4 5 5 9 3 4
+Median data di atas adalah ....
+A.
+ 6,5 
+ C. 7,5
+B. 7,0 
+ D. 8,0
+265
+Kurikulum 2 6. Rata-rata lima belas bilangan adalah 49,4. Rata-rata lima bilangan 
+pertama adalah 55. Rata-rata enam bilangan terakhir adalah 45. Rata-
+rata empat bilangan yang lain adalah ....
+A. 46 
+ C. 48
+B. 47 
+ D. 49
+7. Suatu kelas terdiri atas 30 siswa baru saja mengikuti tes tulis. Jika 
+20 siswa mendapat 
+nilai 80, 8 siswa mendapat nilai 90, dan 2 siswa 
+mendapat nilai 100, berapakah rata-rata nilai kelas pada tes tulis ini?
+A. 82 
+ C. 86
+B. 84 
+ D. 88
+8. Rata-rata berat badan dari 200 ikan hasil tangkapa
+n di laut lepas adalah 
+50 kg. Pada saat diperiksa ulang, ternyata terdapat kesalahan tulis yaitu 
+92 dan 8 berturut-turut seharusnya adalah 192 dan 88. Rataan yang 
+benar adalah ....
+A.
+ 50,9 
+ C. 55,9
+B. 53,9 
+ D. 59,9
+9. Diketahui data nilai ulangan Matematika 
+dari 15 orang siswa sebagai 
+berikut.
+7, 5, 4, 6, 5, 7, 8, 6, 4, 4, 5, 9, 5, 6, 4
+Banyak siswa yang nilainya di atas rata-rata adalah .... siswa.
+A.
+ 4 
+ C. 6
+B. 5 
+ D. 7
+10. Nilai rata-rata ulangan Matematika 
+dari suatu kelas adalah 7. Apabila 
+dua siswa yang baru mengikuti ulangan susulan yang nilainya 4 dan 
+6 digabungkan, maka nilai rata-rata kelas itu turun 0,1. Banyak siswa 
+semula adalah ....
+A.
+ 36 
+ C. 40
+B. 38 
+ D. 42
+11. Mean dari empat bilangan bulat: 4, 
+a, b, dan 5 sama dengan median data 
+tersebut, yaitu 6. Selisih bilangan terbesar dan terkecil sama dengan ....
+A.
+ 2 
+ C. 4
+B. 3 
+ D. 5
+266
+Kelas VIII SMP/MTs Semester II
+12. Dari 10 data pengamatan diketahui bahwa median adalah dua lebihnya 
+dari jangkauan. Bila semua data dikalikan dua kemudian dikurangi 3, 
+maka jumlah dari median dan jangkauan menjadi 21. Jangkauan data 
+mula-mula adalah ....
+A.
+ 3 
+ C. 5
+B. 4 
+ D. 6
+13. Kuartil bawah dari data
+ 12, 13, 11, 6, 4, 9, 3, 7, 6, 5, 9, adalah ....
+A. 4 
+ C. 6
+B. 5 
+ D. 7
+14. Diberikan diagram 
+nilai ulangan Matematika siswa kelas VIII C 
+seperti berikut.
+2
+6
+4
+8
+10
+5 6 7 8 9 10
+Banyak Siswa
+Nilai
+Kuartil atas dari data di atas adalah ....
+A. 6,25 
+ C. 8,25
+B. 7,5 
+ D. 9,5
+15. Tabel 
+berikut ini menunjukkan lama tidur di waktu malam (dalam 
+jam) beberapa siswa kelas VIII.
+Lama tidur 
+(jam) 4 5 6 7 8
+Frekuensi 1 2 3 2 2
+Dari tabel di atas, diperoleh informasi sebagai berikut.
+(1) Median = 6
+(2) Q1 = 5
+(3) Q3 = 7,5
+267
+Kurikulum 2 Pernyataan yang benar adalah ....
+A. (1) dan (2) C. (2) dan (3)
+B. (1) dan (3) D. (1), (2), dan (3)
+16. Simpangan kuartil dari 7, 4, 5, 6, 7, 5, 4, 7, 8, 9, 6 adalah ....
+A.
+ 1 C. 2,5
+B. 2 D. 3
+17. Diketahui data sebagai berikut.
+4, 5, 5, 7, 3, 2, 4, 6, 7, 4
+Pernyataan berikut yang salah adalah ....
+A.
+ Modus = 4 C. Mean = 4,7
+B. Median = 5 D. Q3 = 6
+18. Diagram berikut menunjukkan nilai ulangan susulan mata pelajaran 
+IPS beberapa siswa kelas VIII.
+5 6 7 8 Nilai
+Dari diagram di atas, nilai mean + median + modus = ....
+A. 4 C. 6 5
+4
+B. 5 9
+7
+ 
+ D. 8
+19. Tabel di bawah menunjukkan usia 20 anak di suatu kelas, 2 tahun yang 
+lalu. Bila pada tahun ini tiga orang yang berusia 7 tahun dan seorang 
+yang berusia 8 tahun pindah sekolah, maka usia rata-rata 16 orang 
+yang masih tinggal pada saat ini adalah ... tahun.
+A.
+ 7 C. 8 3
+4
+B. 8 2
+1
+ 
+D. 9
+Usia Frekuensi
+5 3
+6 5
+7 8
+8 4
+268
+Kelas VIII SMP/MTs Semester II
+20. Dari 50 siswa terdapat 20 siswa yang mendapat nilai kurang dari 45 
+dan 10 siswa mendapat nilai lebih dari 76. Bila nilai yang dapat dicapai 
+adalah bilangan bulat dari 0 sampai 100, maka nilai rata-rata 50 siswa 
+tersebut tidak mungkin sama dengan ....
+A.
+ 43 C. 65
+B. 50 D. 73
+B. Esai
+1. Diagram batang di bawah ini menunjukkan data banyak anak pada 
+tiap-tiap keluarga di lingkungan RT 5 RW 1 Kelurahan Sukajadi. 
+Sumbu horizontal menunjukkan data banyak anak pada tiap-tiap 
+keluarga, sedangkan sumbu vertikal menyatakan banyaknya keluarga 
+yang memiliki anak dengan jumlah antara 0 sampai dengan 5.
+0
+2
+4
+6
+8
+10
+12
+0 1 2 3 4 5
+Banyak Keluarga
+Banyak anak
+Banyak Anak pada Tiap-tiap Keluarga di Lingkungan
+RT 5 RW 1 Kelurahan Sukajadi
+a. Tentukan total banyaknya keluarga dan banyak anak dalam 
+lingkungan tersebut.
+b. Berapa jumlah keluarga yang mempunyai anak lebih dari 2?
+c. Berapa persentase keluarga yang tidak mempunyai anak?
+d. Berapa rata-rata banyak anak pada setiap keluarga?
+e. Berapa median dan modus dari data tersebut?
+f. Tentukan jangkauan, kuartil atas, kuartil bawah, dan jangkauan 
+interkuartil dari data di atas.
+269
+Kurikulum 2 g. Dalam catatan Pak RT, rata-rata banyak anak pada tiap keluarga 
+menjadi 
+3 sesudah ada dua puluh keluarga pendatang yang masuk 
+ke dalam lingkungan tersebut. Berapa rata-rata banyak anak pada 
+kedua puluh keluarga pendatang tersebut?
+h.
+ Jika terdapat lima 
+keluarga pendatang dan setiap keluarga tersebut 
+memiliki 2 anak, apakah ada perubahan pada mean, median, dan 
+modus? Jika ada, tentukan mean, median, dan modus yang baru.
+2.
+ Jumlah siswa laki-laki kelas IX 
+A SMP Ceria adalah 16 orang dengan 
+berat badan rata-rata adalah 50 kg. Jelaskan secara singkat langkah-
+langkah untuk mengukur berat badan ke-16 siswa tersebut.
+3.
+ Pak T
+ono memiliki kebun mangga sebanyak 36 pohon, rata-rata panen 
+dari tahun 2013-2017 adalah 373 kg. Tentukan nilai x.
+T ahun 2013 2014 2015 2016 2017
+Jumlah (kg) 432 330 x 397 365
+4. Terdapat 8 bilangan dengan rata-rata 
+18. Enam bilangan di antaranya 
+adalah 16, 17, 19, 20, 21, dan 14. Sisa dua angka bila dijumlahkan 
+sama dengan 2x. Berapakah nilai x?
+5.
+ Winda telah mengikuti
+ beberapa kali ujian matematika. Jika Winda 
+memperoleh nilai 94 pada ujian yang akan datang, nilai rata-rata 
+seluruh ujian matematikanya adalah 89. Tetapi jika ia memperoleh 
+nilai 79 maka nilai rata-rata seluruh ujian matematikanya adalah 86. 
+Dari informasi tersebut, berapa banyak ujian yang telah diikuti oleh 
+Winda sebelumnya?
+6.
+ Diketahui data nilai ujian akhir semester siswa kelas 
+VIII A SMP Ceria 
+di bawah ini.
+Nilai 6 7 8 9 10
+Frekuensi 4 8 n 2 2
+ Jika nilai
+ ujian akhir semester siswa di kelas tersebut memiliki nilai 
+rata-rata 7,5, tentukan nilai mediannya.
+270
+Kelas VIII SMP/MTs Semester II
+7. Kelas VIII A SMP Ceria memiliki siswa sebanyak 32 orang. Pada 
+Ujian 
+Tengah Semester diketahui nilai rata-rata pada mata pelajaran 
+matematika adalah 75, sedangkan nilai rata rata pada mata pelajaran 
+IPA adalah 62,4. Pada kelas VIII D, rata-rata nilai matematika yang 
+diperoleh adalah 71,6. Jika nilai rata-rata gabungan kelas VIII A dan 
+kelas VIII D untuk mata pelajaran matematika dan IPA masing-masing 
+adalah 73,2 dan 66, tentukan nilai rata-rata mata pelajaran IPA untuk 
+kelas VIII D.
+8.
+ Data berikut menunjukkan hasil Ujian 
+Akhir Semester mata pelajaran 
+IPA kelas VIII.
+Nilai 5 6 7 8 9 10
+Frekuensi 21 15 20 16 8 5
+ Jika pihak 
+sekolah memberlakukan aturan bahwa siswa yang memiliki 
+nilai Ujian Akhir Semester lebih dari atau sama dengan nilai rata-rata 
+akan diluluskan, dan siswa yang memiliki nilai di bawah nilai rata-rata 
+tidak lulus, tentukan persentase banyak siswa yang tidak lulus pada 
+Ujian Akhir Sekolah untuk mata pelajaran IPA tersebut (Bulatkan 
+sampai dua tempat desimal).
+9.
+ Perbandingan jumlah perempuan 
+dan laki-laki dalam satu kelas adalah 
+3 : 2 dan jumlah perempuan ada 12. Tentukan rata-rata berat badan 
+laki-laki jika total berat siswa laki-laki adalah 424.
+10.
+ Tabel 
+di samping menunjukkan 
+keuntungan setiap bulan dari Restoran 
+Memang Enak selama satu tahun 
+(dalam juta rupiah).
+a.
+ Berapakah keuntungan terendah 
+dan tertinggi?
+b. Hitunglah nilai kuarti
+l atas dan 
+kuartil bawah dari keuntungan 
+restoran tersebut.
+Bulan ke- Keuntungan
+1 20
+2 22
+3 17
+4 16
+5 16
+6 15
+7 18
+8 20
+9 21
+10 20
+11 22
+12 23
+271
+Kurikulum 2 Peluang
+Bab 10
+Teori peluang awalnya lahir dari masalah peluang memenangkan 
+permainan judi. Dalam perkembangannya teori peluang menjadi cabang 
+dari ilmu matematika yang digunakan sacara luas. Teori peluang banyak 
+digunakan dalam dunia bisnis, meteorologi, sains, industri, politik, dan 
+lain-lain.
+Perusahaan asuransi jiwa menggunakan peluang untuk menaksir berapa 
+lama seseorang mungkin hidup. Dokter menggunakan peluang untuk 
+memprediksi besar-kecilnya kesuksesan suatu metode pengobatan. Ahli 
+meteorologi menggunakan peluang untuk memperkirakan kondisi cuaca. 
+Dalam dunia politik teori peluang juga digunakan untuk memprediksi 
+hasil-hasil sebelum pemilihan umum. Peluang juga digunakan PLN 
+untuk merencanakan pengembangan sistem pembangkit listrik dalam 
+menghadapi perkembangan beban listrik di masa depan.
+272
+Kelas VIII SMP/MTs Semester II
+3.11 Menjelaskan peluang empirik dan teoretik suatu kejadian dari suatu 
+percobaan.
+4.11 Menyelesaikan masalah yang berkaitan dengan peluang empirik dan 
+teoretik suatu kejadian dari suatu percobaan.
+K
+D 
+ompetensi asar
+1. Melakukan suatu percobaan untuk menentukan peluang empirik.
+2. Menentukan ruang sampel dari suatu eksperimen.
+3. Menentukan titik sampel yang memenuhi suatu kejadian.
+4. Menganalisis keterkaitan antara peluang empirik dengan peluang 
+teoretik.
+P
+B 
+engalaman
+elajar
+• Peluang
+• Peluang empirik
+• Peluang teoretik
+273
+P
+K 
+etaonsep
+Peluang
+Peluang 
+Empirik
+Percobaan
+Membandingkan 
+Peluang Teoretik 
+dengan Peluang 
+Empirik
+Peluang 
+Teoretik
+Perhitungan 
+Rumus
+274
+Blaise Pascal
+(1623-1662 M)
+Blaise Pascal lahir pada tanggal 19 Juni 1623 
+di Prancis. Dia lahir di keluarga kaya raya. 
+Ayahnya adalah penasehat kerajaan yang 
+kemudian diangkat sebagai presiden organisasi 
+the Court of Aids di kota Clermont. Sejak usia 
+empat tahun Pascal telah kehilangan ibunya. 
+Pascal dikenal sebagai seorang anak yang cerdas 
+walaupun ia tidak menempuh pendidikan di 
+sekolah formal. Di usia 12 tahun, ia sudah bisa 
+menciptakan sebuah mesin penghitung untuk 
+membantu pekerjaan ayahnya. Karya-karyanya 
+terus bertambah mulai dari merancang 
+bangunan segienam (hexagram), menemukan 
+prinsip kerja barometer, sistem kerja arloji, 
+hingga ikut terlibat dalam pembuatan sistem 
+transportasi bawah tanah kota Paris.
+Blaise Pascal banyak menuliskan karya di bidang matematika, di 
+antaranya adalah teori peluang. Teori peluang awalnya diinspirasi oleh 
+masalah perjudian. Pada tahun 1654, seorang penjudi yang bernama 
+Chevalier de Mere menemukan masalah tentang perjudian. Ketika 
+Chevalier kalah dalam berjudi dia meminta Pascal untuk menganalisis 
+masalah kekalahan perjudiannya. Pascal menemukan bahwa sistem 
+perjudian tidak akan pernah berpihak kepada pemain judi. Artinya 
+peluang seorang pemain judi untuk kalah jauh lebih besar daripada 
+peluang menang. Dia juga mendiskusikan masalah peluang dengan 
+matematikawan terkenal lain yaitu Pierre de Fermat (1601-1665). 
+Mereka berdiskusi pada tahun 1654 antara bulan Juni dan Oktober 
+melalui 7 buah surat yang ditulis oleh Blaise Pascal dan Pierre de Fermat 
+yang membentuk asal kejadian dari teori peluang.
+Dari sedikit cerita di atas dapat kita ambil beberapa pelajaran di 
+antaranya sebagai berikut:
+1.
+ Di manapun kita dilahirkan, baik dalam keluar
+ga sederhana maupun 
+kaya, harus tetap giat belajar.
+2. Di dalam kehidupan 
+masyarakat terkadang kita menemui hal-hal 
+yang dipandang negatif dan bahkan dilarang dalam agama. Sebagai 
+generasi penerus bangsa tidak ada salahnya jika kita mencoba 
+menguak penyebabnya. Dengan mengamati dan mempelajarinya 
+secara mendalam seperti halnya Pascal, akhirnya kita akan tahu 
+mengapa permainan judi adalah tidak baik.

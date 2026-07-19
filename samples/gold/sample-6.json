@@ -1,0 +1,314 @@
+{
+  "sampleId": "sample-6",
+  "topic": "Sistem Ekskresi Manusia",
+  "grade": "SMP",
+  "classGrade": "VII",
+  "curriculum": "Kurikulum Merdeka",
+  "questionTypeCounts": [
+    {
+      "type": "multiple_choice",
+      "count": 10
+    },
+    {
+      "type": "short_answer",
+      "count": 3
+    },
+    {
+      "type": "essay",
+      "count": 2
+    }
+  ],
+  "source": "samples/sample-6/exercise.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut ini yang tidak termasuk alat ekskresi adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "hati"
+        },
+        {
+          "label": "B",
+          "text": "kulit"
+        },
+        {
+          "label": "C",
+          "text": "ginjal"
+        },
+        {
+          "label": "D",
+          "text": "usus besar"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Pernyataan berikut ini yang tidak berhubungan dengan sistem pengeluaran manusia adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "ginjal menghasilkan urine"
+        },
+        {
+          "label": "B",
+          "text": "kulit menghasilkan keringat"
+        },
+        {
+          "label": "C",
+          "text": "pankreas menghasilkan enzim amilase"
+        },
+        {
+          "label": "D",
+          "text": "bagian kulit yang berperan sebagai alat ekskresi adalah kelenjar keringat"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar di bawah ini! 3 4 2 1 Sumber: Marieb et al. 2013 Tempat untuk menampung urine sebelum dikeluarkan dari tubuh ditunjukkan oleh nomor ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar di bawah ini! 1 2 3 4 Sumber: Reece et al. 2012 Bagian yang berperan dalam proses pembentukan urine primer adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Sisa penyaringan pada proses filtrasi menghasilkan urine yang masih mengandung zat yang berguna bagi tubuh. Berikut ini yang bukan merupakan zat yang terdapat pada urine hasil proses filtrasi adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "glukosa"
+        },
+        {
+          "label": "B",
+          "text": "asam amino"
+        },
+        {
+          "label": "C",
+          "text": "sel darah merah"
+        },
+        {
+          "label": "D",
+          "text": "garam-garam mineral"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Sisa metabolisme yang dikeluarkan melalui paru-paru adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "urea dan uap air"
+        },
+        {
+          "label": "B",
+          "text": "garam dapur dan air"
+        },
+        {
+          "label": "C",
+          "text": "asam amino dan amonia"
+        },
+        {
+          "label": "D",
+          "text": "karbon dioksida dan uap air"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Zat berikut yang tidak dihasilkan oleh hati adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "urea"
+        },
+        {
+          "label": "B",
+          "text": "glukosa"
+        },
+        {
+          "label": "C",
+          "text": "bilirubin"
+        },
+        {
+          "label": "D",
+          "text": "getah empedu"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Kulit berfungsi sebagai alat ekskresi karena ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "melindungi tubuh dari kuman"
+        },
+        {
+          "label": "B",
+          "text": "mempunyai kelenjar keringat"
+        },
+        {
+          "label": "C",
+          "text": "mempunyai ujung saraf reseptor"
+        },
+        {
+          "label": "D",
+          "text": "melindungi tubuh dari cahaya matahari"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Adanya batu ginjal di dalam rongga ginjal dapat menimbulkan ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "nefritis"
+        },
+        {
+          "label": "B",
+          "text": "hematuria"
+        },
+        {
+          "label": "C",
+          "text": "hidronefrosis"
+        },
+        {
+          "label": "D",
+          "text": "diabetes insipidus"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 10,
+      "questionType": "multiple_choice",
+      "questionText": "Bila kadar glukosa dalam urine 1,5%, kemungkinan orang tersebut menderita ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "gagal ginjal"
+        },
+        {
+          "label": "B",
+          "text": "penyakit diabetes mellitus"
+        },
+        {
+          "label": "C",
+          "text": "penyakit diabetes insipidus"
+        },
+        {
+          "label": "D",
+          "text": "peradangan kandung kemih"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 1,
+      "questionType": "short_answer",
+      "questionText": "Sebutkan macam-macam organ yang berperan sebagai alat ekskresi pada manusia dan zat yang diekskresikan atau yang dikeluarkan!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 2,
+      "questionType": "short_answer",
+      "questionText": "Pembentukan urine terjadi di dalam ginjal, isilah tabel di bawah ini untuk menjelaskan proses pembentukan urine yang terjadi di dalam ginjal! Proses Tempat Bahan Hasil 1 2 3",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 3,
+      "questionType": "short_answer",
+      "questionText": "Mengapa bila kita berada dalam kondisi yang panas tubuh mengeluarkan banyak keringat, sangat berbeda ketika kita berada pada tempat dengan suhu dingin?",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 4,
+      "questionType": "essay",
+      "questionText": "Pada suatu pemeriksaan laboratorium, diuji urine seorang pasien ternyata ketika diuji dengan menggunakan indikator Benedict menunjukkan reaksi warna menjadi merah bata, dan ketika diuji dengan indikator Biuret menunjukkan reaksi warna ungu, berdasarkan hal tersebut analisislah penyakit yang terjangkit oleh pasien dan bagian ginjal manakah yang mengalami gangguan?",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 5,
+      "questionType": "short_answer",
+      "questionText": "Sebutkan 3 macam pola hidup untuk menjaga kesehatan sistem ekskresi! Menyelidiki Gangguan dan Penyakit pada Sistem Ekskresi serta Upaya Menjaga Kesehatan Sistem Ekskresi",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    }
+  ]
+}

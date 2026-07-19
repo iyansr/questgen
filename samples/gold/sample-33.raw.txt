@@ -1,0 +1,365 @@
+127
+Kurikulum 2 Kerjakanlah soal-soal berikut ini.
+A. Pilihan Ganda
+1. Diketahui himpunan P = {1, 2, 3, 5} dan Q = {2, 3, 4, 6, 8, 10}. 
+Jika ditentukan himpunan pasangan berurutan {(1, 2), (2, 4), (3, 6), 
+(5, 10)}, maka relasi dari himpunan P ke himpunan Q adalah ....
+A. kurang dari C. dua kali dari
+B. setengah dari D. kuadrat dari
+2. Empat orang anak bernama Tohir, Erik, Taufiq, dan Zainul mempunyai 
+kesukaan masing-masing. Kesukaan Tohir belajar kelompok dan 
+menulis cerpen, kesukaan Erik bermain komputer dan renang, kesukaan 
+Taufiq menulis cerpen dan renang, dan kesukaan Zainul renang saja. 
+Anak yang mempunyai kesukaan menulis cerpen, tetapi tidak suka 
+belajar kelompok adalah ....
+A. Tohir C. Taufiq
+B. Erik D. Zainul
+3. Diketahui himpunan pasangan berurutan:
+(i) {(0, 0), (2, 1), (4, 2), (6, 3)}
+(ii) {(1, 3), (2, 3), (1, 4), (2, 4)}
+(iii) {(1, 5), (2, 5), (3, 5), (4, 5)}
+(iv) {(5, 1), (5, 2), (4, 1), (4, 2)}
+ Himpunan pasangan berurutan yang merupakan pemetaan ( fungsi) 
+adalah ....
+A. (i) dan (ii) C. (ii) dan (iii)
+B. (i) dan (iii) D. (iii) dan (iv)
+4. Antara himpunan A = {a, b} dan himpunan B = {1, 2, 3} dapat dibentuk 
+banyak pemetaan dengan ....
+A. 3 cara C. 8 cara
+B. 6 cara D. 9 cara
+Uji
+Kompetensi
++=+?? 3
+128
+Kelas VIII SMP/MTs Semester I
+5. Bila P = {a, b, c} dan Q = {1, 2, 3}, maka banyaknya korespondensi 
+satu-satu yang mungkin dari P ke Q adalah ....
+A. 3 cara C. 9 cara
+B. 6 cara D. 27 cara
+6. Fungsi f : x → x + 1 dengan daerah asal {2, 4, 6, 8} memiliki daerah 
+hasil ....
+A. {2, 4, 6, 8} C. {1, 3, 5, 7}
+B. {3, 5, 7, 9} D. {2, 3, 4, 5}
+7. Jika diketahui f(x) = 2x + 5 dan f(x) = –3, maka nilai dari x adalah ....
+A. –3 C. –5
+B. –4 D. –6
+8. Diketahui fungsi f : x → 2x – 1. Pernyataan di bawah ini yang salah 
+adalah ....
+A. 3 → 4 C. jika f(a) = 5, maka a = 3
+B. f(–5) = –11 D. bayangan 1 adalah 1
+9. Diketahui G(x) = ax + b. Jika G(–2) = –4 dan G(–6) = 12, maka bentuk 
+fungsi G adalah ....
+A. G(x) = –4x + 12 C. G(x) = –2x + 6
+B. G(x) = –4x – 12 D. G(x) = –4x – 6
+10. Daerah asal fungsi yang didefinisikan dengan fungsi f dari x ke 2x – 1 
+adalah {x | −2x < x < 3; x ∈ B}. Daerah hasilnya adalah .....
+A. {–3, –1, 1, 3} C. {–2, –1, 0, 1, 3}
+B. {–2, –3, –1, 1, 3, 4} D. { –1, 0, 1, 2}
+11. Jika A = {2, 3, 5, 7} dan B = {4, 6, 8, 9, 10}, banyaknya pemetaan yang 
+mungkin dari A ke B dan dari B ke A berturut-turut adalah ....
+A. 225 dan 425 C. 525 dan 256
+B. 525 dan 225 D. 625 dan 256
+129
+Kurikulum 2 12. Fungsi f ditentukan oleh f(x) = ax + b. Jika nilai dari fungsi itu untuk 
+x = –3 adalah –15 dan nilai dari fungsi itu untuk x = 3 adalah 9, nilai 
+dari f(−2) + f(2) adalah ....
+A. –6 C. 4
+B. –4 D. 6
+13. Fungsi f ditentukan oleh f(x) = ax + b. Jika pasangan-pasangan 
+berurutan (p, −3), (−3, q), (r, 2), (2, −2), dan (−2, 6) adalah anggota 
+dari fungsi itu, nilai p, q, dan r adalah ....
+A. p = 5, q = 6, dan r = 2 C. p = 5
+2
+, q = 8, dan r = 0
+B. p = 3
+2, q = 8, dan r = 2 D. p = 3, q = 6, dan r = 3
+14. Diketahui fungsi f(x) = mx + n, f(–1) = 1, dan f(1) = 5. Nilai m dan n 
+berturut-turut adalah…
+A. –2 dan –3 C. –2 dan 3
+B. 2 dan –3 D. 2 dan 3
+15. Jika f(2x + 1) = (x – 12)(x + 13), maka nilai dari f(31) adalah ....
+A. 46 C. 66
+B. 64 D. 84
+16. Misalkan f(x) adalah fungsi yang memenuhi 
+(a) untuk setiap bilangan real x dan y, maka f(x + y) = x + f(y) dan 
+(b) f(0) = 2 
+Nilai dari f(2.016) adalah ....
+A. 2.015 C. 2.017
+B. 2.016 D. 2.018
+17. Diketahui fungsi bilangan real f(x) = x
+x
+1 − , untuk x ≠ 1
+130
+Kelas VIII SMP/MTs Semester I
+ Nilai dari f(2.016) + f(2.015) + ... + f(3) + f(2) + f 2
+1ak + f 3
+1ak + ... +
+.f 2 015
+1ak
+ 
++ .f 2 016
+1ak adalah ...
+A. –4.034 C. –4.030
+B. –4.032 D. –4.028
+18. Untuk setiap bilangan bulat x didefinisikan fungsi f dengan f(x) adalah 
+banyaknya angka (digit) dari x. 
+Contoh: f(216) = 3, dan f(2.016) = 4. Nilai f(2
+2.016
+) + f(5
+2.016
+) adalah ....
+A. 2.015 C. 2.017
+B. 2.016 D. 2.018
+19. Perhatikan diagram berikut ini.
+• 101
+• 102
+• 103
+• 104
+Tohir •
+Taufiq •
+Erik •
+Zainul •
+BA
+Nomor Induk
+ Pernyataan yang dapat kamu simpulkan dari diagram panah di atas 
+adalah sebagai berikut.
+(i ) Setiap siswa tepat mempunyai nomor induk satu. Jadi, setiap 
+anggota A hanya mempunyai tepat satu dengan anggota B.
+( ii) Dengan demikian pengertian dari korespondesi satu-satu adalah 
+beberapa dari anggota himpunan A maupun dari anggota B hanya 
+mempunyai satu kawan.
+(iii ) Setiap siswa bisa mempunyai nomor induk lebih dari satu. Jadi, 
+setiap anggota A bisa mempunyai lebih satu dengan anggota B.
+(iv ) Dengan demikian pengertian dari korespondesi satu-satu adalah 
+setiap dari anggota himpunan A maupun dari anggota B hanya 
+mempunyai satu kawan.
+131
+Kurikulum 2 Pernyataan yang benar dari kesimpulan di atas adalah ….
+A. (i) dan (ii) C. (i) dan (iv)
+B. (ii) dan (iii) D. (ii) dan (iv)
+20. Jika X = {2, 3, 5, 7, 11} dan Y = { a, b, c, d, e}, banyaknya korespondensi 
+satu-satu yang mungkin terjadi adalah ....
+A. 24 C. 540
+B. 120 D. 720
+B. Esai
+1. Diketahui himpunan A = {1, 3, 4}, B = {2, 3, 4, 5} dan relasi dari A ke 
+B menyatakan “kurang dari “. Nyatakan relasi tersebut dalam:
+a. diagram panah,
+b. himpunan pasangan berurutan, dan
+c. diagram Kartesius.
+2. Jika A = {0, 2, 4, 6, 8, 10, 12} dan B = {0, 1, 2, 3, 4, 5, 6, 7}, nyatakan 
+relasi dari A ke B yang menyatakan hubungan “dua kali dari“ dalam:
+a. gambarlah diagram panah,
+b. himpunan pasangan berurutan, dan
+c. gambarlah diagram Kartesius.
+3. Pak Mahir mempunyai tiga anak bernama Budi, Ani, dan Anton. 
+Pak Ridwan mempunyai dua anak bernama Alex dan Rini. Pak Rudi 
+mempunyai seorang anak bernama Suci.
+a. Nyatakan dalam diagram panah, relasi “ayah dari”.
+b. Apakah relasi tersebut merupakan fungsi? Jelaskan.
+c. Nyatakan dalam diagram panah, relasi “anak dari”.
+d. Apakah relasi pada soal c merupakan fungsi? Jelaskan.
+4. Diketahui suatu relasi dari himpunan P ke himpunan Q yang dinyatakan 
+dengan himpunan pasangan berurutan {(–1, 2), (1, 4), (3, 6), (5, 8), (7, 10)}.
+a. Sebutkan anggota-anggota himpunan P dan Q.
+132
+Kelas VIII SMP/MTs Semester I
+b. Sebutkan dua relasi lain yang mungkin dari himpunan P ke 
+himpunan Q.
+c. Gambarlah koordinat Kartesius dari relasi tersebut.
+d. Jika himpunan P merupakan daerah asal dari relasi (b) dan dengan 
+melihat koordinat Kartesius pada (c), apakah relasi dari himpunan 
+P ke himpunan Q merupakan fungsi?
+5. Diketahui suatu relasi dari himpunan A ke himpunan B yang dinyatakan 
+dengan himpunan pasangan berurutan {(–2, 4), (–1, –3), (2, 6), (7,10), 
+(8, –5)}.
+a. Tulislah himpunan A dan B.
+b. Gambarlah koordinat Kartesius dari relasi tersebut.
+c. Apakah relasi itu merupakan fungsi? Jelaskan.
+6. Fungsi f didefinisikan dengan rumus f(x) = 5 – 3x dan diketahui daerah 
+asalnya adalah {–2, –1, 0, 1, 2, 3}.
+a. Buatlah tabel dan himpunan pasangan berurutan dari fungsi 
+tersebut.
+b. Gambarlah grafiknya.
+7. Misalkan ada suatu fungsi f dari x ke 4x − 2.
+a. Tentukan rumus fungsinya
+b. Tentukan bayangan (daerah hasil) dari 2, –2, 4, –4, 1
+2
+, dan 21
+2
+.
+c. Jika 8 adalah bayangan dari p, tentukanlah nilai p.
+8. Sebuah rumah mempunyai bak penampung air. Melalui sebuah pipa, 
+air dialirkan dari bak penampungan ke dalam bak mandi. V olume air 
+dalam bak mandi setelah 5 menit adalah 25 liter dan setelah 12 menit 
+adalah 46 liter. V olume air dalam bak mandi setelah dialiri air selama 
+t menit dinyatakan sebagai V(t) = V0 + at liter, dengan V0 adalah 
+volume air dalam bak mandi sebelum air dialirkan dan a adalah debit 
+air yang dialirkan setiap menit.
+a. Tentukan volume air dalam bak mandi sebelum air dialirkan.
+b. Berapa volume air dalam bak mandi setelah 27 menit?
+133
+Kurikulum 2 9. Tentukan sebuah himpunan yang mungkin dapat berkorespondensi 
+satu-satu dengan himpunan:
+a. {bilangan prima kurang dari 19} 
+b. {banyak jari tangan manusia} 
+c. {huruf vokal} 
+d. {lagu kebangsaan}
+e. {mata pelajaran UN SMP}
+f. { faktor dari 12 }
+g. {bulan yang lamanya 30 hari}
+h. {bilangan asli}
+Pohon Apel
+10. Seorang petani menana m pohon apel dalam pola persegi. Untuk 
+melindungi pohon apel tersebut dari angin ia menanam pohon pinus 
+di sekeliling kebun. Di bawah ini terdapat gambar situasi yang 
+memperlihatkan pola pohon apel dan pohon pinus untuk sebarang 
+banyaknya (n) kolom pohon apel.
+ (a) n = 1 (c) n = 3
+ 
+ 
+134
+Kelas VIII SMP/MTs Semester I
+ (b) n = 2 (d) n = 4
+ 
+= Pohon Pinus
+= Pohon Apel
+ 
+ Lengkapi tabel di bawah ini.
+n Banyaknya Pohon Apel Banyaknya Pohon Pinus
+1 1 8
+2 4
+3
+4
+5
+6
+7
+ Misalkan petani ingin membuat kebun yang lebih besar dengan 
+banyak baris pohon. Ketika petani membuat kebun lebih besar, 
+yang mana yang akan meningkat lebih cepat, jumlah pohon apel 
+atau jumlah pohon pinus? Jelaskan bagaimana kamu memperoleh 
+jawabannya.
+135
+Kurikulum 2 Persamaan Garis Lurus
+Bab 4
+Ketika kalian naik mobil, sepeda, atau jenis kendaraan lainnya, pastilah 
+pernah melewati jalan yang mendatar, jalan yang turun, dan jalan yang 
+naik. Jalan yang naik atau turun biasanya memiliki kemiringan tertentu 
+yang sudah diperhitungkan tingkat kemiringannya, sehingga aman dan 
+nyaman untuk dilewati kendaraan. Jalan yang menanjak juga memiliki 
+kemiringan. Jika terlalu curam, kendaraan akan mengalami kesulitan 
+untuk melintasinya. 
+Selain jalan, dalam kehidupan sehari-hari banyak benda-benda yang 
+harus dihitung tingkat kemiringannya. Misalnya tangga yang berada 
+gedung bertingkat sudah diperhitungkan dengan cermat dan teliti tingkat 
+kemiringannya sehingga aman dan nyaman untuk manusia. Seorang arsitek 
+merancang tangga dan jalan titian dengan memperhatikan kemiringan untuk 
+keamanan dan kenyamanan pengguna. Tempat parkir pun demikian. Jika 
+tempat parkir terlalu miring, tidak aman bagi pengendara maupun mobil. 
+Dalam bab ini, kalian akan mempelajari cara menghitung kemiringan suatu 
+garis, cara menggambar grafik garis lurus, menentukan persamaan garis 
+lurus, dan manfaat garis lurus dalam pemecahan masalah sehari-hari. 
+Sumber: Kemdikbud
+Jalan bergelombang
+136
+Kelas VIII SMP/MTs Semester I
+• Persamaan garis lurus 
+• Grafik
+• Kemiringan 
+• Titik potong 
+3.4 Menganalisis fungsi linear (sebagai persamaan garis lurus ) dan 
+menginterpretasikan grafiknya yang dihubungkan dengan masalah 
+kontekstual
+4.4 Menyelesaikann masalah kontekstual yang berkaitan dengan linear 
+sebagai persamaan garis lurus
+K
+D 
+ompetensi asar
+1. Menggambar grafik persamaan garis lurus.
+2. Menentukan gradien garis lurus.
+3. Menentukan persamaan garis lurus.
+P
+B 
+engalaman
+elajar
+137
+P
+K 
+etaonsep
+Persamaan 
+Garis Lurus
+Dua Garis
+Berimpit
+Persamaan 
+Garis 
+Melalui 
+Titik 
+(x1 , y1) dan 
+(x2 , y2)
+Grafik 
+Persamaan
+Sifat-sifat 
+Persamaan
+Persamaan 
+GarisKemiringan
+Titik-titik 
+Koordinat
+Dua Garis 
+Sejajar
+Bentuk 
+UmumMelalui titik
+(0, 0) dan 
+(x1, y1)
+Dua Titik 
+Koordinat
+Dua Garis
+Tegak Lurus
+Persamaan 
+Garis 
+dengan 
+kemiringan 
+m dan 
+melalui titik 
+(x1 , y1)
+Melalui titik
+(x1, y1) dan 
+(x2, y2)
+Dua Garis
+Berpotongan
+138
+Rene Descartes
+(1596 - 1650 M)
+René Descartes 
+(31 Maret 1596 - 11 Februari 1650). 
+Kemiringan menentukan posisi suatu garis 
+terhadap koordinat x dan koordinat y. 
+Perhitungan matematis ini adalah salah satu 
+materi dari geometri analitik dengan bantuan 
+aljabar. Jadi, untuk pertanyaan “siapakah yang 
+menemukan kemiringan?” tentunya jawabannya 
+adalah René Decartes. René Decartes adalah 
+bapak geometri analitik. Dia adalah seorang 
+matematikawan Prancis, fisikawan, filsuf, dan 
+teolog. Banyak ahli matematika mengakui 
+dia sebagai orang yang menemukan rumus kemiringan. Dia dikatakan 
+telah memberikan sebuah metode untuk memecahkan masalah garis dan 
+kemiringan dalam masalah aljabar dan geometri.
+Rumus kemiringan dasar adalah y = mx + b sementara rumus 
+kemiringan adalah m xx
+yy
+21
+21
+−
+−= . Dia adalah orang pertama yang 
+memperkenalkan penyelesaian untuk kemiringan dan persamaan linear. 
+Meskipun tidak banyak tulisan yang menunjukkan secara langsung 
+bahwa dia sebagai penemu rumus kemiringan, banyak matematikawan 
+mengatakan bahwa rumus kemiringan tersebut adalah miliknya.
+Descartes menonjol dalam Revolusi Ilmiah pada masanya. Dia meninggal 
+pada Februari 1650 pada usia 54.
+Beberapa hikmah yang bisa kita petik antara lain:
+1. Kita harus mengembangkan ilmu kita, untuk kemajuan pendidikan.
+2. Menuntut ilmu harus dengan rasa ikhlas, tanpa mengharapkan pujian 
+dari orang lain.
+3. Segala sesuatu yang kita pelajari akan bermanfaat untuk orang lain.
+(Sumber: id.wikipedia.org)

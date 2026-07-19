@@ -1,0 +1,15 @@
+{
+  "sampleId": "sample-7",
+  "topic": "Ilmu Pengetahuan Sosial Kelas VIII",
+  "grade": "SMP",
+  "classGrade": "VII",
+  "curriculum": "Kurikulum Merdeka",
+  "questionTypeCounts": [
+    {
+      "type": "multiple_choice",
+      "count": 5
+    }
+  ],
+  "source": "samples/sample-7/exercise.pdf",
+  "questions": []
+}

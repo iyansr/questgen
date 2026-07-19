@@ -1,0 +1,314 @@
+{
+  "sampleId": "sample-12",
+  "topic": "Pewarisan Sifat pada Makhluk Hidup",
+  "grade": "SMP",
+  "classGrade": "IX",
+  "curriculum": "Kurikulum Merdeka",
+  "questionTypeCounts": [
+    {
+      "type": "multiple_choice",
+      "count": 10
+    },
+    {
+      "type": "short_answer",
+      "count": 3
+    },
+    {
+      "type": "essay",
+      "count": 2
+    }
+  ],
+  "source": "samples/sample-12/exercise.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Pernyataan tentang kromosom, DNA, dan inti sel yang benar adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "kromosom menggulung di dalam DNA di luar inti sel"
+        },
+        {
+          "label": "B",
+          "text": "DNA dan kromosom tidak berhubungan tapi sama-sama berada dalam inti sel"
+        },
+        {
+          "label": "C",
+          "text": "DNA berbentuk heliks ganda terpilin dalam bentuk kromosom dan berada di luar inti sel"
+        },
+        {
+          "label": "D",
+          "text": "DNA berbentuk heliks ganda terpilin dalam bentuk kromosom dan berada di dalam inti sel"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Jika sel tubuh pada buah tomat mempunyai 24 kromosom, maka jumlah kromosom pada serbuk sarinya adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "6 buah"
+        },
+        {
+          "label": "B",
+          "text": "12 buah"
+        },
+        {
+          "label": "C",
+          "text": "24 buah"
+        },
+        {
+          "label": "D",
+          "text": "48 buah"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Pernyataan yang benar mengenai hukum II Mendel adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "gen berpisah secara acak saat fertilisasi"
+        },
+        {
+          "label": "B",
+          "text": "gen bertemu secara acak saat fertilisasi"
+        },
+        {
+          "label": "C",
+          "text": "gen berpisah secara acak saat pembentukan gamet"
+        },
+        {
+          "label": "D",
+          "text": "gen bertemu secara acak saat pembentukan gamet"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Gen K mengode rambut keriting dan k mengode rambut lurus, K dominan terhadap k. Gen H mengode warna kulit hitam dan gen h mengode warna kulit putih. Kombinasi dari gen-gen tersebut yang menunjukkan fenotipe rambut lurus kulit hitam adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "KKhh"
+        },
+        {
+          "label": "B",
+          "text": "KKHH"
+        },
+        {
+          "label": "C",
+          "text": "kkHh"
+        },
+        {
+          "label": "D",
+          "text": "KkHh"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut ini pernyataan mengenai jumlah kromosom manusia: (1) jumlah kromosom sex manusia adalah 4 buah (2) jumlah kromosom tubuh manusia adalah 44 buah (3) jumlah kromosom sex manusia adalah 2 pasang (4) jumlah kromosom tubuh manusia adalah 23 pasang (5) jumlah kromosom manusia secara keseluruhan adalah 46 buah Pernyataan yang benar adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "1, 2, 3"
+        },
+        {
+          "label": "B",
+          "text": "1, 3"
+        },
+        {
+          "label": "C",
+          "text": "2, 5"
+        },
+        {
+          "label": "D",
+          "text": "4 saja"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Seorang anak dapat mewarisi sifat dari ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "hanya dari ibunya"
+        },
+        {
+          "label": "B",
+          "text": "hanya dari ayahnya"
+        },
+        {
+          "label": "C",
+          "text": "dari ayah dan ibunya"
+        },
+        {
+          "label": "D",
+          "text": "dari ayah atau ibunya"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Ciri atau sifat pada manusia diturunkan dari generasi ke generasi melalui ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "RNA"
+        },
+        {
+          "label": "B",
+          "text": "sel telur"
+        },
+        {
+          "label": "C",
+          "text": "sel gamet"
+        },
+        {
+          "label": "D",
+          "text": "sel sperma"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Cara berikut yang paling baik untuk menentukan apakah dua orang bersaudara adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "membandingkan gen mereka"
+        },
+        {
+          "label": "B",
+          "text": "membandingkan wajah mereka"
+        },
+        {
+          "label": "C",
+          "text": "membandingkan sidik jari mereka"
+        },
+        {
+          "label": "D",
+          "text": "membandingkan tipe darah mereka"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Dua anak kembar berjenis kelamin laki-laki dan perempuan. Pernyataan berikut yang benar mengenai penyusun genetik mereka adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "bayi laki-laki dan perempuan tersebut mewarisi sifat hanya dari sang ayah"
+        },
+        {
+          "label": "B",
+          "text": "bayi laki-laki dan perempuan tersebut mewarisi sifat hanya dari sang ibu"
+        },
+        {
+          "label": "C",
+          "text": "bayi laki-laki dan perempuan tersebut mewarisi sifat dari ayah dan ibunya"
+        },
+        {
+          "label": "D",
+          "text": "bayi laki-laki mewarisi sifat hanya dari ayah dan bayi perempuan mewarisi sifat hanya dari ibu"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 10,
+      "questionType": "multiple_choice",
+      "questionText": "Pemuliaan tanaman dapat dilakukan dengan cara ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "perkawinan silang"
+        },
+        {
+          "label": "B",
+          "text": "penanganan hama"
+        },
+        {
+          "label": "C",
+          "text": "melakukan pergiliran tanam"
+        },
+        {
+          "label": "D",
+          "text": "manipulasi lingkungan hidup"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 1,
+      "questionType": "essay",
+      "questionText": "Buah 1 memiliki genotipe BB dengan bentuk buah bulat, sementara buah 2 memiliki genotipe bb dengan bentuk buah lonjong. a. Apabila kedua buah tersebut disilangkan, tentukanlah kombinasi gen antara buah 1 dan buah 2 menggunakan tabel Punnet! b. Apabila gen B dominan terhadap gen b, maka tentukan fenotipe dari hasil kombinasi gen yang kamu lakukan!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 2,
+      "questionType": "short_answer",
+      "questionText": "Seorang perempuan dengan genotipe XhX pembawa sifat hemofili, menikah dengan seorang laki-laki hemofili dengan genotipe X hY. Tentukan jumlah anak yang hidup dan anak yang mati!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 3,
+      "questionType": "essay",
+      "questionText": "Kacang biji bulat warna kuning dengan genotipe BBKK disilangkan dengan kacang biji lonjong warna hijau dengan genotipe bbkk, jika bulat – kuning dominan terhadap lonjong – hijau tentukan: a. F1 b. F2, jika F1 disilangkan sesamanya",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 4,
+      "questionType": "short_answer",
+      "questionText": "Pemuliaan tanaman bertujuan untuk menyiapkan bibit tanaman unggul. Apa saja tujuan dari penyiapan bibit tanaman unggul?",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 5,
+      "questionType": "essay",
+      "questionText": "Ginjal merupakan salah satu organ tubuh manusia. Ketika masih muda ada seseorang yang diambil ginjalnya karena suatu penyakit. Kemudian orang tersebut mempunyai anak. a. Berapakah jumlah ginjal yang dimiliki anaknya saat dilahirkan? b. Jelaskan jawabanmu!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    }
+  ]
+}

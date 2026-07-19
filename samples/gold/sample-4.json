@@ -1,0 +1,266 @@
+{
+  "sampleId": "sample-4",
+  "topic": "Tekanan Zat dan Penerapannya dalam Kehidupan Sehari-hari",
+  "grade": "SMP",
+  "classGrade": "VII",
+  "curriculum": "Kurikulum Merdeka",
+  "questionTypeCounts": [
+    {
+      "type": "multiple_choice",
+      "count": 10
+    }
+  ],
+  "source": "samples/sample-4/exercise.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Faktor-faktor yang memengaruhi besarnya tekanan adalah ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "gaya tekan dan massa benda"
+        },
+        {
+          "label": "B",
+          "text": "gaya tekan dan gaya gravitasi"
+        },
+        {
+          "label": "C",
+          "text": "luas bidang tekan dan gaya tekan"
+        },
+        {
+          "label": "D",
+          "text": "luas bidang tekan dan gaya gravitasi"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Sebuah alat pengangkat mobil memiliki luas penampang pengisap kecil A 1 sebesar 20 cm2 dan pengisap besar A2 sebesar 50 cm2. F 20 cm2 A2 p1 p2 50 cm2 20.000 N A1 Gaya yang harus diberikan untuk mengangkat mobil 20.000 N adalah … N.",
+      "options": [
+        {
+          "label": "A",
+          "text": "2.000"
+        },
+        {
+          "label": "B",
+          "text": "4.000"
+        },
+        {
+          "label": "C",
+          "text": "5.000"
+        },
+        {
+          "label": "D",
+          "text": "8.000"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Upaya yang dapat dilakukan untuk mendapatkan tekanan yang besar adalah ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "mengurangi gaya tekan dan memperbesar luas bidang"
+        },
+        {
+          "label": "B",
+          "text": "mengurangi gaya tekan dan memperkecil luas bidang"
+        },
+        {
+          "label": "C",
+          "text": "meningkatkan gaya tekan dan memperbesar luas bidang"
+        },
+        {
+          "label": "D",
+          "text": "meningkatkan gaya tekan dan memperkecil luas bidang"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Seorang penyelam menyelam dengan kedalaman 3 m, massa jenis air 1.000 kg/m 3, konstanta gravitasi pada tempat tersebut adalah 10 N/kg. Besar tekanan hidrostatisnya adalah … N/m2.",
+      "options": [
+        {
+          "label": "A",
+          "text": "3.000"
+        },
+        {
+          "label": "B",
+          "text": "30.000"
+        },
+        {
+          "label": "C",
+          "text": "40.000"
+        },
+        {
+          "label": "D",
+          "text": "50.000"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Sebuah drum besi dapat mengapung di dalam air disebabkan oleh ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "massa jenis seluruh drum lebih kecil daripada massa jenis air"
+        },
+        {
+          "label": "B",
+          "text": "massa jenis seluruh drum lebih besar daripada massa jenis air"
+        },
+        {
+          "label": "C",
+          "text": "massa jenis bahan pembuat drum lebih kecil daripada massa jenis air"
+        },
+        {
+          "label": "D",
+          "text": "massa jenis bahan pembuat drum lebih besar daripada massa jenis air"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan tabel berikut! Ketinggian (m) Tekanan (cmHg) 7.000 6 5.000 26 3.000 46 1.000 66 Di permukaan laut 76 Berdasarkan tabel tersebut pernyataan yang benar mengenai hubungan tekanan udara dengan ketinggian adalah ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "ketinggian tempat menghambat tekanan udara"
+        },
+        {
+          "label": "B",
+          "text": "semakin rendah tempat maka tekanan udaranya terhambat"
+        },
+        {
+          "label": "C",
+          "text": "semakin tinggi tempat maka tekanan udaranya semakin besar"
+        },
+        {
+          "label": "D",
+          "text": "semakin tinggi tempat maka tekanan udaranya semakin kecil"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Teknologi berikut ini yang tidak menggunakan prinsip Archimedes adalah ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "hidrometer"
+        },
+        {
+          "label": "B",
+          "text": "jembatan ponton"
+        },
+        {
+          "label": "C",
+          "text": "balon udara"
+        },
+        {
+          "label": "D",
+          "text": "dongkrak mobil"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar berikut! 50 N 45 N Sumber: Dok. Kemdikbud Sebuah benda memiliki berat 50 N, ketika ditimbang di dalam air beratnya hanya 45 N, maka gaya ke atas yang menekan benda sebesar… N.",
+      "options": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "25"
+        },
+        {
+          "label": "C",
+          "text": "45"
+        },
+        {
+          "label": "D",
+          "text": "50"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Pada tumbuhan, air dari akar dapat naik sampai ke daun disebabkan oleh daya kapilaritas batang. Pernyataan yang benar terkait peristiwa tersebut adalah ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "di dalam sel-sel akar terjadi peristiwa osmosis sehingga menyebabkan daya kapilaritas batang meningkat"
+        },
+        {
+          "label": "B",
+          "text": "jaringan xilem memiliki diameter yang sangat kecil sehingga memiliki tekanan yang besar untuk menaikkan air ke daun"
+        },
+        {
+          "label": "C",
+          "text": "jaringan floem memiliki diameter yang sangat kecil sehingga memiliki tekanan yang besar untuk menaikkan air ke daun"
+        },
+        {
+          "label": "D",
+          "text": "air dari dalam tanah dapat naik karena daya isap daun yang rendah sehingga tekanan osmosis dalam sel meningkat"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 10,
+      "questionType": "multiple_choice",
+      "questionText": "Pada saat mengukur tekanan darah dengan tensimeter, berlaku hukum ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "Pascal"
+        },
+        {
+          "label": "B",
+          "text": "Archimedes"
+        },
+        {
+          "label": "C",
+          "text": "Boyle"
+        },
+        {
+          "label": "D",
+          "text": "Newton"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    }
+  ]
+}

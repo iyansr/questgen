@@ -1,0 +1,358 @@
+66
+Kelas VIII SMP/MTs Semester I
+Uji
+Kompetensi
++=+?? 2
+A. Pilihan Ganda 
+1. Diketahui titik A(3,1), B(3, 5), C(–2, 5). Jika ketiga titik tersebut 
+dihubungkan akan membentuk 
+A. segitiga sama sisi
+B. segitiga sama kaki
+C. segitiga siku-siku
+D. segitiga sembarang
+2. Diketahui dalam koordinat Kartesius terdapat titik P, Q, dan R. Titik 
+P(4, 6) dan titik Q(7, 1). Jika titik P, Q, dan R dihubungkan akan 
+membentuk segitiga siku-siku, maka koordinat titik R adalah ....
+A. (6, 5)
+B. (4, 5)
+C. 6, 1)
+D. (4, 1)
+Untuk pertanyaan nomor 3 – 10 perhatikan koordinat kartesius berikut ini
+3. Koordinat titik A adalah ...
+A. (5, 7)
+B. (–5, 7)
+C. (7, 5)
+D. (7, –5)
+4. Koordinat titik C adalah ....
+A. (4, 4)
+B. (–4, 4)
+C. (4, –4)
+D. (–4, –4)
+1 2 3 4 5 6 7 8 9 10
+0
+−10−9−8−7−6−5−4−3−2−1
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+−2
+−1
+−3
+−4
+−5
+−6
+−7
+−8
+−9
+−10
+X
+Y
+A
+B
+H
+G
+E
+F
+C
+D
+67
+Kurikulum 2 5. Koordinat titik F adalah ....
+A. (8, 6)
+B. (8, –6)
+C. (6, –8)
+D. (–8, –6)
+6. Koordinat titik H adalah ....
+A. (6, 5)
+B. (–6, 5)
+C. (6, –5)
+D. (–6, –5)
+7. Titik-titik yang berjarak 3 satuan terhadap sumbu-X adalah ....
+A. Titik B dan C
+B. Titik E dan G
+C. Titik B dan E
+D. Titik E dan G
+8. Titik-titik yang berjarak 4 satuan terhadap sumbu-Y adalah ....
+A. Titik B dan C
+B. Titik E dan G
+C. Titik B dan E
+D. Titik E dan G
+9. Titik-titik yang ada di kuadran II adalah ....
+A. Titik A dan B
+B. Titik C dan D
+C. Titik E dan F
+D. Titik G dan H
+10. Titik-titik yang ada di kuadran IV adalah ....
+A. Titik A dan B
+B. Titik C dan D
+C. Titik E dan F
+D. Titik G dan H
+68
+Kelas VIII SMP/MTs Semester I
+Untuk pertanyaan nomor 
+11 – 20, perhatikan koordinat 
+Kartesius berikut.
+11. Garis-garis yang sejajar 
+dengan sumbu-X adalah ....
+A. garis m dan n
+B. garis m dan l
+C. garis k dan m
+D. garis k dan l
+12. Garis-garis yang sejajar 
+dengan sumbu-Y adalah ....
+A. garis m dan n
+B. garis m dan l
+C. garis k dan m
+D. garis k dan l
+13. Garis m dan garis n adalah adalah dua garis yang ....
+A. Tegak lurus
+B. berimpit
+C. berpotongan
+D. sejajar
+14. Garis n dan garis k adalah dua garis yang ....
+A. Tegak lurus
+B. berimpit
+C. berpotongan
+D. sejajar
+15. Garis yang berada disebelah kanan sumbu-Y adalah ....
+A. garis m
+B. garis n
+C. garis k
+D. garis l
+1 2 3 4 5 6 7 8 9 10
+0
+−10−9−8−7−6−5−4−3−2−1
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+−2
+−1
+−3
+−4
+−5
+−6
+−7
+−8
+−9
+−10
+k
+X
+l
+nYm
+69
+Kurikulum 2 16. Garis yang berada di bawah sumbu-X adalah ....
+A. garis m
+B. garis n
+C. garis k
+D. garis l
+17. Jarak garis m terhadap sumbu-Y adalah ....
+A. 2 satuan 
+B. 3 satuan 
+C. 4 satuan
+D. 5 satuan
+18. Jarak garis k terhadap sumbu-X adalah ....
+A. 2 satuan 
+B. 3 satuan 
+C. 4 satuan
+D. 5 satuan
+19. Koordinat titik potong garis m dan l adalah ....
+A. (2, 3)
+B. (–5, 3)
+C. (–5, –6)
+D. (2, –6)
+20. Koordinat titik potong garis n dan l adalah ....
+A. (2, 3)
+B. (–5, 3)
+C. (–5, –6)
+D. (2, –6)
+70
+Kelas VIII SMP/MTs Semester I
+B. Esai
+1. Gambarlah titik A(1, −2), B(−3, 6), C(2, 8), dan D(−1, −5) pada 
+koordinat Kartesius.
+ a. Tentukan titik-titik yang berada pada kuadran I, II, III, dan IV .
+ b. Tentukan jarak setiap titik dengan sumbu-X.
+ c. Tentukan jarak setiap titik dengan sumbu-Y.
+2. Gambarlah titik A(−4, 2), B(−4, 9), C(2, 2), dan D(3, 9), pada koordinat 
+Kartesius.
+ a. Tentukan jarak setiap titik dengan sumbu-X.
+ b. Tentukan jarak setiap titik dengan sumbu-Y.
+ c. Tentukan jarak antara titik A dengan titik B.
+ d. Tentukan jarak antara titik C dengan titik D.
+3. Gambarlah 4 titik pada bidang koordinat yang berjarak sama terhadap 
+titik A(3, −6).
+4. Ada berapa titik yang berjarak 5 dari sumbu-X dan 7 dari sumbu-Y? 
+Tunjukkan titik-titik tersebut.
+5. Gambarlah garis l melalui titik P(−3, 5) yang sejajar dengan sumbu-X 
+dan tegak lurus dengan sumbu-Y.
+6. Gambarlah garis t yang melalui titik D(–2, 5) yang tidak tegak lurus 
+terhadap sumbu-X dan tidak tegak lurus terhadap sumbu-Y.
+7. Gambarlah 4 titik yang memiliki jarak yang sama terhadap garis yang 
+melalui titik A(4, −2) dan B(−2, 6) dan tentukan koordinat dari keempat 
+titik tersebut.
+8. Gambarlah 3 garis yang berpotongan dengan sumbu-X dan sumbu-Y 
+dan melalui titik Q(2, 7).
+9. Jika garis k sejajar dengan garis m, dan keduanya tegak lurus terhadap 
+sumbu-Y, apakah kedua garis tersebut memiliki jarak yang sama 
+dengan sumbu-X? Jelaskan penyelesaianmu.
+10. Gambarlah dua garis yang saling tegak lurus, tapi tidak sejajar dengan 
+sumbu-X dan sumbu-Y. Kemudian hubungkan beberapa titik yang 
+melalui kedua garis tersebut dan membentuk bangun datar. Ada berapa 
+banyak bangun datar yang kalian temukan?
+71
+Kurikulum 2 Sumber: mtsraudlatul-hasanah.blogspot.co.id
+Relasi dan Fungsi
+Bab 3
+Perhatikan gambar sekelompok siswa yang sedang belajar di kelas. Setiap 
+siswa menempati kursinya masing-masing. Tidak ada seorang siswa 
+menempati lebih dari satu kursi. Akan tetapi satu kursi panjang dapat 
+ditempati oleh lebih dari satu siswa. Dengan demikian, ada keterkaitan 
+antara siswa dengan kursi yang ditempati. Menurut kalian, apakah hal ini 
+termasuk relasi atau mungkin sudah merupakan fungsi?
+Kalian akan mengetahui keterkaitan antara siswa dengan kursi yang 
+ditempati apabila kalian mempelajari konsep relasi dan fungsi ini, karena 
+pada konsep relasi dan fungsi ini akan disajikan tentang hubungan antara 
+dua himpunan Selamat melakukan aktivitas pembelajaran.
+72
+Kelas VIII SMP/MTs Semester I
+1. Menjelaskan dengan kata-kata dan menyatakan masalah sehari-hari 
+yang berkaitan dengan relasi dan fungsi.
+2. Mendefinisikan relasi dan fungsi.
+3. Memahami perbedaan antara relasi dan bukan relasi.
+4. Mengamati fungsi dan bukan fungsi.
+5. Memahami bentuk penyajian relasi dan fungsi.
+6. Menggambar grafik fungsi pada koordinat Kartesius.
+P
+B 
+engalaman
+elajar
+• Himpunan 
+• Relasi
+• Diagram panah
+• Tabel
+• Fungsi
+• Grafik 
+• Himpunan pasangan berurutan 
+• Korespondensi satu-satu
+3.3 Mendeskripsikan dan menyatakan relasi dan fungsi dengan 
+menggunakan berbagai representasi (kata-kata, tabel, grafik, diagram, 
+dan persamaan).
+4.3 Menyelesaikan masalah yang berkaitan dengan relasi dan fungsi 
+dengan menggunakan berbagai representasi.
+K
+D 
+ompetensi asar
+73
+P
+K 
+etaonsep
+Relasi dan 
+Fungsi
+Relasi
+Fungsi
+Penyelesaian
+Pasangan 
+Berurutan
+Diagram 
+Kartesius
+Diagram 
+Panah
+Tabel
+Grafik
+Persamaan
+Korespodensi 
+Satu-satu
+74
+Galileo 
+Galileo dipandang sebagai salah seorang 
+pakar awal tentang Fungsi. Karyanya juga 
+menunjukkan bahwa beliau orang yang mula-
+mula mengangkat konsep pemetaan antar-
+himpunan. Pada tahun 1638, beliau mempelajari 
+masalah tentang dua lingkaran konsentris 
+(memiliki pusat yang sama) dengan pusat di 
+O. Diameter lingkaran pertama dua kali lebih 
+panjang dari diameter lingkaran kedua. 
+Secara kasat mata, banyaknya titik pada 
+lingkaran pertama mestinya lebih banyak 
+bahkan mungkin dua kali lebih banyak dari 
+banyaknya titik pada lingkaran kedua. Tapi, 
+dia mampu membuat pemetaan atau fungsi yang menunjukkan bahwa 
+banyaknya titik pada kedua lingkaran itu sama.
+Galileo termasuk orang yang tidak mau begitu saja menerima suatu 
+kenyataan. Dia selalu mempertanyakan kebenaran suatu fenomena. Dia 
+berani mengambil sikap yang berlainan dengan sikap kebanyakan orang 
+pada zamannya. Bahkan, dia juga berani berbeda pendapat dengan para 
+pemimpin yang berkuasa. Dia mengenalkan teori heliosentrisnya yang 
+mengatakan bumilah yang mengitari matahari, bukan matahari yang 
+mengitari bumi. Sayangnya, dia tidak mampu meyakinkan secara ilmiah 
+kebenaran pendapatnya sehingga dia dihukum.
+Beberapa hikmah yang mungkin bisa kita petik antara lain sebagai berikut:
+1. Kita harus jeli melakukan pengamatan terhadap fenomena yang ada 
+di sekitar kita.
+2. Kita harus mau dan mampu mempertanyakan kebenaran fenomena 
+yang ada. Kita tidak boleh hanya diam diri menerima kenyataan 
+yang ada. Kita harus membiasakan diri kita untuk selalu menanya, 
+misalnya: “Mengapa begini? Mengapa bukan begitu? Kalau 
+dikondisikan begini, apa jadinya? Bagaimana kalau dibuat begini? 
+Apa yang terjadi kalau diubah bagian ini?" 
+3. Kita harus teguh pada pendirian, kalau diyakini itu memang benar, 
+tak terbantahkan. Tetapi, kita harus tetap terbuka dengan segala 
+kritik dan saran demi perbaikan kesimpulan kita.
+4. Kalau kita ingin selamat, di samping pandai, kita juga harus pintar 
+mengomunikasikan ide dengan justifikasi yang lengkap, serta 
+dilakukan secara sopan, santun, dan meyakinkan. 
+Galileo 
+(1564 - 1642)
+75
+Kurikulum 2 Memahami Relasi
+Bisakah kalian memahami bagan silsilah keluarga berikut? 
+Madhuri + Marhawi
+(Bapak + Ibu)
+Adhim + Sulastri
+(Suami + Istri/anak)
+Idris + May
+(Suami/anak + Istri)
+Halim + Ririn
+(Suami/anak + Istri)
+Tohir + Fatimah
+(Suami/anak + Istri)
+1 2 3 4
+Faisal
+1
+Alu'
+2
+Risqi'
+3
+Alvin
+1
+Najwa
+2
+SuciWafi
+Gambar 3.1 Bagan silsilah keluarga
+Gambar 3.1 menunjukkan silsilah keluarga Bapak Madhuri dan Ibu Marhawi. 
+Tanda panah menunjukkan hubungan “mempunyai anak”. Empat anak Pak 
+Madhuri dan Bu Marhawi adalah Sulastri, Idris, Halim, dan Tohir. 
+Jika anak-anak Pak Madhuri dan Bu Marhawi dikelompokkan menjadi satu 
+dalam himpunan A, maka anggota himpunan A adalah Sulastri, Idris, Halim, 
+dan Tohir.
+A = {Sulastri, Idris, Halim, Tohir}
+Sedangkan cucu-cucu dari Pak Madhuri dan Bu Marhawi dapat dikelompokkan 
+dalam himpunan B, maka anggota himpunan B adalah Wafi, Faisal, Alu', 
+Risqi', Alvin, Najwa, dan Suci.
+B = {Wafi, Faisal, Alu', Risqi, Alvin, Najwa, Suci}
+Hubungan anggota himpunan B ke anggota himpunan A memiliki hubungan 
+keluarga (relasi) “anak dari”. Sedangkan hubungan anggota himpunan B 
+dengan Pak Madhuri dan Bu Marhawi memiliki relasi “cucu dari”.

@@ -1,0 +1,363 @@
+{
+  "variant": "v0-baseline",
+  "sampleId": "sample-3",
+  "topic": "Pewarisan Sifat pada Makhluk Hidup",
+  "sessionId": "d2aae57a-8b42-447e-ad84-c47411bec4da",
+  "documentId": "f6e425b4-58da-4f2f-9a6e-6b3a6b91a61a",
+  "latencyMs": 102506,
+  "questions": [
+    {
+      "number": 0,
+      "questionType": "multiple_choice",
+      "questionText": "Pada DNA, basa nitrogen yang berpasangan dengan guanin (G) adalah...",
+      "options": [
+        {
+          "text": "Adenin",
+          "label": "A"
+        },
+        {
+          "text": "Timin",
+          "label": "B"
+        },
+        {
+          "text": "Sitosin",
+          "label": "C"
+        },
+        {
+          "text": "Urasil",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Jumlah kromosom pada sel tubuh manusia yang sehat adalah...",
+      "options": [
+        {
+          "text": "23 buah",
+          "label": "A"
+        },
+        {
+          "text": "46 buah",
+          "label": "B"
+        },
+        {
+          "text": "23 pasang (46 buah)",
+          "label": "C"
+        },
+        {
+          "text": "46 pasang",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar berikut. Berdasarkan gambar, perbandingan genotipe pada keturunan F2 hasil persilangan Uu × Uu adalah...",
+      "options": [
+        {
+          "text": "1 UU : 1 Uu : 1 uu",
+          "label": "A"
+        },
+        {
+          "text": "1 UU : 2 Uu : 1 uu",
+          "label": "B"
+        },
+        {
+          "text": "2 UU : 1 Uu : 1 uu",
+          "label": "C"
+        },
+        {
+          "text": "3 UU : 1 uu",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Persilangan dihibrida antara kapri berbiji bulat kuning (BbKk) dengan sesamanya menghasilkan perbandingan fenotipe F2, yaitu...",
+      "options": [
+        {
+          "text": "3:1",
+          "label": "A"
+        },
+        {
+          "text": "9:3:3:1",
+          "label": "B"
+        },
+        {
+          "text": "1:2:1",
+          "label": "C"
+        },
+        {
+          "text": "9:3:4",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Gen penyebab hemofilia terletak pada kromosom...",
+      "options": [
+        {
+          "text": "Autosom",
+          "label": "A"
+        },
+        {
+          "text": "Kromosom X",
+          "label": "B"
+        },
+        {
+          "text": "Kromosom Y",
+          "label": "C"
+        },
+        {
+          "text": "Kromosom 21",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Albino merupakan kelainan yang disebabkan oleh gen resesif (a). Genotipe seorang penderita albino adalah...",
+      "options": [
+        {
+          "text": "AA",
+          "label": "A"
+        },
+        {
+          "text": "Aa",
+          "label": "B"
+        },
+        {
+          "text": "aa",
+          "label": "C"
+        },
+        {
+          "text": "AA atau Aa",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Cermati diagram di bawah ini. Jenis gamet yang dihasilkan dari induk bergenotipe BbKk adalah...",
+      "options": [
+        {
+          "text": "BK dan bk saja",
+          "label": "A"
+        },
+        {
+          "text": "BK, Bk, dan bk saja",
+          "label": "B"
+        },
+        {
+          "text": "BK, Bk, bK, dan bk",
+          "label": "C"
+        },
+        {
+          "text": "B, b, K, dan k",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Tanaman yang digunakan Mendel dalam penelitian pewarisan sifat adalah...",
+      "options": [
+        {
+          "text": "Kacang tanah",
+          "label": "A"
+        },
+        {
+          "text": "Kacang kapri",
+          "label": "B"
+        },
+        {
+          "text": "Kacang hijau",
+          "label": "C"
+        },
+        {
+          "text": "Kacang kedelai",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Alat yang digunakan untuk memisahkan potongan DNA berdasarkan ukuran dalam tes DNA adalah...",
+      "options": [
+        {
+          "text": "Sentrifugasi",
+          "label": "A"
+        },
+        {
+          "text": "Elektroforesis",
+          "label": "B"
+        },
+        {
+          "text": "Spektrofotometer",
+          "label": "C"
+        },
+        {
+          "text": "Mikroskop",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Varietas padi IPB 4S dihasilkan oleh...",
+      "options": [
+        {
+          "text": "Universitas Gadjah Mada",
+          "label": "A"
+        },
+        {
+          "text": "Institut Pertanian Bogor",
+          "label": "B"
+        },
+        {
+          "text": "Universitas Indonesia",
+          "label": "C"
+        },
+        {
+          "text": "Badan Penelitian dan Pengembangan Pertanian",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 10,
+      "questionType": "short_answer",
+      "questionText": "Sebutkan dua perbedaan antara DNA dan RNA berdasarkan gula penyusun dan basa nitrogennya!",
+      "options": null,
+      "correctAnswer": "DNA menggunakan gula deoksiribosa dan basa timin (T), sedangkan RNA menggunakan gula ribosa dan basa urasil (U) sebagai pengganti timin."
+    },
+    {
+      "number": 11,
+      "questionType": "short_answer",
+      "questionText": "Amati potret ilmuwan berikut. Teknik apakah yang digunakannya untuk mempelajari struktur DNA?",
+      "options": null,
+      "correctAnswer": "Kristalografi (difraksi) sinar-X"
+    },
+    {
+      "number": 12,
+      "questionType": "short_answer",
+      "questionText": "Jelaskan secara singkat bunyi Hukum I Mendel (Hukum Segregasi)!",
+      "options": null,
+      "correctAnswer": "Pada waktu pembentukan gamet, alela yang menentukan suatu sifat akan memisah secara bebas (segregasi), sehingga setiap gamet hanya mengandung satu alela dari setiap pasangan."
+    },
+    {
+      "number": 13,
+      "questionType": "essay",
+      "questionText": "Seorang laki-laki dengan cuping telinga terpisah (genotipe Gg) menikah dengan perempuan cuping telinga melekat (gg). Buatlah diagram persilangan (Punnett square) dan tentukan perbandingan fenotipe anak-anaknya!",
+      "options": null,
+      "correctAnswer": "Parental (P): Gg (terpisah) × gg (melekat). Gamet: G, g dari ayah; g dari ibu. Keturunan (F1): Gg (cuping terpisah) dan gg (cuping melekat) dengan perbandingan 1:1."
+    },
+    {
+      "number": 14,
+      "questionType": "essay",
+      "questionText": "Perhatikan diagram pewarisan warna kulit berikut. Jelaskan mengapa warna kulit termasuk sifat poligenik, dan sebutkan tiga kemungkinan fenotipe dari hasil persilangan AaBbCc × AaBbCc!",
+      "options": null,
+      "correctAnswer": "Warna kulit termasuk sifat poligenik karena dikendalikan oleh banyak gen (gen A, B, dan C) yang bersama-sama memengaruhi pembentukan pigmen melanin. Tiga kemungkinan fenotipe: sangat gelap (AABBCC), sedang (AaBbCc), dan sangat terang (aabbcc)."
+    }
+  ],
+  "structural": {
+    "score": 77.3,
+    "templateSim": 56.7,
+    "cognitiveSim": 73.3,
+    "stemEllipsisSim": 86.7,
+    "fourOptionSim": 100,
+    "optionShapeSim": 93.3,
+    "indoSim": 96.7,
+    "gold": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 4,
+        "pasangan": 0,
+        "ciri_ciri": 1,
+        "skenario": 1,
+        "urutan": 0,
+        "hitung_kromosom": 6,
+        "proses": 0,
+        "tujuan": 1,
+        "image_leadin": 0,
+        "other": 4
+      },
+      "cognitiveHist": {
+        "recall": 5,
+        "comprehend": 4,
+        "apply": 6
+      },
+      "stemEllipsisRate": 0.5333333333333333,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 7,
+        "long_statements": 2,
+        "mixed": 1,
+        "none": 5
+      },
+      "numberedListRate": 0.06666666666666667,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 1.8
+    },
+    "generated": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 1,
+        "urutan": 0,
+        "hitung_kromosom": 7,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 3,
+        "other": 7
+      },
+      "cognitiveHist": {
+        "recall": 8,
+        "comprehend": 0,
+        "apply": 7
+      },
+      "stemEllipsisRate": 0.6666666666666666,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 8,
+        "long_statements": 1,
+        "mixed": 1,
+        "none": 5
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0.2,
+      "avgIndonesianMarkers": 1.6
+    }
+  },
+  "judgeScore": 65,
+  "judgeRationale": "Both sets use formal Indonesian with 4-option MCQs and cover genetics topics, but SET B includes more image-dependent and direct fact questions, while SET A has more varied cognitive styles including application and scenario-based items.",
+  "sanityRate": 100,
+  "sanityNotes": "All questions are typical genetics topics covered in SMP biology textbooks.",
+  "patternScore": 71.8
+}

@@ -1,0 +1,314 @@
+{
+  "sampleId": "sample-33",
+  "topic": "Relasi dan Fungsi",
+  "grade": "SMP",
+  "classGrade": "VII",
+  "curriculum": "Kurikulum Merdeka",
+  "questionTypeCounts": [
+    {
+      "type": "multiple_choice",
+      "count": 10
+    },
+    {
+      "type": "short_answer",
+      "count": 3
+    },
+    {
+      "type": "essay",
+      "count": 2
+    }
+  ],
+  "source": "samples/sample-33/exercise.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Diketahui himpunan P = {1, 2, 3, 5} dan Q = {2, 3, 4, 6, 8, 10}. Jika ditentukan himpunan pasangan berurutan {(1, 2), (2, 4), (3, 6), (5, 10)}, maka relasi dari himpunan P ke himpunan Q adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "kurang dari C. dua kali dari"
+        },
+        {
+          "label": "B",
+          "text": "setengah dari D. kuadrat dari 2. Empat orang anak bernama Tohir, Erik, Taufiq, dan Zainul mempunyai kesukaan masing-masing. Kesukaan Tohir belajar kelompok dan menulis cerpen, kesukaan Erik bermain komputer dan renang, kesukaan Taufiq menulis cerpen dan renang, dan kesukaan Zainul renang saja. Anak yang mempunyai kesukaan menulis cerpen, tetapi tidak suka belajar kelompok adalah .... A. Tohir"
+        },
+        {
+          "label": "C",
+          "text": "Taufiq B. Erik"
+        },
+        {
+          "label": "D",
+          "text": "Zainul"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Diketahui himpunan pasangan berurutan: (i) {(0, 0), (2, 1), (4, 2), (6, 3)} (ii) {(1, 3), (2, 3), (1, 4), (2, 4)} (iii) {(1, 5), (2, 5), (3, 5), (4, 5)} (iv) {(5, 1), (5, 2), (4, 1), (4, 2)} Himpunan pasangan berurutan yang merupakan pemetaan ( fungsi) adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "(i) dan (ii) C. (ii) dan (iii)"
+        },
+        {
+          "label": "B",
+          "text": "(i) dan (iii) D. (iii) dan (iv) 4. Antara himpunan A = {a, b} dan himpunan B = {1, 2, 3} dapat dibentuk banyak pemetaan dengan .... A. 3 cara"
+        },
+        {
+          "label": "C",
+          "text": "8 cara B. 6 cara"
+        },
+        {
+          "label": "D",
+          "text": "9 cara Uji Kompetensi +=+?? 3 128 Kelas VIII SMP/MTs Semester I"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Bila P = {a, b, c} dan Q = {1, 2, 3}, maka banyaknya korespondensi satu-satu yang mungkin dari P ke Q adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "3 cara C. 9 cara"
+        },
+        {
+          "label": "B",
+          "text": "6 cara D. 27 cara 6. Fungsi f : x → x + 1 dengan daerah asal {2, 4, 6, 8} memiliki daerah hasil .... A. {2, 4, 6, 8}"
+        },
+        {
+          "label": "C",
+          "text": "{1, 3, 5, 7} B. {3, 5, 7, 9}"
+        },
+        {
+          "label": "D",
+          "text": "{2, 3, 4, 5}"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Jika diketahui f(x) = 2x + 5 dan f(x) = –3, maka nilai dari x adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "–3 C. –5"
+        },
+        {
+          "label": "B",
+          "text": "–4 D. –6 8. Diketahui fungsi f : x → 2x – 1. Pernyataan di bawah ini yang salah adalah .... A. 3 → 4"
+        },
+        {
+          "label": "C",
+          "text": "jika f(a) = 5, maka a = 3 B. f(–5) = –11"
+        },
+        {
+          "label": "D",
+          "text": "bayangan 1 adalah 1"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Diketahui G(x) = ax + b. Jika G(–2) = –4 dan G(–6) = 12, maka bentuk fungsi G adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "G(x) = –4x + 12 C. G(x) = –2x + 6"
+        },
+        {
+          "label": "B",
+          "text": "G(x) = –4x – 12 D. G(x) = –4x – 6 10. Daerah asal fungsi yang didefinisikan dengan fungsi f dari x ke 2x – 1 adalah {x | −2x < x < 3; x ∈ B}. Daerah hasilnya adalah ..... A. {–3, –1, 1, 3}"
+        },
+        {
+          "label": "C",
+          "text": "{–2, –1, 0, 1, 3} B. {–2, –3, –1, 1, 3, 4}"
+        },
+        {
+          "label": "D",
+          "text": "{ –1, 0, 1, 2}"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 11,
+      "questionType": "multiple_choice",
+      "questionText": "Jika A = {2, 3, 5, 7} dan B = {4, 6, 8, 9, 10}, banyaknya pemetaan yang mungkin dari A ke B dan dari B ke A berturut-turut adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "225 dan 425 C. 525 dan 256"
+        },
+        {
+          "label": "B",
+          "text": "525 dan 225 D. 625 dan 256 129 Kurikulum 2 12. Fungsi f ditentukan oleh f(x) = ax + b. Jika nilai dari fungsi itu untuk x = –3 adalah –15 dan nilai dari fungsi itu untuk x = 3 adalah 9, nilai dari f(−2) + f(2) adalah .... A. –6"
+        },
+        {
+          "label": "C",
+          "text": "4 B. –4"
+        },
+        {
+          "label": "D",
+          "text": "6"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 13,
+      "questionType": "multiple_choice",
+      "questionText": "Fungsi f ditentukan oleh f(x) = ax + b. Jika pasangan-pasangan berurutan (p, −3), (−3, q), (r, 2), (2, −2), dan (−2, 6) adalah anggota dari fungsi itu, nilai p, q, dan r adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "p = 5, q = 6, dan r = 2 C. p = 5 2 , q = 8, dan r = 0"
+        },
+        {
+          "label": "B",
+          "text": "p = 3 2, q = 8, dan r = 2 D. p = 3, q = 6, dan r = 3 14. Diketahui fungsi f(x) = mx + n, f(–1) = 1, dan f(1) = 5. Nilai m dan n berturut-turut adalah… A. –2 dan –3"
+        },
+        {
+          "label": "C",
+          "text": "–2 dan 3 B. 2 dan –3"
+        },
+        {
+          "label": "D",
+          "text": "2 dan 3"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 15,
+      "questionType": "multiple_choice",
+      "questionText": "Jika f(2x + 1) = (x – 12)(x + 13), maka nilai dari f(31) adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "46 C. 66"
+        },
+        {
+          "label": "B",
+          "text": "64 D. 84 16. Misalkan f(x) adalah fungsi yang memenuhi (a) untuk setiap bilangan real x dan y, maka f(x + y) = x + f(y) dan (b) f(0) = 2 Nilai dari f(2.016) adalah .... A. 2.015"
+        },
+        {
+          "label": "C",
+          "text": "2.017 B. 2.016"
+        },
+        {
+          "label": "D",
+          "text": "2.018"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 17,
+      "questionType": "multiple_choice",
+      "questionText": "Diketahui fungsi bilangan real f(x) = x x 1 − , untuk x ≠ 1 130 Kelas VIII SMP/MTs Semester I Nilai dari f(2.016) + f(2.015) + ... + f(3) + f(2) + f 2 1ak + f 3 1ak + ... + .f 2 015 1ak + .f 2 016 1ak adalah ...",
+      "options": [
+        {
+          "label": "A",
+          "text": "–4.034 C. –4.030"
+        },
+        {
+          "label": "B",
+          "text": "–4.032 D. –4.028 18. Untuk setiap bilangan bulat x didefinisikan fungsi f dengan f(x) adalah banyaknya angka (digit) dari x. Contoh: f(216) = 3, dan f(2.016) = 4. Nilai f(2 2.016 ) + f(5 2.016 ) adalah .... A. 2.015"
+        },
+        {
+          "label": "C",
+          "text": "2.017 B. 2.016"
+        },
+        {
+          "label": "D",
+          "text": "2.018"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 19,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan diagram berikut ini. • 101 • 102 • 103 • 104 Tohir • Taufiq • Erik • Zainul • BA Nomor Induk Pernyataan yang dapat kamu simpulkan dari diagram panah di atas adalah sebagai berikut. (i ) Setiap siswa tepat mempunyai nomor induk satu. Jadi, setiap anggota A hanya mempunyai tepat satu dengan anggota B. ( ii) Dengan demikian pengertian dari korespondesi satu-satu adalah beberapa dari anggota himpunan A maupun dari anggota B hanya mempunyai satu kawan. (iii ) Setiap siswa bisa mempunyai nomor induk lebih dari satu. Jadi, setiap anggota A bisa mempunyai lebih satu dengan anggota B. (iv ) Dengan demikian pengertian dari korespondesi satu-satu adalah setiap dari anggota himpunan A maupun dari anggota B hanya mempunyai satu kawan. 131 Kurikulum 2 Pernyataan yang benar dari kesimpulan di atas adalah ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "(i) dan (ii) C. (i) dan (iv)"
+        },
+        {
+          "label": "B",
+          "text": "(ii) dan (iii) D. (ii) dan (iv) 20. Jika X = {2, 3, 5, 7, 11} dan Y = { a, b, c, d, e}, banyaknya korespondensi satu-satu yang mungkin terjadi adalah .... A. 24"
+        },
+        {
+          "label": "C",
+          "text": "540 B. 120"
+        },
+        {
+          "label": "D",
+          "text": "720"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 1,
+      "questionType": "essay",
+      "questionText": "Diketahui himpunan A = {1, 3, 4}, B = {2, 3, 4, 5} dan relasi dari A ke B menyatakan “kurang dari “. Nyatakan relasi tersebut dalam: a. diagram panah, b. himpunan pasangan berurutan, dan c. diagram Kartesius.",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 2,
+      "questionType": "essay",
+      "questionText": "Jika A = {0, 2, 4, 6, 8, 10, 12} dan B = {0, 1, 2, 3, 4, 5, 6, 7}, nyatakan relasi dari A ke B yang menyatakan hubungan “dua kali dari“ dalam: a. gambarlah diagram panah, b. himpunan pasangan berurutan, dan c. gambarlah diagram Kartesius.",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 3,
+      "questionType": "essay",
+      "questionText": "Pak Mahir mempunyai tiga anak bernama Budi, Ani, dan Anton. Pak Ridwan mempunyai dua anak bernama Alex dan Rini. Pak Rudi mempunyai seorang anak bernama Suci. a. Nyatakan dalam diagram panah, relasi “ayah dari”. b. Apakah relasi tersebut merupakan fungsi? Jelaskan. c. Nyatakan dalam diagram panah, relasi “anak dari”. d. Apakah relasi pada soal c merupakan fungsi? Jelaskan.",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 4,
+      "questionType": "essay",
+      "questionText": "Diketahui suatu relasi dari himpunan P ke himpunan Q yang dinyatakan dengan himpunan pasangan berurutan {(–1, 2), (1, 4), (3, 6), (5, 8), (7, 10)}. a. Sebutkan anggota-anggota himpunan P dan Q. 132 Kelas VIII SMP/MTs Semester I b. Sebutkan dua relasi lain yang mungkin dari himpunan P ke himpunan Q. c. Gambarlah koordinat Kartesius dari relasi tersebut. d. Jika himpunan P merupakan daerah asal dari relasi (b) dan dengan melihat koordinat Kartesius pada (c), apakah relasi dari himpunan P ke himpunan Q merupakan fungsi?",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 5,
+      "questionType": "essay",
+      "questionText": "Diketahui suatu relasi dari himpunan A ke himpunan B yang dinyatakan dengan himpunan pasangan berurutan {(–2, 4), (–1, –3), (2, 6), (7,10), (8, –5)}. a. Tulislah himpunan A dan B. b. Gambarlah koordinat Kartesius dari relasi tersebut. c. Apakah relasi itu merupakan fungsi? Jelaskan.",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    }
+  ]
+}

@@ -1,0 +1,997 @@
+[
+  {
+    "sampleId": "sample-1",
+    "sampleNum": 1,
+    "topic": "Sistem Reproduksi pada Manusia",
+    "grade": "SMP",
+    "classGrade": "IX",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": null,
+    "bab": null,
+    "materialsPages": 44,
+    "exercisePages": 2,
+    "mcqDetected": 10,
+    "openDetected": 0,
+    "goldQuestions": 10,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 10
+      }
+    ],
+    "skipReason": null,
+    "duplicateOf": null,
+    "evalEligible": true
+  },
+  {
+    "sampleId": "sample-2",
+    "sampleNum": 2,
+    "topic": "Sistem Perkembangbiakan Tumbuhan dan Hewan",
+    "grade": "SMP",
+    "classGrade": "IX",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": null,
+    "bab": null,
+    "materialsPages": 59,
+    "exercisePages": 2,
+    "mcqDetected": 7,
+    "openDetected": 0,
+    "goldQuestions": 7,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 7
+      }
+    ],
+    "skipReason": null,
+    "duplicateOf": null,
+    "evalEligible": true
+  },
+  {
+    "sampleId": "sample-3",
+    "sampleNum": 3,
+    "topic": "Pewarisan Sifat pada Makhluk Hidup",
+    "grade": "SMP",
+    "classGrade": "IX",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": null,
+    "bab": null,
+    "materialsPages": 36,
+    "exercisePages": 4,
+    "mcqDetected": 10,
+    "openDetected": 5,
+    "goldQuestions": 15,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 10
+      },
+      {
+        "type": "short_answer",
+        "count": 3
+      },
+      {
+        "type": "essay",
+        "count": 2
+      }
+    ],
+    "skipReason": null,
+    "duplicateOf": null,
+    "evalEligible": true
+  },
+  {
+    "sampleId": "sample-4",
+    "sampleNum": 4,
+    "topic": "Tekanan Zat dan Penerapannya dalam Kehidupan Sehari-hari",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Ilmu Pengetahuan alam Kelas VIII Semester 2",
+    "bab": 7,
+    "materialsPages": 37,
+    "exercisePages": 7,
+    "mcqDetected": 10,
+    "openDetected": 0,
+    "goldQuestions": 10,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 10
+      }
+    ],
+    "skipReason": null,
+    "duplicateOf": null,
+    "evalEligible": true
+  },
+  {
+    "sampleId": "sample-5",
+    "sampleNum": 5,
+    "topic": "Sistem Pernapasan",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Ilmu Pengetahuan alam Kelas VIII Semester 2",
+    "bab": 8,
+    "materialsPages": 31,
+    "exercisePages": 3,
+    "mcqDetected": 10,
+    "openDetected": 5,
+    "goldQuestions": 15,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 10
+      },
+      {
+        "type": "short_answer",
+        "count": 3
+      },
+      {
+        "type": "essay",
+        "count": 2
+      }
+    ],
+    "skipReason": null,
+    "duplicateOf": null,
+    "evalEligible": true
+  },
+  {
+    "sampleId": "sample-6",
+    "sampleNum": 6,
+    "topic": "Sistem Ekskresi Manusia",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Ilmu Pengetahuan alam Kelas VIII Semester 2",
+    "bab": 9,
+    "materialsPages": 31,
+    "exercisePages": 5,
+    "mcqDetected": 10,
+    "openDetected": 5,
+    "goldQuestions": 15,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 10
+      },
+      {
+        "type": "short_answer",
+        "count": 3
+      },
+      {
+        "type": "essay",
+        "count": 2
+      }
+    ],
+    "skipReason": null,
+    "duplicateOf": null,
+    "evalEligible": true
+  },
+  {
+    "sampleId": "sample-7",
+    "sampleNum": 7,
+    "topic": "Ilmu Pengetahuan Sosial Kelas VIII",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Ilmu Pengetahuan Sosial Kelas VIII",
+    "bab": 2,
+    "materialsPages": 48,
+    "exercisePages": 8,
+    "mcqDetected": 0,
+    "openDetected": 0,
+    "goldQuestions": 0,
+    "hasUjiKompetensi": false,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 5
+      }
+    ],
+    "skipReason": "no_uji_kompetensi_mcq",
+    "duplicateOf": null,
+    "evalEligible": false
+  },
+  {
+    "sampleId": "sample-8",
+    "sampleNum": 8,
+    "topic": "Ilmu Pengetahuan Sosial Kelas VIII",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Ilmu Pengetahuan Sosial Kelas VIII",
+    "bab": 3,
+    "materialsPages": 54,
+    "exercisePages": 4,
+    "mcqDetected": 0,
+    "openDetected": 0,
+    "goldQuestions": 0,
+    "hasUjiKompetensi": false,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 5
+      }
+    ],
+    "skipReason": "no_uji_kompetensi_mcq",
+    "duplicateOf": null,
+    "evalEligible": false
+  },
+  {
+    "sampleId": "sample-9",
+    "sampleNum": 9,
+    "topic": "Ilmu Pengetahuan Sosial Kelas VIII",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Ilmu Pengetahuan Sosial Kelas VIII",
+    "bab": 4,
+    "materialsPages": 79,
+    "exercisePages": 5,
+    "mcqDetected": 0,
+    "openDetected": 0,
+    "goldQuestions": 0,
+    "hasUjiKompetensi": false,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 5
+      }
+    ],
+    "skipReason": "no_uji_kompetensi_mcq",
+    "duplicateOf": null,
+    "evalEligible": false
+  },
+  {
+    "sampleId": "sample-10",
+    "sampleNum": 10,
+    "topic": "Sistem Reproduksi pada Manusia",
+    "grade": "SMP",
+    "classGrade": "IX",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Ilmu Pengetahuan alam Kelas IX Semester 1",
+    "bab": 1,
+    "materialsPages": 46,
+    "exercisePages": 4,
+    "mcqDetected": 10,
+    "openDetected": 5,
+    "goldQuestions": 15,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 10
+      },
+      {
+        "type": "short_answer",
+        "count": 3
+      },
+      {
+        "type": "essay",
+        "count": 2
+      }
+    ],
+    "skipReason": "duplicate_of_sample-1",
+    "duplicateOf": "sample-1",
+    "evalEligible": false
+  },
+  {
+    "sampleId": "sample-11",
+    "sampleNum": 11,
+    "topic": "Sistem Perkembangbiakan Tumbuhan dan Hewan",
+    "grade": "SMP",
+    "classGrade": "IX",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Ilmu Pengetahuan alam Kelas IX Semester 1",
+    "bab": 2,
+    "materialsPages": 61,
+    "exercisePages": 7,
+    "mcqDetected": 9,
+    "openDetected": 5,
+    "goldQuestions": 14,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 9
+      },
+      {
+        "type": "short_answer",
+        "count": 3
+      },
+      {
+        "type": "essay",
+        "count": 2
+      }
+    ],
+    "skipReason": "duplicate_of_sample-2",
+    "duplicateOf": "sample-2",
+    "evalEligible": false
+  },
+  {
+    "sampleId": "sample-12",
+    "sampleNum": 12,
+    "topic": "Pewarisan Sifat pada Makhluk Hidup",
+    "grade": "SMP",
+    "classGrade": "IX",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Ilmu Pengetahuan alam Kelas IX Semester 1",
+    "bab": 3,
+    "materialsPages": 38,
+    "exercisePages": 6,
+    "mcqDetected": 10,
+    "openDetected": 5,
+    "goldQuestions": 15,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 10
+      },
+      {
+        "type": "short_answer",
+        "count": 3
+      },
+      {
+        "type": "essay",
+        "count": 2
+      }
+    ],
+    "skipReason": "duplicate_of_sample-3",
+    "duplicateOf": "sample-3",
+    "evalEligible": false
+  },
+  {
+    "sampleId": "sample-13",
+    "sampleNum": 13,
+    "topic": "Kemagnetan dan Pemanfaatannya",
+    "grade": "SMP",
+    "classGrade": "IX",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Ilmu Pengetahuan alam Kelas IX Semester 2",
+    "bab": 6,
+    "materialsPages": 44,
+    "exercisePages": 6,
+    "mcqDetected": 10,
+    "openDetected": 0,
+    "goldQuestions": 10,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 10
+      }
+    ],
+    "skipReason": null,
+    "duplicateOf": null,
+    "evalEligible": true
+  },
+  {
+    "sampleId": "sample-14",
+    "sampleNum": 14,
+    "topic": "Bioteknologi",
+    "grade": "SMP",
+    "classGrade": "IX",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Ilmu Pengetahuan alam Kelas IX Semester 2",
+    "bab": 7,
+    "materialsPages": 39,
+    "exercisePages": 5,
+    "mcqDetected": 10,
+    "openDetected": 5,
+    "goldQuestions": 15,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 10
+      },
+      {
+        "type": "short_answer",
+        "count": 3
+      },
+      {
+        "type": "essay",
+        "count": 2
+      }
+    ],
+    "skipReason": null,
+    "duplicateOf": null,
+    "evalEligible": true
+  },
+  {
+    "sampleId": "sample-15",
+    "sampleNum": 15,
+    "topic": "Partikel Penyusun Benda dan Makhluk Hidup",
+    "grade": "SMP",
+    "classGrade": "IX",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Ilmu Pengetahuan alam Kelas IX Semester 2",
+    "bab": 8,
+    "materialsPages": 55,
+    "exercisePages": 5,
+    "mcqDetected": 7,
+    "openDetected": 5,
+    "goldQuestions": 12,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 7
+      },
+      {
+        "type": "short_answer",
+        "count": 3
+      },
+      {
+        "type": "essay",
+        "count": 2
+      }
+    ],
+    "skipReason": null,
+    "duplicateOf": null,
+    "evalEligible": true
+  },
+  {
+    "sampleId": "sample-16",
+    "sampleNum": 16,
+    "topic": "Pendidikan Pancasila Dan Kewarganegaraan Kelas IX",
+    "grade": "SMP",
+    "classGrade": "IX",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Pendidikan Pancasila Dan Kewarganegaraan Kelas IX",
+    "bab": 1,
+    "materialsPages": 28,
+    "exercisePages": 2,
+    "mcqDetected": 0,
+    "openDetected": 0,
+    "goldQuestions": 0,
+    "hasUjiKompetensi": false,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 5
+      }
+    ],
+    "skipReason": "no_uji_kompetensi_mcq",
+    "duplicateOf": null,
+    "evalEligible": false
+  },
+  {
+    "sampleId": "sample-17",
+    "sampleNum": 17,
+    "topic": "Pendidikan Pancasila Dan Kewarganegaraan Kelas IX",
+    "grade": "SMP",
+    "classGrade": "IX",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Pendidikan Pancasila Dan Kewarganegaraan Kelas IX",
+    "bab": 2,
+    "materialsPages": 21,
+    "exercisePages": 1,
+    "mcqDetected": 0,
+    "openDetected": 0,
+    "goldQuestions": 0,
+    "hasUjiKompetensi": false,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 5
+      }
+    ],
+    "skipReason": "no_uji_kompetensi_mcq",
+    "duplicateOf": null,
+    "evalEligible": false
+  },
+  {
+    "sampleId": "sample-18",
+    "sampleNum": 18,
+    "topic": "Pendidikan Pancasila Dan Kewarganegaraan Kelas IX",
+    "grade": "SMP",
+    "classGrade": "IX",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Pendidikan Pancasila Dan Kewarganegaraan Kelas IX",
+    "bab": 3,
+    "materialsPages": 41,
+    "exercisePages": 1,
+    "mcqDetected": 0,
+    "openDetected": 0,
+    "goldQuestions": 0,
+    "hasUjiKompetensi": false,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 5
+      }
+    ],
+    "skipReason": "no_uji_kompetensi_mcq",
+    "duplicateOf": null,
+    "evalEligible": false
+  },
+  {
+    "sampleId": "sample-19",
+    "sampleNum": 19,
+    "topic": "Pendidikan Pancasila dan Kewarganegaraan Kelas VII ",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Pendidikan Pancasila dan Kewarganegaraan Kelas VII ",
+    "bab": 1,
+    "materialsPages": 29,
+    "exercisePages": 3,
+    "mcqDetected": 0,
+    "openDetected": 0,
+    "goldQuestions": 0,
+    "hasUjiKompetensi": false,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 5
+      }
+    ],
+    "skipReason": "no_uji_kompetensi_mcq",
+    "duplicateOf": null,
+    "evalEligible": false
+  },
+  {
+    "sampleId": "sample-20",
+    "sampleNum": 20,
+    "topic": "Pendidikan Pancasila dan Kewarganegaraan Kelas VII ",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Pendidikan Pancasila dan Kewarganegaraan Kelas VII ",
+    "bab": 2,
+    "materialsPages": 28,
+    "exercisePages": 2,
+    "mcqDetected": 0,
+    "openDetected": 0,
+    "goldQuestions": 0,
+    "hasUjiKompetensi": false,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 5
+      }
+    ],
+    "skipReason": "no_uji_kompetensi_mcq",
+    "duplicateOf": null,
+    "evalEligible": false
+  },
+  {
+    "sampleId": "sample-21",
+    "sampleNum": 21,
+    "topic": "Pendidikan Pancasila dan Kewarganegaraan Kelas VII ",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Pendidikan Pancasila dan Kewarganegaraan Kelas VII ",
+    "bab": 3,
+    "materialsPages": 18,
+    "exercisePages": 2,
+    "mcqDetected": 0,
+    "openDetected": 0,
+    "goldQuestions": 0,
+    "hasUjiKompetensi": false,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 5
+      }
+    ],
+    "skipReason": "no_uji_kompetensi_mcq",
+    "duplicateOf": null,
+    "evalEligible": false
+  },
+  {
+    "sampleId": "sample-22",
+    "sampleNum": 22,
+    "topic": "Gerak Benda dan Makhluk Hidup",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Ilmu Pengetahuan Alam Kelas VIII ",
+    "bab": 1,
+    "materialsPages": 65,
+    "exercisePages": 9,
+    "mcqDetected": 10,
+    "openDetected": 5,
+    "goldQuestions": 15,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 10
+      },
+      {
+        "type": "short_answer",
+        "count": 3
+      },
+      {
+        "type": "essay",
+        "count": 2
+      }
+    ],
+    "skipReason": null,
+    "duplicateOf": null,
+    "evalEligible": true
+  },
+  {
+    "sampleId": "sample-23",
+    "sampleNum": 23,
+    "topic": "Usaha dan Pesawat Sederhana",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Ilmu Pengetahuan Alam Kelas VIII ",
+    "bab": 2,
+    "materialsPages": 24,
+    "exercisePages": 6,
+    "mcqDetected": 9,
+    "openDetected": 0,
+    "goldQuestions": 9,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 9
+      }
+    ],
+    "skipReason": null,
+    "duplicateOf": null,
+    "evalEligible": true
+  },
+  {
+    "sampleId": "sample-24",
+    "sampleNum": 24,
+    "topic": "Struktur dan Fungsi Tumbuhan",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Ilmu Pengetahuan Alam Kelas VIII ",
+    "bab": 3,
+    "materialsPages": 44,
+    "exercisePages": 6,
+    "mcqDetected": 10,
+    "openDetected": 5,
+    "goldQuestions": 15,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 10
+      },
+      {
+        "type": "short_answer",
+        "count": 3
+      },
+      {
+        "type": "essay",
+        "count": 2
+      }
+    ],
+    "skipReason": null,
+    "duplicateOf": null,
+    "evalEligible": true
+  },
+  {
+    "sampleId": "sample-25",
+    "sampleNum": 25,
+    "topic": "Matematika Kelas VII Semester 1",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Matematika Kelas VII Semester 1",
+    "bab": 1,
+    "materialsPages": 97,
+    "exercisePages": 11,
+    "mcqDetected": 0,
+    "openDetected": 0,
+    "goldQuestions": 0,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 5
+      }
+    ],
+    "skipReason": "materials_pages>80",
+    "duplicateOf": null,
+    "evalEligible": false
+  },
+  {
+    "sampleId": "sample-26",
+    "sampleNum": 26,
+    "topic": "Matematika Kelas VII Semester 1",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Matematika Kelas VII Semester 1",
+    "bab": 2,
+    "materialsPages": 72,
+    "exercisePages": 12,
+    "mcqDetected": 0,
+    "openDetected": 0,
+    "goldQuestions": 0,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 5
+      }
+    ],
+    "skipReason": "too_few_mcq",
+    "duplicateOf": null,
+    "evalEligible": false
+  },
+  {
+    "sampleId": "sample-27",
+    "sampleNum": 27,
+    "topic": "Matematika Kelas VII Semester 1",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Matematika Kelas VII Semester 1",
+    "bab": 3,
+    "materialsPages": 43,
+    "exercisePages": 9,
+    "mcqDetected": 0,
+    "openDetected": 0,
+    "goldQuestions": 0,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 5
+      }
+    ],
+    "skipReason": "too_few_mcq",
+    "duplicateOf": null,
+    "evalEligible": false
+  },
+  {
+    "sampleId": "sample-28",
+    "sampleNum": 28,
+    "topic": "Matematika Kelas VII Semester 2",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Matematika Kelas VII Semester 2",
+    "bab": 5,
+    "materialsPages": 48,
+    "exercisePages": 14,
+    "mcqDetected": 0,
+    "openDetected": 0,
+    "goldQuestions": 0,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 5
+      }
+    ],
+    "skipReason": "too_few_mcq",
+    "duplicateOf": null,
+    "evalEligible": false
+  },
+  {
+    "sampleId": "sample-29",
+    "sampleNum": 29,
+    "topic": "Matematika Kelas VII Semester 2",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Matematika Kelas VII Semester 2",
+    "bab": 6,
+    "materialsPages": 27,
+    "exercisePages": 12,
+    "mcqDetected": 0,
+    "openDetected": 0,
+    "goldQuestions": 0,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 5
+      }
+    ],
+    "skipReason": "too_few_mcq",
+    "duplicateOf": null,
+    "evalEligible": false
+  },
+  {
+    "sampleId": "sample-30",
+    "sampleNum": 30,
+    "topic": "Matematika Kelas VII Semester 2",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Matematika Kelas VII Semester 2",
+    "bab": 7,
+    "materialsPages": 65,
+    "exercisePages": 14,
+    "mcqDetected": 0,
+    "openDetected": 0,
+    "goldQuestions": 0,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 5
+      }
+    ],
+    "skipReason": "too_few_mcq",
+    "duplicateOf": null,
+    "evalEligible": false
+  },
+  {
+    "sampleId": "sample-31",
+    "sampleNum": 31,
+    "topic": "Pola Bilangan",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Matematika Kelas VIII Semester 1",
+    "bab": 1,
+    "materialsPages": 29,
+    "exercisePages": 12,
+    "mcqDetected": 19,
+    "openDetected": 8,
+    "goldQuestions": 15,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 10
+      },
+      {
+        "type": "short_answer",
+        "count": 3
+      },
+      {
+        "type": "essay",
+        "count": 2
+      }
+    ],
+    "skipReason": null,
+    "duplicateOf": null,
+    "evalEligible": true
+  },
+  {
+    "sampleId": "sample-32",
+    "sampleNum": 32,
+    "topic": "Koordinat Kartesius",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Matematika Kelas VIII Semester 1",
+    "bab": 2,
+    "materialsPages": 20,
+    "exercisePages": 10,
+    "mcqDetected": 20,
+    "openDetected": 8,
+    "goldQuestions": 15,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 10
+      },
+      {
+        "type": "short_answer",
+        "count": 3
+      },
+      {
+        "type": "essay",
+        "count": 2
+      }
+    ],
+    "skipReason": null,
+    "duplicateOf": null,
+    "evalEligible": true
+  },
+  {
+    "sampleId": "sample-33",
+    "sampleNum": 33,
+    "topic": "Relasi dan Fungsi",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Matematika Kelas VIII Semester 1",
+    "bab": 3,
+    "materialsPages": 51,
+    "exercisePages": 12,
+    "mcqDetected": 10,
+    "openDetected": 8,
+    "goldQuestions": 15,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 10
+      },
+      {
+        "type": "short_answer",
+        "count": 3
+      },
+      {
+        "type": "essay",
+        "count": 2
+      }
+    ],
+    "skipReason": null,
+    "duplicateOf": null,
+    "evalEligible": true
+  },
+  {
+    "sampleId": "sample-34",
+    "sampleNum": 34,
+    "topic": "Matematika Kelas VIII Semester 2",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Matematika Kelas VIII Semester 2",
+    "bab": 7,
+    "materialsPages": 159,
+    "exercisePages": 11,
+    "mcqDetected": 10,
+    "openDetected": 8,
+    "goldQuestions": 15,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 10
+      },
+      {
+        "type": "short_answer",
+        "count": 3
+      },
+      {
+        "type": "essay",
+        "count": 2
+      }
+    ],
+    "skipReason": "materials_pages>80",
+    "duplicateOf": null,
+    "evalEligible": false
+  },
+  {
+    "sampleId": "sample-35",
+    "sampleNum": 35,
+    "topic": "Statistika",
+    "grade": "SMP",
+    "classGrade": "VII",
+    "curriculum": "Kurikulum Merdeka",
+    "source_title": "Matematika Kelas VIII Semester 2",
+    "bab": 9,
+    "materialsPages": 36,
+    "exercisePages": 12,
+    "mcqDetected": 10,
+    "openDetected": 8,
+    "goldQuestions": 15,
+    "hasUjiKompetensi": true,
+    "questionTypeCounts": [
+      {
+        "type": "multiple_choice",
+        "count": 10
+      },
+      {
+        "type": "short_answer",
+        "count": 3
+      },
+      {
+        "type": "essay",
+        "count": 2
+      }
+    ],
+    "skipReason": null,
+    "duplicateOf": null,
+    "evalEligible": true
+  }
+]

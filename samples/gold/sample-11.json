@@ -1,0 +1,289 @@
+{
+  "sampleId": "sample-11",
+  "topic": "Sistem Perkembangbiakan Tumbuhan dan Hewan",
+  "grade": "SMP",
+  "classGrade": "IX",
+  "curriculum": "Kurikulum Merdeka",
+  "questionTypeCounts": [
+    {
+      "type": "multiple_choice",
+      "count": 9
+    },
+    {
+      "type": "short_answer",
+      "count": 3
+    },
+    {
+      "type": "essay",
+      "count": 2
+    }
+  ],
+  "source": "samples/sample-11/exercise.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Reproduksi yang memungkinkan tumbuhan mewarisi semua karakteristik atau sifat hanya dari satu induk adalah perkembang ­ biakan secara ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "alami"
+        },
+        {
+          "label": "B",
+          "text": "seksual"
+        },
+        {
+          "label": "C",
+          "text": "generatif"
+        },
+        {
+          "label": "D",
+          "text": "vegetatif"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Perkembangbiakan vegetatif buatan dapat dilakukan dengan ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "merunduk, setek, dan cangkok"
+        },
+        {
+          "label": "B",
+          "text": "merunduk, enten, dan umbi lapis"
+        },
+        {
+          "label": "C",
+          "text": "okulasi, stolon, dan tunas adventif"
+        },
+        {
+          "label": "D",
+          "text": "rhizoma, enten, dan tunas adventif"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut menunjukkan seekor kupu­kupu hinggap pada tanaman bunga A lalu membawa serbuk sari dari tanaman bunga A ke tanaman bunga B. Hasil yang akan terjadi dari peristiwa tersebut adalah .... A B",
+      "options": [
+        {
+          "label": "A",
+          "text": "keturunan dari tanaman bunga A akan terlihat seperti tanaman bunga B"
+        },
+        {
+          "label": "B",
+          "text": "keturunan dari tanaman bunga B akan terlihat seperti tanaman bunga A"
+        },
+        {
+          "label": "C",
+          "text": "keturunan dari tanaman bunga B akan terlihat seperti tanaman bunga A dan tanaman bunga B"
+        },
+        {
+          "label": "D",
+          "text": "tidak akan terbentuk keturunan karena serbuk sari berasal dari jenis tanaman yang berbeda"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Gambar berikut menunjukkan tanaman buncis pada tahap pertumbuhan yang berbeda. Urutan tahapan pertumbuhan yang benar adalah …. 1 2 3 4",
+      "options": [
+        {
+          "label": "A",
+          "text": "2, 1, 3, 4"
+        },
+        {
+          "label": "B",
+          "text": "2, 1, 4, 3"
+        },
+        {
+          "label": "C",
+          "text": "3, 2, 1, 4"
+        },
+        {
+          "label": "D",
+          "text": "4, 2, 3, 1"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Dayu meletakkan beberapa biji kacang di piring yang diberi kapas basah. Siti juga menaruh beberapa biji kacang di piring dekat piring Dayu dan merendamnya dalam air. Setelah dua hari biji kacang milik Dayu tumbuh berkecambah sedangkan biji kacang milik Siti tidak tumbuh. Penyebab tidak tum buhnya biji kacang milik Siti adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "biji kacang milik Siti memerlukan lebih banyak udara"
+        },
+        {
+          "label": "B",
+          "text": "biji kacang milik Siti memerlukan lebih banyak cahaya"
+        },
+        {
+          "label": "C",
+          "text": "Siti tidak menaruh piring di tempat yang cukup hangat"
+        },
+        {
+          "label": "D",
+          "text": "Siti seharusnya menggunakan jenis biji kacang yang berbeda"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Peristiwa yang terjadi selama fertilisasi pada hewan adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "pembelahan sel telur"
+        },
+        {
+          "label": "B",
+          "text": "perkembangan embrio"
+        },
+        {
+          "label": "C",
+          "text": "produksi sel sperma dan sel telur"
+        },
+        {
+          "label": "D",
+          "text": "penyatuan inti sel sperma dan inti sel telur"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Perlakuan khusus pada serangga jantan agar tidak mem produksi sperma adalah untuk ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "menghasilkan spesies baru serangga"
+        },
+        {
+          "label": "B",
+          "text": "meningkatkan jumlah serangga betina"
+        },
+        {
+          "label": "C",
+          "text": "mengurangi jumlah populasi serangga"
+        },
+        {
+          "label": "D",
+          "text": "mencegah serangga melakukan fertilisasi"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Untuk mencari tahu apakah biji tumbuh lebih baik di tempat terang kita dapat melakukan kegiatan ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "meletakkan biji di tempat gelap dan hangat"
+        },
+        {
+          "label": "B",
+          "text": "meletakkan biji di tempat hangat dan terang"
+        },
+        {
+          "label": "C",
+          "text": "meletakkan biji tersebut di tempat terang dingin dan gelap dingin"
+        },
+        {
+          "label": "D",
+          "text": "meletakkan biji satu kelompok di tempat terang dan yang lain di tem pat gelap"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Ketika ulat menjadi dewasa, bentuknya akan menjadi ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "C."
+        },
+        {
+          "label": "B",
+          "text": "D. 10. Anak ayam tumbuh di dalam telur selama 21 hari sebelum menetas. Cadangan makanan anak ayam sebelum menetas adalah .... A. makanan dari induk betina B. kuning telur yang ada pada telur"
+        },
+        {
+          "label": "C",
+          "text": "putih telur yang mengandung protein albumin"
+        },
+        {
+          "label": "D",
+          "text": "kuning telur dan putih telur yang terdapat di dalam telur"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 1,
+      "questionType": "essay",
+      "questionText": "Jelaskan cara perkembangbiakan tumbuhan secara seksual!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 2,
+      "questionType": "essay",
+      "questionText": "Terlihat sekumpulan kupu­kupu yang hinggap pada bunga yang beraneka warna di halaman sekolah. Kupu­kupu yang hinggap pada bunga, ternyata dapat membantu penyerbukan pada bunga. Jelaskan bagaimana kupu­kupu dapat membantu proses penyerbukan pada bunga!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 3,
+      "questionType": "essay",
+      "questionText": "Beni telah mengembangbiakkan pohon mangga, satu dengan cara men cangkok dan satu dengan cara menanam bijinya. Dari kedua cara menanam tersebut analisislah, manakah di antara kedua cara penanaman tersebut yang akan menghasilkan sifat yang sama dengan induknya? Manakah yang akan cepat berbuah? Kaitkan dengan perbedaan sifat keturunan hasil perkembangbiakan vegetatif dan generatif!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 4,
+      "questionType": "essay",
+      "questionText": "Nyamuk merupakan salah satu serangga yang banyak merugikan dalam kehidupan manusia yang dalam perkembangan hidupnya mengalami metamorfosis sempurna. Upaya apakah yang efektif untuk mengendalikan nyamuk di lingkungan kita?",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 5,
+      "questionType": "essay",
+      "questionText": "Ayam petelur diberi perlakuan khusus agar dapat menghasilkan telur. Telur ayam yang dihasilkan oleh ayam petelur apabila dierami tidak akan menetas menjadi anak ayam. Analisislah mengapa telur tersebut tidak dapat berkembang menjadi anak ayam! Mengamati Perkembangbiakan Vegetatif pada Kentang",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    }
+  ]
+}

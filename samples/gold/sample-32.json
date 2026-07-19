@@ -1,0 +1,314 @@
+{
+  "sampleId": "sample-32",
+  "topic": "Koordinat Kartesius",
+  "grade": "SMP",
+  "classGrade": "VII",
+  "curriculum": "Kurikulum Merdeka",
+  "questionTypeCounts": [
+    {
+      "type": "multiple_choice",
+      "count": 10
+    },
+    {
+      "type": "short_answer",
+      "count": 3
+    },
+    {
+      "type": "essay",
+      "count": 2
+    }
+  ],
+  "source": "samples/sample-32/exercise.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Diketahui titik A(3,1), B(3, 5), C(–2, 5). Jika ketiga titik tersebut dihubungkan akan membentuk",
+      "options": [
+        {
+          "label": "A",
+          "text": "segitiga sama sisi"
+        },
+        {
+          "label": "B",
+          "text": "segitiga sama kaki"
+        },
+        {
+          "label": "C",
+          "text": "segitiga siku-siku"
+        },
+        {
+          "label": "D",
+          "text": "segitiga sembarang"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Diketahui dalam koordinat Kartesius terdapat titik P, Q, dan R. Titik P(4, 6) dan titik Q(7, 1). Jika titik P, Q, dan R dihubungkan akan membentuk segitiga siku-siku, maka koordinat titik R adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "(6, 5)"
+        },
+        {
+          "label": "B",
+          "text": "(4, 5)"
+        },
+        {
+          "label": "C",
+          "text": "6, 1)"
+        },
+        {
+          "label": "D",
+          "text": "(4, 1) Untuk pertanyaan nomor 3 – 10 perhatikan koordinat kartesius berikut ini"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Koordinat titik A adalah ...",
+      "options": [
+        {
+          "label": "A",
+          "text": "(5, 7)"
+        },
+        {
+          "label": "B",
+          "text": "(–5, 7)"
+        },
+        {
+          "label": "C",
+          "text": "(7, 5)"
+        },
+        {
+          "label": "D",
+          "text": "(7, –5)"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Koordinat titik C adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "(4, 4)"
+        },
+        {
+          "label": "B",
+          "text": "(–4, 4)"
+        },
+        {
+          "label": "C",
+          "text": "(4, –4)"
+        },
+        {
+          "label": "D",
+          "text": "(–4, –4) 1 2 3 4 5 6 7 8 9 10 0 −10−9−8−7−6−5−4−3−2−1 10 9 8 7 6 5 4 3 2 1 −2 −1 −3 −4 −5 −6 −7 −8 −9 −10 X Y A B H G E F C D 67 Kurikulum 2"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Koordinat titik F adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "(8, 6)"
+        },
+        {
+          "label": "B",
+          "text": "(8, –6)"
+        },
+        {
+          "label": "C",
+          "text": "(6, –8)"
+        },
+        {
+          "label": "D",
+          "text": "(–8, –6)"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Koordinat titik H adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "(6, 5)"
+        },
+        {
+          "label": "B",
+          "text": "(–6, 5)"
+        },
+        {
+          "label": "C",
+          "text": "(6, –5)"
+        },
+        {
+          "label": "D",
+          "text": "(–6, –5)"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Titik-titik yang berjarak 3 satuan terhadap sumbu-X adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "Titik B dan C"
+        },
+        {
+          "label": "B",
+          "text": "Titik E dan G"
+        },
+        {
+          "label": "C",
+          "text": "Titik B dan E"
+        },
+        {
+          "label": "D",
+          "text": "Titik E dan G"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Titik-titik yang berjarak 4 satuan terhadap sumbu-Y adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "Titik B dan C"
+        },
+        {
+          "label": "B",
+          "text": "Titik E dan G"
+        },
+        {
+          "label": "C",
+          "text": "Titik B dan E"
+        },
+        {
+          "label": "D",
+          "text": "Titik E dan G"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Titik-titik yang ada di kuadran II adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "Titik A dan B"
+        },
+        {
+          "label": "B",
+          "text": "Titik C dan D"
+        },
+        {
+          "label": "C",
+          "text": "Titik E dan F"
+        },
+        {
+          "label": "D",
+          "text": "Titik G dan H"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 10,
+      "questionType": "multiple_choice",
+      "questionText": "Titik-titik yang ada di kuadran IV adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "Titik A dan B"
+        },
+        {
+          "label": "B",
+          "text": "Titik C dan D"
+        },
+        {
+          "label": "C",
+          "text": "Titik E dan F"
+        },
+        {
+          "label": "D",
+          "text": "Titik G dan H 68 Kelas VIII SMP/MTs Semester I Untuk pertanyaan nomor 11 – 20, perhatikan koordinat Kartesius berikut."
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 1,
+      "questionType": "essay",
+      "questionText": "Gambarlah titik A(1, −2), B(−3, 6), C(2, 8), dan D(−1, −5) pada koordinat Kartesius. a. Tentukan titik-titik yang berada pada kuadran I, II, III, dan IV . b. Tentukan jarak setiap titik dengan sumbu-X. c. Tentukan jarak setiap titik dengan sumbu-Y.",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 2,
+      "questionType": "essay",
+      "questionText": "Gambarlah titik A(−4, 2), B(−4, 9), C(2, 2), dan D(3, 9), pada koordinat Kartesius. a. Tentukan jarak setiap titik dengan sumbu-X. b. Tentukan jarak setiap titik dengan sumbu-Y. c. Tentukan jarak antara titik A dengan titik B. d. Tentukan jarak antara titik C dengan titik D.",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 3,
+      "questionType": "short_answer",
+      "questionText": "Gambarlah 4 titik pada bidang koordinat yang berjarak sama terhadap titik A(3, −6).",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 4,
+      "questionType": "short_answer",
+      "questionText": "Ada berapa titik yang berjarak 5 dari sumbu-X dan 7 dari sumbu-Y? Tunjukkan titik-titik tersebut.",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 5,
+      "questionType": "short_answer",
+      "questionText": "Gambarlah garis l melalui titik P(−3, 5) yang sejajar dengan sumbu-X dan tegak lurus dengan sumbu-Y.",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    }
+  ]
+}

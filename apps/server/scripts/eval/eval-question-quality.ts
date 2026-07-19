@@ -49,30 +49,35 @@ const POLL_MS = Number(process.env.EVAL_POLL_MS ?? 3000);
 const INGEST_TIMEOUT_MS = Number(process.env.EVAL_INGEST_TIMEOUT_MS ?? 900_000);
 const GEN_TIMEOUT_MS = Number(process.env.EVAL_GEN_TIMEOUT_MS ?? 600_000);
 
-const SAMPLE_META: Record<
-  string,
-  {
-    topic: string;
-    counts: Array<{ type: string; count: number }>;
-  }
-> = {
-  '1': {
-    topic: 'Sistem Reproduksi pada Manusia',
-    counts: [{ type: 'multiple_choice', count: 10 }],
-  },
-  '2': {
-    topic: 'Sistem Perkembangbiakan Tumbuhan dan Hewan',
-    counts: [{ type: 'multiple_choice', count: 7 }],
-  },
-  '3': {
-    topic: 'Pewarisan Sifat pada Makhluk Hidup',
-    counts: [
-      { type: 'multiple_choice', count: 10 },
-      { type: 'short_answer', count: 3 },
-      { type: 'essay', count: 2 },
-    ],
-  },
+type CatalogEntry = {
+  sampleId: string;
+  sampleNum: number;
+  topic: string;
+  grade: string;
+  classGrade: string;
+  curriculum: string;
+  questionTypeCounts: Array<{ type: string; count: number }>;
+  evalEligible: boolean;
+  skipReason?: string | null;
 };
+
+function loadCatalog(): CatalogEntry[] {
+  const path = join(repoRoot, 'samples/catalog.json');
+  if (!existsSync(path)) {
+    throw new Error(
+      `Missing ${path}. Run: python3 samples/build_catalog.py`,
+    );
+  }
+  return JSON.parse(readFileSync(path, 'utf8')) as CatalogEntry[];
+}
+
+function catalogByNum(
+  catalog: CatalogEntry[],
+): Record<string, CatalogEntry> {
+  return Object.fromEntries(
+    catalog.map((c) => [String(c.sampleNum), c]),
+  );
+}
 
 type SessionDetail = {
   id: string;
@@ -97,10 +102,13 @@ type EvalState = {
   >;
 };
 
-function parseArgs(argv: string[]) {
+function parseArgs(argv: string[], catalog: CatalogEntry[]) {
+  const eligible = catalog
+    .filter((c) => c.evalEligible)
+    .map((c) => String(c.sampleNum));
   const out = {
     variant: 'v0-baseline',
-    samples: ['1', '2', '3'],
+    samples: ['1', '2', '3'] as string[],
     skipIngest: false,
     skipJudge: false,
   };
@@ -109,6 +117,7 @@ function parseArgs(argv: string[]) {
     if (a === '--variant') out.variant = argv[++i] ?? out.variant;
     else if (a === '--samples')
       out.samples = (argv[++i] ?? '1,2,3').split(',').map((s) => s.trim());
+    else if (a === '--eligible') out.samples = eligible;
     else if (a === '--skip-ingest') out.skipIngest = true;
     else if (a === '--skip-judge') out.skipJudge = true;
   }
@@ -204,9 +213,8 @@ function loadGold(sampleId: string): {
 async function ingestSample(
   token: string,
   sampleId: string,
+  meta: CatalogEntry,
 ): Promise<{ documentId: string; sessionId: string; ms: number }> {
-  const meta = SAMPLE_META[sampleId];
-  if (!meta) throw new Error(`Unknown sample ${sampleId}`);
   const filePath = join(
     repoRoot,
     'samples',
@@ -217,10 +225,10 @@ async function ingestSample(
   const file = new File([bytes], 'materials.pdf', { type: 'application/pdf' });
   const fd = new FormData();
   fd.set('topic', meta.topic);
-  fd.set('questionTypeCounts', JSON.stringify(meta.counts));
-  fd.set('curriculum', 'Kurikulum Merdeka');
-  fd.set('grade', 'SMP');
-  fd.set('classGrade', 'IX');
+  fd.set('questionTypeCounts', JSON.stringify(meta.questionTypeCounts));
+  fd.set('curriculum', meta.curriculum);
+  fd.set('grade', meta.grade);
+  fd.set('classGrade', meta.classGrade);
   fd.set('includeImages', 'true');
   fd.set('file', file);
 
@@ -255,15 +263,14 @@ async function generateFromDocument(
   token: string,
   sampleId: string,
   documentId: string,
+  meta: CatalogEntry,
 ): Promise<{ session: SessionDetail; ms: number }> {
-  const meta = SAMPLE_META[sampleId];
-  if (!meta) throw new Error(`Unknown sample ${sampleId}`);
   const fd = new FormData();
   fd.set('topic', meta.topic);
-  fd.set('questionTypeCounts', JSON.stringify(meta.counts));
-  fd.set('curriculum', 'Kurikulum Merdeka');
-  fd.set('grade', 'SMP');
-  fd.set('classGrade', 'IX');
+  fd.set('questionTypeCounts', JSON.stringify(meta.questionTypeCounts));
+  fd.set('curriculum', meta.curriculum);
+  fd.set('grade', meta.grade);
+  fd.set('classGrade', meta.classGrade);
   fd.set('includeImages', 'true');
   fd.set('documentId', documentId);
 
@@ -295,7 +302,9 @@ function toGoldShape(
 }
 
 async function main() {
-  const args = parseArgs(process.argv.slice(2));
+  const catalog = loadCatalog();
+  const byNum = catalogByNum(catalog);
+  const args = parseArgs(process.argv.slice(2), catalog);
   const evalDir = join(repoRoot, 'samples/eval');
   mkdirSync(evalDir, { recursive: true });
   const statePath = join(evalDir, 'state.json');
@@ -315,16 +324,22 @@ async function main() {
   const rows: unknown[] = [];
 
   for (const sampleId of args.samples) {
-    const meta = SAMPLE_META[sampleId];
+    const meta = byNum[sampleId];
     if (!meta) {
       console.warn(`Skip unknown sample ${sampleId}`);
+      continue;
+    }
+    if (!meta.evalEligible) {
+      console.warn(
+        `Skip ineligible sample-${sampleId}: ${meta.skipReason ?? 'n/a'}`,
+      );
       continue;
     }
 
     let doc = state.documents[sampleId];
     if (!args.skipIngest || !doc?.documentId) {
       console.log(`\n=== Ingest sample-${sampleId}: ${meta.topic} ===`);
-      const ingested = await ingestSample(token, sampleId);
+      const ingested = await ingestSample(token, sampleId, meta);
       doc = {
         documentId: ingested.documentId,
         ingestSessionId: ingested.sessionId,
@@ -346,6 +361,7 @@ async function main() {
       token,
       sampleId,
       doc.documentId,
+      meta,
     );
 
     if (session.status !== 'completed') {
