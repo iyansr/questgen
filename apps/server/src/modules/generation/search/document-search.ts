@@ -181,6 +181,7 @@ Compile a comprehensive markdown document from the excerpts below. Use ONLY info
 <format>
 - Use clear headings (##) for each major aspect / subtopic
 - Include specific facts, numbers, dates, and terminology from the excerpts
+- Prefer assessment-ready content: contrasts, processes/sequences, organ–function pairs, ciri-ciri, and cause–effect — not only long summaries
 - Organize for educational question writing so different subtopics are easy to pull into separate questions
 - Preserve important details that could be tested
 - When excerpts mention Images with IDs, reference them inline using their ID (e.g. "see image [img_abc123]")

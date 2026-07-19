@@ -7,7 +7,10 @@ import { researchWeb } from '@/shared/ai/tavily';
 import { GENERATION_PARAMS, MODELS } from '@/shared/config/models';
 import { withRetry } from '@/shared/lib/retry';
 
-import { buildQuantitativeResearchAddon } from '../prompts/subject-guidance';
+import {
+  buildConceptualResearchAddon,
+  buildQuantitativeResearchAddon,
+} from '../prompts/subject-guidance';
 import { resolveSourceMaterial } from './resolve-source-material';
 
 const MARKDOWN_LIMIT = 150_000;
@@ -50,7 +53,12 @@ export async function webSearch({
 }): Promise<WebSearchResult> {
   const allImageRefs = new Map<string, ImageRef>();
   const sections: string[] = [];
-  const quantitativeResearch = buildQuantitativeResearchAddon(topic);
+  const topicResearchAddon = [
+    buildQuantitativeResearchAddon(topic),
+    buildConceptualResearchAddon(topic),
+  ]
+    .filter(Boolean)
+    .join('\n');
 
   // Phase A: search only — stash markdown; do not rely on final text.
   await generateText({
@@ -126,7 +134,7 @@ Cover via searches:
 2. Search each aspect with specific, targeted queries
 3. Search for: definitions, key concepts, examples, applications, common misconceptions, and important facts
 4. Call searchWeb in parallel when exploring multiple aspects
-${quantitativeResearch}
+${topicResearchAddon}
 </strategy>
 
 Do NOT write a final research document. Only use the searchWeb tool.`,
