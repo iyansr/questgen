@@ -1,0 +1,363 @@
+{
+  "variant": "v1-ipa-stems",
+  "sampleId": "sample-3",
+  "topic": "Pewarisan Sifat pada Makhluk Hidup",
+  "sessionId": "997803ab-5b4d-417c-9cd9-da98664631d8",
+  "documentId": "f6e425b4-58da-4f2f-9a6e-6b3a6b91a61a",
+  "latencyMs": 153834,
+  "questions": [
+    {
+      "number": 0,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar struktur DNA berikut! Pasangan basa nitrogen yang benar pada DNA adalah ....",
+      "options": [
+        {
+          "text": "Adenin (A) berpasangan dengan Timin (T), Guanin (G) berpasangan dengan Sitosin (C)",
+          "label": "A"
+        },
+        {
+          "text": "Adenin (A) berpasangan dengan Sitosin (C), Guanin (G) berpasangan dengan Timin (T)",
+          "label": "B"
+        },
+        {
+          "text": "Adenin (A) berpasangan dengan Urasil (U), Guanin (G) berpasangan dengan Sitosin (C)",
+          "label": "C"
+        },
+        {
+          "text": "Adenin (A) berpasangan dengan Guanin (G), Timin (T) berpasangan dengan Sitosin (C)",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Hukum I Mendel menyatakan bahwa pada waktu pembentukan gamet terjadi ....",
+      "options": [
+        {
+          "text": "penggabungan bebas alela dari sifat yang berbeda",
+          "label": "A"
+        },
+        {
+          "text": "segregasi atau pemisahan alela secara bebas",
+          "label": "B"
+        },
+        {
+          "text": "penyatuan alela dari kedua induk",
+          "label": "C"
+        },
+        {
+          "text": "pertukaran materi genetik antara kromosom homolog",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar tipe cuping telinga berikut! Jika seorang laki-laki bergenotipe GG (cuping terpisah) menikah dengan perempuan bergenotipe gg (cuping melekat), kemungkinan fenotipe anak mereka adalah ....",
+      "options": [
+        {
+          "text": "semua anak memiliki cuping terpisah",
+          "label": "A"
+        },
+        {
+          "text": "50% cuping terpisah, 50% cuping melekat",
+          "label": "B"
+        },
+        {
+          "text": "semua anak memiliki cuping melekat",
+          "label": "C"
+        },
+        {
+          "text": "75% cuping terpisah, 25% cuping melekat",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar bentuk rambut berikut! Genotipe yang menyebabkan rambut bergelombang (wavy) adalah ....",
+      "options": [
+        {
+          "text": "CC",
+          "label": "A"
+        },
+        {
+          "text": "Cs",
+          "label": "B"
+        },
+        {
+          "text": "ss",
+          "label": "C"
+        },
+        {
+          "text": "SC",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Seorang anak menderita albino. Genotipe orang tuanya yang mungkin adalah ....",
+      "options": [
+        {
+          "text": "AA dan AA",
+          "label": "A"
+        },
+        {
+          "text": "AA dan Aa",
+          "label": "B"
+        },
+        {
+          "text": "Aa dan Aa",
+          "label": "C"
+        },
+        {
+          "text": "aa dan aa",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Pertumbuhan rambut di dahi seperti huruf V (widow's peak) disebabkan oleh gen dominan W. Genotipe yang menyebabkan fenotipe widow's peak adalah ....",
+      "options": [
+        {
+          "text": "ww",
+          "label": "A"
+        },
+        {
+          "text": "WW atau Ww",
+          "label": "B"
+        },
+        {
+          "text": "Ww saja",
+          "label": "C"
+        },
+        {
+          "text": "WW saja",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Pada persilangan dihibrida, munculnya kombinasi alela yang berbeda dari induknya disebabkan oleh ....",
+      "options": [
+        {
+          "text": "segregasi alela secara acak saat pembentukan gamet",
+          "label": "A"
+        },
+        {
+          "text": "penggabungan bebas alela dari sifat yang berbeda",
+          "label": "B"
+        },
+        {
+          "text": "pautan gen pada kromosom yang sama",
+          "label": "C"
+        },
+        {
+          "text": "dominansi tidak sempurna",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Pernyataan yang benar mengenai kelainan buta warna adalah ....",
+      "options": [
+        {
+          "text": "hanya diderita oleh perempuan",
+          "label": "A"
+        },
+        {
+          "text": "gen penyebabnya terletak pada kromosom Y",
+          "label": "B"
+        },
+        {
+          "text": "laki-laki lebih sering menderita daripada perempuan",
+          "label": "C"
+        },
+        {
+          "text": "perempuan carrier dapat menularkan kepada anak laki-lakinya",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Varietas padi hibrida IPB 4S yang dikembangkan oleh IPB memiliki keunggulan, yaitu ....",
+      "options": [
+        {
+          "text": "dapat dipanen lebih dari 150 hari, hasil panen 5 ton/Ha",
+          "label": "A"
+        },
+        {
+          "text": "tahan hama tungro, hasil panen 10,5 ton/Ha, pulen",
+          "label": "B"
+        },
+        {
+          "text": "tahan kekeringan, tidak memerlukan air",
+          "label": "C"
+        },
+        {
+          "text": "beras berwarna merah, tinggi tanaman 2 meter",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Nukleotida sebagai subunit asam nukleat tersusun atas ....",
+      "options": [
+        {
+          "text": "gugus fosfat, gula, dan basa nitrogen",
+          "label": "A"
+        },
+        {
+          "text": "gugus fosfat dan gula saja",
+          "label": "B"
+        },
+        {
+          "text": "gula dan basa nitrogen",
+          "label": "C"
+        },
+        {
+          "text": "basa nitrogen dan asam fosfat",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 10,
+      "questionType": "short_answer",
+      "questionText": "Jelaskan perbedaan antara genotipe dan fenotipe dalam pewarisan sifat!",
+      "options": null,
+      "correctAnswer": "Genotipe adalah keseluruhan informasi genetik yang terkandung dalam suatu organisme, sedangkan fenotipe adalah perwujudan ekspresi gen yang dapat diamati, seperti bentuk rambut, warna kulit, dan lain-lain. Fenotipe dipengaruhi oleh faktor lingkungan."
+    },
+    {
+      "number": 11,
+      "questionType": "short_answer",
+      "questionText": "Pada persilangan monohibrida antara tanaman kapri berbunga ungu (UU) dengan berbunga putih (uu), tentukan genotipe dan fenotipe F1! Jika F1 disilangkan sesamanya, bagaimana perbandingan fenotipe pada F2?",
+      "options": null,
+      "correctAnswer": "F1 semua bergenotipe Uu (heterozigot), fenotipe ungu. F2 = UU : Uu : uu = 1 : 2 : 1; fenotipe ungu : putih = 3 : 1."
+    },
+    {
+      "number": 12,
+      "questionType": "short_answer",
+      "questionText": "Apa peran protein histon dalam struktur DNA?",
+      "options": null,
+      "correctAnswer": "DNA melilit pada protein histon untuk membentuk kromosom. Histon membantu memadatkan DNA agar dapat tersusun rapi di dalam inti sel."
+    },
+    {
+      "number": 13,
+      "questionType": "essay",
+      "questionText": "Amati gambar hasil tes DNA di atas (elektroforesis). Jelaskan proses tes DNA untuk mengetahui hubungan kekerabatan, mulai dari pengambilan sampel hingga interpretasi hasil!",
+      "options": null,
+      "correctAnswer": "Proses: (1) Mengambil sel tubuh (misalnya dari darah atau usap pipi). (2) Diekstraksi untuk memisahkan DNA. (3) Larutan DNA dimasukkan ke dalam gel agarose. (4) Elektroforesis: gel dialiri listrik sehingga fragmen DNA terpisah berdasarkan ukuran. (5) Terbentuk pita-pita DNA. (6) Pola pita DNA seseorang dibandingkan dengan kerabat. Kecocokan pola menunjukkan hubungan kekerabatan."
+    },
+    {
+      "number": 14,
+      "questionType": "essay",
+      "questionText": "Perhatikan diagram pewarisan warna kulit (Punnett square) di atas. Jelaskan mengapa warna kulit termasuk sifat poligenik dan bagaimana faktor lingkungan turut memengaruhi fenotipe!",
+      "options": null,
+      "correctAnswer": "Warna kulit dikode oleh banyak gen (A, B, C) yang masing-masing berkontribusi pada produksi melanin. Semakin banyak alel dominan, semakin gelap kulit. Faktor lingkungan seperti paparan sinar matahari dapat meningkatkan produksi melanin, sehingga fenotipe tidak hanya ditentukan oleh genotipe."
+    }
+  ],
+  "structural": {
+    "score": 76.7,
+    "templateSim": 56.7,
+    "cognitiveSim": 86.7,
+    "stemEllipsisSim": 86.7,
+    "fourOptionSim": 100,
+    "optionShapeSim": 66.7,
+    "indoSim": 96.7,
+    "gold": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 4,
+        "pasangan": 0,
+        "ciri_ciri": 1,
+        "skenario": 1,
+        "urutan": 0,
+        "hitung_kromosom": 6,
+        "proses": 0,
+        "tujuan": 1,
+        "image_leadin": 0,
+        "other": 4
+      },
+      "cognitiveHist": {
+        "recall": 5,
+        "comprehend": 4,
+        "apply": 6
+      },
+      "stemEllipsisRate": 0.5333333333333333,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 7,
+        "long_statements": 2,
+        "mixed": 1,
+        "none": 5
+      },
+      "numberedListRate": 0.06666666666666667,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 1.8
+    },
+    "generated": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 1,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 2,
+        "urutan": 0,
+        "hitung_kromosom": 7,
+        "proses": 1,
+        "tujuan": 0,
+        "image_leadin": 4,
+        "other": 5
+      },
+      "cognitiveHist": {
+        "recall": 5,
+        "comprehend": 2,
+        "apply": 8
+      },
+      "stemEllipsisRate": 0.6666666666666666,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 3,
+        "long_statements": 1,
+        "mixed": 6,
+        "none": 5
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0.26666666666666666,
+      "avgIndonesianMarkers": 2
+    }
+  },
+  "judgeScore": 75,
+  "judgeRationale": "Both sets use formal Indonesian, 4-option MCQs, and cover Mendelian genetics with similar question types, but SET B includes more image-dependent and explanatory items, while SET A has more direct statement and calculation questions.",
+  "sanityRate": 100,
+  "sanityNotes": "All questions are typical for inheritance and DNA topics in SMP textbooks.",
+  "patternScore": 75.9
+}

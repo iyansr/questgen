@@ -1,0 +1,180 @@
+ Uji Kompetensi
+A. Pilihlah satu jawaban yang paling tepat!
+1. Faktor-faktor yang memengaruhi besarnya tekanan adalah ….
+A. gaya tekan dan massa benda
+B. gaya tekan dan gaya gravitasi
+C. luas bidang tekan dan gaya tekan
+D. luas bidang tekan dan gaya gravitasi
+2. Sebuah alat pengangkat mobil memiliki luas penampang pengisap 
+kecil A
+1 sebesar 20 cm2 dan pengisap besar A2 sebesar 50 cm2. 
+F
+20 cm2 A2
+p1 p2
+50 cm2 
+20.000 N
+A1
+ Gaya yang harus diberikan untuk mengangkat mobil 20.000 N 
+adalah … N.
+A. 2.000 
+B. 4.000
+C. 5.000
+D. 8.000 
+3. Upaya yang dapat dilakukan untuk mendapatkan tekanan yang 
+besar adalah ….
+A. mengurangi gaya tekan dan memperbesar luas bidang
+B. mengurangi gaya tekan dan memperkecil luas bidang
+C. meningkatkan gaya tekan dan memperbesar luas bidang
+D. meningkatkan gaya tekan dan memperkecil luas bidang 4. Seorang penyelam menyelam dengan kedalaman 3 m, massa jenis 
+air 1.000 kg/m 3, konstanta gravitasi pada tempat tersebut adalah 
+10 N/kg. Besar tekanan hidrostatisnya adalah … N/m2.
+A. 3.000 
+B. 30.000 
+C. 40.000
+D. 50.000 
+5. Sebuah drum besi dapat mengapung di dalam air disebabkan oleh 
+….
+A. massa jenis seluruh drum lebih kecil daripada massa jenis air
+B. massa jenis seluruh drum lebih besar daripada massa jenis air
+C. massa jenis bahan pembuat drum lebih kecil daripada massa 
+jenis air
+D. massa jenis bahan pembuat drum lebih besar daripada massa 
+jenis air
+6. Perhatikan tabel berikut!
+Ketinggian (m) Tekanan (cmHg)
+7.000 6
+5.000 26
+3.000 46
+1.000 66
+Di permukaan laut 76
+ Berdasarkan tabel tersebut pernyataan yang benar mengenai 
+hubungan tekanan udara dengan ketinggian adalah ….
+A. ketinggian tempat menghambat tekanan udara
+B. semakin rendah tempat maka tekanan udaranya terhambat
+C. semakin tinggi tempat maka tekanan udaranya semakin besar
+D. semakin tinggi tempat maka tekanan udaranya semakin kecil
+7. Teknologi berikut ini yang tidak menggunakan prinsip Archimedes 
+adalah ….
+A. hidrometer
+B. jembatan ponton
+C. balon udara
+D. dongkrak mobil 8. Perhatikan gambar berikut!
+50 N 45 N
+ Sumber: Dok. Kemdikbud
+ Sebuah benda memiliki berat 50 N, ketika ditimbang di dalam 
+air beratnya hanya 45 N, maka gaya ke atas yang menekan benda 
+sebesar… N.
+A. 5
+B. 25
+C. 45 
+D. 50 
+9. Pada tumbuhan, air dari akar dapat naik sampai ke daun 
+disebabkan oleh daya kapilaritas batang. Pernyataan yang benar 
+terkait peristiwa tersebut adalah ….
+A. di dalam sel-sel akar terjadi peristiwa osmosis sehingga 
+menyebabkan daya kapilaritas batang meningkat
+B. jaringan xilem memiliki diameter yang sangat kecil sehingga 
+memiliki tekanan yang besar untuk menaikkan air ke daun
+C. jaringan floem memiliki diameter yang sangat kecil sehingga 
+memiliki tekanan yang besar untuk menaikkan air ke daun
+D. air dari dalam tanah dapat naik karena daya isap daun yang 
+rendah sehingga tekanan osmosis dalam sel meningkat 
+10. Pada saat mengukur tekanan darah dengan tensimeter, berlaku 
+hukum ….
+A. Pascal
+B. Archimedes
+C. Boyle
+D. Newton B. Jawablah pertanyaan berikut ini dengan benar!
+1. Sebuah balok memiliki panjang (p) 12 cm, lebar (l) 8 cm, dan tinggi 
+(t) 3 cm serta berat sebesar 30 N. Jika balok tersebut diletakkan 
+dengan posisi seperti gambar a, b, dan c, tentukan besar tekanan 
+pada masing-masing posisi tersebut!
+(a) (b) (c)p
+p
+p
+l
+l
+l
+t
+t
+t
+2. Sebuah dongkrak hidrolik dapat mengangkat benda dengan massa 
+1 ton serta luas penampang piston pengisap besar 0,2 m2. Jika luas 
+penampang piston pengisap kecil 0,02 m 2. Serta besar percepatan 
+gravitasi 9,8 N/m3. Berapakah gaya minimal yang harus diberikan 
+agar dapat mengangkat benda tersebut? 
+3. Jelaskan peristiwa tekanan yang terjadi pada saat jantung 
+memompa darah ke seluruh tubuh!
+4. Identifikasilah hubungan antara gaya apung dan berat benda 
+sebuah kapal selam ketika berada dalam keadaan a) terapung, b) 
+melayang, dan c) tenggelam!
+5. Jelaskan bagaimana mekanisme pengangkutan air dari akar 
+menuju daun! Topik 1: Membuat Roket Air Sederhana
+Ayo, Kita Kerjakan Proyek
+  Permasalahan
+Semua zat baik zat cair, padat, dan gas memiliki tekanan. 
+Tekanan dari berbagai zat tersebut dapat dimanfaatkan bagi 
+kehidupan sehari-hari. Bagaimanakah prinsip tekanan zat gas yang 
+diterapkan pada roket air sederhana?
+  Perencanaan
+Rancanglah kegiatan penyelidikan untuk membuat roket air. 
+Lakukan kegiatan ini dalam kelompok (3-5 orang per kelompok). 
+Buatlah rancangan percobaan pembuatan roket air sederhana. 
+Kemudian konsultasikan kepada guru atau orangtua rancangan 
+percobaan yang akan kamu lakukan. 
+  Pelaksanaan
+Lakukan kegiatan yang sudah kamu rancang untuk membuat 
+roket air sederhana. Fotolah setiap tahap pembuatan roket air. 
+Selanjutnya amati dan catatlah hasil percobaan roket air sederhana 
+yang telah kamu buat dengan kelompokmu. 
+Gunakan ide-ide kreatifmu pada saat kamu menyusun 
+karya tulis. Selain itu, bekerja samalah dengan baik dengan 
+kelompokmu selama kamu menyelesaikan proyek ini.
+Lakukan kegiatan ini dengan hati-hati. Jika kalian mengalami 
+kesulitan, mintalah bantuan pada guru atau orangtua.
+ 
+  Hasil Pengamatan 
+Deskripsikan bagaimana kerja dari roket air yang telah kamu 
+buat!  Kesimpulan
+Berdasarkan percobaan yang telah kamu lakukan, apakah 
+kesimpulan yang dapat kalian susun?
+  Penilaian
+Penilaian dilakukan berdasarkan:
+1. Produk berupa laporan hasil percobaan yang dilengkapi dengan 
+gambar/foto kegiatan, data hasil percobaan, dan sumber rujukan 
+yang digunakan. 
+2. Presentasi hasil percobaan yang telah disusun dalam bentuk 
+laporan hasil percobaan. 
+Topik 2: Membuat Balon Udara Sederhana
+Ayo, Kita Kerjakan Proyek
+  Permasalahan
+Semua zat baik zat cair, padat, dan gas memiliki tekanan. 
+Tekanan dari berbagai zat tersebut dapat dimanfaatkan bagi 
+kehidupan sehari-hari. Bagaimana prinsip kerja tekanan zat gas 
+pada pengoperasian balon udara?
+  Perencanaan
+Rancanglah kegiatan penyelidikan untuk membuat balon udara 
+Lakukan kegiatan ini dalam kelompok (3-5 orang per kelompok). 
+Buatlah rancangan percobaan pembuatan balon udara sederhana. 
+Kemudian konsultasikan kepada guru atau orangtua rancangan 
+percobaan yang akan kamu lakukan.
+  Pelaksanaan
+Lakukan kegiatan yang sudah kamu rancang untuk membuat 
+balon udara sederhana. Fotolah setiap tahap pembuatan balon 
+udara sederhana. Selanjutnya amati dan catatlah hasil percobaan 
+balon udara sederhana yang telah kamu buat dengan kelompokmu. Gunakan ide-ide kreatifmu pada saat kamu menyusun 
+karya tulis. Selain itu, bekerja samalah dengan baik dengan 
+kelompokmu selama kamu menyelesaikan proyek ini.
+  Hasil Pengamatan 
+Deskripsikan bagaimana kerja dari balon udara yang telah kamu 
+buat!
+  Kesimpulan
+Berdasarkan percobaan yang telah kamu lakukan, apakah 
+kesimpulan yang dapat kalian susun?
+  Penilaian
+Penilaian dilakukan berdasarkan:
+1. Produk berupa laporan hasil percobaan yang dilengkapi dengan 
+gambar/foto kegiatan, data hasil percobaan, dan sumber rujukan 
+yang digunakan. 
+2. Presentasi hasil percobaan yang telah disusun dalam bentuk 
+laporan hasil percobaan. 

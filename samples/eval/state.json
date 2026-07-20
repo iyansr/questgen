@@ -1,0 +1,20 @@
+{
+  "documents": {
+    "1": {
+      "documentId": "e6980539-d3d1-465f-b4f8-d12d79bc7186",
+      "ingestSessionId": "6cc0562f-b5dd-486e-8825-c9a2a8189ec9",
+      "topic": "Sistem Reproduksi pada Manusia"
+    },
+    "2": {
+      "documentId": "940ce5ae-06ff-4aa7-9809-ebd08ff57003",
+      "ingestSessionId": "22a9ef12-0f48-4399-8131-4c10a25d6bf5",
+      "topic": "Sistem Perkembangbiakan Tumbuhan dan Hewan"
+    },
+    "3": {
+      "documentId": "f6e425b4-58da-4f2f-9a6e-6b3a6b91a61a",
+      "ingestSessionId": "24d827e4-d388-47d7-b0c0-683ae109b6f9",
+      "topic": "Pewarisan Sifat pada Makhluk Hidup"
+    }
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0YTg0MjQ4Mi04ZWQwLTQxOTctOTZmMi1jZGMyZDQ3N2MyZGUiLCJlbWFpbCI6ImV2YWwtcXVhbGl0eUBxdWVzdGdlbi5sb2NhbCIsImlhdCI6MTc4NDQ2NjcyMiwiZXhwIjoxNzg3MDU4NzIyfQ.DrroFJNAPnpJnlNYFsV8uPoi6UPhu2RoWZCeEvF6wlg"
+}

@@ -1,0 +1,266 @@
+{
+  "sampleId": "sample-13",
+  "topic": "Kemagnetan dan Pemanfaatannya",
+  "grade": "SMP",
+  "classGrade": "IX",
+  "curriculum": "Kurikulum Merdeka",
+  "questionTypeCounts": [
+    {
+      "type": "multiple_choice",
+      "count": 10
+    }
+  ],
+  "source": "samples/sample-13/exercise.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Magnet berikut ini yang bekerja dengan memanfaatkan medan magnet bumi adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "magnet U"
+        },
+        {
+          "label": "B",
+          "text": "magnet jarum"
+        },
+        {
+          "label": "C",
+          "text": "magnet batang"
+        },
+        {
+          "label": "D",
+          "text": "magnet ladam"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar berikut! S U S U (a) (b) Jika sebuah magnet batang dipotong, maka keberadaan kutubnya ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "bagian b tidak memiliki kutub"
+        },
+        {
+          "label": "B",
+          "text": "bagian a memiliki kutub utara dan selatan"
+        },
+        {
+          "label": "C",
+          "text": "bagian a hanya akan memiliki kutub utara saja"
+        },
+        {
+          "label": "D",
+          "text": "bagian a dan b masing-masing hanya memiliki satu jenis kutub saja"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar berikut! Baterai Jika sebuah paku dililiti oleh kawat yang dialiri arus listrik, maka peristiwa yang akan terjadi pada paku adalah ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "paku akan meleleh"
+        },
+        {
+          "label": "B",
+          "text": "paku dapat menjadi magnet"
+        },
+        {
+          "label": "C",
+          "text": "paku mampu mengalirkan listrik"
+        },
+        {
+          "label": "D",
+          "text": "paku tidak mengalami reaksi apapun"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Di kotak ada campuran serbuk besi dan pasir. Cara yang paling mudah untuk memisahkan serbuk besi dari pasir adalah ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "menggunakan magnet"
+        },
+        {
+          "label": "B",
+          "text": "menggunakan kaca pembesar"
+        },
+        {
+          "label": "C",
+          "text": "memanaskan campuran tersebut"
+        },
+        {
+          "label": "D",
+          "text": "menuangkan air pada campuran tersebut"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Hewan-hewan berikut yang memanfaatkan kemagnetan bumi untuk melakukan navigasi adalah ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "gurita"
+        },
+        {
+          "label": "B",
+          "text": "kepiting"
+        },
+        {
+          "label": "C",
+          "text": "ikan tuna"
+        },
+        {
+          "label": "D",
+          "text": "lobster duri"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Magnet yang kuat akan memisahkan campuran antara ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "emas dan perak"
+        },
+        {
+          "label": "B",
+          "text": "emas dan bismut"
+        },
+        {
+          "label": "C",
+          "text": "besi dan aluminium"
+        },
+        {
+          "label": "D",
+          "text": "tembaga dan bismut"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar berikut! S U S U S U S U U S U S U S U S Gambar 1 Gambar 2 Gambar 3 Gambar 4 Dari keempat gambar tersebut yang menunjukkan jika dua magnet didekatkan akan tolak-menolak adalah gambar ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "1 dan 3"
+        },
+        {
+          "label": "B",
+          "text": "2 dan 3"
+        },
+        {
+          "label": "C",
+          "text": "1 dan 4"
+        },
+        {
+          "label": "D",
+          "text": "1, 2, 3, dan 4"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Seorang siswa melakukan investigasi untuk menguji kekuatan magnet. Siswa tersebut memiliki beberapa magnet dengan ukuran, bentuk, dan massa yang berbeda. Dia menggunakan magnet untuk mengangkat klip logam. Cara mengukur kekuatan magnet melalui investigasi yang benar adalah dengan menghitung ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "massa magnet yang mengangkat klip logam"
+        },
+        {
+          "label": "B",
+          "text": "ukuran magnet yang mengangkat klip logam"
+        },
+        {
+          "label": "C",
+          "text": "jumlah klip logam yang diangkat oleh magnet"
+        },
+        {
+          "label": "D",
+          "text": "klip logam yang tetap menempel pada magnet"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Peralatan berikut yang memanfaatkan prinsip elektromagnetik adalah ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "kipas angin"
+        },
+        {
+          "label": "B",
+          "text": "jam tangan"
+        },
+        {
+          "label": "C",
+          "text": "lampu listrik"
+        },
+        {
+          "label": "D",
+          "text": "kompor listrik"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 10,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar berikut ini! G G G Arah gerak jarum galvanometer dipengaruhi oleh ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "jumlah lilitan"
+        },
+        {
+          "label": "B",
+          "text": "besar medan magnet"
+        },
+        {
+          "label": "C",
+          "text": "kecepatan gerak magnet"
+        },
+        {
+          "label": "D",
+          "text": "kutub magnet yang dimasukkan"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    }
+  ]
+}

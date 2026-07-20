@@ -1,0 +1,498 @@
+ Contoh
+ 5.15
+Grafik di samping, x dan y 
+menunjukkan perbandingan 
+berbalik nilai. Manakah persamaan 
+berikut yang menyatakan hubungan 
+x dan y?
+a. 2y x= −
+ 
+b.
+ 
+2y x=
+c. y = −2x d. y = 2x
+Grafik tersebut melalui (2, 1). Substitusi nilai x dan y untuk memperoleh nilai k.
+ky x=
+ 
+1 2
+k=
+ 
+2 = k 
+Jadi, persamaan grafik yang dimaksud adalah 1 2
+k= . Jawaban yang benar 
+adalah b.
+Selain kecepatan dan waktu yang berbanding terbalik, terdapat beberapa 
+masalah sehari-hari yang saling berbanding terbalik. Misalkan banyak pekerja 
+dan waktu yang dibutuhkan untuk menyelesaikan suatu pekerjaan.
+Banyak pekerja (orang) Waktu yang dibutuhkan (hari)
+6 30
+10 18
+12 15
+15 12
+20 9
+30 6
+1 2 3 4 5
+1
+2
+3
+4
+5
+x
+y
+A (2, 1) Tabel di atas menunjukkan hubungan antara banyak pekerja dan waktu yang 
+dibutuhkan untuk menyelesaikan pekerjaan. Perhatikan baris pertama dan 
+keenam.
+Perbandingan banyak pekerja dan waktu yang dibutuhkan pada kedua baris 
+saling berkebalikan. 6
+30
+ untuk baris pertama dan 30
+6
+ pada baris keenam. Hal 
+serupa juga akan terlihat, misalnya pada baris ketiga dan keempat. Pada 
+pembahasan sebelumnya, hubungan yang saling berkebalikan ini memiliki hal 
+yang sama. Hasil kali kedua besaran, yakni banyak pekerja dengan waktu 
+yang dibutuhkan pada setiap baris adalah sama.
+Untuk lebih jelasnya, perhatikan beberapa contoh berikut.
+Contoh
+ 5.16
+Suatu pekerjaan dapat diselesaikan oleh 12 orang dalam waktu 20 hari. Berapa 
+lama waktu yang dibutuhkan untuk menyelesaikan pekerjaan itu apabila 
+dikerjakan oleh 6 orang?
+PenyelesaianAlternatif
+Masalah di atas dapat kita selesaikan dengan membuat tabel seperti berikut.
+Banyak pekerja Waktu yang dibutuhkan (hari)
+12 20
+6 h
+Dengan menggunakan konsep perbandingan berbalik nilai, diperoleh
+ 
+12
+6 20
+h=
+ 12 × 20 = h × 6
+ 240 = h × 6
+ 
+240
+6 h=
+ h = 40 Jadi, pekerjaan akan selesai dalam waktu 40 hari apabila dikerjakan oleh 6 
+orang.
+Ayo Kita
+Menalar
+Setelah kalian melakukan kegiatan mengamati, menanya, dan menggali 
+informasi, diskusikan pertanyaan berikut dengan teman kalian. Sampaikan 
+jawaban kalian di depan kelas.
+1. Untuk persamaan ky x= , bagaimakah nilai y jika nilai x mengalami 
+kenaikan?
+2. Bagaimanakah nilai x jika nilai y mengalami kenaikan?
+3. Dari persamaan perbandingan berbalik nilai, bagaimanakah bentuk 
+grafiknya? Apakah melalui titik asal (0, 0)? Apakah akan memotong 
+sumbu koordinat?
+4. Maria mampu menyelesaikan suatu pekerjaan dalam waktu 12 hari, 
+sedangkan Laila mampu menyelesaikan pekerjaan yang sama dalam 
+waktu 15 hari. Apabila mereka bekerja sama, berapa lama waktu yang 
+mereka butuhkan untuk menyelesaikan pekerjaan tersebut?
+Ayo Kita
+Berbagi
+Sajikan hasil penalaran kalian di depan kelas. Periksa dan silakan saling 
+memberi tanggapan secara santun dari pendapat teman di kelas. Ayo Kita
+!?!?
+Berlatih 5.5
+1. Tentukan apakah tiap tabel berikut menunjukkan perbandingan 
+berbalik nilai. Jika iya, jelaskan.
+ 
+a. x 2 6 8 c. x 3 6 5
+y 8 14 32 y 12 24 32
+b. x 2 3 1 d. x 2 1 4
+y 8 6 16 y 6 12 3
+2. Andrea mengatakan bahwa persamaan 8
+2
+y
+x= bukanlah persamaan 
+perbandingan berbalik nilai karena bentuknya tidak ky x= . Jelaskan 
+dan perbaiki kesalahan yang disampaikan oleh Andrea.
+3. Pak Fatkhur adalah seorang penyedia jasa tukang bangunan (kuli 
+bangunan). Beliau berpengalaman dalam proyek-proyek pembangunan 
+rumah tinggal, karena beliau sendiri juga seorang tukang bangunan. 
+Beliau menjelaskan bahwa dalam menyelesaikan sebuah rumah dapat 
+diselesaikan oleh 5 tukang, termasuk pak Fatkhur sendiri, selama 2 
+bulan sampai selesai finishing. Untuk mempercepat penyelesaian 
+bangunan, Pak Fatkhur sanggup menyediakan tukang tambahan sesuai 
+dengan permintaan pelanggan. Pak Fatkhur dan 9 temannya pernah 
+membangun rumah selama 1 bulan. Nah, sekarang coba kalian duga, 
+berapa lama yang dibutuhkan oleh Pak Fatkhur dan 5 orang temannya 
+untuk menyelesaikan sebuah rumah yang ukurannya sama seperti yang 
+dijelaskan di atas? Jika pelanggan Pak Fatkhur ingin memiliki rumah 
+yang bisa diselesaikan selama 25 hari, berapa pekerja yang dibutuhkan 
+untuk menyelesaikan pembangunan rumah? 4. Tentukan persamaan dari grafik berikut.
+1
+2
+3
+4
+5
+x
+y
+1 2 3 4 5 6
+6
+A (4, 1)
+a.
+2
+4
+6
+8
+10
+x
+y
+2 4 6 8 10 12
+12
+A (2, 6)
+b.
+5. Jarak kota P ke kota Q adalah 60 km. Grafik di bawah ini menunjukkan 
+hubungan antara kecepatan sepeda motor (km/jam) dan waktu yang 
+diperlukan (jam).
+1
+2
+3
+4
+5
+6
+x
+y
+10 20 30 40 50 60
+Waktu (jam)
+Kecepatan Rata-rata motor (Km/jam) a. Dengan menggunakan grafik di atas, tentukan kecepatan kendaraan 
+bila waktu yang dibutuhkan untuk menempuh perjalanan dari kota 
+P ke Q adalah 1,5 jam. Jelaskan bagaimana kalian memperoleh 
+jawaban.
+b. Dapatkah kalian menentukan persamaan grafik di atas? Jelaskan.
+c. Pertanyaan terbuka
+ Dapatkah kalian menentukan kecepatan yang dibutuhkan 
+pengendara untuk menempuh total lama perjalanan pergi 
+dan perjalanan pulang selama 3 jam? Bagaimana kalian 
+menentukannya.
+Dalam projek ini, kalian akan membuat denah rumahmu seperti halnya 
+seorang arsitek. Bacalah petunjuk dengan seksama sebelum membuat 
+projek ini. Bersiaplah untuk menjelaskan denah beserta bagain rumahmu 
+di depan kelas.
+Alat dan Bahan:
+1. Alat ukur: rol meter
+2. Penggaris (untuk menggambar denah)
+3. Kertas gambar A4
+Petunjuk:
+1. Ukurlah bagian-bagian dari rumah kalian, bisa mulai taman, teras, 
+semua ruangan yang ada di dalamnya, lebar pintu dan jendela, beserta 
+kebun belakang (kalau ada) dengan menggunakan rol meter.
+2. Catatlah ukuran bagian rumah kalian dalam satuan meter.
+3. Tentukan skala yang akan kalian gunakan untuk membuat denah.
+4. Tentukan ukuran-ukuran bagian rumah yang akan kalian gambar di kertas.
+5. Gambarlah denah rumah kalian dengan teliti dan benar sesuai ukuran skala.
+Setelah kalian selesai membuat gambar, tuliskan laporan yang meliputi:
+a. Luas tanah tempat rumah kalian didirikan.
+b. Luas bangunan rumah kalian.
+c. Luas setiap bagian rumah kalian,misalnya luas ruang makan, luas 
+kamar, luas kamar mandi, dan seterusnya.
+d. Rasio luas bangunan terhadap luas tanah tempat didirikan rumah kalian.
+e. Rasio luas setiap bagian dari rumah terhadap luas bangunan rumah kalian.
+f. Penjelasan rumah ideal yang mungkin akan menjadi tempat tinggal 
+ketika sudah dewasa.
+g. Foto rumah kalian yang tampak dari depan.
+Ayo Kita
+Mengerjakan
+Tugas Projek
+ 5 Setelah kalian menyelesaikan berbagai masalah dalam Bab 3 ini, 
+kalian telah mengenali berbagai cara untuk membandingkan bilangan, 
+mempelajari bagaimana menyelesaikan masalah dengan perbandingan 
+rasio, persentase, dan pecahan, mempelajari bagaimana menentukan tarif 
+satuan, dan menggunakan tarif, laju, kecepatan, untuk membuat tabel, dan 
+persamaan, dan menggunakan rasio dan proporsi untuk menyelesaikan 
+berbagai masalah.
+Pertanyaan berikut membantu kalian untuk merangkum apa yang telah 
+kalian pelajari.
+Diskusikan dengan teman kalian, kemudian tulislah kesimpulan yang telah 
+kalian dapat di buku catatan kalian.
+1. Jelaskan apa yang dimaksud kata-kata berikut.
+a. Perbandingan (rasio)
+b. Pecahan
+2. Buatlah sebuah contoh situasi dari setiap konsep berikut.
+a. Perbandingan (rasio)
+b. Pecahan
+3. Bagaimanakah cara kalian menentukan proporsi?
+4. Jelaskan bagaimana tabel dan grafik membantu kalian dalam 
+menyelesaikan masalah perbandingan.
+5. Jelaskan bagaimanakah kalian mengetahui bahwa masalah yang akan 
+kalian kerjakan adalah masalah yang berkaitan dengan perbandingan 
+senilai.
+6. Buatlah satu contoh masalah yang bukan perbandingan senilai namun 
+tampak seperti masalah perbandingan senilai.
+7. Kapan dua besaran dikatakan berbanding terbalik (perbandingan 
+berbalik nilai)?
+Ayo Kita
+Merangkum
+ 5 8. Tentukan apakah pernyataan berikut benar atau salah.
+a. Dalam persamaan perbandingan senilai y = kx, jika x meningkat, 
+maka y meningkat.
+b. Dalam persamaan perbandingan berbalik nilai ky x= , jika x 
+meningkat, maka y meningkat.
+c. Jika x berbanding terbalik terhadap y, ketika y dilipatgandakan, 
+maka y berlipat ganda juga.
+d. Jika a berbanding lurus terhadap b (perbandingan senilai), maka ab 
+konstan.
+9. Apakah grafik setiap persamaan perbandingan senilai berupa garis 
+lurus? Apakah grafik setiap grafik garis lurus menunjukkan masalah 
+perbandingan senilai?
+10. Jelaskan perbedaan perbandingan senilai dan perbandingan berbalik 
+nilai.
+11. Apakah kamu sudah menemukan bahwa perbandingan senilai maupun 
+berbalik nilai sangat dekat dengan kehidupanmu sehari-hari?
+12. Sebutkan apa saja masalah nyata yang berhubungan dengan 
+perbandingan senilai dan perbandingan berbalik nilai, selain masalah-
+masalah yang sudah ada di bab ini.
+• Terdapat dua cara dalam membandingkan dua besaran, yakni dengan 
+menentukan selisih dan menentukan rasio.
+• Rasio dinotasikan sebagai a : b, atau a
+b , atau a berbanding b.
+• Pernyataan dua rasio yang sama atau ekuivalen disebut proporsi.
+• a : b = c : d
+• Terdapat dua macam dalam perbandingan, yakni perbandingan senilai 
+dan perbandingan berbalik nilai. Uji
+Kompetensi
++=+?? 5
+A. Soal Pilihan Ganda
+1. Terdapat 42 siswa yang mengikuti kelas paduan suara. 31 siswa yang 
+mengikuti kelas paduan suara adalah perempuan. Di antara proporsi 
+berikut yang digunakan untuk menentukan x, yakni persentase siswa 
+laki-laki yang mengikuti kelas paduan suara adalah ....
+a.
+ 
+31
+42 100
+x=
+ 
+c. 
+ 
+31
+11 100
+x=
+b. 11
+31 100
+x=
+ 
+d. 
+ 
+11
+42 100
+x=
+2. Rasio waktu yang diluangkan Karina untuk mengerjakan tugas 
+Matematika terhadap tugas IPA adalah 5 banding 4. Jika dia 
+meluangkan 40 menit untuk menyelesaikan tugas Matematika, maka 
+waktu yang dia luangkan untuk menyelesaikan tugas IPA adalah ...
+a. 20 menit c. 60 menit
+b. 32 menit d. 90 menit
+3. Sebuah mesin di suatu pabrik minuman mampu memasang tutup botol 
+untuk 14 botol dalam waktu 84 detik. Banyak botol yang dapat ditutup 
+oleh mesin dalam waktu 2 menit adalah ...
+a. 16 botol c. 28 cm
+b. 20 botol d. 35 cm
+4. Pak Chandra membeli kapal motor. Jika kapal motor yang beliau miliki 
+dikendarai dengan kecepatan 32 km per jam dan menempuh jarak 80 
+km, kapal motor tersebut membutuhkan 24 liter solar. Pada kecepatan 
+yang sama, solar yang dibutuhkan Pak Chandra untuk menempuh 
+perjalanan sejauh 120 km adalah ... liter.
+a.
+ 
+7 1
+2 
+c. 12
+b. 9 d. 20 5. Pak Hendra digaji Rp360.000,00 selama 3 jam untuk memberikan 
+pelatihan di tempat kursus. Waktu yang Pak Hendra gunakan untuk 
+pelatihan jika beliau mendapatkan gaji Rp7.200.000,00 adalah ...
+a. 12 jam c. 60 jam
+b. 20 jam d. 140 jam
+6. Suatu pekerjaan dapat diselesaikan selama 16 hari oleh 7 orang. 
+Jika 3 pekerja ditugaskan ke pekerjaan lain, lama waktu yang bisa 
+diselesaikan oleh pekerja yang tersisa adalah ....
+28 hari c. 32 hari
+30 hari d. 35 hari
+7. 5 ons meises cokelat dijual seharga Rp10.000,00. Di antara grafik 
+berikut yang menunjukkan hubungan antara berat dan harga meises 
+cokelat yang dijual adalah ...
+a.
+10
+20
+30
+40
+50
+60
+5 10
+x
+y
+Berat Meises Cokelat (ons)
+Harga (dalam rupiah)
+10
+20
+30
+40
+50
+60
+5 10
+x
+y
+b.
+Berat Meises Cokelat (ons)
+Harga (dalam rupiah)
+c.
+10
+20
+30
+40
+50
+60
+5 10
+x
+y
+Berat Meises Cokelat (ons)
+Harga (dalam rupiah)
+d.
+10
+20
+30
+40
+50
+60
+5 10
+x
+y
+Berat Meises Cokelat (ons)
+Harga (dalam rupiah) 8. Pak Bambang dan keluarga, berencana pulang kampung dari Medan 
+ke Padang saat libur hari raya. Untuk itu, dia membagi dua hari 
+perjalanannya. Hari pertama beliau menempuh perjalanan 358 km dan 
+untuk hari kedua beliau tempuh sejauh 370 km. Konsumsi rata-rata 
+mobil yang dimiliki Bambang adalah 20 km/liter. Penggunaan BBM 
+yang dibutuhkan mobil Pak Bambang dari Medan sampai Padang 
+adalah ...
+ a 18 liter c. 35 liter
+b. 20 liter d. 38 liter
+9. Jamila adalah seorang perancang busana muda. Dia ingin membuka 
+toko yang khusus menjual baju rancangannya di sebuah ruko. Dia 
+menggambar rancangan toko seperti berikut.
+ Skala: 1
+2 
+in = 3 meter
+ Lebar toko pada gambar adalah 
+2 in. Lebar toko sebenarnya yang 
+ingin dibuat Jamila adalah ... meter
+a. 3 c. 9 
+b. 6 d. 12
+10. Pak Ikhsan mengendarai mobil dari rumahnya ke kota tempat beliau 
+bekerja sejauh 276 mil dengan kecepatan rata-rata 62 mil per jam. Di 
+akhir pekan, beliau pulang ke rumahnya dengan menempuh perjalanan 
+selama 6,5 jam. Di antara pernyataan berikut yang sesuai dengan 
+kondisi di atas adalah ...
+a. Kecepatan yang ditempuh Pak Ikhsan saat pulang sekitar 2 mil per 
+jam lebih cepat dari keberangkatan.
+b. Kecepatan yang ditempuh Pak Ikhsan saat pulang sekitar 2 mil per 
+jam lebih lambat dari keberangkatan.
+c. Kecepatan yang ditempuh Pak Ikhsan saat pulang sekitar 20 mil 
+per jam lebih cepat dari keberangkatan.
+d. Kecepatan yang ditempuh Pak Ikhsan saat pulang sekitar 20 mil 
+per jam lebih lambat dari keberangkatan.
+2 in 11. Tabel berikut menunjukkan kecepatan empat merek printer.
+Printer Keterangan
+Roboprint Mencetak 2 lembar per detik
+V oldeprint Mencetak 1 lembar setiap dua detik
+BiTech Plus Mencetak 160 lembar dalam 2 menit
+EL Pro Mencetak 100 lembar per menit 
+Printer manakah yang mencetak paling cepat?
+a. Roboprint c. BiTech Plus
+b. V oldeprint d. EL Pro
+12. Dalam lahan parkir suatu sekolah, 21 dari 25 sepeda yang terparkir 
+tidak memiliki boncengan di belakang. Persentase dari sepeda yang 
+tidak memiliki boncengan di belakang adalah ....
+a. 21% c. 84%
+b. 46% d. 96%
+13. Dalam tabel informasi nilai gizi pada kemasan biskuit yang dimiliki 
+Dian menyatakan bahwa 16 keping biskuit mengandung 24 gram 
+karbohidrat. Dian memakan 12 keping biskuit. Kandungan karbohidrat 
+dalam 12 biskuit?
+a. 8 gram c. 18 gram
+b. 12 gram d. 20 gram
+14. Emilia akan menggunakan petunjuk yang tertera pada kemasan sirup 
+rasa melon.
+ “Tambahkan 13 cangkir air untuk setiap 2 cangkir sirup rasa melon.”
+ Di antara proporsi berikut yang dapat digunakan untuk menentukan 
+w, banyak cangkir air yang harus Emilia tambahkan untuk 5 cangkir 
+sirup rasa melon adalah ...
+a.
+ 
+13
+25
+w=
+ 
+c. 
+ 
+13
+52
+w=
+ 
+b.
+ 
+13 5
+2 w=
+ 
+d. 
+ 
+5 13
+2 w= 15. Sebuah foto berukuran 3 cm × 4 cm. Apabila foto diperbesar dan 
+sisi yang paling panjang menjadi 9 cm, maka panjang sisi terpendek 
+menjadi ...
+a. 3,75 cm c. 6,75 cm
+b. 4,75 cm d. 7,75 cm
+16. Jika a : b = 3 : 4, maka (6a + b) : (4a + 5b) adalah ...
+a. 1 : 2 c. 7 : 8
+b. 3 : 5 d. 11 : 16
+17. Reni mengoleksi buku bacaan berupa novel sebanyak 72 buku. Rasio 
+jumlah novel ber-genre drama dan misteri adalah 7 : 5. Banyak novel 
+misteri yang harus Reni beli lagi supaya rasio kedua genre novel 
+tersebut menjadi 1 : 1 adalah ...
+ a. 9 c. 22
+b. 12 d. 24
+18. Jika (a + b) : (a – b) = 1 : 5, maka (a2 – b2) : (a2 + b2) sama dengan ....
+a. 2 : 3 c. 3 : 4
+b. 5 : 13 d. 9 : 7
+19. Jarak antara dua kota pada peta adalah 2 cm. Jarak sebenarnya kedua 
+kota sebenarnya adalah 80 km. Skala yang digunakan peta tersebut 
+adalah ...
+a. 1 : 400.000 c. 1 : 4.000.000
+b. 1 : 800.000 d. 1 : 8.000.000
+20. Di antara nilai p berikut yang memenuhi proporsi 21
+7 49
+p = adalah ...
+a. 3 c. 6
+b. 6 d. 16 B. Soal Uraian.
+1. Kesehatan. 
+ Perhatikan tabel di bawah ini.
+Persentase Akses Air Minum Layak Rumah Tangga di Indonesia
+Air Minum Layak 2000 2011
+Perkotaan 46,02 41,10
+Pedesaan 31,31 43,92
+Sumber: Profil Data Kesehatan Indonesia Tahun 2011, Kementerian Kesehatan RI 2012
+a. Bandingkan persentase akses air minum layak perkotaan terhadap 
+pedesaan dan persentase akses air minum layak pedesaan terhadap 
+perkotaan. Tulislah pernyataan untuk masing-masing tahun.
+b. Jelaskan kenaikan atau penurunan akses air minum layak di 
+perkotaan dan di pedesaan antara tahun 2000 dan 2011.
+2. Ratna ingin membeli mi instan. Ratna memiliki dua pilihan tempat 
+untuk membeli mi instan. Di AndaMart, Ratna dapat membeli tujuh 
+bungkus mi instan seharga Rp13.000,00. Sedangkan di SandiMart, 
+Ratna dapat membeli enam bungkus mi instan seharga Rp11.000,00. 
+Toko manakah yang akan kalian sarankan ke Ratna? Jelaskan.
+3. Kota A dan kota B pada peta berjarak 6 cm. Jarak sebenarnya kedua kota 
+tersebut adalah 120 km. Jika Kota B dan Kota C pada peta yang sama 
+berjarak 4 cm, maka tentukan jarak sebenarnya Kota B dan Kota C.
+4. Rasio dari dua dua bilangan adalah 3 : 4. Jika masing-masing bilangan 
+ditambah 2, rasionya menjadi 7 : 9. Tentukan hasil kali kedua bilangan itu.
+5. Masalah Terbuka
+ Berikut ini sebaran titik koordinat yang menunjukkan jarak (d) terhadap 
+waktu (t). Variabel d dalam satuan meter dan variabel t dalam satuan 
+detik. Grafik tersebut menjelaskan seseorang berjalan dari detektor 
+gerakan.
+a. Taksirlah seberapa cepat orang ini bergerak. Jelaskan bagaimana 
+kamu mengetahuinya.

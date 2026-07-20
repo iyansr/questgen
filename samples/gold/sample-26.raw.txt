@@ -1,0 +1,373 @@
+ • 4
+• 7
+• 9
+• 8
+• 10
+• 1
+• 3
+• 2
+PS
+• 11
+• 12
+R
+• 5
+• 6
+Q
+Gambar 2.22b Diagram Venn II
+Diperoleh: 
+P = {1, 2, 3, 4} (P ∩ Q) ∩ R = Ø
+Q = {4, 5, 6, 7, 8, 9, 10} P ∩ (Q ∩ R) = Ø
+R = {7, 8, 9, 10, 11, 12} Ternyata:
+P ∪ Q = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10} (P ∪ Q) ∪ R = P ∪ (Q ∪ R)
+Q ∪ R = {4, 5, 6, 7, 8, 9, 10, 11, 12} (P ∩ Q) ∩ R = P ∩ (Q ∩ R)
+(P ∪ Q) ∪ R = {1, 2, 3, 4, 5, 6, 7, 8, 
+ 9, 10, 11, 12}
+P ∪ (Q ∪ R) = {1, 2, 3, 4, 5, 6, 7, 
+ 8, 9, 10, 11, 12}
+Berdasarkan Gambar 2.10 dan 2.11Diagram Venn I dan II, dapat disimpulkan 
+sebagai berikut. 
+Untuk sebarang himpunan P, Q, dan R, berlaku:
+(P ∪ Q) ∪ R = P ∪ (Q ∪ R) 
+(P ∩ Q) ∩ R = P ∩ (Q ∩ R)
+Sifat ini disebut sifat Asosiatif
+Ayo Kita
+Menanya??
+Jika ada hal yang kurang kalian pahami, coba tulislah hal tersebut dan tanyakan 
+pada guru kalian Ayo Kita
+Menalar
+1. Jika P adalah himpunan kosong, apakah berlaku (P ∪ Q) ∪ R = P ∪ (Q ∪ R)? 
+Diskusikan dengan temanmu.
+2 Jika P adalah himpunan kosong, apakah berlaku (P ∩ Q) ∩ R = P ∩ (Q ∩ R)? 
+Diskusikan dengan temanmu. 
+Ayo Kita
+Berbagi
+Coba tukarkan hasil diskusi kelompokmu dengan kelompok lain dan saling 
+memberikan masukan dan koreksi jawabanmu.
+e. Sifat Distributif
+Ayo
+Kita Amati
+Amati kembali Gambar 2.10 dan Gambar 2.11. 
+Dari diagram Venn I dan II ditemukan juga:
+Diagram Venn I Diagram Venn II
+P ∪ (Q ∩ R) = {a, b, c, d, e, i} P ∪ (Q ∩ R) = Ø
+(P∪ Q) ∩ (P ∪ R) = {a, b, c, d, e, i} (P ∪ Q) ∩ (P ∪ R) = Ø
+P ∩ (Q ∪ R) = {c, d, e} P ∩ (Q ∪ R) = {4}
+(P ∩ Q) ∪ (P ∩ R) = {c, d, e} (P ∩ Q) ∪ (P ∩ R) = {4}
+Ternyata: Ternyata:
+P ∪ (Q ∩ R) = (P ∪ Q) ∩ (P ∪ R) P ∪ (Q ∩ R) = (P ∪ Q) ∩ (P ∪ R)
+P ∩ (Q ∪ R)= (P ∩ Q) ∪ (P ∩ R) P ∩ (Q ∪ R) = (P ∩ Q) ∪ (P ∩ R) Ayo Kita
+Menanya??
+Berdasarkan hasil pengamatan kalian, coba buatlah pertanyaan yang berkaitan 
+dengan sifat distributif irisan dan gabungan. 
+Untuk sebarang himpunan P, Q, dan R, berlaku:
+P ∪ (Q ∩ R) = (P ∪ Q) ∩ (P ∪ R)
+P ∩ (Q ∪ R) = (P ∩ Q) ∪ (P ∩ R)
+Sifat ini disebut sifat Distributif
+Ayo Kita
+Menalar
+1. Apakah (A – B) ∪ (A ∩ B) = A?
+2. Apakah (A ∪ B) ∩ Ac = B – A?
+Ayo Kita
+Berbagi
+Coba tukarkan hasil diskusi kelompokmu dengan kelompok lain dan saling 
+memberikan masukan dan koreksi jawabanmu.
+Ayo Kita
+!?!?
+Berlatih 2.10
+1. Misal A = {1, 2, 3} dan B = {2, 1, 5}, tentukan hasil dari (A ∪ B) – A.
+2. Jika H = {2, 4, 5}, K = {1, 4, 7} dan L = {7, 5, 1}, tentukan hasil dari 
+(H – K) ∩ L.
+3. Misalkan himpunan semesta adalah himpunan semua bilangan asli, 
+D = {x | x kelipatan 5} dan E = {x | x kelipatan 10}, tentukan hasil dari D – Ec. 4. Dalam gambar berikut, daerah yang diarsir menunjukkan himpunan 
+apa?
+ 
+AS B
+C
+5. Jika E ={x | (x – 1)2 = 0}, F = {x | x2 = 1} dan G = {x | x2 – 3x + 2 = 0}, 
+tentukan hasil dari (E ∩ Fc) ∪ G.
+6. Diberikan S = {1, 2, 3, 4, 5, 6, 7, 8, 9,10}
+ A = {1, 2, 3, 4, 5} 
+ B = {4, 5, 6, 7, 8}
+ C = {3, 5, 7, 9}
+ Tentukan 
+ a. Ac ∪ (B ∩ C)
+ b. (A ∩ B) ∩ Cc
+ c. (B – C) ∩ A
+7. Misalkan P = {c, {a, b}, a, d} dan Q = {a, b}, tentukan P ∩ Q.
+8. Jika D = {1, 1
+2
+,
+ 
+1
+3
+, 1
+4
+, …} dan E = {1, 2, 3, 4, …}, tentukan E – D.
+9. Diketahui n(P) = 21, n(Q) = 30, dan n(P ∩ Q) = 10. Carilah nilai n(P ∪ Q)
+10. Sebuah Puskesmas sedang merawat pasien sebanyak 40 orang, 23 
+orang menderita penyakit demam berdarah, 11 orang menderita pe -
+Berapa orang pasien yang tidak menderita kedua penyakit tersebut?
+nyakit diare, 8 orang menderita penyakit demam berdarah dan diare. 11. Perhatikan grafik di bawah.
+S A B
+ Daerah yang diarsir dibentuk oleh himpunan... (jawaban boleh lebih 
+dari satu)
+12. Gambar diagram Venn jika diketahui:
+ S = Himpunan bilangan cacah kurang dari 7 
+ A = himpunan bilangan prima kurang dari 7 
+ B = himpunan bilangan asli kurang dari 7
+13. Dalam sebuah kelas terdapat 50 orang anak. Dari jumlah tersebut, 
+19 orang anak gemar berenang, 21 orang anak gemar bernyanyi, 19 
+orang anak gemar sepak takraw, 10 orang anak gemar berenang dan 
+bernyanyi, 10 orang anak gemar bernyanyi dan sepak takraw, 7 orang 
+anak gemar bernyanyi dan sepak takraw, 6 orang anak gemar berenang 
+dan sepak takraw, dan 4 orang anak gemar ketiga-tiganya. 
+a)
+ Gambarlah diagram Venn dari keterangan di atas.
+b) Berapa orang anak yang tidak gemar satupun dari ketiga kegiatan 
+tersebut?
+14.
+ Sebanyak 20 orang remaja ditanya tentang kesukaan mereka terhadap 
+olahraga futsal dan sepak bola. Hasil survei menunjukkan bahwa 5 
+orang tidak menyukai keduanya, 3 orang suka kedua-duanya, 7 orang 
+suka futsal, dan 11 orang suka sepak bola. Berapa orang yang hanya 
+menyukai tepat satu dari keduanya?
+15.
+ Dalam tes penerimaan CPNS pada tahun 2012 yang lalu, seseorang 
+dinyatakan diterima apabila lulus tes karakater pribadi, tes potensi 
+akademik, dan tes wawasan kebangsaan sekaligus. Untuk mengisi 
+formasi guru Matematika, terdapat 100 orang peserta yang ikut tes. 
+Pada saat pengumuman hasil tes, 20 orang hanya lulus tes karakter 
+pribadi, 8 orang hanya lulus tes potensi akademik, 5 orang hanya lulus 
+tes wawasan kebangsaan, 10 orang lulus tes karakter pribadi dan tes 
+potensi akademik, 7 orang lulus tes potensi akademik dan tes wawasan 
+kebangsaan, 30 orang lulus tes karakter pribadi dan tes wawasan 
+kebangsaan. Berapa orang yang diterima menjadi guru Matematika? 1. Bersama temanmu perhatikan kegiatan-kegiatan di sekolahmu. Jelaskan 
+bagaimana operasi himpunan dipergunakan dalam menjalankan kegiatan-
+kegiatan sekolah tersebut. Laporkan hasil pengamatanmu lengkap dengan 
+model himpunan yang kalian buat dan paparkan di kelas.
+2.
+ Berdasarkan langkah-langkah yang dipakai dalam operasi himpunan. 
+Algoritma mana yang menurutmu lebih panjang/ lama pengerjaannya 
+bila diterapkan pada himpunan yang sama? Jelaskan pendapatmu, 
+laporkan hasilnya dan paparkan.
+3.
+ Buatlah sebuah Poster yang memuat penjelasan tentang hubungan 
+yang terjadi antara himpunan A dan himpunan B jika diketahui bahwa:
+a.
+ A ∪ B = A e. A ∩ B = B
+b. A ∪ B = B f. A ∩ B = Ø
+c. A ∪ B = Ø g. A − B = A
+d. A ∩ B = A h. A − B = Ø
+ Kalian boleh mengerjakan secara berkelompok. Untuk itu, kalian 
+boleh menggali informasi dari sumber belajar apa pun (buku teks yang 
+lain, internet atau bertanya kepada guru). 
+Ayo Kita
+Mengerjakan
+Tugas Projek
+ 2
+Pengalaman belajar tentang himpunan telah kalian lalui. Sekarang, cobalah 
+tuliskan hal-hal penting yang menurut kalian sangat berharga dan kira-kira 
+akan bermanfaat bagi kalian untuk belajar lebih jauh dengan menjawab 
+pertanyaan berikut:
+1.
+ Apa yang kalian ketahui tentang himpunan, himpunan semesta, dan 
+anggota himpunan?
+2. Himpunan dapat disajikan dengan berapa cara? Sebutkan dan jelaskan.
+3. Ada berapa macam bentuk diagram Venn? Jelaskan.
+4. Jelaskan apa yang kalian ketahui tentang himpunan kosong dan relasi 
+himpunan.
+5.
+ Apa yang dimaksud dengan irisan, gabungan, selisih dan komplemen? 
+Jelaskan.
+Ayo Kita
+Merangkum
+ 2 Uji
+Kompetensi
++=+?? 2
+A. Soal Pilihan Ganda
+1. Di antara kumpulan berikut yang termasuk himpunan adalah
+a. Kumpulan gunung yang tinggi
+b. Kumpulan bunga yang baunya harum
+c. Kumpulan hewan berkaki empat
+d. Kumpulan siswa yang pandai
+2. Kumpulan-kumpulan berikut ini yang bukan himpunan adalah . . .
+a. Kumpulan siswa yang tingginya kurang dari 150 cm
+b. Kumpulan bilangan cacah antara 2 dan 10
+c. Kumpulan siswa yang berbadan kurus
+d. Kumpulan bilangan asli kurang dari 10
+3. Himpunan A = {1, 3, 5, 7, 9}, bila himpunan A dinyatakan dengan 
+menyebutkan sifat keanggotaanya adalah
+a. A = {himpunan bilangan antara 0 sampai 10}
+b. A = {himpunan bilangan ganjil antara 1 sampai 9}
+c. A = {himpunan bilangan prima antara 0 sampai 10}
+d. A = {himpunan bilangan ganjil antara 0 sampai 10}
+4. Himpunan semesta untuk himpunan A = {1, 2, 3, 4, 5 }, B = { x | x ≤ 2, 
+x ∈ Bilangan Bulat}, dan C = {bilangan Asli kelipatan 3 yang kurang 
+dari 30} adalah 
+a. Himpunan bilangan Asli
+b. Himpunan bilangan Cacah
+c. Himpunan bilangan Bulat
+d. Himpunan bilangan Cacah yang kurang dari 30 5. Banyaknya himpunan bagian dari K = {a, b, c, d, e} yang mempunyai 
+dua anggota adalah
+a. 4 himpunan 
+b. 8 himpunan
+c. 12 himpunan
+d. 16 himpunan
+6. Diberikan diagram Venn yang menyatakan himpunan A dan B, maka 
+A – B adalah 
+a. {a, b}
+b. {b, c}
+c. {e, f}
+d. {g, h}
+7 Jika P = {bilangan prima kurang dari 12} dan Q = {bilangan asli 
+kurang dari 12}, pernyataan berikut yang benar adalah . . .
+a. 9 ∉ P dan P ⊄ Q 
+b. 5 ∉ P dan P ⊂ Q
+c. 9 ∈ P dan P ⊄ Q 
+d. 5 ∈ P dan P ⊂ Q
+8. Dari himpunan berikut yang merupakan himpunan kosong adalah. . .
+a. Himpunan bilangan prima genap
+b. Himpunan nama-nama hari yang diawali dengan huruf P
+c. Himpunan binatang berkaki 4
+d. Himpunan bulan yang diawali dengan huruf N
+9. Himpunan semesta dari himpunan A = {0, 4, 8, 12, 16} adalah . . .
+a. Himpunan bilangan asli 
+b. Himpunan bilangan ganjil
+c. Himpunan bilangan cacah
+d. Himpunan bilangan prima
+S
+• a
+A B
+• c
+• d
+• e
+• f
+• g
+• h 10. Himpunan P = { x | 2 ≤ x ≤ 8, x ∈ Bilangan Asli}, jika dinyatakan 
+dengan mendaftar anggota-anggotanya adalah . . . 
+a. {3, 4, 5, 6, 7}
+b. {3, 4, 5, 6, 7, 8}
+c. {2, 3, 4, 5, 6, 7}
+d. {2, 3, 4, 5, 6, 7, 8}
+11. Diketahui A = { x | 5 ≤ x ≤ 8, x ∈ bilangan Asli}. Banyaknya himpunan 
+bagian dari A yang terdiri dari 3 anggota adalah . . .
+a.
+ 1
+b. 2
+c. 3
+d. 4
+12. Diketahui A = { x | 0 ≤ x ≤ 3, x ∈ Bilangan Cacah} dan B = {1, 2, 3, 4, 5}. 
+Irisan A dan B adalah 
+a.
+ {1, 2}
+b. {0, 1, 2}
+c. {1, 2, 3}
+d. {0, 1, 2, 3, 4}
+13. Diberikan S = {1, 2, 3, 4, 5, 6, 7, 8, 9,10}, A = {1, 2, 3, 4, 5}, dan 
+B = {4, 5, 6, 7, 8}. Anggota dari Ac ∪ B adalah 
+a. {6, 7, 8, 9}
+b. {4, 5, 6, 7, 8, 9, 10}
+c. {1, 2, 3, 4, 5}
+d. {1, 2, 3, 4, 5, 6}
+14. Banyaknya himpunan bagian dari Y ={bilangan prima lebih dari 6 dan 
+kurang dari 20} adalah 
+a. 8
+b. 16
+c. 32
+d. 64 15. Diketahui S={1, 2, 3, 4, 5, 6, 7, 8}, A={1, 2, 3}, dan B = {3, 4, 5, 6}. 
+Anggota dari (A – B) ∩ B adalah 
+a. { }
+b. {3}
+c. {1, 2}
+d. {1, 2, 3}
+16. Diketahui himpunan A = {1, 2, 3, 4}, B = {bilangan prima kurang dari 
+6}, dan C = { x | 2 ≤ x ≤ 7 x ∈ bilangan Asli}. Anggota dari (A ∪ B) 
+∩ C adalah 
+a.
+ {1, 2, 3, 4, 5}
+b. {2, 3, 4, 5}
+c. {1, 2, 3, 4}
+d. {3, 4, 5}
+17. Dalam suatu kelas terdapat 30 orang siswa. Di antaranya, ada 20 siswa 
+senang pelajaran Matematika, 15 orang siswa senang pelajaran Fisika, 
+dan 10 orang siswa senang keduanya. Banyaknya siswa yang tidak 
+senang keduanya adalah
+a.
+ 3
+b. 4
+c. 5
+d. 6
+18. Suatu kelas yang berjumlah 25 siswa, terdapat 20 orang siswa yang 
+senang sepak bola, 15 orang siswa senang bulu tangkis, dan 3 orang 
+siswa tidak senang keduanya. Banyaknya siswa yang senang kedua -
+ya adalah 
+a.
+ 3
+b. 5
+c. 8
+d. 10
+n 19. Dalam suatu kelas terdapat 20 orang siswa senang minum susu, 15 
+orang siswa senang minum teh, 5 siswa senang minum keduanya, dan 
+3 orang siswa tidak senang keduanya. Banyaknya siswa dalam kelas 
+tersebut adalah
+a.
+ 30
+b. 31
+c. 32
+d. 33
+20. Dalam remaja Karang Taruna di setelah dilakukan survey terhadap 
+kegemaran olahraganya diperoleh data sebagai berikut, 20 siswa ge -
+mar bola voli, 25 siswa gemar sepak bola, 23 siswa gemar bulu tan
+voli dan bulu tangkis, 12 siswa gemar sepak bola dan bulu tangkis, 4 
+siswa gemar ketiganya, serta 2 anak tidak gemar ketiganya. Banyak -
+ya remaja di Karang Taruna tersebut adalah 
+a. 40
+b. 42
+c. 44
+d. 46
+21. Sebuah lembaga penelitian, meneliti makanan ringan yang dikon-
+sumsi anak-anak. Dari hasil penelitian, tercatat 18 merek mengandung 
+zat pewarna sintetik, 24 merek mengandung penyedap rasa buatan, 
+dan 10 merek mengandung kedua zat tersebut. Jika ada 9 merek tidak 
+mengandung zat pewarna sintetik maupun penyedap rasa buatan, ba -
+yaknya merek makanan ringan yang diteliti oleh lembaga penelitian 
+tersebut adalah 
+a.
+ 40
+b. 41
+c. 42
+d. 43
+kis, 8 siswa gemar bola voli dan sepak bola, 10 siswa gemar bola 
+g-
+n
+n B. Soal Uraian
+1. Tentukan semua himpunan semesta yang dari A = {1, 2, 3, 5}
+2. Tulislah semua himpunan bagian dari A = {x │ 5 < x < 10, x bilangan 
+asli}
+3. Diketahui S = {1, 2, 3, 4, 5, 6, 7, 8}, A = {1, 2, 3, 5}, dan B = {4, 5, 6}
+ Dengan cara mendaftar anggotanya, tentukan:
+ a. (A ∩ B)c 
+ b. (A ∪ B)c 
+ 
+4.
+ Diketahui S = {1, 2, 3, 4, 5, 6, 7, 8}, A = {x │ 2 < x < 7, x bilangan 
+asli}, dan B = {4, 5, 6}
+ Gambarlah diagram Venn dari keterangan tersebut 
+5. Diketahui A = {x │ x > 5, x bilangan asli}, B = {x │ 3 < x < 8, x 
+bilangan asli}, dan C = {x │ 5 < x < 10, x bilangan asli}. Dengan cara 
+mendaftar anggotanya, tentukan:
+ a. (A ∩ B) ∪ (B ∩ C) 
+ b. (A ∪ C) ∩ (A ∪ B) 
+6. Jika E ={x | (x – 1)2 = 0}, F = {x | x2 = 1}, dan G = {x | x2 – 3x + 2 = 0}. 
+ Tentukan hasil dari (E ∩ Fc) ∪ G.
+7. Diketahui A = {x │ x > 5, x bilangan asli}, B = {x │ 3 < x < 8, x 
+bilangan asli}, dan C = {x │ 5 < x < 10, x bilangan asli}. Gambarlah 
+diagram Venn-nya
+8. Di antara sekelompok siswa yang terdiri atas 30 orang ternyata 18 
+orang suka menyanyi, 20 orang suka menari dan 10 orang suka 
+melakukan keduanya.
+a. Gambarlah diagram Venn untuk menggambarkan keadaan di atas 
+b. Berapa banyak siswa yang tidak suka menari dan tidak suka 
+menyanyi?
+c. Berapa banyak siswa yang hanya suka menyanyi?
+d. Berapa banyak siswa yang hanya suka menari?

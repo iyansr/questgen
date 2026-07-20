@@ -1,0 +1,359 @@
+{
+  "variant": "v1-ipa-stems",
+  "sampleId": "sample-31",
+  "topic": "Pola Bilangan",
+  "sessionId": "22015609-d546-440c-92b4-7289840d57c9",
+  "documentId": "d997107e-7545-49ad-a810-923fad7f14d8",
+  "latencyMs": 141763,
+  "questions": [
+    {
+      "number": 0,
+      "questionType": "multiple_choice",
+      "questionText": "Pita barisan bilangan tiga warna (merah, putih, biru) memiliki pola berulang setiap 3 bilangan. Bilangan yang habis dibagi 3 berwarna merah, bersisa 1 berwarna putih, dan bersisa 2 berwarna biru. Warna pita pada bilangan 2.345 adalah ....",
+      "options": [
+        {
+          "text": "Merah",
+          "label": "A"
+        },
+        {
+          "text": "Putih",
+          "label": "B"
+        },
+        {
+          "text": "Biru",
+          "label": "C"
+        },
+        {
+          "text": "Tidak dapat ditentukan",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Jumlah tiga bilangan genap berurutan adalah 90. Bilangan terbesar dari ketiga bilangan tersebut adalah ....",
+      "options": [
+        {
+          "text": "28",
+          "label": "A"
+        },
+        {
+          "text": "30",
+          "label": "B"
+        },
+        {
+          "text": "32",
+          "label": "C"
+        },
+        {
+          "text": "34",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Rusda memiliki mesin fungsi yang menghasilkan luaran dari masukan $x$ dengan rumus $x^3 + x - 1$. Jika masukan 9, luaran adalah 737. Luaran untuk masukan 10 adalah ....",
+      "options": [
+        {
+          "text": "1.009",
+          "label": "A"
+        },
+        {
+          "text": "1.010",
+          "label": "B"
+        },
+        {
+          "text": "1.011",
+          "label": "C"
+        },
+        {
+          "text": "1.012",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan barisan bilangan: 5, 11, 23, 47, ... Dua suku berikutnya adalah ....",
+      "options": [
+        {
+          "text": "95 dan 191",
+          "label": "A"
+        },
+        {
+          "text": "95 dan 189",
+          "label": "B"
+        },
+        {
+          "text": "93 dan 187",
+          "label": "C"
+        },
+        {
+          "text": "97 dan 193",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Angka satuan dari $3^{100}$ adalah ....",
+      "options": [
+        {
+          "text": "1",
+          "label": "A"
+        },
+        {
+          "text": "3",
+          "label": "B"
+        },
+        {
+          "text": "7",
+          "label": "C"
+        },
+        {
+          "text": "9",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Jika angka pada bilangan 100100100100... diteruskan dengan pola yang sama, angka ke-100 adalah ....",
+      "options": [
+        {
+          "text": "0",
+          "label": "A"
+        },
+        {
+          "text": "1",
+          "label": "B"
+        },
+        {
+          "text": "0 atau 1",
+          "label": "C"
+        },
+        {
+          "text": "Tidak dapat ditentukan",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Pola susunan bola biru membentuk barisan bilangan segitiga: $U_n = \\frac{1}{2}n(n+1)$. Banyak bola biru pada pola ke-10 adalah ....",
+      "options": [
+        {
+          "text": "45",
+          "label": "A"
+        },
+        {
+          "text": "55",
+          "label": "B"
+        },
+        {
+          "text": "65",
+          "label": "C"
+        },
+        {
+          "text": "75",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Jumlah 20 bilangan ganjil pertama ($1 + 3 + 5 + \\dots + 39$) adalah ....",
+      "options": [
+        {
+          "text": "400",
+          "label": "A"
+        },
+        {
+          "text": "420",
+          "label": "B"
+        },
+        {
+          "text": "440",
+          "label": "C"
+        },
+        {
+          "text": "460",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Pada desain kolam persegi, banyak ubin biru adalah $n^2$ dan banyak ubin putih adalah $4n+4$. Jika banyak ubin biru adalah 400, maka banyak ubin putih adalah ....",
+      "options": [
+        {
+          "text": "84",
+          "label": "A"
+        },
+        {
+          "text": "88",
+          "label": "B"
+        },
+        {
+          "text": "92",
+          "label": "C"
+        },
+        {
+          "text": "96",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Sebuah lampu hias berubah warna dari hijau (H), kuning (K), merah (M) secara berulang setiap 2 detik. Warna lampu pada urutan ke-30 adalah ....",
+      "options": [
+        {
+          "text": "Hijau",
+          "label": "A"
+        },
+        {
+          "text": "Kuning",
+          "label": "B"
+        },
+        {
+          "text": "Merah",
+          "label": "C"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 10,
+      "questionType": "short_answer",
+      "questionText": "Perhatikan barisan bilangan Fibonacci: 0, 1, 1, 2, 3, 5, 8, 13, 21, ... Tentukan tiga bilangan berikutnya.",
+      "options": null,
+      "correctAnswer": "34, 55, 89"
+    },
+    {
+      "number": 11,
+      "questionType": "short_answer",
+      "questionText": "Pola bilangan Pascal memiliki baris-baris dengan bilangan yang merupakan hasil penjumlahan dari dua bilangan di atasnya. Jumlah bilangan pada baris ke-6 adalah ....",
+      "options": null,
+      "correctAnswer": "32"
+    },
+    {
+      "number": 12,
+      "questionType": "short_answer",
+      "questionText": "Perhatikan pola bilangan: $\\frac{1}{2}, \\frac{1}{6}, \\frac{1}{12}, \\frac{1}{20}, \\ldots$. Tentukan pola ke-5 dari barisan tersebut.",
+      "options": null,
+      "correctAnswer": "$\\frac{1}{30}$"
+    },
+    {
+      "number": 13,
+      "questionType": "essay",
+      "questionText": "Jelaskan cara menentukan angka satuan pada bilangan $3^{100}$. Sertakan langkah-langkah pengamatan pola dan hasil akhirnya.",
+      "options": null,
+      "correctAnswer": "Angka satuan dari $3^n$ membentuk pola berulang setiap 4: $3^1=3$, $3^2=9$, $3^3=27$ (satuan 7), $3^4=81$ (satuan 1), $3^5=243$ (satuan 3), dan seterusnya. Pola: 3, 9, 7, 1 berulang. Karena 100 adalah kelipatan 4, maka $3^{100}$ memiliki angka satuan yang sama dengan $3^4$, yaitu 1."
+    },
+    {
+      "number": 14,
+      "questionType": "essay",
+      "questionText": "Pada desain kolam persegi, banyak ubin biru mengikuti pola $n^2$ dan banyak ubin putih mengikuti pola $4n+4$, dengan $n$ adalah urutan kolam. Jika banyak ubin biru adalah 900, hitunglah banyak ubin putih. Jelaskan langkah-langkah penyelesaiannya.",
+      "options": null,
+      "correctAnswer": "Diketahui ubin biru $= n^2 = 900$, maka $n = \\sqrt{900} = 30$. Ubin putih $= 4n+4 = 4 \\times 30 + 4 = 120 + 4 = 124$. Jadi banyak ubin putih adalah 124."
+    }
+  ],
+  "structural": {
+    "score": 78.4,
+    "templateSim": 66.7,
+    "cognitiveSim": 80,
+    "stemEllipsisSim": 80,
+    "fourOptionSim": 93.3,
+    "optionShapeSim": 86.7,
+    "indoSim": 88.9,
+    "gold": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 2,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 3,
+        "other": 11
+      },
+      "cognitiveHist": {
+        "recall": 10,
+        "comprehend": 0,
+        "apply": 5
+      },
+      "stemEllipsisRate": 0.5333333333333333,
+      "fourOptionRate": 0.6666666666666666,
+      "optionShapeHist": {
+        "short_terms": 8,
+        "long_statements": 0,
+        "mixed": 2,
+        "none": 5
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0.2,
+      "avgIndonesianMarkers": 1.4
+    },
+    "generated": {
+      "n": 15,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 4,
+        "urutan": 3,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 9
+      },
+      "cognitiveHist": {
+        "recall": 7,
+        "comprehend": 0,
+        "apply": 8
+      },
+      "stemEllipsisRate": 0.7333333333333333,
+      "fourOptionRate": 0.6,
+      "optionShapeHist": {
+        "short_terms": 9,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 6
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 2.066666666666667
+    }
+  },
+  "judgeScore": 65,
+  "judgeRationale": "Both sets use formal Indonesian, 4-option MCQ style, and involve number patterns, but SET B includes more varied contexts and fewer direct pattern completion or near-miss distractors typical in SET A.",
+  "sanityRate": 100,
+  "sanityNotes": "All questions relate to number patterns, a common SMP topic.",
+  "patternScore": 72.4
+}

@@ -1,0 +1,314 @@
+{
+  "sampleId": "sample-5",
+  "topic": "Sistem Pernapasan",
+  "grade": "SMP",
+  "classGrade": "VII",
+  "curriculum": "Kurikulum Merdeka",
+  "questionTypeCounts": [
+    {
+      "type": "multiple_choice",
+      "count": 10
+    },
+    {
+      "type": "short_answer",
+      "count": 3
+    },
+    {
+      "type": "essay",
+      "count": 2
+    }
+  ],
+  "source": "samples/sample-5/exercise.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut ini yang bukan merupakan fungsi hidung dalam proses pernapasan adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "mengatur suhu udara yang masuk ke dalam paru-paru"
+        },
+        {
+          "label": "B",
+          "text": "sebagai tempat pertukaran gas oksigen dan gas karbon dioksida"
+        },
+        {
+          "label": "C",
+          "text": "mengatur kelembapan udara yang masuk ke dalam paru-paru"
+        },
+        {
+          "label": "D",
+          "text": "menyaring partikel debu atau kotoran yang masuk bersama udara"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Struktur pada laring yang berfungsi untuk mencegah masuknya partikel makanan atau minuman ke dalam laring dan trakea adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "silia"
+        },
+        {
+          "label": "B",
+          "text": "tonsil"
+        },
+        {
+          "label": "C",
+          "text": "epiglotis"
+        },
+        {
+          "label": "D",
+          "text": "pita suara"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Jaringan dalam paru-paru yang berfungsi sebagai tempat pertukaran gas oksigen dan gas karbon dioksida adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "alveolus"
+        },
+        {
+          "label": "B",
+          "text": "bronkiolus"
+        },
+        {
+          "label": "C",
+          "text": "bronkus"
+        },
+        {
+          "label": "D",
+          "text": "laring"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Struktur yang berfungsi untuk melindungi paru-paru dari gesekan saat mengembang dan mengempis adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "pleura"
+        },
+        {
+          "label": "B",
+          "text": "alveolus"
+        },
+        {
+          "label": "C",
+          "text": "diafragma"
+        },
+        {
+          "label": "D",
+          "text": "lobus paru-paru"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut ini merupakan aktivitas yang menyebabkan terjadinya inspirasi adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "relaksasinya otot-otot eksternal antartulang rusuk dan relaksasinya diafragma"
+        },
+        {
+          "label": "B",
+          "text": "relaksasinya otot-otot eksternal antartulang rusuk dan berkontraksinya diafragma"
+        },
+        {
+          "label": "C",
+          "text": "berkontraksinya otot-otot eksternal antartulang rusuk dan relaksasinya diafragma"
+        },
+        {
+          "label": "D",
+          "text": "berkontraksinya otot-otot eksternal antartulang rusuk dan berkontraksinya diafragma"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut ini yang bukan merupakan faktor yang memengaruhi frekuensi pernapasan adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "umur"
+        },
+        {
+          "label": "B",
+          "text": "jenis kelamin"
+        },
+        {
+          "label": "C",
+          "text": "aktivitas tubuh"
+        },
+        {
+          "label": "D",
+          "text": "suhu lingkungan"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Berapakah volume udara residu yang terdapat dalam paru-paru?",
+      "options": [
+        {
+          "label": "A",
+          "text": "500 mL"
+        },
+        {
+          "label": "B",
+          "text": "1.000 mL"
+        },
+        {
+          "label": "C",
+          "text": "1.500 mL"
+        },
+        {
+          "label": "D",
+          "text": "2.000 mL"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Apakah kelainan yang disebabkan oleh menyempitnya saluran pernapasan dalam paru-paru, sehingga seseorang dapat mengalami kesulitan bernapas?",
+      "options": [
+        {
+          "label": "A",
+          "text": "asma"
+        },
+        {
+          "label": "B",
+          "text": "asfiksi"
+        },
+        {
+          "label": "C",
+          "text": "influenza"
+        },
+        {
+          "label": "D",
+          "text": "bronkitis"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Paru-paru seorang pasien penuh dengan cairan. Setelah dianalisis ternyata juga ditemukan bakteri Streptococcus pneumoniae. Pasien tersebut terserang penyakit ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "asma"
+        },
+        {
+          "label": "B",
+          "text": "pneumonia"
+        },
+        {
+          "label": "C",
+          "text": "tuberculosis"
+        },
+        {
+          "label": "D",
+          "text": "kanker paru-paru"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 10,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut ini merupakan upaya dalam menjaga kesehatan sistem pernapasan manusia adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "tidak merokok"
+        },
+        {
+          "label": "B",
+          "text": "berolahraga di malam hari"
+        },
+        {
+          "label": "C",
+          "text": "duduk di dekat perokok aktif"
+        },
+        {
+          "label": "D",
+          "text": "saling bertukar masker yang sudah digunakan"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 1,
+      "questionType": "essay",
+      "questionText": "Jelaskan organ penyusun sistem pernapasan manusia beserta fungsinya!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 2,
+      "questionType": "essay",
+      "questionText": "Jelaskan mekanisme inspirasi dan ekspirasi pada sistem pernapasan manusia!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 3,
+      "questionType": "short_answer",
+      "questionText": "Sebutkan 4 gangguan atau penyakit pada sistem pernapasan manusia beserta penyebabnya!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 4,
+      "questionType": "essay",
+      "questionText": "Jelaskan upaya yang dapat kamu lakukan untuk menjaga sistem pernapasan kamu tetap sehat!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 5,
+      "questionType": "essay",
+      "questionText": "Beny adalah anak yang suka menyanyi. Suatu ketika Beny menderita demam dengan gejala pilek dan sakit tenggorokan, sehingga mengganggunya dalam bernyanyi. Struktur apa yang terganggu pada tubuh Beny? Bagaimana demam dapat memengaruhi struktur tersebut? Membuat Poster tentang Upaya dalam Menjaga Kesehatan Sistem Pernapasan pada Manusia",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    }
+  ]
+}

@@ -1,0 +1,312 @@
+34
+Kelas VIII SMP/MTs Semester I
+Uji
+Kompetensi
++=+?? 1
+A. Pilihan Ganda
+1. Batang korek api disusun dengan dengan susunan seperti pada gambar 
+berikut.
+Pola 3Pola 1 Pola 2
+ Jika pola tersebut terus berlanjut, banyak batang korek api pada 
+susunan ke-10 adalah ... batang.
+A. 33
+B. 36
+C. 39
+D. 42
+TIMSS 2003 8th Grade Mathematics Item
+2. Perhatikan pola bilangan berikut.
+ (3, 6), (6, 15), (8, 21)
+ Pernyataan yang tepat untuk mendapatkan bilangan kedua dari 
+pasangan bilangan pertama pada pola tersebut adalah ....
+A. Ditambah 3
+B. Dikalikan 2
+C. Dikalikan 2 kemudian ditambah 3
+D. Dikalikan 3 kemudian dikurangi 3
+TIMSS 2003 8th Grade Mathematics Item
+Petunjuk: Untuk soal no. 3 - 16, pilihlah salah satu jawaban yang benar 
+sesuai dengan pola barisan yang diberikan.
+35
+Kurikulum 2 3. 10, 30, 50, 70, ..., ..., ...
+A. 80, 90, 100
+B. 90, 110, 130
+C. 100, 200, 400
+D. 110, 130, 150
+4. 2, 3, 8, 11, 16, ..., ..., ...
+A. 19, 24, 27
+B. 18, 23, 26
+C. 20, 25, 28
+D. 19, 25, 28
+5. 5, 4, 9, 8, 13, 12, 17, ..., ..., ...
+A. 18, 23, 22
+B. 17, 22, 21
+C. 16, 21, 20
+D. 15, 20, 19
+6. 1, 3, 4, 7, 9, 13, 16, 21, ..., ...
+A. 27, 31
+B. 25, 31
+C. 25, 30
+D. 25, 29
+7. 2, −6, 18, −32, 64, ..., ..., ...
+A. −128, 254, −508
+B. 128, −254, 508
+C. −96, 128, −160
+D. −254, 508, −1016
+36
+Kelas VIII SMP/MTs Semester I
+8. 90, 30, 10, ..., ..., ...
+A. 3
+10 , 9
+10 , 27
+10
+B. 3, 2, 1
+C. 7, 4, 1
+D. 9
+10 , 27
+10 , 81
+10
+9. 4, −7, 10, −13, 16, ..., ..., ... 
+A. 19, −22, 25
+B. −20, 25, −31
+C. 20, −24, 28
+D. −19, 22, −25
+10. A, K, C, ..., E, O, G
+A. D
+B. L
+C. N
+D. M
+11. 1, 3, 4, 7, ..., ..., 29
+A. 11, 19
+B. 11, 18
+C. 10, 17
+D. 10, 18
+12. 1, 4, 9, 16, ..., ..., 49
+A. 25, 36
+B. 25, 30
+C. 20, 36
+D. 24, 34
+37
+Kurikulum 2 13. 2, 4, 10, 11, 18, 18, 26, 25, ..., ..., ... 
+A. 32, 30, 40
+B. 33, 31, 41
+C. 34, 32, 42
+D. 35, 33, 43
+14. 1, 5, –1, 3, 7, 1, 5, 9, 3, 7, 11, 5, ..., ..., ...
+A. 8, 12, 6
+B. 9, 13, 7
+C. 10, 14, 8
+D. 11, 15, 9
+15. 4, 10, ..., ..., 34, 44
+A. 17, 26
+B. 16, 22
+C. 17, 25
+D. 16, 25
+16. 100, 92, ..., 79, ..., 70
+A. 85, 73
+B. 84, 74
+C. 84, 71
+D. 85, 74
+17. Jika angka di belakang koma pada bilangan 7,1672416724167... 
+dilanjutkan terus menerus, angka pada tempat kedudukan 10
+1
+33 
+adalah ...
+A. 1 C. 7
+B. 6 D. 2
+38
+Kelas VIII SMP/MTs Semester I
+18. Angka satuan pada bilangan 2.0132.001 adalah ...
+A. 3 C. 7
+B. 9 D. 1
+19. Jika n pada bilangan 1.248n adalah suatu bilangan bulat positif, nilai n 
+agar angka satuannya 8 adalah ...
+A. 2.013
+B. 2.014
+C. 2.015
+D. 2.016 
+20. Jika n menyatakan banyak rusuk sisi alas suatu limas, maka banyak 
+rusuk pada limas tersebut adalah ....
+A. 3n 
+B. 2n 
+C. 3n + 1
+D. 2n + 1
+B. Esai
+1. Tentukan dua suku yang hilang pada barisan bilangan berikut.
+2, 5, ..., 12, ..., 31, 50
+2. Bilangan-bilangan pada barisan 7, 11, 15, 19, 23, ... terus bertambah 
+4 pada setiap suku-sukunya. Sedangkan bilangan pada barisan 1, 10, 
+19, 28, 37, ... terus bertambah 9 pada setiap suku-sukunya. Bilangan 
+19 terdapat pada kedua pola tersebut. Jika kedua barisan bilangan 
+tersebut dilanjutkan terus menerus, maka bilangan sama yang muncul 
+berikutnya di kedua barisan adalah ....
+TIMSS 2003 8th Grade Mathematics Item
+3. Ketiga gambar berikut dibagi menjadi segitiga-segitiga kecil yang 
+berukuran sama.
+39
+Kurikulum 2 Pola 3
+2 4
+6
+1 3
+5
+8
+7
+Pola 2
+1
+2
+Pola 1
+a. Gambar tersebut dilanjutkan hingga gambar 4 dengan pola yang 
+sama. Lengkapi tabel di bawah ini.
+Gambar Banyak segitiga
+1 2
+2 8
+3 ...
+4 ...
+b. Jika gambar tersebut dilanjutkan hingga gambar 7, tentukan 
+banyak segitiga yang terbentuk.
+c. Jika gambar tersebut dilanjutkan hingga gambar 50. Jelaskan cara 
+kalian untuk menentukan banyak segitiga kecil yang terbentuk, 
+tanpa menggambar dan mencacah satu per satu gambar.
+TIMSS 2003 8th Grade Mathematics Item
+4. Jika pola pada gambar berikut dilanjutkan terus menerus, tentukan 
+gambar yang terbentuk pada persegi bertanda X.
+X
+TIMSS 2003 8th Grade Mathematics Item
+40
+Kelas VIII SMP/MTs Semester I
+5. Jika angka di belakang koma pada bilangan 13,5689135689135... 
+dilanjutkan terus menerus, tentukan angka pada tempat kedudukan 
+10
+1
+40 .
+6. Tentukan angka satuan pada bilangan 2.0121.002...
+7. Jika angka pada bilangan 100000100000100000100000... dilanjutkan 
+terus menerus hingga angka ke-100 dengan pola yang terlihat, maka 
+tentukan banyak angka “0” pada bilangan tersebut. 
+8. Jika n menyatakan banyak rusuk pada suatu prisma, tentukan banyak 
+sisi pada prisma tersebut.
+9. Tentukan banyak lingkaran pada pola ke-101 pada konfigurasi objek 
+berikut.
+10. Jika pasangan bilangan berikut ini dilanjutkan, tentukan pasangan 
+bilangan 100.
+1 2 3 4 5 6 7
+2 6 12 20 30 42 56
+41
+Kurikulum 2 Koordinat Kartesius
+Bab 2
+Jika kalian melihat denah peta perumahan, kalian akan melihat rumah 
+sudah diatur sedemikian rupa tampak tertata rapi dan dengan jalan 
+yang tersambung satu dengan lainnya seperti garis vertikal dan garis 
+horizontal. Tentu semuanya itu mempunyai maksud dan tujuan agar lahan 
+yang ada dapat dimanfaatkan dengan seefisien mungkin dan semua rumah 
+dapat memiliki akses jalan yang cukup memadai. Jika kalian cermati, peta 
+perumahan tersebut menunjukkan bahwa setiap rumah memiliki posisi 
+yang berbeda-beda terhadap titik tertentu yang biasanya disebut sistem 
+koordinat. Agar kalian lebih mengerti tentang sistem koordinat tersebut, 
+ayo kita pelajari sistem koordinat dengan baik.
+Sumber: Kemdikbud
+Denah Perumahan
+42
+Kelas VIII SMP/MTs Semester I
+• Titik Asal 
+• Sumbu-X 
+• Sumbu-Y
+• Garis-garis sejajar
+• Garis-garis tegak lurus
+• Garis-garis berpotongan
+3.2. Menjelaskan kedudukan titik dalam bidang koordinat Kartesius 
+yang dihubungkan dengan masalah kontekstual.
+4.2. Menyelesaikan masalah yang berkaitan dengan kedudukan titik 
+dalam bidang koordinat Kartesius.
+K
+D 
+ompetensi asar
+1. Menggunakan koordinat Kartesius untuk menentukan posisi:
+a. titik terhadap sumbu-X dan sumbu-Y.
+b. titik terhadap titik asal (0, 0) dan titik tertentu (a, b).
+2. Menggunakan koordinat Kartesius untuk menentukan posisi:
+a. garis yang sejajar dengan sumbu-X dan sumbu-Y.
+b. garis yang berpotongan dengan sumbu-X dan sumbu-Y.
+c. garis yang tegak lurus dengan sumbu-X dan sumbu-Y.
+P
+B 
+engalaman
+elajar
+43
+P
+K 
+etaonsep
+Garis Sejajar
+Garis 
+Berpotongan
+Garis 
+Tegak Lurus
+Titik Asal
+Sumbu-X
+Sumbu-Y
+Sistem 
+Koordinat
+Posisi Titik Posisi Garis
+44
+Descartes dikenal sebagai Renatus 
+Cartesius dalam literatur berbahasa Latin, 
+merupakan seorang filsuf dan matematikawan 
+Prancis. Beliau mempersembahkan sumbangan 
+yang penting yaitu penemuannya tentang 
+geometri analitis, yang akhirnya dikenal sebagai 
+pencipta “Sistem koordinat Cartesius”, yang 
+memengaruhi perkembangan kalkulus modern 
+dan menyediakan jalan buat Newton menemukan 
+Kalkulus. Beliau memberikan kontribusi yang 
+besar dalam kemajuan di bidang matematika, 
+sehingga dipanggil sebagai "Bapak Matematika 
+Modern".
+Descartes adalah salah satu pemikir paling penting dan berpengaruh 
+dalam sejarah barat modern. Metodenya ialah dengan meragukan semua 
+pengetahuan yang ada, yang kemudian mengantarkannya pada simpulan 
+bahwa pengetahuan yang ia kategorikan ke dalam tiga bagian dapat 
+diragukan, yaitu pengetahuan yang berasal dari pengalaman inderawi 
+dapat diragukan, fakta umum tentang dunia semisal api itu panas dan 
+benda yang berat akan jatuh juga dapat diragukan, serta prinsip-prinsip 
+logika dan matematika juga ia ragukan. Dari keraguan tersebut, Descartes 
+hendak mencari pengetahuan yang tidak dapat diragukan yang akhirnya 
+mengantarkan pada premisnya Cogito Ergo Sum yang artinya “aku 
+berpikir, maka aku ada”.
+Hikmah yang dapat dipetik antara lain:
+1. Keyakinan yang sempurna dan mutlak terhadap keberadaan adanya 
+Tuhan, dan semua objek di dunia ini adalah ciptaan Tuhan.
+2. Tidak mudah puas terhadap sesuatu yang sudah didapatkan, sehingga 
+terus berpikir melakukan inovasi untuk menemukan sesuatu yang baru.
+3. Manusia diciptakan oleh Tuhan dengan bentuk yang sempurna. Oleh 
+karena itu, manusia harus menggunakan akal dan pikirannya untuk 
+memanfaatkan lingkungan dengan sebaik-baiknya.
+4. Saling membantu dan kerja sama sesama manusia agar terjadi interaksi 
+yang positif dalam melakukan aktifitas dan belajar.
+Rene Descartes
+(1596 - 1650 M)
+45
+Kurikulum 2 Sistem Koordinat
+Sekolah Jl. Diponegoro
+Rumah
+Bu Badiah
+Jl. Sudirman
+530 m 610 m
+315m
+430 m 550 m
+410m 180m
+425m
+780 m
+970 m
+850 m 160 m
+650 m
+540m
+420 m
+Gambar 2.1 Peta alamat rumah Bu Badiah
+Bella dan Diva ingin berkunjung ke rumah gurunya, Bu Badiah. Namun, mereka 
+belum tahu alamat rumah gurunya secara pasti. Ibu Badiah hanya memberikan 
+informasi bahwa rumahnya berjarak 1,78 km dari Jalan Diponegoro dan 
+berjarak 2,13 km dari Jalan Sudirman. Bella dan Diva berangkat bersama dari 
+sekolah, dengan menggunakan sepeda mereka menempuh jalan yang berbeda. 
+Warna merah adalah rute perjalanan yang dilalui Bella, warna biru adalah rute 
+perjalanan yang dilalui Diva seperti yang ditunjukkan dalam peta. Ternyata 
+Bella datang lebih awal di rumah Bu Badiah, sedangkan Diva baru datang 
+setelah beberapa menit kemudian. Apabila kecepatan sepeda mereka dianggap 
+sama, mengapa Bella datang lebih awal daripada Diva?

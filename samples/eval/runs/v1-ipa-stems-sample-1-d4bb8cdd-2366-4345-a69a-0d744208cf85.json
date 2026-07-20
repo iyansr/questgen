@@ -1,0 +1,328 @@
+{
+  "variant": "v1-ipa-stems",
+  "sampleId": "sample-1",
+  "topic": "Sistem Reproduksi pada Manusia",
+  "sessionId": "d4bb8cdd-2366-4345-a69a-0d744208cf85",
+  "documentId": "e6980539-d3d1-465f-b4f8-d12d79bc7186",
+  "latencyMs": 262424,
+  "questions": [
+    {
+      "number": 0,
+      "questionType": "multiple_choice",
+      "questionText": "Pembelahan sel yang menghasilkan empat sel anakan dengan jumlah kromosom haploid disebut ....",
+      "options": [
+        {
+          "text": "Mitosis",
+          "label": "A"
+        },
+        {
+          "text": "Meiosis",
+          "label": "B"
+        },
+        {
+          "text": "Amitosis",
+          "label": "C"
+        },
+        {
+          "text": "Sitokinesis",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Pasangan antara organ reproduksi laki-laki dan fungsinya yang benar adalah ....",
+      "options": [
+        {
+          "text": "Epididimis – menghasilkan sperma",
+          "label": "A"
+        },
+        {
+          "text": "Vas deferens – menyimpan sperma sementara",
+          "label": "B"
+        },
+        {
+          "text": "Uretra – saluran keluarnya sperma dan urine",
+          "label": "C"
+        },
+        {
+          "text": "Skrotum – menghasilkan hormon testosteron",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Urutan tahapan spermatogenesis yang benar adalah ....",
+      "options": [
+        {
+          "text": "Spermatogonium → spermatosit primer → spermatosit sekunder → spermatid → spermatozoa",
+          "label": "A"
+        },
+        {
+          "text": "Spermatogonium → spermatosit sekunder → spermatosit primer → spermatid → spermatozoa",
+          "label": "B"
+        },
+        {
+          "text": "Spermatosit primer → spermatogonium → spermatosit sekunder → spermatid → spermatozoa",
+          "label": "C"
+        },
+        {
+          "text": "Spermatogonium → spermatosit primer → spermatid → spermatosit sekunder → spermatozoa",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Tempat terjadinya fertilisasi pada sistem reproduksi perempuan adalah ....",
+      "options": [
+        {
+          "text": "Ovarium",
+          "label": "A"
+        },
+        {
+          "text": "Tuba fallopii",
+          "label": "B"
+        },
+        {
+          "text": "Uterus",
+          "label": "C"
+        },
+        {
+          "text": "Vagina",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Dari satu oogonium, oogenesis menghasilkan ....",
+      "options": [
+        {
+          "text": "Satu ovum dan tiga polosit",
+          "label": "A"
+        },
+        {
+          "text": "Empat ovum",
+          "label": "B"
+        },
+        {
+          "text": "Satu ovum dan satu polosit",
+          "label": "C"
+        },
+        {
+          "text": "Dua ovum dan dua polosit",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Hormon yang memicu pelepasan sel telur dari ovarium (ovulasi) adalah ....",
+      "options": [
+        {
+          "text": "FSH",
+          "label": "A"
+        },
+        {
+          "text": "LH",
+          "label": "B"
+        },
+        {
+          "text": "Estrogen",
+          "label": "C"
+        },
+        {
+          "text": "Progesteron",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Setelah satu sperma berhasil masuk ke dalam sel telur, mekanisme yang mencegah sperma lain masuk adalah ....",
+      "options": [
+        {
+          "text": "Sel telur mengeluarkan senyawa kimia yang mematikan sperma",
+          "label": "A"
+        },
+        {
+          "text": "Sel telur menyusun lapisan yang tidak dapat dilewati sperma lain",
+          "label": "B"
+        },
+        {
+          "text": "Sperma yang pertama masuk menghancurkan sperma lain",
+          "label": "C"
+        },
+        {
+          "text": "Sel telur bergerak menjauhi sperma lain",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Penyakit gonore disebabkan oleh ....",
+      "options": [
+        {
+          "text": "Virus Herpes simplex",
+          "label": "A"
+        },
+        {
+          "text": "Bakteri Treponema pallidum",
+          "label": "B"
+        },
+        {
+          "text": "Bakteri Neisseria gonorrhoeae",
+          "label": "C"
+        },
+        {
+          "text": "Jamur Candida albicans",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Upaya menjaga kebersihan organ reproduksi yang dianjurkan adalah ....",
+      "options": [
+        {
+          "text": "Menggunakan celana dalam berbahan ketat",
+          "label": "A"
+        },
+        {
+          "text": "Mengganti celana dalam setiap 2–3 hari sekali",
+          "label": "B"
+        },
+        {
+          "text": "Membilas organ reproduksi dengan bersih setelah buang air",
+          "label": "C"
+        },
+        {
+          "text": "Menggunakan sabun pembersih kewanitaan setiap hari",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut ini yang bukan merupakan fungsi cairan ketuban adalah ....",
+      "options": [
+        {
+          "text": "Melindungi janin dari benturan",
+          "label": "A"
+        },
+        {
+          "text": "Sebagai sumber nutrisi bagi janin",
+          "label": "B"
+        },
+        {
+          "text": "Mengatur suhu tubuh janin",
+          "label": "C"
+        },
+        {
+          "text": "Menghasilkan hormon estrogen dan progesteron",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "D"
+    }
+  ],
+  "structural": {
+    "score": 71.3,
+    "templateSim": 45,
+    "cognitiveSim": 60,
+    "stemEllipsisSim": 100,
+    "fourOptionSim": 100,
+    "optionShapeSim": 70,
+    "indoSim": 91.7,
+    "gold": {
+      "n": 10,
+      "templateHist": {
+        "disebut": 2,
+        "pernyataan_benar": 3,
+        "pasangan": 1,
+        "ciri_ciri": 1,
+        "skenario": 0,
+        "urutan": 1,
+        "hitung_kromosom": 1,
+        "proses": 2,
+        "tujuan": 0,
+        "image_leadin": 1,
+        "other": 2
+      },
+      "cognitiveHist": {
+        "recall": 3,
+        "comprehend": 5,
+        "apply": 2
+      },
+      "stemEllipsisRate": 1,
+      "fourOptionRate": 1,
+      "optionShapeHist": {
+        "short_terms": 7,
+        "long_statements": 1,
+        "mixed": 2,
+        "none": 0
+      },
+      "numberedListRate": 0.1,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 2.7
+    },
+    "generated": {
+      "n": 10,
+      "templateHist": {
+        "disebut": 1,
+        "pernyataan_benar": 2,
+        "pasangan": 1,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 1,
+        "hitung_kromosom": 1,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 0,
+        "other": 7
+      },
+      "cognitiveHist": {
+        "recall": 7,
+        "comprehend": 1,
+        "apply": 2
+      },
+      "stemEllipsisRate": 1,
+      "fourOptionRate": 1,
+      "optionShapeHist": {
+        "short_terms": 4,
+        "long_statements": 1,
+        "mixed": 5,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 2.2
+    }
+  },
+  "judgeScore": 75,
+  "judgeRationale": "Both sets use formal Indonesian, 4-option MCQs, and cover reproductive system topics with similar question stems like definitions, function pairs, true statements, and processes, but SET B includes more varied cognitive tasks and some different stem templates.",
+  "sanityRate": 100,
+  "sanityNotes": "All questions relate to human reproductive system topics typically covered in SMP textbooks.",
+  "patternScore": 73
+}

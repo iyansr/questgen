@@ -1,0 +1,30 @@
+{
+  "source_slug": "Ilmu-Pengetahuan-Alam-Kelas-VIII",
+  "source_title": "Ilmu Pengetahuan Alam Kelas VIII ",
+  "source_path": "source/Ilmu-Pengetahuan-Alam-Kelas-VIII.pdf",
+  "bab": 2,
+  "printed": {
+    "materials": [
+      75,
+      98
+    ],
+    "exercise": [
+      99,
+      104
+    ]
+  },
+  "file_pages": {
+    "materials": [
+      95,
+      118
+    ],
+    "exercise": [
+      119,
+      124
+    ]
+  },
+  "page_counts": {
+    "materials": 24,
+    "exercise": 6
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "sampleId": "sample-31",
+  "topic": "Pola Bilangan",
+  "grade": "SMP",
+  "classGrade": "VII",
+  "curriculum": "Kurikulum Merdeka",
+  "questionTypeCounts": [
+    {
+      "type": "multiple_choice",
+      "count": 10
+    },
+    {
+      "type": "short_answer",
+      "count": 3
+    },
+    {
+      "type": "essay",
+      "count": 2
+    }
+  ],
+  "source": "samples/sample-31/exercise.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Batang korek api disusun dengan dengan susunan seperti pada gambar berikut. Pola 3Pola 1 Pola 2 Jika pola tersebut terus berlanjut, banyak batang korek api pada susunan ke-10 adalah ... batang.",
+      "options": [
+        {
+          "label": "A",
+          "text": "33"
+        },
+        {
+          "label": "B",
+          "text": "36"
+        },
+        {
+          "label": "C",
+          "text": "39"
+        },
+        {
+          "label": "D",
+          "text": "42 TIMSS 2003 8th Grade Mathematics Item"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan pola bilangan berikut. (3, 6), (6, 15), (8, 21) Pernyataan yang tepat untuk mendapatkan bilangan kedua dari pasangan bilangan pertama pada pola tersebut adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ditambah 3"
+        },
+        {
+          "label": "B",
+          "text": "Dikalikan 2"
+        },
+        {
+          "label": "C",
+          "text": "Dikalikan 2 kemudian ditambah 3"
+        },
+        {
+          "label": "D",
+          "text": "Dikalikan 3 kemudian dikurangi 3 TIMSS 2003 8th Grade Mathematics Item Petunjuk: Untuk soal no. 3 - 16, pilihlah salah satu jawaban yang benar sesuai dengan pola barisan yang diberikan. 35 Kurikulum 2"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "10, 30, 50, 70, ..., ..., ...",
+      "options": [
+        {
+          "label": "A",
+          "text": "80, 90, 100"
+        },
+        {
+          "label": "B",
+          "text": "90, 110, 130"
+        },
+        {
+          "label": "C",
+          "text": "100, 200, 400"
+        },
+        {
+          "label": "D",
+          "text": "110, 130, 150"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "2, 3, 8, 11, 16, ..., ..., ...",
+      "options": [
+        {
+          "label": "A",
+          "text": "19, 24, 27"
+        },
+        {
+          "label": "B",
+          "text": "18, 23, 26"
+        },
+        {
+          "label": "C",
+          "text": "20, 25, 28"
+        },
+        {
+          "label": "D",
+          "text": "19, 25, 28"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "5, 4, 9, 8, 13, 12, 17, ..., ..., ...",
+      "options": [
+        {
+          "label": "A",
+          "text": "18, 23, 22"
+        },
+        {
+          "label": "B",
+          "text": "17, 22, 21"
+        },
+        {
+          "label": "C",
+          "text": "16, 21, 20"
+        },
+        {
+          "label": "D",
+          "text": "15, 20, 19"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "1, 3, 4, 7, 9, 13, 16, 21, ..., ...",
+      "options": [
+        {
+          "label": "A",
+          "text": "27, 31"
+        },
+        {
+          "label": "B",
+          "text": "25, 31"
+        },
+        {
+          "label": "C",
+          "text": "25, 30"
+        },
+        {
+          "label": "D",
+          "text": "25, 29"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "2, −6, 18, −32, 64, ..., ..., ...",
+      "options": [
+        {
+          "label": "A",
+          "text": "−128, 254, −508"
+        },
+        {
+          "label": "B",
+          "text": "128, −254, 508"
+        },
+        {
+          "label": "C",
+          "text": "−96, 128, −160"
+        },
+        {
+          "label": "D",
+          "text": "−254, 508, −1016 36 Kelas VIII SMP/MTs Semester I"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "90, 30, 10, ..., ..., ...",
+      "options": [
+        {
+          "label": "A",
+          "text": "3 10 , 9 10 , 27 10"
+        },
+        {
+          "label": "B",
+          "text": "3, 2, 1"
+        },
+        {
+          "label": "C",
+          "text": "7, 4, 1"
+        },
+        {
+          "label": "D",
+          "text": "9 10 , 27 10 , 81 10"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "4, −7, 10, −13, 16, ..., ..., ...",
+      "options": [
+        {
+          "label": "A",
+          "text": "19, −22, 25"
+        },
+        {
+          "label": "B",
+          "text": "−20, 25, −31"
+        },
+        {
+          "label": "C",
+          "text": "20, −24, 28"
+        },
+        {
+          "label": "D",
+          "text": "−19, 22, −25"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 10,
+      "questionType": "multiple_choice",
+      "questionText": "A, K, C, ..., E, O, G",
+      "options": [
+        {
+          "label": "A",
+          "text": "D"
+        },
+        {
+          "label": "B",
+          "text": "L"
+        },
+        {
+          "label": "C",
+          "text": "N"
+        },
+        {
+          "label": "D",
+          "text": "M"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 1,
+      "questionType": "short_answer",
+      "questionText": "Tentukan dua suku yang hilang pada barisan bilangan berikut. 2, 5, ..., 12, ..., 31, 50",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 2,
+      "questionType": "essay",
+      "questionText": "Bilangan-bilangan pada barisan 7, 11, 15, 19, 23, ... terus bertambah 4 pada setiap suku-sukunya. Sedangkan bilangan pada barisan 1, 10, 19, 28, 37, ... terus bertambah 9 pada setiap suku-sukunya. Bilangan 19 terdapat pada kedua pola tersebut. Jika kedua barisan bilangan tersebut dilanjutkan terus menerus, maka bilangan sama yang muncul berikutnya di kedua barisan adalah .... TIMSS 2003 8th Grade Mathematics Item",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 3,
+      "questionType": "essay",
+      "questionText": "Ketiga gambar berikut dibagi menjadi segitiga-segitiga kecil yang berukuran sama. 39 Kurikulum 2 Pola 3 2 4 6 1 3 5 8 7 Pola 2 1 2 Pola 1 a. Gambar tersebut dilanjutkan hingga gambar 4 dengan pola yang sama. Lengkapi tabel di bawah ini. Gambar Banyak segitiga 1 2 2 8 3 ... 4 ... b. Jika gambar tersebut dilanjutkan hingga gambar 7, tentukan banyak segitiga yang terbentuk. c. Jika gambar tersebut dilanjutkan hingga gambar",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 50,
+      "questionType": "essay",
+      "questionText": "Jelaskan cara kalian untuk menentukan banyak segitiga kecil yang terbentuk, tanpa menggambar dan mencacah satu per satu gambar. TIMSS 2003 8th Grade Mathematics Item",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 4,
+      "questionType": "short_answer",
+      "questionText": "Jika pola pada gambar berikut dilanjutkan terus menerus, tentukan gambar yang terbentuk pada persegi bertanda X. X TIMSS 2003 8th Grade Mathematics Item 40 Kelas VIII SMP/MTs Semester I",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    }
+  ]
+}

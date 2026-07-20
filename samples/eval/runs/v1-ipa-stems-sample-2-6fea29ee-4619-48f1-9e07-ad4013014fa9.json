@@ -1,0 +1,256 @@
+{
+  "variant": "v1-ipa-stems",
+  "sampleId": "sample-2",
+  "topic": "Sistem Perkembangbiakan Tumbuhan dan Hewan",
+  "sessionId": "6fea29ee-4619-48f1-9e07-ad4013014fa9",
+  "documentId": "940ce5ae-06ff-4aa7-9809-ebd08ff57003",
+  "latencyMs": 99613,
+  "questions": [
+    {
+      "number": 0,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan ciri-ciri berikut! (1) Batang di dalam tanah. (2) Memiliki ruas dan buku. (3) Tumbuh tunas pada buku. Bagian tumbuhan yang memiliki ciri-ciri tersebut disebut ....",
+      "options": [
+        {
+          "text": "Stolon",
+          "label": "A"
+        },
+        {
+          "text": "Rhizoma",
+          "label": "B"
+        },
+        {
+          "text": "Umbi batang",
+          "label": "C"
+        },
+        {
+          "text": "Kuncup adventif",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Tanaman jagung dan padi memiliki bunga yang kecil, ringan, tidak berbau, dan tangkai bunga mudah bergoyang. Penyerbukan pada tanaman tersebut dibantu oleh ....",
+      "options": [
+        {
+          "text": "Angin (anemogami)",
+          "label": "A"
+        },
+        {
+          "text": "Serangga (entomogami)",
+          "label": "B"
+        },
+        {
+          "text": "Burung (ornitogami)",
+          "label": "C"
+        },
+        {
+          "text": "Kelelawar (kiropterogami)",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Setelah penyerbukan, serbuk sari berkecambah membentuk buluh serbuk sari. Inti generatif membelah menjadi dua inti sperma. Satu inti sperma membuahi inti sel telur dan satu inti sperma lainnya membuahi inti kandung lembaga sekunder. Proses ini disebut ....",
+      "options": [
+        {
+          "text": "Pembuahan tunggal",
+          "label": "A"
+        },
+        {
+          "text": "Pembuahan ganda",
+          "label": "B"
+        },
+        {
+          "text": "Pembuahan silang",
+          "label": "C"
+        },
+        {
+          "text": "Pembuahan sendiri",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Pada daur hidup tumbuhan paku, tahap yang menghasilkan sel kelamin jantan (sperma) dan sel kelamin betina (sel telur) disebut ....",
+      "options": [
+        {
+          "text": "Sporofit",
+          "label": "A"
+        },
+        {
+          "text": "Protalium",
+          "label": "B"
+        },
+        {
+          "text": "Sporangium",
+          "label": "C"
+        },
+        {
+          "text": "Rhizoma",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar siklus hidup serangga berikut. Berdasarkan gambar tersebut, serangga mengalami ....",
+      "options": [
+        {
+          "text": "metamorfosis sempurna",
+          "label": "A"
+        },
+        {
+          "text": "metamorfosis tidak sempurna",
+          "label": "B"
+        },
+        {
+          "text": "perkembangan langsung",
+          "label": "C"
+        },
+        {
+          "text": "partenogenesis",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Teknologi perkembangbiakan pada hewan dengan cara memasukkan cairan sperma dari pejantan unggul ke saluran reproduksi betina dengan bantuan manusia disebut ....",
+      "options": [
+        {
+          "text": "Kultur jaringan",
+          "label": "A"
+        },
+        {
+          "text": "Hidroponik",
+          "label": "B"
+        },
+        {
+          "text": "Inseminasi buatan",
+          "label": "C"
+        },
+        {
+          "text": "Hibridisasi",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Biji beringin dan benalu sering tumbuh di tempat tinggi, misalnya di celah pohon lain. Perantara yang membantu penyebaran biji tersebut adalah ....",
+      "options": [
+        {
+          "text": "Angin",
+          "label": "A"
+        },
+        {
+          "text": "Air",
+          "label": "B"
+        },
+        {
+          "text": "Burung",
+          "label": "C"
+        },
+        {
+          "text": "Manusia",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    }
+  ],
+  "structural": {
+    "score": 61.4,
+    "templateSim": 35.7,
+    "cognitiveSim": 71.4,
+    "stemEllipsisSim": 71.4,
+    "fourOptionSim": 100,
+    "optionShapeSim": 42.9,
+    "indoSim": 92.9,
+    "gold": {
+      "n": 7,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 1,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 1,
+        "urutan": 1,
+        "hitung_kromosom": 0,
+        "proses": 1,
+        "tujuan": 1,
+        "image_leadin": 2,
+        "other": 2
+      },
+      "cognitiveHist": {
+        "recall": 4,
+        "comprehend": 1,
+        "apply": 2
+      },
+      "stemEllipsisRate": 0.7142857142857143,
+      "fourOptionRate": 1,
+      "optionShapeHist": {
+        "short_terms": 3,
+        "long_statements": 2,
+        "mixed": 2,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0.2857142857142857,
+      "avgIndonesianMarkers": 2
+    },
+    "generated": {
+      "n": 7,
+      "templateHist": {
+        "disebut": 4,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 1,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 1,
+        "tujuan": 0,
+        "image_leadin": 2,
+        "other": 2
+      },
+      "cognitiveHist": {
+        "recall": 5,
+        "comprehend": 2,
+        "apply": 0
+      },
+      "stemEllipsisRate": 1,
+      "fourOptionRate": 1,
+      "optionShapeHist": {
+        "short_terms": 7,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0.14285714285714285,
+      "imageLeadinRate": 0.14285714285714285,
+      "avgIndonesianMarkers": 2.4285714285714284
+    }
+  },
+  "judgeScore": 75,
+  "judgeRationale": "Both sets use formal Indonesian with 4-option MCQ style, focus on reproductive biology, and include scenario-based and definition questions, but SET B uses more descriptive stems and fewer direct command stems like 'disebut' or 'pernyataan benar'.",
+  "sanityRate": 100,
+  "sanityNotes": "All questions relate to common topics in plant and animal reproduction covered in typical SMP textbooks.",
+  "patternScore": 67.5
+}

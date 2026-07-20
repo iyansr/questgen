@@ -1,0 +1,314 @@
+{
+  "sampleId": "sample-14",
+  "topic": "Bioteknologi",
+  "grade": "SMP",
+  "classGrade": "IX",
+  "curriculum": "Kurikulum Merdeka",
+  "questionTypeCounts": [
+    {
+      "type": "multiple_choice",
+      "count": 10
+    },
+    {
+      "type": "short_answer",
+      "count": 3
+    },
+    {
+      "type": "essay",
+      "count": 2
+    }
+  ],
+  "source": "samples/sample-14/exercise.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Produk berikut yang dibuat dengan bantuan bakteri adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "tahu"
+        },
+        {
+          "label": "B",
+          "text": "kecap"
+        },
+        {
+          "label": "C",
+          "text": "yoghurt"
+        },
+        {
+          "label": "D",
+          "text": "tempe"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut ini yang termasuk bioteknologi adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "pemanfaatan kedelai untuk membuat tahu"
+        },
+        {
+          "label": "B",
+          "text": "pemanfaatan bakteri untuk pengomposan"
+        },
+        {
+          "label": "C",
+          "text": "menggabungkan dua sifat tanaman dengan cara okulasi"
+        },
+        {
+          "label": "D",
+          "text": "pemanfaatan bakteri untuk membuat asam cuka"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Adonan roti yang sudah diberi khamir (Saccharomyces cerevisiae) harus ditutup rapat dengan tujuan agar ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "khamir melakukan respirasi anaerob yang akan menghasilkan alkohol dan oksigen"
+        },
+        {
+          "label": "B",
+          "text": "khamir melakukan respirasi aerob yang akan menghasilkan alkohol dan oksigen"
+        },
+        {
+          "label": "C",
+          "text": "khamir melakukan respirasi aerob yang akan menghasilkan alkohol dan karbon dioksida"
+        },
+        {
+          "label": "D",
+          "text": "khamir melakukan respirasi anaerob yang akan menghasilkan alkohol dan karbon dioksida"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Jamur Aspergillus wentii berperan dalam pembuatan ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "tapai"
+        },
+        {
+          "label": "B",
+          "text": "oncom"
+        },
+        {
+          "label": "C",
+          "text": "tempe"
+        },
+        {
+          "label": "D",
+          "text": "kecap"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Reaksi kimia yang terjadi pada peristiwa fermentasi, seperti pada pembuatan tapai adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "glukosa  CO2 + H2O + energi"
+        },
+        {
+          "label": "B",
+          "text": "glukosa  CO2 + alkohol + energi"
+        },
+        {
+          "label": "C",
+          "text": "glukosa + O2  CO2 + H2O + energi"
+        },
+        {
+          "label": "D",
+          "text": "glukosa + O2  CO2 + alkohol + energi"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Prinsip pada bioteknologi industri adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "menggunakan teknik fermentasi"
+        },
+        {
+          "label": "B",
+          "text": "memproduksi barang dan jasa untuk kebutuhan komersial"
+        },
+        {
+          "label": "C",
+          "text": "menggunakan bioteknologi untuk memenuhi kebutuhan konsumen"
+        },
+        {
+          "label": "D",
+          "text": "memproduksi barang dan jasa dalam skala besar dengan cara efisien melalui pemanfaatan mikroorganisme"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Semakin meningkatnya jumlah penduduk di Indonesia, mendorong dikembangkannya bioteknologi yang dapat memenuhi kebutuhan bahan pangan dengan kualitas yang tinggi. Berikut upaya yang dapat dikembangkan untuk menyelesaikan permasalahan tersebut, kecuali ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "pengembangan kloning"
+        },
+        {
+          "label": "B",
+          "text": "pengembangan hewan transgenik"
+        },
+        {
+          "label": "C",
+          "text": "pengembangan protein sel tunggal"
+        },
+        {
+          "label": "D",
+          "text": "pengembangan teknik fermentasi makanan"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Bioteknologi dalam penerapannya tidak selalu bermanfaat bagi kehidupan sehari-hari, akan tetapi juga berdampak negatif bagi lingkungan. Salah satu dampak negatif bioteknologi bagi lingkungan adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "menghasilkan limbah yang tinggi"
+        },
+        {
+          "label": "B",
+          "text": "menghasilkan alkohol yang tinggi"
+        },
+        {
+          "label": "C",
+          "text": "menciptakan bahan pangan transgenik"
+        },
+        {
+          "label": "D",
+          "text": "mengurangi plasma nutfah di Indonesia"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Pembuatan insulin dengan menyisipkan gen pembentuk insulin dengan gen bakteri adalah salah satu contoh aplikasi bioteknologi yang disebut ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "kloning"
+        },
+        {
+          "label": "B",
+          "text": "mutasi"
+        },
+        {
+          "label": "C",
+          "text": "transplantasi"
+        },
+        {
+          "label": "D",
+          "text": "rekayasa genetika"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 10,
+      "questionType": "multiple_choice",
+      "questionText": "Vaksin merupakan salah satu produk bioteknologi dalam bidang kesehatan. Vaksin disebut sebagai produk bioteknologi karena ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "diproduksi dalam skala besar dengan memanfaatkan mikroorganisme"
+        },
+        {
+          "label": "B",
+          "text": "proses pembuatannya melalui teknik rekayasa genetika dengan memanfaatkan bakteri"
+        },
+        {
+          "label": "C",
+          "text": "proses pembuatannya melalui proses fermentasi dengan memanfaatkan Saccharomyces"
+        },
+        {
+          "label": "D",
+          "text": "proses pembuatannya melalui teknik rekayasa genetika dengan memanfaatkan Saccharomyces"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 1,
+      "questionType": "essay",
+      "questionText": "Perhatikan data gizi bahan makanan pada tabel berikut. Zat Gizi Satuan Komposisi Zat Gizi dalam 100 Gram Kedelai Tempe Energi (kal) 381 201 Protein (gram) 40,4 20,8 Lemak (gram) 16,7 8,8 Hidrat arang (gram) 24,9 13,5 Serat (gram) 3,2 1,4 Abu (gram) 5,5 1,6 Kalsium (mg) 222 155 Fosfor (mg) 682 326 Besi (mg) 10 4 Karotin (mg) 31 34 Vitamin B1 (mg) 0,52 0,19 Air (gram) 12,7 55,3 Sumber: Komposisi Zat Gizi Pangan, Depkes RI,1991 Data tabel di atas merupakan komposisi zat gizi pada kedelai dan tempe. Berdasarkan tabel tersebut komposisi gizi kedelai lebih bagus daripada tempe, tetapi mengapa banyak orang mengatakan mengonsumsi tempe lebih baik daripada mengonsumsi kedelai?",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 2,
+      "questionType": "essay",
+      "questionText": "Salah satu teknik rekayasa genetika yang dikembangkan adalah kloning. Teknik ini dilakukan untuk menghasilkan keturunan yang memiliki sifat identik dengan induknya. Coba kamu jelaskan bagaimana proses kloning dilakukan oleh para ilmuwan!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 3,
+      "questionType": "short_answer",
+      "questionText": "Bioteknologi berkembang dengan sangat pesat. Sebutkan lima contoh bahan pangan yang merupakan produk hasil bioteknologi yang dapat kamu temukan dalam kehidupan sehari-hari!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 4,
+      "questionType": "short_answer",
+      "questionText": "Perkembangan bioteknologi terus meningkat, sejalan dengan peningkatan kebutuhan pangan masyarakat. Menurut kamu apa dampak negatif penerapan bioteknologi bagi lingkungan?",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 5,
+      "questionType": "short_answer",
+      "questionText": "Sebutkan tiga alasan mengapa perlu dikembangkan bioteknologi hewan dan tumbuhan transgenik? Membuat Produk Bioteknologi Pangan",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    }
+  ]
+}

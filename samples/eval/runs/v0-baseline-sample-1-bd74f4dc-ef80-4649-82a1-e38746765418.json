@@ -1,0 +1,328 @@
+{
+  "variant": "v0-baseline",
+  "sampleId": "sample-1",
+  "topic": "Sistem Reproduksi pada Manusia",
+  "sessionId": "bd74f4dc-ef80-4649-82a1-e38746765418",
+  "documentId": "e6980539-d3d1-465f-b4f8-d12d79bc7186",
+  "latencyMs": 66349,
+  "questions": [
+    {
+      "number": 0,
+      "questionType": "multiple_choice",
+      "questionText": "Teori omnis cellula e cellula menyatakan bahwa semua sel berasal dari sel sebelumnya. Siapakah tokoh yang mengemukakan teori ini?",
+      "options": [
+        {
+          "text": "Gregor Mendel",
+          "label": "A"
+        },
+        {
+          "text": "Rudolf Virchow",
+          "label": "B"
+        },
+        {
+          "text": "Charles Darwin",
+          "label": "C"
+        },
+        {
+          "text": "Louis Pasteur",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Pembelahan meiosis menghasilkan empat sel anakan yang bersifat haploid. Tipe pembelahan ini hanya terjadi pada sel apa?",
+      "options": [
+        {
+          "text": "Sel somatik (sel tubuh)",
+          "label": "A"
+        },
+        {
+          "text": "Sel kelamin (gamet)",
+          "label": "B"
+        },
+        {
+          "text": "Sel saraf",
+          "label": "C"
+        },
+        {
+          "text": "Sel darah merah",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Amati diagram spermatogenesis pada gambar berikut. Tempat berlangsungnya proses pembentukan sperma adalah di dalam ...",
+      "options": [
+        {
+          "text": "Epididimis",
+          "label": "A"
+        },
+        {
+          "text": "Vas deferens",
+          "label": "B"
+        },
+        {
+          "text": "Tubulus seminiferus",
+          "label": "C"
+        },
+        {
+          "text": "Vesikula seminalis",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Salah satu kelenjar reproduksi laki-laki menghasilkan cairan yang mengandung seminal plasmin, yaitu antibiotik alami. Kelenjar apakah itu?",
+      "options": [
+        {
+          "text": "Vesikula seminalis",
+          "label": "A"
+        },
+        {
+          "text": "Kelenjar prostat",
+          "label": "B"
+        },
+        {
+          "text": "Kelenjar Cowper",
+          "label": "C"
+        },
+        {
+          "text": "Testis",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Berdasarkan gambar di atas, struktur yang ditunjuk oleh huruf X adalah tempat terjadinya fertilisasi. Bagian tersebut adalah ...",
+      "options": [
+        {
+          "text": "Ovarium",
+          "label": "A"
+        },
+        {
+          "text": "Tuba fallopii (oviduk)",
+          "label": "B"
+        },
+        {
+          "text": "Uterus",
+          "label": "C"
+        },
+        {
+          "text": "Vagina",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Dalam proses oogenesis, dari satu oogonium akan dihasilkan satu ovum fungsional dan sejumlah badan polar (polosit). Berapa jumlah total polosit yang dihasilkan dari satu oogonium?",
+      "options": [
+        {
+          "text": "1",
+          "label": "A"
+        },
+        {
+          "text": "2",
+          "label": "B"
+        },
+        {
+          "text": "3",
+          "label": "C"
+        },
+        {
+          "text": "4",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Pada fase apa dalam siklus menstruasi terjadi pelepasan sel telur dari folikel yang matang?",
+      "options": [
+        {
+          "text": "Fase menstruasi",
+          "label": "A"
+        },
+        {
+          "text": "Fase proliferasi",
+          "label": "B"
+        },
+        {
+          "text": "Fase sekretori",
+          "label": "C"
+        },
+        {
+          "text": "Fase ovulasi",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Agar sperma dapat bergerak menuju sel telur, sel sperma menggunakan flagela. Gambar pada materi menunjukkan gerakan sperma yang menyerupai apa?",
+      "options": [
+        {
+          "text": "Gerakan maju seperti ular",
+          "label": "A"
+        },
+        {
+          "text": "Gerakan memutar seperti baling-baling",
+          "label": "B"
+        },
+        {
+          "text": "Gerakan menyamping seperti kepiting",
+          "label": "C"
+        },
+        {
+          "text": "Gerakan naik turun seperti ayunan",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Cairan ketuban (amnion) memiliki banyak fungsi selama kehamilan. Salah satu fungsinya adalah sebagai pelindung janin dari benturan. Sifat fisika cairan apa yang mendukung fungsi tersebut?",
+      "options": [
+        {
+          "text": "Cairan tidak dapat dimampatkan",
+          "label": "A"
+        },
+        {
+          "text": "Cairan dapat menguap dengan mudah",
+          "label": "B"
+        },
+        {
+          "text": "Cairan memiliki viskositas rendah",
+          "label": "C"
+        },
+        {
+          "text": "Cairan bersifat asam",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Salah satu upaya menjaga kesehatan sistem reproduksi adalah dengan memilih celana dalam yang tepat. Bahan apakah yang dianjurkan?",
+      "options": [
+        {
+          "text": "Katun yang lembut",
+          "label": "A"
+        },
+        {
+          "text": "Bahan panas seperti nilon",
+          "label": "B"
+        },
+        {
+          "text": "Bahan ketat seperti jeans",
+          "label": "C"
+        },
+        {
+          "text": "Bahan sintetis yang tebal",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    }
+  ],
+  "structural": {
+    "score": 50.8,
+    "templateSim": 35,
+    "cognitiveSim": 60,
+    "stemEllipsisSim": 20,
+    "fourOptionSim": 100,
+    "optionShapeSim": 70,
+    "indoSim": 71.7,
+    "gold": {
+      "n": 10,
+      "templateHist": {
+        "disebut": 2,
+        "pernyataan_benar": 3,
+        "pasangan": 1,
+        "ciri_ciri": 1,
+        "skenario": 0,
+        "urutan": 1,
+        "hitung_kromosom": 1,
+        "proses": 2,
+        "tujuan": 0,
+        "image_leadin": 1,
+        "other": 2
+      },
+      "cognitiveHist": {
+        "recall": 3,
+        "comprehend": 5,
+        "apply": 2
+      },
+      "stemEllipsisRate": 1,
+      "fourOptionRate": 1,
+      "optionShapeHist": {
+        "short_terms": 7,
+        "long_statements": 1,
+        "mixed": 2,
+        "none": 0
+      },
+      "numberedListRate": 0.1,
+      "imageLeadinRate": 0,
+      "avgIndonesianMarkers": 2.7
+    },
+    "generated": {
+      "n": 10,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 0,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 0,
+        "urutan": 0,
+        "hitung_kromosom": 1,
+        "proses": 2,
+        "tujuan": 0,
+        "image_leadin": 1,
+        "other": 7
+      },
+      "cognitiveHist": {
+        "recall": 7,
+        "comprehend": 2,
+        "apply": 1
+      },
+      "stemEllipsisRate": 0.2,
+      "fourOptionRate": 1,
+      "optionShapeHist": {
+        "short_terms": 10,
+        "long_statements": 0,
+        "mixed": 0,
+        "none": 0
+      },
+      "numberedListRate": 0,
+      "imageLeadinRate": 0.1,
+      "avgIndonesianMarkers": 1
+    }
+  },
+  "judgeScore": 60,
+  "judgeRationale": "Both sets use formal Indonesian and cover reproductive system topics with multiple-choice style, but SET B includes more varied question types, some image-dependent items, and less consistent stem templates compared to SET A's uniform pattern and focus on direct factual statements.",
+  "sanityRate": 100,
+  "sanityNotes": "All questions are typical SMP-level reproductive system topics: amniotic fluid properties, underwear material for reproductive health, and meiosis in gamete formation.",
+  "patternScore": 54.9
+}

@@ -1,0 +1,350 @@
+ b. Kalian memberikan bunga 12% pertahun
+c. Kalian memberikan bunga 1% pertahun, atau
+d. Kalian memberikan bunga 12.000.000 pertahun untuk setiap 
+peminjam sebesar Rp100.000.000,00.
+Jelaskan jawaban kalian dengan argumen semenarik mungkin.
+19. Suatu ketika, 3 orang datang ke suatu Bank untuk meminjam uang 
+satu miliar rupiah sebagai modal usaha. Karena kebijakan Bank, pada 
+bulan tersebut Bank hanya bisa memberikan modal kepada salah satu 
+saja. Oleh karena itu, manajer Bank tersebut mewawancarai kedua 
+pihak yang ingin meminjam tersebut.
+ Orang ke-1 mengatakan bahwa rencana usahanya sudah tersusun 
+rapi, dan belum berjalan sama sekali.
+ Orang ke-2 mengatakan bahwa rencana usahanya masih 70%, dan 
+belum berjalan sama sekali.
+ Orang ke-3 mengatakan bahwa rencana usahanya sudah berjalan, 
+namun saat ini terkendala kekurangan modal, sehingga membutuhkan 
+bantuan modal.
+ Jika kalian sebagai manajer Bank tersebut, orang manakah yang kalian 
+prioritaskan untuk mendapatkan pinjaman modal? Jelaskan.
+20. Sebuah toko baju kadang menuliskan diskon 50%+10%, dengan 
+tulisan angka 10% lebih kecil daripada angka 50%. Jelaskan makna 
+penulisan diskon tersebut.
+22. Suatu ketika pergi ke toko swalayan Rembulan untuk membeli baju 
+dan jaket. Erik membeli baju di toko swalayan Rembulan dengan harga 
+Rp150.000,00, kemudian mendapatkan voucher senilai Rp50.000,00. 
+Voucher itu hanya dapat digunakan sekali untuk pembelian barang 
+minimal seharga Rp150.000,00. Erik menemukan suatu jaket dengan 
+harga Rp300.000,00 dengan bertuliskan diskon 20%. Sesuai aturan 
+toko, Erik hanya bisa memilih salah satu, menggunakan voucher saja 
+atau potongan saja, tidak bisa keduanya. Jika kalian sebagai Erik, 
+pilihan manakah yang akan kalian ambil?
+a. Menggunakan voucher
+b. Menggunakan diskon Bruto, Neto, dan Tara
+egiatanK 6.3
+Istilah bruto, neto, dan tara mungkin terasa asing bagi sebagian kalian karena 
+jarang menggunakan istilah ini dalam kehidupan sehari-hari. Namun tanpa 
+kalian sadari sebenarnya sering kali kalian menjumpai benda yang bertuliskan 
+istilah bruto, neto, ataupun tara. Istilah yang sering kali muncul adalah neto.
+Kalau tidak percaya silakan lihat bungkus makan snack, permen, atau kue-
+kue kering yang biasa kalian makan. Pasti kalian akan menjumpai istilah neto 
+(atau netto).
+Ayo
+Kita Amati
+Istilah Neto diartikan sebagai berat dari suatu benda tanpa pembungkus benda 
+tersebut. Neto juga dikenal dengan istilah berat bersih. Misal dalam bungkus 
+suatu snack tertuliskan neto 300 gram. Ini bermakna bahwa berat snack 
+tersebut tanpa plastik pembungkusnya adalah 300 gram.
+Istilah Bruto diartikan sebagai berat dari suatu benda bersama pembungkusnya. 
+Bruto juga dikenal dengan istilah berat kotor. Misal, dalam suatu kemasan 
+snack tertuliskan bruto adalah 350 gram. Ini berarti bahwa berat snack dengan 
+pembungkusnya adalah 350 gram
+Istilah Tara diartikan sebagai selisih antara bruto dengan neto. Misal diketahui 
+pada bungus snack tertuliskan bruto tertuliskan 350 gram, sedangkan netonya 
+adalah 300 gram. Ini berarti bahwa taranya adalah 50 gram. Atau secara 
+sederhana berat pembungkus dari snack tersebut tanpa isinya.
+Tiga pemisalan di atas dimaksudkan agar kalian mudah dalam memahami 
+makna istilah bruto, neto, dan tara. Kalian bisa mengaplikasikan untuk benda-
+benda lain yang sesuai. 
+Ayo Kita
+Menanya??
+Ajukan pertanyaan terkait hal-hal yang kalian amati. Sebaiknya pertanyaan 
+yang kalian ajukan membuat kalian ingin tahun lebih jauh tentang topik yang 
+sedang dipelajari. Setelah mengenal istilah bruto, neto, dan tara mungkin beberapa pertanyaan muncul di benak kalian, misalnya:
+1. Apa hubungan antara bruto, neto, dan tara?
+2. Apa manfaat kita mempelajari bruto, neto, dan tara?
+Silahkan membuat pertanyaan lain yang belum termuat.
+Ayo Kita
+Menggali Informasi
++=+
+Persentase Neto dan Tara
+Misal diketahui Neto = N, Tara = T, dan Bruto = B
+Persentase Neto=%N, Persentase Tara = %T
+Persentase neto dapat dirumuskan
+% 100%NN B= ×
+Persentase tara dapat dirumuskan
+% 100%TT B= ×
+Dalam mengaplikasi pemahaman tentang bruto, neto, dan tara sering kali 
+terkait dengan harga suatu benda. Dalam kasus tersebut kita harus bisa 
+menentukan pilihan mana yang lebih menguntungkan.
+Mari perhatikan kasus berikut.
+Adi berbelanja sampo ke suatu minimarket, Adi melihat ada tiga jenis kemasan 
+sampo untuk merek yang akan dia beli. 
+Kemasan pertama tertuliskan neto 70 mL (baca miliLiter) dijual dengan harga 
+Rp5.000,00
+Kemasan kedua tertuliskan neto 140 mL dijual dengan harga Rp9.000,00.
+Kemasan ketiga tertuliskan neto 210 mL dijual dengan harga Rp13.000,00.
+Seandainya uang yang dibawa oleh Adi tidak cukup untuk membeli ketiga 
+pilihan sampo tersebut, manakah yang sebaiknya dibeli oleh Adi? Jelaskan PenyelesaianAlternatif
+Bagi orang yang tidak mengamati neto tersebut mungkin akan memilih sampo 
+tanpa ada pertimbangan. Namun jika kita memahami makna neto tersebut, 
+tentu kita akan bisa menentukan sampo mana yang termurah dilihat dari isi 
+dan harganya. Untuk menentukan sampo manakah yang menguntungkan 
+untuk kita beli mari kita uraikan.
+Kemasan Isi Harga Harga
+Isi
+Ke-1 70 mL 5.000 71,43
+Ke-2 140 mL 9.000 64,29
+Ke-3 210 mL 13.000 61,90
+Perhatikan perbandingan harga per miliLiter dari ketiga kemasan. Ternyata 
+harga termurahnya adalah kemasan ketiga. Meskipun secara nominal harganya 
+paling mahal, ternyata harga per miliLiternya paling murah. Dengan begitu 
+seandainya kalian adalah Adi, seharusnya kalian memilih membeli sampo 
+kemasan ke-3.
+Istilah bruto, tidak hanya digunakan untuk menyatakan berat kotor (jumlah 
+antara neto dan tara) suatu barang, namun juga diguanakan pada dunia 
+perpajakan yaitu penghasilan bruto. Penghasilan bruto adalah penghasilan 
+dalam satu periode waktu (hari/bulan/tahun) yang belum dikurangi biaya-
+biaya untuk memperoleh penghasilan tersebut, seperti: bahan baku, upah, 
+iklan, transportasi, dll.
+Ayo Kita
+Menalar
+Jika Bruto = B, Netto = N, dan Tara = T, tentukan hubungan antara Bruto, 
+Neto, dan Tara.
+Sebutkan minimal 5 benda di sekitar kalian yang memuat unsur bruto, neto, 
+dan tara. Sebutkan bagian-bagian bruto, neto, dan taranya.
+Berilah tanggapan terhadap pernyataan-pernyataan berikut dengan kata tidak 
+pernah, kadang-kadang, biasanya, selalu. No Pernyataan Tanggapan
+1. Neto lebih berat dari bruto
+2. Neto lebih berat dari tara
+3. Bruto lebih berat dari neto
+4. Bruto lebih berat dari tara
+5. Tara lebih berat dari neto
+6. Tara lebih berat dari bruto
+Ayo Kita
+Berbagi
+Diskusikan jawaban kalian dengan teman sebangku atau teman dalam 
+kelompok kalian. Tentukan jawaban terbaik jika kalian menemukan jawaban 
+yang berbeda dalam diskusi tersebut. Sajikan jawaban terbaik kalian di dalam 
+kelas. Bagi siswa atau kelompok yang tidak maju harap menanggapi presentasi 
+dari temannya.
+Ayo Kita
+!?!?
+Berlatih6.3
+1. Suatu benda memiliki bruto 5 kg dan neto 4,5 kg. Tentukan tara benda 
+tersebut.
+2. Suatu benda memiliki neto 10 kg dan tara 500 gram. Tentukan bruto 
+benda tersebut.
+3. Suatu benda memiliki bruto 6 kg dan neto 5.500 gram. Tentukan tara 
+benda tersebut.
+4. Lengkapilah tabel berikut. Bruto 
+(kg)
+Neto 
+(kg)
+Tara 
+(kg)
+Persentase 
+Neto 
+Persentase 
+Tara 
+50 49 ... 
+25 ... 0,5
+... 1,85 150
+6 ... 120
+5. Suatu ketika Fandi berbelanja sabun mandi ke suatu minimarket. 
+Ketika masuk di minimarket, fandi melihat ada tiga jenis kemasan 
+sabun mandi untuk merek yang akan dia beli. Ringkasan kemasan dan 
+harga masing-masing sabun mandi tersebut disajikan sebagai berikut.
+Neto 
+(ml)
+Harga 
+(Rupiah)
+Sabun A 200 8.000
+Sabun B 300 11.500
+Sabun C 400 14.000
+ Andaikan Fandi ingin membeli 1 sabun dan uang Fandi cukup untuk 
+membeli salah satu dari ketiga sabun tersebut, berikan saran kepada 
+Fandi sebaiknya membeli sabun yang mana. Jelaskan.
+6. Suatu ketika Pak Hadi memberi dua karung beras dengan jenis yang 
+berbeda. Karung pertama tertulis neto 25 kg dibeli dengan harga 
+Rp260.000,00. Karung kedua tertuliskan neto 25 dibeli dengan harga 
+Rp280.000,00. Pak Hadi mencampur kedua jenis beras tersebut, 
+kemudian mengemasinya dalam ukuran neto 5 kg. Tentukan harga jual 
+beras tersebut agar Pak Hadi untung 20%.
+7. Suatu ketika Pak Hadi memberi dua karung beras dengan jenis yang 
+berbeda. Karung pertama tertulis neto 30 kg dibeli dengan harga 
+Rp260.000,00. Karung kedua tertuliskan neto 30 kg. Pak Hadi 
+mencampur kedua jenis beras tersebut, kemudian mengemasinya 
+dalam ukuran neto 3 kg. Beras campuran tersebut dijual dengan harga 
+Rp33.000,00 per kemasan. Jika keuntungan tiap kemasan adalah 20%, 
+tentukan harga beli beras kedua.
+8. Seorang membeli sekarung beras yang dari toko sembako. Ketika 
+ditimbang didapatkan berat 25 kg, taksiran neto beras dalam karung 
+tersebut yang paling mendekati sebenarnya adalah ... a. 23,5 kg
+b. 24,1 kg
+c. 24,8 kg
+9. Seorang membeli sekardus air mineral dengan isi 48 gelas air mineral. 
+Tentukan bruto, neto, dan tara dari sekardus air mineral tersebut. 
+Jelaskan.
+10. Di dalam sekarung gabah, tentukan bagian-bagian yang disebutkan 
+sebagai bruto, neto, dan taranya. Jelaskan.
+11. Kemasan pertama tertuliskan neto 70 mL (baca miliLiter) dijual 
+dengan harga Rp5.000,00. Kemasan kedua tertuliskan neto 140 mL 
+dijual dengan harga Rp9.000,00. Kemasan ketiga tertuliskan neto 210 
+ml dijual dengan harga Rp13.000,00.
+ Seandainya uang yang dibawa oleh Adi cukup untuk membeli ketiga 
+pilihan sampo tersebut, manakah yang sebaiknya dibeli oleh Adi? 
+Jelaskan
+Sebelum melakukan proyek, bentuklah kelompok yang terdiri atas 4 atau 5 
+siswa. Lakukan proyek dengan rincian sebagai berikut.
+1. Carilah 5 barang berbeda di sekitar kalian (tidak harus membeli) 
+kemudian fotolah masing barang tersebut. Pastikan setiap barang yang 
+kalian pilih tersebut bertuliskan neto, tara, atau bruto.
+2. Lakukan percobaan untuk mengecek kesesuaian antara neto, tara, dan 
+bruto yang tercantum pada label barang tersebut dengan neto, tara, dan 
+bruto sebenarnya.
+3. Sajikan laporan proses dan hasil percobaan kalian dalam suatu makalah 
+lengkap dengan dokumentasi kegiatan yang kalian lakukan.
+Ayo Kita
+Mengerjakan
+Tugas Projek
+ 6 Setelah kalian mempelajari Bab 6 tentang Aritmetika Sosial ini, silakan 
+merangkum apa saja yang sudah kalian dapatkan sejauh ini. Untuk 
+mengarahkan rangkuman kalian, jawablah pertanyaan panduan berikut.
+1. Jika k menyatakan pengeluaran, dan m menyatakan pemasukan, 
+jelaskan kondisi yang menyatakan untung.
+2. Jika k menyatakan pengeluaran, dan m menyatakan pemasukan, 
+Jelaskan kondisi yang menyatakan rugi.
+3. Jika k menyatakan pengeluaran, dan m menyatakan pemasukan, 
+Jelaskan kondisi yang menyatakan impas.
+4. Jika b persentase bunga dalam setahun, n menyatakan lama menabung 
+dalam satuan bulan, M menyatakan banyak uang yang ditabung di 
+Bank selama n bulan, dan B menyatakan besar bunga tunggal yang 
+diperoleh selama menabung n bulan, Nyatakan B dalam b, n, dan M.
+5. Jika b persentase bunga dalam setahun, n menyatakan lama menabung 
+dalam satuan bulan, M menyatakan banyak uang yang ditabung di 
+Bank selama n bulan, dan T menyatakan besar total uang yang ditabung 
+beserta bunga yang diperoleh selama menabung n bulan, Nyatakan B 
+dalam b, n, dan M.
+6. Suatu barang dilabeli dengan harga H rupiah. Barang tersebut diberi 
+diskon sebesar d%. Jika HD menyatakan harga barang setelah dikenai 
+diskon, nyatakan HD dalam H dan d.
+7. Suatu barang dilabeli dengan harga H rupiah. Barang tersebut dikenai 
+Pajak Pertambahan Nilai (PPN) sebesar p%. Jika HP menyatakan 
+harga barang setelah dikenai pajak, nyatakan HP dalam H dan p.
+8. Jika Bruto = B, Netto = N, dan Tara = T, tentukan hubungan antara 
+Bruto, Neto, dan Tara.
+Ayo Kita
+Merangkum
+ 6 Uji
+Kompetensi
++=+?? 6
+A. Soal Pilihan Ganda
+1. Tentukan kondisi berikut yang manakah yang menunjukkan kondisi rugi.
+Pemasukan
+(Rp)
+Pengeluaran
+(Rp)
+a. 700.000 900.000
+b. 1.100.000 1.100.000
+c. 2.100.000 2.000.000
+d. 1.650.000 1.550.000
+2. Seorang pedagang mengeluarkan Rp1.500.000,00 untuk menjalankan 
+usahanya. Jika pada hari itu dia mendapatkan keuntungan sebesar 10%, 
+maka besarnya pendapatan yang didapatkan pada hari itu adalah ...
+a. Rp1.650.000,00 c. Rp1.400.000,00
+b. Rp1.600.000,00 d. Rp1.350.000,00
+3. Pak Dedi membeli suatu sepeda motor bekas dengan harga 
+Rp5.000.000 ,00. Dalam waktu satu minggu motor tersebut dijual 
+kembali dengan harga 110% dari harga belinya. Tentukan keuntungan 
+Pak Dedi.
+a. Rp500.000,00 c. Rp4.500.000,00
+b. Rp1.000.000,00 d. Rp5.500.000,00
+4. Pak Candra membeli suatu sepeda bekas dengan harga Rp500.000 ,00. 
+Dalam waktu satu minggu sepeda tersebut dijual kembali dengan harga 
+110% dari harga beli. Tentukan keuntungan Pak Candra.
+a. Rp550.000,00 c. Rp50.000,00
+b. Rp100.000,00 d. Rp25.000,00 5. Pak Edi membeli mobil dengan harga Rp160.000.000,00. Setelah 
+6 bulan dipakai, Pak Edi menjual mobil tersebut dengan harga 
+Rp140.000.000,00. Tentukan taksiran terdekat persentase kerugian 
+yang ditanggung oleh Pak Edi.
+a. 20% c. 15%
+b. 18% d. 12%
+6. Pak Fandi membeli sepetak tanah dengan harga Rp40.000.000,00. 
+1 tahun kemudian, Pak Dedi menjual tanah tersebut dengan dengan 
+keuntungan sekitar 16%. Tentukan taksiran terdekat harga jual tanah 
+milik Pak Fandi.
+a. Rp6.400.000,00 c. Rp46.400.000,00
+b. Rp33.600.000,00 d. Rp56.000.000,00
+7. Seorang pedagang bakso mengeluarkan modal sebesar Rp1.000.000 
+,00 untuk menjalankan usahanya. Dia mematok harga baksonya 
+adalah Rp11.000 ,00 perporsi. Jika ia merencakan ingin mendapatkan 
+keuntungan minimal Rp200.000,00 dari usaha baksonya tersebut, 
+maka berapa porsi minimal yang harusnya dibuat?
+a. 100 porsi c. 110 porsi
+b. 109 porsi d. 120 porsi
+8. Perhatikan tabel berikut.
+Penjual Modal 
+(Rp) Persentase keuntungan
+A 100.000 20%
+B 200.000 15%
+C 400.000 10%
+D 600.000 5%
+ Di antara keempat penjual tersebut, yang mendapatkan keuntungan 
+terbesar adalah penjual ... a. A c. C
+b. B d. D
+9. Seorang penjual bakso mengeluarkan modal sebesar Rp1.000.000,00 
+untuk menjalankan usahanya. Dia mematok harga baksonya adalah 
+Rp9.000,00 perporsi. Jika pada hari itu ia menanggung kerugian sebesar 
+sekitar 5%, maka taksirlah berapa porsi yang terjual pada hari itu.
+a. 76 c. 96
+b. 86 d. 106
+10. Seorang penjual sate mengeluarkan modal sebesar Rp1.200.000,00 
+untuk menjalankan usahanya. Dia mematok harga satenya adalah 
+Rp9.000,00 perporsi. Jika ia merencakan ingin mendapatkan 
+keuntungan dari jualannya tersebut, maka penjual sate tersebut 
+minimal yang harusnya membuat ... porsi.
+a. 120 c. 143
+b. 134 d. 140
+11. Seorang pedagang sepatu membeli 100 pasang sepatu dari grosir dengan 
+harga Rp70.000,00 rupiah perpasang. Jika dia ingin mendapatkan 
+keuntungan 20% dari penjualan 100 pasang sepatunya, berapa harga 
+jual tiap pasang sepatu tersebut?
+a. Rp84.000,00 c. Rp114.000,00 
+b. Rp90.000,00 d. Rp120.000,00
+12. Seorang pedagang kaos membeli 60 kaos dari grosir dengan harga 
+Rp40.000,00. Jika dia berhasil menjual semua kaos tersebut dengan 
+maraup untung sebesar 25%, tentukan harga jual masing-masing kaos.
+a. Rp65.000,00 c. Rp55.000,00
+b. Rp60.000,00 d. Rp50.000,00
+13. Seorang pedagang tas membeli 70 kaos dari grosir. Jika dia berhasil 
+menjual semua jaket tersebut dengan harga Rp200.000,00 dan maraup 
+untung sebesar 25%, maka harga beli masing-masing jaket adalah ... jaket. a. 150 c. 170
+b. 160 d. 180
+14. Seorang penjual nasi goreng mengeluarkan modal sebesar Rp900.000,00 
+untuk menjalankan usahanya. Dia mematok harga nasi gorengnya 
+adalah Rp8.000,00 perporsi. Jika pada hari itu jualannya habis semua, 
+maka keuntungan pertama diperoleh pada saat penjualan ke ...
+a. 112 c. 114
+b. 113 d. 115
+15. Pak Rudi memilik usaha pembuatan sepatu kulit. Untuk menjalankan 
+usahanya tersebut, Pak Rudi dibantu 5 orang pegawai dengan gaji 
+masing-masing Rp2.000.000,00 per bulan. Setiap bulan mereka 
+mampu memproduksi 1000 pasang sepatu kulit. Bahan bahan yang 
+digunakan untuk memproduksi sepatu kulit tersebut adalah Rp120.000 ,00 
+perpasang. Jika ingin mendapatkan untung 30%, maka Pak Rudi harus 
+menjual sepatunya tersebut dengan harga Rp... perpasang.
+a. Rp150.000,00 c. Rp160.000,00
+b. Rp156.000,00 d. Rp169.000,00
+16. Pak Adi meminjam uang di Bank sebesar Rp15.000.000,00 dengan 
+bunga 16% pertahun. Tentukan bunga yang ditanggung oleh Pak Adi 
+jika akan meminjam selama 3 bulan.
+a. Rp300.000,00 c. Rp500.000,00
+b. Rp400.000,00 d. Rp600.000,00
+17. Pak Budi meminjam uang di Bank sebesar Rp1.000.000,00 dengan 
+bunga 18% pertahun. Tentukan keseluruhan nominal yang harus 
+dikembalikan oleh Pak Budi jika akan meminjam selama 6 bulan.
+a. Rp1.080.000,00 c. Rp1.100.000,00
+b. Rp1.090.000,00 d. Rp1.110.000,00
+18. Pak Yudi akan meminjam uang di Bank dengan persentase bunga 
+sebesar 12% pertahun. Besar bunga uang yang dipinjam oleh Pak Yudi 

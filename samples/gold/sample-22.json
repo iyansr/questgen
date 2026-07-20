@@ -1,0 +1,314 @@
+{
+  "sampleId": "sample-22",
+  "topic": "Gerak Benda dan Makhluk Hidup",
+  "grade": "SMP",
+  "classGrade": "VII",
+  "curriculum": "Kurikulum Merdeka",
+  "questionTypeCounts": [
+    {
+      "type": "multiple_choice",
+      "count": 10
+    },
+    {
+      "type": "short_answer",
+      "count": 3
+    },
+    {
+      "type": "essay",
+      "count": 2
+    }
+  ],
+  "source": "samples/sample-22/exercise.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Fungsi sistem rangka antara lain melindungi organ internal. Pada tubuh manusia tulang yang melindungi jantung dan paru-paru serta otak secara berturut-turut adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "tulang belakang dan tulang rusuk"
+        },
+        {
+          "label": "B",
+          "text": "tulang rusuk dan tulang tengkorak"
+        },
+        {
+          "label": "C",
+          "text": "tulang tengkorak dan tulang rusuk"
+        },
+        {
+          "label": "D",
+          "text": "tulang belakang dan tulang tengkorak"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut ini merupakan contoh otot yang bekerja secara sadar dan tidak sadar yang disebutkan secara berturut-turut adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "otot jantung dan otot dahi"
+        },
+        {
+          "label": "B",
+          "text": "otot jantung dan otot trisep"
+        },
+        {
+          "label": "C",
+          "text": "otot bisep dan otot jantung"
+        },
+        {
+          "label": "D",
+          "text": "otot dahi dan otot gastronemius"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Tipe persendian yang terdapat pada rahang adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "sendi geser"
+        },
+        {
+          "label": "B",
+          "text": "sendi putar"
+        },
+        {
+          "label": "C",
+          "text": "sendi pelana"
+        },
+        {
+          "label": "D",
+          "text": "sendi engsel"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Gerak tumbuhan yang memerlukan rangsang berupa perubahan kadar air di dalam sel sehingga terjadi pengerutan yang tidak merata disebut gerak ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "nasti"
+        },
+        {
+          "label": "B",
+          "text": "esionom"
+        },
+        {
+          "label": "C",
+          "text": "tropisme"
+        },
+        {
+          "label": "D",
+          "text": "higroskopis"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Contoh gerak tumbuhan berikut yang bukan merupakan contoh dari gerak nasti adalah….",
+      "options": [
+        {
+          "label": "A",
+          "text": "mekarnya bunga pukul empat"
+        },
+        {
+          "label": "B",
+          "text": "gerak menutupnya daun putri malu"
+        },
+        {
+          "label": "C",
+          "text": "menguncupnya daun tumbuhan Leguminoceae"
+        },
+        {
+          "label": "D",
+          "text": "merekahnya kulit buah-buahan yang sudah kering pada tumbuhan polong-polongan"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan pernyataan-pertanyaan di bawah ini! (1) sebagian besar ikan memiliki bentuk tubuh torpedo (2) ekor dan sirip ikan berfungsi untuk menahan laju air (3) sirip tambahan diperlukan untuk melakukan berbagai gerakan di dalam air (4) bentuk torpedo (streamline) tubuh ikan berfungsi untuk mengurangi hambatan di dalam air Berdasarkan pernyataan-pernyataan di atas, yang mendukung ikan untuk melakukan berbagai gerakan di dalam air adalah pernyataan nomor ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1), (2), dan (3)"
+        },
+        {
+          "label": "B",
+          "text": "(1), (2), dan (4)"
+        },
+        {
+          "label": "C",
+          "text": "(1), (3), dan (4)"
+        },
+        {
+          "label": "D",
+          "text": "(2), (3), dan (4)"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Seseorang yang sedang mengendarai sepeda mampu menempuh jarak 5 meter dalam waktu 2,5 sekon. Berdasarkan informasi tersebut, kecepatan anak bersepeda adalah … m/s.",
+      "options": [
+        {
+          "label": "A",
+          "text": "2,0"
+        },
+        {
+          "label": "B",
+          "text": "5,0"
+        },
+        {
+          "label": "C",
+          "text": "7,5"
+        },
+        {
+          "label": "D",
+          "text": "12,5"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Sebuah mobil bergerak dengan kecepatan yang berubah-ubah seperti digambarkan pada grafik di bawah ini. A B C D t v Titik yang menunjukkan mobil sedang mengalami peristiwa kelembaman adalah ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "A – B"
+        },
+        {
+          "label": "B",
+          "text": "B – C"
+        },
+        {
+          "label": "C",
+          "text": "C – D"
+        },
+        {
+          "label": "D",
+          "text": "D – A"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar bola yang dilempar ke tembok akan memantul kembali seperti gambar di bawah ini! F1 F2 F2 F3 Berikut pasangan gaya aksi-reaksi yang benar adalah ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "F 1, F2 dan F3, karena ketiga gaya tersebut menggambarkan gerak bola"
+        },
+        {
+          "label": "B",
+          "text": "F1 dan F 2, karena bekerja pada benda yang sama dan arah gayanya saling tegak lurus"
+        },
+        {
+          "label": "C",
+          "text": "F1 dan F 3, karena bekerja pada benda yang berbeda dan arah gayanya saling tegak lurus"
+        },
+        {
+          "label": "D",
+          "text": "F2 dan F 3, karena bekerja pada benda yang berbeda dan arah gayanya saling berlawanan"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 10,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan posisi burung yang sedang terbang bebas seperti pada gambar di bawah ini! Sumber: Dok. Kemdikbud Saat terbang di udara, burung tersebut menerapkan hukum ketiga Newton dengan cara memanfaatkan sifat gesekan udara. Berdasarkan fakta tersebut, maka perbandingan besarnya gaya aksi dan reaksi antara burung dengan udara yang benar adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "sama, sehingga burung dapat melayang di udara"
+        },
+        {
+          "label": "B",
+          "text": "sama, sehingga burung dapat terbang dengan stabil di udara"
+        },
+        {
+          "label": "C",
+          "text": "sama, karena gaya yang dimilikinya melebihi besar gaya gesekan udara maka burung dapat maju ke depan"
+        },
+        {
+          "label": "D",
+          "text": "berbeda, karena gaya yang dimilikinya lebih kecil dari gaya gesekan udara sehingga burung dapat maju ke depan"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 1,
+      "questionType": "essay",
+      "questionText": "Perhatikan gambar ketiga jenis otot manusia berikut ini Sumber: Campbell et al. 2008 (a) (b) (c) Jelaskan nama masing-masing otot tersebut dan lokasinya dalam tubuh manusia, serta sebutkan satu (1) ciri yang nampak dari otot tersebut!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 2,
+      "questionType": "short_answer",
+      "questionText": "Mengapa kita dianjurkan untuk berjemur pada pagi hari?",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 3,
+      "questionType": "essay",
+      "questionText": "Jelaskan perbedaan prinsip gerak yang dilakukan oleh burung, ikan, dan kuda berdasarkan bentuk tubuhnya!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 4,
+      "questionType": "essay",
+      "questionText": "Perhatikan gambar grafik berikut ini! Kecepatan (km/jam) Jarak (km)0,2 0,4 0,6 0,8 1 1,2 1,4 1,6 1,8 2 2,2 2,4 2,6 2,8 3 20 40 60 80 100 Grafik Kecepatan Mobil Balap Berdasarkan gambar di atas, a. Apa yang terjadi pada kecepatan mobil yang berada pada jarak di antara 2,6 km sampai 2,8 km? b. Manakah dari gambar A, B, C, D, dan E berikut yang menunjukkan lintasan gerak mobil balap yang terekam pada grafik di atas? A B C ED",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 5,
+      "questionType": "essay",
+      "questionText": "Perhatikan gambar di bawah ini! wF’ F Sumber: www.bukusekolah.org Seorang peloncat dengan berat w menekan tanah di bawahnya dengan gaya yang besarnya F dan sebagai hasilnya ia melambung ke udara. a. Berapakah besar gaya yang dikerjakan tanah (F´) terhadap peloncat? Apakah F´=w, F´>w, atau F´<w? b. Berapa pula besar F’ dibandingkan F? Apakah F´=F, F´>F, atau F´<F? Jelaskan! Mengidentifikasi Jenis Gaya yang Bekerja pada Benda yang Bergerak dalam Kehidupan Sehari-hari",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    }
+  ]
+}

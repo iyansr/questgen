@@ -1,0 +1,314 @@
+{
+  "sampleId": "sample-35",
+  "topic": "Statistika",
+  "grade": "SMP",
+  "classGrade": "VII",
+  "curriculum": "Kurikulum Merdeka",
+  "questionTypeCounts": [
+    {
+      "type": "multiple_choice",
+      "count": 10
+    },
+    {
+      "type": "short_answer",
+      "count": 3
+    },
+    {
+      "type": "essay",
+      "count": 2
+    }
+  ],
+  "source": "samples/sample-35/exercise.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Diagram berikut menunjukkan data penjualan di suatu perusahaan motor. 0 2 4 6 8 10 12 14 16 18 20 2006 2007 2008 2009 2010 2011 Banyak motor yang terjual Banyak Motor Terjual (dalam ribuan) Tahun Penjualan Pada tahun berapakah terjadi kenaikan penjualan motor sebesar 20%?",
+      "options": [
+        {
+          "label": "A",
+          "text": "2007 C. 2010"
+        },
+        {
+          "label": "B",
+          "text": "2009 D. 2011 2. Diberikan data yang sudah terurut sebagai berikut. 14, 16, 18, x – 3, 20, 22, x + 2 Median dari data tersebut adalah 19. Berapakah nilai x? A. 19"
+        },
+        {
+          "label": "C",
+          "text": "21 B. 20"
+        },
+        {
+          "label": "D",
+          "text": "22 Uji Kompetensi +=+?? 9 264 Kelas VIII SMP/MTs Semester II"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut ini diagram nilai ulangan matematika sisw a kelas VIII",
+      "options": [
+        {
+          "label": "A",
+          "text": "2 6 4 8 10 4 5 6 7 8 9 10 Banyak Siswa Nilai Median dari nilai ulangan matematika siswa kelas VIII A adalah .... A. 6,5 C. 7,5"
+        },
+        {
+          "label": "B",
+          "text": "7 D. 8 4. Data berat badan (dalam kg) sekelompok balita di Posyandu Kasih Bunda sebagai berikut. 16 19 20 21 19 16 21 16 17 20 16 20 17 16 21 17 18 18 18 16 16 19 19 20 20 21 17 18 18 20 16 19 Modus data di atas adalah .... A. 16"
+        },
+        {
+          "label": "C",
+          "text": "19 B. 18"
+        },
+        {
+          "label": "D",
+          "text": "20"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan tabel beriku t. Nilai 4 5 6 7 8 9 10 Banyak Siswa 2 4 5 5 9 3 4 Median data di atas adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "6,5 C. 7,5"
+        },
+        {
+          "label": "B",
+          "text": "7,0 D. 8,0 265 Kurikulum 2 6. Rata-rata lima belas bilangan adalah 49,4. Rata-rata lima bilangan pertama adalah 55. Rata-rata enam bilangan terakhir adalah 45. Rata- rata empat bilangan yang lain adalah .... A. 46"
+        },
+        {
+          "label": "C",
+          "text": "48 B. 47"
+        },
+        {
+          "label": "D",
+          "text": "49"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Suatu kelas terdiri atas 30 siswa baru saja mengikuti tes tulis. Jika 20 siswa mendapat nilai 80, 8 siswa mendapat nilai 90, dan 2 siswa mendapat nilai 100, berapakah rata-rata nilai kelas pada tes tulis ini?",
+      "options": [
+        {
+          "label": "A",
+          "text": "82 C. 86"
+        },
+        {
+          "label": "B",
+          "text": "84 D. 88 8. Rata-rata berat badan dari 200 ikan hasil tangkapa n di laut lepas adalah 50 kg. Pada saat diperiksa ulang, ternyata terdapat kesalahan tulis yaitu 92 dan 8 berturut-turut seharusnya adalah 192 dan 88. Rataan yang benar adalah .... A. 50,9"
+        },
+        {
+          "label": "C",
+          "text": "55,9 B. 53,9"
+        },
+        {
+          "label": "D",
+          "text": "59,9"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Diketahui data nilai ulangan Matematika dari 15 orang siswa sebagai berikut. 7, 5, 4, 6, 5, 7, 8, 6, 4, 4, 5, 9, 5, 6, 4 Banyak siswa yang nilainya di atas rata-rata adalah .... siswa.",
+      "options": [
+        {
+          "label": "A",
+          "text": "4 C. 6"
+        },
+        {
+          "label": "B",
+          "text": "5 D. 7 10. Nilai rata-rata ulangan Matematika dari suatu kelas adalah 7. Apabila dua siswa yang baru mengikuti ulangan susulan yang nilainya 4 dan 6 digabungkan, maka nilai rata-rata kelas itu turun 0,1. Banyak siswa semula adalah .... A. 36"
+        },
+        {
+          "label": "C",
+          "text": "40 B. 38"
+        },
+        {
+          "label": "D",
+          "text": "42"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 11,
+      "questionType": "multiple_choice",
+      "questionText": "Mean dari empat bilangan bulat: 4, a, b, dan 5 sama dengan median data tersebut, yaitu 6. Selisih bilangan terbesar dan terkecil sama dengan ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "2 C. 4"
+        },
+        {
+          "label": "B",
+          "text": "3 D. 5 266 Kelas VIII SMP/MTs Semester II 12. Dari 10 data pengamatan diketahui bahwa median adalah dua lebihnya dari jangkauan. Bila semua data dikalikan dua kemudian dikurangi 3, maka jumlah dari median dan jangkauan menjadi 21. Jangkauan data mula-mula adalah .... A. 3"
+        },
+        {
+          "label": "C",
+          "text": "5 B. 4"
+        },
+        {
+          "label": "D",
+          "text": "6"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 13,
+      "questionType": "multiple_choice",
+      "questionText": "Kuartil bawah dari data 12, 13, 11, 6, 4, 9, 3, 7, 6, 5, 9, adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "4 C. 6"
+        },
+        {
+          "label": "B",
+          "text": "5 D. 7 14. Diberikan diagram nilai ulangan Matematika siswa kelas VIII C seperti berikut. 2 6 4 8 10 5 6 7 8 9 10 Banyak Siswa Nilai Kuartil atas dari data di atas adalah .... A. 6,25"
+        },
+        {
+          "label": "C",
+          "text": "8,25 B. 7,5"
+        },
+        {
+          "label": "D",
+          "text": "9,5"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 15,
+      "questionType": "multiple_choice",
+      "questionText": "Tabel berikut ini menunjukkan lama tidur di waktu malam (dalam jam) beberapa siswa kelas VIII. Lama tidur (jam) 4 5 6 7 8 Frekuensi 1 2 3 2 2 Dari tabel di atas, diperoleh informasi sebagai berikut. (1) Median = 6 (2) Q1 = 5 (3) Q3 = 7,5 267 Kurikulum 2 Pernyataan yang benar adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1) dan (2) C. (2) dan (3)"
+        },
+        {
+          "label": "B",
+          "text": "(1) dan (3) D. (1), (2), dan (3) 16. Simpangan kuartil dari 7, 4, 5, 6, 7, 5, 4, 7, 8, 9, 6 adalah .... A. 1"
+        },
+        {
+          "label": "C",
+          "text": "2,5 B. 2"
+        },
+        {
+          "label": "D",
+          "text": "3"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 17,
+      "questionType": "multiple_choice",
+      "questionText": "Diketahui data sebagai berikut. 4, 5, 5, 7, 3, 2, 4, 6, 7, 4 Pernyataan berikut yang salah adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "Modus = 4 C. Mean = 4,7"
+        },
+        {
+          "label": "B",
+          "text": "Median = 5 D. Q3 = 6 18. Diagram berikut menunjukkan nilai ulangan susulan mata pelajaran IPS beberapa siswa kelas VIII. 5 6 7 8 Nilai Dari diagram di atas, nilai mean + median + modus = .... A. 4"
+        },
+        {
+          "label": "C",
+          "text": "6 5 4 B. 5 9 7"
+        },
+        {
+          "label": "D",
+          "text": "8"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 19,
+      "questionType": "multiple_choice",
+      "questionText": "Tabel di bawah menunjukkan usia 20 anak di suatu kelas, 2 tahun yang lalu. Bila pada tahun ini tiga orang yang berusia 7 tahun dan seorang yang berusia 8 tahun pindah sekolah, maka usia rata-rata 16 orang yang masih tinggal pada saat ini adalah ... tahun.",
+      "options": [
+        {
+          "label": "A",
+          "text": "7 C. 8 3 4"
+        },
+        {
+          "label": "B",
+          "text": "8 2 1 D. 9 Usia Frekuensi 5 3 6 5 7 8 8 4 268 Kelas VIII SMP/MTs Semester II 20. Dari 50 siswa terdapat 20 siswa yang mendapat nilai kurang dari 45 dan 10 siswa mendapat nilai lebih dari 76. Bila nilai yang dapat dicapai adalah bilangan bulat dari 0 sampai 100, maka nilai rata-rata 50 siswa tersebut tidak mungkin sama dengan .... A. 43"
+        },
+        {
+          "label": "C",
+          "text": "65 B. 50"
+        },
+        {
+          "label": "D",
+          "text": "73"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 1,
+      "questionType": "essay",
+      "questionText": "Diagram batang di bawah ini menunjukkan data banyak anak pada tiap-tiap keluarga di lingkungan RT 5 RW 1 Kelurahan Sukajadi. Sumbu horizontal menunjukkan data banyak anak pada tiap-tiap keluarga, sedangkan sumbu vertikal menyatakan banyaknya keluarga yang memiliki anak dengan jumlah antara 0 sampai dengan",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 5,
+      "questionType": "essay",
+      "questionText": "0 2 4 6 8 10 12 0 1 2 3 4 5 Banyak Keluarga Banyak anak Banyak Anak pada Tiap-tiap Keluarga di Lingkungan RT 5 RW 1 Kelurahan Sukajadi a. Tentukan total banyaknya keluarga dan banyak anak dalam lingkungan tersebut. b. Berapa jumlah keluarga yang mempunyai anak lebih dari 2? c. Berapa persentase keluarga yang tidak mempunyai anak? d. Berapa rata-rata banyak anak pada setiap keluarga? e. Berapa median dan modus dari data tersebut? f. Tentukan jangkauan, kuartil atas, kuartil bawah, dan jangkauan interkuartil dari data di atas. 269 Kurikulum 2 g. Dalam catatan Pak RT, rata-rata banyak anak pada tiap keluarga menjadi 3 sesudah ada dua puluh keluarga pendatang yang masuk ke dalam lingkungan tersebut. Berapa rata-rata banyak anak pada kedua puluh keluarga pendatang tersebut? h. Jika terdapat lima keluarga pendatang dan setiap keluarga tersebut memiliki 2 anak, apakah ada perubahan pada mean, median, dan modus? Jika ada, tentukan mean, median, dan modus yang baru.",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 2,
+      "questionType": "essay",
+      "questionText": "Jumlah siswa laki-laki kelas IX A SMP Ceria adalah 16 orang dengan berat badan rata-rata adalah 50 kg. Jelaskan secara singkat langkah- langkah untuk mengukur berat badan ke-16 siswa tersebut.",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 3,
+      "questionType": "short_answer",
+      "questionText": "Pak T ono memiliki kebun mangga sebanyak 36 pohon, rata-rata panen dari tahun 2013-2017 adalah 373 kg. Tentukan nilai x. T ahun 2013 2014 2015 2016 2017 Jumlah (kg) 432 330 x 397 365",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 4,
+      "questionType": "short_answer",
+      "questionText": "Terdapat 8 bilangan dengan rata-rata",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "sampleId": "sample-23",
+  "topic": "Usaha dan Pesawat Sederhana",
+  "grade": "SMP",
+  "classGrade": "VII",
+  "curriculum": "Kurikulum Merdeka",
+  "questionTypeCounts": [
+    {
+      "type": "multiple_choice",
+      "count": 9
+    }
+  ],
+  "source": "samples/sample-23/exercise.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan pernyataan berikut ini. (1) Edo mendorong meja dengan gaya sebesar 30 N sehingga meja berpindah sejauh 2 m. (2) Seekor kuda menarik delman dengan gaya sebesar 4.000 N sehingga delman berpindah sejauh 15 m. (3) Sebuah mobil menghantam sebuah pohon dengan gaya 2.000 N sehingga pohon tumbang di tempat. Pernyataan di atas yang merupakan contoh usaha dalam IPA adalah ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1) dan (2)"
+        },
+        {
+          "label": "B",
+          "text": "(2) dan (3)"
+        },
+        {
+          "label": "C",
+          "text": "(3) dan (1)"
+        },
+        {
+          "label": "D",
+          "text": "(1), (2), dan (3)"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Dayu menarik sebuah gerobak berisi pasir dengan gaya sebesar 500 N sehingga gerobak tersebut berpindah sejauh 10 m. Berdasarkan pernyataan tersebut, besar usaha yang dilakukan Dayu adalah … J.",
+      "options": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "50"
+        },
+        {
+          "label": "C",
+          "text": "500"
+        },
+        {
+          "label": "D",
+          "text": "5.000"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Jarak yang ditempuh oleh mobil saat melaju dengan usaha sebesar 15.000 J dan gaya sebesar 500 N adalah … m.",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "30"
+        },
+        {
+          "label": "C",
+          "text": "25"
+        },
+        {
+          "label": "D",
+          "text": "250"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Besar daya yang dilakukan oleh seekor sapi yang menarik gerobak dengan gaya 7.000 N sehingga gerobak tersebut dapat berpindah sejauh 10 m dalam waktu 35 detik adalah … watt.",
+      "options": [
+        {
+          "label": "A",
+          "text": "2.000"
+        },
+        {
+          "label": "B",
+          "text": "5.000"
+        },
+        {
+          "label": "C",
+          "text": "12.500"
+        },
+        {
+          "label": "D",
+          "text": "24.500"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Prinsip kerja pesawat sederhana pada saat seseorang mengangkat barbel adalah ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "bidang miring"
+        },
+        {
+          "label": "B",
+          "text": "pengungkit jenis I"
+        },
+        {
+          "label": "C",
+          "text": "pengungkit jenis II"
+        },
+        {
+          "label": "D",
+          "text": "pengungkit jenis III"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Prinsip kerja pesawat sederhana pada saat otot betis pemain bulutangkis mengangkat beban tubuhnya dengan bertumpu pada jari kakinya adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "bidang miring"
+        },
+        {
+          "label": "B",
+          "text": "pengungkit jenis I"
+        },
+        {
+          "label": "C",
+          "text": "pengungkit jenis II"
+        },
+        {
+          "label": "D",
+          "text": "pengungkit jenis III Perhatikan gambar berikut ini! Gambar berikut sebagai acuan untuk menjawab pertanyaan nomor 7 dan 8! (1) (2) (3) (4)"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Alat yang termasuk ke dalam golongan bidang miring adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1)"
+        },
+        {
+          "label": "B",
+          "text": "(2)"
+        },
+        {
+          "label": "C",
+          "text": "(3)"
+        },
+        {
+          "label": "D",
+          "text": "(4)"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Alat yang termasuk ke dalam golongan roda berporos adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1)"
+        },
+        {
+          "label": "B",
+          "text": "(2)"
+        },
+        {
+          "label": "C",
+          "text": "(3)"
+        },
+        {
+          "label": "D",
+          "text": "(4)"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar berikut ini! Sumber: www.dhgate.com Prinsip kerja tangan anak yang sedang menarik koper pada gambar di atas sama dengan prinsip kerja ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "roda berporos"
+        },
+        {
+          "label": "B",
+          "text": "pengungkit jenis ketiga"
+        },
+        {
+          "label": "C",
+          "text": "pengungkit jenis kedua"
+        },
+        {
+          "label": "D",
+          "text": "pengungkit jenis pertama"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    }
+  ]
+}

@@ -2,15 +2,31 @@
 
 ## Current Verified State
 
-- Repository root: `/Users/iyansr/IyanSR/Project/Skripsi/questgen`
+- Repository root: `/workspace` (cloud) / local questgen checkout
 - Standard startup path: `./init.sh`
 - Standard verification path: `pnpm --filter web check-types`
 - Server blackbox tests: `pnpm test:server` (requires PostgreSQL + `questgen_test` DB)
-- Latest feature: per-chunk heading path on ingest (always H1/H2 pre-split + `headingPath` metadata)
-- Current highest-priority unfinished feature: **re-ingest existing docs** then smoke Chroma/Langfuse prefixes; optional e2e doc generation after Session 030 coverage
+- Latest feature: **material-based question quality eval + IPA Uji Kompetensi subject guidance**
+- Current highest-priority unfinished feature: improve IPS/PPKn/Math-VII exercise slicing so more of the 35-sample corpus becomes eval-eligible; optional re-ingest for chunker heading-path fix on old docs
 - Dashboard stats: `GET /api/dashboard/stats` wired to dashboard stat cards (completed/ready scope)
 
 ## Session Log
+
+### Session 032
+
+- Date: 2026-07-19
+- Goal: Improve generated question pattern similarity to human Uji Kompetensi samples; expand corpus from `test-result`.
+- Completed:
+  - Gold extract + fingerprints for samples 1–35 (`samples/gold`, `samples/catalog.json`, `samples/build_catalog.py`).
+  - Real-pipeline CLI harness: `pnpm --filter server eval:quality` (ingest once → regenerate via `documentId` → structural + LLM judge).
+  - Prompt winner `v1-ipa-stems`: conceptual IPA guidance + assessment `<style>` block; quantitative routing kept for math.
+  - Eval evidence: v0 mean **65.1** (n=3) → v1 mean **72.1** on core trio; v1 mean **74.0** across 9 samples including tekanan, pernapasan, kemagnetan, usaha/pesawat, pola bilangan, statistika.
+  - Report: `samples/eval/REPORT.md`; unit tests `test/question-quality-eval.test.ts` (5 passed); `pnpm --filter server check-types` pass.
+- Verification run: real OCR+generate on samples 1–5,13,23,31,35; vitest fingerprint/guidance; tsc.
+- Evidence captured: `samples/eval/results.jsonl`, `samples/eval/runs/*`, REPORT.md.
+- Commits: on `cursor/question-quality-eval-742a`.
+- Known risk: IPS/PPKn/some Math VII exercises not MCQ-eligible; wrangler workflow can hang mid-generate (resume with `--skip-ingest`); pages >80 skipped (25, 34).
+- Next best step: better exercise page slicing for skipped subjects; optional latency tune on v1.
 
 ### Session 031
 

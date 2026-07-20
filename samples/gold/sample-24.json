@@ -1,0 +1,314 @@
+{
+  "sampleId": "sample-24",
+  "topic": "Struktur dan Fungsi Tumbuhan",
+  "grade": "SMP",
+  "classGrade": "VII",
+  "curriculum": "Kurikulum Merdeka",
+  "questionTypeCounts": [
+    {
+      "type": "multiple_choice",
+      "count": 10
+    },
+    {
+      "type": "short_answer",
+      "count": 3
+    },
+    {
+      "type": "essay",
+      "count": 2
+    }
+  ],
+  "source": "samples/sample-24/exercise.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Rambut atau bulu akar hanya terdapat pada bagian akar yang masih muda yang merupakan penonjolan atau diferensiasi dari jaringan ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "korteks"
+        },
+        {
+          "label": "B",
+          "text": "epidermis"
+        },
+        {
+          "label": "C",
+          "text": "endodermis"
+        },
+        {
+          "label": "D",
+          "text": "silinder pusat"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Umur pohon dapat dilihat dari garis-garis yang menunjukkan hasil kegiatan dari suatu masa pertumbuhan. Garis-garis itu disebut ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "xilem"
+        },
+        {
+          "label": "B",
+          "text": "felogen"
+        },
+        {
+          "label": "C",
+          "text": "parenkim kayu"
+        },
+        {
+          "label": "D",
+          "text": "lingkaran tahun"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Perbedaan berkas pengangkut pada batang monokotil dengan batang dikotil adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "berkas pengangkut pada dikotil tidak memiliki kambium"
+        },
+        {
+          "label": "B",
+          "text": "berkas pengangkut pada monokotil tersusun beraturan"
+        },
+        {
+          "label": "C",
+          "text": "berkas pengangkut pada dikotil tersusun tidak beraturan"
+        },
+        {
+          "label": "D",
+          "text": "berkas pengangkut pada dikotil dipisahkan oleh kambium"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan anatomi daun berikut! Sumber: Raven et al. 2010 X Jaringan yang ditunjukkan oleh huruf X merupakan salah satu jaringan penyusun daun. Jaringan X disebut jaringan ... dan berfungsi untuk ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "palisade, berperan dalam fotosintesis"
+        },
+        {
+          "label": "B",
+          "text": "palisade, berperan dalam pengangkutan air"
+        },
+        {
+          "label": "C",
+          "text": "bunga karang, berperan dalam fotosintesis"
+        },
+        {
+          "label": "D",
+          "text": "bunga karang, berperan dalam pengangkutan air"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar anatomi akar di samping! Berdasarkan gambar, fungsi dari struktur X adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "melindungi akar ketika menembus tanah"
+        },
+        {
+          "label": "B",
+          "text": "mengangkut air dan unsur hara dari tanah"
+        },
+        {
+          "label": "C",
+          "text": "menopang pohon untuk tetap dapat berdiri"
+        },
+        {
+          "label": "D",
+          "text": "memperluas daerah penyerapan air dan unsur hara dari tanah"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut ini, bagian-bagian akar yang dilalui oleh air tanah secara berturut turut adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "epidermis rambut akar – parenkim – endodermis – xilem akar"
+        },
+        {
+          "label": "B",
+          "text": "epidermis rambut akar – endodermis – parenkim – xilem akar"
+        },
+        {
+          "label": "C",
+          "text": "epidermis rambut akar – kambium – parenkim – xilem akar"
+        },
+        {
+          "label": "D",
+          "text": "kulit luar – kambium –endodermis – xilem akar"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Sehelai daun ditutupi sebagian dengan kertas timah, lalu diletakkan di tempat yang terkena cahaya matahari selama 24 jam. Daun tersebut kemudian dipetik dan dilakukan uji iodium pada permukaan atas daun. Proses tersebut merupakan cara untuk ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "mengetahui bahwa hasil fotosintesis adalah amilum"
+        },
+        {
+          "label": "B",
+          "text": "mengetahui bahwa klorofil diperlukan dalam fotosintesis"
+        },
+        {
+          "label": "C",
+          "text": "mengetahui bahwa pada fotosintesis terbentuk gas oksigen"
+        },
+        {
+          "label": "D",
+          "text": "mengetahui bahwa amilum terdapat pada seluruh bagian daun X Sumber: Campbell et al. 2008"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar di bawah! Sumber: Campbell et al. 2008 1 5 2 4 3 Bagian yang berfungsi sebagai jaringan pengangkut ditunjukkan pada bagian bernomor ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "1 dan 3"
+        },
+        {
+          "label": "B",
+          "text": "2 dan 5"
+        },
+        {
+          "label": "C",
+          "text": "3 dan 4"
+        },
+        {
+          "label": "D",
+          "text": "3 dan 5"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut ini merupakan teknologi yang terinspirasi dari proses fotosintesis yang terjadi dalam daun adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "panel surya"
+        },
+        {
+          "label": "B",
+          "text": "alat pemurnian air"
+        },
+        {
+          "label": "C",
+          "text": "light-dependent resistor"
+        },
+        {
+          "label": "D",
+          "text": "lapisan pengilap cat mobil"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 10,
+      "questionType": "multiple_choice",
+      "questionText": "Lapisan pelindung pada daun tumbuhan yang menginspirasi pembuatan lapisan pengilap cat mobil adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "floem"
+        },
+        {
+          "label": "B",
+          "text": "kutikula"
+        },
+        {
+          "label": "C",
+          "text": "endodermis"
+        },
+        {
+          "label": "D",
+          "text": "rambut akar"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 1,
+      "questionType": "essay",
+      "questionText": "Berdasarkan hasil pengamatan kamu pada saat mengamati struktur anatomi batang pada kacang tanah dan jagung, jawablah pertanyaan berikut. a. Jelaskan perbedaan struktur jaringan dari kedua batang tersebut! b. Berdasarkan ciri-cirinya, termasuk kelompok tumbuhan apakah jagung dan kacang tanah?",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 2,
+      "questionType": "short_answer",
+      "questionText": "Fotosintesis adalah proses penyusunan atau pembentukan senyawa kompleks dari senyawa sederhana yang dilakukan oleh tumbuhan. Sebutkan 3 faktor yang memengaruhi proses fotosintesis!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 3,
+      "questionType": "essay",
+      "questionText": "Akar pada tumbuhan berfungsi sebagai penopang tumbuhan untuk tumbuh, namun pada beberapa tumbuhan akar termodifikasi membentuk fungsi khusus. Sebutkan 3 macam jenis akar yang termodifikasi disertai dengan contoh tumbuhannya!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 4,
+      "questionType": "essay",
+      "questionText": "Pada suatu pengamatan percobaan tentang fotosintesis ditemukan data sebagai berikut. Setelah ditetesi larutan kalium iodida (KI) kondisinya seperti gambar di samping! a. Jelaskan pada bagian daun yang mana terjadi fotosintesis dan buktikan berdasarkan data pengamatan tersebut! b. Apa fungsi dari memasukkan daun yang akan diuji pada air yang mendidih? c. Apa fungsi dari penggunaan alkohol dalam proses pengujian daun yang mengalami fotosintesis?",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 5,
+      "questionType": "essay",
+      "questionText": "Tumbuhan membutuhkan berbagai bahan untuk fotosintesis. Salah satunya adalah air yang bergerak dari akar sampai ke ujung daun. a. Bagaimanakah cara air yang diserap dari tanah dapat sampai ke daun paling atas? b. Bagian tubuh tumbuhan manakah yang berperan? Sumber: Dok. Kemdikbud Merancang Teknologi yang Terinspirasi dari Struktur Tumbuhan",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    }
+  ]
+}

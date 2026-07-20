@@ -1,0 +1,328 @@
+{
+  "variant": "v1-ipa-stems",
+  "sampleId": "sample-13",
+  "topic": "Kemagnetan dan Pemanfaatannya",
+  "sessionId": "5d1c247c-9132-4685-b648-008619a9a364",
+  "documentId": "11fa0fde-9c8a-42ac-b699-d938886cc98e",
+  "latencyMs": 96621,
+  "questions": [
+    {
+      "number": 0,
+      "questionType": "multiple_choice",
+      "questionText": "Bumi merupakan magnet raksasa. Berdasarkan teori kemagnetan bumi, pernyataan yang benar mengenai posisi kutub magnet bumi adalah ....",
+      "options": [
+        {
+          "text": "kutub utara magnet berada di sekitar kutub utara bumi",
+          "label": "A"
+        },
+        {
+          "text": "kutub selatan magnet berada di sekitar kutub selatan bumi",
+          "label": "B"
+        },
+        {
+          "text": "kutub utara magnet berada di sekitar kutub selatan bumi",
+          "label": "C"
+        },
+        {
+          "text": "kutub magnet bumi tidak berhubungan dengan kutub geografis",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Medan magnet bumi melindungi bumi dari radiasi kosmik. Salah satu fenomena yang dihasilkan adalah aurora. Proses terjadinya aurora adalah ....",
+      "options": [
+        {
+          "text": "radiasi matahari dipantulkan oleh atmosfer ke angkasa",
+          "label": "A"
+        },
+        {
+          "text": "partikel bermuatan dari matahari tertarik ke kutub dan menumbuk atmosfer sehingga terionisasi dan menghasilkan plasma lemah",
+          "label": "B"
+        },
+        {
+          "text": "medan magnet bumi memantulkan semua radiasi kosmik kembali ke angkasa",
+          "label": "C"
+        },
+        {
+          "text": "partikel kosmik terperangkap di ekuator dan menghasilkan cahaya terang",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan beberapa cara berikut!\n(1) Menggosok dengan magnet searah\n(2) Mendekatkan dengan magnet batang\n(3) Meliliti kawat berarus DC\n(4) Memukul-mukul dengan palu\nCara yang dapat digunakan untuk membuat magnet ditunjukkan oleh nomor ....",
+      "options": [
+        {
+          "text": "menggosok paku dengan magnet secara searah",
+          "label": "A"
+        },
+        {
+          "text": "mendekatkan paku pada magnet batang",
+          "label": "B"
+        },
+        {
+          "text": "meliliti paku dengan kawat tembaga dan menghubungkannya ke baterai",
+          "label": "C"
+        },
+        {
+          "text": "memukul-mukul paku dengan palu",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Sifat kemagnetan suatu bahan dapat dihilangkan dengan beberapa cara. Cara yang tepat untuk menghilangkan sifat kemagnetan adalah ....",
+      "options": [
+        {
+          "text": "memanaskan magnet hingga suhu tinggi",
+          "label": "A"
+        },
+        {
+          "text": "menggosok magnet dengan magnet lain",
+          "label": "B"
+        },
+        {
+          "text": "meliliti magnet dengan kawat dan dialiri arus DC",
+          "label": "C"
+        },
+        {
+          "text": "mendekatkan magnet pada benda feromagnetik",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Gaya Lorentz dirumuskan dengan $F = B \\cdot I \\cdot L$. Sebuah kawat lurus sepanjang $2 \\text{ m}$ dialiri arus listrik $2 \\text{ mA}$ dan berada dalam medan magnet. Jika gaya Lorentz yang timbul sebesar $12 \\text{ N}$, besar medan magnet $B$ adalah ....",
+      "options": [
+        {
+          "text": "$0,5 \\text{ T}$",
+          "label": "A"
+        },
+        {
+          "text": "$3 \\text{ T}$",
+          "label": "B"
+        },
+        {
+          "text": "$300 \\text{ T}$",
+          "label": "C"
+        },
+        {
+          "text": "$12 \\text{ T}$",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar bel listrik berikut! Saat tombol ditekan, bel akan berdering terus-menerus selama tombol masih ditekan. Hal ini terjadi karena ....",
+      "options": [
+        {
+          "text": "lengan pemukul menekan bel terus-menerus tanpa putus",
+          "label": "A"
+        },
+        {
+          "text": "elektromagnet tetap aktif meskipun rangkaian terputus",
+          "label": "B"
+        },
+        {
+          "text": "saat lengan pemukul mengenai bel, rangkaian terputus sehingga elektromagnet kehilangan sifat magnetnya dan lengan kembali ke posisi semula",
+          "label": "C"
+        },
+        {
+          "text": "baterai menghasilkan arus bolak-balik sehingga elektromagnet berubah kutub terus-menerus",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Perhatikan gambar dua transformator berikut! Berdasarkan jumlah lilitan primer dan sekunder, transformator (a) pada gambar tersebut termasuk jenis ....",
+      "options": [
+        {
+          "text": "step-down dengan jumlah lilitan primer lebih banyak daripada sekunder",
+          "label": "A"
+        },
+        {
+          "text": "step-up dengan jumlah lilitan primer lebih banyak daripada sekunder",
+          "label": "B"
+        },
+        {
+          "text": "step-down dengan jumlah lilitan primer lebih sedikit daripada sekunder",
+          "label": "C"
+        },
+        {
+          "text": "step-up dengan jumlah lilitan primer lebih sedikit daripada sekunder",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "number": 7,
+      "questionType": "multiple_choice",
+      "questionText": "Beberapa jenis bakteri memiliki kemampuan navigasi menggunakan medan magnet bumi. Bakteri yang memiliki organel magnetosome yang tersusun atas magnetite atau greigite adalah ....",
+      "options": [
+        {
+          "text": "Bacillus subtilis",
+          "label": "A"
+        },
+        {
+          "text": "Escherichia coli",
+          "label": "B"
+        },
+        {
+          "text": "Lactobacillus bulgaricus",
+          "label": "C"
+        },
+        {
+          "text": "Magnetotactic bacteria (MTB)",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Generator dan dinamo merupakan alat yang menerapkan prinsip induksi elektromagnetik. Fungsi utama generator adalah ....",
+      "options": [
+        {
+          "text": "mengubah energi listrik menjadi energi gerak",
+          "label": "A"
+        },
+        {
+          "text": "mengubah energi gerak menjadi energi listrik",
+          "label": "B"
+        },
+        {
+          "text": "mengubah energi listrik menjadi energi bunyi",
+          "label": "C"
+        },
+        {
+          "text": "mengubah energi bunyi menjadi energi listrik",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "number": 9,
+      "questionType": "multiple_choice",
+      "questionText": "Berdasarkan kekuatan tarikan terhadap magnet, bahan dikelompokkan menjadi feromagnetik, diamagnetik, dan paramagnetik. Bahan feromagnetik memiliki ciri ....",
+      "options": [
+        {
+          "text": "bahan yang sedikit ditolak magnet",
+          "label": "A"
+        },
+        {
+          "text": "bahan yang tidak dipengaruhi magnet sama sekali",
+          "label": "B"
+        },
+        {
+          "text": "bahan yang ditarik kuat oleh magnet",
+          "label": "C"
+        },
+        {
+          "text": "bahan yang ditolak kuat oleh magnet",
+          "label": "D"
+        }
+      ],
+      "correctAnswer": "C"
+    }
+  ],
+  "structural": {
+    "score": 66.2,
+    "templateSim": 75,
+    "cognitiveSim": 80,
+    "stemEllipsisSim": 20,
+    "fourOptionSim": 100,
+    "optionShapeSim": 40,
+    "indoSim": 98.3,
+    "gold": {
+      "n": 10,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 1,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 3,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 0,
+        "tujuan": 0,
+        "image_leadin": 4,
+        "other": 5
+      },
+      "cognitiveHist": {
+        "recall": 7,
+        "comprehend": 0,
+        "apply": 3
+      },
+      "stemEllipsisRate": 0.2,
+      "fourOptionRate": 1,
+      "optionShapeHist": {
+        "short_terms": 8,
+        "long_statements": 0,
+        "mixed": 2,
+        "none": 0
+      },
+      "numberedListRate": 0.1,
+      "imageLeadinRate": 0.4,
+      "avgIndonesianMarkers": 2.5
+    },
+    "generated": {
+      "n": 10,
+      "templateHist": {
+        "disebut": 0,
+        "pernyataan_benar": 1,
+        "pasangan": 0,
+        "ciri_ciri": 0,
+        "skenario": 1,
+        "urutan": 0,
+        "hitung_kromosom": 0,
+        "proses": 1,
+        "tujuan": 0,
+        "image_leadin": 2,
+        "other": 5
+      },
+      "cognitiveHist": {
+        "recall": 7,
+        "comprehend": 2,
+        "apply": 1
+      },
+      "stemEllipsisRate": 1,
+      "fourOptionRate": 1,
+      "optionShapeHist": {
+        "short_terms": 2,
+        "long_statements": 3,
+        "mixed": 5,
+        "none": 0
+      },
+      "numberedListRate": 0.1,
+      "imageLeadinRate": 0.2,
+      "avgIndonesianMarkers": 2.6
+    }
+  },
+  "judgeScore": 65,
+  "judgeRationale": "Both sets use formal Indonesian with 4-option MCQs and include conceptual and application questions, but SET B incorporates more formula-based and explanation items, differing from SET A's simpler, direct question stems and more image-dependent prompts.",
+  "sanityRate": 100,
+  "sanityNotes": "All questions are standard topics in magnetism and its applications typically covered in SMP textbooks.",
+  "patternScore": 65.7
+}

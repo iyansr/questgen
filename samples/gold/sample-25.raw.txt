@@ -1,0 +1,385 @@
+ e. 24 dan 36 adalah 12
+f. 24 dan 48 adalah ...
+g. 36 dan 48 adalah ...
+Menentukan FPB dengan Faktorisasi Prima
+Contoh
+ 1.41
+Tentukan FPB dari 90 dan 168
+PenyelesaianAlternatif
+Langkah 1 : Menyatakan bilangan 90 dan 168 ke dalam bentuk faktorisasi 
+prima
+Untuk menentukannya bisa menggunakan bantuan pohon faktor, sebagai 
+berikut.
+90
+2 45
+15
+5
+3
+3
+168
+2
+2
+2
+3 7
+84
+42
+21
+90 = 2 × 32 × 5
+168 = 23 × 3 × 7
+Langkah 2 : Mengalikan semua faktor-faktor yang sama pada masing-masing 
+bilangan dengan ketentuan : pilih yang pangkat terendah. 
+FPB dari 90 dan 168 adalah 2 × 3 = 6. Contoh
+ 1.42
+Tentukan FPB dari 24, 48, 72
+Langkah 1: Bagi ketiga bilangan tersebut secara bersusun hingga hasil bagi 
+semua bilangan adalah 1, seperti berikut.
+24 48 72
+12 24 36
+6 12 18
+3 4 6
+1 4 2
+1 2 1
+1 1 1
+÷ 2
+÷ 2
+÷ 2
+÷ 2
+÷ 3
+÷ 3
+Langkah 2: Kalikan pembagi yang habis membagi semua bilangan.
+FPB dari 24, 48, dan 72 adalah 2 × 2 × 3 = 12
+Tugas kalian
+1. Tentukan FPB dari 24, 48, dan 72 dengan cara faktorisasi prima.
+2. Tentukan FPB dari 90 dan 168 dengan cara pembagian bersusun.
+Ayo Kita
+Menalar
+1. Misal ada dua bilangan prima a dan b. Tentukan FPB dan KPK dari kedua 
+bilangan tersebut. Jelaskan.
+2. Diketahui bilangan bulat positif c dan d.
+ 6 membagi c.
+ 6 membagi d.
+ a. Apakah 6 adalah FPB dari c dan d? Jelaskan.
+ b. Apakah syarat kita bisa memastikan bahwa 6 adalah FPB dari c dan d.
+3. Diketahui tiga bilangan bulat positif e, f, dan g. e dan f keduanya membagi 
+g. Jelaskan langkah kalian untuk memastikan bahwa g adalah KPK dari e 
+dan f. Ayo Kita
+Berbagi
+Sajikan hasil menalar kalian di depan kelas. Sampaikan alasan kalian sebaik 
+mungkin. Tanggapi pendapat teman kalian yang berbeda.
+Ayo Kita
+!?!?
+Berlatih 1.8
+A. Soal Pilihan Ganda
+1. KPK dari 12 dan 30 adalah ...
+a. 30
+b. 48
+c. 60
+d. 120
+2. FPB dari 28, 84, dan 96 adalah ...
+a. 2
+b. 4
+c. 6
+d. 8
+3. Jika KPK dari bilangan a dan b adalah 140, maka di antara pasangan 
+bilangan a dan b berikut yang memenuhi adalah...
+a. 14 dan 35
+b. 21 dan 70
+c. 28 dan 10
+d. 35 dan 70
+4. Jika FPB dari bilangan c dan d adalah 12, maka di antara pasangan 
+bilangan c dan d berikut yang memenuhi adalah ... 
+a. 104 dan 80
+b. 120 dan 124
+c. 108 dan 140
+d. 108 dan 120 B. Soal Uraian
+1. Pada suatu hari Vera dan Veronika belanja bersamaan di sebuah 
+pasar swalayan. Vera belanja setiap 12 hari sekali. Sedangkan 
+Veronika belanja setiap 14 hari sekali. Setelah berapa hari, Vera dan 
+Veronika akan bersamaan belanja di Swalayan tersebut ?
+2.
+ Pada sebuah pertunjukan sirkus, terdapat 3 buah lampu, yaitu 
+lampu warna merah, kuning, dan hijau. Mula-mula ketiga lampu 
+itu menyala bersamaan. Kemudian lampu merah menyala setiap 
+5 detik, lampu kuning menyala setiap 4 detik dan lampu hijau 
+menyala setiap 8 detik. Tiap berapa detik ketiga lampu itu menyala 
+bersamaan?
+3.
+ Tentukan KPK dari bilangan-bilangan berikut.
+a. 12 dan 28
+b. 25 dan 25
+c. 16, 24 dan 36
+d. 24, 48, dan 72 
+4. Tentukan FPB dari bilangan-bilangan berikut.
+ a. 36 dan 48
+ b. 24 dan 72
+ c. 24, 36, dan 72
+ d. 15, 30, 60, dan 105
+5. Apakah 480 adalah KPK dari 120 dan 160? Jelaskan.
+6. Apakah 20 adalah FPB dari 120 dan 160? Jelaskan.
+7. Ibu Mona memiliki kelinci sebanyak 80 ekor. Ia ingin membagi 
+kelinci tersebut dalam beberapa kandang. Banyak kandang sama 
+dengan banyak faktor bilangan 80 dan banyak kelinci dalam setiap 
+kandang adalah hasil bagi banyak kelinci dengan banyak kandang.
+ a. Berapakah banyak kandang yang harus dibuat Ibu Mona?
+ b. Berapakah banyak kelinci dalam setiap kandang?
+c. Apakah banyak kelinci dalam setiap kandang juga merupakan 
+faktor dari banyaknya kelinci keseluruhan? Berikan alasanmu. 8. Diberikan bilangan 37, 41, dan 51. 
+a. Tentukan faktor dan faktor prima bilangan tersebut.
+b. Apakah berbeda faktor bilangan dengan faktor primanya? 
+Jelaskan apa alasannya
+9. Diberikan bilangan 30 dan 60
+a. Tentukan faktor-faktor kedua bilangan tersebut
+b. Apakah ada faktor bilangan yang sama di antara faktor-faktor 
+bilangan itu? Sebutkan.
+c.
+ Berapa banyak faktor prima yang sama di antara faktor-faktor 
+bilangan itu.
+10.
+ Yanto pergi ke kolam renang setiap 4 hari sekali. Yansen pergi ke 
+kolam renang setiap 5 hari sekali. Yanwar pergi ke kolam renang 
+setiap 6 hari sekali. Pada hari Sabtu mereka pergi bersama-sama ke 
+kolam renang. Setelah berapa harikah mereka akan pergi ke kolam 
+bersama-sama lagi? Pada hari apakah itu?
+11.
+ Rina, Rini dan Reni bekerja di percetakan. Setiap 45 menit Rina 
+minum segelas air. Rini minum air setiap 60 menit dan Reni minum 
+setiap 90 menit. Jika mereka minum bersama pada jam 08.00, setelah 
+berapa menitkah mereka akan minum bersama lagi? Jam berapakah 
+itu?
+12.
+ Tedy, Saleh dan Aris sedang menanam benih di kebun. Setiap 
+memasukkan benih ke dalam tiga lubang Tedy merogoh kantong 
+benih di pinggangnya. Saleh merogoh kantongnya setiap mengisi 
+4 lubang, sementara Aris merogoh kantongnya setelah mengisi 5 
+lubang. Jika pada lubang pertama mereka mengisi bersamaan setiap 
+berapa lubangkah mereka akan mengisi bersama lagi?
+13.
+ Seorang peternak telur sedang memanen telur. Dia memasukkan 
+telur telur tersebut secara rapi ke dalam kotak-kotak. Dia lupa 
+menghitung banyak telur yang dimasukkan kotak ketika itu. Yang 
+dia ingat, jika diambil 2an, maka tersisa 1, jika diambil 3an juga 
+tersisa 1, jika diambil 4an, 5an, dan 6an, juga tersisa 1. Tentukan 
+banyak telur yang dipanen oleh peternak telur tersebut?
+- Setelah mengikuti semua rangkaian kegiatan 1 hingga 3, mari membuat 
+rangkuman materi yang telah kalian dapatkan. Untuk membantu kalian 
+membuat rangkuman, jawablah pertanyaan berikut.
+1.
+ Jika diketahui bilangan bulat a dan b, bagaimana kalian membandingkan 
+bilangan tersebut? (yang lebih besar dan yang lebih kecil)
+2. Di antara operasi penjumlahan, pengurangan, perkalian, dan pembagian 
+pada bilangan bulat, manakah yang hasil operasinya tertutup 
+(menghasilkan bilangan bulat juga)? Jelaskan.
+3.
+ Sebutkan ciri-ciri bilangan bulat a yang merupakan Kelipatan 
+Persekutuan Terkecil dari dua bilangan bulat atau lebih.
+4.
+ Sebutkan ciri-ciri bilangan bulat a yang merupakan Faktor Persekutuan 
+Terbesar dari dua bilangan bulat atau lebih.
+5.
+ Jika diketahui bilangan bulat a, b, c, dan d, dengan a, b, c, dan d ≠ 0, 
+bagaimana cara kalian menentukan hasil dari:
+a. 
+b
+a + 
+d
+c b. 
+b
+a − 
+d
+c c. 
+b
+a × 
+d
+c d. 
+b
+a ÷ 
+d
+c
+Ayo Kita
+Merangkum
+ 1
+Carilah permasalahan di sekitar kalian yang melibatkan bilangan bulat, 
+bilangan pecahan, dan bilangan berpangkat. Sajikan permasalahan tersebut 
+beserta solusi pemecahannya semenarik mungkin.
+Ayo Kita
+Mengerjakan
+Tugas Projek
+ 1 Uji
+Kompetensi
++=+?? 1
+A. Soal Pilihan Ganda
+1. Manakah di antara bilangan berikut yang merupakan bilangan terkecil?
+a. 0,625
+b. 0,25
+c. 0,375
+d. 0,5
+e. 0,125
+2. Tentukan hasil dari 8 15 20 5
+632
+×+ ÷
+÷×
+a. 7
+b. 28
+c. 62
+d. 124
+3. Salah satu pasangan bilangan berikut, bilangan yang pertama kurang 
+dari 2,25, sedangkan bilangan kedua lebih dari bilangan 2,25. Pasangan 
+bilangan tersebut adalah ...
+ a. 1 dan 2
+ b. 2 dan 5
+2
+ c. 5
+2
+ dan 11
+4
+ d. 11
+4
+ dan 3
+(Sumber: TIMSS 2003 8th-Grade Mathematics Items) 4. 3 34
+5 10 15
++×=
+ a. 1
+6 
+c. 11
+25
+ b. 6
+25 
+d. 17
+25
+ 
+ 
+(Sumber: TIMSS 2003 8th-Grade Mathematics Items)
+5. Rohim dan Wachid masing-masing memiliki 45 buku. Jika 4
+5
+ buku 
+milik Rohim dan 2
+3
+ buku milik Wachid adalah Novel, maka banyak 
+buku novel yang dimiliki oleh Rohim ... lebih banyak daripada yang 
+dimiliki oleh Wachid?
+a. 2
+b. 3
+c. 6
+d. 30
+6. Pada gambar berikut, 3 persegi sudah diarsir. Berapa persegi lagi yang 
+perlu diarsir untuk menyatakan bahwa 4
+5
+ persegi telah terarsir?
+a. 5
+b. 4
+c. 3
+d. 2
+e. 1
+(Sumber: TIMSS 2003 8th-Grade Mathematics Items) 7. Pada susunan bilangan berikut yang berurutan dari terbesar ke terkecil adalah ...
+a. 0,233 ; 0,3 ; 0,32 ; 0,332
+b. 0,3 ; 0,32 ; 0,332 ; 0,233
+c. 0,32 ; 0,233 ; 0,332 ; 0,3
+d. 0,332 ; 0,32 ; 0,3 ; 0,233
+(Sumber: TIMSS 2003 8th-Grade Mathematics Items)
+8. Berapakah hasi dari 1 − 5 × (−2)
+a. 11
+b. 8
+c. −8
+d. −9
+(Sumber: TIMSS 2003 8th-Grade Mathematics Items)
+9. Jika n adalah suatu bilangan bulat negatif, manakah hasil yang 
+menunjukkan bilangan terbesar?
+a. 
+ 3 + n
+b. 3 × n 
+c. 3 − n 
+d. 3 ÷ n 
+(Sumber: TIMSS 2003 8th-Grade Mathematics Items)
+10. Selembar kertas mempunyai ketebalan 0,012 cm. Berapakah tebal 400 
+lembar kertas tersebut?
+a. 0,048 cm
+b. 0,48 cm
+c. 4,8 cm
+d. 48 cm 
+(Sumber: TIMSS 2003 8th-Grade Mathematics Items)
+11. Hasil dari 370 × 998 + 370 × 2 bernilai sama dengan ...
+a.
+ 370 × 1.000
+b. 372 × 998
+c. 740 × 998
+d. 370 × 998 × 2
+(Sumber: TIMSS 2003 8th-Grade Mathematics Items) 12. Tentukan hasil dari 4
+5 
+−
+ 
+1
+3 
+−
+ 
+1
+15
+a. 1
+5 
+d. 3
+4
+b. 2
+5 
+e. 4
+5
+c. 7
+15
+13. Jika 211139X = ÷ dan 2,34
+0, 6Y = maka hubungan yang tepat antara X 
+dan Y adalah ...
+a. X > Y
+b. X < Y
+c. X = Y
+d. Tidak bisa ditentukan
+ 
+14. Terdapat 68 baris pada suatu tempat parkir mobil.Setiap baris terdiri 
+dari 92 mobil. Berapakah taksiran banyak mobil di tempat parkir 
+tersebut?
+a.
+ 60 × 90 = 5.400
+b. 60 × 100 = 6.000 
+c. 70 × 90 = 6.300 
+d. 70 × 100 = 7.000 
+(Sumber: TIMSS 1999 8th-Grade Mathematics Concepts and Mathematics Item)
+15. Suatu elevator bergerak dari lantai 1 menuju lantai 5, kemudian ke 
+lantai 2. Dari lantai 2, elevator bergerak menuju lantai 4, kemudian 
+berhenti di lantai 3. Jika jarak antar lantai adalah 3 meter, berapa jauh 
+elevator tersebut telah bergerak?
+a.
+ 18 m
+b. 27 m
+c. 30 m
+d. 45 m
+(Sumber: TIMSS 1999 8th-Grade Mathematics Items) 16. Berat 500 butir kristal gula adalah 6,5 gram. Berapakah berat rata-rata 
+tiap butir kristal gula tersebut?
+a. 0,0078 gram
+b. 0,013 gram
+c. 0,0325 gram
+d. 0,078 gram
+17. Jika p = 4 dan q = 3 serta 2
+pqr pq= + , tentukan hasil dari pq
+r
+−
+a. 
+ 
+c. 1
+12
+b. 12
+10 
+d. 1
+10
+18. Bilangan 78.125 dapat diubah menjadi bilangan berpangkat ... 
+a. 58
+b. 57
+c. 75
+d. 77
+19. Urutkan bilangan 34, 43, 25, 52 dari yang terkecil ke yang terbesar.
+a. 34, 43, 25, 52 
+b. 52, 25, 43, 34
+c. 52, 25, 34, 43 
+d. 52, 43, 25, 34 
+20. Jika k mewakili suatu bilangan negatif, manakan di antara bentu berikut 
+yang hasilnya adalah bilangan positif?
+a. k2 c. 2k
+b. k3 d. 
+2
+k

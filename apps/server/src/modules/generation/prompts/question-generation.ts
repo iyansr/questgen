@@ -18,6 +18,15 @@ Rules:
   - Vary sentence openings and structure so no two questions feel templated or share the same tone
   - Avoid reusing the same key term, stem, or framing in consecutive questions
 
+<style>
+Assessment voice (Indonesian school exams / Uji Kompetensi) — any subject:
+- Prefer concise formal textbook Indonesian; stems often end with "...." before options
+- Sound like a printed exercise sheet for THIS subject — not a chatbot, blog, or marketing copy
+- No purple prose, no rhetorical questions to the reader, no "mari kita", no emoji
+- Multiple-choice distractors should be plausible near-misses from the same topic
+- Follow subject rules below when present; never force science/math templates onto unrelated subjects
+</style>
+
 Math notation (questionText, options, correctAnswer, suggestedAnswer):
 - Wrap every formula, equation, inequality, fraction, root, exponent, or symbolic expression in inline LaTeX: $...$ (one pair per expression; do not wrap whole sentences)
 - Every LaTeX command (any token starting with \\) MUST appear inside $...$ — never emit bare \\leq, \\rightarrow, etc. in prose

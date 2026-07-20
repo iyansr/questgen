@@ -1,0 +1,239 @@
+{
+  "sampleId": "sample-15",
+  "topic": "Partikel Penyusun Benda dan Makhluk Hidup",
+  "grade": "SMP",
+  "classGrade": "IX",
+  "curriculum": "Kurikulum Merdeka",
+  "questionTypeCounts": [
+    {
+      "type": "multiple_choice",
+      "count": 7
+    },
+    {
+      "type": "short_answer",
+      "count": 3
+    },
+    {
+      "type": "essay",
+      "count": 2
+    }
+  ],
+  "source": "samples/sample-15/exercise.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "questionType": "multiple_choice",
+      "questionText": "Bagian terkecil dari suatu materi yang masih memiliki sifat materi tersebut disebut ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "atom"
+        },
+        {
+          "label": "B",
+          "text": "unsur"
+        },
+        {
+          "label": "C",
+          "text": "partikel"
+        },
+        {
+          "label": "D",
+          "text": "molekul"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 2,
+      "questionType": "multiple_choice",
+      "questionText": "Dua atom atau lebih yang bergabung (melalui ikatan kimia), baik antara atom-atom yang sama maupun atom-atom yang berbeda disebut ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "atom"
+        },
+        {
+          "label": "B",
+          "text": "molekul"
+        },
+        {
+          "label": "C",
+          "text": "larutan"
+        },
+        {
+          "label": "D",
+          "text": "campuran"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 3,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut ini yang bukan merupakan partikel penyusun atom adalah ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "proton"
+        },
+        {
+          "label": "B",
+          "text": "neutron"
+        },
+        {
+          "label": "C",
+          "text": "elektron"
+        },
+        {
+          "label": "D",
+          "text": "kulit atom"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 4,
+      "questionType": "multiple_choice",
+      "questionText": "Kalsium mempunyai nomor atom 20 dan nomor massa 40. Jumlah proton yang terdapat dalam atom kalsium adalah ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "20"
+        },
+        {
+          "label": "C",
+          "text": "30"
+        },
+        {
+          "label": "D",
+          "text": "40"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 5,
+      "questionType": "multiple_choice",
+      "questionText": "Atom atau sekelompok atom yang bermuatan listrik disebut ….",
+      "options": [
+        {
+          "label": "A",
+          "text": "ion"
+        },
+        {
+          "label": "B",
+          "text": "unsur"
+        },
+        {
+          "label": "C",
+          "text": "molekul"
+        },
+        {
+          "label": "D",
+          "text": "senyawa"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 6,
+      "questionType": "multiple_choice",
+      "questionText": "Berikut ini yang bukan merupakan penyebab perbedaan sifat suatu zat dengan zat lain adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "perbedaan jumlah neutron suatu zat A. perbedaan ikatan atom penyusun suatu zat"
+        },
+        {
+          "label": "B",
+          "text": "perbedaan jumlah dan jenis atom penyusun suatu zat"
+        },
+        {
+          "label": "C",
+          "text": "perbedaan struktur (susunan) atom penyusun suatu zat 7. Berikut ini yang bukan merupakan sifat fisika suatu zat adalah .... A. kerapatan B kekerasan C. elastisitas"
+        },
+        {
+          "label": "D",
+          "text": "kestabilan"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 8,
+      "questionType": "multiple_choice",
+      "questionText": "Berdasarkan elastisitasnya, bahan berikut yang cocok digunakan sebagai bahan pembuatan skok ( shock absorber ) kendaraan bermotor adalah ....",
+      "options": [
+        {
+          "label": "A",
+          "text": "besi B baja C. karet D. aluminium 9. Zat yang digunakan untuk menurunkan titik beku dan digunakan sebagai pendingin mesin kendaraan bermotor adalah .... A. glukosa"
+        },
+        {
+          "label": "B",
+          "text": "glikogen"
+        },
+        {
+          "label": "C",
+          "text": "etilen glikol D anti freeze protein 10. Bahan berikut yang paling sesuai digunakan sebagai bahan pembuatan peralatan memasak adalah .... A. besi B timah C. tembaga"
+        },
+        {
+          "label": "D",
+          "text": "aluminium"
+        }
+      ],
+      "correctAnswer": null,
+      "section": "A"
+    },
+    {
+      "number": 1,
+      "questionType": "essay",
+      "questionText": "Atom tersusun atas partikel subatom yaitu proton, neutron, dan elektron. Jelaskan peranan elektron dalam kehidupan sehari-hari!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 2,
+      "questionType": "essay",
+      "questionText": "Iodin (I) merupakan salah satu zat penyusun tubuh manusia. Jelaskan apa fungsi zat tersebut bagi tubuh dan dampak yang terjadi jika tubuh kekurangan iodin!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 3,
+      "questionType": "essay",
+      "questionText": "Mengapa bahan yang terbuat dari stirofoam tidak baik digunakan sebagai pembungkus makanan? Jelaskan!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 4,
+      "questionType": "essay",
+      "questionText": "Perhatikan kabel listrik berikut. Isolator Konduktor Sebutkan beberapa bahan yang sesuai digunakan untuk membuat kabel listrik tersebut. Jelaskan sifat fisika dan kimia yang mendukung pemilihan bahan tersebut!",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    },
+    {
+      "number": 5,
+      "questionType": "essay",
+      "questionText": "Intan dan grafit merupakan zat yang sama-sama tersusun atas atom karbon. Jelaskan apa perbedaan antara intan dan grafit beserta penyebabnya! Melakukan Penyelidikan tentang Sifat Fisika dan Kimia Bahan dan Pemanfaatannya dalam Kehidupan Sehari-hari",
+      "options": null,
+      "correctAnswer": null,
+      "section": "B"
+    }
+  ]
+}
