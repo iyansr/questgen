@@ -6,11 +6,25 @@
 - Standard startup path: `./init.sh`
 - Standard verification path: `pnpm --filter web check-types`
 - Server blackbox tests: `pnpm test:server` (requires PostgreSQL + `questgen_test` DB)
-- Latest feature: **material-based question quality eval + IPA Uji Kompetensi subject guidance**
-- Current highest-priority unfinished feature: improve IPS/PPKn/Math-VII exercise slicing so more of the 35-sample corpus becomes eval-eligible; optional re-ingest for chunker heading-path fix on old docs
+- Latest feature: **order-invariant tone/intent match eval** (post-merge of #15 quality eval)
+- Merged on main: material-based question quality eval + subject-agnostic assessment guidance (#15 → `10a3fe7`)
+- Current highest-priority unfinished feature: improve IPS/PPKn/Math-VII exercise slicing so more of the 35-sample corpus becomes eval-eligible; optional prompt work to raise tone-match without copying gold
 - Dashboard stats: `GET /api/dashboard/stats` wired to dashboard stat cards (completed/ready scope)
 
 ## Session Log
+
+### Session 033
+
+- Date: 2026-07-20
+- Goal: Open new PR after #15 merge — ship tone-match eval for examiner feedback.
+- Completed:
+  - Branch `cursor/tone-match-eval-742a` off `origin/main`.
+  - Order-invariant tone/intent matching in eval harness (`llmToneMatchJudge`, `eval/tone.ts`, `eval:rescore`).
+  - Similarity headline = `0.50·tone + 0.25·style + 0.25·structural`.
+  - Rescored existing v1 runs (n=9): tone mean **35.8**, coverage ≥50 **~43%**, similarity mean **55.0** (pattern/style still ~74).
+  - Docs: `CATATAN_TONE_MATCH_PENGUJI.md`, BAB IV / LAPORAN / DRAF / REPORT updates.
+- Verification: unit tests for tone helpers; evidence in `samples/eval/tone-rescore.jsonl` + `runs/*.json` tone fields.
+- Next best step: optional prompt/generation tweaks aimed at tone-match; keep UAT as primary thesis validation.
 
 ### Session 032
 
@@ -24,7 +38,7 @@
   - Report: `samples/eval/REPORT.md`; unit tests `test/question-quality-eval.test.ts` (5 passed); `pnpm --filter server check-types` pass.
 - Verification run: real OCR+generate on samples 1–5,13,23,31,35; vitest fingerprint/guidance; tsc.
 - Evidence captured: `samples/eval/results.jsonl`, `samples/eval/runs/*`, REPORT.md.
-- Commits: on `cursor/question-quality-eval-742a`.
+- Commits: merged via PR #15 (`10a3fe7`).
 - Known risk: IPS/PPKn/some Math VII exercises not MCQ-eligible; wrangler workflow can hang mid-generate (resume with `--skip-ingest`); pages >80 skipped (25, 34).
 - Next best step: better exercise page slicing for skipped subjects; optional latency tune on v1.
 

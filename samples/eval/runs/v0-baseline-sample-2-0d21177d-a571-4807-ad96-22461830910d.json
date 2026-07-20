@@ -252,5 +252,67 @@
   "judgeRationale": "Both sets use formal Indonesian, 4-option MCQs, and cover reproductive biology with similar question stems like 'berikut ini', 'peristiwa', and 'amati gambar', but SET B includes more specific biological terms and fewer scenario-based or cause-effect questions than SET A.",
   "sanityRate": 100,
   "sanityNotes": "All questions are typical content in plant and animal reproduction systems in SMP textbooks.",
-  "patternScore": 68.5
+  "patternScore": 44,
+  "toneMatchScore": 18.9,
+  "toneCoverageRate": 14,
+  "toneRationale": "Most AI items focus on plant reproduction concepts, some on fertilization and vegetative reproduction, but none match the specific human questions on asexual reproduction, growth stages, seed germination failure, animal fertilization, or insect sperm production in similar tone.",
+  "tonePairs": [
+    {
+      "goldIndex": 0,
+      "goldStem": "Reproduksi yang memungkinkan tumbuhan mewarisi semua karakteristik atau sifat hanya dari satu induk adalah perkembang ­ biakan secara ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "No AI item asks about reproduction from a single parent (asexual reproduction) in similar tone"
+    },
+    {
+      "goldIndex": 1,
+      "goldStem": "Perkembangbiakan vegetatif buatan dapat dilakukan dengan ....",
+      "bestGenIndex": 5,
+      "bestGenStem": "Amati gambar berikut. Jenis perkembangbiakan vegetatif alami yang ditunjukkan oleh gambar adalah ....",
+      "score": 54,
+      "note": "Both ask about vegetative reproduction, AI asks about natural vegetative reproduction type, human asks about artificial method"
+    },
+    {
+      "goldIndex": 2,
+      "goldStem": "Berikut menunjukkan seekor kupu­kupu hinggap pada tanaman bunga A lalu membawa serbuk sari dari tanaman bunga A ke tanaman bunga B. Hasil yang akan terjadi dari peristiwa tersebut adalah .... A B",
+      "bestGenIndex": 1,
+      "bestGenStem": "Pada peristiwa pembuahan ganda tumbuhan Angiospermae, inti sel sperma yang pertama membuahi inti sel telur, sedangkan inti sel sperma yang kedua membuahi ....",
+      "score": 43,
+      "note": "Both relate to fertilization/pollination process in plants, AI focuses on double fertilization, human on pollination and result"
+    },
+    {
+      "goldIndex": 3,
+      "goldStem": "Gambar berikut menunjukkan tanaman buncis pada tahap pertumbuhan yang berbeda. Urutan tahapan pertumbuhan yang benar adalah …. 1 2 3 4",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "No AI item about growth stages or ordering stages of plant growth"
+    },
+    {
+      "goldIndex": 4,
+      "goldStem": "Dayu meletakkan beberapa biji kacang di piring yang diberi kapas basah. Siti juga menaruh beberapa biji kacang di piring dekat piring Dayu dan merendamnya dalam air. Setelah dua hari biji kacang milik Dayu tumbuh berkecambah sedangkan biji kacang milik Siti tidak tumbuh. Penyebab tidak tum buhnya biji kacang milik Siti adalah ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "No AI item about seed germination conditions or causes of failure"
+    },
+    {
+      "goldIndex": 5,
+      "goldStem": "Peristiwa yang terjadi selama fertilisasi pada hewan adalah ....",
+      "bestGenIndex": 1,
+      "bestGenStem": "Pada peristiwa pembuahan ganda tumbuhan Angiospermae, inti sel sperma yang pertama membuahi inti sel telur, sedangkan inti sel sperma yang kedua membuahi ....",
+      "score": 35,
+      "note": "Human asks about fertilization in animals, AI about double fertilization in plants; weak topical overlap"
+    },
+    {
+      "goldIndex": 6,
+      "goldStem": "Perlakuan khusus pada serangga jantan agar tidak mem produksi sperma adalah untuk ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "No AI item about special treatment of male insects to prevent sperm production"
+    }
+  ],
+  "similarityScore": 44
 }

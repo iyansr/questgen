@@ -33,7 +33,11 @@ import {
   type GoldQuestion,
   structuralSimilarity,
 } from './fingerprint.js';
-import { llmSanitySpotCheck, llmStyleJudge } from './llm-judge.js';
+import {
+  llmSanitySpotCheck,
+  llmStyleJudge,
+  llmToneMatchJudge,
+} from './llm-judge.js';
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const serverRoot = resolve(scriptDir, '../..');
@@ -386,6 +390,10 @@ async function main() {
 
     let judgeScore: number | null = null;
     let judgeRationale = '';
+    let toneMatchScore: number | null = null;
+    let toneCoverageRate: number | null = null;
+    let toneRationale = '';
+    let tonePairs: unknown[] = [];
     let sanityRate: number | null = null;
     let sanityNotes = '';
 
@@ -398,6 +406,17 @@ async function main() {
       });
       judgeScore = judge.score;
       judgeRationale = judge.rationale;
+
+      const tone = await llmToneMatchJudge({
+        topic: meta.topic,
+        goldStems: gold.questions.map((q) => q.questionText),
+        generatedStems: generated.map((q) => q.questionText),
+        apiKey,
+      });
+      toneMatchScore = tone.score;
+      toneCoverageRate = tone.coverageRate;
+      toneRationale = tone.rationale;
+      tonePairs = tone.pairs;
 
       const spot = generated
         .slice()
@@ -421,10 +440,21 @@ async function main() {
       sanityNotes = sanity.notes;
     }
 
-    const patternScore =
-      judgeScore == null
+    // Headline similarity for thesis / penguji:
+    // toneMatch (order-invariant intent+phrasing) weighted highest,
+    // then set-level style judge, then structural fingerprint.
+    const similarityScore =
+      toneMatchScore == null && judgeScore == null
         ? structural.score
-        : Math.round((structural.score * 0.55 + judgeScore * 0.45) * 10) / 10;
+        : Math.round(
+            (structural.score * 0.25 +
+              (judgeScore ?? structural.score) * 0.25 +
+              (toneMatchScore ?? judgeScore ?? structural.score) * 0.5) *
+              10,
+          ) / 10;
+
+    // Keep old name as alias so prior docs still parse; prefer similarityScore.
+    const patternScore = similarityScore;
 
     const runPayload = {
       variant: args.variant,
@@ -437,8 +467,13 @@ async function main() {
       structural,
       judgeScore,
       judgeRationale,
+      toneMatchScore,
+      toneCoverageRate,
+      toneRationale,
+      tonePairs,
       sanityRate,
       sanityNotes,
+      similarityScore,
       patternScore,
     };
     const runPath = join(
@@ -459,16 +494,20 @@ async function main() {
       nGold: gold.questions.length,
       structuralScore: structural.score,
       judgeScore,
+      toneMatchScore,
+      toneCoverageRate,
+      similarityScore,
       patternScore,
       latencyMs: ms,
       runPath: runPath.replace(`${repoRoot}/`, ''),
       judgeRationale,
+      toneRationale,
       sanityRate,
     };
     appendFileSync(resultsPath, `${JSON.stringify(row)}\n`);
     rows.push(row);
     console.log(
-      `score structural=${structural.score} judge=${judgeScore} pattern=${patternScore} latencyMs=${ms}`,
+      `score similarity=${similarityScore} toneMatch=${toneMatchScore} (cover=${toneCoverageRate}%) structural=${structural.score} judge=${judgeScore} latencyMs=${ms}`,
     );
   }
 

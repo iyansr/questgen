@@ -324,5 +324,91 @@
   "judgeRationale": "Both sets use formal Indonesian, 4-option MCQ style, similar stem templates including definitions, calculations, principles, and application scenarios, though SET B includes some items with explicit statement lists and lacks images.",
   "sanityRate": 100,
   "sanityNotes": "All questions relate to pressure in fluids and buoyancy, typical topics in SMP textbooks.",
-  "patternScore": 74.3
+  "patternScore": 54.4,
+  "toneMatchScore": 33.5,
+  "toneCoverageRate": 40,
+  "toneRationale": "Matches chosen based on closest conceptual overlap and similar phrasing style, prioritizing definition or calculation questions. Several G items have no close AI match.",
+  "tonePairs": [
+    {
+      "goldIndex": 0,
+      "goldStem": "Faktor-faktor yang memengaruhi besarnya tekanan adalah ….",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "G0 asks factors influencing pressure magnitude; no AI item asks about factors influencing pressure."
+    },
+    {
+      "goldIndex": 1,
+      "goldStem": "Sebuah alat pengangkat mobil memiliki luas penampang pengisap kecil A 1 sebesar 20 cm2 dan pengisap besar A2 sebesar 50 cm2. F 20 cm2 A2 p1 p2 50 cm2 20.000 N A1 Gaya yang harus diberikan untuk mengangkat mobil 20.000 N adalah … N.",
+      "bestGenIndex": 4,
+      "bestGenStem": "Sebuah dongkrak hidrolik memiliki luas penampang kecil 5 cm^2 dan luas penampang besar 250 cm^2. Jika pada penampang kecil diberikan gaya 50 N, besar gaya angkat pada penampang besar adalah ....",
+      "score": 69,
+      "note": "Both involve hydraulic jack with different penampang areas and forces; similar concept and calculation tone."
+    },
+    {
+      "goldIndex": 2,
+      "goldStem": "Upaya yang dapat dilakukan untuk mendapatkan tekanan yang besar adalah ….",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "G2 asks how to get large pressure; no AI item asks about methods to increase pressure."
+    },
+    {
+      "goldIndex": 3,
+      "goldStem": "Seorang penyelam menyelam dengan kedalaman 3 m, massa jenis air 1.000 kg/m 3, konstanta gravitasi pada tempat tersebut adalah 10 N/kg. Besar tekanan hidrostatisnya adalah … N/m2.",
+      "bestGenIndex": 2,
+      "bestGenStem": "Seorang penyelam menyelam pada kedalaman 15 m di air laut dengan massa jenis 1.000 kg/m^3. Jika percepatan gravitasi 10 m/s^2, tekanan hidrostatis yang dialami penyelam sebesar ....",
+      "score": 83,
+      "note": "Both ask for hydrostatic pressure calculation with given depth, density, and gravity."
+    },
+    {
+      "goldIndex": 4,
+      "goldStem": "Sebuah drum besi dapat mengapung di dalam air disebabkan oleh ….",
+      "bestGenIndex": 3,
+      "bestGenStem": "Perhatikan pernyataan berikut!\n(1) Gaya apung lebih besar dari berat benda.\n(2) Gaya apung lebih kecil dari berat benda.\n(3) Massa jenis benda lebih kecil dari massa jenis zat cair.\n(4) Massa jenis benda sama dengan massa jenis zat cair.\nBenda yang dicelupkan ke dalam zat cair akan terapung jika memenuhi pernyataan nomor ....",
+      "score": 68,
+      "note": "G4 asks why iron drum floats; A3 asks conditions for floating based on buoyant force and density—same concept and tone."
+    },
+    {
+      "goldIndex": 5,
+      "goldStem": "Perhatikan tabel berikut! Ketinggian (m) Tekanan (cmHg) 7.000 6 5.000 26 3.000 46 1.000 66 Di permukaan laut 76 Berdasarkan tabel tersebut pernyataan yang benar mengenai hubungan tekanan udara dengan ketinggian adalah ….",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "G5 asks about relationship between air pressure and altitude from table; no AI item addresses pressure-altitude relation."
+    },
+    {
+      "goldIndex": 6,
+      "goldStem": "Teknologi berikut ini yang tidak menggunakan prinsip Archimedes adalah ….",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "G6 asks which technology does not use Archimedes principle; no AI item asks about technologies or Archimedes principle usage."
+    },
+    {
+      "goldIndex": 7,
+      "goldStem": "Perhatikan gambar berikut! 50 N 45 N Sumber: Dok. Kemdikbud Sebuah benda memiliki berat 50 N, ketika ditimbang di dalam air beratnya hanya 45 N, maka gaya ke atas yang menekan benda sebesar… N.",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "G7 asks for buoyant force from weight difference; no AI item directly asks for buoyant force calculation from weight difference."
+    },
+    {
+      "goldIndex": 8,
+      "goldStem": "Pada tumbuhan, air dari akar dapat naik sampai ke daun disebabkan oleh daya kapilaritas batang. Pernyataan yang benar terkait peristiwa tersebut adalah ….",
+      "bestGenIndex": 5,
+      "bestGenStem": "Air yang diserap oleh rambut akar dapat masuk ke jaringan xilem setelah melewati lapisan ....",
+      "score": 45,
+      "note": "G8 asks about water rising in plants due to capillarity; A5 mentions water absorption by root hairs entering xylem—related plant water transport but different focus."
+    },
+    {
+      "goldIndex": 9,
+      "goldStem": "Pada saat mengukur tekanan darah dengan tensimeter, berlaku hukum ….",
+      "bestGenIndex": 6,
+      "bestGenStem": "Tekanan darah pada pembuluh nadi di lengan atas sama dengan tekanan darah di aorta. Hal ini sesuai dengan prinsip ....",
+      "score": 70,
+      "note": "G9 asks about law used in blood pressure measurement; A6 mentions blood pressure equality in arteries per a principle—same concept and tone."
+    }
+  ],
+  "similarityScore": 54.4
 }

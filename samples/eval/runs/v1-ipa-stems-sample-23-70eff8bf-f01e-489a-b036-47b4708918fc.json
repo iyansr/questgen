@@ -300,5 +300,83 @@
   "judgeRationale": "Both sets use formal Indonesian, 4-option MCQ style, similar stem templates including definitions, calculations, principles, and classification of simple machines, with a comparable cognitive mix and near-miss distractors.",
   "sanityRate": 100,
   "sanityNotes": "All questions are typical problems on work and simple machines covered in SMP textbooks.",
-  "patternScore": 82.5
+  "patternScore": 71.3,
+  "toneMatchScore": 59.8,
+  "toneCoverageRate": 89,
+  "toneRationale": "Matched based on concept of usaha, daya, prinsip kerja pesawat sederhana, and types of simple machines with similar phrasing or calculation focus.",
+  "tonePairs": [
+    {
+      "goldIndex": 0,
+      "goldStem": "Perhatikan pernyataan berikut ini. (1) Edo mendorong meja dengan gaya sebesar 30 N sehingga meja berpindah sejauh 2 m. (2) Seekor kuda menarik delman dengan gaya sebesar 4.000 N sehingga delman berpindah sejauh 15 m. (3) Sebuah mobil menghantam sebuah pohon dengan gaya 2.000 N sehingga pohon tumbang di tempat. Pernyataan di atas yang merupakan contoh usaha dalam IPA adalah ….",
+      "bestGenIndex": 1,
+      "bestGenStem": "Beny mendorong kereta belanja dengan gaya $250\\ \\text{N}$ sejauh $50\\ \\text{m}$. Besar usaha yang dilakukan Beny adalah ....",
+      "score": 66,
+      "note": "both ask about examples or calculation of usaha (work) with force and displacement"
+    },
+    {
+      "goldIndex": 1,
+      "goldStem": "Dayu menarik sebuah gerobak berisi pasir dengan gaya sebesar 500 N sehingga gerobak tersebut berpindah sejauh 10 m. Berdasarkan pernyataan tersebut, besar usaha yang dilakukan Dayu adalah … J.",
+      "bestGenIndex": 1,
+      "bestGenStem": "Beny mendorong kereta belanja dengan gaya $250\\ \\text{N}$ sejauh $50\\ \\text{m}$. Besar usaha yang dilakukan Beny adalah ....",
+      "score": 80,
+      "note": "both ask for calculation of usaha (work) given force and displacement"
+    },
+    {
+      "goldIndex": 2,
+      "goldStem": "Jarak yang ditempuh oleh mobil saat melaju dengan usaha sebesar 15.000 J dan gaya sebesar 500 N adalah … m.",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "no AI question asks for distance given work and force"
+    },
+    {
+      "goldIndex": 3,
+      "goldStem": "Besar daya yang dilakukan oleh seekor sapi yang menarik gerobak dengan gaya 7.000 N sehingga gerobak tersebut dapat berpindah sejauh 10 m dalam waktu 35 detik adalah … watt.",
+      "bestGenIndex": 2,
+      "bestGenStem": "Jika Beny melakukan usaha sebesar $12.500\\ \\text{J}$ dalam waktu $50\\ \\text{sekon}$, daya yang dikeluarkan Beny adalah ....",
+      "score": 73,
+      "note": "both ask for calculation of daya (power) given work and time"
+    },
+    {
+      "goldIndex": 4,
+      "goldStem": "Prinsip kerja pesawat sederhana pada saat seseorang mengangkat barbel adalah ….",
+      "bestGenIndex": 8,
+      "bestGenStem": "Pesawat sederhana digunakan dalam kehidupan sehari-hari dengan tujuan utama ....",
+      "score": 62,
+      "note": "both ask about prinsip kerja pesawat sederhana (simple machine principle)"
+    },
+    {
+      "goldIndex": 5,
+      "goldStem": "Prinsip kerja pesawat sederhana pada saat otot betis pemain bulutangkis mengangkat beban tubuhnya dengan bertumpu pada jari kakinya adalah ....",
+      "bestGenIndex": 7,
+      "bestGenStem": "Perhatikan gambar berikut! Gambar tersebut menunjukkan sistem kerja otot leher saat menengadahkan kepala. Jenis pengungkit yang bekerja sesuai gambar adalah ....",
+      "score": 53,
+      "note": "both ask about prinsip kerja pengungkit (lever) in body movement"
+    },
+    {
+      "goldIndex": 6,
+      "goldStem": "Alat yang termasuk ke dalam golongan bidang miring adalah ....",
+      "bestGenIndex": 4,
+      "bestGenStem": "Sebuah bidang miring memiliki panjang $5\\ \\text{m}$ dan tinggi $2\\ \\text{m}$. Keuntungan mekanis bidang miring tersebut adalah ....",
+      "score": 71,
+      "note": "both ask about bidang miring (inclined plane) as simple machine"
+    },
+    {
+      "goldIndex": 7,
+      "goldStem": "Alat yang termasuk ke dalam golongan roda berporos adalah ....",
+      "bestGenIndex": 6,
+      "bestGenStem": "Berikut ini yang merupakan contoh penerapan roda berporos adalah ....",
+      "score": 77,
+      "note": "both ask about roda berporos (wheel and axle) examples"
+    },
+    {
+      "goldIndex": 8,
+      "goldStem": "Perhatikan gambar berikut ini! Sumber: www.dhgate.com Prinsip kerja tangan anak yang sedang menarik koper pada gambar di atas sama dengan prinsip kerja ....",
+      "bestGenIndex": 7,
+      "bestGenStem": "Perhatikan gambar berikut! Gambar tersebut menunjukkan sistem kerja otot leher saat menengadahkan kepala. Jenis pengungkit yang bekerja sesuai gambar adalah ....",
+      "score": 56,
+      "note": "both ask about prinsip kerja pengungkit (lever) in body movement, related to image"
+    }
+  ],
+  "similarityScore": 71.3
 }

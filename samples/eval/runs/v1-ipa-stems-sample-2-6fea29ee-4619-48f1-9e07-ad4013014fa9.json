@@ -252,5 +252,67 @@
   "judgeRationale": "Both sets use formal Indonesian with 4-option MCQ style, focus on reproductive biology, and include scenario-based and definition questions, but SET B uses more descriptive stems and fewer direct command stems like 'disebut' or 'pernyataan benar'.",
   "sanityRate": 100,
   "sanityNotes": "All questions relate to common topics in plant and animal reproduction covered in typical SMP textbooks.",
-  "patternScore": 67.5
+  "patternScore": 42.8,
+  "toneMatchScore": 17.3,
+  "toneCoverageRate": 29,
+  "toneRationale": "Most human questions focus on plant and animal reproduction concepts not directly matched by AI items. Only G2 and G5 have related AI items with somewhat similar tone and concept.",
+  "tonePairs": [
+    {
+      "goldIndex": 0,
+      "goldStem": "Reproduksi yang memungkinkan tumbuhan mewarisi semua karakteristik atau sifat hanya dari satu induk adalah perkembang ­ biakan secara ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "G0 asks about asexual reproduction in plants; no AI item defines or asks about asexual reproduction."
+    },
+    {
+      "goldIndex": 1,
+      "goldStem": "Perkembangbiakan vegetatif buatan dapat dilakukan dengan ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "G1 asks about artificial vegetative reproduction methods; no AI item covers this."
+    },
+    {
+      "goldIndex": 2,
+      "goldStem": "Berikut menunjukkan seekor kupu­kupu hinggap pada tanaman bunga A lalu membawa serbuk sari dari tanaman bunga A ke tanaman bunga B. Hasil yang akan terjadi dari peristiwa tersebut adalah .... A B",
+      "bestGenIndex": 1,
+      "bestGenStem": "Tanaman jagung dan padi memiliki bunga yang kecil, ringan, tidak berbau, dan tangkai bunga mudah bergoyang. Penyerbukan pada tanaman tersebut dibantu oleh ....",
+      "score": 53,
+      "note": "Both relate to pollination and transfer of pollen by insects; G2 describes butterfly transferring pollen, A1 asks about pollination agents for certain plants."
+    },
+    {
+      "goldIndex": 3,
+      "goldStem": "Gambar berikut menunjukkan tanaman buncis pada tahap pertumbuhan yang berbeda. Urutan tahapan pertumbuhan yang benar adalah …. 1 2 3 4",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "G3 asks about stages of growth of bean plants; no AI item covers plant growth stages."
+    },
+    {
+      "goldIndex": 4,
+      "goldStem": "Dayu meletakkan beberapa biji kacang di piring yang diberi kapas basah. Siti juga menaruh beberapa biji kacang di piring dekat piring Dayu dan merendamnya dalam air. Setelah dua hari biji kacang milik Dayu tumbuh berkecambah sedangkan biji kacang milik Siti tidak tumbuh. Penyebab tidak tum buhnya biji kacang milik Siti adalah ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "G4 asks about cause of seed germination failure; no AI item covers seed germination conditions."
+    },
+    {
+      "goldIndex": 5,
+      "goldStem": "Peristiwa yang terjadi selama fertilisasi pada hewan adalah ....",
+      "bestGenIndex": 2,
+      "bestGenStem": "Setelah penyerbukan, serbuk sari berkecambah membentuk buluh serbuk sari. Inti generatif membelah menjadi dua inti sperma. Satu inti sperma membuahi inti sel telur dan satu inti sperma lainnya membuahi inti kandung lembaga sekunder. Proses ini disebut ....",
+      "score": 68,
+      "note": "G5 asks about fertilization events in animals; A2 describes fertilization process in plants but conceptually close and similar phrasing about fertilization."
+    },
+    {
+      "goldIndex": 6,
+      "goldStem": "Perlakuan khusus pada serangga jantan agar tidak mem produksi sperma adalah untuk ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "G6 asks about special treatment to male insects to prevent sperm production; no AI item covers this."
+    }
+  ],
+  "similarityScore": 42.8
 }

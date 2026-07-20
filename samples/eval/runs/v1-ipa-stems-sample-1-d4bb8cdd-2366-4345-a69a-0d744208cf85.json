@@ -324,5 +324,91 @@
   "judgeRationale": "Both sets use formal Indonesian, 4-option MCQs, and cover reproductive system topics with similar question stems like definitions, function pairs, true statements, and processes, but SET B includes more varied cognitive tasks and some different stem templates.",
   "sanityRate": 100,
   "sanityNotes": "All questions relate to human reproductive system topics typically covered in SMP textbooks.",
-  "patternScore": 73
+  "patternScore": 61.6,
+  "toneMatchScore": 50,
+  "toneCoverageRate": 60,
+  "toneRationale": "Matches were made prioritizing similar assessment intent and phrasing style, especially definition or function questions. Some gold items had no close AI matches.",
+  "tonePairs": [
+    {
+      "goldIndex": 0,
+      "goldStem": "Bagian testis yang berperan dalam produksi sperma dan hormon testosteron disebut ....",
+      "bestGenIndex": 1,
+      "bestGenStem": "Pasangan antara organ reproduksi laki-laki dan fungsinya yang benar adalah ....",
+      "score": 51,
+      "note": "both ask about male reproductive organ and its function, tone somewhat similar"
+    },
+    {
+      "goldIndex": 1,
+      "goldStem": "Pasangan antara bagian alat reproduksi laki-laki dan fungsinya berikut ini yang benar adalah ....",
+      "bestGenIndex": 1,
+      "bestGenStem": "Pasangan antara organ reproduksi laki-laki dan fungsinya yang benar adalah ....",
+      "score": 87,
+      "note": "clear paraphrase, both ask for correct pairing of male reproductive organ and function"
+    },
+    {
+      "goldIndex": 2,
+      "goldStem": "Pernyataan yang benar terkait dengan jumlah kromosom spermatogonium dan spermatozoa adalah ....",
+      "bestGenIndex": 0,
+      "bestGenStem": "Pembelahan sel yang menghasilkan empat sel anakan dengan jumlah kromosom haploid disebut ....",
+      "score": 62,
+      "note": "related to chromosome number in spermatogenesis, similar concept but phrasing differs"
+    },
+    {
+      "goldIndex": 3,
+      "goldStem": "Ovarium adalah tempat terjadinya ....",
+      "bestGenIndex": 3,
+      "bestGenStem": "Tempat terjadinya fertilisasi pada sistem reproduksi perempuan adalah ....",
+      "score": 72,
+      "note": "both ask about place of fertilization or related female reproductive process"
+    },
+    {
+      "goldIndex": 4,
+      "goldStem": "Pernyataan yang benar mengenai oogenesis adalah ....",
+      "bestGenIndex": 4,
+      "bestGenStem": "Dari satu oogonium, oogenesis menghasilkan ....",
+      "score": 70,
+      "note": "both ask about oogenesis and its products"
+    },
+    {
+      "goldIndex": 5,
+      "goldStem": "Tahap oogenesis pada bayi perempuan yang baru lahir telah sampai pada fase ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "no AI item asks about oogenesis stage in newborn girls"
+    },
+    {
+      "goldIndex": 6,
+      "goldStem": "Hormon yang memicu berkembangnya folikel dan penebalan dinding rahim secara berturut-turut adalah ....",
+      "bestGenIndex": 5,
+      "bestGenStem": "Hormon yang memicu pelepasan sel telur dari ovarium (ovulasi) adalah ....",
+      "score": 44,
+      "note": "both about hormones triggering female reproductive processes, but different specific hormones and functions"
+    },
+    {
+      "goldIndex": 7,
+      "goldStem": "Berikut ini yang langsung terbentuk setelah proses fertilisasi adalah ....",
+      "bestGenIndex": 6,
+      "bestGenStem": "Setelah satu sperma berhasil masuk ke dalam sel telur, mekanisme yang mencegah sperma lain masuk adalah ....",
+      "score": 44,
+      "note": "both about fertilization and immediate post-fertilization events, but different focus"
+    },
+    {
+      "goldIndex": 8,
+      "goldStem": "Proses meluruhnya sel-sel epitel yang menyusun dinding rahim disebut ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "no AI item about shedding of uterine lining"
+    },
+    {
+      "goldIndex": 9,
+      "goldStem": "Perhatikan ciri penyakit berikut ini! 1. Disebabkan oleh Treponema pallidum 2. Biasanya menyerang daerah sekitar kelamin 3. Gejala awal berupa borok pada tempat masuknya bakteri Ciri-ciri penyakit di atas dimiliki oleh orang yang menderita penyakit ....",
+      "bestGenIndex": 7,
+      "bestGenStem": "Penyakit gonore disebabkan oleh ....",
+      "score": 70,
+      "note": "both ask about disease caused by bacteria, similar tone and concept"
+    }
+  ],
+  "similarityScore": 61.6
 }

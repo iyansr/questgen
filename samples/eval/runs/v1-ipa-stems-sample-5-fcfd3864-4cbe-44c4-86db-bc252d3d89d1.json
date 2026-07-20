@@ -359,5 +359,131 @@
   "judgeRationale": "Both sets use formal Indonesian with 4-option MCQ style and cover similar respiratory topics, but SET B includes more data interpretation and image-based questions, showing moderate variation in question templates and cognitive demands.",
   "sanityRate": 100,
   "sanityNotes": "All questions relate to respiratory system topics typically covered in SMP textbooks.",
-  "patternScore": 73.5
+  "patternScore": 53.3,
+  "toneMatchScore": 33,
+  "toneCoverageRate": 33,
+  "toneRationale": "Matches selected based on closest concept and similar phrasing tone; many specific G items have no close AI match.",
+  "tonePairs": [
+    {
+      "goldIndex": 0,
+      "goldStem": "Berikut ini yang bukan merupakan fungsi hidung dalam proses pernapasan adalah ....",
+      "bestGenIndex": 0,
+      "bestGenStem": "Perhatikan ciri-ciri berikut!\\n1. Menyaring partikel debu atau kotoran.\\n2. Menghangatkan udara yang masuk ke paru-paru.\\n3. Sebagai tempat pertukaran gas O₂ dan CO₂.\\n\\nCiri-ciri yang merupakan fungsi dari hidung ditunjukkan oleh nomor ....",
+      "score": 69,
+      "note": "both ask about functions of the nose in respiration"
+    },
+    {
+      "goldIndex": 1,
+      "goldStem": "Struktur pada laring yang berfungsi untuk mencegah masuknya partikel makanan atau minuman ke dalam laring dan trakea adalah ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "no AI item specifically asks about larynx structure preventing food entry"
+    },
+    {
+      "goldIndex": 2,
+      "goldStem": "Jaringan dalam paru-paru yang berfungsi sebagai tempat pertukaran gas oksigen dan gas karbon dioksida adalah ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "no AI item specifically asks about lung tissue for gas exchange"
+    },
+    {
+      "goldIndex": 3,
+      "goldStem": "Struktur yang berfungsi untuk melindungi paru-paru dari gesekan saat mengembang dan mengempis adalah ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "no AI item about lung protective structure against friction"
+    },
+    {
+      "goldIndex": 4,
+      "goldStem": "Berikut ini merupakan aktivitas yang menyebabkan terjadinya inspirasi adalah ....",
+      "bestGenIndex": 2,
+      "bestGenStem": "Pernyataan yang benar mengenai mekanisme inspirasi pada pernapasan dada adalah ....",
+      "score": 53,
+      "note": "both relate to mechanism of inspiration, tone somewhat different"
+    },
+    {
+      "goldIndex": 5,
+      "goldStem": "Berikut ini yang bukan merupakan faktor yang memengaruhi frekuensi pernapasan adalah ....",
+      "bestGenIndex": 5,
+      "bestGenStem": "Berikut ini adalah faktor-faktor yang memengaruhi frekuensi pernapasan manusia, kecuali ....",
+      "score": 81,
+      "note": "both ask about factors influencing breathing frequency"
+    },
+    {
+      "goldIndex": 6,
+      "goldStem": "Berapakah volume udara residu yang terdapat dalam paru-paru?",
+      "bestGenIndex": 3,
+      "bestGenStem": "Seorang siswa melakukan pengukuran volume udara pernapasan. Ia mendapatkan hasil sebagai berikut:\\n- Volume tidal = 500 mL\\n- Volume cadangan inspirasi = 1.500 mL\\n- Volume cadangan ekspirasi = 1.500 mL\\n- Volume residu = 1.000 mL\\n\\nBerdasarkan data tersebut, kapasitas vital paru-paru siswa tersebut adalah ....",
+      "score": 79,
+      "note": "both ask about residual lung volume or lung volume measurements"
+    },
+    {
+      "goldIndex": 7,
+      "goldStem": "Apakah kelainan yang disebabkan oleh menyempitnya saluran pernapasan dalam paru-paru, sehingga seseorang dapat mengalami kesulitan bernapas?",
+      "bestGenIndex": 8,
+      "bestGenStem": "Zat kimia yang dihasilkan tubuh saat masuknya alergen pada penderita asma dan menyebabkan penyempitan saluran pernapasan adalah ....",
+      "score": 44,
+      "note": "G7 asks about airway narrowing disease (asthma), A8 about chemical causing airway narrowing in asthma"
+    },
+    {
+      "goldIndex": 8,
+      "goldStem": "Paru-paru seorang pasien penuh dengan cairan. Setelah dianalisis ternyata juga ditemukan bakteri Streptococcus pneumoniae. Pasien tersebut terserang penyakit ....",
+      "bestGenIndex": 7,
+      "bestGenStem": "Perhatikan gambar berikut!\\n\\nBerdasarkan gambar di atas, kondisi yang terjadi pada paru-paru penderita pneumonia adalah ....",
+      "score": 69,
+      "note": "both about pneumonia caused by Streptococcus pneumoniae"
+    },
+    {
+      "goldIndex": 9,
+      "goldStem": "Berikut ini merupakan upaya dalam menjaga kesehatan sistem pernapasan manusia adalah ....",
+      "bestGenIndex": 9,
+      "bestGenStem": "Perokok pasif memiliki risiko terkena kanker paru-paru ....",
+      "score": 17,
+      "note": "G9 asks about efforts to maintain respiratory health, A9 about passive smoking risk; weak overlap"
+    },
+    {
+      "goldIndex": 10,
+      "goldStem": "Jelaskan organ penyusun sistem pernapasan manusia beserta fungsinya!",
+      "bestGenIndex": 10,
+      "bestGenStem": "Sebutkan tiga proses dasar dalam respirasi manusia!",
+      "score": 18,
+      "note": "G10 asks to explain respiratory organs and functions, A10 asks to name three basic respiration processes; weak overlap"
+    },
+    {
+      "goldIndex": 11,
+      "goldStem": "Jelaskan mekanisme inspirasi dan ekspirasi pada sistem pernapasan manusia!",
+      "bestGenIndex": 2,
+      "bestGenStem": "Pernyataan yang benar mengenai mekanisme inspirasi pada pernapasan dada adalah ....",
+      "score": 47,
+      "note": "G11 asks to explain inspiration and expiration mechanism, A2 about inspiration mechanism; related concept"
+    },
+    {
+      "goldIndex": 12,
+      "goldStem": "Sebutkan 4 gangguan atau penyakit pada sistem pernapasan manusia beserta penyebabnya!",
+      "bestGenIndex": 14,
+      "bestGenStem": "Bandingkan penyakit pneumonia dan tuberkulosis (TBC) berdasarkan penyebab, organ yang diserang, dan gejala utamanya!",
+      "score": 18,
+      "note": "G12 asks to list 4 respiratory diseases and causes, A14 compares pneumonia and TB; weak overlap"
+    },
+    {
+      "goldIndex": 13,
+      "goldStem": "Jelaskan upaya yang dapat kamu lakukan untuk menjaga sistem pernapasan kamu tetap sehat!",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "no AI item about efforts to keep respiratory system healthy"
+    },
+    {
+      "goldIndex": 14,
+      "goldStem": "Beny adalah anak yang suka menyanyi. Suatu ketika Beny menderita demam dengan gejala pilek dan sakit tenggorokan, sehingga mengganggunya dalam bernyanyi. Struktur apa yang terganggu pada tubuh Beny? Bagaimana demam dapat memengaruhi struktur tersebut? Membuat Poster tentang Upaya dalam Menjaga Kesehatan Sistem Pernapasan pada Manusia",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "no AI item about symptoms affecting singing and making a poster"
+    }
+  ],
+  "similarityScore": 53.3
 }
