@@ -6,6 +6,7 @@ import {
   tagQuestion,
 } from '../src/modules/generation/eval/fingerprint';
 import {
+  buildConceptualResearchAddon,
   buildSubjectGuidance,
   isConceptualScienceTopic,
   isQuantitativeTopic,
@@ -78,32 +79,53 @@ describe('fingerprint templates', () => {
 });
 
 describe('subject guidance routing', () => {
-  it('routes biology topics to conceptual, not quantitative', () => {
-    expect(isConceptualScienceTopic('Sistem Reproduksi pada Manusia')).toBe(
-      true,
-    );
-    expect(isQuantitativeTopic('Sistem Reproduksi pada Manusia')).toBe(false);
-    expect(
-      isConceptualScienceTopic('Pewarisan Sifat pada Makhluk Hidup'),
-    ).toBe(true);
-    const g = buildSubjectGuidance(
+  it('gives general conceptual guidance for any non-quant subject', () => {
+    for (const topic of [
+      'Nilai-Nilai Pancasila',
+      'Interaksi Sosial dalam Masyarakat',
+      'Teks Eksposisi',
+      'Pergerakan Nasional Indonesia',
+      'Sistem Reproduksi pada Manusia',
+    ]) {
+      const g = buildSubjectGuidance(topic, 'SMP', 'IX');
+      expect(g).toMatch(/General assessment \/ Uji Kompetensi/);
+      expect(g).toMatch(/do not force science metaphors/);
+      expect(g).not.toMatch(/Prioritize problem-solving/);
+      expect(isQuantitativeTopic(topic)).toBe(false);
+    }
+  });
+
+  it('adds science extras only for IPA-like topics', () => {
+    const ipa = buildSubjectGuidance(
       'Sistem Perkembangbiakan Tumbuhan dan Hewan',
       'SMP',
       'IX',
     );
-    expect(g).toMatch(/Uji Kompetensi/);
-    expect(g).toMatch(/disebut/);
-    expect(g).not.toMatch(/Prioritize problem-solving/);
+    expect(ipa).toMatch(/Science-flavoured extras/);
+    expect(isConceptualScienceTopic('Kemagnetan dan Pemanfaatannya')).toBe(
+      true,
+    );
+
+    const ppkn = buildSubjectGuidance('Hak dan Kewajiban Warga Negara', 'SMP', 'VII');
+    expect(ppkn).toMatch(/General assessment \/ Uji Kompetensi/);
+    expect(ppkn).not.toMatch(/Science-flavoured extras/);
+    expect(isConceptualScienceTopic('Hak dan Kewajiban Warga Negara')).toBe(
+      false,
+    );
   });
 
   it('keeps math topics quantitative', () => {
     expect(isQuantitativeTopic('Teorema Pythagoras')).toBe(true);
     expect(isConceptualScienceTopic('Teorema Pythagoras')).toBe(false);
     expect(isQuantitativeTopic('Pola Bilangan')).toBe(true);
-    expect(isConceptualScienceTopic('Kemagnetan dan Pemanfaatannya')).toBe(
-      true,
-    );
     const g = buildSubjectGuidance('Persamaan Kuadrat', 'SMA', 'X');
     expect(g).toMatch(/Quantitative topic rules/);
+  });
+
+  it('research addon covers non-IPA conceptual topics', () => {
+    const addon = buildConceptualResearchAddon('Demokrasi Pancasila');
+    expect(addon.length).toBeGreaterThan(0);
+    expect(addon).toMatch(/Assessment-ready facts/);
+    expect(buildConceptualResearchAddon('Persamaan Kuadrat')).toBe('');
   });
 });

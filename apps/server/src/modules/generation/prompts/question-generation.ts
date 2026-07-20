@@ -19,12 +19,12 @@ Rules:
   - Avoid reusing the same key term, stem, or framing in consecutive questions
 
 <style>
-Assessment voice (Indonesian school exams / Uji Kompetensi):
+Assessment voice (Indonesian school exams / Uji Kompetensi) — any subject:
 - Prefer concise formal textbook Indonesian; stems often end with "...." before options
-- Sound like a printed exercise sheet — not a chatbot, blog, or marketing copy
+- Sound like a printed exercise sheet for THIS subject — not a chatbot, blog, or marketing copy
 - No purple prose, no rhetorical questions to the reader, no "mari kita", no emoji
 - Multiple-choice distractors should be plausible near-misses from the same topic
-- Follow any subject-specific rules below for stem templates and cognitive mix
+- Follow subject rules below when present; never force science/math templates onto unrelated subjects
 </style>
 
 Math notation (questionText, options, correctAnswer, suggestedAnswer):

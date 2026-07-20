@@ -1,8 +1,13 @@
-const CONCEPTUAL_SCIENCE_TOPIC_RE =
-  /\b(reproduksi|perkembangbiakan|pewarisan|genetik|genotipe|fenotipe|mendel|kromosom|dna|sel|organ|sistem\s+(pencernaan|pernapasan|peredaran|gerak|saraf|reproduksi|ekskresi)|fotosintesis|ekosistem|biologi|bioteknologi|makhluk\s+hidup|tumbuhan|hewan|hormon|fertilisasi|oogenesis|spermatogenesis|vegetatif|generatif|mutasi|heredit[ae]s|tekanan\s+zat|kemagnetan|magnet|partikel\s+penyusun|gerak\s+benda|usaha\s+dan\s+pesawat|pesawat\s+sederhana|struktur\s+dan\s+fungsi|ipa\b(?!.*\b(hitung|rumus|matematika)\b))\b/i;
-
+/** Topics that benefit from computation-heavy question sets (math & numeric science). */
 const QUANTITATIVE_TOPIC_RE =
   /\b(matematika|aljabar|geometri|trigonometri|kalkulus|statistik|statistika|peluang|probabilitas|bangun\s+datar|bangun\s+ruang|segitiga|lingkaran|persegi|jajar\s+genjang|belah\s+ketupat|layang|trapesium|pecahan|desimal|persen|bilangan|pola\s+bilangan|koordinat|kartesius|relasi|operasi|persamaan|pertidaksamaan|fungsi|grafik|luas|keliling|volume|sudut|pythagoras|teorema|fisika|kimia|stoikiometri|hitung|rumus)\b/i;
+
+/**
+ * Optional science-flavoured extras (biology / IPA). Does NOT gate the main
+ * conceptual guidance — any non-quantitative topic gets general assessment rules.
+ */
+const CONCEPTUAL_SCIENCE_TOPIC_RE =
+  /\b(reproduksi|perkembangbiakan|pewarisan|genetik|genotipe|fenotipe|mendel|kromosom|dna|sel|organ|sistem\s+(pencernaan|pernapasan|peredaran|gerak|saraf|reproduksi|ekskresi)|fotosintesis|ekosistem|biologi|bioteknologi|makhluk\s+hidup|tumbuhan|hewan|hormon|fertilisasi|oogenesis|spermatogenesis|vegetatif|generatif|mutasi|heredit[ae]s|tekanan\s+zat|kemagnetan|magnet|partikel\s+penyusun|gerak\s+benda|usaha\s+dan\s+pesawat|pesawat\s+sederhana|struktur\s+dan\s+fungsi|ipa\b(?!.*\b(hitung|rumus|matematika)\b))\b/i;
 
 export function isQuantitativeTopic(topic: string): boolean {
   if (isConceptualScienceTopic(topic)) return false;
@@ -27,10 +32,7 @@ function computationTarget(grade?: string): string {
   }
 }
 
-function buildQuantitativeGuidance(
-  level: string,
-  target: string,
-): string {
+function buildQuantitativeGuidance(level: string, target: string): string {
   return `\
 Quantitative topic rules (${level}):
 - This is a mathematics or numeric-science topic. Prioritize problem-solving over recall of definitions.
@@ -43,28 +45,43 @@ Quantitative topic rules (${level}):
 - Still vary subtopics and difficulty within ${level}; use different givens, shapes, and operations across questions.`;
 }
 
-function buildConceptualScienceGuidance(level: string): string {
+/**
+ * Subject-agnostic Uji Kompetensi / textbook-assessment rules for ANY
+ * non-quantitative topic (IPA, IPS, PPKn, Bahasa, Sejarah, Agama, seni, …).
+ */
+function buildConceptualGuidance(level: string, topic: string): string {
+  const scienceExtra = isConceptualScienceTopic(topic)
+    ? `\
+Science-flavoured extras (only when the material supports them):
+- Pairing organ/part ↔ function, ciri-ciri → identify, process order, and light numeric application (e.g. haploid/diploid) are welcome
+- Near-miss distractors may swap related curriculum terms (wrong organ, hormone pair, process stage)
+`
+    : '';
+
   return `\
-Conceptual science / IPA rules (${level}) — match Indonesian textbook Uji Kompetensi style:
+General assessment / Uji Kompetensi rules (${level}) — apply for this topic regardless of subject:
 - Write in formal textbook Indonesian appropriate for ${level}. Prefer stems that end with "...." (four dots) before the options.
-- Rotate stem templates across the set (do not use the same pattern for consecutive items). Prefer a mix of:
-  1) Definition / naming: "… disebut ...."
-  2) Function pairing: "Pasangan antara … dan fungsinya yang benar adalah ...."
-  3) Correct statement: "Pernyataan yang benar mengenai … adalah ...."
-  4) Characteristic list → diagnose: "Perhatikan ciri … berikut! … Ciri-ciri tersebut dimiliki oleh …."
-  5) Short named scenario (Dayu, Siti, Andi, or "Seorang …") with one clear cause/effect ask
-  6) Process / order: "Urutan … yang benar adalah ...." or "… secara berturut-turut adalah ...."
-  7) Light application grounded in the material (counts, diploid/haploid, genotype/phenotype, hormone sequence) when the source supports it
-- Distractors must be near-miss curriculum terms from the SAME topic (wrong organ, swapped hormone pair, haploid↔diploid, related process) — not random unrelated words and not absurd jokes.
+- Match the subject's natural exercise voice (PPKn/IPS/Bahasa/Sejarah/IPA/etc.) using ONLY facts from the source material — do not force science metaphors onto non-science topics.
+- Rotate stem templates across the set (do not reuse the same pattern consecutively). Prefer a mix drawn from what the material allows:
+  1) Definition / naming: "… disebut ...." / "… adalah ...."
+  2) Correct statement: "Pernyataan yang benar mengenai … adalah ...."
+  3) Matching / pairing: "Pasangan … yang tepat adalah ...." (terms↔meanings, events↔years, articles↔contents, causes↔effects — as relevant)
+  4) Characteristic / evidence list → conclude: "Perhatikan ciri/data berikut! … Hal tersebut menunjukkan ...."
+  5) Short scenario grounded in the material (named student or "Seorang …") with one clear ask
+  6) Order / steps / chronology: "Urutan … yang benar adalah ...."
+  7) Light application or interpretation (map a rule to a case, read a short table/quote) when the source supports it
+- Distractors must be plausible near-misses from the SAME topic and material — not unrelated jokes, not other subjects.
 - For multiple_choice: exactly 4 options A–D; keep option length style consistent within a question (all short terms OR all short statements).
-- Cognitive mix: roughly ≤40% pure recall definitions; the rest comprehension / light application. Cap stems that are only "Apa itu X?" / "Apa nama X?".
-- Ground every stem in the source material; never invent facts. If the material has no images, do not write image-dependent stems.
-- Avoid AI filler tone, rhetorical flourishes, and English loanword spam. Sound like a Kurikulum Merdeka IPA exercise sheet.`;
+- Cognitive mix: roughly ≤40% pure recall / vocabulary; the rest comprehension or light application. Cap stems that are only "Apa itu X?" / "Apa nama X?".
+- Ground every stem in the source material; never invent facts, laws, ayat, dates, or figures. If the material has no images, do not write image-dependent stems.
+- Avoid AI filler tone, rhetorical flourishes, "mari kita", and English loanword spam. Sound like a printed Kurikulum Merdeka exercise sheet for this subject.
+${scienceExtra}`;
 }
 
 /**
- * Extra system-prompt rules for math / quantitative or conceptual IPA topics.
- * Empty string when neither heuristic matches.
+ * Extra system-prompt rules by topic type.
+ * - Quantitative → math/calc rules
+ * - Otherwise → general conceptual assessment rules (any subject)
  */
 export function buildSubjectGuidance(
   topic: string,
@@ -76,13 +93,11 @@ export function buildSubjectGuidance(
       ? `${grade} kelas ${classGrade}`
       : (grade ?? 'the target level');
 
-  if (isConceptualScienceTopic(topic)) {
-    return buildConceptualScienceGuidance(level);
+  if (isQuantitativeTopic(topic)) {
+    return buildQuantitativeGuidance(level, computationTarget(grade));
   }
 
-  if (!isQuantitativeTopic(topic)) return '';
-
-  return buildQuantitativeGuidance(level, computationTarget(grade));
+  return buildConceptualGuidance(level, topic);
 }
 
 /** Extra research strategy for web/document retrieval on quantitative topics. */
@@ -97,14 +112,23 @@ For this quantitative topic, ALSO search for:
 - When definitions appear, pair them with numeric applications students can compute`;
 }
 
-/** Extra research strategy for conceptual IPA topics. */
+/**
+ * Extra research strategy for non-quantitative topics (any subject).
+ * Kept name for call-site compatibility; applies beyond IPA.
+ */
 export function buildConceptualResearchAddon(topic: string): string {
-  if (!isConceptualScienceTopic(topic)) return '';
+  if (isQuantitativeTopic(topic)) return '';
+
+  const scienceBit = isConceptualScienceTopic(topic)
+    ? `\
+- Sequences / tahapan and cause–effect pairs when present (e.g. processes, cycles)
+- Light application examples grounded in the material`
+    : `\
+- Cases, examples, chronology, or rule→application pairs when present in the material`;
 
   return `\
-For this conceptual science topic, ALSO retrieve:
-- Definitions paired with functions, processes, and contrasts (bukan hanya daftar istilah)
-- Sequences / tahapan (e.g. oogenesis, fertilisasi, perkecambahan) and cause–effect pairs
-- Assessment-ready facts: ciri-ciri, pasangan organ–fungsi, pernyataan benar/salah yang sering diuji
-- Light application examples (kromosom haploid/diploid, genotipe→fenotipe) when present in the material`;
+For this topic, ALSO retrieve:
+- Definitions paired with contrasts, roles/functions, and key distinctions (bukan hanya daftar istilah)
+- Assessment-ready facts: pernyataan benar/salah, ciri-ciri, pasangan konsep, contoh penerapan yang sering diuji
+${scienceBit}`;
 }
