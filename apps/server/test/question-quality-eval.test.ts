@@ -1,6 +1,10 @@
 import { describe, expect, it } from 'vitest';
 
 import {
+  lexicalToneSimilarity,
+  normalizeStemForTone,
+} from '../src/modules/generation/eval/tone';
+import {
   fingerprintSet,
   structuralSimilarity,
   tagQuestion,
@@ -78,6 +82,20 @@ describe('fingerprint templates', () => {
   });
 });
 
+describe('tone normalization', () => {
+  it('treats definition paraphrases as related', () => {
+    const a = 'Apa yang dimaksud dengan fotosintesis?';
+    const b = 'Apa pengertian fotosintesis ....';
+    const c = 'Fotosintesis adalah ....';
+    expect(normalizeStemForTone(a)).toContain('fotosintesis');
+    expect(lexicalToneSimilarity(a, b)).toBeGreaterThan(40);
+    expect(lexicalToneSimilarity(a, c)).toBeGreaterThan(30);
+    expect(
+      lexicalToneSimilarity(a, 'Ibukota Indonesia adalah ....'),
+    ).toBeLessThan(20);
+  });
+});
+
 describe('subject guidance routing', () => {
   it('gives general conceptual guidance for any non-quant subject', () => {
     for (const topic of [
@@ -106,7 +124,11 @@ describe('subject guidance routing', () => {
       true,
     );
 
-    const ppkn = buildSubjectGuidance('Hak dan Kewajiban Warga Negara', 'SMP', 'VII');
+    const ppkn = buildSubjectGuidance(
+      'Hak dan Kewajiban Warga Negara',
+      'SMP',
+      'VII',
+    );
     expect(ppkn).toMatch(/General assessment \/ Uji Kompetensi/);
     expect(ppkn).not.toMatch(/Science-flavoured extras/);
     expect(isConceptualScienceTopic('Hak dan Kewajiban Warga Negara')).toBe(

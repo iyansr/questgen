@@ -355,5 +355,131 @@
   "judgeRationale": "Both sets use formal Indonesian, 4-option MCQ style, and involve number patterns, but SET B includes more varied contexts and fewer direct pattern completion or near-miss distractors typical in SET A.",
   "sanityRate": 100,
   "sanityNotes": "All questions relate to number patterns, a common SMP topic.",
-  "patternScore": 72.4
+  "patternScore": 56.9,
+  "toneMatchScore": 42.1,
+  "toneCoverageRate": 33,
+  "toneRationale": "Matches are based on closest conceptual alignment and tone. Many gold items are straightforward sequence continuation or pattern counting, best matched with AI items involving similar tasks. Definition or explanation tone matches best for G13 and G14 with A13 and A14. Some matches are weak due to different contexts or pattern types.",
+  "tonePairs": [
+    {
+      "goldIndex": 0,
+      "goldStem": "Batang korek api disusun dengan dengan susunan seperti pada gambar berikut. Pola 3Pola 1 Pola 2 Jika pola tersebut terus berlanjut, banyak batang korek api pada susunan ke-10 adalah ... batang.",
+      "bestGenIndex": 6,
+      "bestGenStem": "Pola susunan bola biru membentuk barisan bilangan segitiga: $U_n = \\frac{1}{2}n(n+1)$. Banyak bola biru pada pola ke-10 adalah ....",
+      "score": 45,
+      "note": "both ask for number of items in a pattern at a certain position, similar concept but different context and phrasing"
+    },
+    {
+      "goldIndex": 1,
+      "goldStem": "Perhatikan pola bilangan berikut. (3, 6), (6, 15), (8, 21) Pernyataan yang tepat untuk mendapatkan bilangan kedua dari pasangan bilangan pertama pada pola tersebut adalah ....",
+      "bestGenIndex": 12,
+      "bestGenStem": "Perhatikan pola bilangan: $\\frac{1}{2}, \\frac{1}{6}, \\frac{1}{12}, \\frac{1}{20}, \\ldots$. Tentukan pola ke-5 dari barisan tersebut.",
+      "score": 46,
+      "note": "both involve finding a rule or formula for a number pattern, somewhat similar tone"
+    },
+    {
+      "goldIndex": 2,
+      "goldStem": "10, 30, 50, 70, ..., ..., ...",
+      "bestGenIndex": 3,
+      "bestGenStem": "Perhatikan barisan bilangan: 5, 11, 23, 47, ... Dua suku berikutnya adalah ....",
+      "score": 43,
+      "note": "both ask to continue a number sequence by finding next terms"
+    },
+    {
+      "goldIndex": 3,
+      "goldStem": "2, 3, 8, 11, 16, ..., ..., ...",
+      "bestGenIndex": 10,
+      "bestGenStem": "Perhatikan barisan bilangan Fibonacci: 0, 1, 1, 2, 3, 5, 8, 13, 21, ... Tentukan tiga bilangan berikutnya.",
+      "score": 43,
+      "note": "both ask to continue a number sequence, Fibonacci is a known pattern, similar skill"
+    },
+    {
+      "goldIndex": 4,
+      "goldStem": "5, 4, 9, 8, 13, 12, 17, ..., ..., ...",
+      "bestGenIndex": 3,
+      "bestGenStem": "Perhatikan barisan bilangan: 5, 11, 23, 47, ... Dua suku berikutnya adalah ....",
+      "score": 17,
+      "note": "weak overlap, both sequences but different pattern types"
+    },
+    {
+      "goldIndex": 5,
+      "goldStem": "1, 3, 4, 7, 9, 13, 16, 21, ..., ...",
+      "bestGenIndex": 3,
+      "bestGenStem": "Perhatikan barisan bilangan: 5, 11, 23, 47, ... Dua suku berikutnya adalah ....",
+      "score": 17,
+      "note": "weak overlap, both sequences but different pattern types"
+    },
+    {
+      "goldIndex": 6,
+      "goldStem": "2, −6, 18, −32, 64, ..., ..., ...",
+      "bestGenIndex": 6,
+      "bestGenStem": "Pola susunan bola biru membentuk barisan bilangan segitiga: $U_n = \\frac{1}{2}n(n+1)$. Banyak bola biru pada pola ke-10 adalah ....",
+      "score": 68,
+      "note": "both ask for number of items in a pattern at position 10, similar tone and concept"
+    },
+    {
+      "goldIndex": 7,
+      "goldStem": "90, 30, 10, ..., ..., ...",
+      "bestGenIndex": 1,
+      "bestGenStem": "Jumlah tiga bilangan genap berurutan adalah 90. Bilangan terbesar dari ketiga bilangan tersebut adalah ....",
+      "score": 17,
+      "note": "both involve sequences and decreasing numbers but different context"
+    },
+    {
+      "goldIndex": 8,
+      "goldStem": "4, −7, 10, −13, 16, ..., ..., ...",
+      "bestGenIndex": 3,
+      "bestGenStem": "Perhatikan barisan bilangan: 5, 11, 23, 47, ... Dua suku berikutnya adalah ....",
+      "score": 17,
+      "note": "both sequences with alternating signs but different specifics"
+    },
+    {
+      "goldIndex": 9,
+      "goldStem": "A, K, C, ..., E, O, G",
+      "bestGenIndex": 9,
+      "bestGenStem": "Sebuah lampu hias berubah warna dari hijau (H), kuning (K), merah (M) secara berulang setiap 2 detik. Warna lampu pada urutan ke-30 adalah ....",
+      "score": 68,
+      "note": "both ask about repeating letter/color pattern at a certain position, similar tone"
+    },
+    {
+      "goldIndex": 10,
+      "goldStem": "Tentukan dua suku yang hilang pada barisan bilangan berikut. 2, 5, ..., 12, ..., 31, 50",
+      "bestGenIndex": 3,
+      "bestGenStem": "Perhatikan barisan bilangan: 5, 11, 23, 47, ... Dua suku berikutnya adalah ....",
+      "score": 50,
+      "note": "both ask to find missing terms in a number sequence"
+    },
+    {
+      "goldIndex": 11,
+      "goldStem": "Bilangan-bilangan pada barisan 7, 11, 15, 19, 23, ... terus bertambah 4 pada setiap suku-sukunya. Sedangkan bilangan pada barisan 1, 10, 19, 28, 37, ... terus bertambah 9 pada setiap suku-sukunya. Bilangan 19 terdapat pada kedua pola tersebut. Jika kedua barisan bilangan tersebut dilanjutkan terus menerus, maka bilangan sama yang muncul berikutnya di kedua barisan adalah .... TIMSS 2003 8th Grade Mathematics Item",
+      "bestGenIndex": 6,
+      "bestGenStem": "Pola susunan bola biru membentuk barisan bilangan segitiga: $U_n = \\frac{1}{2}n(n+1)$. Banyak bola biru pada pola ke-10 adalah ....",
+      "score": 18,
+      "note": "both involve sequences and common terms but different complexity"
+    },
+    {
+      "goldIndex": 12,
+      "goldStem": "Ketiga gambar berikut dibagi menjadi segitiga-segitiga kecil yang berukuran sama. 39 Kurikulum 2 Pola 3 2 4 6 1 3 5 8 7 Pola 2 1 2 Pola 1 a. Gambar tersebut dilanjutkan hingga gambar 4 dengan pola yang sama. Lengkapi tabel di bawah ini. Gambar Banyak segitiga 1 2 2 8 3 ... 4 ... b. Jika gambar tersebut dilanjutkan hingga gambar 7, tentukan banyak segitiga yang terbentuk. c. Jika gambar tersebut dilanjutkan hingga gambar",
+      "bestGenIndex": 6,
+      "bestGenStem": "Pola susunan bola biru membentuk barisan bilangan segitiga: $U_n = \\frac{1}{2}n(n+1)$. Banyak bola biru pada pola ke-10 adalah ....",
+      "score": 44,
+      "note": "both ask to find number of shapes/items in a pattern at a certain position"
+    },
+    {
+      "goldIndex": 13,
+      "goldStem": "Jelaskan cara kalian untuk menentukan banyak segitiga kecil yang terbentuk, tanpa menggambar dan mencacah satu per satu gambar. TIMSS 2003 8th Grade Mathematics Item",
+      "bestGenIndex": 13,
+      "bestGenStem": "Jelaskan cara menentukan angka satuan pada bilangan $3^{100}$. Sertakan langkah-langkah pengamatan pola dan hasil akhirnya.",
+      "score": 70,
+      "note": "both ask to explain method to find number of items in a pattern without counting"
+    },
+    {
+      "goldIndex": 14,
+      "goldStem": "Jika pola pada gambar berikut dilanjutkan terus menerus, tentukan gambar yang terbentuk pada persegi bertanda X. X TIMSS 2003 8th Grade Mathematics Item 40 Kelas VIII SMP/MTs Semester I",
+      "bestGenIndex": 14,
+      "bestGenStem": "Pada desain kolam persegi, banyak ubin biru mengikuti pola $n^2$ dan banyak ubin putih mengikuti pola $4n+4$, dengan $n$ adalah urutan kolam. Jika banyak ubin biru adalah 900, hitunglah banyak ubin putih. Jelaskan langkah-langkah penyelesaiannya.",
+      "score": 69,
+      "note": "both ask to find pattern continuation in a figure at a certain position"
+    }
+  ],
+  "similarityScore": 56.9
 }

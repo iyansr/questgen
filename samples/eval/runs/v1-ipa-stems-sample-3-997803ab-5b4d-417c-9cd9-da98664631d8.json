@@ -359,5 +359,131 @@
   "judgeRationale": "Both sets use formal Indonesian, 4-option MCQs, and cover Mendelian genetics with similar question types, but SET B includes more image-dependent and explanatory items, while SET A has more direct statement and calculation questions.",
   "sanityRate": 100,
   "sanityNotes": "All questions are typical for inheritance and DNA topics in SMP textbooks.",
-  "patternScore": 75.9
+  "patternScore": 49.7,
+  "toneMatchScore": 23.6,
+  "toneCoverageRate": 20,
+  "toneRationale": "Most gold items focus on genetics concepts like Mendel's laws, genotype-phenotype, and inheritance; AI items cover some but not all topics. Best matches are based on concept and tone similarity, though some gold items have no close AI counterpart.",
+  "tonePairs": [
+    {
+      "goldIndex": 0,
+      "goldStem": "Pernyataan tentang kromosom, DNA, dan inti sel yang benar adalah ....",
+      "bestGenIndex": 9,
+      "bestGenStem": "Nukleotida sebagai subunit asam nukleat tersusun atas ....",
+      "score": 51,
+      "note": "G0 asks for correct statement about chromosomes, DNA, and nucleus; A9 defines nucleotide as DNA subunit, related but different focus"
+    },
+    {
+      "goldIndex": 1,
+      "goldStem": "Jika sel tubuh pada buah tomat mempunyai 24 kromosom, maka jumlah kromosom pada serbuk sarinya adalah ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "G1 asks about chromosome number in pollen; no AI item about chromosome count in gametes"
+    },
+    {
+      "goldIndex": 2,
+      "goldStem": "Pernyataan yang benar mengenai hukum II Mendel adalah ....",
+      "bestGenIndex": 1,
+      "bestGenStem": "Hukum I Mendel menyatakan bahwa pada waktu pembentukan gamet terjadi ....",
+      "score": 62,
+      "note": "G2 and A1 both about Mendel's laws; G2 about law II, A1 about law I, related concept and tone"
+    },
+    {
+      "goldIndex": 3,
+      "goldStem": "Gen K mengode rambut keriting dan k mengode rambut lurus, K dominan terhadap k. Gen H mengode warna kulit hitam dan gen h mengode warna kulit putih. Kombinasi dari gen-gen tersebut yang menunjukkan fenotipe rambut lurus kulit hitam adalah ....",
+      "bestGenIndex": 2,
+      "bestGenStem": "Perhatikan gambar tipe cuping telinga berikut! Jika seorang laki-laki bergenotipe GG (cuping terpisah) menikah dengan perempuan bergenotipe gg (cuping melekat), kemungkinan fenotipe anak mereka adalah ....",
+      "score": 64,
+      "note": "G3 and A2 both about genotype-phenotype combinations and dominance, similar tone"
+    },
+    {
+      "goldIndex": 4,
+      "goldStem": "Berikut ini pernyataan mengenai jumlah kromosom manusia: (1) jumlah kromosom sex manusia adalah 4 buah (2) jumlah kromosom tubuh manusia adalah 44 buah (3) jumlah kromosom sex manusia adalah 2 pasang (4) jumlah kromosom tubuh manusia adalah 23 pasang (5) jumlah kromosom manusia secara keseluruhan adalah 46 buah Pernyataan yang benar adalah ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "G4 about human chromosome numbers; no AI item matches this exact chromosome count question"
+    },
+    {
+      "goldIndex": 5,
+      "goldStem": "Seorang anak dapat mewarisi sifat dari ….",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "G5 about inheritance source; no AI item directly asks this"
+    },
+    {
+      "goldIndex": 6,
+      "goldStem": "Ciri atau sifat pada manusia diturunkan dari generasi ke generasi melalui ….",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "G6 about trait inheritance mechanism; no AI item directly matches"
+    },
+    {
+      "goldIndex": 7,
+      "goldStem": "Cara berikut yang paling baik untuk menentukan apakah dua orang bersaudara adalah ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "G7 about determining sibling relationship; no AI item matches"
+    },
+    {
+      "goldIndex": 8,
+      "goldStem": "Dua anak kembar berjenis kelamin laki-laki dan perempuan. Pernyataan berikut yang benar mengenai penyusun genetik mereka adalah ....",
+      "bestGenIndex": 4,
+      "bestGenStem": "Seorang anak menderita albino. Genotipe orang tuanya yang mungkin adalah ....",
+      "score": 43,
+      "note": "G8 about genetic composition of male/female twins; A4 about genotype of albino child parents, both about genotype possibilities, somewhat related"
+    },
+    {
+      "goldIndex": 9,
+      "goldStem": "Pemuliaan tanaman dapat dilakukan dengan cara ....",
+      "bestGenIndex": 8,
+      "bestGenStem": "Varietas padi hibrida IPB 4S yang dikembangkan oleh IPB memiliki keunggulan, yaitu ....",
+      "score": 17,
+      "note": "G9 about plant breeding methods; A8 about hybrid rice advantages, weak topical overlap"
+    },
+    {
+      "goldIndex": 10,
+      "goldStem": "Buah 1 memiliki genotipe BB dengan bentuk buah bulat, sementara buah 2 memiliki genotipe bb dengan bentuk buah lonjong. a. Apabila kedua buah tersebut disilangkan, tentukanlah kombinasi gen antara buah 1 dan buah 2 menggunakan tabel Punnet! b. Apabila gen B dominan terhadap gen b, maka tentukan fenotipe dari hasil kombinasi gen yang kamu lakukan!",
+      "bestGenIndex": 11,
+      "bestGenStem": "Pada persilangan monohibrida antara tanaman kapri berbunga ungu (UU) dengan berbunga putih (uu), tentukan genotipe dan fenotipe F1! Jika F1 disilangkan sesamanya, bagaimana perbandingan fenotipe pada F2?",
+      "score": 45,
+      "note": "G10 about Punnett square and phenotype from genotype cross; A11 about monohybrid cross and phenotype/genotype ratios, similar concept and tone"
+    },
+    {
+      "goldIndex": 11,
+      "goldStem": "Seorang perempuan dengan genotipe XhX pembawa sifat hemofili, menikah dengan seorang laki-laki hemofili dengan genotipe X hY. Tentukan jumlah anak yang hidup dan anak yang mati!",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "G11 about hemophilia inheritance and offspring survival; no AI item matches hemophilia or sex-linked inheritance"
+    },
+    {
+      "goldIndex": 12,
+      "goldStem": "Kacang biji bulat warna kuning dengan genotipe BBKK disilangkan dengan kacang biji lonjong warna hijau dengan genotipe bbkk, jika bulat – kuning dominan terhadap lonjong – hijau tentukan: a. F1 b. F2, jika F1 disilangkan sesamanya",
+      "bestGenIndex": 11,
+      "bestGenStem": "Pada persilangan monohibrida antara tanaman kapri berbunga ungu (UU) dengan berbunga putih (uu), tentukan genotipe dan fenotipe F1! Jika F1 disilangkan sesamanya, bagaimana perbandingan fenotipe pada F2?",
+      "score": 46,
+      "note": "G12 about dihybrid cross and F1/F2 generations; A11 about monohybrid cross and F1/F2 phenotypes, related concept"
+    },
+    {
+      "goldIndex": 13,
+      "goldStem": "Pemuliaan tanaman bertujuan untuk menyiapkan bibit tanaman unggul. Apa saja tujuan dari penyiapan bibit tanaman unggul?",
+      "bestGenIndex": 8,
+      "bestGenStem": "Varietas padi hibrida IPB 4S yang dikembangkan oleh IPB memiliki keunggulan, yaitu ....",
+      "score": 26,
+      "note": "G13 about goals of plant breeding; A8 about hybrid rice advantages, weak topical overlap"
+    },
+    {
+      "goldIndex": 14,
+      "goldStem": "Ginjal merupakan salah satu organ tubuh manusia. Ketika masih muda ada seseorang yang diambil ginjalnya karena suatu penyakit. Kemudian orang tersebut mempunyai anak. a. Berapakah jumlah ginjal yang dimiliki anaknya saat dilahirkan? b. Jelaskan jawabanmu!",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "G14 about kidney organ inheritance; no AI item matches this question"
+    }
+  ],
+  "similarityScore": 49.7
 }
