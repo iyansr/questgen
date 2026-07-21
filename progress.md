@@ -13,6 +13,13 @@
 
 ## Session Log
 
+### Session 034
+
+- Date: 2026-07-21
+- Goal: Simple visual Markdown compare AI vs human exercise (side-by-side image placeholders).
+- Completed: `samples/eval/COMPARE_AI_VS_HUMAN.md` + `samples/eval/compare-images/` guide for screenshots.
+- Next: user drops screenshots into `compare-images/` using the named files.
+
 ### Session 033
 
 - Date: 2026-07-20
