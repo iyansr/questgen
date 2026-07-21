@@ -67,14 +67,19 @@ Kemiripan diukur pada skala 0–100 dengan kombinasi:
 
 1. **Skor struktural (deterministik)** — sidik jari pola stem dan format soal (templat, akhiran `....`, empat opsi A–D, bentuk opsi, perkiraan ranah kognitif). Distribusi pola himpunan soal AI dibandingkan dengan himpunan soal manusia.  
 2. **Skor penilai LLM (*LLM-as-a-Judge*)** — model penilai menilai kemiripan gaya asesmen / pola Uji Kompetensi (bukan kesamaan kunci jawaban), dengan rubrik tetap.  
-3. **Skor pola gabungan**  
+3. **Skor pola gabungan (set-level)**  
    \[
    \text{Skor pola} = 0{,}55 \times S_{\text{struktural}} + 0{,}45 \times S_{\text{penilai}}
    \]  
-4. **Pemeriksaan kewajaran (spot-check)** — sebagian butir diperiksa apakah masih dapat dijawab dari materi/topik terkait.
+4. **Tone-match (order-invariant)** — tiap soal manusia dipasangkan ke soal AI terdekat berdasarkan intent + tone (paraphrase diizinkan; urutan nomor diabaikan). Contoh: *“Apa yang dimaksud X?”* ≈ *“Apa pengertian X?”* / *“X adalah …?”*.  
+5. **Skor similarity (headline)**  
+   \[
+   S_{\text{similarity}} = 0{,}50 \times S_{\text{tone}} + 0{,}25 \times S_{\text{penilai}} + 0{,}25 \times S_{\text{struktural}}
+   \]  
+6. **Pemeriksaan kewajaran (spot-check)** — sebagian butir diperiksa apakah masih dapat dijawab dari materi/topik terkait.
 
 **d. Interpretasi skor**  
-Secara praktis, skor 50–69 dikategorikan cukup mirip; 70–84 mirip kuat; ≥85 sangat mirip. Evaluasi ini **tidak** menggantikan uji psikometrik di kelas (indeks kesukaran/daya beda), melainkan menilai kemiripan **genre/pola asesmen** terhadap soal manusia.
+Secara praktis, skor pola 50–69 dikategorikan cukup mirip; 70–84 mirip kuat; ≥85 sangat mirip. Tone-match menafsirkan kesamaan *pertanyaan yang diajukan* per butir (bukan hanya genre set). Evaluasi ini **tidak** menggantikan uji psikometrik di kelas (indeks kesukaran/daya beda), melainkan menilai kemiripan **genre/pola asesmen** dan **tone/intent** terhadap soal manusia.
 
 **e. Posisi terhadap UAT**  
 Evaluasi AI vs manusia bersifat **pelengkap**. Keberhasilan sistem secara keseluruhan dibaca dari: (1) penerimaan pengguna (UAT), dan (2) kecenderungan keluaran soal mendekati pola soal manusia.

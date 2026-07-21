@@ -324,5 +324,91 @@
   "judgeRationale": "Both sets use formal Indonesian with 4-option MCQs and include conceptual and application questions, but SET B incorporates more formula-based and explanation items, differing from SET A's simpler, direct question stems and more image-dependent prompts.",
   "sanityRate": 100,
   "sanityNotes": "All questions are standard topics in magnetism and its applications typically covered in SMP textbooks.",
-  "patternScore": 65.7
+  "patternScore": 44.3,
+  "toneMatchScore": 22.9,
+  "toneCoverageRate": 30,
+  "toneRationale": "Most AI items focus on definitions, formulas, or specific phenomena rather than direct question formats or practical tasks. Some G items have no close AI match, especially those about images or practical investigations.",
+  "tonePairs": [
+    {
+      "goldIndex": 0,
+      "goldStem": "Magnet berikut ini yang bekerja dengan memanfaatkan medan magnet bumi adalah ....",
+      "bestGenIndex": 7,
+      "bestGenStem": "Beberapa jenis bakteri memiliki kemampuan navigasi menggunakan medan magnet bumi. Bakteri yang memiliki organel magnetosome yang tersusun atas magnetite atau greigite adalah ....",
+      "score": 49,
+      "note": "both relate to objects using Earth's magnetic field for navigation, similar concept but different tone"
+    },
+    {
+      "goldIndex": 1,
+      "goldStem": "Perhatikan gambar berikut! S U S U (a) (b) Jika sebuah magnet batang dipotong, maka keberadaan kutubnya ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "no AI item about cutting magnets and poles"
+    },
+    {
+      "goldIndex": 2,
+      "goldStem": "Perhatikan gambar berikut! Baterai Jika sebuah paku dililiti oleh kawat yang dialiri arus listrik, maka peristiwa yang akan terjadi pada paku adalah ….",
+      "bestGenIndex": 2,
+      "bestGenStem": "Perhatikan beberapa cara berikut!\n(1) Menggosok dengan magnet searah\n(2) Mendekatkan dengan magnet batang\n(3) Meliliti kawat berarus DC\n(4) Memukul-mukul dengan palu\nCara yang dapat digunakan untuk membuat magnet ditunjukkan oleh nomor ....",
+      "score": 61,
+      "note": "both about making magnets, similar concept and phrasing"
+    },
+    {
+      "goldIndex": 3,
+      "goldStem": "Di kotak ada campuran serbuk besi dan pasir. Cara yang paling mudah untuk memisahkan serbuk besi dari pasir adalah ….",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "no AI item about separating iron powder from sand"
+    },
+    {
+      "goldIndex": 4,
+      "goldStem": "Hewan-hewan berikut yang memanfaatkan kemagnetan bumi untuk melakukan navigasi adalah ….",
+      "bestGenIndex": 7,
+      "bestGenStem": "Beberapa jenis bakteri memiliki kemampuan navigasi menggunakan medan magnet bumi. Bakteri yang memiliki organel magnetosome yang tersusun atas magnetite atau greigite adalah ....",
+      "score": 53,
+      "note": "both about organisms using Earth's magnetic field for navigation, somewhat similar tone"
+    },
+    {
+      "goldIndex": 5,
+      "goldStem": "Magnet yang kuat akan memisahkan campuran antara ….",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "no AI item about strong magnets separating mixtures"
+    },
+    {
+      "goldIndex": 6,
+      "goldStem": "Perhatikan gambar berikut! S U S U S U S U U S U S U S U S Gambar 1 Gambar 2 Gambar 3 Gambar 4 Dari keempat gambar tersebut yang menunjukkan jika dua magnet didekatkan akan tolak-menolak adalah gambar ….",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "no AI item about magnet poles repelling shown in images"
+    },
+    {
+      "goldIndex": 7,
+      "goldStem": "Seorang siswa melakukan investigasi untuk menguji kekuatan magnet. Siswa tersebut memiliki beberapa magnet dengan ukuran, bentuk, dan massa yang berbeda. Dia menggunakan magnet untuk mengangkat klip logam. Cara mengukur kekuatan magnet melalui investigasi yang benar adalah dengan menghitung ….",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "no AI item about measuring magnet strength by lifting clips"
+    },
+    {
+      "goldIndex": 8,
+      "goldStem": "Peralatan berikut yang memanfaatkan prinsip elektromagnetik adalah ….",
+      "bestGenIndex": 8,
+      "bestGenStem": "Generator dan dinamo merupakan alat yang menerapkan prinsip induksi elektromagnetik. Fungsi utama generator adalah ....",
+      "score": 66,
+      "note": "both about devices using electromagnetic principles, similar tone"
+    },
+    {
+      "goldIndex": 9,
+      "goldStem": "Perhatikan gambar berikut ini! G G G Arah gerak jarum galvanometer dipengaruhi oleh ….",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "no AI item about galvanometer needle movement influenced by magnets"
+    }
+  ],
+  "similarityScore": 44.3
 }

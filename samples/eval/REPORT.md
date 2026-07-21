@@ -1,8 +1,8 @@
 # Question quality eval report
 
-Date: 2026-07-19  
-Branch: `cursor/question-quality-eval-742a`  
-Goal: document-sourced generation should match Indonesian textbook **Uji Kompetensi** patterns (~20–50% similarity target).
+Date: 2026-07-20  
+Branch: `cursor/tone-match-eval-742a` (follows merged #15)  
+Goal: document-sourced generation should match Indonesian textbook **Uji Kompetensi** patterns (~20–50% similarity target), plus order-invariant tone/intent matching for examiner feedback.
 
 ## Method
 
@@ -10,8 +10,11 @@ Goal: document-sourced generation should match Indonesian textbook **Uji Kompete
 2. **Real pipeline harness** — `pnpm --filter server eval:quality`:
    - ingest `materials.pdf` once (`PROCESS_DOCUMENT`)
    - regenerate via `documentId` (`GENERATE_QUESTIONS`)
-   - score = `0.55 * structural + 0.45 * LLM style judge`
+   - **pattern / style** = `0.55 * structural + 0.45 * LLM style judge`
+   - **tone-match** = best AI pair per human item (order-invariant paraphrase / intent)
+   - **similarity (headline)** = `0.50 * tone + 0.25 * style + 0.25 * structural`
 3. **Corpus expansion** — pulled 35 samples from `test-result`; catalog at `samples/catalog.json` (**16 eligible** for eval).
+4. **Rescore without regenerating** — `pnpm --filter server eval:rescore` writes `tone-rescore.jsonl` and updates `runs/*.json`.
 
 ### Eligibility rules
 
@@ -55,6 +58,21 @@ Pattern score 0–100 (higher = closer to human exercise style). Target ≥20, a
 
 Sanity spot-check (answerable-from-topic): **100%** on sampled items every completed run.
 
+## Tone / intent match (order-invariant)
+
+Examiner feedback: AI questions often look “totally different” from the human sample exercise; order may differ; paraphrases like “Apa yang dimaksud X?” ≈ “Apa pengertian X?” / “X adalah …?” should still count.
+
+| Metric | What it measures | v1 mean (n=9) |
+|--------|------------------|---------------|
+| Pattern / style (set-level) | Uji Kompetensi “feel” of the whole set | **74.0** |
+| Tone-match | Best AI match per human item; order ignored | **35.8** |
+| Coverage (≥50) | Share of human items with a usable pair | **~43%** |
+| Similarity (headline) | `0.50·tone + 0.25·style + 0.25·structural` | **55.0** |
+
+Interpretation: style is close; per-item intent against the sample exercise is only moderate — AI writes *new* similar items, not replicas. See [`CATATAN_TONE_MATCH_PENGUJI.md`](./CATATAN_TONE_MATCH_PENGUJI.md).
+
+Raw rescore: [`tone-rescore.jsonl`](./tone-rescore.jsonl).
+
 ## Latency notes
 
 - First ingest includes OCR + embed + generate (~2–11 min depending on pages / question count).
@@ -92,6 +110,9 @@ pnpm --filter server eval:quality -- --variant v1-ipa-stems --eligible
 
 # unit tests
 pnpm --filter server exec vitest run test/question-quality-eval.test.ts
+
+# rescore existing runs for tone-match (no OCR)
+pnpm --filter server eval:rescore
 ```
 
-Raw rows: [`results.jsonl`](./results.jsonl). Per-run dumps: [`runs/`](./runs/).
+Raw rows: [`results.jsonl`](./results.jsonl). Per-run dumps: [`runs/`](./runs/). Tone rescore: [`tone-rescore.jsonl`](./tone-rescore.jsonl).

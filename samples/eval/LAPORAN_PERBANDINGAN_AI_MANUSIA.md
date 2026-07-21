@@ -186,6 +186,10 @@ Perbaikan terbesar terjadi pada S1 (+18,1 poin): dari pola yang lebih generik me
 3. **Variansi penilai LLM** — skor penilai dapat bergeser sekitar ±5–10 poin; skor struktural lebih stabil.  
 4. **Ukuran sampel end-to-end** — 9 topik (bukan seluruh 35) karena biaya OCR dan waktu generasi penuh.
 
+### 5.5 Tone/intent match (saran penguji)
+
+Selain skor pola set-level, evaluasi dilengkapi **tone-match** order-invariant: tiap soal manusia dipasangkan ke soal AI terdekat (paraphrase OK; nomor/urutan diabaikan). Pada v1 (n = 9): tone-match rata-rata **35,8** (coverage ≥50 ~**43%**); skor similarity gabungan (`0,50·tone + 0,25·style + 0,25·struktural`) rata-rata **55,0**. Ini menjelaskan kesan “soalnya beda”: gaya set dekat (~74), sementara intent per butir terhadap sample exercise masih sedang.
+
 ---
 
 ## 6. Kesimpulan
@@ -194,11 +198,12 @@ Perbaikan terbesar terjadi pada S1 (+18,1 poin): dari pola yang lebih generik me
 2. Rata-rata **skor pola = 74,0 / 100** (n = 9), termasuk dalam kategori **mirip kuat**.  
 3. Tidak ada sampel di bawah ambang “kemiripan sebagian” (20); nilai terendah tetap 65,7.  
 4. Kemiripan terutama pada **bentuk dan gaya asesmen**, bukan penyalinan teks soal manusia.  
-5. Penyesuaian prompt berbasis pola Uji Kompetensi meningkatkan kemiripan (rata-rata inti 65,1 → 72,1), khususnya pada topik yang sebelumnya paling lemah.
+5. Penyesuaian prompt berbasis pola Uji Kompetensi meningkatkan kemiripan (rata-rata inti 65,1 → 72,1), khususnya pada topik yang sebelumnya paling lemah.  
+6. Pada metrik **tone-match** (order-invariant), rata-rata **35,8** — AI sering membuat butir baru sejenis, bukan paraphrase 1:1 terhadap sample exercise.
 
 Secara ringkas untuk skripsi:
 
-> **Soal AI QuestGen dan soal manusia tergolong mirip secara pola asesmen (skor rata-rata 74%), dengan catatan perbedaan isi butir dan keterbatasan pada soal berbasis gambar.**
+> **Soal AI QuestGen dan soal manusia mirip secara pola asesmen (skor rata-rata ~74%), sementara kesamaan tone/intent per butir terhadap sample exercise masih sedang (~36), dengan catatan perbedaan isi butir dan keterbatasan pada soal berbasis gambar.**
 
 ---
 
@@ -210,7 +215,9 @@ Secara ringkas untuk skripsi:
 | Soal manusia (gold) | `samples/gold/sample-*.json` |
 | Baris skor mentah | `samples/eval/results.jsonl` |
 | Dump per putaran | `samples/eval/runs/` |
-| Laporan teknis teknis (EN) | `samples/eval/REPORT.md` |
+| Rescore tone-match | `samples/eval/tone-rescore.jsonl` / `pnpm --filter server eval:rescore` |
+| Catatan penguji | `samples/eval/CATATAN_TONE_MATCH_PENGUJI.md` |
+| Laporan teknis (EN) | `samples/eval/REPORT.md` |
 | Menjalankan ulang evaluasi | `pnpm --filter server eval:quality -- --variant v1-ipa-stems --samples 1,2,3` |
 
 Rumus skor dan sidik jari pola diimplementasikan pada modul fingerprint evaluasi sistem QuestGen.

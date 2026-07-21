@@ -12,7 +12,8 @@
     "test:watch": "env -u DATABASE_URL vitest",
     "register-user": "tsx scripts/register-user.ts",
     "eval:gold-fingerprints": "tsx scripts/eval/build-gold-fingerprints.ts",
-    "eval:quality": "tsx scripts/eval/eval-question-quality.ts"
+    "eval:quality": "tsx scripts/eval/eval-question-quality.ts",
+    "eval:rescore": "tsx scripts/eval/rescore-tone.ts"
   },
   "dependencies": {
     "@ai-sdk/openai": "^3.0.71",

@@ -58,9 +58,22 @@ Perbedaan antar topik tetap ada. Topik yang kaya penerapan numerik (usaha/pesawa
 
 Selain itu, kemiripan yang diukur adalah kemiripan **genre asesmen**, bukan identitas konten. Soal AI disusun dari materi yang diunggah pengguna; soal manusia adalah latihan bab buku. Perbedaan isi butir per butir merupakan hal yang wajar dan justru menunjukkan bahwa sistem tidak melakukan penyalinan soal gold.
 
+### 4.x.6 Catatan tambahan: tone/intent vs pola set (saran penguji)
+
+Pada presentasi hasil, penguji menekankan agar perbandingan tidak hanya melihat “kesan” soal AI mirip latihan, tetapi juga apakah AI dapat menghasilkan **tone/intent** yang dekat dengan soal manusia—misalnya soal manusia *“Apa yang dimaksud dengan …?”* dapat berpasangan dengan *“Apa pengertian …?”* atau *“… adalah …?”*, **tanpa mensyaratkan nomor butir yang sama**.
+
+Untuk itu, evaluasi dilengkapi metrik **tone-match** (pencocokan terbaik per butir manusia → soal AI, order-invariant). Temuan ringkas pada putaran v1 (n = 9):
+
+- skor pola/gaya set-level tetap tinggi (rata-rata ~74), menandakan AI menulis dalam *genre* Uji Kompetensi;
+- **tone-match rata-rata 35,8** (coverage pasangan ≥ 50 sekitar 43%);
+- skor similarity gabungan (bobot tone lebih besar) rata-rata **55,0**.
+
+Interpretasi: soal AI **tidak menyalin** sample exercise, tetapi sebagian intent manusia mendapat pasangan paraphrase; sebagian lagi benar-benar butir baru pada topik yang sama. Hal ini selaras dengan desain sistem (generate dari materi, bukan dari kunci soal manusia).
+
 ### 4.x.5 Ringkasan Temuan Bab Ini
 
-1. Soal AI dan soal manusia **mirip secara pola asesmen**, dengan rata-rata skor pola **74,0 / 100** (n = 9).  
+1. Soal AI dan soal manusia **mirip secara pola/gaya asesmen** (skor pola set-level rata-rata **74,0 / 100**, n = 9).  
 2. Setelah penyesuaian prompt, skor rata-rata tiga topik inti meningkat dari **65,1** menjadi **72,1**.  
-3. Kemiripan tampak pada bentuk dan gaya Uji Kompetensi, bukan pada penyalinan teks soal manusia.  
-4. Keterbatasan utama terletak pada soal berbasis gambar dan pada materi yang latihan manusianya bukan berbentuk Uji Kompetensi pilihan ganda.
+3. Pada metrik **tone-match** (saran penguji; order-invariant), rata-rata **35,8** dengan coverage ~43% — AI sering membuat butir baru sejenis, bukan paraphrase 1:1 terhadap sample exercise.  
+4. Skor similarity gabungan (bobot tone lebih besar) rata-rata **55,0**.  
+5. Keterbatasan utama: soal berbasis gambar; sample exercise yang bukan Uji Kompetensi MCQ; serta kesamaan intent per butir yang masih sedang.

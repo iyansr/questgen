@@ -359,5 +359,131 @@
   "judgeRationale": "Both sets use formal Indonesian, 4-option MCQ style with statistical data interpretation, but SET B has fewer multi-part and scenario-based questions compared to SET A.",
   "sanityRate": 100,
   "sanityNotes": "All questions involve basic statistical concepts (mean, median, mode, interquartile range) typically covered in SMP statistics material.",
-  "patternScore": 81.4
+  "patternScore": 60.3,
+  "toneMatchScore": 39.8,
+  "toneCoverageRate": 53,
+  "toneRationale": "Matches based on closest concept and tone: median questions paired; mean/average questions paired; quartile/interquartile range questions paired; data interpretation and calculation questions paired.",
+  "tonePairs": [
+    {
+      "goldIndex": 0,
+      "goldStem": "Diagram berikut menunjukkan data penjualan di suatu perusahaan motor. 0 2 4 6 8 10 12 14 16 18 20 2006 2007 2008 2009 2010 2011 Banyak motor yang terjual Banyak Motor Terjual (dalam ribuan) Tahun Penjualan Pada tahun berapakah terjadi kenaikan penjualan motor sebesar 20%?",
+      "bestGenIndex": 11,
+      "bestGenStem": "Berdasarkan data hasil perikanan, berapa ton kenaikan hasil perikanan dari tahun 2006 ke 2007?",
+      "score": 20,
+      "note": "lexical-fill"
+    },
+    {
+      "goldIndex": 1,
+      "goldStem": "Berikut ini diagram nilai ulangan matematika sisw a kelas VIII",
+      "bestGenIndex": 7,
+      "bestGenStem": "Rata-rata nilai ulangan 39 orang siswa adalah 45. Setelah ditambah satu siswa susulan, rata-rata menjadi 46. Nilai siswa susulan tersebut adalah ....",
+      "score": 13,
+      "note": "lexical-fill"
+    },
+    {
+      "goldIndex": 2,
+      "goldStem": "Perhatikan tabel beriku t. Nilai 4 5 6 7 8 9 10 Banyak Siswa 2 4 5 5 9 3 4 Median data di atas adalah ....",
+      "bestGenIndex": 1,
+      "bestGenStem": "Diketahui skor lomba menyanyi: 90, 105, 120, 125, 135, 145, 160, 160, 175, 205. Median dari data tersebut adalah ....",
+      "score": 74,
+      "note": "both ask for median of given data"
+    },
+    {
+      "goldIndex": 3,
+      "goldStem": "Suatu kelas terdiri atas 30 siswa baru saja mengikuti tes tulis. Jika 20 siswa mendapat nilai 80, 8 siswa mendapat nilai 90, dan 2 siswa mendapat nilai 100, berapakah rata-rata nilai kelas pada tes tulis ini?",
+      "bestGenIndex": 0,
+      "bestGenStem": "Diketahui data nomor sepatu: 40, 37, 39, 40, 42, 38, 38, 37, 28, 40. Rata-rata dari data tersebut adalah ....",
+      "score": 65,
+      "note": "both ask for mean/average of given data, similar tone"
+    },
+    {
+      "goldIndex": 4,
+      "goldStem": "Diketahui data nilai ulangan Matematika dari 15 orang siswa sebagai berikut. 7, 5, 4, 6, 5, 7, 8, 6, 4, 4, 5, 9, 5, 6, 4 Banyak siswa yang nilainya di atas rata-rata adalah .... siswa.",
+      "bestGenIndex": 14,
+      "bestGenStem": "Dua kumpulan data sebagai berikut.\nData X: 4, 5, 5, 6, 7, 7, 8, 8, 8, 9, 9, 10, 10, 12\nData Y: 4, 5, 5, 6, 7, 7, 8, 8, 8, 9, 9, 10, 10, 16\na) Tentukan mean, median, dan modus dari masing-masing data.\nb) Bandingkan hasilnya. Mengapa mean data Y lebih besar? Mengapa median kedua data sama?",
+      "score": 61,
+      "note": "both involve mean and median, and data properties"
+    },
+    {
+      "goldIndex": 5,
+      "goldStem": "Mean dari empat bilangan bulat: 4, a, b, dan 5 sama dengan median data tersebut, yaitu 6. Selisih bilangan terbesar dan terkecil sama dengan ....",
+      "bestGenIndex": 4,
+      "bestGenStem": "Dari data kecepatan mobil balap diketahui kuartil bawah (Q1) = 235 km/jam dan kuartil atas (Q3) = 255 km/jam. Jangkauan interkuartil data tersebut adalah ....",
+      "score": 61,
+      "note": "both ask about quartiles and interquartile range"
+    },
+    {
+      "goldIndex": 6,
+      "goldStem": "Kuartil bawah dari data 12, 13, 11, 6, 4, 9, 3, 7, 6, 5, 9, adalah ....",
+      "bestGenIndex": 10,
+      "bestGenStem": "Diketahui nilai Q1 = 23 dan Q3 = 32. Berapakah jangkauan interkuartil dari data tersebut?",
+      "score": 61,
+      "note": "both ask about quartiles and interquartile range"
+    },
+    {
+      "goldIndex": 7,
+      "goldStem": "Tabel berikut ini menunjukkan lama tidur di waktu malam (dalam jam) beberapa siswa kelas VIII. Lama tidur (jam) 4 5 6 7 8 Frekuensi 1 2 3 2 2 Dari tabel di atas, diperoleh informasi sebagai berikut. (1) Median = 6 (2) Q1 = 5 (3) Q3 = 7,5 267 Kurikulum 2 Pernyataan yang benar adalah ....",
+      "bestGenIndex": 14,
+      "bestGenStem": "Dua kumpulan data sebagai berikut.\nData X: 4, 5, 5, 6, 7, 7, 8, 8, 8, 9, 9, 10, 10, 12\nData Y: 4, 5, 5, 6, 7, 7, 8, 8, 8, 9, 9, 10, 10, 16\na) Tentukan mean, median, dan modus dari masing-masing data.\nb) Bandingkan hasilnya. Mengapa mean data Y lebih besar? Mengapa median kedua data sama?",
+      "score": 8,
+      "note": "lexical-fill"
+    },
+    {
+      "goldIndex": 8,
+      "goldStem": "Diketahui data sebagai berikut. 4, 5, 5, 7, 3, 2, 4, 6, 7, 4 Pernyataan berikut yang salah adalah ....",
+      "bestGenIndex": 9,
+      "bestGenStem": "Rata-rata nilai suatu kelas adalah 72. Rata-rata nilai siswa laki-laki 69 dan rata-rata nilai siswa perempuan 74. Jika banyak siswa seluruhnya 40, maka banyak siswa laki-laki adalah ....",
+      "score": 51,
+      "note": "both involve average and data with some removal, similar concept"
+    },
+    {
+      "goldIndex": 9,
+      "goldStem": "Tabel di bawah menunjukkan usia 20 anak di suatu kelas, 2 tahun yang lalu. Bila pada tahun ini tiga orang yang berusia 7 tahun dan seorang yang berusia 8 tahun pindah sekolah, maka usia rata-rata 16 orang yang masih tinggal pada saat ini adalah ... tahun.",
+      "bestGenIndex": 9,
+      "bestGenStem": "Rata-rata nilai suatu kelas adalah 72. Rata-rata nilai siswa laki-laki 69 dan rata-rata nilai siswa perempuan 74. Jika banyak siswa seluruhnya 40, maka banyak siswa laki-laki adalah ....",
+      "score": 11,
+      "note": "lexical-fill"
+    },
+    {
+      "goldIndex": 10,
+      "goldStem": "Diagram batang di bawah ini menunjukkan data banyak anak pada tiap-tiap keluarga di lingkungan RT 5 RW 1 Kelurahan Sukajadi. Sumbu horizontal menunjukkan data banyak anak pada tiap-tiap keluarga, sedangkan sumbu vertikal menyatakan banyaknya keluarga yang memiliki anak dengan jumlah antara 0 sampai dengan",
+      "bestGenIndex": 5,
+      "bestGenStem": "Perhatikan diagram batang pada gambar. Hasil perikanan tertinggi terjadi pada tahun ....",
+      "score": 7,
+      "note": "lexical-fill"
+    },
+    {
+      "goldIndex": 11,
+      "goldStem": "0 2 4 6 8 10 12 0 1 2 3 4 5 Banyak Keluarga Banyak anak Banyak Anak pada Tiap-tiap Keluarga di Lingkungan RT 5 RW 1 Kelurahan Sukajadi a. Tentukan total banyaknya keluarga dan banyak anak dalam lingkungan tersebut. b. Berapa jumlah keluarga yang mempunyai anak lebih dari 2? c. Berapa persentase keluarga yang tidak mempunyai anak? d. Berapa rata-rata banyak anak pada setiap keluarga? e. Berapa median dan modus dari data tersebut? f. Tentukan jangkauan, kuartil atas, kuartil bawah, dan jangkauan interkuartil dari data di atas. 269 Kurikulum 2 g. Dalam catatan Pak RT, rata-rata banyak anak pada tiap keluarga menjadi 3 sesudah ada dua puluh keluarga pendatang yang masuk ke dalam lingkungan tersebut. Berapa rata-rata banyak anak pada kedua puluh keluarga pendatang tersebut? h. Jika terdapat lima keluarga pendatang dan setiap keluarga tersebut memiliki 2 anak, apakah ada perubahan pada mean, median, dan modus? Jika ada, tentukan mean, median, dan modus yang baru.",
+      "bestGenIndex": 14,
+      "bestGenStem": "Dua kumpulan data sebagai berikut.\nData X: 4, 5, 5, 6, 7, 7, 8, 8, 8, 9, 9, 10, 10, 12\nData Y: 4, 5, 5, 6, 7, 7, 8, 8, 8, 9, 9, 10, 10, 16\na) Tentukan mean, median, dan modus dari masing-masing data.\nb) Bandingkan hasilnya. Mengapa mean data Y lebih besar? Mengapa median kedua data sama?",
+      "score": 14,
+      "note": "lexical-fill"
+    },
+    {
+      "goldIndex": 12,
+      "goldStem": "Jumlah siswa laki-laki kelas IX A SMP Ceria adalah 16 orang dengan berat badan rata-rata adalah 50 kg. Jelaskan secara singkat langkah- langkah untuk mengukur berat badan ke-16 siswa tersebut.",
+      "bestGenIndex": 12,
+      "bestGenStem": "Mean dari 12 data adalah 6,5. Tentukan jumlah seluruh data tersebut.",
+      "score": 70,
+      "note": "both ask to find mean or total from given data"
+    },
+    {
+      "goldIndex": 13,
+      "goldStem": "Pak T ono memiliki kebun mangga sebanyak 36 pohon, rata-rata panen dari tahun 2013-2017 adalah 373 kg. Tentukan nilai x. T ahun 2013 2014 2015 2016 2017 Jumlah (kg) 432 330 x 397 365",
+      "bestGenIndex": 13,
+      "bestGenStem": "Berikut data harga sepatu (dalam rupiah): 200.000, 200.000, 310.000, 370.000, 450.000, 480.000, 650.000, 1.220.000.\na) Hitung mean, median, dan modus dari data tersebut.\nb) Menurutmu, ukuran manakah yang paling baik untuk mewakili data harga sepatu tersebut? Jelaskan alasanmu.",
+      "score": 68,
+      "note": "both ask to find mean, median, modus and interpret data"
+    },
+    {
+      "goldIndex": 14,
+      "goldStem": "Terdapat 8 bilangan dengan rata-rata",
+      "bestGenIndex": 0,
+      "bestGenStem": "Diketahui data nomor sepatu: 40, 37, 39, 40, 42, 38, 38, 37, 28, 40. Rata-rata dari data tersebut adalah ....",
+      "score": 13,
+      "note": "lexical-fill"
+    }
+  ],
+  "similarityScore": 60.3
 }

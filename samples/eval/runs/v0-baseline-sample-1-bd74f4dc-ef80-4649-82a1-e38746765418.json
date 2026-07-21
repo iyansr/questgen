@@ -324,5 +324,91 @@
   "judgeRationale": "Both sets use formal Indonesian and cover reproductive system topics with multiple-choice style, but SET B includes more varied question types, some image-dependent items, and less consistent stem templates compared to SET A's uniform pattern and focus on direct factual statements.",
   "sanityRate": 100,
   "sanityNotes": "All questions are typical SMP-level reproductive system topics: amniotic fluid properties, underwear material for reproductive health, and meiosis in gamete formation.",
-  "patternScore": 54.9
+  "patternScore": 40.8,
+  "toneMatchScore": 26.2,
+  "toneCoverageRate": 10,
+  "toneRationale": "AI questions mostly focus on general reproductive biology concepts, with some on spermatogenesis and oogenesis, but lack direct matches for hormonal regulation, fertilization products, menstruation, and disease. Tone and phrasing differ, limiting high-score matches.",
+  "tonePairs": [
+    {
+      "goldIndex": 0,
+      "goldStem": "Bagian testis yang berperan dalam produksi sperma dan hormon testosteron disebut ....",
+      "bestGenIndex": 2,
+      "bestGenStem": "Amati diagram spermatogenesis pada gambar berikut. Tempat berlangsungnya proses pembentukan sperma adalah di dalam ...",
+      "score": 69,
+      "note": "both ask about the location/part of testis where sperm is produced"
+    },
+    {
+      "goldIndex": 1,
+      "goldStem": "Pasangan antara bagian alat reproduksi laki-laki dan fungsinya berikut ini yang benar adalah ....",
+      "bestGenIndex": 3,
+      "bestGenStem": "Salah satu kelenjar reproduksi laki-laki menghasilkan cairan yang mengandung seminal plasmin, yaitu antibiotik alami. Kelenjar apakah itu?",
+      "score": 44,
+      "note": "both relate to male reproductive parts and their functions, but phrasing differs"
+    },
+    {
+      "goldIndex": 2,
+      "goldStem": "Pernyataan yang benar terkait dengan jumlah kromosom spermatogonium dan spermatozoa adalah ....",
+      "bestGenIndex": 1,
+      "bestGenStem": "Pembelahan meiosis menghasilkan empat sel anakan yang bersifat haploid. Tipe pembelahan ini hanya terjadi pada sel apa?",
+      "score": 43,
+      "note": "both about meiosis and chromosome number in sperm cells, somewhat related"
+    },
+    {
+      "goldIndex": 3,
+      "goldStem": "Ovarium adalah tempat terjadinya ....",
+      "bestGenIndex": 4,
+      "bestGenStem": "Berdasarkan gambar di atas, struktur yang ditunjuk oleh huruf X adalah tempat terjadinya fertilisasi. Bagian tersebut adalah ...",
+      "score": 45,
+      "note": "both about site of fertilization/ovary function, related concept"
+    },
+    {
+      "goldIndex": 4,
+      "goldStem": "Pernyataan yang benar mengenai oogenesis adalah ....",
+      "bestGenIndex": 5,
+      "bestGenStem": "Dalam proses oogenesis, dari satu oogonium akan dihasilkan satu ovum fungsional dan sejumlah badan polar (polosit). Berapa jumlah total polosit yang dihasilkan dari satu oogonium?",
+      "score": 43,
+      "note": "both about oogenesis process, related concept"
+    },
+    {
+      "goldIndex": 5,
+      "goldStem": "Tahap oogenesis pada bayi perempuan yang baru lahir telah sampai pada fase ....",
+      "bestGenIndex": 6,
+      "bestGenStem": "Pada fase apa dalam siklus menstruasi terjadi pelepasan sel telur dari folikel yang matang?",
+      "score": 18,
+      "note": "G5 about oogenesis phase in newborn, A6 about follicle release phase, weak topical overlap"
+    },
+    {
+      "goldIndex": 6,
+      "goldStem": "Hormon yang memicu berkembangnya folikel dan penebalan dinding rahim secara berturut-turut adalah ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "no AI question about hormones triggering follicle and uterine wall thickening"
+    },
+    {
+      "goldIndex": 7,
+      "goldStem": "Berikut ini yang langsung terbentuk setelah proses fertilisasi adalah ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "no AI question about direct product after fertilization"
+    },
+    {
+      "goldIndex": 8,
+      "goldStem": "Proses meluruhnya sel-sel epitel yang menyusun dinding rahim disebut ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "no AI question about shedding of uterine lining"
+    },
+    {
+      "goldIndex": 9,
+      "goldStem": "Perhatikan ciri penyakit berikut ini! 1. Disebabkan oleh Treponema pallidum 2. Biasanya menyerang daerah sekitar kelamin 3. Gejala awal berupa borok pada tempat masuknya bakteri Ciri-ciri penyakit di atas dimiliki oleh orang yang menderita penyakit ....",
+      "bestGenIndex": null,
+      "bestGenStem": null,
+      "score": 0,
+      "note": "no AI question about disease caused by Treponema pallidum"
+    }
+  ],
+  "similarityScore": 40.8
 }
