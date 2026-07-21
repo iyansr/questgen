@@ -2,7 +2,25 @@
 
 Dokumen visual sederhana: kiri = soal dari **exercise buku**, kanan = soal **hasil generate AI** (topik sama).
 
-> Tidak ada penjelasan metode di sini — hanya bukti tampilan side by side.
+## Penjelasan singkat
+
+Tujuan halaman ini adalah menampilkan **bukti visual** bahwa soal yang dihasilkan QuestGen (AI) dapat dibandingkan langsung dengan soal latihan / Uji Kompetensi yang sudah ada di buku teks, pada **materi yang sama**.
+
+Cara membaca tiap pasangan gambar:
+
+| Kolom kiri (Manusia) | Kolom kanan (AI) |
+|----------------------|------------------|
+| Cuplikan soal dari `exercise.pdf` buku | Cuplikan soal hasil generate dari materi yang diunggah |
+| Ditulis penulis / penyusun buku | Ditulis sistem berdasarkan konten materi |
+| Acuan gaya asesmen (bentuk stem, pilihan ganda, bahasa formal) | Diharapkan mendekati gaya itu, **bukan** menyalin teks soal buku |
+
+Catatan penting:
+
+- Urutan nomor soal **tidak harus sama**. Yang dibandingkan adalah kesan bentuk & tone pertanyaan (misalnya “Apa yang dimaksud …?” vs “Apa pengertian …?”).
+- Isi butir boleh berbeda. AI menyusun soal baru dari materi, bukan menyalin kunci exercise.
+- Fokus pengamatan: bahasa formal buku teks, pola stem (`disebut …`, pernyataan benar, pasangan fungsi, soal cerita, dsb.), dan pilihan ganda A–D.
+
+Halaman ini hanya untuk display bukti. Detail skor / metode evaluasi ada di dokumen laporan terpisah.
 
 ---
 
@@ -44,6 +62,8 @@ samples/eval/compare-images/
 
 ## Sample 1 — Sistem Reproduksi pada Manusia
 
+IPA Biologi · Kelas IX. Perhatikan apakah AI memakai pola serupa (definisi/`disebut`, pasangan fungsi, pernyataan benar), meskipun isi butirnya berbeda.
+
 | Soal manusia (exercise buku) | Soal AI (hasil generate) |
 |:----------------------------:|:------------------------:|
 | ![Human sample 1](./compare-images/sample-1-human.png) | ![AI sample 1](./compare-images/sample-1-ai.png) |
@@ -54,6 +74,8 @@ samples/eval/compare-images/
 
 ## Sample 2 — Sistem Perkembangbiakan Tumbuhan dan Hewan
 
+IPA Biologi · Kelas IX. Bandingkan gaya stem dan opsi; soal berbasis gambar di buku mungkin tidak punya padanan visual yang sama di sisi AI.
+
 | Soal manusia (exercise buku) | Soal AI (hasil generate) |
 |:----------------------------:|:------------------------:|
 | ![Human sample 2](./compare-images/sample-2-human.png) | ![AI sample 2](./compare-images/sample-2-ai.png) |
@@ -61,6 +83,8 @@ samples/eval/compare-images/
 ---
 
 ## Sample 3 — Pewarisan Sifat pada Makhluk Hidup
+
+IPA Biologi · Kelas IX. Fokus pada pertanyaan konsep genetika / hukum Mendel dan format pilihan ganda.
 
 | Soal manusia (exercise buku) | Soal AI (hasil generate) |
 |:----------------------------:|:------------------------:|
@@ -70,6 +94,8 @@ samples/eval/compare-images/
 
 ## Sample 23 — Usaha dan Pesawat Sederhana
 
+IPA Fisika. Bandingkan soal cerita hitung (usaha = gaya × perpindahan) dan klasifikasi konsep.
+
 | Soal manusia (exercise buku) | Soal AI (hasil generate) |
 |:----------------------------:|:------------------------:|
 | ![Human sample 23](./compare-images/sample-23-human.png) | ![AI sample 23](./compare-images/sample-23-ai.png) |
@@ -77,6 +103,8 @@ samples/eval/compare-images/
 ---
 
 ## Sample 35 — Statistika
+
+Matematika. Bandingkan soal median/mean/kuartil dan penyajian data (tabel/diagram).
 
 | Soal manusia (exercise buku) | Soal AI (hasil generate) |
 |:----------------------------:|:------------------------:|
